@@ -1,0 +1,36 @@
+#!@SH@
+# $NetBSD: build-client-start,v 1.5 2016/12/18 22:59:35 joerg Exp $
+
+. @PBULK_CONFIG@
+
+set -e
+
+if [ "${config_version}" != "@PBULK_CONFIG_VERSION@" ]; then
+	echo "Your configuration has version ${config_version}."
+	echo "This version of pbulk expects version @PBULK_CONFIG_VERSION@."
+	exit 1
+fi
+
+for client in ${build_clients}; do
+	case ${client} in 
+	/*)
+		path=${client}
+		port=
+		client=
+		;;
+	*:*)
+		path=
+		port="-p ${client##*:}"
+		client=${client%%:*}
+		;;
+	*)
+		path=
+		port=
+		;;
+	esac
+	if [ -z "$path" ]; then
+		ssh $port $client "${pbuild} -c ${master_port_build} -b ${pbuild_script}" &
+	else
+		chroot "$path" ${pbuild} -c ${master_port_build} -b ${pbuild_script} &
+	fi
+done

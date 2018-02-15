@@ -1,0 +1,33 @@
+$NetBSD: patch-ae,v 1.4 2014/05/14 02:28:13 rodent Exp $
+
+--- lookup.c.orig	Thu Apr 14 21:25:52 2005
++++ lookup.c
+@@ -247,11 +247,11 @@ int linit ()
+ 	    if (dp->word == (unsigned char *) -1)
+ 		dp->word = NULL;
+ 	    else
+-		dp->word = &hashstrings[(unsigned long) dp->word];
++		dp->word = &hashstrings[(PTRSIZE) dp->word];
+ 	    if (dp->next == (struct dent *) -1)
+ 		dp->next = NULL;
+ 	    else
+-		dp->next = &hashtbl[(unsigned long) dp->next];
++		dp->next = &hashtbl[(PTRSIZE) dp->next];
+ 	    }
+ 	}
+ 
+@@ -259,12 +259,12 @@ int linit ()
+ 	{
+ 	if (entry->stripl)
+ 	    entry->strip =
+-	      (ichar_t *) &hashstrings[(unsigned long) entry->strip];
++	      (ichar_t *) &hashstrings[(PTRSIZE) entry->strip];
+ 	else
+ 	    entry->strip = NULL;
+ 	if (entry->affl)
+ 	    entry->affix =
+-	      (ichar_t *) &hashstrings[(unsigned long) entry->affix];
++	      (ichar_t *) &hashstrings[(PTRSIZE) entry->affix];
+ 	else
+ 	    entry->affix = NULL;
+ 	}

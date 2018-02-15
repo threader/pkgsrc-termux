@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.4 2016/07/01 16:02:12 fhajny Exp $
+
+Portability. Avoid mangling of other compiler debug flags.
+
+--- configure.orig	2016-03-26 17:20:08.000000000 +0000
++++ configure
+@@ -30710,7 +30710,7 @@ GETPGIDLIB=""
+ if ( test "$HAVE_GETPGID" = "yes" )
+ then
+ SAVECXXFLAGS="$CXXFLAGS"
+-CXXFLAGS=`echo $CXXFLAGS | sed -e "s|-g1||" -e "s|-g2||" -e "s|-g3||" -e "s|-g||"`
++CXXFLAGS=`echo $CXXFLAGS | sed -e "s|-g1||" -e "s|-g2||" -e "s|-g3||" -e "s|-g ||" -e "s|-g$||"`
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether getpgid needs -lg" >&5
+ $as_echo_n "checking whether getpgid needs -lg... " >&6; }
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext

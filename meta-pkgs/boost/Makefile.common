@@ -1,0 +1,113 @@
+# $NetBSD: Makefile.common,v 1.70 2017/09/13 17:34:41 adam Exp $
+#
+# used by devel/boost-build/Makefile
+# used by devel/boost-docs/Makefile
+# used by devel/boost-jam/Makefile
+# used by devel/boost-headers/Makefile
+# used by devel/boost-libs/Makefile
+# used by devel/boost-mpi/Makefile
+# used by devel/py-boost/Makefile
+
+BOOST_PACKAGE?=		undefined
+BOOST_COMMENT?=		undefined
+BOOST_VERSION=		1.65.1
+BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
+
+# Update mysql57-client/patches/patch-cmake_boost.cmake when updating version
+
+DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
+CATEGORIES=		devel
+
+.if ${BOOST_PACKAGE} == "meta-pkg"
+PKGNAME=	boost-${BOOST_VERSION}
+.else # ${BOOST_PACKAGE} != "meta-pkg"
+PKGNAME=	boost-${BOOST_PACKAGE}-${BOOST_VERSION}
+
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=boost/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.boost.org/
+COMMENT=	Free, peer-reviewed portable C++ source libraries ${BOOST_COMMENT}
+LICENSE=	boost-license
+
+CONFLICTS+=		boost<1.36.0
+
+DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/boost/distinfo
+PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
+
+.include "../../mk/bsd.prefs.mk"
+
+USE_TOOLS+=		pax
+USE_LANGUAGES=		c c++
+
+# IMPORTANT: sync this with devel/boost-libs/buildlink3.mk
+# GCC 4.5 or later is required to build, and GCC 4.5 is not provided for OpenBSD
+.  if ${OPSYS} == "OpenBSD"
+.    if ${MACHINE_ARCH} != "sparc64"
+GCC_REQD+=		4.6
+.    endif
+.  elif ${LOWER_VENDOR} == "redhat"
+GCC_REQD+=		4.4
+.  else
+GCC_REQD+=		4.5
+.  endif
+
+PLIST_SUBST+=		BOOST_VERSION="${BOOST_VERSION}"
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_MESSAGE.prefix=	Fixing prefix.
+SUBST_FILES.prefix=	boostcpp.jam
+SUBST_VARS.prefix=	PREFIX
+
+SUBST_CLASSES+=		darwin
+SUBST_STAGE.darwin=	pre-configure
+SUBST_MESSAGE.darwin=	Fixing install_name for Darwin.
+SUBST_FILES.darwin=	tools/build/src/tools/*darwin.jam
+SUBST_SED.darwin=	-e 's,-install_name "@rpath,-install_name "${PREFIX}/lib,g'
+SUBST_SED.darwin+=	-e 's,-install_name "\$$,-install_name "${PREFIX}/lib/\$$,g'
+
+# On SunOS, extract using pkgsrc nbtar to avoid warnings from native gtar.
+.  if ${OPSYS} == "SunOS"
+TOOLS_PLATFORM.tar=	#empty
+BUILDLINK_TRANSFORM+=	opt:-D_XOPEN_SOURCE=500:-D_XOPEN_SOURCE=600
+.  endif
+
+.  if ${OPSYS} == "Darwin"
+# Prevent using a pkgsrc libtool in OS X because the darwin toolset needs
+# the native libtool from /Developer/usr/bin or /usr/bin.
+post-wrapper:
+	${RM} -f ${WRAPPER_BINDIR}/libtool
+.    if exists(/Developer/usr/bin/libtool)
+	${LN} -s /Developer/usr/bin/libtool ${WRAPPER_BINDIR}/libtool
+.    else
+	${LN} -s /usr/bin/libtool ${WRAPPER_BINDIR}/libtool
+.    endif
+.  endif
+
+# We can't do this at post-extract because the extract cookie will get a future
+# timestamp than the sources.  If this happens, print-PLIST does not work.
+pre-configure:
+	cd ${WRKSRC} && ${FIND} . -type f -print | ${XARGS} ${TOUCH}
+
+# Generate a new user.hpp or use the installed one, depending on the package
+# we are building.
+.  if ${BOOST_CONFIG} == "installed"
+.    include "../../devel/boost-headers/buildlink3.mk"
+do-configure:
+	${CP} -f \
+	    ${BUILDLINK_PREFIX.boost-headers}/include/boost/config/user.hpp \
+	    ${WRKSRC}/boost/config/user.hpp
+.  elif ${BOOST_CONFIG} == "generate"
+do-configure:
+	cd ${WRKSRC}/libs/config && \
+	    ${SETENV} ${CONFIGURE_ENV} ${SH} ./configure
+	${CP} -f ${WRKSRC}/libs/config/user.hpp ${WRKSRC}/boost/config/user.hpp
+.  endif
+
+boost-install-libs:
+	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib
+	cd ${WRKSRC}/stage/lib && pax -rw -p p libboost* ${DESTDIR}${PREFIX}/lib
+
+.endif # ${BOOST_PACKAGE} == "meta-pkg"

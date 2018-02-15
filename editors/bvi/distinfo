@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.8 2016/06/19 16:55:28 tsutsui Exp $
+
+SHA1 (bvi-1.4.0.src.tar.gz) = 7b3c0760f0779dba920e08eafcf2fe23a09d70da
+RMD160 (bvi-1.4.0.src.tar.gz) = f1b3822cbaef7dfc078629819a0eefda6e82e15f
+SHA512 (bvi-1.4.0.src.tar.gz) = 119cfc7350f81c324e77243f948cfb91cd9a3122fef307616e4756a99732f69131aed2a26ebe48048698b9c211a0214255f3e6605ad2cbf479a14a4a0f88923c
+Size (bvi-1.4.0.src.tar.gz) = 139202 bytes
+SHA1 (patch-bm__unix.c) = 87720c17e7369f123c86c840f8111b7d9ba5ed73
+SHA1 (patch-comm.c) = d86849d41e2387514ea0c222b06400ed14a4ca36

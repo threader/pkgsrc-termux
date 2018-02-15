@@ -1,0 +1,37 @@
+# $NetBSD: Makefile,v 1.6 2017/09/27 13:30:03 adam Exp $
+
+DISTNAME=	rdflib-4.2.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	textproc python
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib/}
+
+MAINTAINER=	kamelderouiche@yahoo.com
+HOMEPAGE=	https://github.com/RDFLib/rdflib/
+COMMENT=	Python library for working with RDF
+LICENSE=	2-clause-bsd
+
+DEPENDS+=	${PYPKGPREFIX}-isodate-[0-9]*:../../time/py-isodate
+DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
+BUILD_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
+BUILD_DEPENDS+=	${PYPKGPREFIX}-networkx-[0-9]*:../../math/py-networkx
+
+USE_LANGUAGES=	# none
+
+REPLACE_PYTHON+=	rdflib/extras/describer.py rdflib/extras/infixowl.py
+REPLACE_PYTHON+=	rdflib/plugins/parsers/notation3.py
+REPLACE_PYTHON+=	rdflib/plugins/parsers/ntriples.py
+REPLACE_PYTHON+=	rdflib/plugins/parsers/pyRdfa/extras/httpheader.py
+REPLACE_PYTHON+=	rdflib/plugins/parsers/structureddata.py
+REPLACE_PYTHON+=	rdflib/tools/rdfpipe.py
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} csv2rdf csv2rdf${PYVERSSUFFIX} && \
+		${MV} rdf2dot rdf2dot${PYVERSSUFFIX} && \
+		${MV} rdfgraphisomorphism rdfgraphisomorphism${PYVERSSUFFIX} && \
+		${MV} rdfpipe rdfpipe${PYVERSSUFFIX} && \
+		${MV} rdfs2dot rdfs2dot${PYVERSSUFFIX} || ${TRUE}
+
+.include "../../lang/python/application.mk"
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"

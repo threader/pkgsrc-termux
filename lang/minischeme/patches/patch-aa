@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.2 2015/12/29 23:34:51 dholland Exp $
+
+Build as BSD, not SYSV. XXX: this should probably be reexamined nowadays.
+
+--- Makefile-	Thu Nov  2 13:44:52 2000
++++ Makefile	Thu Nov  2 13:45:03 2000
+@@ -6,7 +6,7 @@
+ #  Please see source and/or README  for system defition
+ #
+ #CFLAGS = -g -DSYSV -traditional -traditional-cpp -Wid-clash-8
+-CFLAGS = -O -DSYSV
++CFLAGS += -O -DBSD
+ 
+ all :	miniscm
+ 

@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.2 2014/05/01 09:55:19 obache Exp $
+
+* destdir support.
+  https://github.com/tegaki/tegaki/commit/06df3223b6dd7f32a48a7cb8cf431bbb7ad48f22
+
+--- setup.py.orig	2010-03-22 07:05:39.000000000 +0000
++++ setup.py
+@@ -41,6 +41,8 @@ class install(installbase):
+         txt = load_file(filename)
+         txt = self._replace_prefix(txt)
+         outdir = os.path.join(self._getprefix(), folder)
++        if self.root is not None:
++            outdir = self.root + outdir
+         out = os.path.join(outdir, filename.replace(".in", ""))
+         if not os.path.exists(outdir):
+             os.makedirs(outdir)

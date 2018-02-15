@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.3 2017/04/17 09:51:54 leot Exp $
+
+SHA1 (fzy-0.9.tar.gz) = 33a171617920aa685f26baf6b8af251e358c8d96
+RMD160 (fzy-0.9.tar.gz) = c64892e3c8fd59efece20131ce955f2aaf7a4e9d
+SHA512 (fzy-0.9.tar.gz) = 71a44bc3bbef3a2d82476a69b5c9e28753e760bbb8d453a9e44b57f34a79dd8ebcd510a869dfeae95f522ba6ccb4b8f10f79c081ce6bc6cfae9a41f4071fefc0
+Size (fzy-0.9.tar.gz) = 42992 bytes
+SHA1 (patch-Makefile) = 5fb4a687ef04a8e35239d50ea4585998708530b9

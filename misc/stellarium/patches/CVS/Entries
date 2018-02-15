@@ -1,0 +1,11 @@
+/patch-ad/1.7/Mon Sep  9 11:30:26 2013//Tpkgsrc-2017Q4
+/patch-ae/1.4/Tue Feb  5 17:45:05 2013//Tpkgsrc-2017Q4
+/patch-doc_stellarium.pod.cmake/1.1/Wed Jun 12 15:29:13 2013//Tpkgsrc-2017Q4
+/patch-plugins_TelescopeControl_src_servers_Server.cpp/1.1/Sat Feb 18 13:59:20 2017//Tpkgsrc-2017Q4
+/patch-src_StelMainGraphicsView.cpp/1.2/Fri Aug  9 11:47:57 2013//Tpkgsrc-2017Q4
+/patch-src_core_StelUtils.cpp/1.1/Tue May 14 12:41:34 2013//Tpkgsrc-2017Q4
+/patch-src_core_modules_Skybright.cpp/1.3/Mon Aug 27 09:07:37 2012//Tpkgsrc-2017Q4
+/patch-src_core_renderer_StelQGLArrayVertexBufferBackend.cpp/1.1/Sat May  4 12:59:47 2013//Tpkgsrc-2017Q4
+/patch-src_core_renderer_StelQGLInterleavedArrayVertexBufferBackend.cpp/1.1/Sat May  4 12:59:47 2013//Tpkgsrc-2017Q4
+/patch-src_main.cpp/1.2/Fri Aug  9 11:47:57 2013//Tpkgsrc-2017Q4
+D

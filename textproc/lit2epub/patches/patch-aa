@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.2 2017/02/20 10:18:33 wiz Exp $
+
+--- src/tools/lit2epub.orig	2012-09-04 14:32:32.000000000 +0000
++++ src/tools/lit2epub
+@@ -14,7 +14,7 @@ check_tool()
+     eval "$var=$toolpath"
+ }
+  
+-check_tool CLIT clit
++check_tool CLIT convertlit
+ check_tool ZIP zip
+ 
+ LIT=$1
+@@ -43,7 +43,7 @@ if [ "$?" != 0 ]; then
+     fi
+     
+ else
+-    TEMPDIR=$($MKTEMP -d)
++    TEMPDIR=$($MKTEMP -d -t lit2epub.tmp)
+ fi
+ 
+ WD=$(pwd)

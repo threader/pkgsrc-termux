@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:11 markd Exp $
+bin/lollipop
+share/texmf-dist/tex/lollipop/lollipop-define.tex
+share/texmf-dist/tex/lollipop/lollipop-document.tex
+share/texmf-dist/tex/lollipop/lollipop-float.tex
+share/texmf-dist/tex/lollipop/lollipop-fontdefs.tex
+share/texmf-dist/tex/lollipop/lollipop-fonts.tex
+share/texmf-dist/tex/lollipop/lollipop-heading.tex
+share/texmf-dist/tex/lollipop/lollipop-lists.tex
+share/texmf-dist/tex/lollipop/lollipop-output.tex
+share/texmf-dist/tex/lollipop/lollipop-plain.tex
+share/texmf-dist/tex/lollipop/lollipop-text.tex
+share/texmf-dist/tex/lollipop/lollipop-tools.tex
+share/texmf-dist/tex/lollipop/lollipop.ini
+share/texmf-dist/tex/lollipop/lollipop.tex

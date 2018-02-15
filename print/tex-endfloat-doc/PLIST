@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 22:13:28 markd Exp $
+share/texmf-dist/doc/latex/endfloat/COPYING
+share/texmf-dist/doc/latex/endfloat/README
+share/texmf-dist/doc/latex/endfloat/endfloat.pdf

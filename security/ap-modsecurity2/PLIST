@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.8 2014/02/06 08:17:42 obache Exp $
+lib/httpd/mod_security2.so
+share/doc/ap-modsecurity/README.txt
+share/examples/ap-modsecurity/modsecurity.conf-recommended

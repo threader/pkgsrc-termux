@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.2 2014/05/05 06:26:53 obache Exp $
+
+* localedir will be handled properly with pkgsrc framework.
+
+--- configure.orig	2007-06-18 03:09:07.000000000 +0000
++++ configure
+@@ -22679,8 +22679,6 @@ echo "${ECHO_T}$LINGUAS" >&6; }
+    sed -e "/^#/d" -e "/^\$/d" -e "s,.*,	$posrcprefix& \\\\," -e "\$s/\(.*\) \\\\/\1/" \
+ 	< $srcdir/po/POTFILES.in > po/POTFILES
+ 
+-ac_config_commands="$ac_config_commands modify-itlocaledir"
+-
+ GETTEXT_PACKAGE=tomoe
+ 
+ 

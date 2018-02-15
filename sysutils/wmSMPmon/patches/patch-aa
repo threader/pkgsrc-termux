@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.2 2017/10/25 21:32:35 khorben Exp $
+--- Makefile.orig	2003-03-10 12:54:28.000000000 +0000
++++ Makefile
+@@ -2,22 +2,23 @@
+ 
+ SRC = wmSMPmon.c ../wmgeneral/wmgeneral.c 
+ EXE = wmSMPmon
+-OBJ = $(SRC:.c=.o)
+-CFLAGS = -Wall -O3 -m486
+-LIB = -L/usr/X11R6/lib -lXpm -lXext -lX11
++OBJ = wmSMPmon.o ../wmgeneral/wmgeneral.o
++CFLAGS = -Wall -O3
++LIB = -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lXpm -lXext -lX11
++INC = -I${X11BASE}/include -I${LOCALBASE}/include
+ INSTALL = /usr/bin/install
+ CC = gcc
+ 
+-all: $(OBJ)
+-	$(CC) -o $(EXE) $(OBJ) $(LIB)
++all: ${OBJ}
++	${CC} ${LDFLAGS} -o ${EXE} ${OBJ} ${INC} ${LIB}
+ 
+-$(OBJ): %.o : %.c 
+-	$(CC) $(CFLAGS) -c -o $@ $<
++.c.o:
++	${CC} ${CFLAGS} ${INC} -c -o $@ $<
+ 
+ clean:
+-	rm -rf $(EXE) 
++	rm -rf ${EXE}
+ 	rm -rf *.o
+ 	rm -rf ../wmgeneral/*.o
+ 
+ install:
+-	$(INSTALL) $(EXE) /usr/local/bin/
++	${INSTALL} ${EXE} ${LOCALBASE}/bin

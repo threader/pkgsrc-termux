@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.2 2017/08/19 00:24:36 jlam Exp $
+
+--- linux/Makefile.top.orig	2004-10-31 23:25:16.000000000 +0100
++++ linux/Makefile.top
+@@ -3,8 +3,8 @@
+ DESTDIR = @DESTDIR@
+ BINDIR = $(DESTDIR)/sbin
+ INCDIR = $(DESTDIR)/include
+-MANDIR = $(DESTDIR)/share/man
+-ETCDIR = @SYSCONF@/ppp
++MANDIR = $(DESTDIR)/$(PKGMANDIR)
++ETCDIR = @SYSCONF@
+ 
+ # uid 0 = root
+ INSTALL= install

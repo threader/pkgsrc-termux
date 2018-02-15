@@ -1,0 +1,60 @@
+$NetBSD: patch-config.mk.in,v 1.4 2013/12/01 23:25:31 bsiegert Exp $
+
+Do not use -Bdynamic -G when using GCC on Solaris, it creates non-PIC
+libraries.
+
+Support for shared libraries on OpenBSD and MirBSD.
+
+--- config.mk.in.orig	Fri Mar 29 06:38:11 2013
++++ config.mk.in
+@@ -193,10 +193,15 @@ ifeq ($(patsubst solaris%,solaris,$(HOST
+   # linker, it's even more complicated: we need an rpath option of the
+   # form -Wl,-R .
+ 
+-  # Solaris compiler (Sun C 5.5) can't take multiple ld options as
+-  # -Wl,-a,-b .  Ld sees -a,-b in that case.
+-  LDFLAGS_SHLIB = -Wl,-Bdynamic -Wl,-G -Wl,-h -Wl,$(SONAME)
+-  CFLAGS_SHLIB = -Kpic
++  ifeq ($(C_COMPILER_GNU),yes)
++    LDFLAGS_SHLIB = -shared -Wl,-h -Wl,$(SONAME)
++    CFLAGS_SHLIB = -fPIC
++  else
++    # Solaris compiler (Sun C 5.5) can't take multiple ld options as
++    # -Wl,-a,-b .  Ld sees -a,-b in that case.
++    LDFLAGS_SHLIB = -Wl,-Bdynamic -Wl,-G -Wl,-h -Wl,$(SONAME)
++    CFLAGS_SHLIB = -Kpic
++  endif
+   NEED_RPATH=yes
+ endif
+ 
+@@ -231,6 +236,30 @@ ifeq ($(patsubst osf%,osf,$(HOST_OS)),os
+ endif
+ 
+ ifeq ($(patsubst netbsd%,netbsd,$(HOST_OS)),netbsd)
++  SHARED_LIB_TYPE = unix
++  SHLIB_SUFFIX = so
++  MUST_BUILD_SHLIB = Y
++  MUST_BUILD_SHLIBLE = Y
++  shlibfn = $(1:%=%.$(SHLIB_SUFFIX).$(MAJ).$(MIN))
++  shliblefn = $(1:%=%.$(SHLIB_SUFFIX))
++  CFLAGS_SHLIB = -fpic
++  LDFLAGS_SHLIB = -shared -Wl,-soname,$(SONAME) $(SHLIB_CLIB)
++  NEED_WL_RPATH=yes
++endif
++
++ifeq ($(patsubst openbsd%,openbsd,$(HOST_OS)),openbsd)
++  SHARED_LIB_TYPE = unix
++  SHLIB_SUFFIX = so
++  MUST_BUILD_SHLIB = Y
++  MUST_BUILD_SHLIBLE = Y
++  shlibfn = $(1:%=%.$(SHLIB_SUFFIX).$(MAJ).$(MIN))
++  shliblefn = $(1:%=%.$(SHLIB_SUFFIX))
++  CFLAGS_SHLIB = -fpic
++  LDFLAGS_SHLIB = -shared -Wl,-soname,$(SONAME) $(SHLIB_CLIB)
++  NEED_WL_RPATH=yes
++endif
++
++ifeq ($(patsubst mirbsd%,mirbsd,$(HOST_OS)),mirbsd)
+   SHARED_LIB_TYPE = unix
+   SHLIB_SUFFIX = so
+   MUST_BUILD_SHLIB = Y

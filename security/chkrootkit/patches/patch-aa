@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.4 2014/12/08 14:04:57 mef Exp $
+
+--- Makefile.orig	2014-05-06 18:56:43.000000000 +0900
++++ Makefile	2014-12-08 22:30:07.000000000 +0900
+@@ -3,9 +3,9 @@
+ # (C) 1997-2007 Nelson Murilo, Pangeia Informatica, AMS Foundation and others.
+ #
+ 
+-CC       = cc
+-CFLAGS	 = -DHAVE_LASTLOG_H
+-STATIC   = -static
++#CC       = cc
++#CFLAGS	 = -DHAVE_LASTLOG_H
++#STATIC   = -static
+ 
+ ###
+ ### Solaris 2.x

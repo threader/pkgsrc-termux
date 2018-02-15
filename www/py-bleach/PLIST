@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.6 2017/10/05 12:58:48 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/bleach/__init__.py
+${PYSITELIB}/bleach/__init__.pyc
+${PYSITELIB}/bleach/__init__.pyo
+${PYSITELIB}/bleach/callbacks.py
+${PYSITELIB}/bleach/callbacks.pyc
+${PYSITELIB}/bleach/callbacks.pyo
+${PYSITELIB}/bleach/linkifier.py
+${PYSITELIB}/bleach/linkifier.pyc
+${PYSITELIB}/bleach/linkifier.pyo
+${PYSITELIB}/bleach/sanitizer.py
+${PYSITELIB}/bleach/sanitizer.pyc
+${PYSITELIB}/bleach/sanitizer.pyo
+${PYSITELIB}/bleach/utils.py
+${PYSITELIB}/bleach/utils.pyc
+${PYSITELIB}/bleach/utils.pyo

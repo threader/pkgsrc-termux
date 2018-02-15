@@ -1,0 +1,27 @@
+/patch-aa/1.5/Mon Nov 21 01:35:29 2011//Tpkgsrc-2017Q4
+/patch-ab/1.5/Mon Nov 21 01:35:29 2011//Tpkgsrc-2017Q4
+/patch-ac/1.5/Mon Nov 21 01:35:29 2011//Tpkgsrc-2017Q4
+/patch-ae/1.6/Mon Nov 21 01:35:29 2011//Tpkgsrc-2017Q4
+/patch-aq/1.1/Mon Nov 21 01:35:30 2011//Tpkgsrc-2017Q4
+/patch-speech__tools_base__class_EST__TSimpleMatrix.cc/1.1/Fri May  4 16:01:04 2012//Tpkgsrc-2017Q4
+/patch-speech__tools_base__class_EST__TSimpleVector.cc/1.1/Fri May  4 16:01:04 2012//Tpkgsrc-2017Q4
+/patch-speech__tools_base__class_EST__TVector.cc/1.1/Fri May  4 16:01:04 2012//Tpkgsrc-2017Q4
+/patch-speech__tools_base__class_inst__tmpl_vector__dmatrix__t.cc/1.1/Fri May  4 16:01:04 2012//Tpkgsrc-2017Q4
+/patch-speech__tools_base__class_inst__tmpl_vector__dvector__t.cc/1.1/Fri May  4 16:01:04 2012//Tpkgsrc-2017Q4
+/patch-speech__tools_base__class_inst__tmpl_vector__fmatrix__t.cc/1.1/Fri May  4 16:01:04 2012//Tpkgsrc-2017Q4
+/patch-speech__tools_config_compilers_gcc__defaults.mak/1.1/Thu Jun 13 21:40:43 2013//Tpkgsrc-2017Q4
+/patch-speech__tools_config_modules_editline.mak/1.1/Fri Apr 21 12:33:15 2017//Tpkgsrc-2017Q4
+/patch-speech__tools_config_rules_compile__options.mak/1.1/Sat Dec 17 10:14:40 2011//Tpkgsrc-2017Q4
+/patch-speech__tools_configure/1.1/Fri Oct 11 11:16:12 2013//Tpkgsrc-2017Q4
+/patch-speech__tools_configure.in/1.1/Fri Oct 11 11:16:12 2013//Tpkgsrc-2017Q4
+/patch-speech__tools_include_EST__Ngrammar.h/1.2/Thu Jul 18 20:19:51 2013//Tpkgsrc-2017Q4
+/patch-speech__tools_include_EST__SCFG.h/1.1/Fri May  4 16:01:04 2012//Tpkgsrc-2017Q4
+/patch-speech__tools_include_EST__String.h/1.1/Thu Jul 18 11:57:42 2013//Tpkgsrc-2017Q4
+/patch-speech__tools_include_EST__TIterator.h/1.1/Fri May  4 16:01:04 2012//Tpkgsrc-2017Q4
+/patch-speech__tools_include_EST__TNamedEnum.h/1.1/Fri May  4 16:01:04 2012//Tpkgsrc-2017Q4
+/patch-speech__tools_include_EST__error.h/1.1/Mon Apr 29 21:12:37 2013//Tpkgsrc-2017Q4
+/patch-speech__tools_include_ling__class_EST__FeatureFunctionPackage.h/1.1/Fri May  4 16:01:04 2012//Tpkgsrc-2017Q4
+/patch-speech__tools_include_unix_EST__socket__unix.h/1.1/Tue Dec 18 13:27:10 2012//Tpkgsrc-2017Q4
+/patch-speech__tools_stats_dynamic__program.cc/1.1/Fri May  4 16:01:04 2012//Tpkgsrc-2017Q4
+/patch-speech__tools_utils_EST__ServiceTable.cc/1.1/Fri May  4 16:01:04 2012//Tpkgsrc-2017Q4
+D

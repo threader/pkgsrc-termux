@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.7 2017/10/21 03:23:06 markd Exp $
+
+SHA1 (tex-beamer-45142/beamer.doc.tar.xz) = 772453dc907d0a41984d8f97308a6dad45f0592b
+RMD160 (tex-beamer-45142/beamer.doc.tar.xz) = 1d4b78ce346b61a03e8c130a2b32b57808474d40
+SHA512 (tex-beamer-45142/beamer.doc.tar.xz) = b1a350a6bf5ea8ed5bed6d372930042bcfd6899a5b813c1afab8d68d5487e220b4f70c35b503ddeaa51f9d291b80cf4c0ca81afaf451fcb57595b5e95b816ba5
+Size (tex-beamer-45142/beamer.doc.tar.xz) = 2419292 bytes

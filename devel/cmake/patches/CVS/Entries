@@ -1,0 +1,10 @@
+/patch-CMakeLists.txt/1.5/Thu Jul 28 17:44:43 2016//Tpkgsrc-2017Q4
+/patch-Modules_FindCurses.cmake/1.1/Thu Jan  5 22:34:25 2017//Tpkgsrc-2017Q4
+/patch-Modules_FindPythonInterp.cmake/1.1/Wed Jul 19 17:44:34 2017//Tpkgsrc-2017Q4
+/patch-Modules_FindPythonLibs.cmake/1.1/Wed Jul 19 17:44:34 2017//Tpkgsrc-2017Q4
+/patch-Modules_FindX11.cmake/1.7/Fri Jun 12 18:42:25 2015//Tpkgsrc-2017Q4
+/patch-Modules_Platform_UnixPaths.cmake/1.1/Wed Jul 19 17:44:34 2017//Tpkgsrc-2017Q4
+/patch-Source_CursesDialog_ccmake.cxx/1.5/Wed Jul 19 17:44:34 2017//Tpkgsrc-2017Q4
+/patch-Utilities_KWIML_CMakeLists.txt/1.2/Mon Mar 14 10:49:55 2016//Tpkgsrc-2017Q4
+/patch-bootstrap/1.2/Thu Dec 14 22:13:34 2017//Tpkgsrc-2017Q4
+D

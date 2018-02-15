@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.8 2016/10/19 11:59:25 fhajny Exp $
+bin/geoiplookup
+bin/geoiplookup6
+include/GeoIP.h
+include/GeoIPCity.h
+lib/libGeoIP.la
+lib/pkgconfig/geoip.pc
+man/man1/geoiplookup.1
+man/man1/geoiplookup6.1

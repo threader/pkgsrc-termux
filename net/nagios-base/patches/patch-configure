@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.2 2015/04/03 17:06:08 rodent Exp $
+
+Adjustments to build procedure.
+
+--- configure.orig	2014-08-12 15:00:01.000000000 +0000
++++ configure
+@@ -6129,7 +6129,7 @@ else
+ fi
+ 
+ if test x$CHECKRESULTDIR = xno; then
+-	CHECKRESULTDIR="$localstatedir/spool/checkresults"
++	CHECKRESULTDIR="$localstatedir/checkresults"
+ fi
+ 
+ 

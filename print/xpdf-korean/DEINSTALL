@@ -1,0 +1,12 @@
+# $NetBSD: DEINSTALL,v 1.5 2014/12/16 23:51:57 dholland Exp $
+
+XPDFRC=${PKG_SYSCONFDIR}/xpdfrc
+
+case ${STAGE} in
+POST-DEINSTALL)
+	${SED} -e '
+  /^#----- begin Korean support package/,/^#----- end Korean support package/d
+	' ${XPDFRC} > ${XPDFRC}.tmp || exit 1
+	${MV} ${XPDFRC}.tmp ${XPDFRC} || exit 1
+	;;
+esac

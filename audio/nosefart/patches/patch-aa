@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.5 2015/02/23 19:57:00 snj Exp $
+
+--- Makefile.orig	2013-05-10 12:38:51.000000000 -0700
++++ Makefile	2015-02-23 11:45:34.000000000 -0800
+@@ -1,9 +1,9 @@
+ ################################
+ # Configuration
+ 
+-CC = gcc
+-CFLAGS = 
+-LDFLAGS = -lm
++#CC = gcc
++#CFLAGS = 
++LDFLAGS += -lm ${LIBOSSAUDIO}
+ PREFIX = /usr
+ WANT_DEBUG=TRUE
+ 
+@@ -13,7 +13,7 @@ WANT_DEBUG=TRUE
+ # Acting on the configuration
+ 
+ NAME = nosefart
+-VERSION = 2.8-mls
++VERSION = 2.9-mls
+ 
+ BUILDTOP = nsfobj
+ BUILDDIR = $(BUILDTOP)/build
+@@ -84,7 +84,7 @@ $(BUILDTOP)/config.h: $(BUILDDIR) Makefi
+ $(BUILDDIR)/dep: $(BUILDTOP)/config.h
+ 	$(CC) $(NSFINFO_CFLAGS) $(CFLAGS) -M $(SOURCES) > $@
+ 
+--include $(BUILDDIR)/dep/
++-include $(BUILDDIR)/dep
+ 
+ install: all
+ 	mkdir -p $(PREFIX)/bin
+@@ -105,7 +105,7 @@ clean: 
+ ################################
+ # The real heavy lifting
+ 
+-$(BUILDTOP)/$(NAME): $(OBJECTS)  $(BUILDTOP)/config.h
++$(BUILDTOP)/$(NAME): $(OBJECTS)
+ 	mkdir -p $(sort $(dir $(ALL_OBJECTS)))
+ 	$(CC) $(NSFINFO_CFLAGS) -o $@ $^ $(LDFLAGS)
+ 

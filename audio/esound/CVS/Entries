@@ -1,0 +1,10 @@
+/DESCR/1.1/Thu Nov  1 00:15:46 2001//Tpkgsrc-2017Q4
+/MESSAGE.Interix/1.1/Mon Oct 11 22:18:45 2004//Tpkgsrc-2017Q4
+/Makefile/1.85/Sun Sep  3 08:36:49 2017//Tpkgsrc-2017Q4
+/PLIST.FreeBSD/1.2/Sun May  6 16:36:06 2007//Tpkgsrc-2017Q4
+/PLIST.Linux/1.6/Sun May  6 16:36:06 2007//Tpkgsrc-2017Q4
+/PLIST.common/1.8/Sun Jun 14 17:32:05 2009//Tpkgsrc-2017Q4
+/buildlink3.mk/1.12/Fri Jan 13 10:54:45 2012//Tpkgsrc-2017Q4
+/distinfo/1.32/Tue Nov  3 01:12:28 2015//Tpkgsrc-2017Q4
+/options.mk/1.4/Wed Sep 27 13:45:53 2017//Tpkgsrc-2017Q4
+D/patches////

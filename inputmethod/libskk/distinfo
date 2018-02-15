@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.9 2017/12/18 05:54:18 ryoon Exp $
+
+SHA1 (libskk-1.0.3.tar.xz) = 324ed781fdc877054fd7cb103fafabacaf83c023
+RMD160 (libskk-1.0.3.tar.xz) = fac3375ae9087fc0cbeaf38960929d32840694de
+SHA512 (libskk-1.0.3.tar.xz) = ede5c43138a14268a346323ee23102fe33bcdfe18d280d152ab0cf6050682d259190142b73cc03be83d50fb4383d59742417c68495f51cc668b2f2231e8589b1
+Size (libskk-1.0.3.tar.xz) = 562340 bytes

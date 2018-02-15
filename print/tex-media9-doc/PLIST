@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2017/10/23 06:53:42 markd Exp $
+share/texmf-dist/doc/latex/media9/ChangeLog
+share/texmf-dist/doc/latex/media9/README.md
+share/texmf-dist/doc/latex/media9/media9.pdf

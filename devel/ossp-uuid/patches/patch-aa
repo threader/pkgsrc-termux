@@ -1,0 +1,86 @@
+$NetBSD: patch-aa,v 1.2 2014/02/12 11:43:53 fhajny Exp $
+
+Rename package files to avoid conflict with devel/libuuid (based
+on Debian patches).
+Use pkgsrc install scripts.
+
+--- Makefile.in.orig	2008-03-08 18:31:40.000000000 +0000
++++ Makefile.in
+@@ -62,13 +62,13 @@ PERL        = @PERL@
+ PHP         = @PHP@
+ PG_CONFIG   = @PG_CONFIG@
+ 
+-LIB_NAME    = libuuid.la
++LIB_NAME    = libossp-uuid.la
+ LIB_OBJS    = uuid.lo uuid_md5.lo uuid_sha1.lo uuid_prng.lo uuid_mac.lo uuid_time.lo uuid_ui64.lo uuid_ui128.lo uuid_str.lo
+ 
+-DCE_NAME    = libuuid_dce.la
++DCE_NAME    = libossp-uuid_dce.la
+ DCE_OBJS    = uuid_dce.lo $(LIB_OBJS)
+ 
+-CXX_NAME    = libuuid++.la
++CXX_NAME    = libossp-uuid++.la
+ CXX_OBJS    = uuid++.lo $(LIB_OBJS)
+ 
+ PRG_NAME    = uuid
+@@ -223,38 +223,38 @@ check: all
+ 
+ .PHONY: install
+ install:
+-	$(SHTOOL) mkdir -f -p -m 755 $(DESTDIR)$(prefix)
+-	$(SHTOOL) mkdir -f -p -m 755 $(DESTDIR)$(bindir)
+-	$(SHTOOL) mkdir -f -p -m 755 $(DESTDIR)$(includedir)
+-	$(SHTOOL) mkdir -f -p -m 755 $(DESTDIR)$(libdir)/pkgconfig
+-	$(SHTOOL) mkdir -f -p -m 755 $(DESTDIR)$(mandir)/man3
+-	$(SHTOOL) mkdir -f -p -m 755 $(DESTDIR)$(mandir)/man1
+-	$(SHTOOL) install -c -m 755 uuid-config $(DESTDIR)$(bindir)/
+-	$(SHTOOL) install -c -m 644 $(S)/uuid-config.1 $(DESTDIR)$(mandir)/man1/
+-	$(SHTOOL) install -c -m 644 $(S)/uuid.pc $(DESTDIR)$(libdir)/pkgconfig/
+-	$(SHTOOL) install -c -m 644 uuid.h $(DESTDIR)$(includedir)/
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(prefix)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(bindir)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(includedir)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(libdir)/pkgconfig
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)/man3
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)/man1
++	$(BSD_INSTALL_SCRIPT) uuid-config $(DESTDIR)$(bindir)/
++	$(BSD_INSTALL_MAN) $(S)/uuid-config.1 $(DESTDIR)$(mandir)/man1/
++	$(BSD_INSTALL_DATA) $(S)/uuid.pc $(DESTDIR)$(libdir)/pkgconfig/ossp-uuid.pc
++	$(BSD_INSTALL_DATA) uuid.h $(DESTDIR)$(includedir)/
+ 	-@if [ ".$(WITH_DCE)" = .yes ]; then \
+-	    echo "$(SHTOOL) install -c -m 644 $(S)/uuid_dce.h $(DESTDIR)$(includedir)/"; \
+-	    $(SHTOOL) install -c -m 644 $(S)/uuid_dce.h $(DESTDIR)$(includedir)/; \
++	    echo "$(BSD_INSTALL_DATA) $(S)/uuid_dce.h $(DESTDIR)$(includedir)/"; \
++	    $(BSD_INSTALL_DATA) $(S)/uuid_dce.h $(DESTDIR)$(includedir)/; \
+ 	fi
+ 	-@if [ ".$(WITH_CXX)" = .yes ]; then \
+-	    echo "$(SHTOOL) install -c -m 644 $(S)/uuid++.hh $(DESTDIR)$(includedir)/"; \
+-	    $(SHTOOL) install -c -m 644 $(S)/uuid++.hh $(DESTDIR)$(includedir)/; \
++	    echo "$(BSD_INSTALL_DATA) $(S)/uuid++.hh $(DESTDIR)$(includedir)/"; \
++	    $(BSD_INSTALL_DATA) $(S)/uuid++.hh $(DESTDIR)$(includedir)/; \
+ 	fi
+-	$(SHTOOL) install -c -m 644 $(S)/uuid.3 $(DESTDIR)$(mandir)/man3/
++	$(BSD_INSTALL_MAN) $(S)/uuid.3 $(DESTDIR)$(mandir)/man3/uuid.3ossp
+ 	-@if [ ".$(WITH_CXX)" = .yes ]; then \
+-	    echo "$(SHTOOL) install -c -m 644 $(S)/uuid++.3 $(DESTDIR)$(mandir)/man3/"; \
+-	    $(SHTOOL) install -c -m 644 $(S)/uuid++.3 $(DESTDIR)$(mandir)/man3/; \
++	    echo "$(BSD_INSTALL_MAN) $(S)/uuid++.3 $(DESTDIR)$(mandir)/man3/"; \
++	    $(BSD_INSTALL_MAN) $(S)/uuid++.3 $(DESTDIR)$(mandir)/man3/uuid++.3ossp; \
+ 	fi
+-	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 $(LIB_NAME) $(DESTDIR)$(libdir)/
++	@$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(LIB_NAME) $(DESTDIR)$(libdir)/
+ 	-@if [ ".$(WITH_DCE)" = .yes ]; then \
+-	    $(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 $(DCE_NAME) $(DESTDIR)$(libdir)/; \
++	    $(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(DCE_NAME) $(DESTDIR)$(libdir)/; \
+ 	fi
+ 	-@if [ ".$(WITH_CXX)" = .yes ]; then \
+-	    $(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 $(CXX_NAME) $(DESTDIR)$(libdir)/; \
++	    $(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(CXX_NAME) $(DESTDIR)$(libdir)/; \
+ 	fi
+-	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -s -m 755 uuid $(DESTDIR)$(bindir)/
+-	$(SHTOOL) install -c -m 644 $(S)/uuid.1 $(DESTDIR)$(mandir)/man1/
++	@$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) uuid $(DESTDIR)$(bindir)/
++	$(BSD_INSTALL_MAN) $(S)/uuid.1 $(DESTDIR)$(mandir)/man1/
+ 	-@if [ ".$(WITH_PERL)" = .yes ]; then \
+ 	    (cd $(S)/perl && $(MAKE) $(MFLAGS) install DESTDIR=$(DESTDIR)); \
+ 	fi

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.10 2016/04/07 14:24:51 ryoon Exp $
+
+SHA1 (dynamips-0.2.16.tar.gz) = 613e7f3447ead2ce68af4982c5db07c2f117a0df
+RMD160 (dynamips-0.2.16.tar.gz) = ed57bfe1dc86c838d6c778ea54479ebbefeedd83
+SHA512 (dynamips-0.2.16.tar.gz) = d2e719f3bd7d6e54ec49d0558645a3baa4cf77e0a911e069078463c7cafa391b6400a5aa7661744022b722d3e16ef07323056280df3b4121fd09eb64a7a1aa49
+Size (dynamips-0.2.16.tar.gz) = 832173 bytes

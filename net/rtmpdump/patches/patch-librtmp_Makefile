@@ -1,0 +1,85 @@
+$NetBSD: patch-librtmp_Makefile,v 1.5 2017/09/20 06:47:56 adam Exp $
+
+Use PREFIX and PKGMANDIR.
+Remove OPT.
+Libtoolize
+
+--- librtmp/Makefile.orig	2011-07-12 00:24:33.000000000 +0000
++++ librtmp/Makefile
+@@ -1,11 +1,11 @@
+ VERSION=v2.4
+ 
+-prefix=/usr/local
++prefix=${PREFIX}
+ 
+ incdir=$(prefix)/include/librtmp
+ bindir=$(prefix)/bin
+ libdir=$(prefix)/lib
+-mandir=$(prefix)/man
++mandir=$(prefix)/${PKGMANDIR}
+ BINDIR=$(DESTDIR)$(bindir)
+ INCDIR=$(DESTDIR)$(incdir)
+ LIBDIR=$(DESTDIR)$(libdir)
+@@ -66,30 +66,41 @@ SO_LIB=$(SOLIB_$(SHARED))
+ SO_INST=$(SOINST_$(SHARED))
+ 
+ DEF=-DRTMPDUMP_VERSION=\"$(VERSION)\" $(CRYPTO_DEF) $(XDEF)
+-OPT=-O2
+ CFLAGS=-Wall $(XCFLAGS) $(INC) $(DEF) $(OPT) $(SO_DEF)
+ LDFLAGS=$(XLDFLAGS)
+ 
+ 
+ OBJS=rtmp.o log.o amf.o hashswf.o parseurl.o
+ 
+-all:	librtmp.a $(SO_LIB)
++all:	librtmp.la
+ 
+ clean:
+ 	rm -f *.o *.a *.$(SOX) *.$(SO_EXT)
+ 
+-librtmp.a: $(OBJS)
+-	$(AR) rs $@ $?
++librtmp.la: $(OBJS)
++	${LIBTOOL} --mode=link --tag=CC \
++		${CC} ${LDFLAGS} -o ${.TARGET:.a=.la} \
++			${OBJS:.o=.lo} \
++			-rpath ${PREFIX}/lib
+ 
+ librtmp.$(SO_EXT): $(OBJS)
+-	$(CC) $(SO_LDFLAGS) $(LDFLAGS) -o $@ $^ $> $(CRYPTO_LIB)
++	${LIBTOOL} --mode=link --tag=CC \
++		${CC} ${LDFLAGS} -o ${.TARGET:.a=.la} \
++		${OBJS:.o=.lo} \
++		-rpath ${PREFIX}/lib \
++		-version-info 0:0
+ 	ln -sf $@ librtmp.$(SOX)
+ 
+ log.o: log.c log.h Makefile
++	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c log.c
+ rtmp.o: rtmp.c rtmp.h rtmp_sys.h handshake.h dh.h log.h amf.h Makefile
++	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c rtmp.c
+ amf.o: amf.c amf.h bytes.h log.h Makefile
++	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c amf.c
+ hashswf.o: hashswf.c http.h rtmp.h rtmp_sys.h Makefile
++	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c hashswf.c
+ parseurl.o: parseurl.c rtmp.h rtmp_sys.h log.h Makefile
++	${LIBTOOL} --mode=compile --tag=CC ${CC} ${CFLAGS} -c parseurl.c
+ 
+ librtmp.pc: librtmp.pc.in Makefile
+ 	sed -e "s;@prefix@;$(prefix);" -e "s;@libdir@;$(libdir);" \
+@@ -97,12 +108,12 @@ librtmp.pc: librtmp.pc.in Makefile
+ 		-e "s;@CRYPTO_REQ@;$(CRYPTO_REQ);" \
+ 		-e "s;@PRIVATE_LIBS@;$(PRIVATE_LIBS);" librtmp.pc.in > $@
+ 
+-install:	install_base $(SO_INST)
++install:	install_base
+ 
+-install_base:	librtmp.a librtmp.pc
++install_base:	librtmp.la librtmp.pc
+ 	-mkdir -p $(INCDIR) $(LIBDIR)/pkgconfig $(MANDIR)/man3
+ 	cp amf.h http.h log.h rtmp.h $(INCDIR)
+-	cp librtmp.a $(LIBDIR)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} librtmp.la $(LIBDIR)
+ 	cp librtmp.pc $(LIBDIR)/pkgconfig
+ 	cp librtmp.3 $(MANDIR)/man3
+ 

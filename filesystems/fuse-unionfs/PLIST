@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2016/02/01 02:41:21 jmmv Exp $
+bin/unionfs
+bin/unionfsctl
+man/man8/unionfs.8

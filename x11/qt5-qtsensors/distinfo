@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2015/10/26 19:04:00 adam Exp $
+
+SHA1 (qtsensors-opensource-src-5.5.1.tar.xz) = 12ea8c4df0bab03f2d8ef079ccfc04367c8ac94d
+RMD160 (qtsensors-opensource-src-5.5.1.tar.xz) = 9a3eaad761efaefc0a56258c0bd64e01d0889cba
+SHA512 (qtsensors-opensource-src-5.5.1.tar.xz) = a73cc4aa954e494cf27a17fdd9017b8c4386ab1b0bd2a259176db7a4b4fa1b3c5a3ec11ac65277bab16bff3bd751a7109098fa372965b3b935e165967c1c2049
+Size (qtsensors-opensource-src-5.5.1.tar.xz) = 1989556 bytes

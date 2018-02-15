@@ -1,0 +1,19 @@
+/patch-aa/1.9/Fri Jul  2 14:41:50 2010//Tpkgsrc-2017Q4
+/patch-ad/1.1/Sun Jul 17 12:49:17 2011//Tpkgsrc-2017Q4
+/patch-ae/1.1/Sun Jul 17 12:49:17 2011//Tpkgsrc-2017Q4
+/patch-ag/1.4/Thu May 11 12:38:30 2017//Tpkgsrc-2017Q4
+/patch-src_components_cpu_CPUDyntransComponent.cc/1.1/Fri Nov 23 12:33:22 2012//Tpkgsrc-2017Q4
+/patch-src_components_cpu_M88K__CPUComponent.cc/1.1/Fri Nov 23 12:33:22 2012//Tpkgsrc-2017Q4
+/patch-src_components_cpu_MIPS__CPUComponent.cc/1.1/Fri Nov 23 12:33:22 2012//Tpkgsrc-2017Q4
+/patch-src_console_console.cc/1.2/Sun Jul 16 16:36:09 2017//Tpkgsrc-2017Q4
+/patch-src_cpus_cpu_mips.cc/1.1/Tue Mar 29 19:03:07 2016//Tpkgsrc-2017Q4
+/patch-src_cpus_cpu_mips_instr.cc/1.1/Tue Mar 29 19:03:07 2016//Tpkgsrc-2017Q4
+/patch-src_devices_dev__footbridge.cc/1.1/Mon May 15 01:45:49 2017//Tpkgsrc-2017Q4
+/patch-src_devices_dev__sh4.cc/1.2/Sun Jul 16 16:36:09 2017//Tpkgsrc-2017Q4
+/patch-src_include_components_CPUDyntransComponent.h/1.1/Fri Nov 23 12:33:22 2012//Tpkgsrc-2017Q4
+/patch-src_include_components_M88K__CPUComponent.h/1.1/Fri Nov 23 12:33:22 2012//Tpkgsrc-2017Q4
+/patch-src_include_components_MIPS__CPUComponent.h/1.1/Fri Nov 23 12:33:22 2012//Tpkgsrc-2017Q4
+/patch-src_include_mips_cpu_types.h/1.2/Mon Sep  4 11:19:43 2017//Tpkgsrc-2017Q4
+/patch-src_include_refcount__ptr.h/1.2/Mon Dec  8 20:55:19 2014//Tpkgsrc-2017Q4
+/patch-src_machines_machine__pmax.cc/1.1/Thu Jun 29 17:51:46 2017//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,21 @@
+/patch-aa/1.1.1.1/Thu Mar 13 16:06:16 2008//Tpkgsrc-2017Q4
+/patch-ab/1.1.1.1/Thu Mar 13 16:06:16 2008//Tpkgsrc-2017Q4
+/patch-ac/1.1.1.1/Thu Mar 13 16:06:16 2008//Tpkgsrc-2017Q4
+/patch-ad/1.1.1.1/Thu Mar 13 16:06:16 2008//Tpkgsrc-2017Q4
+/patch-src_board_board-internals.h/1.1/Fri Nov 16 00:50:39 2012//Tpkgsrc-2017Q4
+/patch-src_board_board.c/1.1/Fri Nov 16 00:50:39 2012//Tpkgsrc-2017Q4
+/patch-src_board_board.h/1.1/Fri Nov 16 00:50:39 2012//Tpkgsrc-2017Q4
+/patch-src_gui-gtk_gtk-control-center.c/1.1/Fri Nov 16 00:50:39 2012//Tpkgsrc-2017Q4
+/patch-src_gui-gtk_gtk-control-center.h/1.1/Fri Nov 16 00:50:39 2012//Tpkgsrc-2017Q4
+/patch-src_gui-gtk_gtk-utils.c/1.1/Tue Mar 31 15:38:49 2015//Tpkgsrc-2017Q4
+/patch-src_gui-gtk_quarry-text-buffer.c/1.1/Fri Nov 16 00:50:39 2012//Tpkgsrc-2017Q4
+/patch-src_gui-gtk_quarry-text-buffer.h/1.1/Fri Nov 16 00:50:39 2012//Tpkgsrc-2017Q4
+/patch-src_gui-utils_time-control.c/1.1/Fri Nov 16 00:50:39 2012//Tpkgsrc-2017Q4
+/patch-src_gui-utils_time-control.h/1.1/Fri Nov 16 00:50:39 2012//Tpkgsrc-2017Q4
+/patch-src_sgf_sgf-privates.h/1.1/Fri Nov 16 00:50:39 2012//Tpkgsrc-2017Q4
+/patch-src_sgf_sgf-tree.c/1.1/Fri Nov 16 00:50:40 2012//Tpkgsrc-2017Q4
+/patch-src_sgf_sgf-utils.c/1.1/Fri Nov 16 00:50:40 2012//Tpkgsrc-2017Q4
+/patch-src_sgf_sgf.h/1.1/Fri Nov 16 00:50:40 2012//Tpkgsrc-2017Q4
+/patch-src_utils_string-list.c/1.1/Fri Nov 16 00:50:40 2012//Tpkgsrc-2017Q4
+/patch-src_utils_utils.h/1.1/Fri Nov 16 00:50:40 2012//Tpkgsrc-2017Q4
+D

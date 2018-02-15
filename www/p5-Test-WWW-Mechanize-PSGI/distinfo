@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.5 2017/11/26 10:06:25 wiz Exp $
+
+SHA1 (Test-WWW-Mechanize-PSGI-0.38.tar.gz) = b47b2ac16368abd1934e2377168ddb5fdbecf01e
+RMD160 (Test-WWW-Mechanize-PSGI-0.38.tar.gz) = 264d65b504108485dee7e507c376eb40ae66c8df
+SHA512 (Test-WWW-Mechanize-PSGI-0.38.tar.gz) = ec5c0962d8e05ac68c487fe29b4f37a3b7b9ee85e99c8b8d589bcb57168cf3e331ea1185f36a8e006be6172c85a5143d3b99fbd48d7e04b726050fcbee61bb9d
+Size (Test-WWW-Mechanize-PSGI-0.38.tar.gz) = 27173 bytes

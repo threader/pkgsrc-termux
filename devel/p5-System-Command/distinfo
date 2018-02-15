@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.10 2016/06/18 20:25:22 mef Exp $
+
+SHA1 (System-Command-1.118.tar.gz) = a5fda8c65a3cd75a86359a3ec64cbc790f5b707d
+RMD160 (System-Command-1.118.tar.gz) = 15baab3c901309828bded93b680ff98e54c62e0b
+SHA512 (System-Command-1.118.tar.gz) = b8f4cc6772ac3b531f321d1cd9616273a69ba8d7462b36b586073a40f3dec2a132810bd85b73b5658fb9f30fe422512e8be3cc31347201c1d49113b9a2bf64e3
+Size (System-Command-1.118.tar.gz) = 29939 bytes

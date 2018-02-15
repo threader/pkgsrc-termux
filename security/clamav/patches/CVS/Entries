@@ -1,0 +1,12 @@
+/patch-Makefile.in/1.4/Sun Jun 12 16:06:01 2016//Tpkgsrc-2017Q4
+/patch-aa/1.1.1.1/Fri Dec 24 07:11:05 2010//Tpkgsrc-2017Q4
+/patch-ab/1.1.1.1/Fri Dec 24 07:11:05 2010//Tpkgsrc-2017Q4
+/patch-af/1.2/Fri Jul  8 09:28:06 2011//Tpkgsrc-2017Q4
+/patch-ag/1.1.1.1/Fri Dec 24 07:11:05 2010//Tpkgsrc-2017Q4
+/patch-configure/1.4/Sun Jun 12 16:06:01 2016//Tpkgsrc-2017Q4
+/patch-etc_clamav-milter.conf.sample/1.1/Sun Jun 12 16:06:01 2016//Tpkgsrc-2017Q4
+/patch-etc_clamd.conf.sample/1.2/Sun Jun 12 16:06:01 2016//Tpkgsrc-2017Q4
+/patch-etc_freshclam.conf.sample/1.1/Tue Mar 11 14:34:40 2014//Tpkgsrc-2017Q4
+/patch-libclamav_fmap.c/1.1/Mon Jul 24 09:39:42 2017//Tpkgsrc-2017Q4
+/patch-libclamav_fmap.h/1.1/Mon Jul 24 09:39:42 2017//Tpkgsrc-2017Q4
+D

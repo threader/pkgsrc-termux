@@ -1,0 +1,13 @@
+/patch-ac/1.7/Fri Jun 30 00:52:44 2017//Tpkgsrc-2017Q4
+/patch-configure/1.1/Tue Feb 16 12:48:18 2016//Tpkgsrc-2017Q4
+/patch-gmetad_conf.c.in/1.1/Tue Feb 16 12:48:18 2016//Tpkgsrc-2017Q4
+/patch-gmetad_data__thread.c/1.1/Tue Feb 16 12:48:18 2016//Tpkgsrc-2017Q4
+/patch-gmetad_rrd__helpers.c/1.1/Tue Feb 16 12:48:18 2016//Tpkgsrc-2017Q4
+/patch-gmond_gmond.conf.5/1.1/Tue Feb 16 12:48:18 2016//Tpkgsrc-2017Q4
+/patch-gmond_modules_conf.d_modpython.conf.in/1.1/Tue Feb 16 12:48:18 2016//Tpkgsrc-2017Q4
+/patch-lib__gm_protocol_dr.c/1.1/Tue Mar 13 12:36:25 2012//Tpkgsrc-2017Q4
+/patch-lib__update_pidfile.c/1.1/Tue Feb 16 12:48:18 2016//Tpkgsrc-2017Q4
+/patch-lib_default__conf.h.in/1.1/Tue Feb 16 12:48:18 2016//Tpkgsrc-2017Q4
+/patch-libmetrics__solaris__metrics.c/1.1/Tue Feb 16 12:48:18 2016//Tpkgsrc-2017Q4
+/patch-libmetrics_freebsd_metrics.c/1.1/Tue Feb 16 12:48:18 2016//Tpkgsrc-2017Q4
+D

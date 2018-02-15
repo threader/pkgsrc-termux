@@ -1,0 +1,12 @@
+/patch-dist_Makefile.in/1.2/Thu Jan 26 11:03:17 2017//Tpkgsrc-2017Q4
+/patch-dist_aclocal_libtool.m4/1.1/Thu Jan  1 18:52:52 2015//Tpkgsrc-2017Q4
+/patch-dist_configure/1.4/Thu Jan 26 11:03:17 2017//Tpkgsrc-2017Q4
+/patch-src_dbinc_atomic.h/1.3/Thu Jan 26 11:03:17 2017//Tpkgsrc-2017Q4
+/patch-src_dbinc_db.in/1.1/Fri Aug 26 17:23:16 2016//Tpkgsrc-2017Q4
+/patch-src_hmac_sha1.c/1.1/Thu Jan  1 18:52:52 2015//Tpkgsrc-2017Q4
+/patch-src_mp_mp__fget.c/1.1/Tue Sep  8 18:51:28 2015//Tpkgsrc-2017Q4
+/patch-src_mp_mp__mvcc.c/1.1/Tue Sep  8 18:51:28 2015//Tpkgsrc-2017Q4
+/patch-src_mp_mp__region.c/1.1/Tue Sep  8 18:51:28 2015//Tpkgsrc-2017Q4
+/patch-src_mutex_mut__method.c/1.1/Tue Sep  8 18:51:28 2015//Tpkgsrc-2017Q4
+/patch-src_mutex_mut__tas.c/1.1/Tue Sep  8 18:51:28 2015//Tpkgsrc-2017Q4
+D

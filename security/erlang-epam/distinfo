@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/07/07 09:34:06 fhajny Exp $
+
+SHA1 (epam-1.0.3.tar.gz) = b121c347c224cf1c6a4d7536f8b33d97115e3256
+RMD160 (epam-1.0.3.tar.gz) = 756ba47fe1f770c67c9cce3f9435180b387ee754
+SHA512 (epam-1.0.3.tar.gz) = b7697abd0d4728db48cdb0d9507efc93267612fc4e74f222261370bab164a08eff136fb18d486d7e723b77d302e9879f9416702336a7e20b20df32f30721a977
+Size (epam-1.0.3.tar.gz) = 43807 bytes

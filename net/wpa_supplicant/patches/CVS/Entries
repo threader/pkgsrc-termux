@@ -1,0 +1,13 @@
+/patch-aa/1.4/Sun Mar 24 14:17:31 2013//Tpkgsrc-2017Q4
+/patch-src_ap_ieee802__11.c/1.1/Mon Oct 16 10:26:21 2017//Tpkgsrc-2017Q4
+/patch-src_ap_wpa__auth.c/1.1/Mon Oct 16 10:26:21 2017//Tpkgsrc-2017Q4
+/patch-src_ap_wpa__auth.h/1.1/Mon Oct 16 10:26:21 2017//Tpkgsrc-2017Q4
+/patch-src_ap_wpa__auth__ft.c/1.1/Mon Oct 16 10:26:21 2017//Tpkgsrc-2017Q4
+/patch-src_ap_wpa__auth__i.h/1.1/Mon Oct 16 10:26:21 2017//Tpkgsrc-2017Q4
+/patch-src_common_wpa__common.h/1.1/Mon Oct 16 10:26:21 2017//Tpkgsrc-2017Q4
+/patch-src_rsn__supp_tdls.c/1.1/Mon Oct 16 10:26:21 2017//Tpkgsrc-2017Q4
+/patch-src_rsn__supp_wpa.c/1.1/Mon Oct 16 10:26:21 2017//Tpkgsrc-2017Q4
+/patch-src_rsn__supp_wpa__ft.c/1.1/Mon Oct 16 10:26:21 2017//Tpkgsrc-2017Q4
+/patch-src_rsn__supp_wpa__i.h/1.1/Mon Oct 16 10:26:21 2017//Tpkgsrc-2017Q4
+/patch-wpa__supplicant_wnm__sta.c/1.1/Mon Oct 16 10:26:21 2017//Tpkgsrc-2017Q4
+D

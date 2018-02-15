@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.2 2014/11/09 02:46:30 obache Exp $
+
+--- src/scim_chartraits.cpp.orig	2012-09-22 13:26:08.000000000 +0000
++++ src/scim_chartraits.cpp
+@@ -26,4 +26,5 @@
+  */
+ 
++#if 0
+ #include <string>
+ #include "scim_types.h"
+@@ -163,4 +164,5 @@ struct char_traits<ucs4_t>
+ }
+ #endif
++#endif
+ 
+ /*

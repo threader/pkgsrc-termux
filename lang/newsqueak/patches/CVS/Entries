@@ -1,0 +1,19 @@
+/patch-Makefile/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-include_lib9.h/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-include_u.h/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-lib9_Makefile/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-lib9_doprint.c/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-lib9_nan.c/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-lib9_wait.c/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-libbio_Makefile/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-squint_Makefile/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-squint_compile.c/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-squint_error.c/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-squint_inst/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-squint_lex.c/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-squint_main.c/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-squint_proc.c/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-squint_progs_npowser/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-squint_var.c/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+/patch-squint_xec.c/1.1/Sat Apr 25 19:58:32 2015//Tpkgsrc-2017Q4
+D

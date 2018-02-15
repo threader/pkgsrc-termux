@@ -1,0 +1,13 @@
+/patch-configs_dansguardian.conf.in/1.1/Thu Sep  3 11:55:40 2015//Tpkgsrc-2017Q4
+/patch-configs_dansguardianf1.conf.in/1.1/Thu Sep  3 11:55:40 2015//Tpkgsrc-2017Q4
+/patch-configure/1.1/Fri Mar 28 14:13:25 2014//Tpkgsrc-2017Q4
+/patch-src_BaseSocket.cpp/1.1/Wed Apr 20 13:52:24 2016//Tpkgsrc-2017Q4
+/patch-src_ConnectionHandler.cpp/1.2/Wed Apr 20 13:52:24 2016//Tpkgsrc-2017Q4
+/patch-src_FOptionContainer.cpp/1.1/Thu Sep  3 11:55:40 2015//Tpkgsrc-2017Q4
+/patch-src_FOptionContainer.hpp/1.2/Fri Sep  4 07:24:48 2015//Tpkgsrc-2017Q4
+/patch-src_FatController.cpp/1.1/Wed Apr 20 13:52:24 2016//Tpkgsrc-2017Q4
+/patch-src_ImageContainer.cpp/1.1/Fri Mar 28 14:13:25 2014//Tpkgsrc-2017Q4
+/patch-src_OptionContainer.cpp/1.1/Tue Jan 20 11:34:43 2015//Tpkgsrc-2017Q4
+/patch-src_SocketArray.cpp/1.1/Fri Mar 28 14:13:25 2014//Tpkgsrc-2017Q4
+/patch-src_UDSocket.cpp/1.1/Fri Mar 28 14:13:25 2014//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.25 2017/10/09 07:36:54 wiz Exp $
+
+SHA1 (Digest-SHA-5.98.tar.gz) = 8aac08059394842f1d1685c1a01c2162f7b94e1d
+RMD160 (Digest-SHA-5.98.tar.gz) = ffb9fbddc3e9c9bfb5b494071ae0c87c2a3da5f3
+SHA512 (Digest-SHA-5.98.tar.gz) = 341e3c74062e7e78b0e44c166fdcf73f79920df26a6463ea473b7d7428bdbe597db4d78afc53e642b98a066a4b3fc5886f58bac720946c8e7ed5a1d07a0d2ef2
+Size (Digest-SHA-5.98.tar.gz) = 45914 bytes

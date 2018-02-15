@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.8 2017/04/07 03:35:12 adam Exp $
+
+SHA1 (pyparsing-2.2.0.tar.gz) = f8504f4f8baa69de5b63fd2275a0ebf36a2cf74b
+RMD160 (pyparsing-2.2.0.tar.gz) = d0527da2c5f27bff03647157e4c50cacdc1293f0
+SHA512 (pyparsing-2.2.0.tar.gz) = 6a409f429d40a5ac202d144e4150de2c80d7c7120147f603f72a4a99797d48c50822a6437f590ec5ae4418d51aa1f6b1d4e5d95a57e19bec0a127b04e4937008
+Size (pyparsing-2.2.0.tar.gz) = 1232522 bytes

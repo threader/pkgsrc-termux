@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.7 2016/03/13 09:06:01 dholland Exp $
+
+- Use standard headers.
+- Don't use curses internals.
+
+--- netconsole/build_display.c.orig	1994-11-29 20:41:06.000000000 +0000
++++ netconsole/build_display.c
+@@ -57,9 +57,10 @@
+  */
+ 
+ #include 	"netconsole.h"
++#include <string.h>
+ 
+ 
+-#define WFULL(w)  	(w->_cury == (w->_maxy - 1)) ? 1:0
++#define WFULL(w)  	(getcury(w) == (getmaxy(w) - 1)) ? 1:0
+ 
+ build_display ()
+ {
+@@ -229,8 +230,8 @@ display_screenful ()
+ 		"\n(DEBUG): frozen = %s, quiet = %s\n", 
+ 		frozen ? "YES" : "NO", quiet ? "YES" : "NO" );
+ 	wprintw(aw.wmsg,		
+-		"(DEBUG): Term= %s, LINES= %d, COLS= %d, Datadir= %s", ttytype,
+-		LINES, COLS, datadir) ;	 	/* ttytype in curses.h */
++		"(DEBUG): LINES= %d, COLS= %d, Datadir= %s",
++		LINES, COLS, datadir) ;
+ 	wclrtoeol(aw.wmsg);
+     }
+     
+@@ -238,8 +239,8 @@ display_screenful ()
+      * Am calling touchwin() since its foolproof (see discussion above)
+      */
+     touchwin (aw.wmain);
+-    y = aw.wprompt->_cury + aw.wprompt->_begy ;	/* force cursor loc..	*/
+-    x = aw.wprompt->_curx + aw.wprompt->_begx ;	/* ..to prompt window */
++    y = getcury(aw.wprompt) + getbegy(aw.wprompt);  /* force cursor loc.. */
++    x = getcurx(aw.wprompt) + getbegx(aw.wprompt);  /* ..to prompt window */
+     wmove(aw.wmain, y, x);
+     wrefresh (aw.wmain);			/* Onto screen */
+     return (0) ;

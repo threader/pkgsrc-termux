@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.6 2017/05/23 12:35:11 mef Exp $
+
+SHA1 (jsoncpp-1.8.0.tar.gz) = 40f7f34551012f68e822664a0b179e7e6cac5a97
+RMD160 (jsoncpp-1.8.0.tar.gz) = 005a95ac9ab9c6752066eabfd751a220a9a9792f
+SHA512 (jsoncpp-1.8.0.tar.gz) = bd0aa56827932e5b50231216c9f501da12053bf9eed6e83210b5c52afb9aff610e71995446a7e2f5f4580ff37762956a307867d3eaa1aebd6ca31e574c9e4d4c
+Size (jsoncpp-1.8.0.tar.gz) = 206659 bytes

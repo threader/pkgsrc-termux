@@ -1,0 +1,26 @@
+$NetBSD: patch-configure,v 1.2 2017/04/29 18:18:52 adam Exp $
+
+Portability fix.
+Make it use weak symbols with Clang.
+
+--- configure.orig	2015-11-12 04:08:11.000000000 +0000
++++ configure
+@@ -26437,7 +26437,7 @@ if test -z "$BUILD_PAMID_TRUE"; then :
+ 
+ 
+ pamid_platform=${device_args}
+-if test x"$pamid_platform" == "x"; then
++if test x"$pamid_platform" = "x"; then
+   case $host in #(
+   *-bgq-*) :
+     pamid_platform=BGQ ;; #(
+@@ -29322,7 +29322,9 @@ else
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
++#ifndef __clang__
+ extern int PFoo(int);
++#endif
+ #pragma weak PFoo = Foo
+ int Foo(int a) { return a; }
+ 

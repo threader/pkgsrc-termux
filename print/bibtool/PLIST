@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.4 2016/09/08 03:52:26 markd Exp $
+bin/bibtool
+lib/BibTool/biblatex.rsc
+lib/BibTool/braces.rsc
+lib/BibTool/check_y.rsc
+lib/BibTool/default.rsc
+lib/BibTool/field.rsc
+lib/BibTool/improve.rsc
+lib/BibTool/iso2tex.rsc
+lib/BibTool/month.rsc
+lib/BibTool/opt.rsc
+lib/BibTool/sort_fld.rsc
+lib/BibTool/tex_def.rsc
+man/man1/bibtool.1
+share/doc/BibTool/bibtool.pdf
+share/doc/BibTool/ref_card.pdf
+share/examples/BibTool/bibtool.pl
+share/examples/BibTool/bibtool.tcl

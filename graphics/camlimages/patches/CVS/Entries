@@ -1,0 +1,9 @@
+/patch-OMakefile/1.3/Sun Sep 18 05:48:59 2016//Tpkgsrc-2017Q4
+/patch-src_gifread.c/1.2/Sat May 24 04:05:24 2014//Tpkgsrc-2017Q4
+/patch-src_gifwrite.c/1.2/Sat May 24 04:05:24 2014//Tpkgsrc-2017Q4
+/patch-src_jpegread.c/1.2/Sun Sep 18 05:48:59 2016//Tpkgsrc-2017Q4
+/patch-src_pngread.c/1.1/Sun Aug  7 20:36:20 2011//Tpkgsrc-2017Q4
+/patch-src_pngwrite.c/1.1/Sun Aug  7 20:36:20 2011//Tpkgsrc-2017Q4
+/patch-src_tiffread.c/1.2/Sun Jul 29 12:52:55 2012//Tpkgsrc-2017Q4
+/patch-src_tiffwrite.c/1.2/Sun Sep 18 05:46:31 2016//Tpkgsrc-2017Q4
+D

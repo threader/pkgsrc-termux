@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile,v 1.2 2017/07/20 10:39:25 leot Exp $
+
+Do not install systemd `.service' file.
+
+--- Makefile.orig	2017-07-12 08:22:04.000000000 +0000
++++ Makefile
+@@ -64,7 +64,6 @@ install-doc:
+ install-service: service
+ 	mkdir -p ${DESTDIR}${PREFIX}/share/dbus-1/services/
+ 	install -m644 org.knopwob.dunst.service ${DESTDIR}${PREFIX}/share/dbus-1/services
+-	install -Dm644 dunst.systemd.service ${DESTDIR}${PREFIX}/lib/systemd/user/dunst.service
+ 
+ install: install-dunst install-doc install-service
+ 

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.7 2017/08/31 09:27:44 adam Exp $
+
+SHA1 (xlrd-1.1.0.tar.gz) = cb048309af7710ccb4e3d2c6a0515a52fc18d3f1
+RMD160 (xlrd-1.1.0.tar.gz) = a388fd7831f07f47877f5044ce2d131a36765f7b
+SHA512 (xlrd-1.1.0.tar.gz) = b58f8d2febc0381ebbddac140139a9a216b5abbc25c11dfbf16fee94c87c84916e6710660542e24bb769163792af000947e3e91616142a82a2b532e59093dbfe
+Size (xlrd-1.1.0.tar.gz) = 541397 bytes

@@ -1,0 +1,25 @@
+$NetBSD: patch-Makefile.in,v 1.4 2015/05/28 06:35:25 wiz Exp $
+
+Correct locale location, use names gawk and pgawk unconditionally
+--- Makefile.in.orig	2015-05-19 13:38:35.000000000 +0000
++++ Makefile.in
+@@ -324,7 +324,7 @@ CFLAGS = @CFLAGS@
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+ CYGPATH_W = @CYGPATH_W@
+-DEFS = -DDEFPATH=$(DEFPATH) -DDEFLIBPATH=$(DEFLIBPATH) -DSHLIBEXT=$(SHLIBEXT) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"$(datadir)/locale"'
++DEFS = -DDEFPATH=$(DEFPATH) -DDEFLIBPATH=$(DEFLIBPATH) -DSHLIBEXT=$(SHLIBEXT) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"$(prefix)/$(PKGLOCALEDIR)/locale"'
+ DEPDIR = @DEPDIR@
+ ECHO_C = @ECHO_C@
+ ECHO_N = @ECHO_N@
+@@ -1178,9 +1178,7 @@ install-exec-hook:
+ 	(cd $(DESTDIR)$(bindir); \
+ 	name=`echo gawk | sed '$(transform)'` ; \
+ 	$(LN) $${name}$(EXEEXT) gawk-$(VERSION)$(EXEEXT) 2>/dev/null ; \
+-	if [ ! -f awk$(EXEEXT) ]; \
+-	then	$(LN_S) $${name}$(EXEEXT) awk$(EXEEXT); \
+-	fi; exit 0)
++	exit 0)
+ 
+ # Undo the above when uninstalling
+ uninstall-links:

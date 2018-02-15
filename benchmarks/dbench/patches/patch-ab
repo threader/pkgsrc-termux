@@ -1,0 +1,38 @@
+$NetBSD: patch-ab,v 1.7 2014/12/12 06:45:34 mef Exp $
+
+Correction to man path
+
+and Fix followig problem
+=> Checking for missing run-time search paths in dbench-4.0
+ERROR: bin/dbench: missing library: libpopt.so.0
+ERROR: bin/tbench: missing library: libpopt.so.0
+ERROR: bin/tbench_srv: missing library: libpopt.so.0
+
+--- Makefile.in.orig	2008-02-18 09:49:25.000000000 +0900
++++ Makefile.in	2014-12-12 15:25:46.000000000 +0900
+@@ -6,7 +6,7 @@ VPATH=@srcdir@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ bindir=@bindir@
+-mandir=@mandir@
++mandir=@mandir@/man1
+ datadir=@datadir@
+ INSTALLCMD=@INSTALL@
+ LIBS=@LIBS@ -lpopt
+@@ -22,13 +22,13 @@ SRV_OBJS = util.o tbench_srv.o socklib.o
+ all: dbench tbench tbench_srv
+ 
+ dbench: $(DB_OBJS)
+-	$(CC) -o $@ $(DB_OBJS) $(LIBS)
++	$(CC) -o $@ ${LDFLAGS} $(DB_OBJS) $(LIBS)
+ 
+ tbench: $(TB_OBJS)
+-	$(CC) -o $@ $(TB_OBJS) $(LIBS)
++	$(CC) -o $@ ${LDFLAGS} $(TB_OBJS) $(LIBS)
+ 
+ tbench_srv: $(SRV_OBJS)
+-	$(CC) -o $@ $(SRV_OBJS) $(LIBS)
++	$(CC) -o $@ ${LDFLAGS} $(SRV_OBJS) $(LIBS)
+ 
+ # Careful here: don't install client.txt over itself.
+ install: all

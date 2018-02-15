@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.2 2017/01/03 00:02:03 khorben Exp $
+include/openconnect.h
+lib/libopenconnect.la
+lib/pkgconfig/openconnect.pc
+man/man8/openconnect.8
+sbin/openconnect

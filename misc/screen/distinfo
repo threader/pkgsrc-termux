@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.48 2017/10/24 11:45:18 ryoon Exp $
+
+SHA1 (screen-4.6.2.tar.gz) = 0434d4c45d0b5bb339551511e10a9b2c4ec6a789
+RMD160 (screen-4.6.2.tar.gz) = 371828d8de1f2f8a77b6c010e12b5ea91d351dd3
+SHA512 (screen-4.6.2.tar.gz) = 224bd16ad5ae501d1b8bb7d2ba9cc19e6a0743de5a5b320109c2f6bf3b1ca564cc7094ed9211be13733d9d769cde77d13fe236341d448cad0518038ab1e85c99
+Size (screen-4.6.2.tar.gz) = 845210 bytes
+SHA1 (patch-aa) = 39c6fa5bda62b2891cecf4a5e9598b179ea8b4dc
+SHA1 (patch-ab) = 40911979a540645db2a17861328292add22898d3
+SHA1 (patch-ae) = 2a9b19c52cafe238c923977c9952af0ec0b0d9f6
+SHA1 (patch-ai) = edefc44e47066dc89bda22a94d417511f46f0190
+SHA1 (patch-aj) = 446b07f7f418dd0c83fb5bc6246a01cc4417b03b
+SHA1 (patch-ak) = 1aaf82f7fe666d86a9f4ab7d6f7222e895a17bba
+SHA1 (patch-al) = caabc33ee51922d97edac19346ad9d80fabb164b
+SHA1 (patch-am) = a721e311e7dde7938de0e9546a7892bfd104ebd1
+SHA1 (patch-an) = bda6c65148410a6c9a13afd8ad34f93e33731552
+SHA1 (patch-ao) = 91eecb62351aff720447eb48ea85aae70b62f9b6
+SHA1 (patch-ap) = 1f11b50826b3e4d61540351911d21214d3ab83cc
+SHA1 (patch-screen.c) = de5d8468100ab88cbdb842e21b04b00221e798b8
+SHA1 (patch-socket.c) = ef7d3cb14f0199383c0e750af48f19537eb0b36d
+SHA1 (patch-tty.sh) = 6d0d8f60740a3f7167d3d064a8979858a9b01bb0

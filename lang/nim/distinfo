@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/02/05 01:27:30 kamil Exp $
+
+SHA1 (nim-0.16.0.tar.xz) = ef14fea436f9dc8155b0aeadbb332e3d53ea3df0
+RMD160 (nim-0.16.0.tar.xz) = 1a3e073cb24a73d7788f3b035104036132af22a5
+SHA512 (nim-0.16.0.tar.xz) = 6be1c00328b7e5bdaa9070e1cd0e3c6e1883c5bc1e44e9c574785f9bce93697f05753f598cf6fdaa6c5a66f08c2ad6f7afb8f6650fc3b1c8e461eb0cf80baabd
+Size (nim-0.16.0.tar.xz) = 2907076 bytes

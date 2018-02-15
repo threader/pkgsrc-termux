@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/10/05 09:53:12 adam Exp $
+
+SHA1 (dnsdiag-1.6.3.tar.gz) = 3e7db86a29df42b6f88a099f36c659a031955860
+RMD160 (dnsdiag-1.6.3.tar.gz) = 8e5f6c9f8023b3e763687ab024c2d205a174094b
+SHA512 (dnsdiag-1.6.3.tar.gz) = e6fdcf452e21258cb983ebd13999c953ea1f5ef4de1b3f51eecb229a6c271398a6933dbdf8b5cba2d6e53cbb0658df0d7259b618f76b2ffdd2eb79c471a6b221
+Size (dnsdiag-1.6.3.tar.gz) = 11676 bytes

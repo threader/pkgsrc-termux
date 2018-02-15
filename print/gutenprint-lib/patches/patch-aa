@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.3 2015/09/10 00:10:24 gdt Exp $
+
+Force, somewhat hackishly, the use of cups lpstat.  Probably upstream
+should find these paths at configure time.
+
+--- src/gutenprintui2/plist.c.orig	2014-01-04 00:38:09.000000000 +0000
++++ src/gutenprintui2/plist.c
+@@ -96,7 +96,7 @@ static const print_system_t default_prin
+ static print_system_t known_printing_systems[] =
+ {
+   { "CUPS", N_("CUPS"), "lp -s", "-d", "-oraw", "/usr/sbin/cupsd",
+-    "/usr/bin/lpstat -v | awk '/^device for /i {sub(\":\", \"\", $3); print $3}'",
++    "/usr/pkg/bin/lpstat -v | awk '/^device for /i {sub(\":\", \"\", $3); print $3}'",
+     "-n" },
+   { "SysV", N_("System V lp"), "lp -s", "-d", "-oraw", "/usr/bin/lp",
+     "/usr/bin/lpstat -v | awk '/^device for /i {sub(\":\", \"\", $3); print $3}'",

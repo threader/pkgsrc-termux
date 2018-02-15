@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.9 2016/08/22 14:08:43 wiz Exp $
+
+SHA1 (atomicwrites-1.1.5.tar.gz) = 89bfd295abb2c03e20f611a7c2205fc5c09e8509
+RMD160 (atomicwrites-1.1.5.tar.gz) = 117bf8ef21093908639500c95dd3232cc1b0113e
+SHA512 (atomicwrites-1.1.5.tar.gz) = 4de8ab93dcb226c55e8ae1b0ef883c2e1eeae50ac6596afe036ca51dbf6b094c13dbf2d792972312d4c53551886aaa2713aac54bfab42b85abef4d1146e039ac
+Size (atomicwrites-1.1.5.tar.gz) = 18951 bytes

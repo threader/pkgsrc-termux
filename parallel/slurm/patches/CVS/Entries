@@ -1,0 +1,19 @@
+/patch-doc_html_Makefile.am/1.2/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-doc_html_Makefile.in/1.2/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-doc_man_man1_Makefile.am/1.2/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-doc_man_man1_Makefile.in/1.2/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-doc_man_man5_Makefile.am/1.2/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-doc_man_man5_Makefile.in/1.2/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-doc_man_man8_Makefile.am/1.2/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-doc_man_man8_Makefile.in/1.2/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-src_common_net.c/1.1/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-src_common_slurm__jobacct__gather.c/1.1/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-src_common_xcgroup.c/1.1/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-src_common_xcgroup.h/1.1/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-src_plugins_acct__gather__filesystem_lustre_acct__gather__filesystem__lustre.c/1.2/Wed Mar 19 22:05:39 2014//Tpkgsrc-2017Q4
+/patch-src_slurmctld_reservation.c/1.1/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-src_slurmd_common_setproctitle.c/1.1/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-src_slurmd_slurmstepd_task.c/1.1/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-src_srun_libsrun_debugger.c/1.1/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+/patch-src_srun_libsrun_launch.c/1.1/Fri Dec  6 06:05:30 2013//Tpkgsrc-2017Q4
+D

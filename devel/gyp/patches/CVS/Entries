@@ -1,0 +1,11 @@
+/patch-gyptest.py/1.4/Thu Aug 21 14:49:43 2014//Tpkgsrc-2017Q4
+/patch-pylib_gyp_common.py/1.4/Wed Jan 11 14:47:51 2017//Tpkgsrc-2017Q4
+/patch-pylib_gyp_generator_make.py/1.4/Mon Aug 25 13:20:12 2014//Tpkgsrc-2017Q4
+/patch-test_lib_TestGyp.py/1.2/Wed Jan 11 14:47:51 2017//Tpkgsrc-2017Q4
+/patch-test_library__dirs_subdir_test.gyp/1.1/Thu Aug 21 14:49:43 2014//Tpkgsrc-2017Q4
+/patch-test_module_src_module.gyp/1.1/Thu Aug 21 14:49:43 2014//Tpkgsrc-2017Q4
+/patch-test_module_src_program.c/1.1/Thu Aug 21 14:49:43 2014//Tpkgsrc-2017Q4
+/patch-test_variables_commands_commands-repeated.gyp.stdout/1.1/Thu Aug 21 14:49:43 2014//Tpkgsrc-2017Q4
+/patch-test_variables_commands_commands.gyp.ignore-env.stdout/1.1/Thu Aug 21 14:49:43 2014//Tpkgsrc-2017Q4
+/patch-test_variables_commands_commands.gyp.stdout/1.1/Thu Aug 21 14:49:43 2014//Tpkgsrc-2017Q4
+D

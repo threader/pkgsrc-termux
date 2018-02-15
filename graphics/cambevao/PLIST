@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:02 jperkin Exp $
+bin/cambevao
+share/doc/cambevao.README
+share/examples/cambevao/cambevao.xml

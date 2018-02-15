@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.2 2017/09/21 10:57:25 jperkin Exp $
+lib/gnuchess/book.bin

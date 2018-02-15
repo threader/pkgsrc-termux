@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2017/05/23 10:56:16 mef Exp $
+
+SHA1 (aha-0.4.10.6.tar.gz) = 1d8cbd9f025a6dde70ded0a48cc5036130ce540c
+RMD160 (aha-0.4.10.6.tar.gz) = 4d2318c672de08d24a1ab0a2ec95e1f0fc7a9a18
+SHA512 (aha-0.4.10.6.tar.gz) = 640fc0b802fbe026152143e66a2ef5e7e36342dfab01a1f4ed4a543d0fc822a7377a2434f1d5fca917126740eb102a7c6dd232e9c15815d5ca7ef80a4cb27e4b
+Size (aha-0.4.10.6.tar.gz) = 372683 bytes

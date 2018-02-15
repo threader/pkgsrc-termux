@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.9 2017/08/24 02:14:14 markd Exp $
+
+SHA1 (tex-mhchem-44888/mhchem.tar.xz) = fac9db3c2218fbca1db3e6e4a33c53fbe5a89376
+RMD160 (tex-mhchem-44888/mhchem.tar.xz) = 32afda2f0d96f3c4ba91f988d0b4fdb6592d64c5
+SHA512 (tex-mhchem-44888/mhchem.tar.xz) = f1f8af1d7ab05dc6e36cfb36761caf7655904548dec85ed526e6da41b4b4a4c6c91975a0e11ccc6595ac3df00237b9cbe41aff0c5804417058422b29c6d9358b
+Size (tex-mhchem-44888/mhchem.tar.xz) = 51468 bytes

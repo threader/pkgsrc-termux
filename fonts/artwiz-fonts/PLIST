@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.3 2014/06/01 16:35:32 wiz Exp $
+share/fonts/X11/artwiz/anorexia.pcf
+share/fonts/X11/artwiz/aqui.pcf
+share/fonts/X11/artwiz/cure.pcf
+share/fonts/X11/artwiz/cursor.pcf
+share/fonts/X11/artwiz/drift.pcf
+share/fonts/X11/artwiz/edges.pcf
+share/fonts/X11/artwiz/fkp.pcf
+share/fonts/X11/artwiz/gelly.pcf
+share/fonts/X11/artwiz/glisp-bold.pcf
+share/fonts/X11/artwiz/glisp.pcf
+share/fonts/X11/artwiz/kates.pcf
+share/fonts/X11/artwiz/lime.pcf
+share/fonts/X11/artwiz/mints-mild.pcf
+share/fonts/X11/artwiz/mints-strong.pcf
+share/fonts/X11/artwiz/nu.pcf
+share/fonts/X11/artwiz/smoothansi.pcf
+share/fonts/X11/artwiz/snap.pcf

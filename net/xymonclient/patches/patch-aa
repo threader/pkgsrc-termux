@@ -1,0 +1,82 @@
+$NetBSD: patch-aa,v 1.6 2014/02/27 20:22:41 spz Exp $
+
+--- ./configure.client.orig	2014-01-19 12:17:56.000000000 +0000
++++ ./configure.client
+@@ -75,7 +75,7 @@ then
+ 	XYMONUSER="xymon"
+ fi
+ 
+-if test -z "$XYMONTOPDIR"
++if test -z "$XYMONHOME"
+ then
+ 	if test "`uname -s`" = "Darwin"
+ 	then
+@@ -92,29 +92,31 @@ then
+ 		echo ""; echo ""
+ 		HOMEDIR="`dscl . -read /Users/$XYMONUSER | grep HomeDirectory | awk '{print $2}'`"
+ 	else
+-		USERDATA=`getent passwd $XYMONUSER 2>/dev/null || ypmatch "${XYMONUSER}" passwd || grep "^${XYMONUSER}:" /etc/passwd`
+-		if test $? -eq 0
+-		then
+-			echo "Found passwd entry for user $USERDATA"
+-		else
+-			echo "FAILURE: The user $XYMONUSER does not exist. Create user and try again."
+-			exit 1
++		if [ -z ${PKGBUILD} ]; then
++			USERDATA=`getent passwd $XYMONUSER 2>/dev/null || ypmatch "${XYMONUSER}" passwd || grep "^${XYMONUSER}:" /etc/passwd`
++			if test $? -eq 0
++			then
++				echo "Found passwd entry for user $USERDATA"
++			else
++				echo "FAILURE: The user $XYMONUSER does not exist. Create user and try again."
++				exit 1
++			fi
++			echo ""; echo ""
++			HOMEDIR="`echo $USERDATA|cut -d: -f6`"
+ 		fi
+-		echo ""; echo ""
+-		HOMEDIR="`echo $USERDATA|cut -d: -f6`"
+ 	fi
+ else
+-	HOMEDIR="$XYMONTOPDIR"
++	HOMEDIR="$XYMONHOME"
+ fi
+ 
+-echo "Where do you want the Xymon installation [${HOMEDIR}] ?"
++echo "Where do you want the Xymon installation [${XYMONTOPDIR}] ?"
+ if test -z "$XYMONTOPDIR"
+ then
+ 	read XYMONTOPDIR
+ fi
+ if test -z "$XYMONTOPDIR"
+ then
+-	XYMONTOPDIR=${HOMEDIR}
++	XYMONTOPDIR=${XYMONTOPDIR}
+ fi
+ if test -d "$XYMONTOPDIR"
+ then
+@@ -156,6 +158,8 @@ echo "XYMONTOPDIR = $XYMONTOPDIR"       
+ echo ""                                  >>Makefile
+ echo "# Xymon settings follows"          >>Makefile
+ echo "#"                                 >>Makefile
++echo "# Xymon Logdir"                    >>Makefile
++echo "XYMONLOGDIR = $XYMONLOGDIR"        >>Makefile
+ echo "# Username running Xymon"          >>Makefile
+ echo "XYMONUSER = $XYMONUSER"            >>Makefile
+ echo "# Xymon server IP-address"         >>Makefile
+@@ -189,9 +193,15 @@ fi
+ if test "$INSTALLETCDIR" != ""; then
+ 	echo "INSTALLETCDIR = $INSTALLETCDIR"   >>Makefile
+ fi
++if test "$INSTALLEXADIR" != ""; then
++	echo "INSTALLEXADIR = $INSTALLEXADIR"   >>Makefile
++fi
+ if test "$INSTALLEXTDIR" != ""; then
+ 	echo "INSTALLEXTDIR = $INSTALLEXTDIR"   >>Makefile
+ fi
++if test "$INSTALLLOCALDIR" != ""; then
++	echo "INSTALLLOCALDIR = $INSTALLLOCALDIR"   >>Makefile
++fi
+ if test "$INSTALLTMPDIR" != ""; then
+ 	echo "INSTALLTMPDIR = $INSTALLTMPDIR"   >>Makefile
+ fi

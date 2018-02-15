@@ -1,0 +1,12 @@
+# $NetBSD: buildlink3.mk,v 1.10 2017/02/20 09:31:53 wiz Exp $
+
+BUILDLINK_TREE+=	tidy
+
+.if !defined(TIDY_BUILDLINK3_MK)
+TIDY_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.tidy+=	tidy>=5.1.25<20000000
+BUILDLINK_PKGSRCDIR.tidy?=	../../www/tidy
+.endif # TIDY_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-tidy

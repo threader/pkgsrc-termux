@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.2 2015/10/04 13:11:08 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/em-socksify.gemspec
+${GEM_LIBDIR}/lib/em-socksify.rb
+${GEM_LIBDIR}/lib/em-socksify/connect.rb
+${GEM_LIBDIR}/lib/em-socksify/connectify.rb
+${GEM_LIBDIR}/lib/em-socksify/errors.rb
+${GEM_LIBDIR}/lib/em-socksify/socks5.rb
+${GEM_LIBDIR}/lib/em-socksify/socksify.rb
+${GEM_LIBDIR}/lib/em-socksify/version.rb
+${GEM_LIBDIR}/spec/helper.rb
+${GEM_LIBDIR}/spec/socksify_spec.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

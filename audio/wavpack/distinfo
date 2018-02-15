@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.9 2017/01/23 21:53:22 wiz Exp $
+
+SHA1 (wavpack-5.1.0.tar.bz2) = ed96443e3fc915128e1002a0f9f2c7ae9bcdc09b
+RMD160 (wavpack-5.1.0.tar.bz2) = 00f3ed759e9e3f7a92d5604e3527545be327fe4d
+SHA512 (wavpack-5.1.0.tar.bz2) = 4c31616ae63c3a875afa20f26ce935f7a8f9921e2892b4b8388eca3ccd83b2d686f43eed8b9ec1dead934a1148401b9dced3b05f509b7942c48d7af31cf80a54
+Size (wavpack-5.1.0.tar.bz2) = 824331 bytes
+SHA1 (patch-configure) = 10539a259d8b4442281cb41d0fa596fb84b8821a

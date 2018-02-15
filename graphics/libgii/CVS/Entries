@@ -1,0 +1,10 @@
+/DESCR/1.2/Tue Sep 21 13:37:04 2004//Tpkgsrc-2017Q4
+/Makefile/1.35/Thu Jan 19 18:52:12 2017//Tpkgsrc-2017Q4
+/PLIST/1.12/Sat Jan 30 14:54:48 2010//Tpkgsrc-2017Q4
+/PLIST.Darwin/1.1/Fri Jan 17 08:13:29 2014//Tpkgsrc-2017Q4
+/PLIST.DragonFly/1.1/Wed Apr 12 16:57:04 2006//Tpkgsrc-2017Q4
+/PLIST.FreeBSD/1.1/Wed Apr 12 16:57:04 2006//Tpkgsrc-2017Q4
+/PLIST.Linux/1.1/Sat Jul 29 06:59:37 2006//Tpkgsrc-2017Q4
+/buildlink3.mk/1.13/Sat Feb  1 19:39:17 2014//Tpkgsrc-2017Q4
+/distinfo/1.16/Tue Nov  3 21:34:07 2015//Tpkgsrc-2017Q4
+D/patches////

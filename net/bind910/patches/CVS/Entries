@@ -1,0 +1,9 @@
+/patch-bin_dig_dighost.c/1.3/Sun Dec 13 17:35:22 2015//Tpkgsrc-2017Q4
+/patch-bin_tests_system_Makefile.in/1.4/Sat Apr 22 16:05:43 2017//Tpkgsrc-2017Q4
+/patch-config.threads.in/1.1.1.1/Wed Jul  2 02:42:58 2014//Tpkgsrc-2017Q4
+/patch-configure/1.5/Tue Nov  7 02:16:45 2017//Tpkgsrc-2017Q4
+/patch-contrib_dlz_config.dlz.in/1.1.1.1/Wed Jul  2 02:42:58 2014//Tpkgsrc-2017Q4
+/patch-lib_dns_rbt.c/1.5/Tue Jul 19 01:08:05 2016//Tpkgsrc-2017Q4
+/patch-lib_lwres_getaddrinfo.c/1.2/Tue Oct 14 16:23:19 2014//Tpkgsrc-2017Q4
+/patch-lib_lwres_getnameinfo.c/1.1.1.1/Wed Jul  2 02:42:58 2014//Tpkgsrc-2017Q4
+D

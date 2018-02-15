@@ -1,0 +1,38 @@
+$NetBSD: patch-ab,v 1.11 2014/08/21 14:48:09 jperkin Exp $
+
+Add explicit -lWUtil.
+
+--- src/Imakefile.orig	1999-10-18 08:35:58.000000000 +0000
++++ src/Imakefile
+@@ -7,7 +7,7 @@ ICONS = WSoundPrefs.xpm WSoundPrefs.tiff
+ 
+ CC = gcc
+ 
+-BINDIR = /Apps/WSoundPrefs.app
++BINDIR = ${PREFIX}/GNUstep/Apps/WSoundPrefs.app
+ 
+ XCOMM EFENCELIB = -lefence
+ EFENCELIB =
+@@ -18,19 +18,19 @@ WSOUNDLIBS = `get-wsound-flags --libs`
+ WRASTERCFLAGS = `get-wraster-flags --cflags`
+ WRASTERLFLAGS = `get-wraster-flags --lflags`
+ WRASTERLIBS = `get-wraster-flags --libs`
+-WINGSLIBS = -lWINGs -lPropList
++WINGSLIBS = -lWINGs -lPropList -lWUtil
+ 
+ STD_INCLUDES = $(WRASTERCFLAGS) $(WSOUNDCFLAGS)
+ DEPLIBS = $(DEPXLIB) 
+ 
+-LOCAL_LIBRARIES =	$(XLIB) $(WINGSLIBS) $(WSOUNDLFLAGS) $(WSOUNDLIBS) $(WRASTERLFLAGS) $(WRASTERLIBS) $(EFENCELIB)
++LOCAL_LIBRARIES =	$(XLIB) $(WINGSLIBS) $(WSOUNDLFLAGS) $(WSOUNDLIBS) $(WRASTERLFLAGS) $(WRASTERLIBS) $(EFENCELIB) -lintl -lfontconfig
+ 
+ LINTLIBS = $(LINTXLIB)
+ 
+ SRCS = PLFunctions.c SoundEvents.c SoundPaths.c SystemInfo.c WSoundPrefs.c main.c
+ OBJS = PLFunctions.o SoundEvents.o SoundPaths.o SystemInfo.o WSoundPrefs.o main.o
+ 
+-ComplexProgramTarget(WSoundPrefs)
++ComplexProgramTargetNoMan(WSoundPrefs)
+ 
+ InstallMultiple($(ICONS),$(BINDIR))
+ 

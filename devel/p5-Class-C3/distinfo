@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.15 2017/04/25 13:51:37 mef Exp $
+
+SHA1 (Class-C3-0.33.tar.gz) = c5ccab7b84be3132ab9fb46779575c27137979f4
+RMD160 (Class-C3-0.33.tar.gz) = 5e6950083b236a7ad531f1b697bf6b1e25486d78
+SHA512 (Class-C3-0.33.tar.gz) = f72cff75c1222d7b42041b44b5ec7c8ff79e8c53f84ff11e1976a69dcde49093c52e66ebc19ce72f70c99332a9528a07a7d9eab7c74f5b6ce77464434b36cd7b
+Size (Class-C3-0.33.tar.gz) = 27163 bytes

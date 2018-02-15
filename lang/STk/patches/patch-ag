@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.2 2015/12/29 23:34:43 dholland Exp $
+
+Avoid rebuilding the manual at install time. (?)
+
+--- Doc/Extension/Makefile.orig
++++ Doc/Extension/Makefile
+@@ -11,7 +11,7 @@
+ ps:	Extending.ps
+ 
+ 
+-install: ps
++install:
+ 	$(CP) Extending.ps $(DOC_DIR)
+ 
+ Extending.dvi: $(SRC)

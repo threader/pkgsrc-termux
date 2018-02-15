@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.5 2017/09/17 10:50:19 adam Exp $
+
+SHA1 (lupa-1.5.tar.gz) = 4d77de7f4fa1975eeec26975d436e59f19a6d661
+RMD160 (lupa-1.5.tar.gz) = 27d68a9f2094dd5f9ae724c6463e2f18b553850d
+SHA512 (lupa-1.5.tar.gz) = b2d1a987e09d1fee2568117c73179faae413944b0549cd727ee1ff15715363e9cf902ce1b5d371a4ed71e6b7c1aa5dca0c90ada716598bb2eb7479814b9c5539
+Size (lupa-1.5.tar.gz) = 427626 bytes

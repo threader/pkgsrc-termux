@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.14 2016/04/22 08:04:23 jperkin Exp $
+
+SHA1 (kde-runtime-15.12.0.tar.xz) = 30da08dfb51fade220df7f8cf3e3eab5669a2e18
+RMD160 (kde-runtime-15.12.0.tar.xz) = 37e6c3693e81b31a4b92a5eeb35f8c84602bf86d
+SHA512 (kde-runtime-15.12.0.tar.xz) = 453f0538147bb3ea95d4d9e6c503f128f30a383ebe139dcf6df411688d9c245779e931c609e38ca7b94b58907e496af3299646654f53518bf2cb7aa22c8f9137
+Size (kde-runtime-15.12.0.tar.xz) = 7903824 bytes
+SHA1 (patch-ab) = f6af1c3e2502a91add9ceaa5375e76aee1e8c20c
+SHA1 (patch-ac) = fadc0c0d3b7c8f893a9249724f26e2fc2c7f0f1e
+SHA1 (patch-ad) = 285fbd72b3be665776acc61a55f3d65f35e338c4
+SHA1 (patch-ae) = b2728696f413b146831db62e422adcf73b132126
+SHA1 (patch-af) = 1a8f15ac1c8dadd59fe00ca7ca304ba41521f896
+SHA1 (patch-ag) = 5ca9064552379792c32577875d07562d3f736ab7
+SHA1 (patch-ai) = 3742a827c4b18cde06828ff585d3130062803b9a
+SHA1 (patch-ak) = 4fee3877613afddf179a7a8376586a6391b53c89
+SHA1 (patch-doc_kcontrol_CMakeLists.txt) = c6300735d29c009322e4fdb4d58a606940fb0c62
+SHA1 (patch-kioslave_nfs_rpc__nfs2__prot__xdr.c) = f1d8dc8224e68ef323f06602bf4b856c785f15e4
+SHA1 (patch-kwalletd_backend_blowfish.h) = 23bd9bf9671a770d203a10c46dc602145d2b9457

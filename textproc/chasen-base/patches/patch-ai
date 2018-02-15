@@ -1,0 +1,15 @@
+$NetBSD: patch-ai,v 1.4 2015/03/15 01:00:12 taca Exp $
+
+Fix path for pkgsrc.
+
+--- chasen-config.in.orig	2003-06-10 16:39:01.000000000 +0900
++++ chasen-config.in
+@@ -88,7 +88,7 @@ while test $# -gt 0; do
+        	;;
+ 
+     --mkchadic)
+-       	echo @libexecdir@/chasen
++       	echo @sbindir@
+        	;;
+ 
+     *)

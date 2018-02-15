@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.7 2017/12/14 20:51:57 fhajny Exp $
+
+SHA1 (xmpp-1.1.16.tar.gz) = f707592866a654f6b49460a042aae0f4275667bb
+RMD160 (xmpp-1.1.16.tar.gz) = 4717f8695ec0bd0b0e7c678b2fe0e7dffb36cfc9
+SHA512 (xmpp-1.1.16.tar.gz) = 7f0c24067c9a23c7d0f092a423fc6d35e17e408dc7dc17613633fb1950418bca76127f301fde044d6f41097fad806088e08b31a0406bdf08d82130a328372133
+Size (xmpp-1.1.16.tar.gz) = 381312 bytes
+SHA1 (patch-rebar.config) = a6ff316da98270f35d3fa7cac035bbf097e45634

@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.4 2015/12/29 23:34:57 dholland Exp $
+
+Configure for pkgsrc.
+
+--- Makefile.orig	2007-06-03 14:41:30.000000000 +0000
++++ Makefile
+@@ -1,5 +1,6 @@
+-CXX         = g++ 
++CXX        ?= g++ 
+ FLAGS       = -O2 -Wall #-D_DEBUG_
++FLAGS      += $(CXXFLAGS)
+ INSTALL_DIR = /usr/local/bin/
+ RELEASE	    = 1_2_7
+ 

@@ -1,0 +1,22 @@
+# $NetBSD: Makefile.common,v 1.11 2014/10/05 16:41:07 wiz Exp $
+#
+# used by lang/sablevm-classpath-gui/Makefile
+
+DISTNAME=	sablevm-classpath-1.13
+CATEGORIES=	lang
+MASTER_SITES=	http://sablevm.org/download/release/1.13/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://sablevm.org/
+COMMENT=	Class libraries for the SableVM Java virtual machine
+
+BUILD_DEPENDS+=		jikes>=1.18:../../lang/jikes
+
+DISTINFO_FILE=		${.CURDIR}/../../lang/sablevm-classpath/distinfo
+
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/java/sablevm
+USE_TOOLS+=		gmake
+USE_LIBTOOL=		yes
+
+CONFIGURE_ARGS+=	--with-jikes

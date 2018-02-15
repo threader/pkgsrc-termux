@@ -1,0 +1,14 @@
+/Makefile/1.4/Tue Apr 12 22:36:11 2011//Tpkgsrc-2017Q4
+/fileio-bzlib.c/1.1/Wed Jan 12 00:26:33 2011//Tpkgsrc-2017Q4
+/fileio-lzma.c/1.1/Wed Jan 12 00:26:33 2011//Tpkgsrc-2017Q4
+/fileio-plain.c/1.1/Wed Jan 12 00:26:33 2011//Tpkgsrc-2017Q4
+/fileio-zlib.c/1.2/Fri Aug 24 19:04:59 2012//Tpkgsrc-2017Q4
+/fileio.c/1.1/Wed Jan 12 00:26:33 2011//Tpkgsrc-2017Q4
+/fileio.h/1.1/Wed Jan 12 00:26:33 2011//Tpkgsrc-2017Q4
+/package-list.c/1.2/Wed Jan 12 08:47:52 2011//Tpkgsrc-2017Q4
+/package-list.h/1.1/Wed Jan 12 00:26:33 2011//Tpkgsrc-2017Q4
+/parse-rpm.c/1.1/Wed Jan 12 00:26:33 2011//Tpkgsrc-2017Q4
+/parse-rpm.h/1.1/Wed Jan 12 00:26:33 2011//Tpkgsrc-2017Q4
+/rpm2pkg.8/1.8/Sat Jul 20 21:50:54 2013//Tpkgsrc-2017Q4
+/rpm2pkg.c/1.21/Tue Apr 12 22:12:42 2011//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.4 2016/04/21 13:37:22 jperkin Exp $
+
+--- unsigned.c.orig	1998-06-18 17:50:42.000000000 +0000
++++ unsigned.c
+@@ -45,6 +45,10 @@ to preserve same.
+ #define LIBC_ATOI_IS_BROKEN
+ #endif
+ 
++#ifdef __NetBSD__
++#define LIBC_ATOI_IS_BROKEN
++#endif
++
+ #ifdef LIBC_ATOI_IS_BROKEN
+ #include <ctype.h>
+ #endif

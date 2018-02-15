@@ -1,0 +1,13 @@
+/Makefile/1.14/Thu Nov 12 05:40:36 2009//Tpkgsrc-2017Q4
+/cpuflags.1/1.21/Mon Jul 21 10:46:16 2008//Tpkgsrc-2017Q4
+/cpuflags.mk/1.20/Wed Jan 28 23:30:50 2009//Tpkgsrc-2017Q4
+/cpuflags.sh/1.7/Wed Jan 28 23:30:50 2009//Tpkgsrc-2017Q4
+/optimize_gcc.mk/1.37/Tue Sep 26 10:26:58 2017//Tpkgsrc-2017Q4
+/subr_Darwin/1.1/Sun Dec  5 11:19:39 2010//Tpkgsrc-2017Q4
+/subr_FreeBSD/1.4/Sun Dec  5 11:19:39 2010//Tpkgsrc-2017Q4
+/subr_Linux/1.2/Wed Dec 10 23:27:17 2008//Tpkgsrc-2017Q4
+/subr_NetBSD/1.13/Thu Jan 28 19:11:30 2016//Tpkgsrc-2017Q4
+/subr_SunOS/1.5/Wed Mar  4 00:32:44 2009//Tpkgsrc-2017Q4
+/subr_gcc/1.6/Mon Jan 12 22:11:58 2009//Tpkgsrc-2017Q4
+/subr_x86/1.13/Mon Mar 30 21:02:25 2009//Tpkgsrc-2017Q4
+D

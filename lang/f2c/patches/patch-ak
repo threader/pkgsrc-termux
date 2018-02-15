@@ -1,0 +1,17 @@
+$NetBSD: patch-ak,v 1.4 2015/12/29 23:34:46 dholland Exp $
+
+Use standard headers.
+
+--- src/sysdep.c.orig	2009-12-22 11:45:47.000000000 +0100
++++ src/sysdep.c
+@@ -80,8 +80,8 @@ extern "C" {
+ #define Cextern extern
+ #endif
+ 
+-Cextern int unlink Argdcl((const char *));
+-Cextern int fork Argdcl((void)), getpid Argdcl((void)), wait Argdcl((int*));
++#include <sys/wait.h>
++#include <unistd.h>
+ 
+  void
+ #ifdef KR_headers

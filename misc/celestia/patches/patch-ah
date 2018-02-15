@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.6 2013/10/27 21:21:26 dholland Exp $
+
+--- src/celutil/util.h.orig	2011-06-05 16:11:15.000000000 +0000
++++ src/celutil/util.h
+@@ -12,6 +12,7 @@
+ #ifndef _CELUTIL_UTIL_H_
+ #define _CELUTIL_UTIL_H_
+ 
++#include <algorithm>
+ #include <string>
+ #include <vector>
+ #include <iostream>

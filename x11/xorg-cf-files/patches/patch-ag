@@ -1,0 +1,53 @@
+$NetBSD: patch-ag,v 1.7 2017/01/06 21:12:39 tez Exp $
+
+Add __ppc64__ and __arm__
+Recognize __sun as well as sun
+Add __ia64__
+Also recognize __sparc__ apparently now needed for gcc49 on solaris sparc
+to avoid -M /usr/lib/ld/map.noexdata which in does not work on SPARC
+
+--- Imake.cf.orig	2015-12-22 01:28:02.000000000 +0000
++++ Imake.cf
+@@ -25,9 +25,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v
+ # define MacroIncludeFile <darwin.cf>
+ # define MacroFile darwin.cf
+ # define DarwinArchitecture
+-# ifdef __ppc__
++# if defined __ppc__ || defined __ppc64__
+ #  define PpcDarwinArchitecture
+ #  undef __ppc__
++#  undef __ppc64__
+ # endif
+ # ifdef __i386__
+ #  define i386DarwinArchitecture
+@@ -255,6 +256,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v
+ #  define AMD64Architecture
+ #  undef __x86_64__
+ # endif
++# ifdef __ia64__
++#  define ia64Architecture
++#  undef __ia64__
++# endif
+ #endif /* NetBSD */
+ 
+ /* Systems based on kernel of NetBSD */
+@@ -352,7 +357,7 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v
+ # endif
+ #endif /* AMOEBA */
+ 
+-#ifdef sun
++#if defined(sun) || defined(__sun)
+ # define MacroIncludeFile <sun.cf>
+ # define MacroFile sun.cf
+ # ifdef SVR4
+@@ -363,6 +368,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v
+ #  undef sparc
+ #  define SparcArchitecture
+ # endif
++# ifdef __sparc__
++#  undef __sparc__
++#  define SparcArchitecture
++# endif
+ # ifdef __sparcv9
+ #  undef __sparcv9
+ #  define Sparc64Architecture

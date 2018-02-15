@@ -1,0 +1,111 @@
+$NetBSD: patch-aa,v 1.5 2015/04/19 19:35:00 spz Exp $
+
+pkgsrcification
+
+--- gnats/Makefile.in.orig	2015-02-27 02:10:23.000000000 +0000
++++ gnats/Makefile.in
+@@ -574,11 +574,10 @@ CLEANFILES = $(bin_SCRIPTS) $(pkglibexec
+ 
+ 
+ # Data files
+-dist_pkgdata_DATA = addresses categories classes gnatsd.host_access \
+-	gnatsd.user_access responsible states submitters \
+-	databases send-pr.conf
++dist_pkgdata_DATA = addresses categories classes dbconfig \
++	responsible states submitters
+ 
+-pkgdata_DATA = dbconfig
++pkgdata_DATA = databases gnatsd.host_access gnatsd.user_access send-pr.conf
+ all: $(BUILT_SOURCES) autoconf.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
+@@ -881,18 +880,18 @@ distclean-compile:
+ 	$(AM_V_YACC)$(am__skipyacc) $(SHELL) $(YLWRAP) $< y.tab.c $@ y.tab.h `echo $@ | $(am__yacc_c2h)` y.output $*.output -- $(YACCCOMPILE)
+ install-dist_lispDATA: $(dist_lisp_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(dist_lisp_DATA)'; test -n "$(lispdir)" || list=; \
++	@list='$(dist_lisp_DATA)'; test -n "%%GNATS_DEFAULTS%%" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(lispdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(lispdir)" || exit 1; \
++	  echo " $(MKDIR_P) '%%GNATS_DEFAULTS%%'"; \
++	  $(MKDIR_P) "%%GNATS_DEFAULTS%%" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(lispdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(lispdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '%%GNATS_DEFAULTS%%/..'"; \
++	  $(INSTALL_DATA) $$files "%%GNATS_DEFAULTS%%/.." || exit $$?; \
+ 	done
+ 
+ uninstall-dist_lispDATA:
+@@ -902,18 +901,18 @@ uninstall-dist_lispDATA:
+ 	dir='$(DESTDIR)$(lispdir)'; $(am__uninstall_files_from_dir)
+ install-dist_pkgdataDATA: $(dist_pkgdata_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(dist_pkgdata_DATA)'; test -n "$(pkgdatadir)" || list=; \
++	@list='$(dist_pkgdata_DATA)'; test -n "%%GNATS_DEFAULTS%%" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(pkgdatadir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(pkgdatadir)" || exit 1; \
++	  echo " $(MKDIR_P) '%%GNATS_DEFAULTS%%'"; \
++	  $(MKDIR_P) "%%GNATS_DEFAULTS%%" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(pkgdatadir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pkgdatadir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '%%GNATS_DEFAULTS%%'"; \
++	  $(INSTALL_DATA) $$files "%%GNATS_DEFAULTS%%" || exit $$?; \
+ 	done
+ 
+ uninstall-dist_pkgdataDATA:
+@@ -925,16 +924,16 @@ install-pkgdataDATA: $(pkgdata_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	@list='$(pkgdata_DATA)'; test -n "$(pkgdatadir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(pkgdatadir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(pkgdatadir)" || exit 1; \
++	  echo " $(MKDIR_P) '%%EGDIR%%"; \
++	  $(MKDIR_P) "%%EGDIR%%" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(pkgdatadir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pkgdatadir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '%%EGDIR%%"; \
++	  $(INSTALL_DATA) $$files "%%EGDIR%%" || exit $$?; \
+ 	done
+ 
+ uninstall-pkgdataDATA:
+@@ -1304,18 +1303,9 @@ mail-query: mail-query.sh Makefile
+ send-pr: send-pr.sh Makefile
+ 	$(do_subst) < $(srcdir)/send-pr.sh > send-pr
+ 
+-# We need to link in defaults database config files for for mkdb
++# this gets done by the pkgsrc framework
+ install-data-hook:
+-	-mkdir -p $(DESTDIR)/$(sysconfdir)/$(PACKAGE)/defaults && \
+-	for i in $(dist_pkgdata_DATA) $(pkgdata_DATA) ; do \
+-		ln -s $(pkgdatadir)/$$i \
+-			$(DESTDIR)/$(sysconfdir)/$(PACKAGE)/defaults || true; \
+-	done
+-	for i in databases gnatsd.user_access gnatsd.host_access send-pr.conf ; do \
+-		if [ ! -e $(DESTDIR)/$(sysconfdir)/$(PACKAGE)/$$i ] ; then \
+-			${INSTALL_DATA} $(DESTDIR)$(pkgdatadir)/$$i $(DESTDIR)/$(sysconfdir)/$(PACKAGE); \
+-		fi; \
+-	done
++	:
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.3 2017/11/02 12:55:31 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/multidict/__init__.py
+${PYSITELIB}/multidict/__init__.pyc
+${PYSITELIB}/multidict/__init__.pyi
+${PYSITELIB}/multidict/__init__.pyo
+${PYSITELIB}/multidict/_abc.py
+${PYSITELIB}/multidict/_abc.pyc
+${PYSITELIB}/multidict/_abc.pyo
+${PYSITELIB}/multidict/_compat.py
+${PYSITELIB}/multidict/_compat.pyc
+${PYSITELIB}/multidict/_compat.pyo
+${PYSITELIB}/multidict/_istr.c
+${PYSITELIB}/multidict/_istr.pyd
+${PYSITELIB}/multidict/_istr.so
+${PYSITELIB}/multidict/_multidict.c
+${PYSITELIB}/multidict/_multidict.pyx
+${PYSITELIB}/multidict/_multidict.so
+${PYSITELIB}/multidict/_multidict_py.py
+${PYSITELIB}/multidict/_multidict_py.pyc
+${PYSITELIB}/multidict/_multidict_py.pyo

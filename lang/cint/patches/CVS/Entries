@@ -1,0 +1,18 @@
+/patch-Makefile/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-configure/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-lib_posix_posix.h/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-src_Method.cxx/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-src_Type.cxx/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-src_bc__reader.h/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-src_gcc3strm.cxx/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-src_v6__loadfile.cxx/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-src_v6__macro.cxx/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-src_v6__newlink.cxx/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-src_v6__parse.cxx/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-src_v6__pcode.cxx/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-tool_INSTALLBIN/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-tool_ifdef_Makefile.base/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-tool_ifdef_get.c/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-tool_ifdef_ifdef.cxx/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+/patch-tool_makecint.cxx/1.1/Wed Sep 28 10:00:27 2016//Tpkgsrc-2017Q4
+D

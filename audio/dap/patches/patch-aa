@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.9 2015/07/04 16:18:28 joerg Exp $
+
+--- main/Makefile.netbsd.orig	2003-09-10 02:06:24.000000000 +0200
++++ main/Makefile.netbsd
+@@ -7,13 +7,12 @@ AUDIO   = ../libaudio
+ AUDIOF  = ../libaudiofile
+ BACKDIR = ../bak/main
+ HOMEDIR = $(HOME)
+-X11DIR  = /usr/X11R6
+-INCDIR  = -I. -I.. -I$(SOUND) -I$(SPKIT) -I$(TOOLTIP) -I$(X11DIR)/include -I$(X11DIR)/include/X11
+-LIBDIR  = -L$(SPKIT)/spkit -L$(AUDIO) -L$(AUDIOF) -L$(TOOLTIP) -L$(X11DIR)/lib
++X11DIR  = ${X11BASE}
++INCDIR  = -I. -I.. -I$(SOUND) -I$(SPKIT) -I$(TOOLTIP) -I$(X11DIR)/include -I$(X11DIR)/include/X11 -I${LOCALBASE}/include
++LIBDIR  = -Wl,-R$(X11DIR)/lib -L$(SPKIT)/spkit -L$(AUDIO) -L$(AUDIOF) -L$(TOOLTIP) -L$(X11DIR)/lib -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
+ CCFLAGS = $(INCDIR) $(DEBUG) $(OPTIM) -DLINUX -DNETBSD -DBIGENDIAN -DUSINGGCC -Wall -Wno-unused
+-DEBUG   = -g3
+-OPTIM   = -O1
+-LDFLAGS = $(LIBDIR) -ldsp -laudio -laudiofile -ltooltips -lforms -lXpm -lX11 -lm -lossaudio
++LDFLAGS = $(LIBDIR) -ldsp -laudio -laudiofile -ltooltips -lforms -ljpeg -lXpm -lX11 -lm ${LIBOSSAUDIO}
++OPTIM	= ${CFLAGS}
+ 
+ PROGS =	DAP
+ OBJS  = DPTich.o DPTich_cb.o DPTich_DSP.o DPTich_edit_cb.o DPTich_macros.o \

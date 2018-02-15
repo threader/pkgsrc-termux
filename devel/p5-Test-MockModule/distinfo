@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.7 2017/10/09 07:33:35 wiz Exp $
+
+SHA1 (Test-MockModule-0.13.tar.gz) = ca5537d8e225df312d01e3201fce8025c25e575d
+RMD160 (Test-MockModule-0.13.tar.gz) = 4401fd6872bf5dc393738da3de59873881ded831
+SHA512 (Test-MockModule-0.13.tar.gz) = 17c2aa7b67fcae2a333788db74fc94da9a680ad83786705e70417cb78df0cfa32e6fcca44962dcc9d7c2ee27c45d8f142ce03b62691da4940ccc405a0bb26472
+Size (Test-MockModule-0.13.tar.gz) = 24561 bytes

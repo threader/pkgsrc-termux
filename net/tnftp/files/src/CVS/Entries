@@ -1,0 +1,20 @@
+/Makefile.am/1.2/Sun Oct  4 14:44:07 2015//Tpkgsrc-2017Q4
+/Makefile.in/1.9/Fri Oct 31 18:59:32 2014//Tpkgsrc-2017Q4
+/cmds.c/1.11/Sun Oct  4 14:44:07 2015//Tpkgsrc-2017Q4
+/cmdtab.c/1.7/Fri Oct 31 18:59:33 2014//Tpkgsrc-2017Q4
+/complete.c/1.6/Fri Oct 31 18:59:33 2014//Tpkgsrc-2017Q4
+/domacro.c/1.6/Fri Oct 31 18:59:33 2014//Tpkgsrc-2017Q4
+/extern.h/1.8/Fri Oct 31 18:59:33 2014//Tpkgsrc-2017Q4
+/fetch.c/1.10/Sun Oct  4 14:44:07 2015//Tpkgsrc-2017Q4
+/ftp.1/1.6/Sun Oct  4 14:44:07 2015//Tpkgsrc-2017Q4
+/ftp.c/1.11/Sun Oct  4 14:44:07 2015//Tpkgsrc-2017Q4
+/ftp_var.h/1.10/Sun Oct  4 14:44:07 2015//Tpkgsrc-2017Q4
+/main.c/1.11/Sun Oct  4 14:44:07 2015//Tpkgsrc-2017Q4
+/progressbar.c/1.8/Fri Oct 31 18:59:33 2014//Tpkgsrc-2017Q4
+/progressbar.h/1.6/Fri Oct 31 18:59:33 2014//Tpkgsrc-2017Q4
+/ruserpass.c/1.6/Fri Oct 31 18:59:33 2014//Tpkgsrc-2017Q4
+/ssl.c/1.2/Sun Oct  4 14:44:07 2015//Tpkgsrc-2017Q4
+/ssl.h/1.2/Sun Oct  4 14:44:07 2015//Tpkgsrc-2017Q4
+/util.c/1.10/Fri Oct 31 18:59:33 2014//Tpkgsrc-2017Q4
+/version.h/1.9/Sun Oct  4 14:44:07 2015//Tpkgsrc-2017Q4
+D

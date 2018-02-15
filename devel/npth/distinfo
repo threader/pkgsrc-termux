@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.5 2017/06/14 15:54:08 wiz Exp $
+
+SHA1 (npth-1.5.tar.bz2) = 93ddf1a3bdbca00fb4cf811498094ca61bbb8ee1
+RMD160 (npth-1.5.tar.bz2) = 17634221ca2bd0887e1d8edc8d0ca78212d51a76
+SHA512 (npth-1.5.tar.bz2) = 20f0ec59d304c68081e42535870af8e76c18e30aa7b04ccdafe60fe5261ad7275c2c0e3ea3a767d6145258a3a39fa641032cd97205318266dd727a5fe7ee331a
+Size (npth-1.5.tar.bz2) = 299308 bytes

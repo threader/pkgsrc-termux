@@ -1,0 +1,5 @@
+/patch-Makefile.in/1.1/Thu Aug 21 20:44:16 2014//Tpkgsrc-2017Q4
+/patch-gnu_readlinkat.c/1.2/Tue May 31 15:04:51 2016//Tpkgsrc-2017Q4
+/patch-lib_xattr-at.c/1.1/Thu Aug 21 20:44:16 2014//Tpkgsrc-2017Q4
+/patch-src_system.c/1.2/Mon Jan 26 12:41:53 2015//Tpkgsrc-2017Q4
+D

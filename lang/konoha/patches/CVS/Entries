@@ -1,0 +1,9 @@
+/patch-include_konoha1_konoha__config.h/1.2/Sun Aug 12 11:24:00 2012//Tpkgsrc-2017Q4
+/patch-include_konoha1_konoha__t.h/1.2/Sun Aug 12 11:24:00 2012//Tpkgsrc-2017Q4
+/patch-package_konoha.compiler_compiler.c/1.2/Tue Dec 29 23:34:50 2015//Tpkgsrc-2017Q4
+/patch-package_konoha.io_CMakeLists.txt/1.2/Tue Dec 29 23:34:50 2015//Tpkgsrc-2017Q4
+/patch-package_konoha.sql_CMakeLists.txt/1.1/Sun Aug 12 11:24:00 2012//Tpkgsrc-2017Q4
+/patch-src_main_evidence.c/1.2/Sun Aug 12 11:24:00 2012//Tpkgsrc-2017Q4
+/patch-src_main_os.c/1.1/Tue Aug  7 16:06:06 2012//Tpkgsrc-2017Q4
+/patch-src_main_security.c/1.1/Tue Aug  7 16:06:06 2012//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2016/11/07 10:53:52 wiz Exp $
+
+SHA1 (uritemplate-3.0.0.tar.gz) = 7933292fb56af9f22fb1460374dc4657c01aa3fb
+RMD160 (uritemplate-3.0.0.tar.gz) = 474382a617e79ee4e9718621d9a30e8d05a03f8e
+SHA512 (uritemplate-3.0.0.tar.gz) = 9988ae6db1d0234a2dfb393ab0205dd7902c814b8a85e06a666b8fec44cacec90fc8852b64da068242cb57cbb2ed63478567224fcb6751df82605d1f0881ad6e
+Size (uritemplate-3.0.0.tar.gz) = 30038 bytes

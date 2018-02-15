@@ -1,0 +1,12 @@
+/patch-aa/1.4/Wed Jan 18 13:46:50 2012//Tpkgsrc-2017Q4
+/patch-ab/1.7/Fri Aug 26 12:40:25 2016//Tpkgsrc-2017Q4
+/patch-ac/1.2/Thu Sep 16 07:53:32 2010//Tpkgsrc-2017Q4
+/patch-dist_aclocal_libtool.m4/1.1/Tue Apr 22 14:42:35 2014//Tpkgsrc-2017Q4
+/patch-src_dbinc_atomic.h/1.2/Tue Sep  8 18:51:28 2015//Tpkgsrc-2017Q4
+/patch-src_dbinc_db.in/1.1/Fri Aug 26 17:23:16 2016//Tpkgsrc-2017Q4
+/patch-src_mp_mp__fget.c/1.1/Tue Sep  8 18:51:28 2015//Tpkgsrc-2017Q4
+/patch-src_mp_mp__mvcc.c/1.1/Tue Sep  8 18:51:28 2015//Tpkgsrc-2017Q4
+/patch-src_mp_mp__region.c/1.1/Tue Sep  8 18:51:28 2015//Tpkgsrc-2017Q4
+/patch-src_mutex_mut__method.c/1.1/Tue Sep  8 18:51:28 2015//Tpkgsrc-2017Q4
+/patch-src_mutex_mut__tas.c/1.1/Tue Sep  8 18:51:28 2015//Tpkgsrc-2017Q4
+D

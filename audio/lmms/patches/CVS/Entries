@@ -1,0 +1,12 @@
+/patch-CMakeLists.txt/1.1/Mon Jun 17 15:16:47 2013//Tpkgsrc-2017Q4
+/patch-plugins_ladspa__effect_calf_CMakeLists.txt/1.1/Mon Oct 28 23:44:08 2013//Tpkgsrc-2017Q4
+/patch-plugins_ladspa__effect_calf_src_calf_buffer.h/1.1/Thu Jun 27 15:48:11 2013//Tpkgsrc-2017Q4
+/patch-plugins_ladspa__effect_calf_src_calf_fixed__point.h/1.1/Thu Jun 27 15:48:11 2013//Tpkgsrc-2017Q4
+/patch-plugins_zynaddsubfx_fltk_FL_Fl__Widget.H/1.1/Thu Jun 27 15:48:11 2013//Tpkgsrc-2017Q4
+/patch-plugins_zynaddsubfx_fltk_configh.cmake.in/1.1/Mon Jun 17 15:16:47 2013//Tpkgsrc-2017Q4
+/patch-plugins_zynaddsubfx_fltk_src_numericsort.c/1.1/Mon Jun 17 15:16:47 2013//Tpkgsrc-2017Q4
+/patch-plugins_zynaddsubfx_fltk_src_scandir.c/1.1/Mon Jun 17 15:16:47 2013//Tpkgsrc-2017Q4
+/patch-plugins_zynaddsubfx_src_Effects_Alienwah.cpp/1.1/Thu Jun 27 15:48:11 2013//Tpkgsrc-2017Q4
+/patch-src_core_audio_AudioAlsa.cpp/1.1/Mon Jun 17 15:16:47 2013//Tpkgsrc-2017Q4
+/patch-src_core_audio_AudioOss.cpp/1.1/Mon Jun 17 15:16:47 2013//Tpkgsrc-2017Q4
+D

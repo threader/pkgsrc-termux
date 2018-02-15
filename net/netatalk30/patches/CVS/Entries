@@ -1,0 +1,16 @@
+/patch-bin_ad_ad__cp.c/1.1/Wed Jun 11 11:03:57 2014//Tpkgsrc-2017Q4
+/patch-bin_afppasswd_afppasswd.c/1.1/Wed Jun 11 11:03:57 2014//Tpkgsrc-2017Q4
+/patch-config.h.in/1.1/Wed Jun 11 11:03:57 2014//Tpkgsrc-2017Q4
+/patch-config_Makefile.in/1.1/Wed Jun 11 11:03:57 2014//Tpkgsrc-2017Q4
+/patch-config_pam_Makefile.in/1.1/Wed Jun 11 11:03:57 2014//Tpkgsrc-2017Q4
+/patch-distrib_initscripts_Makefile.in/1.1/Wed Jun 11 11:03:57 2014//Tpkgsrc-2017Q4
+/patch-distrib_initscripts_netatalk.xml.tmpl/1.1/Wed Jun 11 11:03:57 2014//Tpkgsrc-2017Q4
+/patch-etc_afpd_quota.c/1.1/Wed Jun 11 11:03:57 2014//Tpkgsrc-2017Q4
+/patch-etc_cnid__dbd_cnid__metad.c/1.1/Wed Jun 11 11:03:57 2014//Tpkgsrc-2017Q4
+/patch-etc_uams_uams__randnum.c/1.2/Mon Aug 10 15:09:42 2015//Tpkgsrc-2017Q4
+/patch-include_atalk_util.h/1.1/Wed Jun 11 11:03:57 2014//Tpkgsrc-2017Q4
+/patch-libatalk_adouble_ad_flush.c/1.1/Sat Jun 28 04:41:55 2014//Tpkgsrc-2017Q4
+/patch-libatalk_bstring_bstrlib.c/1.1/Fri Jul 14 13:08:31 2017//Tpkgsrc-2017Q4
+/patch-libatalk_util_getiface.c/1.1/Wed Jun 11 11:03:57 2014//Tpkgsrc-2017Q4
+/patch-macros_quota-check.m4/1.1/Wed Jun 11 11:03:57 2014//Tpkgsrc-2017Q4
+D

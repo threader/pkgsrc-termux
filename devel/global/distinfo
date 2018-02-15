@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.32.8.1 2018/01/19 20:20:44 spz Exp $
+
+SHA1 (global-6.6.1.tar.gz) = d029c1a1a17713d301940b00a2b69dd75d45a232
+RMD160 (global-6.6.1.tar.gz) = c5fda1872f46cc6ff702986b29253490728d5ad4
+SHA512 (global-6.6.1.tar.gz) = 1382ab9bc1fa272559539942bda63e141b5fedac401d8c9cd0b691c9cdac6deba6c79f72cffc1759ff18ba42d95339d25fb5bf6f3625b60a932e1fd50b009d1d
+Size (global-6.6.1.tar.gz) = 2961786 bytes

@@ -1,0 +1,52 @@
+$NetBSD: patch-aj,v 1.9 2016/01/28 15:51:34 prlw1 Exp $
+
+--- configure.orig	2015-01-04 20:35:43.000000000 +0000
++++ configure
+@@ -2266,10 +2266,6 @@ else
+    if test x$sysconfdir = x'${prefix}/etc' ; then
+       sysconfdir='/etc/apcupsd'
+    fi
+-
+-   if test x$sbindir = x'${exec_prefix}/sbin' ; then
+-      sbindir='/sbin'
+-   fi
+ fi
+ 
+ 
+@@ -4062,7 +4058,7 @@ _ACEOF
+ 
+ 
+ APCACCESS=apcaccess
+-SMTP=smtp
++SMTP=
+ APCTEST=apctest
+ 
+ 
+@@ -13112,7 +13108,7 @@ then
+ elif test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD
+ then
+    DISTNAME=freebsd
+-elif test $HAVE_UNAME=yes -a x`uname -s` = xNetBSD
++elif test $HAVE_UNAME=yes -a x`uname -s` = xNetBSD || test $HAVE_UNAME=yes -a x`uname -s` = xDragonFly
+ then
+    DISTNAME=netbsd
+ elif test $HAVE_UNAME=yes -a x`uname -s` = xOpenBSD
+@@ -13243,7 +13239,7 @@ debian)
+       platforms/debian/apcupsd \
+       platforms/debian/ups-monitor"
+    ;;
+-freebsd)
++freebsd|dragonfly)
+    DISTVER=`uname -a |awk '{print $3}'`
+    SERIALDEV=/dev/cuaa0
+    nologdir=/var/run
+@@ -13277,7 +13273,8 @@ netbsd)
+    PTHREAD_LFLAGS=""
+    LDFLAGS="$LDFLAGS -pthread"
+    DFILES="\
+-      platforms/netbsd/apcupsd"
++      platforms/netbsd/apcupsd \
++      platforms/netbsd/apccontrol"
+    ;;
+ openbsd)
+    DISTVER=`uname -a |awk '{print $3}'`

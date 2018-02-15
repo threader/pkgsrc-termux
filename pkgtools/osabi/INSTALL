@@ -1,0 +1,44 @@
+# $NetBSD: INSTALL,v 1.4 2014/10/28 02:08:38 cheusov Exp $
+
+UNAME="@UNAME@"
+PKG_ADMIN="@PKG_ADMIN@"
+
+case ${STAGE} in
+PRE-INSTALL)
+	if ${TEST} no = "$($PKG_ADMIN config-var CHECK_OSABI)"; then
+		exit 0
+	fi
+
+	OS_VERSION=`${UNAME} -r`
+	PKG_VERSION="${PKGNAME##*-}"
+	case `${UNAME} -s` in
+	AIX)
+		if ${TEST} -f /usr/bin/oslevel ;then
+			OS_VERSION=`/usr/bin/oslevel | \
+					sed -e's/\([0-9]*\.[0-9]*\).*/\1/'`
+		else
+			OS_VERSION="`${UNAME} -v`.`${UNAME} -r`"
+			OS_VERSION=`echo "${OS_VERSION}" | \
+					sed -e's/\([0-9]*\.[0-9]*\).*/\1/'`
+		fi
+		;;
+	DragonFly|FreeBSD|Linux)
+		OS_VERSION=`echo "${OS_VERSION}" | sed -e's/-.*$//'`
+		;;
+	OSF1)
+		OS_VERSION=`echo "${OS_VERSION}" | sed -e's/^V//'`
+		;;
+	HPUX)
+		OS_VERSION=`echo "${OS_VERSION}" | sed -e's/^B.//'`
+		;;
+	CYGWIN_*)
+		OS_VERSION=`echo "${OS_VERSION}" | sed -e's/(.*)//'`
+		;;
+	esac
+
+	if ${TEST} "${OS_VERSION}" != "${PKG_VERSION}" ;then 
+		echo "The Operating System version (${OS_VERSION}) does not match ${PKG_VERSION}"
+		exit 1
+	fi
+	;;
+esac

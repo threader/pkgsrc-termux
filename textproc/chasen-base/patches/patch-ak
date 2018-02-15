@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.5 2015/03/15 01:00:12 taca Exp $
+
+Fix path for pkgsrc.
+
+--- mkchadic/Makefile.in.orig	2012-06-25 22:37:25.000000000 +0000
++++ mkchadic/Makefile.in
+@@ -160,7 +160,7 @@ LINK = $(LIBTOOL) --mode=link \
+ $(CXX) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@
+ 
+ 
+-pkglibexecdir = ${libexecdir}/chasen
++pkglibexecdir = ${sbindir}
+ pkglibexec_PROGRAMS = makemat makeda
+ 
+ makemat_SOURCES = makemat.c

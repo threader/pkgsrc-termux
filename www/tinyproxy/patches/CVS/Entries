@@ -1,0 +1,9 @@
+/patch-configure/1.1/Thu Aug 13 20:30:47 2015//Tpkgsrc-2017Q4
+/patch-docs_man5_tinyproxy.conf.txt.in/1.1/Wed Dec 12 13:01:23 2012//Tpkgsrc-2017Q4
+/patch-docs_man8_tinyproxy.txt.in/1.1/Wed Dec 12 13:01:23 2012//Tpkgsrc-2017Q4
+/patch-etc_Makefile.in/1.1/Wed Dec 12 13:01:23 2012//Tpkgsrc-2017Q4
+/patch-etc_tinyproxy.conf.in/1.1/Sat Feb 18 05:59:23 2017//Tpkgsrc-2017Q4
+/patch-src_child.c/1.1/Thu Dec 13 09:01:26 2012//Tpkgsrc-2017Q4
+/patch-src_hashmap.c/1.1/Thu Dec 13 09:01:26 2012//Tpkgsrc-2017Q4
+/patch-src_reqs.c/1.1/Thu Dec 13 09:01:27 2012//Tpkgsrc-2017Q4
+D

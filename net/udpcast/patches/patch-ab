@@ -1,0 +1,43 @@
+$NetBSD: patch-ab,v 1.3 2013/11/08 21:16:43 joerg Exp $
+
+--- socklib.c.orig	2006-05-23 22:19:49.000000000 +0000
++++ socklib.c
+@@ -368,7 +368,7 @@ int setTtl(int sock, int ttl) {
+     return setsockopt(sock, SOL_IP, IP_MULTICAST_TTL, (char*)&ttl, sizeof(int));
+ }
+ 
+-#ifdef SIOCGIFINDEX
++#if defined(SIOCGIFINDEX) && !defined(__NetBSD__)
+ # define IP_MREQN ip_mreqn
+ #else
+ # define IP_MREQN ip_mreq
+@@ -382,7 +382,7 @@ int setTtl(int sock, int ttl) {
+  */
+ static int fillMreq(int sock, net_if_t *net_if, struct in_addr addr,
+ 		    struct IP_MREQN *mreq) {
+-#ifdef SIOCGIFINDEX
++#if defined(SIOCGIFINDEX) && !defined(__NetBSD__)
+     mreq->imr_ifindex = net_if->index;
+     mreq->imr_address.s_addr = 0;
+ #else
+@@ -879,6 +879,9 @@ int makeSocket(addr_type_t addr_type, 
+     int ret, s;
+     struct sockaddr_in myaddr;
+     in_addr_t ip=0;
++#ifdef SO_REUSEPORT
++    int one = 1;
++#endif
+ 
+ #ifdef WINDOWS
+     static int lastSocket=-1;
+@@ -897,6 +900,10 @@ int makeSocket(addr_type_t addr_type, 
+ 	exit(1);
+     }
+ 
++#ifdef SO_REUSEPORT
++    ret = setsockopt(s, SOL_SOCKET, SO_REUSEPORT, &one, sizeof(one));
++#endif
++
+     if(addr_type == ADDR_TYPE_MCAST && tmpl != NULL) {
+ 	ip = tmpl->sin_addr.s_addr;
+     }

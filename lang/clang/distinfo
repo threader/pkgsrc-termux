@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.49 2017/12/01 19:22:12 adam Exp $
+
+SHA1 (cfe-5.0.0.src.tar.xz) = 8c67071be174c66264b6c7629c291c0e30ecbdc5
+RMD160 (cfe-5.0.0.src.tar.xz) = 743f1b22554c984c07798bfdbed36d429fb6ae08
+SHA512 (cfe-5.0.0.src.tar.xz) = 14acdd622310122b544c952ee5b932b7006d9d8424319f0e3974f2503d40a0cec4200fdd3d813a32ce0d877bcfbb9a5bd5c36f6142b4330e6c814f113ca2efe8
+Size (cfe-5.0.0.src.tar.xz) = 11437024 bytes
+SHA1 (patch-tools_clang-format_CMakeLists.txt) = 4efc9c9f69caf7df1dd0db384eae644c606c5ca9

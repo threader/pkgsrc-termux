@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.14 2017/06/20 22:07:17 youri Exp $
+
+SHA1 (xfce4-systemload-plugin-1.2.1.tar.bz2) = 29d655bca20723337ce3e17f800e5a680e4a92fc
+RMD160 (xfce4-systemload-plugin-1.2.1.tar.bz2) = 800fb97e733d83bb168ed3a7e7dda73e79d69713
+SHA512 (xfce4-systemload-plugin-1.2.1.tar.bz2) = 01e57d799731a5860f043339ff0e90e0967ac1bda91d9f500d657ea14f3a52f31d9dd68ef5293f7941ef93e26e48af72de22aef976d0ccd497c62096e1aaf0b9
+Size (xfce4-systemload-plugin-1.2.1.tar.bz2) = 328136 bytes

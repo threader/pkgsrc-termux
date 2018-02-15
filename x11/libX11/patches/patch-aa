@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.12 2015/03/10 07:16:26 wiz Exp $
+
+Include pthread.h as thread stubs might be macros like on NetBSD.
+
+Define conditional for cross-compiling support.
+
+--- configure.ac.orig	2013-09-09 01:37:20.000000000 +0000
++++ configure.ac
+@@ -276,7 +276,7 @@ xyes)
+ 	;;
+ esac
+ 
+-AC_CHECK_LIB(c, pthread_self, [thrstubs="no"], [thrstubs="yes"])
++AC_CHECK_DECLS([pthread_self], [thrstubs="no"], [thrstubs="yes"], [[#include <pthread.h>]])
+ AM_CONDITIONAL(THRSTUBS, test x$thrstubs = xyes)
+ 
+ # XXX incomplete, please fill this in
+@@ -285,12 +285,12 @@ if test x$xthreads = xyes ; then
+     linux*|gnu*|k*bsd*-gnu)
+         XTHREADLIB=-lpthread ;;
+     netbsd*)
+-	XTHREAD_CFLAGS="-D_POSIX_THREAD_SAFE_FUNCTIONS"
+-	XTHREADLIB="-lpthread" ;;
++	XTHREAD_CFLAGS="-D_REENTRANT"
++	XTHREADLIB="-pthread" ;;
+     freebsd*)
+         XTHREAD_CFLAGS="-D_THREAD_SAFE"
+         XTHREADLIB="-pthread" ;;
+-    dragonfly*|openbsd*)
++    dragonfly*|openbsd*|mirbsd*)
+         XTHREADLIB="-pthread" ;;
+     solaris*)
+ 	XTHREAD_CFLAGS="-D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS" ;;

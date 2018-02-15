@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.4 2014/02/09 17:23:54 wiedi Exp $
+
+--- makefile.orig	2005-06-06 19:26:52.000000000 +0000
++++ makefile
+@@ -17,7 +17,7 @@
+ #CC=cc
+ CFLAGS=-g -I.
+ LD=cc
+-LDFLAGS=
++#LDFLAGS=
+ LDTAIL=
+ 
+ OFILES=\
+@@ -49,16 +49,19 @@ HFILES=\
+ 	fcall.h\
+ 	plan9.h
+ 
+-u9fs: $(OFILES)
++u9fs all: $(OFILES)
+ 	$(LD) $(LDFLAGS) -o u9fs $(OFILES) $(LDTAIL)
+ 
+-%.o: %.c $(HFILES)
++.c.o:
+ 	$(CC) $(CFLAGS) -c $*.c
+ 
+ clean:
+ 	rm -f *.o u9fs
+ 
+ install: u9fs
+-	cp u9fs ../../bin
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/libexec
++	${BSD_INSTALL_PROGRAM} u9fs ${DESTDIR}${PREFIX}/libexec/
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
++	${BSD_INSTALL_MAN} u9fs.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+ 
+ .PHONY: clean install

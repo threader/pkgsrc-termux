@@ -1,0 +1,55 @@
+$NetBSD: patch-ae,v 1.4 2014/07/25 16:23:35 jperkin Exp $
+
+Ensure we set the correct rpaths.
+
+--- mk/beforeauto.mk.in.orig	2012-12-21 16:08:59.000000000 +0000
++++ mk/beforeauto.mk.in
+@@ -778,6 +778,10 @@ IMPORT_CPPFLAGS += -D__linux__
+ OMNITHREAD_POSIX_CPPFLAGS = -DNoNanoSleep -DPthreadDraftVersion=10
+ OMNITHREAD_CPPFLAGS = -D_REENTRANT
+ OMNITHREAD_LIB += -lpthread
++
++CLINKOPTIONS	= $(CDEBUGFLAGS) $(COPTIONS) -Wl,-rpath,$(INSTALLLIBDIR)
++CXXLINKOPTIONS	= $(CXXDEBUGFLAGS) $(CXXOPTIONS) -Wl,-rpath,$(INSTALLLIBDIR)
++SharedLibraryPlatformLinkFlagsTemplate = $(CXXLINKOPTIONS) -shared -Wl,-soname,$$soname
+ endif
+ 
+ ###################
+@@ -804,7 +808,7 @@ THREAD_LIB = -lthread $(CXXMTFLAG)
+ OMNITHREAD_LIB += -lpthread -lposix4 $(CXXMTFLAG)
+ 
+ ifdef Compiler_GCC
+-SharedLibraryPlatformLinkFlagsTemplate = -shared -Wl,-h,$$soname
++SharedLibraryPlatformLinkFlagsTemplate = -shared -Wl,-h,$$soname -Wl,-R$(INSTALLLIBDIR)
+ endif
+ ifdef Compiler_Sun5
+ SharedLibraryPlatformLinkFlagsTemplate = -G -h $$soname
+@@ -1088,10 +1092,27 @@ OMNITHREAD_LIB += -pthread
+ endif
+ 
+ ###################
++ifdef DragonFly
++IMPORT_CPPFLAGS += -D__dragonfly__
++
++CLINKOPTIONS    = $(CDEBUGFLAGS) $(COPTIONS) -Wl,-rpath,$(INSTALLLIBDIR)
++CXXLINKOPTIONS  = $(CXXDEBUGFLAGS) $(CXXOPTIONS) -Wl,-rpath,$(INSTALLLIBDIR)
++SharedLibraryPlatformLinkFlagsTemplate = $(CXXLINKOPTIONS) -shared -Wl,-soname,$$soname
++
++OMNITHREAD_CPPFLAGS = -D_REENTRANT -D_THREAD_SAFE
++OMNITHREAD_POSIX_CPPFLAGS = -DUsePthread -DPthreadDraftVersion=10
++OMNITHREAD_LIB += -pthread
++endif
++
++###################
+ ifdef NetBSD
+ IMPORT_CPPFLAGS += -D__netbsd__
+ 
+-OMNITHREAD_CPPFLAGS = -D_REENTRANT
++CLINKOPTIONS    = $(CDEBUGFLAGS) $(COPTIONS) -Wl,-rpath,$(INSTALLLIBDIR)
++CXXLINKOPTIONS  = $(CXXDEBUGFLAGS) $(CXXOPTIONS) -Wl,-rpath,$(INSTALLLIBDIR)
++SharedLibraryPlatformLinkFlagsTemplate = $(CXXLINKOPTIONS) -shared -Wl,-soname,$$soname
++
++OMNITHREAD_CPPFLAGS = -D_REENTRANT -D_THREAD_SAFE
+ OMNITHREAD_POSIX_CPPFLAGS = -DUsePthread -DPthreadDraftVersion=10
+ OMNITHREAD_LIB += -pthread
+ endif

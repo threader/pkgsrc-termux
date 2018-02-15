@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2016/07/20 13:54:21 nros Exp $
+
+SHA1 (qore-pgsql-module-2.4.tar.bz2) = f6cd34f84e8fdeb567b3107e79d1d7a6cf34c7b8
+RMD160 (qore-pgsql-module-2.4.tar.bz2) = 70164da5f1c79548a1f295515349ddb65fc0f2bd
+SHA512 (qore-pgsql-module-2.4.tar.bz2) = f3c81630fccbbd0c89c15b5e804c385e617999b92e414b411113ef7dc7fb2ac670d447864ab749a5839d6495e2c5d218a4c8cb3b09c337e8c74aa871133c58ea
+Size (qore-pgsql-module-2.4.tar.bz2) = 452140 bytes

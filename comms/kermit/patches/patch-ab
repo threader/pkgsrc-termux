@@ -1,0 +1,47 @@
+$NetBSD: patch-ab,v 1.7 2014/06/23 22:24:24 christos Exp $
+
+--- ck_ssl.c.orig	2011-07-06 09:03:32.000000000 -0400
++++ ck_ssl.c	2014-06-23 18:21:25.000000000 -0400
+@@ -1072,7 +1072,7 @@
+ #endif /* CK_ANSIC */
+ {
+     X509 *peer;
+-    SSL_CIPHER * cipher;
++    const SSL_CIPHER * cipher;
+     const char *cipher_list;
+     char buf[512]="";
+ 
+@@ -2877,6 +2877,7 @@
+ #ifndef OpenBSD
+ #ifndef FREEBSD4
+ #ifndef NETBSD15
++#ifndef __DragonFly__
+ #ifndef LINUX
+ #ifndef AIX41
+ #ifndef UW7
+@@ -2919,6 +2920,7 @@
+ #endif /* UW7 */
+ #endif /* AIX41 */
+ #endif /* LINUX */
++#endif /* __DragonFly__ */
+ #endif /* NETBSD15 */
+ #endif /* FREEBSD4 */
+ #endif /* OpenBSD */
+@@ -3057,7 +3059,7 @@
+ tls_is_anon(int x)
+ {
+     char buf[128];
+-    SSL_CIPHER * cipher;
++    const SSL_CIPHER * cipher;
+     SSL * ssl = NULL;
+ 
+     switch ( x ) {
+@@ -3101,7 +3103,7 @@
+ tls_is_krb5(int x)
+ {
+     char buf[128];
+-    SSL_CIPHER * cipher;
++    const SSL_CIPHER * cipher;
+     SSL * ssl = NULL;
+ 
+     switch ( x ) {

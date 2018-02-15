@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.2 2013/11/07 11:35:49 markd Exp $
+bin/kblackbox
+share/applications/kde4/kblackbox.desktop
+share/doc/kde/HTML/en/kblackbox/common
+share/doc/kde/HTML/en/kblackbox/gameboard.png
+share/doc/kde/HTML/en/kblackbox/index.cache.bz2
+share/doc/kde/HTML/en/kblackbox/index.docbook
+share/icons/hicolor/128x128/apps/kblackbox.png
+share/icons/hicolor/16x16/apps/kblackbox.png
+share/icons/hicolor/22x22/apps/kblackbox.png
+share/icons/hicolor/32x32/apps/kblackbox.png
+share/icons/hicolor/48x48/apps/kblackbox.png
+share/icons/hicolor/64x64/apps/kblackbox.png
+share/kde/apps/kblackbox/kblackboxui.rc
+share/kde/apps/kblackbox/pics/kblackbox.svgz

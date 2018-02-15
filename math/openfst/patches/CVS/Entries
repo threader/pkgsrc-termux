@@ -1,0 +1,22 @@
+/patch-src_bin_compile-main.h/1.1/Mon May  6 14:53:16 2013//Tpkgsrc-2017Q4
+/patch-src_include_fst_cache.h/1.1/Tue Jul  3 17:42:05 2012//Tpkgsrc-2017Q4
+/patch-src_include_fst_compact-fst.h/1.1/Tue Jul  3 17:42:05 2012//Tpkgsrc-2017Q4
+/patch-src_include_fst_compose.h/1.1/Tue Jul  3 17:42:05 2012//Tpkgsrc-2017Q4
+/patch-src_include_fst_config.h.in/1.1/Mon May  6 14:53:16 2013//Tpkgsrc-2017Q4
+/patch-src_include_fst_const-fst.h/1.1/Tue Jul  3 17:42:05 2012//Tpkgsrc-2017Q4
+/patch-src_include_fst_determinize.h/1.2/Mon May  6 14:52:54 2013//Tpkgsrc-2017Q4
+/patch-src_include_fst_difference.h/1.1/Tue Jul  3 17:42:05 2012//Tpkgsrc-2017Q4
+/patch-src_include_fst_encode.h/1.1/Mon May  6 14:53:16 2013//Tpkgsrc-2017Q4
+/patch-src_include_fst_epsnormalize.h/1.1/Mon May  6 14:53:16 2013//Tpkgsrc-2017Q4
+/patch-src_include_fst_equivalent.h/1.1/Mon May  6 14:53:16 2013//Tpkgsrc-2017Q4
+/patch-src_include_fst_factor-weight.h/1.2/Mon May  6 14:52:54 2013//Tpkgsrc-2017Q4
+/patch-src_include_fst_map.h/1.2/Mon May  6 14:52:54 2013//Tpkgsrc-2017Q4
+/patch-src_include_fst_relabel.h/1.1/Mon May  6 14:53:16 2013//Tpkgsrc-2017Q4
+/patch-src_include_fst_replace.h/1.2/Mon May  6 14:52:54 2013//Tpkgsrc-2017Q4
+/patch-src_include_fst_rmepsilon.h/1.1/Mon May  6 14:53:17 2013//Tpkgsrc-2017Q4
+/patch-src_include_fst_rmfinalepsilon.h/1.1/Mon May  6 14:53:17 2013//Tpkgsrc-2017Q4
+/patch-src_include_fst_slist.h/1.1/Mon May  6 14:53:17 2013//Tpkgsrc-2017Q4
+/patch-src_include_fst_synchronize.h/1.2/Mon May  6 14:52:54 2013//Tpkgsrc-2017Q4
+/patch-src_include_fst_test-properties.h/1.1/Mon May  6 14:53:17 2013//Tpkgsrc-2017Q4
+/patch-src_include_fst_vector-fst.h/1.1/Tue Jul  3 17:42:05 2012//Tpkgsrc-2017Q4
+D

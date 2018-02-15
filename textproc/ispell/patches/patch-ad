@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.4 2014/05/14 02:28:13 rodent Exp $
+
+--- buildhash.c.orig	Thu Apr 28 00:26:06 2005
++++ buildhash.c
+@@ -248,7 +248,7 @@ static void output ()
+     {
+     register FILE *		houtfile;
+     register struct dent *	dp;
+-    unsigned long		strptr;
++    PTRSIZE			strptr;
+     int				n;
+     unsigned int		i;
+     int				maxplen;
+@@ -375,7 +375,7 @@ static void output ()
+ 	{
+ 	if (dp->next != 0)
+ 	    {
+-	    unsigned long	x;
++	    PTRSIZE	x;
+ 	    x = dp->next - hashtbl;
+ 	    dp->next = (struct dent *)x;
+ 	    }

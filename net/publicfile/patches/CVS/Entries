@@ -1,0 +1,16 @@
+/patch-Makefile/1.1/Thu May 23 14:57:32 2013//Tpkgsrc-2017Q4
+/patch-alloc.c/1.1/Thu May 23 14:57:32 2013//Tpkgsrc-2017Q4
+/patch-exit.h/1.1/Thu May 23 14:57:32 2013//Tpkgsrc-2017Q4
+/patch-fetch.c/1.1/Thu May 23 14:57:32 2013//Tpkgsrc-2017Q4
+/patch-file.c/1.1/Thu May 23 14:57:32 2013//Tpkgsrc-2017Q4
+/patch-filetype.c/1.1/Thu May 23 14:57:32 2013//Tpkgsrc-2017Q4
+/patch-ftpd.c/1.1/Thu May 23 14:57:32 2013//Tpkgsrc-2017Q4
+/patch-httpd.c/1.1/Thu May 23 14:57:32 2013//Tpkgsrc-2017Q4
+/patch-leapsecs__read.c/1.1/Thu May 23 14:57:32 2013//Tpkgsrc-2017Q4
+/patch-main.c/1.1/Thu May 23 14:57:32 2013//Tpkgsrc-2017Q4
+/patch-open.h/1.1/Thu May 23 14:57:32 2013//Tpkgsrc-2017Q4
+/patch-prot.c/1.1/Thu May 23 14:57:32 2013//Tpkgsrc-2017Q4
+/patch-prot.h/1.1/Thu May 23 14:57:32 2013//Tpkgsrc-2017Q4
+/patch-readwrite.h/1.1/Thu May 23 14:57:32 2013//Tpkgsrc-2017Q4
+/patch-utime.c/1.1/Thu May 23 14:57:32 2013//Tpkgsrc-2017Q4
+D

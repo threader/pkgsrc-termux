@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.2 2015/06/05 11:36:40 wiedi Exp $
+
+Portability fix.
+
+--- configure.orig	2015-04-12 20:03:59.000000000 +0000
++++ configure
+@@ -3839,7 +3839,7 @@ fi
+ 	else
+ 		SUNCCVERSION=`${CC} -V 2>&1 | grep Sun`
+ 		SUNCC=$?
+-		if test "${SUNCC}" == "0" ; then
++		if test "${SUNCC}" = "0" ; then
+ 			CFLAGS="${CFLAGS} -O"
+ 			cflags_tmp="$CFLAGS"
+ 			HAS_M64=`${CC} -flags | grep m64`

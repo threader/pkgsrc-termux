@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.2 2016/12/11 21:34:26 kamil Exp $
+bin/dwarfdump
+include/dwarf.h
+include/libdwarf.h
+lib/libdwarf.a
+lib/libdwarf.so
+lib/libdwarf.so.1
+man/man1/dwarfdump.1
+share/doc/libdwarf/libdwarf2.1.pdf
+share/doc/libdwarf/libdwarf2p.1.pdf
+share/doc/libdwarf/mips_extensions.pdf

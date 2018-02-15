@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.7 2015/08/23 20:20:03 leot Exp $
+${PYSITELIB}/gammu/__init__.py
+${PYSITELIB}/gammu/__init__.pyc
+${PYSITELIB}/gammu/__init__.pyo
+${PYSITELIB}/gammu/_gammu.so
+${PYSITELIB}/gammu/data.py
+${PYSITELIB}/gammu/data.pyc
+${PYSITELIB}/gammu/data.pyo
+${PYSITELIB}/gammu/exception.py
+${PYSITELIB}/gammu/exception.pyc
+${PYSITELIB}/gammu/exception.pyo
+${PYSITELIB}/gammu/smsd.py
+${PYSITELIB}/gammu/smsd.pyc
+${PYSITELIB}/gammu/smsd.pyo
+${PYSITELIB}/gammu/worker.py
+${PYSITELIB}/gammu/worker.pyc
+${PYSITELIB}/gammu/worker.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

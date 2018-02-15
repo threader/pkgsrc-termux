@@ -1,0 +1,13 @@
+/patch-Makefile.in/1.1/Sun Sep  6 14:02:08 2015//Tpkgsrc-2017Q4
+/patch-configure/1.1/Sun Sep  6 14:02:08 2015//Tpkgsrc-2017Q4
+/patch-configure.in/1.1/Sun Sep  6 14:02:08 2015//Tpkgsrc-2017Q4
+/patch-crypto_cipher_aes__icm.c/1.1/Mon Sep 14 13:30:03 2015//Tpkgsrc-2017Q4
+/patch-crypto_hash_hmac.c/1.1/Mon Sep 26 13:20:41 2016//Tpkgsrc-2017Q4
+/patch-crypto_kernel_crypto__kernel.c/1.1/Mon Sep 26 13:20:41 2016//Tpkgsrc-2017Q4
+/patch-crypto_math_datatypes.c/1.1/Mon Sep 14 13:30:03 2015//Tpkgsrc-2017Q4
+/patch-crypto_math_gf2__8.c/1.1/Mon Sep 14 13:30:03 2015//Tpkgsrc-2017Q4
+/patch-crypto_math_math.c/1.1/Mon Sep 14 13:30:03 2015//Tpkgsrc-2017Q4
+/patch-include_srtp.h/1.1/Sun Sep  6 14:02:08 2015//Tpkgsrc-2017Q4
+/patch-srtp_srtp.c/1.1/Sun Sep  6 14:02:08 2015//Tpkgsrc-2017Q4
+/patch-test_rtpw__test.sh/1.1/Sun Sep  6 14:02:08 2015//Tpkgsrc-2017Q4
+D

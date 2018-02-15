@@ -1,0 +1,137 @@
+$NetBSD: patch-aa,v 1.9 2017/02/01 13:00:44 mef Exp $
+
+--- setup.sh.orig	2016-10-03 12:34:36.000000000 +0900
++++ setup.sh	2016-11-12 07:08:43.000000000 +0900
+@@ -37,6 +37,11 @@ echo ""
+ 
+ # Only root can run this
+ id | grep -i "uid=0(" >/dev/null
++#
++# For pkgsrc, we allow anyone to run this script, including unprivileged
++# users.
++#
++true
+ if [ $? != "0" ]; then
+ 	uname -a | grep -i CYGWIN >/dev/null
+ 	if [ $? != "0" ]; then
+@@ -124,6 +129,9 @@ if [ -r "$config_dir/config" ]; then
+ 	upgrading=1
+ fi
+ 
++# For pkgsrc, we are never upgrading, only installing.
++upgrading=0
++
+ # Check if upgrading from an old version
+ if [ "$upgrading" = 1 ]; then
+ 	echo ""
+@@ -202,6 +210,10 @@ if [ "$upgrading" = 1 ]; then
+ else
+ 	# Config directory exists .. make sure it is not in use
+ 	ls $config_dir | grep -v rpmsave >/dev/null 2>&1
++	#
++	# For pkgsrc, we don't care if the config directory already exists.
++	#
++	false
+ 	if [ "$?" = "0" -a "$config_dir" != "/etc/webmin" ]; then
+ 		echo "ERROR: Config directory $config_dir is not empty"
+ 		echo ""
+@@ -541,6 +553,12 @@ else
+ 
+ 	kfile=$config_dir/miniserv.pem
+ 	openssl version >/dev/null 2>&1
++	#
++	# For pkgsrc, we always want to use the default miniserv.pem, though
++	# we'll recommend to the user at post-install time to generate a
++	# new certificate.
++	#
++	false
+ 	if [ "$?" = "0" ]; then
+ 		# We can generate a new SSL key for this host
+ 		host=`hostname`
+@@ -762,45 +780,47 @@ EOF
+ 	echo "..done"
+ 	echo ""
+ fi
+-
+-echo "Changing ownership and permissions .."
+-# Make all config dirs non-world-readable
+-for m in $newmods; do
+-	chown -R root $config_dir/$m
+-	chgrp -R bin $config_dir/$m
+-	chmod -R og-rw $config_dir/$m
+-done
+-# Make miniserv config files non-world-readable
+-for f in miniserv.conf miniserv.pem miniserv.users; do
+-	chown -R root $config_dir/$f
+-	chgrp -R bin $config_dir/$f
+-	chmod -R og-rw $config_dir/$f
+-done
+-chmod +r $config_dir/version
+-if [ "$nochown" = "" ]; then
+-	# Make program directory non-world-writable, but executable
+-	chown -R root "$wadir"
+-	chgrp -R bin "$wadir"
+-	chmod -R og-w "$wadir"
+-	chmod -R a+rx "$wadir"
+-fi
+-if [ $var_dir != "/var" -a "$upgrading" != 1 ]; then
+-	# Make log directory non-world-readable or writable
+-	chown -R root $var_dir
+-	chgrp -R bin $var_dir
+-	chmod -R og-rwx $var_dir
+-fi
+-# Fix up bad permissions from some older installs
+-for m in ldap-client ldap-server ldap-useradmin mailboxes mysql postgresql servers virtual-server; do
+-	if [ -d "$config_dir/$m" ]; then
+-		chown root $config_dir/$m
+-		chgrp bin $config_dir/$m
+-		chmod og-rw $config_dir/$m
+-		chmod og-rw $config_dir/$m/config 2>/dev/null
+-	fi
+-done
+-echo "..done"
+-echo ""
++# For pkgsrc, we skip changing ownership and permissions as we allow the
++# INSTALL/DEINSTALL to manage this for us.
++#
++#echo "Changing ownership and permissions .."
++## Make all config dirs non-world-readable
++#for m in $newmods; do
++#	chown -R root $config_dir/$m
++#	chgrp -R bin $config_dir/$m
++#	chmod -R og-rw $config_dir/$m
++#done
++## Make miniserv config files non-world-readable
++#for f in miniserv.conf miniserv.pem miniserv.users; do
++#	chown -R root $config_dir/$f
++#	chgrp -R bin $config_dir/$f
++#	chmod -R og-rw $config_dir/$f
++#done
++#chmod +r $config_dir/version
++#if [ "$nochown" = "" ]; then
++#	# Make program directory non-world-writable, but executable
++#	chown -R root "$wadir"
++#	chgrp -R bin "$wadir"
++#	chmod -R og-w "$wadir"
++#	chmod -R a+rx "$wadir"
++#fi
++#if [ $var_dir != "/var" -a "$upgrading" != 1 ]; then
++#	# Make log directory non-world-readable or writable
++#	chown -R root $var_dir
++#	chgrp -R bin $var_dir
++#	chmod -R og-rwx $var_dir
++#fi
++## Fix up bad permissions from some older installs
++#for m in ldap-client ldap-server ldap-useradmin mailboxes mysql postgresql servers virtual-server; do
++#	if [ -d "$config_dir/$m" ]; then
++#		chown root $config_dir/$m
++#		chgrp bin $config_dir/$m
++#		chmod og-rw $config_dir/$m
++#		chmod og-rw $config_dir/$m/config 2>/dev/null
++#	fi
++#done
++#echo "..done"
++#echo ""
+ 
+ # Save target directory if one was specified
+ if [ "$wadir" != "$srcdir" ]; then

@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.25 2017/12/04 01:52:58 maya Exp $
+
+SHA1 (mailman-2.1.25.tgz) = 1bef8b006c6beccbbc4c8c16d0c3290f64765c94
+RMD160 (mailman-2.1.25.tgz) = c65a218d3eb995a14612a2da395426c100f96a33
+SHA512 (mailman-2.1.25.tgz) = 739c5f947a9c510b8515ee77bd37431c56bcdd60775e672ee7a513fa3bc6ed5da223ea2ffd306dc7105fa5b322fe774ba8d14b285a6017fa6dcad7880b0b1281
+Size (mailman-2.1.25.tgz) = 9254776 bytes
+SHA1 (patch-aa) = 9684b1caeb52f31ee6967eae3f9a464de214879e
+SHA1 (patch-ab) = 39f6294e53110bd1fd09b1e90ab46820f4d48e3f
+SHA1 (patch-ad) = 665884b9dd1789e4abd430c762bdbfd707d48d30
+SHA1 (patch-ae) = 6c17de398014217be8f1c7a3b3a6f8d379fc0fb2
+SHA1 (patch-af) = 985a619a055151d998cefd0c1b7280a0d55f889e
+SHA1 (patch-ag) = fac40640db483c2e9db3a79ec0696dc60596e453
+SHA1 (patch-ah) = c7cde35f787c003ace550a98d8d5e166ba2d48dc
+SHA1 (patch-ai) = f3afeba664b0cca27f160fde3b94c7b7f8498e57
+SHA1 (patch-configure) = 3e5d61af86cad56c0c698c5093584fad508810f2

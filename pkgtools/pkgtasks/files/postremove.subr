@@ -1,0 +1,175 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	postremove.subr -- post-removal actions for packages
+#
+# SYNOPSIS
+#	task_postremove <datafile>
+#
+# DESCRIPTION
+#	The task_postremove function performs actions that SHOULD occur
+#	AFTER deleting the package files:
+#
+#	    o Unregister shells from the system shells database.
+#	    o Update fonts databases.
+#	    o Update caches within GTK+ icon theme directories.
+#	    o Rebuild the system run-time library search path database.
+#	    o Update OCaml module run-time library search path database.
+#	    o Remove empty directories.
+#	    o Remove unused users.
+#	    o Remove unused groups.
+#
+#	The datafile contains lines of the form:
+#
+#	    # <keyword>: <arg> ...
+#
+#	These lines are used as input to the various script functions.
+#
+# RETURN VALUES
+#	Returns 0 on success, and >0 if an error occurs.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	TASK_VERBOSE
+#		List of package tasks that should emit verbose output.
+#		If ${TASK_VERBOSE} is "all", then all tasks are verbose.
+#		If ${TASK_VERBOSE} is "none", then no tasks are verbose.
+#		Otherwise, if one of the tasks is "default", then the
+#		default list of tasks are verbose.
+#
+
+__task_postremove__="yes"
+
+task_load directories
+task_load files
+task_load fonts
+task_load groups
+task_load icon_themes
+task_load info_files
+task_load ocaml_findlib
+task_load shells
+task_load shlibs
+task_load sort
+task_load taskfunc
+task_load users
+
+task_postremove()
+{
+	: ${TASK_VERBOSE:=default}
+
+	[ $# -gt 0 ] || return 127
+	local datafile="$1"; shift
+
+	[ -f "$datafile" ] || return 1
+
+	local post_tasks=
+	# Remove shells from the system shells database.
+	post_tasks="shells"
+	# Update font databases.
+	post_tasks="$post_tasks fonts"
+	# Update GTK+ icon theme caches
+	post_tasks="$post_tasks icon_themes"
+	# Rebuild the system run-time library search path database.
+	post_tasks="$post_tasks shlibs"
+	# Update OCaml module run-time library search path database.
+	post_tasks="$post_tasks ocaml_findlib"
+	# Remove empty directories.
+	post_tasks="$post_tasks directories"
+	# Remove unused users.
+	post_tasks="$post_tasks users"
+	# Remove unused groups.
+	post_tasks="$post_tasks groups"
+	# Run generic package tasks.
+	post_tasks="$post_tasks function"
+
+	# Seed checks with actions from preremove, in order.
+	local post_checks="info_files files"
+
+	local result=0
+	local stage="postremove"
+
+	# $verbose are the package tasks that give verbose output.
+	# Expand "all", "default" and "none" to a fixed list of tasks.
+	#
+	local verbose="${TASK_VERBOSE}"
+	case " $verbose " in
+	" all ")
+		verbose="directories fonts function groups icon_themes"
+		verbose="$verbose ocaml_findlib shells shlibs users" ;;
+	*" default "*)
+		# These tasks are verbose by default since they touch
+		# system files and directories.
+		#
+		verbose="$verbose directories groups shells users" ;;
+	" none ")
+		verbose= ;;
+	esac
+
+	local task post_fn silent action_result
+	for task in $post_tasks; do
+		post_fn="task_$task"
+		case " $verbose " in
+		*" $task "*)
+			silent= ;;
+		*)	silent="-s" ;;
+		esac
+		case $task in
+		directories)
+			# Reverse-sort data lines for this task.
+			task_sort -r < $datafile | $post_fn $silent remove $stage ;;
+		*)	$post_fn $silent remove $stage < $datafile ;;
+		esac
+		action_result="$?"
+		case $task in
+		icon_themes)
+			# Any errors in updating icon caches during postremove
+			# are non-fatal, so adjust the action result.
+			#
+			action_result=0 ;;
+		esac
+		[ $action_result -eq 0 ] || result=1
+		post_checks="$post_checks $task"
+	done
+
+	# Run all checks after all post-removal actions have completed
+	# and write messages to standard output for any checks that don't
+	# pass.
+	#
+	for check in $post_checks; do
+		post_fn="task_$check"
+		case $check in
+		directories)
+			# Reverse-sort data lines for this task.
+			task_sort -r < $datafile | $post_fn check-remove $stage ;;
+		*)	$post_fn check-remove $stage < $datafile ;;
+		esac
+	done
+
+	return $result
+}

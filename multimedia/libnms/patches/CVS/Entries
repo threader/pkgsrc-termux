@@ -1,0 +1,10 @@
+/patch-aa/1.1.1.1/Mon Sep 10 16:27:14 2007//Tpkgsrc-2017Q4
+/patch-ab/1.1/Sun Jan  2 12:23:32 2011//Tpkgsrc-2017Q4
+/patch-ac/1.1/Sun Jan  2 12:23:32 2011//Tpkgsrc-2017Q4
+/patch-rtp_rtp__rm__pkt.c/1.1/Fri Oct 26 20:41:45 2012//Tpkgsrc-2017Q4
+/patch-rtp_rtp__transport__wrappers.c/1.1/Fri Oct 26 20:41:45 2012//Tpkgsrc-2017Q4
+/patch-rtp_rtpparsers_rtpparsers.c/1.1/Fri Oct 26 20:41:45 2012//Tpkgsrc-2017Q4
+/patch-rtsp_rtsp__get__rtp__queue.c/1.1/Fri Oct 26 20:41:45 2012//Tpkgsrc-2017Q4
+/patch-rtsp_rtsp__get__rtp__th.c/1.1/Fri Oct 26 20:41:45 2012//Tpkgsrc-2017Q4
+/patch-wsocket_nmst__is__active.c/1.1/Fri Oct 26 20:41:45 2012//Tpkgsrc-2017Q4
+D

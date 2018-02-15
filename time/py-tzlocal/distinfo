@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.4 2017/12/06 12:21:02 adam Exp $
+
+SHA1 (tzlocal-1.5.1.tar.gz) = 98dc51724f3201f66f4ec36f22b99bd03f3059bd
+RMD160 (tzlocal-1.5.1.tar.gz) = b94a22de3c11118197808f3ded2824c272290484
+SHA512 (tzlocal-1.5.1.tar.gz) = 9141e3941435fa16afe040f49b8225cdc3434e10003275fe5df9166cb9562764a51c83bc16b6d5be197feb45c913859a37393e13285f0e612510ce076a6451d9
+Size (tzlocal-1.5.1.tar.gz) = 16809 bytes

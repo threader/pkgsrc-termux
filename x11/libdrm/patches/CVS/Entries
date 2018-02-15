@@ -1,0 +1,9 @@
+/patch-ab/1.8/Fri Aug 14 17:12:35 2015//Tpkgsrc-2017Q4
+/patch-ac/1.4/Thu Feb 16 20:30:56 2012//Tpkgsrc-2017Q4
+/patch-include_drm_drm.h/1.4/Fri Apr 29 11:17:34 2016//Tpkgsrc-2017Q4
+/patch-libkms_vmwgfx.c/1.3/Thu May  7 06:31:06 2015//Tpkgsrc-2017Q4
+/patch-radeon_radeon__bo__gem.c/1.1/Sun Oct 26 10:20:10 2014//Tpkgsrc-2017Q4
+/patch-radeon_radeon__cs__gem.c/1.1/Sun Oct 26 10:20:10 2014//Tpkgsrc-2017Q4
+/patch-xf86drmMode.c/1.2/Sat Apr 11 10:02:11 2015//Tpkgsrc-2017Q4
+/patch-xf86drmMode.h/1.1/Sun Oct 26 10:20:10 2014//Tpkgsrc-2017Q4
+D

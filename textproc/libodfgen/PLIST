@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.3 2014/07/23 06:24:28 wiz Exp $
+include/libodfgen-0.1/libodfgen/OdfDocumentHandler.hxx
+include/libodfgen-0.1/libodfgen/OdgGenerator.hxx
+include/libodfgen-0.1/libodfgen/OdpGenerator.hxx
+include/libodfgen-0.1/libodfgen/OdsGenerator.hxx
+include/libodfgen-0.1/libodfgen/OdtGenerator.hxx
+include/libodfgen-0.1/libodfgen/libodfgen-api.hxx
+include/libodfgen-0.1/libodfgen/libodfgen.hxx
+lib/libodfgen-0.1.la
+lib/pkgconfig/libodfgen-0.1.pc

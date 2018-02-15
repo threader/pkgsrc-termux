@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.12 2017/11/28 13:45:52 wiz Exp $
+
+SHA1 (convmv-2.04.tar.gz) = 720ffdeeab3c13f312e4967cca09500296923001
+RMD160 (convmv-2.04.tar.gz) = 262c056cde70e2ba9beee560a9e15ce16ce5d039
+SHA512 (convmv-2.04.tar.gz) = 987411047af0b1e952cd11937c70ddd972b2e3534f4fcc6c659243dedef69af4aad90ceaa3789aec6bad6cba0999c38839451f90844b171773165b6e5899f6ac
+Size (convmv-2.04.tar.gz) = 30082 bytes
+SHA1 (patch-aa) = 294c1713940926745dda0c15e66c585dbb8fe47e

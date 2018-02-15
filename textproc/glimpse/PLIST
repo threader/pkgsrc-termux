@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.4 2016/01/26 09:01:28 dbj Exp $
+bin/agrep
+bin/buildcast
+bin/cast
+bin/glimpse
+bin/glimpseindex
+bin/glimpseserver
+bin/tbuild
+bin/uncast
+bin/wgconvert
+man/man1/agrep.1
+man/man1/glimpse.1
+man/man1/glimpseindex.1
+man/man1/glimpseserver.1
+share/doc/glimpse/LICENSE
+share/doc/glimpse/README

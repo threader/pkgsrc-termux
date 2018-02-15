@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.5 2017/11/16 07:57:53 adam Exp $
+
+SHA1 (attrs-17.3.0.tar.gz) = ee2fd8132f71a7529d777df0b813903a73ad28ca
+RMD160 (attrs-17.3.0.tar.gz) = 5b74724bb9be052c406a7c016e403212801cdecd
+SHA512 (attrs-17.3.0.tar.gz) = 69a104a0a00c13946ca61c5e21a6acd4e75a43c775d54f270c9da3fd9475df54997c32a25a5c47a24012daac2f525457b1727fb2bb7291afb90627bf87d818ee
+Size (attrs-17.3.0.tar.gz) = 89046 bytes

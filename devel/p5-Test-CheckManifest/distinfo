@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.7 2017/04/25 14:04:14 mef Exp $
+
+SHA1 (Test-CheckManifest-1.31.tar.gz) = 3c673aa61dbd2d3449164826168d50f05e3d51da
+RMD160 (Test-CheckManifest-1.31.tar.gz) = eacd8cf56312a2043bcd069547a23ed6c5397430
+SHA512 (Test-CheckManifest-1.31.tar.gz) = bebfd60107977f4242c4876fd9e5e8b13eb462218b9b409b1860d88b4eb2d1ffa56e9e54978df95c9fbd7ff2f2c05783f8222d16539ee4465fb4033e109d453f
+Size (Test-CheckManifest-1.31.tar.gz) = 10257 bytes

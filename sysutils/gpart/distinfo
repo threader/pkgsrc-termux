@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.11 2015/11/04 01:32:16 agc Exp $
+
+SHA1 (gpart-0.1h.tar.gz) = 23f66162e1d85977ea43bfe6b5e5bff0ad2d566e
+RMD160 (gpart-0.1h.tar.gz) = 1cdfb1779801ee8755b05975ced24441a3a2b639
+SHA512 (gpart-0.1h.tar.gz) = 673cc99ccc2342c18be3f6395bf7258ab1d8e2ffeac6fd68a4bd75c89825031cb9d7ae628c51bad4da47a8d0625f1608cf4c78345aae5205fd98a9a908a3d45c
+Size (gpart-0.1h.tar.gz) = 52352 bytes
+SHA1 (patch-aa) = f971cc7ae0efbacd64e8f5e6bf9c2496f75320a3
+SHA1 (patch-ab) = 557f146fcd40f2fa501eb2cff006966efa95b087
+SHA1 (patch-ac) = 15a57dd0e9b57c7a64869b43df37a5b2493e77d2
+SHA1 (patch-ad) = e53ca24886c072d514802e7dca7a79da2e1916d0
+SHA1 (patch-ae) = d02258c0a702156a6be9370f4b60c59a1109afeb
+SHA1 (patch-af) = a201375f69b1581259a2bc287d7ce5ab7c7dafe4
+SHA1 (patch-make.defs) = a5bea1d59e7061c01c311212461e0a690d08d796
+SHA1 (patch-src_Makefile) = bc4a1f4ce91b4bb02dbd53414adb38b14f8deb8a

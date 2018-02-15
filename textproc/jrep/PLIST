@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.3 2017/04/30 10:39:19 cheusov Exp $
+bin/jrep
+lib/jrep/jrep-0.3.jar
+lib/libjrep_jni.so
+man/man1/jrep.1
+share/jrep/LICENSE
+share/jrep/NEWS
+share/jrep/README
+share/jrep/TODO

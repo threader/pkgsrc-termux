@@ -1,0 +1,34 @@
+/Makefile.am/1.6/Thu Dec 11 15:05:01 2008//Tpkgsrc-2017Q4
+/devinfo.c/1.5/Thu Dec 11 15:05:01 2008//Tpkgsrc-2017Q4
+/devinfo.h/1.1/Tue Nov 25 23:10:23 2008//Tpkgsrc-2017Q4
+/devinfo_acpi.h/1.1/Tue Nov 25 23:10:23 2008//Tpkgsrc-2017Q4
+/devinfo_audio.c/1.2/Thu Nov 27 18:00:44 2008//Tpkgsrc-2017Q4
+/devinfo_audio.h/1.1/Thu Nov 27 16:07:14 2008//Tpkgsrc-2017Q4
+/devinfo_cpu.h/1.1/Tue Nov 25 23:10:23 2008//Tpkgsrc-2017Q4
+/devinfo_mass.c/1.6/Sat Jan 31 12:08:55 2015//Tpkgsrc-2017Q4
+/devinfo_mass.h/1.1/Mon Dec  1 02:02:33 2008//Tpkgsrc-2017Q4
+/devinfo_misc.c/1.6/Sun Jan 25 18:46:09 2015//Tpkgsrc-2017Q4
+/devinfo_misc.h/1.1/Tue Nov 25 23:10:23 2008//Tpkgsrc-2017Q4
+/devinfo_optical.c/1.5/Sun Dec 26 20:59:31 2010//Tpkgsrc-2017Q4
+/devinfo_optical.h/1.1/Thu Dec 11 18:25:17 2008//Tpkgsrc-2017Q4
+/devinfo_pci.c/1.1/Tue Nov 25 23:10:23 2008//Tpkgsrc-2017Q4
+/devinfo_pci.h/1.1/Tue Nov 25 23:10:23 2008//Tpkgsrc-2017Q4
+/devinfo_storage.c/1.1/Tue Nov 25 23:10:23 2008//Tpkgsrc-2017Q4
+/devinfo_storage.h/1.1/Tue Nov 25 23:10:23 2008//Tpkgsrc-2017Q4
+/devinfo_usb.c/1.1/Tue Nov 25 23:10:23 2008//Tpkgsrc-2017Q4
+/devinfo_usb.h/1.1/Tue Nov 25 23:10:23 2008//Tpkgsrc-2017Q4
+/devinfo_video.c/1.1/Thu Nov 27 22:19:10 2008//Tpkgsrc-2017Q4
+/devinfo_video.h/1.1/Thu Nov 27 22:19:10 2008//Tpkgsrc-2017Q4
+/drvctl.c/1.4/Sun Jan 25 18:46:09 2015//Tpkgsrc-2017Q4
+/drvctl.h/1.2/Thu Nov 27 14:17:11 2008//Tpkgsrc-2017Q4
+/envsys.c/1.6/Thu Dec 16 11:34:51 2010//Tpkgsrc-2017Q4
+/envsys.h/1.1/Thu Nov 27 01:45:00 2008//Tpkgsrc-2017Q4
+/hal-file-monitor.c/1.1/Tue Nov 25 23:10:23 2008//Tpkgsrc-2017Q4
+/hotplug.c/1.1/Tue Nov 25 23:10:23 2008//Tpkgsrc-2017Q4
+/hotplug.h/1.1/Tue Nov 25 23:10:23 2008//Tpkgsrc-2017Q4
+/osspec.c/1.3/Mon Dec  1 02:02:33 2008//Tpkgsrc-2017Q4
+/osspec_netbsd.h/1.2/Thu Dec 11 15:05:01 2008//Tpkgsrc-2017Q4
+/vfsstat.c/1.1/Mon Dec  1 02:02:33 2008//Tpkgsrc-2017Q4
+/vfsstat.h/1.1/Mon Dec  1 02:02:33 2008//Tpkgsrc-2017Q4
+D/addons////
+D/probing////

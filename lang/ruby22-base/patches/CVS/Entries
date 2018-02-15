@@ -1,0 +1,21 @@
+/patch-configure/1.5/Thu Jul  6 16:35:05 2017//Tpkgsrc-2017Q4
+/patch-ext_dbm_extconf.rb/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+/patch-ext_openssl_ossl__ssl.c/1.1/Thu Mar 24 16:28:59 2016//Tpkgsrc-2017Q4
+/patch-lib_mkmf.rb/1.1/Thu Apr 30 03:27:52 2015//Tpkgsrc-2017Q4
+/patch-lib_rdoc_ri_driver.rb/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+/patch-lib_rubygems.rb/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+/patch-lib_rubygems_commands_setup__command.rb/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+/patch-lib_rubygems_config__file.rb/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+/patch-lib_rubygems_defaults.rb/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+/patch-lib_rubygems_dependency__installer.rb/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+/patch-lib_rubygems_install__update__options.rb/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+/patch-lib_rubygems_installer.rb/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+/patch-lib_rubygems_platform.rb/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+/patch-lib_rubygems_specification.rb/1.1/Mon Dec  5 15:02:25 2016//Tpkgsrc-2017Q4
+/patch-man_erb.1/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+/patch-man_irb.1/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+/patch-man_ri.1/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+/patch-man_ruby.1/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+/patch-test_rubygems_test__gem.rb/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+/patch-tool_rbinstall.rb/1.1/Sun Mar  8 16:24:55 2015//Tpkgsrc-2017Q4
+D

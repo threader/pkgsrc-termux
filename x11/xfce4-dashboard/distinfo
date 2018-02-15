@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.4 2017/06/18 23:52:43 youri Exp $
+
+SHA1 (xfdashboard-0.7.2.tar.bz2) = 88eaee513b49582f839cf80a40061d42576972b2
+RMD160 (xfdashboard-0.7.2.tar.bz2) = 646c25d8af7e75acfaf6b56643d03f913ea52c42
+SHA512 (xfdashboard-0.7.2.tar.bz2) = 447e1dd2ad64be916597369fba1453f8d3b822641ac43b49c6c37fb057ec7d899e5c5ffd206ddbc7998a517d163923da696ce5bb35daa628e22092b1735d4ccb
+Size (xfdashboard-0.7.2.tar.bz2) = 2474672 bytes
+SHA1 (patch-data_Makefile.in) = 61e75edc6286d4bfb978e8ecbacd28ce07dbb7fb

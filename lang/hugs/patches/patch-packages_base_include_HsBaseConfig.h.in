@@ -1,0 +1,16 @@
+$NetBSD: patch-packages_base_include_HsBaseConfig.h.in,v 1.2 2015/12/29 23:34:48 dholland Exp $
+
+Have configure script probe for execvpe.
+
+--- packages/base/include/HsBaseConfig.h.in.orig	2014-10-14 12:10:33.000000000 +0000
++++ packages/base/include/HsBaseConfig.h.in
+@@ -419,6 +419,9 @@
+ /* Define to 1 if you have the <errno.h> header file. */
+ #undef HAVE_ERRNO_H
+ 
++/* Define to 1 if you have the `execvpe' function. */
++#undef HAVE_EXECVPE
++
+ /* Define to 1 if you have the <fcntl.h> header file. */
+ #undef HAVE_FCNTL_H
+ 

@@ -1,0 +1,21 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.5 2015/09/26 14:56:10 bouyer Exp $
+
+Run ${SYMPA_BIN}/sympa_wizard.pl
+for interactive configuration.
+
+If you are upgrading from a previous version please consult
+${PREFIX}/share/doc/sympa/NEWS
+for incompatible changes, and run:
+${SYMPA_BIN}/sympa.pl --upgrade
+
+Note that configuration files sympa.conf and wwsympa.conf are merged
+to sympa.conf now. ${SYMPA_BIN}/sympa.pl --upgrade will take care of that.
+
+You also need to ajust paths in your httpd.conf file:
+/static-sympa is now ${PREFIX}/sympa/static_content
+and you need to add:
+/static-sympa/icons  ${SYMPA_VARBASE}/list_data/static_content/icons
+/static-sympa/css  ${SYMPA_VARBASE}/list_data/static_content/css
+
+===========================================================================

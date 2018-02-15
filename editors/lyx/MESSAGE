@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.5 2017/10/03 15:12:42 wiz Exp $
+
+After upgrading LyX or adding new converters, document previewers,
+TeX fonts, or other features, LyX users should consider running
+the LyX Tools -> Reconfigure option so it can properly recognize
+any changed capabilities. Then you can use the Tools -> Preferences
+options to further configure these features.
+
+Examples of packages that can be used to extend LyX include:
+converters/latex2rtf, converters/wv, graphics/ImageMagick,
+graphics/tgif, graphics/tiff, print/dvipdfmx, print/gv, print/fig2dev,
+textproc/dsssl-docbook-modular, textproc/ispell-base, and
+textproc/latex2html.
+
+===========================================================================

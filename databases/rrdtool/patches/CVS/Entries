@@ -1,0 +1,14 @@
+/patch-bindings_perl-shared_Makefile.PL/1.4/Thu Jul 27 18:31:20 2017//Tpkgsrc-2017Q4
+/patch-examples_Makefile.in/1.1/Thu Jul 27 18:31:20 2017//Tpkgsrc-2017Q4
+/patch-examples_rrdcached_Makefile.in/1.1/Thu Jul 27 18:31:20 2017//Tpkgsrc-2017Q4
+/patch-src_gettext.h/1.1/Wed Aug 26 22:03:38 2015//Tpkgsrc-2017Q4
+/patch-src_rrd__cgi.c/1.2/Thu Jul 27 18:31:20 2017//Tpkgsrc-2017Q4
+/patch-src_rrd__graph.c/1.2/Thu Jul 27 18:31:20 2017//Tpkgsrc-2017Q4
+/patch-src_rrd__lastupdate.c/1.1/Thu Jul 27 18:31:20 2017//Tpkgsrc-2017Q4
+/patch-src_rrd__list.c/1.1/Wed Aug  2 03:13:54 2017//Tpkgsrc-2017Q4
+/patch-src_rrd__restore.c/1.2/Thu Jul 27 18:31:20 2017//Tpkgsrc-2017Q4
+/patch-src_rrd__strtod.c/1.2/Thu Jul 27 18:31:20 2017//Tpkgsrc-2017Q4
+/patch-src_rrd__tool.c/1.1/Thu Jul 27 18:31:20 2017//Tpkgsrc-2017Q4
+/patch-src_rrd__utils.c/1.2/Thu Jul 27 18:31:20 2017//Tpkgsrc-2017Q4
+/patch-src_rrd__xport.c/1.2/Thu Jul 27 18:31:20 2017//Tpkgsrc-2017Q4
+D

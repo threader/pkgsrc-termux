@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2016/07/22 12:39:22 nros Exp $
+
+SHA1 (qore-yaml-module-0.5.tar.bz2) = 49002afeec542abdefcea3555b365eb86ee5f112
+RMD160 (qore-yaml-module-0.5.tar.bz2) = be376d01dccb818237702fb89edd4b24ce335be0
+SHA512 (qore-yaml-module-0.5.tar.bz2) = 3891874bf849d5f83102beea527794371e24a5feccc3ab895e931ab9b17cf47abd4df4552641b2697d0895df454e3a8a5854565836afa7eea181c21fd51b1a89
+Size (qore-yaml-module-0.5.tar.bz2) = 782992 bytes

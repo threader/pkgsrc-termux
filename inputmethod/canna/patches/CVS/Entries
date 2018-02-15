@@ -1,0 +1,20 @@
+/patch-Canna.conf/1.1/Sun Oct 18 03:58:31 2015//Tpkgsrc-2017Q4
+/patch-Imakefile/1.1/Sun Oct 18 03:58:31 2015//Tpkgsrc-2017Q4
+/patch-canna_widedef.h/1.2/Sat Jul 22 17:53:16 2017//Tpkgsrc-2017Q4
+/patch-canuum_Imakefile/1.1/Sun Oct 18 03:58:31 2015//Tpkgsrc-2017Q4
+/patch-canuum_canna.c/1.1/Sun Oct 18 03:58:31 2015//Tpkgsrc-2017Q4
+/patch-canuum_config.h.in/1.1/Sun Oct 18 03:58:31 2015//Tpkgsrc-2017Q4
+/patch-canuum_configure/1.1/Sun Oct 18 03:58:31 2015//Tpkgsrc-2017Q4
+/patch-canuum_configure.in/1.1/Sun Oct 18 03:58:31 2015//Tpkgsrc-2017Q4
+/patch-canuum_jhlp.c/1.1/Sun Oct 18 03:58:31 2015//Tpkgsrc-2017Q4
+/patch-canuum_printf.c/1.1/Sun Oct 18 03:58:31 2015//Tpkgsrc-2017Q4
+/patch-canuum_termcap.c/1.1/Sun Oct 18 03:58:31 2015//Tpkgsrc-2017Q4
+/patch-canuum_termio.c/1.1/Sun Oct 18 03:58:31 2015//Tpkgsrc-2017Q4
+/patch-cmd_cmd.tmpl/1.1/Sun Oct 18 03:58:31 2015//Tpkgsrc-2017Q4
+/patch-dic_phono_Imakefile/1.2/Sun Oct 18 03:58:31 2015//Tpkgsrc-2017Q4
+/patch-lib_RKC_convert.c/1.1/Sun Oct 18 03:58:31 2015//Tpkgsrc-2017Q4
+/patch-lib_RK_dd.c/1.1/Sun Oct 18 03:58:31 2015//Tpkgsrc-2017Q4
+/patch-lib_RK_ncache.c/1.2/Sun Oct 25 12:17:36 2015//Tpkgsrc-2017Q4
+/patch-lib_canna_keydef.c/1.1/Sun Oct 25 12:17:36 2015//Tpkgsrc-2017Q4
+/patch-lib_canna_lisp.c/1.1/Sat Jul 22 17:44:40 2017//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.6 2017/01/18 13:48:34 wen Exp $
+
+Trick perl into emitting use of -lgmp.  Actual library
+location will be handled via buildlink / wrapper.
+
+--- Makefile.PL.orig	2017-01-18 13:30:25.000000000 +0000
++++ Makefile.PL
+@@ -30,7 +30,7 @@ WriteMakefile
+                             'Math::BigInt'        => 1.999808,
+                            },
+    'LICENSE'            => 'perl_5',
+-   'LIBS'               => ['-lgmp'],   # e.g., '-lm'
++   'LIBS'               => ["-L$ENV{PREFIX}/lib -lgmp"],   # e.g., '-lm'
+    'DEFINE'             => '',          # e.g., '-DHAVE_SOMETHING'
+    'INC'                => '',          # e.g., '-I/usr/include/other'
+    'SIGN'               => 1,

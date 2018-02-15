@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.5 2015/05/11 10:39:26 wiz Exp $
+man/man8/sslh.8
+sbin/sslh
+sbin/sslh-select
+share/doc/sslh/ChangeLog
+share/doc/sslh/README.MacOSX
+share/doc/sslh/README.md
+share/examples/sslh/basic.cfg
+share/examples/sslh/example.cfg
+share/examples/sslh/scripts/etc.init.d.sslh
+share/examples/sslh/scripts/etc.rc.d.init.d.sslh.centos
+share/examples/sslh/scripts/etc.sysconfig.sslh
+share/examples/sslh/scripts/fail2ban/jail.conf
+share/examples/sslh/scripts/fail2ban/sslh-ssh.conf
+share/examples/sslh/scripts/systemd.sslh.service

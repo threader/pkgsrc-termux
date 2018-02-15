@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.5 2016/01/31 07:27:04 ryoon Exp $
+bin/djview4
+lib/mozilla/plugins/nsdejavu.la
+man/man1/djview4.1
+man/man1/nsdejavu.1
+share/applications/djvulibre-djview4.desktop
+share/djvu/djview4/djview_cs.qm
+share/djvu/djview4/djview_de.qm
+share/djvu/djview4/djview_es.qm
+share/djvu/djview4/djview_fr.qm
+share/djvu/djview4/djview_ru.qm
+share/djvu/djview4/djview_uk.qm
+share/djvu/djview4/djview_zh_cn.qm
+share/djvu/djview4/djview_zh_tw.qm
+share/icons/hicolor/32x32/mimetypes/djvulibre-djview4.png
+share/icons/hicolor/64x64/mimetypes/djvulibre-djview4.png
+share/icons/hicolor/scalable/mimetypes/djvulibre-djview4.svgz

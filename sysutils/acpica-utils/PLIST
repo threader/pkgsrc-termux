@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.4 2015/04/16 14:21:01 wiz Exp $
+bin/acpibin
+bin/acpidump
+bin/acpiexamples
+bin/acpiexec
+bin/acpihelp
+bin/acpinames
+bin/acpisrc
+bin/acpixtract
+bin/iasl

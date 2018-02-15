@@ -1,0 +1,46 @@
+$NetBSD: patch-ac,v 1.6 2014/02/08 12:44:05 wiedi Exp $
+
+--- unix/uudeview.c.orig	2003-04-12 23:33:55.000000000 +0000
++++ unix/uudeview.c
+@@ -31,6 +31,11 @@
+ #include <stdio.h>
+ #include <ctype.h>
+ #include <signal.h>
++#if defined(__sun)
++# define _PATH_TMP   "/tmp/"
++#else
++# include <paths.h>
++#endif
+ 
+ #ifdef HAVE_FCNTL_H
+ #include <fcntl.h>
+@@ -440,6 +445,7 @@ proc_stdin (void)
+ {
+   static char buffer[1024];
+   char *stdfile;
++  int targetfd;
+   FILE *target;
+   size_t bytes;
+   int res;
+@@ -449,11 +455,20 @@ proc_stdin (void)
+     return 0;
+   }
+ 
+-  if ((stdfile = tempnam (NULL, "uu")) == NULL) {
++  if ((stdfile = strdup (_PATH_TMP "uu.XXXXXX")) == NULL) {
+     fprintf (stderr, "proc_stdin: cannot get temporary file\n");
+     return 0;
+   }
+ 
++  if ((targetfd = mkstemp (stdfile)) < 0) {
++    fprintf (stderr, "proc_stdin: cannot open temp file %s for writing: %s\n",
++	     stdfile, strerror (errno));
++    _FP_free (stdfile);
++    return 0;
++  }
++
++  /* file now safely exists, reopen it with the right mode */
++  close(targetfd);
+   if ((target = fopen (stdfile, "wb")) == NULL) {
+     fprintf (stderr, "proc_stdin: cannot open temp file %s for writing: %s\n",
+ 	     stdfile, strerror (errno));

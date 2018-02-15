@@ -1,0 +1,10 @@
+/patch-Makefile.in/1.2/Tue Dec 31 03:28:39 2013//Tpkgsrc-2017Q4
+/patch-base_Makefile.in/1.2/Tue Dec 31 03:28:39 2013//Tpkgsrc-2017Q4
+/patch-cgi_Makefile.in/1.1/Sat Mar  2 04:08:27 2013//Tpkgsrc-2017Q4
+/patch-configure.in/1.1/Sat Mar  2 04:08:27 2013//Tpkgsrc-2017Q4
+/patch-html_Makefile.in/1.2/Tue Dec 31 03:28:39 2013//Tpkgsrc-2017Q4
+/patch-module_idoutils_db_scripts_create__mysqldb.sh/1.1/Sat Mar  2 04:08:27 2013//Tpkgsrc-2017Q4
+/patch-module_idoutils_db_scripts_create__oracledb.sh/1.1/Sat Mar  2 04:08:27 2013//Tpkgsrc-2017Q4
+/patch-module_idoutils_db_scripts_create__pgsqldb.sh/1.1/Sat Mar  2 04:08:27 2013//Tpkgsrc-2017Q4
+/patch-rc.ido2db.in/1.1/Sat Mar  2 04:08:27 2013//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,32 @@
+$NetBSD: patch-ai,v 1.4 2013/10/27 21:21:26 dholland Exp $
+
+--- src/celestia/celx.cpp.orig	2011-06-05 16:11:13.000000000 +0000
++++ src/celestia/celx.cpp
+@@ -492,6 +492,18 @@ static CelestiaCore* getAppCore(lua_Stat
+     return appCore;
+ }
+ 
++static void *l_alloc (void *ud, void *ptr, size_t osize, size_t nsize) {
++  (void)ud;     /* not used */
++  (void)osize;  /* not used */
++  if (nsize == 0) {
++    free(ptr);  /* ANSI requires that free(NULL) has no effect */
++    return NULL;
++  }
++  else
++    /* ANSI requires that realloc(NULL, size) == malloc(size) */
++    return realloc(ptr, nsize);
++}
++
+ 
+ LuaState::LuaState() :
+     timeout(MaxTimeslice),
+@@ -503,7 +515,7 @@ LuaState::LuaState() :
+     ioMode(NoIO),
+     eventHandlerEnabled(false)
+ {
+-    state = lua_open();
++    state = lua_newstate(l_alloc, NULL);
+     timer = CreateTimer();
+     screenshotCount = 0;
+ }

@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.13 2015/02/13 04:44:40 rodent Exp $
+
+Always use varargs on NetBSD
+
+--- config.h.in.orig	2014-04-26 10:58:46.000000000 +0000
++++ config.h.in
+@@ -498,6 +498,15 @@
+  */
+ #undef USEVARARGS
+ 
++#ifdef __NetBSD__
++/*
++ * XXX gcc 3.3 on some NetBSD platforms fails the configure test for this
++ * so force it on anyway.
++ */
++#undef USEVARARGS
++#define USEVARARGS 1
++#endif
++
+ /*
+  * If the select return value doesn't treat a descriptor that is
+  * usable for reading and writing as two hits, define SELECT_BROKEN.

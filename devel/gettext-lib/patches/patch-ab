@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.7 2013/07/26 13:08:32 ryoon Exp $
+
+--- gettext-runtime/intl/Makefile.in.orig	2013-06-11 23:57:10.000000000 +0000
++++ gettext-runtime/intl/Makefile.in
+@@ -390,7 +390,7 @@ install-exec: all
+ 	  $(mkdir_p) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir); \
+ 	  $(INSTALL_DATA) libintl.h $(DESTDIR)$(includedir)/libintl.h; \
+ 	  $(LIBTOOL) --mode=install \
+-	    $(INSTALL_DATA) libintl.$la $(DESTDIR)$(libdir)/libintl.$la; \
++	    $(BSD_INSTALL_LIB) libintl.$la $(DESTDIR)$(libdir)/libintl.$la; \
+ 	  if test "@RELOCATABLE@" = yes; then \
+ 	    dependencies=`sed -n -e 's,^dependency_libs=\(.*\),\1,p' < $(DESTDIR)$(libdir)/libintl.la | sed -e "s,^',," -e "s,'\$$,,"`; \
+ 	    if test -n "$$dependencies"; then \

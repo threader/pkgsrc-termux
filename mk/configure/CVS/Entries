@@ -1,0 +1,13 @@
+/bsd.configure-vars.mk/1.4/Thu Jul 12 18:59:15 2007//Tpkgsrc-2017Q4
+/bsd.configure.mk/1.11/Fri Jan  4 01:46:26 2008//Tpkgsrc-2017Q4
+/cmake-rewrite.awk/1.2/Thu Dec 20 18:51:18 2007//Tpkgsrc-2017Q4
+/cmake.mk/1.15/Wed Dec 27 18:56:27 2017//Tpkgsrc-2017Q4
+/config-override.mk/1.7/Sun Oct 13 10:10:05 2013//Tpkgsrc-2017Q4
+/configure.mk/1.25/Fri Jun  1 12:52:37 2012//Tpkgsrc-2017Q4
+/gnu-configure.mk/1.17/Sat Aug 23 03:00:18 2014//Tpkgsrc-2017Q4
+/install-sh-override.mk/1.2/Thu Feb  7 21:36:13 2008//Tpkgsrc-2017Q4
+/libtool-override.mk/1.13/Mon Mar  6 16:14:08 2017//Tpkgsrc-2017Q4
+/pkg-config-override.mk/1.4/Mon Jul 21 12:10:40 2014//Tpkgsrc-2017Q4
+/replace-interpreter.mk/1.13/Thu Apr 18 00:24:48 2013//Tpkgsrc-2017Q4
+/replace-localedir.mk/1.2/Thu Aug  3 16:49:48 2006//Tpkgsrc-2017Q4
+D

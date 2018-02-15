@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/09/30 09:37:57 adam Exp $
+
+SHA1 (pytoml-0.1.14.tar.gz) = 5104c3f4105ea4d433118bbae2d1ea302463212e
+RMD160 (pytoml-0.1.14.tar.gz) = 7d8a717832546ba47276775fd02662efce35cff5
+SHA512 (pytoml-0.1.14.tar.gz) = f916684a4e9984402925ace7a2b74f223a0c495fefb946c4e1e69c55ef656b5d8a56a07994b163154d252ed8dfec6b6f947d44597834e43b8a4a06c7e4105521
+Size (pytoml-0.1.14.tar.gz) = 6466 bytes

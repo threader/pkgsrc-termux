@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.2 2013/12/08 03:30:31 dholland Exp $
+bin/conky
+man/man1/conky.1
+share/examples/conky/conky.conf
+share/examples/conky/conky_no_x11.conf
+share/examples/conky/conkyrc

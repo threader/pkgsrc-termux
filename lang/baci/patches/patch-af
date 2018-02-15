@@ -1,0 +1,52 @@
+$NetBSD: patch-af,v 1.4 2015/12/29 23:34:43 dholland Exp $
+
+Use standard headers.
+Don't redeclare standard functions.
+Avoid symbol name conflict with strtoi.
+Fix yacc syntax errors.
+
+--- ccomp/bac.y.orig	1999-08-31 16:19:03.000000000 +0000
++++ ccomp/bac.y
+@@ -3,6 +3,7 @@
+        /* based on the grammar for the BenAri Concurrent Pascal compiler */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <time.h>
+ #include <assert.h>
+@@ -24,9 +25,6 @@ extern   char  lasttoken[];
+ extern   void  global_init(int argc, char** argv);
+ extern   char  *lastident();
+ 
+-extern   int fprintf(FILE*,const char*,...);
+-extern   int printf(const char*,...);
+-extern   int free(void*);
+ extern   void yyerror(char*); 
+ extern   int yylex(void); 
+ 
+@@ -799,7 +797,7 @@ unsigned_const  :  unsigned_num
+       ;
+ 
+ unsigned_num  :  UNSIGNED_INT   /* no reals */
+-         { $$ = strtoi(numbertext,numberbase); }
++         { $$ = my_strtoi(numbertext,numberbase); }
+       ;
+ 
+ extern_decl  :  extern_func_decl
+@@ -1013,6 +1011,7 @@ then_stmt  :  stmt
+ 
+ the_else  :  ELSE
+          { emit(JUMP); $$ = lc; }
++	;
+ 
+ switch_hdr  :  SWITCH  '('  expr  ')'
+          { 
+@@ -1272,6 +1271,7 @@ break_stmt  :   BREAK  ';'
+                }
+             }
+          }
++	;
+ 
+ return_stmt  :  the_return  opt_expr  ';'
+          {  

@@ -1,0 +1,29 @@
+$NetBSD: patch-po_Makefile.in.in,v 1.2 2016/08/09 13:35:28 mef Exp $
+
+some misc fixes in order to get over the automake deprecated
+`@mkdir_p@` as well as adverse effects of SHELL in this file.
+
+--- po/Makefile.in.in.orig	2016-08-05 08:38:01.000000000 +0900
++++ po/Makefile.in.in	2016-08-09 22:19:28.000000000 +0900
+@@ -16,7 +16,6 @@ VERSION = @VERSION@
+ PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
+ 
+ SED = @SED@
+-SHELL = /bin/sh
+ @SET_MAKE@
+ 
+ srcdir = @srcdir@
+@@ -39,10 +38,10 @@ INSTALL_DATA = @INSTALL_DATA@
+ # In automake >= 1.10, @mkdir_p@ is derived from ${MKDIR_P}, which is defined
+ # either as "/path/to/mkdir -p" or ".../install-sh -c -d". For these automake
+ # versions, $(mkinstalldirs) and $(install_sh) are unused.
+-mkinstalldirs = $(SHELL) @install_sh@ -d
+-install_sh = $(SHELL) @install_sh@
++mkinstalldirs = @install_sh@ -d
++install_sh = @install_sh@
+ MKDIR_P = @MKDIR_P@
+-mkdir_p = @mkdir_p@
++mkdir_p = $(MKDIR_P)
+ 
+ GMSGFMT_ = @GMSGFMT@
+ GMSGFMT_no = @GMSGFMT@

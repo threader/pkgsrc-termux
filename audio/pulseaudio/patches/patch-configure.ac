@@ -1,0 +1,62 @@
+$NetBSD: patch-configure.ac,v 1.9 2017/09/08 02:27:44 ryoon Exp $
+
+* Don't assume sys/capability.h is guaranteed present on Linux.
+* Fix NetBSD detection for libatomics_ops check.
+* Fix unportable test(1) construct.
+* Adapt /var-paths for pkgsrc defaults.
+* Install default config files in example directory; pkgsrc config
+  file framework will install them in the right place.
+* Avoid hardcoded SDK paths on Darwin.
+
+--- configure.ac.orig	2016-06-22 06:53:09.000000000 +0000
++++ configure.ac
+@@ -21,7 +21,7 @@
+ 
+ AC_PREREQ(2.63)
+ 
+-AC_INIT([pulseaudio],[m4_esyscmd(./git-version-gen .tarball-version)],[pulseaudio-discuss (at) lists (dot) freedesktop (dot) org],[pulseaudio],[http://pulseaudio.org/])
++AC_INIT([pulseaudio],[11.0],[pulseaudio-discuss (at) lists (dot) freedesktop (dot) org],[pulseaudio],[http://pulseaudio.org/])
+ AC_CONFIG_SRCDIR([src/daemon/main.c])
+ AC_CONFIG_MACRO_DIR([m4])
+ AC_CONFIG_HEADERS([config.h])
+@@ -130,7 +130,6 @@ AC_MSG_CHECKING([host operating system])
+ case "$host_os" in
+     linux*)
+         AC_MSG_RESULT([linux])
+-        host_has_caps=1
+         os_is_linux=1
+     ;;
+     freebsd*)
+@@ -1041,7 +1040,7 @@ AS_IF([test "x$HAVE_DBUS" = "x1"], AC_DE
+ 
+ PA_MACHINE_ID="${sysconfdir}/machine-id"
+ AX_DEFINE_DIR(PA_MACHINE_ID, PA_MACHINE_ID, [D-Bus machine-id file])
+-PA_MACHINE_ID_FALLBACK="${localstatedir}/lib/dbus/machine-id"
++PA_MACHINE_ID_FALLBACK="${localstatedir}/db/dbus/machine-id"
+ AX_DEFINE_DIR(PA_MACHINE_ID_FALLBACK, PA_MACHINE_ID_FALLBACK,
+ 	      [Fallback machine-id file])
+ 
+@@ -1364,9 +1363,9 @@ fi
+ 
+ PA_SYSTEM_RUNTIME_PATH="${localstatedir}/run/pulse"
+ AX_DEFINE_DIR(PA_SYSTEM_RUNTIME_PATH, PA_SYSTEM_RUNTIME_PATH, [System runtime dir])
+-PA_SYSTEM_CONFIG_PATH="${localstatedir}/lib/pulse"
++PA_SYSTEM_CONFIG_PATH="${localstatedir}/db/pulse"
+ AX_DEFINE_DIR(PA_SYSTEM_CONFIG_PATH, PA_SYSTEM_CONFIG_PATH, [System config dir])
+-PA_SYSTEM_STATE_PATH="${localstatedir}/lib/pulse"
++PA_SYSTEM_STATE_PATH="${localstatedir}/db/pulse"
+ AX_DEFINE_DIR(PA_SYSTEM_STATE_PATH, PA_SYSTEM_STATE_PATH, [System state dir])
+ 
+ PA_BINARY=${bindir}/pulseaudio${EXEEXT}
+@@ -1378,8 +1377,9 @@ AX_DEFINE_DIR(PACTL_BINARY, PACTL_BINARY
+ AC_SUBST(PA_SOEXT, [.so])
+ AC_DEFINE(PA_SOEXT, [".so"], [Shared object extension])
+ 
+-AC_SUBST(pulseconfdir, ["${sysconfdir}/pulse"])
+-AX_DEFINE_DIR(PA_DEFAULT_CONFIG_DIR, pulseconfdir, [Location of configuration files])
++AC_SUBST(pulseconfdirreal, ["${sysconfdir}/pulse"])
++AC_SUBST(pulseconfdir, ["${EGDIR}"])
++AX_DEFINE_DIR(PA_DEFAULT_CONFIG_DIR, pulseconfdirreal, [Location of configuration files])
+ 
+ #### Mac OSX specific stuff #####
+ 

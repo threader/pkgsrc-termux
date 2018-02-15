@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST.Linux,v 1.4 2015/10/08 10:08:03 tnn Exp $
+lib/kde4/kcm_joystick.so
+lib/kde4/libexec/backlighthelper
+share/dbus-1/system-services/org.kde.powerdevil.backlighthelper.service
+share/examples/kde4-dbus/org.kde.powerdevil.backlighthelper.conf
+share/kde4/services/joystick.desktop
+share/PolicyKit/policy/org.kde.powerdevil.backlighthelper.policy
+

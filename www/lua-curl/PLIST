@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.2 2013/09/17 12:03:42 joerg Exp $
+${LUA_CDIR}/cURL.la

@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.5 2014/07/22 10:52:24 wiz Exp $
+bin/wpd2html
+bin/wpd2raw
+bin/wpd2text
+include/libwpd-0.10/libwpd/WPDocument.h
+include/libwpd-0.10/libwpd/libwpd.h
+lib/libwpd-0.10.la
+lib/pkgconfig/libwpd-0.10.pc

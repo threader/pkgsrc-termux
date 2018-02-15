@@ -1,0 +1,26 @@
+$NetBSD: patch-ae,v 1.3 2016/04/01 22:16:48 jperkin Exp $
+
+--- Makefile.in.orig	1997-02-25 18:47:26.000000000 +0000
++++ Makefile.in
+@@ -9,7 +9,7 @@ prefix			=	@prefix@
+ exec_prefix		=	@exec_prefix@
+ 
+ BINDIR			=	$(exec_prefix)/bin
+-MANDIR			=	$(prefix)/man
++MANDIR			=	@mandir@
+ 
+ BINS			=	fmt   wc   expand   unexpand
+ MANS			=	fmt.1 wc.1 expand.1 unexpand.1
+@@ -38,9 +38,9 @@ INSTALL_DATA	=	@INSTALL_DATA@
+ all				:	$(BINS)
+ 
+ install			:	all
+-	$(srcdir)/mkinstalldirs $(BINDIR) $(MANDIR)/man1
+-	for bin in $(BINS) ; do $(INSTALL) $$bin $(BINDIR)/$$bin ; done
+-	for man in $(MANS) ; do $(INSTALL_DATA) $(srcdir)/$$man $(MANDIR)/man1/$$man ; done
++	$(srcdir)/mkinstalldirs ${DESTDIR}$(BINDIR) ${DESTDIR}$(MANDIR)/man1
++	for bin in $(BINS) ; do $(INSTALL) $$bin ${DESTDIR}$(BINDIR)/utf8-$$bin ; done
++	for man in $(MANS) ; do $(INSTALL_DATA) $(srcdir)/$$man ${DESTDIR}$(MANDIR)/man1/utf8-$$man ; done
+ 
+ uninstall		:
+ 	-for bin in $(BINS) ; do rm $(BINDIR)/$$bin ; done

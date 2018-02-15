@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.3 2013/12/08 00:35:28 jakllsch Exp $
+
+--- README.orig	2013-12-08 00:26:53.000000000 +0000
++++ README
+@@ -241,7 +241,7 @@ work-around makes it possible for Linux 
+ RAM.  For more information on BadRAM suppor
+ for Linux, sail t
+ 
+-       http://home.zonnet.nl/vanrein/badra
++       http://rick.vanrein.org/linux/badram/
+ 
+ Sometimes memory errors show up due to component incompatibility.  A memor
+ module may work fine in one system and not in another.  This is no

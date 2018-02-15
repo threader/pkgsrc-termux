@@ -1,0 +1,20 @@
+$NetBSD: patch-ad,v 1.2 2017/06/23 15:56:17 joerg Exp $
+
+--- machdep/nbsd-44.c.orig	2005-04-06 23:49:35.000000000 +0000
++++ machdep/nbsd-44.c
+@@ -36,6 +36,7 @@ static char rcsid[] = "$Id: nbsd-44.c,v 
+ #include <signal.h>
+ #include <stdlib.h>
+ #include <ctype.h>
++#include <errno.h>
+ 
+ #include <sys/resource.h>
+ 
+@@ -172,7 +173,6 @@ REAL_REGEX_FUNCS
+  * Now, set up everything we need to write a GetProc() routine.
+  */
+ 
+-#include <sys/user.h>
+ #include <sys/sysctl.h>
+ 
+ static	char	*pidmap[] = {

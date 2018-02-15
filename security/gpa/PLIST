@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.7 2017/08/29 11:30:05 wiz Exp $
+bin/gpa
+man/man1/gpa.1
+share/applications/gpa.desktop
+share/gpa/gpa-logo.ppm
+share/gpa/gpa.png
+share/locale/ar/LC_MESSAGES/gpa.mo
+share/locale/cs/LC_MESSAGES/gpa.mo
+share/locale/de/LC_MESSAGES/gpa.mo
+share/locale/es/LC_MESSAGES/gpa.mo
+share/locale/fr/LC_MESSAGES/gpa.mo
+share/locale/ja/LC_MESSAGES/gpa.mo
+share/locale/nl/LC_MESSAGES/gpa.mo
+share/locale/pl/LC_MESSAGES/gpa.mo
+share/locale/pt_BR/LC_MESSAGES/gpa.mo
+share/locale/ru/LC_MESSAGES/gpa.mo
+share/locale/sv/LC_MESSAGES/gpa.mo
+share/locale/tr/LC_MESSAGES/gpa.mo
+share/locale/zh_CN/LC_MESSAGES/gpa.mo
+share/locale/zh_TW/LC_MESSAGES/gpa.mo
+share/pixmaps/gpa.png

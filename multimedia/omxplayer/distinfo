@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.7 2017/01/17 07:33:50 skrll Exp $
+
+SHA1 (omxplayer-20170112-12b472eaa75bce25dc63ec61d9233aadb996f3a4.tar.gz) = 7a0e4aa2709fe6c0b85b26bc4227f78d90dd6d3b
+RMD160 (omxplayer-20170112-12b472eaa75bce25dc63ec61d9233aadb996f3a4.tar.gz) = 99898cc1ac443c5fda20d62e256045baa29bd8d5
+SHA512 (omxplayer-20170112-12b472eaa75bce25dc63ec61d9233aadb996f3a4.tar.gz) = c9e14c7ed83259e5e2ee23cdf7d11ba498851814e502fffd8e62676a91adaa5ec28a7f34d831a2c9feae46acea21520df79d308de8514198fbecab5eaa912a6f
+Size (omxplayer-20170112-12b472eaa75bce25dc63ec61d9233aadb996f3a4.tar.gz) = 1218873 bytes
+SHA1 (patch-Keyboard.cpp) = 92044ce1077bf043553c7631fad5a779f93ff33c
+SHA1 (patch-Keyboard.h) = 48d4b5da443b6a1e5b736907b9b660c1afb1f119
+SHA1 (patch-Makefile) = 6e609a19a9b83872f5fded93c001ae9ab7881e9d
+SHA1 (patch-Makefile.include) = 894f1f0acf0ec823c7915e2333ab5ac0937af24e
+SHA1 (patch-OMXAudio.cpp) = 8b142577fc2bd18dcbf5485e3070f70062f7ce92
+SHA1 (patch-linux_PlatformDefs.h) = 1918a2b87e33074a08cd36f3b932c8d6b3273457
+SHA1 (patch-omxplayer.cpp) = bee9abeb8f48eddaa249c36ac6200af22959b2cf

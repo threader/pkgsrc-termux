@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.6 2014/10/01 12:18:19 wiz Exp $
+include/dvdread/bitreader.h
+include/dvdread/dvd_reader.h
+include/dvdread/dvd_udf.h
+include/dvdread/ifo_print.h
+include/dvdread/ifo_read.h
+include/dvdread/ifo_types.h
+include/dvdread/nav_print.h
+include/dvdread/nav_read.h
+include/dvdread/nav_types.h
+lib/libdvdread.la
+lib/pkgconfig/dvdread.pc
+share/doc/libdvdread/AUTHORS
+share/doc/libdvdread/COPYING
+share/doc/libdvdread/ChangeLog
+share/doc/libdvdread/NEWS
+share/doc/libdvdread/README
+share/doc/libdvdread/TODO

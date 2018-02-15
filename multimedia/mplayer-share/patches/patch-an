@@ -1,0 +1,41 @@
+$NetBSD: patch-an,v 1.5 2015/11/21 09:47:23 leot Exp $
+
+http://bugzilla.mplayerhq.hu/show_bug.cgi?id=751
+
+Please also see: pkg/20549.
+
+--- stream/vcd_read_fbsd.h.orig	2013-12-02 13:53:03.000000000 +0000
++++ stream/vcd_read_fbsd.h
+@@ -63,9 +63,8 @@ typedef struct mp_vcd_priv_st {
+   vcd_tocentry entry;
+ #ifdef VCD_NETBSD
+   struct cd_toc_entry entry_data;
+-#else
+-  cdsector_t buf;
+ #endif
++  cdsector_t buf;
+   struct ioc_toc_header tochdr;
+   unsigned int track;
+ } mp_vcd_priv_t;
+@@ -237,8 +236,8 @@ vcd_read(mp_vcd_priv_t* vcd, char *mem)
+   sc.cmd[9] = 1 << 4; // user data only
+   sc.cmd[10] = 0;     // no subchannel
+   sc.cmdlen = 12;
+-  sc.databuf = (caddr_t) mem;
+-  sc.datalen = VCD_SECTOR_DATA;
++  sc.databuf = (caddr_t) vcd->buf.data;
++  sc.datalen = VCD_SECTOR_DATA + 4;    // MMC-3 spec says there are 4 extra bytes
+   sc.senselen = sizeof(sc.sense);
+   sc.flags = SCCMD_READ;
+   sc.timeout = 10000;
+@@ -255,9 +254,9 @@ vcd_read(mp_vcd_priv_t* vcd, char *mem)
+ #else
+   if (pread(vcd->fd,&vcd->buf,VCD_SECTOR_SIZE,vcd_get_msf(vcd)*VCD_SECTOR_SIZE)
+      != VCD_SECTOR_SIZE) return 0;  // EOF?
++#endif
+ 
+   memcpy(mem,vcd->buf.data,VCD_SECTOR_DATA);
+-#endif
+   vcd_inc_msf(vcd);
+   return VCD_SECTOR_DATA;
+ }

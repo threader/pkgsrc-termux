@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.2 2016/12/23 03:34:41 ryoon Exp $
+include/pugiconfig.hpp
+include/pugixml.hpp
+lib/cmake/pugixml/pugixml-config-noconfig.cmake
+lib/cmake/pugixml/pugixml-config.cmake
+lib/libpugixml.so
+lib/libpugixml.so.1
+lib/libpugixml.so.1.8

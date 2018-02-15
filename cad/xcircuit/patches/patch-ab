@@ -1,0 +1,48 @@
+$NetBSD: patch-ab,v 1.13 2014/12/15 09:00:32 obache Exp $
+
+--- configure.orig	2012-08-15 11:45:19.000000000 +0000
++++ configure
+@@ -6006,7 +6006,7 @@ if test "${enable_double_buffer+set}" = 
+   enableval=$enable_double_buffer;
+ else
+ 
+-  if test "x$xc_with_GL" == "x" ; then
++  if test "x$xc_with_GL" = "x" ; then
+     $as_echo "#define DOUBLEBUFFER 1" >>confdefs.h
+ 
+   else
+@@ -6223,7 +6223,7 @@ xc_with_tk_libraries=""
+ if test "${with_tcl+set}" = set; then :
+   withval=$with_tcl;
+   xc_with_tcl=$withval
+-  if test "$withval" == "no" -o "$withval" == "NO"; then
++  if test "$withval" = "no" -o "$withval" = "NO"; then
+       xc_with_tcl=""
+   fi
+ 
+@@ -6625,12 +6625,12 @@ if test "x$xc_with_tcl" != "x" ; then
+   if test "x${xc_with_tcl_includes}" != "x" ; then
+     if test -r "${xc_with_tcl_includes}/tcl.h" ; then
+       TCL_INC_DIR=${xc_with_tcl_includes}
+-    elif test "x${TCL_INCLUDE_SPEC}" == "x" ; then
++    elif test "x${TCL_INCLUDE_SPEC}" = "x" ; then
+       echo "Can't find tcl.h in \"${xc_with_tcl_includes}\""
+       echo "Reverting to non-Tcl compilation"
+       xc_with_tcl=""
+     fi
+-  elif test "x${TCL_INCLUDE_SPEC}" == "x" ; then
++  elif test "x${TCL_INCLUDE_SPEC}" = "x" ; then
+     for dir in \
+      ${TCL_PREFIX}/include/tcl${TCL_MAJOR_VERSION}.${TCL_MINOR_VERSION} \
+      ${TCL_PREFIX}/include \
+@@ -6689,8 +6689,8 @@ if test "x$xc_with_tcl" != "x" ; then
+       TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
+       ;;
+     *)
+-      TCL_LIB_NAME="tcl${TCL_MAJOR_VERSION}.${TCL_MINOR_VERSION}"
+-      TK_LIB_NAME="tk${TK_MAJOR_VERSION}.${TK_MINOR_VERSION}"
++      TCL_LIB_NAME="tcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
++      TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
+       ;;
+   esac
+ 

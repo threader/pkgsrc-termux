@@ -1,0 +1,68 @@
+$NetBSD: patch-aa,v 1.7 2013/10/27 21:21:26 dholland Exp $
+
+--- configure.orig	2011-06-05 18:33:27.000000000 +0000
++++ configure
+@@ -26740,19 +26740,19 @@ if test "$kde_have_all_paths" = "no" && 
+ if test "$ac_use_path_checking" = "default"; then
+ 
+   if test -z "$kde_htmldir"; then
+-    kde_htmldir='\${datadir}/doc/HTML'
++    kde_htmldir='\${datadir}/doc/kde/HTML'
+   fi
+   if test -z "$kde_appsdir"; then
+-    kde_appsdir='\${datadir}/applnk'
++    kde_appsdir='\${datadir}/kde/applnk'
+   fi
+   if test -z "$kde_icondir"; then
+     kde_icondir='\${datadir}/icons'
+   fi
+   if test -z "$kde_sounddir"; then
+-    kde_sounddir='\${datadir}/sounds'
++    kde_sounddir='\${datadir}/kde/sounds'
+   fi
+   if test -z "$kde_datadir"; then
+-    kde_datadir='\${datadir}/apps'
++    kde_datadir='\${datadir}/kde/apps'
+   fi
+   if test -z "$kde_locale"; then
+     kde_locale='\${datadir}/locale'
+@@ -26761,31 +26761,31 @@ if test "$ac_use_path_checking" = "defau
+     kde_cgidir='\${exec_prefix}/cgi-bin'
+   fi
+   if test -z "$kde_confdir"; then
+-    kde_confdir='\${datadir}/config'
++    kde_confdir='\${datadir}/kde/config'
+   fi
+   if test -z "$kde_kcfgdir"; then
+-    kde_kcfgdir='\${datadir}/config.kcfg'
++    kde_kcfgdir='\${datadir}/kde/config.kcfg'
+   fi
+   if test -z "$kde_mimedir"; then
+-    kde_mimedir='\${datadir}/mimelnk'
++    kde_mimedir='\${datadir}/kde/mimelnk'
+   fi
+   if test -z "$kde_toolbardir"; then
+-    kde_toolbardir='\${datadir}/toolbar'
++    kde_toolbardir='\${datadir}/kde/toolbar'
+   fi
+   if test -z "$kde_wallpaperdir"; then
+-    kde_wallpaperdir='\${datadir}/wallpapers'
++    kde_wallpaperdir='\${datadir}/kde/wallpapers'
+   fi
+   if test -z "$kde_templatesdir"; then
+-    kde_templatesdir='\${datadir}/templates'
++    kde_templatesdir='\${datadir}/kde/templates'
+   fi
+   if test -z "$kde_bindir"; then
+     kde_bindir='\${exec_prefix}/bin'
+   fi
+   if test -z "$kde_servicesdir"; then
+-    kde_servicesdir='\${datadir}/services'
++    kde_servicesdir='\${datadir}/kde/services'
+   fi
+   if test -z "$kde_servicetypesdir"; then
+-    kde_servicetypesdir='\${datadir}/servicetypes'
++    kde_servicetypesdir='\${datadir}/kde/servicetypes'
+   fi
+   if test -z "$kde_moduledir"; then
+     if test "$kde_qtver" = "2"; then

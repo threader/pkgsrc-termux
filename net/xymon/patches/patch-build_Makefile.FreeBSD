@@ -1,0 +1,23 @@
+$NetBSD: patch-build_Makefile.FreeBSD,v 1.2 2017/09/28 10:40:35 spz Exp $
+
+FreeBSD has stdint.h
+make sure hardening flags can be inherited
+
+--- build/Makefile.FreeBSD.orig	2014-01-07 08:43:44.000000000 +0000
++++ build/Makefile.FreeBSD
+@@ -1,13 +1,13 @@
+ # Xymon compile-time settings for FreeBSD systems
+ 
+-OSDEF = -DBSD
++OSDEF = -DBSD -DHAVE_STDINT_H
+ 
+ # NETLIBS: None needed
+ NETLIBS =
+ 
+ # Compile flags for normal build
+ CC ?= cc
+-CFLAGS = -g -O2 -Wall -Wno-unused -Wno-pointer-sign -D_REENTRANT -I/usr/local/include -L/usr/local/lib $(LFSDEF) $(OSDEF)
++CFLAGS += -g -O2 -Wall -Wno-unused -Wno-pointer-sign -D_REENTRANT -I/usr/local/include -L/usr/local/lib $(LFSDEF) $(OSDEF)
+ 
+ 
+ RPATH = "-Wl,--rpath,"

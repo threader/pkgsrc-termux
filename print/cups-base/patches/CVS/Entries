@@ -1,0 +1,23 @@
+/patch-ae/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-af/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-ai/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-at/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-conf-cups-files.conf.in/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-conf_Makefile/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-config-scripts_cups-compiler.m4/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-config-scripts_cups-directories.m4/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-config-scripts_cups-gssapi.m4/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-config-scripts_cups-libtool.m4/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-config-scripts_cups-manpages.m4/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-config-scripts_cups-opsys.m4/1.1/Tue Dec 19 08:23:53 2017//Tpkgsrc-2017Q4
+/patch-cups-tls.c/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-doc-help-man-cups-files.conf.html/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-man-cups-files.conf.man.in/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-ppdc_Makefile/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-scheduler-conf.c/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-scheduler-conf.h/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-scheduler-main.c/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-scheduler_auth.c/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-scheduler_dirsvc.c/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+/patch-test_ippfind.c/1.1/Sun Nov 12 14:10:15 2017//Tpkgsrc-2017Q4
+D

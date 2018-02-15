@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.6 2016/07/24 00:48:16 kamil Exp $
+
+SHA1 (PyOpenGL-3.1.1a1.tar.gz) = 54da288efb26d942774c3740fc08a46cb16e3c1f
+RMD160 (PyOpenGL-3.1.1a1.tar.gz) = 1548317399f7da7cd6f8f95bace1d8233b7ff3de
+SHA512 (PyOpenGL-3.1.1a1.tar.gz) = 8f4f57b153ee014dc238fe83180cc92f8e789a274fc6b0cbef6f5dec9dbc44cb1ae1f6b142a6c2b4c8c000709338d64f5968939eeb6a2384f87fb63ae99b40d8
+Size (PyOpenGL-3.1.1a1.tar.gz) = 1246773 bytes

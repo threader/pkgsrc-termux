@@ -1,0 +1,37 @@
+$NetBSD: patch-ab,v 1.6 2015/11/07 23:43:56 dholland Exp $
+
+- Use standard headers.
+- Use termios, not termio.
+
+--- ncp/mp_serial.c.orig	1999-11-02 20:47:06.000000000 +0000
++++ ncp/mp_serial.c
+@@ -30,16 +30,14 @@
+ #include <unistd.h>	/* for usleep() */
+ #include <string.h>	/* for bzero() */
+ #include <termios.h>
+-#if defined(linux) || defined(_IBMR2) || defined(__NetBSD__)
++#if defined(linux) || defined(_IBMR2) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__Bitrig__)
+ # include <sys/ioctl.h>	/* for ioctl() */
+ #endif
+-#include <sys/errno.h>
++#include <errno.h>
+ #ifdef sun
+ # include <sys/ttold.h>	/* sun has TIOCEXCL there */
+ #endif
+-#if defined (__SVR4)
+ #include <stdlib.h>
+-#endif
+ 
+ static struct termios sti;
+ 
+@@ -223,8 +221,8 @@ int init_serial(const char *dev, int spe
+ void ser_exit(int fd)
+ {
+   struct termios ti;
+-  if(ioctl(fd, TCGETS, (caddr_t)&ti) < 0) {
+-    perror("TCGETSW");
++  if(tcgetattr(fd, &ti) < 0) {
++    perror("TIOCGETA");
+   }
+   ti.c_cflag &= ~CRTSCTS;
+   if(tcsetattr(fd, TCSANOW, &ti) < 0) {

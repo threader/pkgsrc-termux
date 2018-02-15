@@ -1,0 +1,13 @@
+/DESCR/1.5/Sun Dec  5 15:24:12 2004//Tpkgsrc-2017Q4
+/Makefile/1.63/Tue May 30 15:47:51 2017//Tpkgsrc-2017Q4
+/Makefile.common/1.35/Sun Jun 25 02:27:07 2017//Tpkgsrc-2017Q4
+/buildlink3.mk/1.18/Thu Mar 13 17:06:42 2014//Tpkgsrc-2017Q4
+/gem-extract.mk/1.1/Sun Mar  8 14:41:12 2015//Tpkgsrc-2017Q4
+/gem-vars.mk/1.7/Wed May 31 10:27:37 2017//Tpkgsrc-2017Q4
+/gem.mk/1.38/Tue May 30 16:02:25 2017//Tpkgsrc-2017Q4
+/modules.mk/1.41/Tue May 30 16:02:00 2017//Tpkgsrc-2017Q4
+/platform.mk/1.4/Tue Aug 29 14:47:35 2017//Tpkgsrc-2017Q4
+/rails.mk/1.61/Tue Jul 18 13:59:04 2017//Tpkgsrc-2017Q4
+/replace.mk/1.16/Sun Apr 23 14:16:58 2017//Tpkgsrc-2017Q4
+/rubyversion.mk/1.187/Fri Dec 15 03:26:03 2017//Tpkgsrc-2017Q4
+D/files////

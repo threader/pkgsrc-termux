@@ -1,0 +1,5 @@
+The package provides support for LaTeX documents to use many of
+the extensions offered by e-TeX; in particular, it modifies
+LaTeX's register allocation macros to make use of the extended
+register range. The etextools package provides macros that make
+more sophisticated use of e-TeX's facilities.

@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.7 2015/11/03 20:44:35 agc Exp $
+
+SHA1 (kcfonts-1.05.tar.gz) = b05d2aae45a7624cc9484e1bac0c0670200a0784
+RMD160 (kcfonts-1.05.tar.gz) = 81beed36904d4a4a012da99d000ec6ddae6e3d37
+SHA512 (kcfonts-1.05.tar.gz) = a8b94e8f8095a8578ff340637bf4a197db56948d0d7ecda0d4f17da51bafc09080761f32894f88a54c88945f72b10a11dcb04e5841c19c4eb6852e263fb64209
+Size (kcfonts-1.05.tar.gz) = 903701 bytes
+SHA1 (patch-aa) = 8f8e2db0123cd61ed395f231856b465dffcdab70
+SHA1 (patch-ab) = 8e395c8f5a6c157db54a9b805fede7136250b11c
+SHA1 (patch-ad) = 366ba0c305433845417fc5699eb188230f235d34
+SHA1 (patch-ae) = 03d0a5c4b541177df800bcea2f80858cadefd98a
+SHA1 (patch-af) = ba4e61b7d6edd9a2f9c63a0d0b207231599e99c7
+SHA1 (patch-ag) = 36f6af4a528426c208db5cceba2b7d93abcd9a83
+SHA1 (patch-ai) = e9d2e1f0f116f7927d1c3d4d19832fbbbc552c33
+SHA1 (patch-aj) = 98d743fb8054f4a9cb21a06ef82f30062527a56b
+SHA1 (patch-ak) = 6b4bb31aecf50040eb6e097954ca20d1aa598cba

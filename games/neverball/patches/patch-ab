@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.2 2015/02/09 09:02:12 snj Exp $
+
+--- Makefile.orig	2014-05-21 06:21:43.000000000 -0700
++++ Makefile	2015-01-07 22:18:15.000000000 -0800
+@@ -21,7 +21,7 @@ endif
+ # Paths (packagers might want to set DATADIR and LOCALEDIR)
+ 
+ USERDIR   := .neverball
+-DATADIR   := ./data
++DATADIR   := ${PREFIX}/share/neverball/data
+ LOCALEDIR := ./locale
+ 
+ ifeq ($(PLATFORM),mingw)
+@@ -409,7 +409,7 @@ WINDRES ?= windres
+ 
+ #------------------------------------------------------------------------------
+ 
+-all : $(BALL_TARG) $(PUTT_TARG) $(MAPC_TARG) sols locales desktops
++all : $(BALL_TARG) $(PUTT_TARG) $(MAPC_TARG) sols locales
+ 
+ ifeq ($(ENABLE_HMD),libovr)
+ LINK := $(CXX) $(ALL_CXXFLAGS)

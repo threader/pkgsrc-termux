@@ -1,0 +1,13 @@
+/bsd.pkgtasks.mk/1.8/Wed Aug 23 17:53:32 2017//Tpkgsrc-2017Q4
+/directories.mk/1.3/Thu Aug 10 05:37:44 2017//Tpkgsrc-2017Q4
+/files.mk/1.9/Sat Aug 19 00:30:55 2017//Tpkgsrc-2017Q4
+/fonts.mk/1.4/Wed Aug 23 17:52:19 2017//Tpkgsrc-2017Q4
+/icon_themes.mk/1.1/Thu Aug 10 05:41:07 2017//Tpkgsrc-2017Q4
+/info_files.mk/1.1/Thu Jun  1 02:06:04 2017//Tpkgsrc-2017Q4
+/ocaml_findlib.mk/1.1/Thu Jun  1 02:06:04 2017//Tpkgsrc-2017Q4
+/permissions.mk/1.2/Thu Aug 10 05:37:44 2017//Tpkgsrc-2017Q4
+/shells.mk/1.1/Thu Jun  1 02:06:04 2017//Tpkgsrc-2017Q4
+/shlibs.mk/1.2/Wed Jun  7 20:24:19 2017//Tpkgsrc-2017Q4
+/usergroup.mk/1.1/Thu Jun  1 02:06:04 2017//Tpkgsrc-2017Q4
+/usergroup.sh/1.1/Thu Jun  1 02:06:04 2017//Tpkgsrc-2017Q4
+D/tests////

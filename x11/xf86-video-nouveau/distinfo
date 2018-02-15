@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.8 2017/04/24 07:25:47 wiz Exp $
+
+SHA1 (xf86-video-nouveau-1.0.15.tar.bz2) = ed699a59ea509550f60019eef1e092ed0ccdea08
+RMD160 (xf86-video-nouveau-1.0.15.tar.bz2) = bcbb7c8c6f5f8eb8261be8eaaf47a1f949c072ca
+SHA512 (xf86-video-nouveau-1.0.15.tar.bz2) = 69a8f8e7920d893f17d14fd9f05e35de246d980a243f3b3b00c05deae7f6bd97e0f51e6ddfa322b4d0815233fe5f656d4e55f54461249f3f24c3bc025a682285
+Size (xf86-video-nouveau-1.0.15.tar.bz2) = 584998 bytes
+SHA1 (patch-configure) = 21b8b7b8410fced80aef457cec1c1e3b0fed3f57

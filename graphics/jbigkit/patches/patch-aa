@@ -1,0 +1,81 @@
+$NetBSD: patch-aa,v 1.5 2017/07/06 13:13:30 wiz Exp $
+
+* prevent to overwrite our CC/CFLAGS settings
+* libtoolize
+* honor LDFLAGS
+
+--- libjbig/Makefile.orig	2014-03-27 18:47:15.000000000 +0000
++++ libjbig/Makefile	2017-07-06 13:12:02.765268063 +0000
+@@ -1,34 +1,34 @@
+ # Unix makefile for the JBIG-KIT library
+ 
+ # Select an ANSI/ISO C compiler here, GNU gcc is recommended
+-CC = gcc
++CC ?= gcc
+ 
+ # Options for the compiler: A high optimization level is suggested
+-CFLAGS = -g -O -W -Wall -ansi -pedantic # --coverage
++CFLAGS += -W -Wall -ansi -pedantic # --coverage
+ 
+-all: libjbig.a libjbig85.a tstcodec tstcodec85
++.SUFFIXES: .lo
++.c.lo:
++	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) -o $@ -c $<
+ 
+-tstcodec: tstcodec.o jbig.o jbig_ar.o
+-	$(CC) $(CFLAGS) -o tstcodec tstcodec.o jbig.o jbig_ar.o
++all: libjbig.la libjbig85.la tstcodec tstcodec85
+ 
+-tstcodec85: tstcodec85.o jbig85.o jbig_ar.o
+-	$(CC) $(CFLAGS) -o tstcodec85 tstcodec85.o jbig85.o jbig_ar.o
+-
+-libjbig.a: jbig.o jbig_ar.o
+-	rm -f libjbig.a
+-	ar rc libjbig.a jbig.o jbig_ar.o
+-	-ranlib libjbig.a
+-
+-libjbig85.a: jbig85.o jbig_ar.o
+-	rm -f libjbig85.a
+-	ar rc libjbig85.a jbig85.o jbig_ar.o
+-	-ranlib libjbig85.a
+-
+-jbig.o: jbig.c jbig.h jbig_ar.h
+-jbig85.o: jbig85.c jbig85.h jbig_ar.h
+-jbig_ar.o: jbig_ar.c jbig_ar.h
+-tstcodec.o: tstcodec.c jbig.h
+-tstcodec85.o: tstcodec85.c jbig85.h
++tstcodec: tstcodec.lo jbig.lo jbig_ar.lo
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o tstcodec tstcodec.lo jbig.lo jbig_ar.lo
++
++tstcodec85: tstcodec85.lo jbig85.lo jbig_ar.lo
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o tstcodec85 tstcodec85.lo jbig85.lo jbig_ar.lo
++
++libjbig.la: jbig.lo jbig_ar.lo
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o libjbig.la jbig.lo jbig_ar.lo -rpath ${PREFIX}/lib -version-info 2:1
++
++libjbig85.la: jbig85.lo jbig_ar.lo
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o libjbig85.la jbig85.lo jbig_ar.lo -rpath ${PREFIX}/lib -version-info 2:1
++
++jbig.lo: jbig.c jbig.h jbig_ar.h
++jbig85.lo: jbig85.c jbig85.h jbig_ar.h
++jbig_ar.lo: jbig_ar.c jbig_ar.h
++tstcodec.lo: tstcodec.c jbig.h
++tstcodec85.lo: tstcodec85.c jbig85.h
+ 
+ update-po: jbig.c jbig85.c Makefile
+ 	xgettext -ojbig.pot -k_ \
+@@ -43,11 +43,11 @@
+ 	clang --analyze *.c
+ 
+ test: tstcodec tstcodec85
+-	./tstcodec
+-	./tstcodec85
++	${LIBTOOL} --mode=execute ./tstcodec
++	${LIBTOOL} --mode=execute ./tstcodec85
+ 
+ t82test.pbm: tstcodec
+-	./tstcodec $@
++	${LIBTOOL} --mode=execute ./tstcodec $@
+ 
+ clean:
+ 	rm -f *.o *.gcda *.gcno *.gcov *.plist *~ core gmon.out dbg_d\=??.pbm

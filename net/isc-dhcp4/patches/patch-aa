@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.6 2015/09/27 06:58:11 taca Exp $
+
+* Don't install config files.
+
+--- server/Makefile.in.orig	2015-08-26 19:13:14.000000000 +0000
++++ server/Makefile.in
+@@ -844,19 +844,6 @@ uninstall-man8:
+ 	dir='$(DESTDIR)$(man8dir)'; $(am__uninstall_files_from_dir)
+ install-dist_sysconfDATA: $(dist_sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(dist_sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
+-	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(sysconfdir)" || exit 1; \
+-	fi; \
+-	for p in $$list; do \
+-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+-	  echo "$$d$$p"; \
+-	done | $(am__base_list) | \
+-	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
+-	done
+ 
+ uninstall-dist_sysconfDATA:
+ 	@$(NORMAL_UNINSTALL)

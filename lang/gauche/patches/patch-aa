@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.15 2016/10/13 00:30:13 enami Exp $
+
+* Use correct CFLAGS on SunOS.
+* XXX something about arm
+* XXX something about rint()
+
+--- configure.orig	2016-10-08 10:31:17.000000000 +0000
++++ configure
+@@ -3374,8 +3376,8 @@ GAUCHE_CONFIGURE_ARGS=`echo "$ac_configu
+ 
+ 
+ case $host in
+-  *-pc-solaris2.*)
+-    CFLAGS="$CFLAGS -D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1 -D__EXTENSIONS__" ;;
++  *-solaris2.*)
++    CFLAGS="$CFLAGS -D_XOPEN_SOURCE=600 -D__EXTENSIONS__" ;;
+ esac
+ 
+ ac_ext=c
+@@ -5510,6 +5512,9 @@ $as_echo "#define SCM_TARGET_X86_64 1" >
+   alpha*) :
+ 
+     CFLAGS="$CFLAGS -mieee" ;; #(
++  arm*-*-netbsd*)
++    # Don't define DOUBLE_ARMENDIAN on netbsd.
++    ;;
+   arm*) :
+ 
+ 
+@@ -6719,7 +6724,7 @@ _ACEOF
+ 
+ fi
+ 
+-for ac_func in isnan isinf trunc rint tgamma lgamma
++for ac_func in isnan isinf trunc tgamma lgamma
+ do :
+   as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"

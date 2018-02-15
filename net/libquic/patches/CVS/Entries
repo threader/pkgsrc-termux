@@ -1,0 +1,11 @@
+/patch-Makefile/1.1/Fri Jul  1 20:32:35 2016//Tpkgsrc-2017Q4
+/patch-boringssl_crypto_aes_aes__test.cc/1.1/Tue Jun 27 20:11:00 2017//Tpkgsrc-2017Q4
+/patch-crypto__bio__bio_test.cc/1.1/Fri Jul  1 20:32:35 2016//Tpkgsrc-2017Q4
+/patch-crypto__bio__internal.h/1.1/Fri Jul  1 20:32:35 2016//Tpkgsrc-2017Q4
+/patch-crypto__bio__socket_helper.c/1.1/Fri Jul  1 20:32:35 2016//Tpkgsrc-2017Q4
+/patch-crypto__lhash__lhash_test.c/1.1/Fri Jul  1 20:32:35 2016//Tpkgsrc-2017Q4
+/patch-crypto__mem.c/1.1/Fri Jul  1 20:32:35 2016//Tpkgsrc-2017Q4
+/patch-include__openssl__thread.h/1.1/Fri Jul  1 20:32:35 2016//Tpkgsrc-2017Q4
+/patch-src__base__base_paths_posix.cc/1.1/Fri Jul  1 20:32:35 2016//Tpkgsrc-2017Q4
+/patch-src__build__build_config.h/1.1/Fri Jul  1 20:32:35 2016//Tpkgsrc-2017Q4
+D

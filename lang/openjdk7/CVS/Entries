@@ -1,0 +1,13 @@
+/DESCR/1.1.1.1/Wed Oct 14 11:26:15 2009//Tpkgsrc-2017Q4
+/Makefile/1.120/Tue Dec 19 11:46:33 2017//Tpkgsrc-2017Q4
+/PLIST/1.26/Mon Aug 14 00:02:16 2017//Tpkgsrc-2017Q4
+/PLIST.SunOS/1.6/Tue Feb 10 14:57:35 2015//Tpkgsrc-2017Q4
+/PLIST.debug/1.1/Sun Feb  8 23:40:09 2015//Tpkgsrc-2017Q4
+/bootstrap.mk/1.20/Mon Aug 14 00:02:16 2017//Tpkgsrc-2017Q4
+/buildlink3.mk/1.1.1.1/Wed Oct 14 11:26:15 2009//Tpkgsrc-2017Q4
+/builtin.mk/1.1/Fri Dec 16 16:27:23 2016//Tpkgsrc-2017Q4
+/distinfo/1.90/Mon Sep  4 16:00:19 2017//Tpkgsrc-2017Q4
+/hacks.mk/1.4/Tue Mar  8 20:03:52 2016//Tpkgsrc-2017Q4
+/icedtea-extras.mk/1.16/Mon Feb 23 13:34:56 2015//Tpkgsrc-2017Q4
+/options.mk/1.11/Wed Mar  4 17:01:02 2015//Tpkgsrc-2017Q4
+D/patches////

@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.4 2015/03/08 15:17:20 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_EXTSDIR}/shadow.${RUBY_DLEXT}
+${GEM_LIBDIR}/HISTORY
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/MANIFEST
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README.euc
+${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/lib/shadow.${RUBY_DLEXT}
+${GEM_LIBDIR}/pwd/depend
+${GEM_LIBDIR}/pwd/shadow.c
+${GEM_LIBDIR}/ruby-shadow.gemspec
+${GEM_LIBDIR}/shadow/depend
+${GEM_LIBDIR}/shadow/shadow.c
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

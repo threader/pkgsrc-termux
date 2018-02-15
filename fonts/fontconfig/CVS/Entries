@@ -1,0 +1,10 @@
+/DEINSTALL/1.1/Sun Sep 17 18:20:20 2006//Tpkgsrc-2017Q4
+/DESCR/1.2/Fri Aug 29 21:47:25 2003//Tpkgsrc-2017Q4
+/INSTALL/1.1/Sun Sep 17 18:20:20 2006//Tpkgsrc-2017Q4
+/PLIST/1.28/Mon Oct  2 14:42:44 2017//Tpkgsrc-2017Q4
+/buildlink3.mk/1.33/Tue Jun  4 22:16:02 2013//Tpkgsrc-2017Q4
+/builtin.mk/1.11/Mon Mar 19 12:34:13 2012//Tpkgsrc-2017Q4
+D/files////
+D/patches////
+/Makefile/1.102.2.1/Sat Jan 20 02:38:35 2018//Tpkgsrc-2017Q4
+/distinfo/1.61.2.1/Sat Jan 20 02:38:35 2018//Tpkgsrc-2017Q4

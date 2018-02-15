@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.9 2017/11/13 13:56:32 wiz Exp $
+
+SHA1 (Log-Agent-1.003.tar.gz) = 97844208761919ddd6b279390eabf5775945a514
+RMD160 (Log-Agent-1.003.tar.gz) = bf0eaabf6aa3225256e82597f6a82cc7a497db0b
+SHA512 (Log-Agent-1.003.tar.gz) = 3b61cafdbff70dfbb4c43a9e782b16ab870916fdf476ddb2c86db82fed5939364a934f6ce3bf95b39b08af25ea4dcdf83f4ba039d43dda65afab96b77736465b
+Size (Log-Agent-1.003.tar.gz) = 55841 bytes

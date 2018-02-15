@@ -1,0 +1,76 @@
+$NetBSD: patch-aa,v 1.2 2016/04/01 13:50:21 jperkin Exp $
+
+--- configure.in.orig	2003-09-07 15:23:12.000000000 +0000
++++ configure.in
+@@ -178,7 +178,7 @@ if test "$with_tcp_wrappers" = "yes"; th
+         old_LDFLAGS=$LDFLAGS
+ 	LIBS="$LIBS $TCP_WRAPPERS_LIBS"
+         LDFLAGS="$LDFLAGS $TCP_WRAPPERS_LDFLAGS"
+-	AC_CHECK_LIB(wrap, request_init,
++	AC_TRY_LINK([ int allow_severity; int deny_severity; ], [ request_init(); ],
+         	[
+ 	        	AC_DEFINE(WITH_TCP_WRAPPERS)
+ 		        AC_CHECK_LIB(nsl, yp_get_default_domain,
+@@ -187,10 +187,17 @@ if test "$with_tcp_wrappers" = "yes"; th
+                         	]
+                         )
+                         chk_tcp_wrappers=yes
++			dnl ** we can't yet enable tcp wrappers, it would
++			dnl ** spoil future tests due to the badly broken
++			dnl ** api in that library
++                	LIBS=$old_LIBS
++                        LDFLAGS=$old_LDFLAGS
+ 	        ],
+                 [
+                 	LIBS=$old_LIBS
+                         LDFLAGS=$old_LDFLAGS
++			TCP_WRAPPERS_LIBS=""
++			TCP_WRAPPERS_LIBS=""
+ 			AC_MSG_RESULT([tcp wrappers library not found, support disabled])
+                 ]
+         )
+@@ -253,7 +260,7 @@ AC_ARG_WITH(
+           *)
+           	if test -d $with_ssl; then
+                 	SSL_LDFLAGS="-L$with_ssl"
+-                	SSL_LIBS="-lssl"
++                	SSL_LIBS="-lcrypto -lssl"
+                 else
+                 	SSL_LIBS="$with_ssl"
+                 fi
+@@ -267,7 +274,7 @@ AC_ARG_WITH(
+ )
+ if test "$with_ssl" = "yes"; then
+ 	if test -z "$SSL_LIBS"; then
+-		SSL_LIBS="-lssl"
++		SSL_LIBS="-lcrypto -lssl"
+ 	fi
+         old_LIBS=$LIBS
+         old_LDFLAGS=$LDFLAGS
+@@ -332,6 +339,11 @@ if test "$chk_ssl_krb" = "yes"; then
+                 ]
+         )
+ fi
++
++dnl ** now we are ready to enable tcp wrappers libs **
++LIBS="$LIBS $TCP_WRAPPERS_LIBS"
++LDFLAGS="$LDFLAGS $TCP_WRAPPERS_LDFLAGS"
++
+ dnl ********************************************************
+ dnl ********************************************************
+ dnl Output a list of included optional components
+@@ -371,11 +383,11 @@ if test "${prefix}" = "NONE"; then
+ 	prefix="/usr/local"
+ fi
+ if test "${prefix}" = "/usr" -o "${prefix}" = "/usr/local"; then
+-	mandir=${prefix}/share/man
++	mandir=${prefix}/${PKGMANDIR}
+ 	docdir=${prefix}/share/doc/pulsar-${VERSION}
+ else
+-	mandir=${prefix}/man
+-	docdir=${prefix}/doc/pulsar-${VERSION}
++	mandir=${prefix}/${PKGMANDIR}
++	docdir=${prefix}/share/doc/pulsar-${VERSION}
+ fi
+ sbindir=${prefix}/sbin
+ AC_MSG_RESULT([Executables will go in:   ] ${prefix}/sbin)

@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.5 2013/10/27 21:21:26 dholland Exp $
+
+Honor PKG_SYSCONFDIR.
+
+--- src/celestia/celestiacore.cpp.orig	2011-06-05 16:11:13.000000000 +0000
++++ src/celestia/celestiacore.cpp
+@@ -4103,7 +4103,7 @@ bool CelestiaCore::initSimulation(const 
+     }
+     else
+     {
+-        config = ReadCelestiaConfig("celestia.cfg");
++        config = ReadCelestiaConfig(PKG_SYSCONFDIR "/celestia.cfg");
+ 
+         string localConfigFile = WordExp("~/.celestia.cfg");
+         if (localConfigFile != "")

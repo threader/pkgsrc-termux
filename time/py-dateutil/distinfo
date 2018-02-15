@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.10 2017/07/11 06:10:37 adam Exp $
+
+SHA1 (python-dateutil-2.6.1.tar.gz) = db2ace298dee7e47fd720ed03eb790885347bf4e
+RMD160 (python-dateutil-2.6.1.tar.gz) = bf7aee6d6ed1e0b2a6256e2033b6d4ce9c47c3b5
+SHA512 (python-dateutil-2.6.1.tar.gz) = f16dd29fc975629f594dd2683a525e2a86acb020bf8962558d19040b14ac6f19d4ab07a910d6bb55c9db3cc02b5472774a3a05ccc86cf624ca5e5144463646db
+Size (python-dateutil-2.6.1.tar.gz) = 241428 bytes

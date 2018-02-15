@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:05:04 jperkin Exp $
+lib/libperditiondb_nis.la
+lib/libperditiondb_posix_regex.la
+man/man5/perditiondb.5
+man/man8/perdition.8
+man/man8/perdition.imap4.8
+man/man8/perdition.imap4s.8
+man/man8/perdition.imaps.8
+man/man8/perdition.pop3.8
+man/man8/perdition.pop3s.8
+sbin/perdition
+sbin/perdition.imap4
+sbin/perdition.imap4s
+sbin/perdition.imaps
+sbin/perdition.pop3
+sbin/perdition.pop3s
+${PLIST.pam}share/examples/pam.d/perdition
+share/examples/perdition/Makefile
+share/examples/perdition/Makefile.popmap
+share/examples/perdition/perdition.conf
+share/examples/perdition/popmap
+share/examples/perdition/popmap.re

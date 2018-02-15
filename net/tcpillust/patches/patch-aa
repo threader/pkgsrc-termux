@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.3 2014/02/21 20:31:08 joerg Exp $
+
+--- binread.c.orig	2000-04-21 17:31:26.000000000 +0000
++++ binread.c
+@@ -30,8 +30,15 @@
+  */
+ #include "tcpillust.h"
++#include <sys/queue.h>
+ #include <sys/socket.h>
+ #include <pcap.h>
++#include <net/if.h>
+ #include <net/if_arp.h>
++#include <string.h>
++#ifdef __sun
++#define SLIP_HDRLEN	16
++#else
+ #include <net/slip.h>
++#endif
+ #include <netinet/in.h>
+ #include <netinet/in_systm.h>

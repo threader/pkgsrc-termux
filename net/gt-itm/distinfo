@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.6 2015/11/04 00:35:03 agc Exp $
+
+SHA1 (gt-itm.tar.gz) = 1e52ee9c9d6e3ef09ac39c860d1cd829cf3c6e4e
+RMD160 (gt-itm.tar.gz) = 0a7cbdfce185ab4bc2c73b78f290e8a831dc04e2
+SHA512 (gt-itm.tar.gz) = e775ac475d40fc753a27fb619f262d701818190fa3be90d587f95e215610918b56b9d67783d4e7e2f55d0064e5b2d2ce911042353b29bce1e4dbcf407ff9fabc
+Size (gt-itm.tar.gz) = 623345 bytes
+SHA1 (patch-aa) = 7da028da45b491979567ccb59230c1f20eb0fcd2
+SHA1 (patch-ab) = 72e60f9b5fc07b3ee44e838e017696178444135b
+SHA1 (patch-ac) = c70a3b5cb6a7b5b33ffe1269b903476befc00e83
+SHA1 (patch-ad) = d8387533a1b877d66820d3e0d2ee95dd82591e80
+SHA1 (patch-ae) = f38778918e4eba7f186e75de14e2ccd6d9a3473d
+SHA1 (patch-edriver.c) = 13860bf69f95ec2e7caa5dfeb1e52b6c3f37db53
+SHA1 (patch-itm.c) = 1a7f532852dc950eea42372789f8d5c8bc022056
+SHA1 (patch-sgb2alt.c) = ab46542ee9588e7940bb822b1de6a069c31ff581

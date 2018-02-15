@@ -1,0 +1,18 @@
+/DEINSTALL/1.4/Fri Dec 30 07:12:23 2011//Tpkgsrc-2017Q4
+/DESCR/1.2/Sun Jan 20 02:31:47 2008//Tpkgsrc-2017Q4
+/INSTALL/1.3/Tue Oct 20 08:20:29 2015//Tpkgsrc-2017Q4
+/MESSAGE.NetBSD/1.2/Wed Aug 22 14:49:24 2007//Tpkgsrc-2017Q4
+/Makefile/1.45/Thu Mar 10 19:20:15 2016//Tpkgsrc-2017Q4
+/Makefile.common/1.22/Wed Oct  4 16:40:05 2017//Tpkgsrc-2017Q4
+/PLIST.linux-i386/1.25/Thu Jun 14 01:05:37 2012//Tpkgsrc-2017Q4
+/PLIST.linux-x86_64/1.10/Sun Dec 30 03:05:13 2012//Tpkgsrc-2017Q4
+/PLIST.solaris-i386/1.1/Thu Feb 28 18:29:13 2013//Tpkgsrc-2017Q4
+/PLIST.solaris-x86_64/1.2/Tue Mar  5 18:07:13 2013//Tpkgsrc-2017Q4
+/buildlink3.mk/1.6/Mon May  7 01:53:43 2012//Tpkgsrc-2017Q4
+/builtin.mk/1.4/Wed Feb 11 21:20:46 2009//Tpkgsrc-2017Q4
+/distinfo/1.26/Thu Apr 25 13:32:12 2013//Tpkgsrc-2017Q4
+/sfiles-linux-i386.mk/1.1/Thu Feb 28 18:29:13 2013//Tpkgsrc-2017Q4
+/sfiles-linux-x86_64.mk/1.1/Thu Feb 28 18:29:13 2013//Tpkgsrc-2017Q4
+/sfiles-solaris-i386.mk/1.1/Thu Feb 28 18:29:13 2013//Tpkgsrc-2017Q4
+/sfiles-solaris-x86_64.mk/1.1/Thu Feb 28 18:29:13 2013//Tpkgsrc-2017Q4
+D

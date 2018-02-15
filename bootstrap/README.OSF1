@@ -1,0 +1,26 @@
+$NetBSD: README.OSF1,v 1.4 2015/04/19 19:29:44 tnn Exp $
+
+Compiler
+--------
+Prebuilt GCC toolchains suitable for use with pkgsrc can be downloaded from
+	ftp://ftp.NetBSD.org/pub/pkgsrc/misc/tnn/ .
+
+Installation instructions can be found in the file "README.gcc".
+
+Bootstrapping pkgsrc
+--------------------
+To use the native compiler:
+
+	# env CPP=/usr/bin/cpp CC=/usr/bin/cc ./bootstrap --compiler ccc
+
+To use the GCC compiler kit from above:
+
+	# env CC=/usr/local/gcc4/bin/gcc CFLAGS=-O2 ./bootstrap --compiler gcc
+
+mk.conf setup
+-------------
+To use gcc, you must set the following variables in mk.conf:
+
+	PKGSRC_COMPILER=gcc
+	CC=/full/path/to/gcc
+	CXX=/full/path/to/g++

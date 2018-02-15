@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.6 2014/06/06 12:09:47 obache Exp $
+bin/atoc_conv
+bin/kakasi
+bin/kakasi-config
+bin/mkkanwa
+bin/rdic_conv
+bin/wx2_conv
+include/libkakasi.h
+lib/libkakasi.la
+man/ja_JP.EUC/man1/kakasi.1
+man/man1/kakasi-config.1
+man/man1/kakasi.1
+share/kakasi/itaijidict
+share/kakasi/kanwadict

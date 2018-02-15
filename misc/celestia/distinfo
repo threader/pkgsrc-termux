@@ -1,0 +1,25 @@
+$NetBSD: distinfo,v 1.27 2015/11/03 23:49:32 agc Exp $
+
+SHA1 (celestia-1.6.1.tar.gz) = 1f0fdf4525a8b9d6c708e1f6383babed670d18e7
+RMD160 (celestia-1.6.1.tar.gz) = 46ffae2896f95d92b0b7aaacfce8d004fb55bf1a
+SHA512 (celestia-1.6.1.tar.gz) = 5b1221e97ee03f7def317e5e29c5100ebe714a4a3aeb8b9818dc9445e4282b6f87026ab35c7b3d5eb02fa6dbb33693977999d14d9648fc4e6d1947abe32a413f
+Size (celestia-1.6.1.tar.gz) = 52600436 bytes
+SHA1 (patch-aa) = 28ada3b952909b6b1aead358e0d9c5f481993982
+SHA1 (patch-ab) = cfd5d4e5aaa7b9bb907bbc291ee24e95c31ec716
+SHA1 (patch-ad) = ad98553f99041fc99470623e2bc1da5fa0f7036a
+SHA1 (patch-ae) = f789ceb6a6cba0cf2b488a655f7ddc9d370a5966
+SHA1 (patch-ah) = 6c13e05c799d1851d0c31145a8cfb40232d85e27
+SHA1 (patch-ai) = ff7b00d1d40e6bfa96c3dc0cc19beefb6c34badb
+SHA1 (patch-aj) = 7ce19f00912b1d56e1641b6c7c07910931709865
+SHA1 (patch-ak) = e9d9759d70bc5f4d4b90893ca29e8a9dba901aea
+SHA1 (patch-am) = 9d6be1a9b879fb2af30ac43011e4e554ec10f7b4
+SHA1 (patch-ap) = ceefba961e9467b9cac12f347740494a05efffe0
+SHA1 (patch-aq) = fdc7b7f0ff04672f93af144f41e09751b4de0c1a
+SHA1 (patch-src_celengine_astro.cpp) = 0331128a2a01259958afd5e806a51d5b0e75769a
+SHA1 (patch-src_celengine_cmdparser.cpp) = b1c54d0b5c6af92606cdf9f23b73c1a8662a1acb
+SHA1 (patch-src_celengine_command.cpp) = 5f1466541f4153651425f597f45f852c93af8b7f
+SHA1 (patch-src_celengine_frametree.h) = 899bd5f958864ed26addc2a87ef61d97806cf37c
+SHA1 (patch-src_celengine_stardb.cpp) = 43d1998fcdd0116db43267b334533ec5fa3dfc72
+SHA1 (patch-src_celengine_texture.cpp) = eb60e81aab7097a3cb2481b052a3a9fe98bfb8e6
+SHA1 (patch-src_celmath_intersect.h) = c39819abd757d4e36f0af473ae0807a447789ddf
+SHA1 (patch-src_celmath_mathlib.h) = 4974e116286664dbeb617eaee7d1823f8e565909

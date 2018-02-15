@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.3 2017/09/27 22:24:36 wiz Exp $
+share/examples/fusioninventory/agent.cfg
+share/fusioninventory/html/favicon.ico
+share/fusioninventory/html/index.tpl
+share/fusioninventory/html/inventory.tpl
+share/fusioninventory/html/logo.png
+share/fusioninventory/html/now.tpl
+share/fusioninventory/html/site.css
+share/fusioninventory/pci.ids
+share/fusioninventory/sysobject.ids
+share/fusioninventory/usb.ids

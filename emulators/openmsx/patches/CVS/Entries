@@ -1,0 +1,27 @@
+/patch-build_detectsys.py/1.2/Tue Apr 21 17:07:29 2015//Tpkgsrc-2017Q4
+/patch-build_libraries.py/1.1/Mon Aug 27 13:27:33 2012//Tpkgsrc-2017Q4
+/patch-build_probe.py/1.1/Sun Aug 26 09:07:23 2012//Tpkgsrc-2017Q4
+/patch-build_version.py/1.1/Sun Aug 26 09:07:23 2012//Tpkgsrc-2017Q4
+/patch-src_sound_BlipBuffer.hh/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_sound_ResampleHQ.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_sound_ResampleLQ.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_utils_Math.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_utils_SerializeBuffer.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_utils_SerializeBuffer.hh/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_video_AviWriter.cc/1.1/Mon Aug 27 13:27:33 2012//Tpkgsrc-2017Q4
+/patch-src_video_BitmapConverter.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_video_CharacterConverter.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_video_scalers_HQ2xLiteScaler.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_video_scalers_HQ2xScaler.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_video_scalers_HQ3xLiteScaler.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_video_scalers_HQ3xScaler.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_video_scalers_LineScalers.hh/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_video_scalers_RGBTriplet3xScaler.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_video_scalers_SaI2xScaler.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_video_scalers_SaI3xScaler.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_video_scalers_Scale2xScaler.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_video_scalers_Scale3xScaler.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_video_v9990_V9990BitmapConverter.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_video_v9990_V9990P1Converter.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+/patch-src_video_v9990_V9990P2Converter.cc/1.1/Fri Sep 20 23:04:59 2013//Tpkgsrc-2017Q4
+D

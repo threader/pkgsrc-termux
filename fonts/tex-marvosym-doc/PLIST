@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 08:07:19 markd Exp $
+share/texmf-dist/doc/fonts/marvosym/FONTLOG.txt
+share/texmf-dist/doc/fonts/marvosym/Makefile
+share/texmf-dist/doc/fonts/marvosym/OFL-FAQ.txt
+share/texmf-dist/doc/fonts/marvosym/OFL.txt
+share/texmf-dist/doc/fonts/marvosym/README
+share/texmf-dist/doc/fonts/marvosym/marvodoc.pdf
+share/texmf-dist/doc/fonts/marvosym/marvodoc.tex
+share/texmf-dist/doc/fonts/marvosym/marvosym-doc.pdf
+share/texmf-dist/doc/fonts/marvosym/marvosym-doc.tex

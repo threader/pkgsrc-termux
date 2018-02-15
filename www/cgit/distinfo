@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.5 2017/04/21 15:05:52 jperkin Exp $
+
+SHA1 (cgit-1.1.tar.xz) = 3ffb325a6c6a3f5c3e4f1d5fd0a10f6c91f61e6b
+RMD160 (cgit-1.1.tar.xz) = 9ad96a56d17ae060b73e8d576d0c065aa590fcfb
+SHA512 (cgit-1.1.tar.xz) = 8f2ec418716d7a6f0880a713b622f2ee41217dc2d5462903841d59d978a021a8bc2be667ca65c25baee2b9dcd4a76bddd0c813bda0486109cc694e7610827051
+Size (cgit-1.1.tar.xz) = 86268 bytes
+SHA1 (git-2.10.2.tar.xz) = 2023975ae0061bd569b8529025428e3eca53be2e
+RMD160 (git-2.10.2.tar.xz) = d4330857a79a20c5c9fad98b9bb592fb9cbec1b0
+SHA512 (git-2.10.2.tar.xz) = 0ab09de481dbb31c3304382afaa5d3fc9f861115c9954c65b11a8a1c34b939118c7ed3ff60ac329145888596388e3e4d2b2fb677fe109d33a57206d531b5ee6a
+Size (git-2.10.2.tar.xz) = 4106108 bytes
+SHA1 (patch-cgitrc) = a363a2b22f237c507cab7d164e91389d02734372
+SHA1 (patch-git-Makefile) = 83ba1b173713ab9d0e664aaa36e4bc858b2f1037

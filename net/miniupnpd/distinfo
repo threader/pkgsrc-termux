@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.21 2016/10/01 11:32:57 adam Exp $
+
+SHA1 (miniupnpd-2.0.tar.gz) = 0ec4766db6a8adf81736fb08d45fabf4bae8ebb9
+RMD160 (miniupnpd-2.0.tar.gz) = 5a0f816814fafa453cf1f168435a509bd98b0cdc
+SHA512 (miniupnpd-2.0.tar.gz) = c88036d3f4b065fc855572db8945d921641a71a23ffe8b52cb4ccb1a7cf3e7396841c436d54d7ff5968d034d8c4bfc91630719959000436230bb8c37e5bdc8d4
+Size (miniupnpd-2.0.tar.gz) = 217802 bytes
+SHA1 (patch-genconfig.sh) = 2bd34c785bf4812e191144fd6cb5af89dccce1ee

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.19 2017/10/23 12:58:48 wiz Exp $
+
+SHA1 (Mail-DKIM-0.44.tar.gz) = 5a53a6f09173268eb63977bf2363990da12939b0
+RMD160 (Mail-DKIM-0.44.tar.gz) = a30f9b9c9ddedbca9131a5cd35a10e1fbc60c919
+SHA512 (Mail-DKIM-0.44.tar.gz) = 08501de43ce775454e90b18e95a5320fc590c82a14e8828f53510163bc73d7e82aaad35e6d79b7fd888b45aacc56bd422151c3c2b6e1e6db80a7ca62b2a469c3
+Size (Mail-DKIM-0.44.tar.gz) = 155301 bytes

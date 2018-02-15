@@ -1,0 +1,25 @@
+$NetBSD: patch-configure,v 1.2 2016/06/19 20:48:55 wiz Exp $
+
+--- configure.orig	2016-06-15 11:11:58.000000000 +0000
++++ configure
+@@ -13976,6 +13976,10 @@ if ac_fn_c_try_compile "$LINENO"; then :
+ $as_echo "$as_me: WARNING: your GCC compiler has a defunct stdint.h for its default-mode" >&2;}
+ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++		#if defined(_SCO_DS)
++		/* bogus */
++		#include <prot.h>
++		#endif
+ fi
+ CXXFLAGS="$old_CXXFLAGS"
+ CPPFLAGS="$old_CPPFLAGS"
+@@ -14004,6 +14008,9 @@ if test "_$ac_cv_header_stdint_t" = "_" 
+ 
+ inttype_headers=`echo  | sed -e 's/,/ /g'`
+ 
++			#if defined(_SCO_DS)
++			#include <prot.h>
++			#endif
+ ac_cv_stdint_result="(no helpful system typedefs seen)"
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for stdint uintptr_t" >&5

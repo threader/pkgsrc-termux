@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.2 2015/07/09 11:56:59 jperkin Exp $
+
+Fix strl* return types.
+
+--- error.h.orig	2005-05-10 20:48:24.000000000 +0000
++++ error.h
+@@ -248,5 +248,5 @@ char  **wordvsplice(int, int, char **);
+ boolean	writetouched(int);
+ 
+ extern char *fgetln(FILE *, size_t*);
+-extern ssize_t strlcpy(char *, const char *, size_t);
+-extern ssize_t strlcat(char *, const char *, size_t);
++extern size_t strlcpy(char *, const char *, size_t);
++extern size_t strlcat(char *, const char *, size_t);

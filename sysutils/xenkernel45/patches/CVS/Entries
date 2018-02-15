@@ -1,0 +1,23 @@
+/patch-Config.mk/1.1/Tue Jan 20 16:42:13 2015//Tpkgsrc-2017Q4
+/patch-XSA-191/1.1/Tue Nov 22 20:57:10 2016//Tpkgsrc-2017Q4
+/patch-XSA-192/1.1/Tue Nov 22 20:57:10 2016//Tpkgsrc-2017Q4
+/patch-XSA-193/1.1/Tue Nov 22 20:57:10 2016//Tpkgsrc-2017Q4
+/patch-XSA-195/1.1/Tue Nov 22 20:57:10 2016//Tpkgsrc-2017Q4
+/patch-XSA-196-1/1.1/Tue Nov 22 20:57:10 2016//Tpkgsrc-2017Q4
+/patch-XSA-196-2/1.1/Tue Nov 22 20:57:10 2016//Tpkgsrc-2017Q4
+/patch-XSA-200/1.1/Tue Dec 20 10:22:28 2016//Tpkgsrc-2017Q4
+/patch-XSA-202/1.1/Wed Dec 21 15:36:08 2016//Tpkgsrc-2017Q4
+/patch-XSA-204/1.1/Tue Dec 20 10:22:28 2016//Tpkgsrc-2017Q4
+/patch-XSA-207/1.1/Mon Mar 20 18:11:10 2017//Tpkgsrc-2017Q4
+/patch-XSA-212/1.1/Sat Apr  8 11:47:33 2017//Tpkgsrc-2017Q4
+/patch-xen_Makefile/1.1/Tue Jan 20 16:42:13 2015//Tpkgsrc-2017Q4
+/patch-xen_arch_arm_xen.lds.S/1.1/Sun May  7 21:21:01 2017//Tpkgsrc-2017Q4
+/patch-xen_arch_x86_Rules.mk/1.1/Tue Jan 20 16:42:13 2015//Tpkgsrc-2017Q4
+/patch-xen_arch_x86_alternative.c/1.1/Sun May  7 21:21:01 2017//Tpkgsrc-2017Q4
+/patch-xen_common_efi_boot.c/1.1/Sun May  7 21:21:01 2017//Tpkgsrc-2017Q4
+/patch-xen_common_page__alloc.c/1.1/Mon Sep 14 13:36:29 2015//Tpkgsrc-2017Q4
+/patch-xen_drivers_passthrough_vtd_x86_ats.c/1.1/Mon Sep 14 13:36:29 2015//Tpkgsrc-2017Q4
+/patch-xen_include_asm-x86_current.h/1.1/Wed Feb  4 20:52:16 2015//Tpkgsrc-2017Q4
+/patch-xen_include_xen_init.h/1.1/Sun May  7 21:21:01 2017//Tpkgsrc-2017Q4
+/patch-xen_include_xen_lib.h/1.2/Tue Jun 23 17:45:33 2015//Tpkgsrc-2017Q4
+D

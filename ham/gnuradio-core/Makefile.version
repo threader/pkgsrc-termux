@@ -1,0 +1,3 @@
+# $NetBSD: Makefile.version,v 1.10 2017/03/15 14:07:12 mef Exp $
+
+VERSION=        3.7.11

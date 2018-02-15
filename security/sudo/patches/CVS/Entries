@@ -1,0 +1,11 @@
+/patch-aa/1.32/Sat Jan  9 11:22:12 2016//Tpkgsrc-2017Q4
+/patch-af/1.34/Tue May 30 16:14:56 2017//Tpkgsrc-2017Q4
+/patch-ag/1.26/Wed May 31 02:33:12 2017//Tpkgsrc-2017Q4
+/patch-include_sudo__compat.h/1.1/Wed May 31 02:22:02 2017//Tpkgsrc-2017Q4
+/patch-include_sudo__event.h/1.2/Tue Sep 12 06:34:22 2017//Tpkgsrc-2017Q4
+/patch-plugins_sudoers_Makefile.in/1.1/Fri Jan  1 17:00:49 2016//Tpkgsrc-2017Q4
+/patch-plugins_sudoers_logging.c/1.1/Fri Jan  1 17:00:49 2016//Tpkgsrc-2017Q4
+/patch-src_Makefile.in/1.2/Tue May 30 16:14:56 2017//Tpkgsrc-2017Q4
+/patch-src_sudo__edit.c/1.1/Fri Sep 16 11:50:38 2016//Tpkgsrc-2017Q4
+/patch-lib_util_gethostname.c/1.1.2.2/Fri Jan 19 20:22:41 2018//Tpkgsrc-2017Q4
+D

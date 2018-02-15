@@ -1,0 +1,22 @@
+/patch-Configure/1.4/Fri Jul  7 05:54:24 2017//Tpkgsrc-2017Q4
+/patch-MANIFEST/1.2/Mon Jun  5 13:41:22 2017//Tpkgsrc-2017Q4
+/patch-Makefile.SH/1.6/Tue Jun  6 12:37:50 2017//Tpkgsrc-2017Q4
+/patch-aa/1.38/Mon Jun  5 13:41:22 2017//Tpkgsrc-2017Q4
+/patch-ab/1.21/Fri Jul  7 05:54:24 2017//Tpkgsrc-2017Q4
+/patch-ac/1.19/Wed Jun  4 00:21:33 2014//Tpkgsrc-2017Q4
+/patch-aq/1.4/Wed Oct  3 19:59:47 2012//Tpkgsrc-2017Q4
+/patch-caretx.c/1.1/Wed Jun  8 17:39:30 2016//Tpkgsrc-2017Q4
+/patch-ch/1.4/Fri Oct 10 21:58:43 2008//Tpkgsrc-2017Q4
+/patch-ck/1.3/Mon Dec 28 13:44:03 2015//Tpkgsrc-2017Q4
+/patch-cn/1.4/Wed Oct  3 19:59:47 2012//Tpkgsrc-2017Q4
+/patch-cpan_File-Path_lib_File_Path.pm/1.1/Mon Jun  5 18:58:44 2017//Tpkgsrc-2017Q4
+/patch-ext_Errno_Errno__pm.PL/1.1/Sat Jun  7 11:57:34 2014//Tpkgsrc-2017Q4
+/patch-ext_File-Glob_bsd_glob.c/1.1/Fri Apr 28 22:59:48 2017//Tpkgsrc-2017Q4
+/patch-ext_File-Glob_t_rt131211.t/1.1/Fri Apr 28 22:59:48 2017//Tpkgsrc-2017Q4
+/patch-hints_cygwin.sh/1.1/Tue Apr 23 12:22:36 2013//Tpkgsrc-2017Q4
+/patch-hints_netbsd.sh/1.10/Wed Feb 25 14:56:45 2015//Tpkgsrc-2017Q4
+/patch-hints_sco.sh/1.1/Fri Mar 14 22:41:10 2014//Tpkgsrc-2017Q4
+/patch-hints_solaris__2.sh/1.2/Tue Oct 27 09:10:44 2015//Tpkgsrc-2017Q4
+/patch-ta/1.6/Sat Jun  8 21:32:25 2013//Tpkgsrc-2017Q4
+/patch-ze/1.6/Thu May 29 07:57:07 2014//Tpkgsrc-2017Q4
+D

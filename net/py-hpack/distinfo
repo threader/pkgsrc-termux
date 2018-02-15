@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.5 2017/04/14 13:08:15 leot Exp $
+
+SHA1 (hpack-3.0.0.tar.gz) = d230ec65b27dc18e545f90fe9f804586666de890
+RMD160 (hpack-3.0.0.tar.gz) = 3aa077f29a21fb1cd06a3fccd7b05709591f57f9
+SHA512 (hpack-3.0.0.tar.gz) = ffac4bdf19f8826027d8f89fe07e1837eacabbf18d1ff18e0cb13505c6714afd62125aa5cc594c75273725be71cc6e17b2315257fabb7779ce51de8c877267a3
+Size (hpack-3.0.0.tar.gz) = 43321 bytes
+SHA1 (patch-setup.py) = 2f72bac372d14182f4a553904d8db588d40aaa91

@@ -1,0 +1,3 @@
+This module allows you to use the Clutter library from Perl to create dynamic,
+compelling, and portable graphical user interfaces, using a Perlish and object
+oriented API.

@@ -1,0 +1,5 @@
+/patch-auto_install/1.2/Wed Jun 15 14:53:48 2016//Tpkgsrc-2017Q4
+/patch-conf_nginx.conf/1.1/Thu Dec  5 15:04:06 2013//Tpkgsrc-2017Q4
+/patch-src_event_modules_ngx__eventport__module.c/1.1/Tue Feb 14 10:10:55 2017//Tpkgsrc-2017Q4
+/patch-src_os_unix_ngx__udp__sendmsg__chain.c/1.1/Sat Jun 17 19:54:47 2017//Tpkgsrc-2017Q4
+D

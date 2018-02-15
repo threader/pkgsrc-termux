@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.5 2015/01/04 10:43:44 wiz Exp $
+
+--- Makefile.orig	2010-08-07 13:06:42.000000000 +0000
++++ Makefile
+@@ -44,14 +44,14 @@ SYSTEM = -DSYSV=1
+ OPT = -O -Wall
+ # For MWC 3.0 on the Atari ST, use:
+ #CFLAGS = -VCOMPAC -VPEEP
+-CFLAGS = $(OPT) $(SYSTEM)
++CFLAGS += ${SYSTEM}
+ 
+ # GNU's gcc is very nice, if you've got it. Otherwise just cc.
+ #CC = cgcc -mshort -mbaserel
+-CC = cc
++#CC = cc
+ 
+ # tmclock is only needed on Unix systems...
+-TMCLOCK = tmclock.o
++#TMCLOCK = tmclock.o
+ 
+ # Integer-only stdio routines for Atari ST.
+ #LIBS=-liio16

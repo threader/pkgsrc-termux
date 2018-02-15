@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.2 2016/03/09 06:52:02 tnn Exp $
+
+It's 2016. Everyone has strerror.
+
+--- utils.c.orig	1999-02-11 12:44:15.000000000 +0000
++++ utils.c
+@@ -1,13 +1,8 @@
+ #include <errno.h>
+-#define NULL 0
++#include <string.h>
+ 
+ 
+ char *
+ uerror() {
+-	extern int sys_nerr;
+-	extern char *sys_errlist[];
+-	if (errno > sys_nerr)
+-	    return NULL;
+-	else
+-	    return sys_errlist[errno];
++	return strerror(errno);
+ }

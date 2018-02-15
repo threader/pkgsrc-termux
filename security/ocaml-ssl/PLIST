@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.5 2016/02/03 12:48:38 jaapb Exp $
+${OCAML_SITELIB}/ssl/META
+${OCAML_SITELIB}/ssl/libssl_stubs.a
+${OCAML_SITELIB}/ssl/libssl_threads_stubs.a
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl.a
+${OCAML_SITELIB}/ssl/ssl.cma
+${OCAML_SITELIB}/ssl/ssl.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl.cmxa
+${OCAML_SITELIB}/ssl/ssl.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl_threads.a
+${OCAML_SITELIB}/ssl/ssl_threads.cma
+${OCAML_SITELIB}/ssl/ssl_threads.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl_threads.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl_threads.cmxa
+${OCAML_SITELIB}/ssl/ssl_threads.mli
+${OCAML_SITELIB}/ssl/dllssl_stubs.so
+${OCAML_SITELIB}/ssl/dllssl_threads_stubs.so

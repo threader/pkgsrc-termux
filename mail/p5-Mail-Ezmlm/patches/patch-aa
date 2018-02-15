@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.3 2014/02/20 16:27:21 schmonz Exp $
+
+--- Ezmlm.pm.orig	2008-10-16 01:22:44.000000000 +0000
++++ Ezmlm.pm
+@@ -58,9 +58,9 @@ $VERSION = '0.08.2';
+ require 5.005;
+ 
+ # == Begin site dependant variables ==
+-$EZMLM_BASE = '/usr/local/bin'; #Autoinserted by Makefile.PL
+-$QMAIL_BASE = '/var/qmail'; #Autoinserted by Makefile.PL
+-$MYSQL_BASE = ''; #Autoinserted by Makefile.PL
++$EZMLM_BASE = '@LOCALBASE@/bin'; #Autoinserted by Makefile.PL
++$QMAIL_BASE = '@QMAILDIR@'; #Autoinserted by Makefile.PL
++$MYSQL_BASE = '@LOCALBASE@/bin'; #Autoinserted by Makefile.PL
+ # == End site dependant variables ==
+ 
+ # == check the ezmlm-make path ==

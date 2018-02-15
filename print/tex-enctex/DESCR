@@ -1,0 +1,4 @@
+EncTeX is (another) tex extension, written at the change-file
+level. It provides means of translating input on the way into
+TeX. It allows, for example, translation of multibyte
+sequences, such as utf-8 encoding.

@@ -1,0 +1,21 @@
+$NetBSD: distinfo,v 1.10 2015/12/29 23:34:44 dholland Exp $
+
+SHA1 (cim-3.30.tar.gz) = 8636ac8d1eaee793769051af60140af80b82b22f
+RMD160 (cim-3.30.tar.gz) = d5c07046799dec8840c7c7d9f5c88e552a4c6432
+SHA512 (cim-3.30.tar.gz) = a8cacb8badf287db283a400e15e2f5ba982a8b2a98ec6affd98dc2b54855da2eca4063a5bccc949e50f56cc649e301ecc3eff83b4c6085203f6e871f7db9b851
+Size (cim-3.30.tar.gz) = 416809 bytes
+SHA1 (patch-aa) = 2efccf5bce2838033976c42c7813e805657f6d5b
+SHA1 (patch-ab) = 8853c6a2f36fdc370790e78fd5e86f6361ba0f6a
+SHA1 (patch-ac) = e63f63f906a968ef7dc8343e44235916eddf6574
+SHA1 (patch-src_dekl.c) = 4ee21f64bdbec30e1811113b16616cbe5d2d7608
+SHA1 (patch-src_dekl.h) = 3873bd65c6d00dfb0f2b39f314ef88d4c12e709e
+SHA1 (patch-src_error.c) = 2f42a1d101ef70c2ce61fc7e3774b99665c4db46
+SHA1 (patch-src_expbuilder.c) = 17f1b128a2942994505189125a45c63448061cfa
+SHA1 (patch-src_expchecker.c) = eb51b12e82fe815569ba4a65c9a43945f67f8c15
+SHA1 (patch-src_extspec.c) = 960e588a81a9bf2e3deda7b5a67ea05706927dfc
+SHA1 (patch-src_extspec.h) = a3aaf5c5e5469e26e945cbaf691bcde0950489f1
+SHA1 (patch-src_gen.h) = 1599ae07eb2118d2f5c188f29504af4c1b3a8258
+SHA1 (patch-src_genexp.c) = 60be393adc9d599b33d6907ebe4a7d5cc874990d
+SHA1 (patch-src_genpar.c) = 1c95322d29679eb6cacd7861579014b2bc0285d4
+SHA1 (patch-src_genstr.c) = 44d57258207d76af0a6af2a3e1a90bcc97bead14
+SHA1 (patch-src_lex.c) = eb7b29ff080e0c3127f7f4da6a0fe638a4573655

@@ -1,0 +1,21 @@
+$NetBSD: patch-al,v 1.6 2013/09/10 14:15:11 joerg Exp $
+
+--- incoming/modemd.c.orig	1996-09-10 00:34:58.000000000 +0000
++++ incoming/modemd.c
+@@ -48,6 +48,7 @@ static char copyright[] =
+ #include <syslog.h>
+ #include <pwd.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ static char *ttyName;
+ static char progName [1024];
+@@ -86,7 +87,7 @@ int main (argc, argv, envp)
+     }
+   sprintf (progName, "modemd %s", ttyNameP);
+   openlog (progName, LOG_NDELAY, LOG_LOCAL3);
+-  /* setlogmask(LOG_UPTO (LOG_INFO)); /* */
++  /* setlogmask(LOG_UPTO (LOG_INFO)); */
+   syslog (LOG_DEBUG, "Log Mask is %x", LOG_UPTO (LOG_INFO));
+ 
+   /* If the arguments were bogus... */

@@ -1,0 +1,22 @@
+/patch-Xlt_SlideC.c/1.1/Sun Apr 28 20:35:22 2013//Tpkgsrc-2017Q4
+/patch-aa/1.14/Fri May 21 12:13:05 2004//Tpkgsrc-2017Q4
+/patch-source_highlight.c/1.2/Tue Mar 25 12:54:22 2014//Tpkgsrc-2017Q4
+/patch-source_interpret.c/1.2/Sat Mar 22 17:26:13 2014//Tpkgsrc-2017Q4
+/patch-source_macro.c/1.2/Sat Mar 22 17:26:13 2014//Tpkgsrc-2017Q4
+/patch-source_menu.c/1.1/Sun Apr 28 20:35:22 2013//Tpkgsrc-2017Q4
+/patch-source_parse.y/1.2/Sat Mar 22 17:26:13 2014//Tpkgsrc-2017Q4
+/patch-source_preferences.c/1.2/Sat Mar 22 17:26:13 2014//Tpkgsrc-2017Q4
+/patch-source_regularExp.c/1.1/Sun Apr 28 20:35:22 2013//Tpkgsrc-2017Q4
+/patch-source_search.c/1.1/Sun Apr 28 20:35:22 2013//Tpkgsrc-2017Q4
+/patch-source_selection.c/1.1/Sun Apr 28 20:35:22 2013//Tpkgsrc-2017Q4
+/patch-source_shell.c/1.1/Sun Apr 28 20:35:22 2013//Tpkgsrc-2017Q4
+/patch-source_tags.c/1.1/Sun Apr 28 20:35:22 2013//Tpkgsrc-2017Q4
+/patch-source_text.c/1.1/Sun Apr 28 20:35:22 2013//Tpkgsrc-2017Q4
+/patch-source_textBuf.c/1.1/Sun Apr 28 20:35:22 2013//Tpkgsrc-2017Q4
+/patch-source_textDisp.c/1.1/Sun Apr 28 20:35:22 2013//Tpkgsrc-2017Q4
+/patch-source_textDrag.c/1.1/Sun Apr 28 20:35:22 2013//Tpkgsrc-2017Q4
+/patch-source_userCmds.c/1.2/Sat Mar 22 17:26:13 2014//Tpkgsrc-2017Q4
+/patch-source_window.c/1.1/Sun Apr 28 20:35:22 2013//Tpkgsrc-2017Q4
+/patch-util_misc.c/1.2/Sun Jun 23 09:45:52 2013//Tpkgsrc-2017Q4
+/patch-util_prefFile.c/1.2/Thu Mar 20 12:38:26 2014//Tpkgsrc-2017Q4
+D

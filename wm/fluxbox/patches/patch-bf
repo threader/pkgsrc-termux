@@ -1,0 +1,24 @@
+$NetBSD: patch-bf,v 1.4 2017/02/22 12:20:51 wiz Exp $
+
+Adding "const" to a primitive type is useless. Sunpro doesn't like it.
+
+--- src/CurrentWindowCmd.cc.orig	2015-02-08 10:44:45.000000000 +0000
++++ src/CurrentWindowCmd.cc
+@@ -485,7 +485,7 @@ REGISTER_COMMAND_PARSER(moveleft, MoveCm
+ REGISTER_COMMAND_PARSER(moveup, MoveCmd::parse, void);
+ REGISTER_COMMAND_PARSER(movedown, MoveCmd::parse, void);
+ 
+-MoveCmd::MoveCmd(const int step_size_x, const int step_size_y) :
++MoveCmd::MoveCmd(int step_size_x, int step_size_y) :
+   m_step_size_x(step_size_x), m_step_size_y(step_size_y) { }
+ 
+ void MoveCmd::real_execute() {
+@@ -558,7 +558,7 @@ REGISTER_COMMAND_PARSER(resizeto, Resize
+ REGISTER_COMMAND_PARSER(resizehorizontal, ResizeCmd::parse, void);
+ REGISTER_COMMAND_PARSER(resizevertical, ResizeCmd::parse, void);
+ 
+-ResizeCmd::ResizeCmd(const int step_size_x, const int step_size_y, bool is_relative_x, bool is_relative_y) :
++ResizeCmd::ResizeCmd(int step_size_x, int step_size_y, bool is_relative_x, bool is_relative_y) :
+     m_step_size_x(step_size_x), m_step_size_y(step_size_y), m_is_relative_x(is_relative_x), m_is_relative_y(is_relative_y) { }
+ 
+ void ResizeCmd::real_execute() {

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.3 2016/10/28 10:40:51 abs Exp $
+man/man8/wpa_gui.8
+sbin/wpa_gui

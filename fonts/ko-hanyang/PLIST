@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.4 2014/06/01 16:35:35 wiz Exp $
+share/fonts/X11/local/hgm10.pcf.gz
+share/fonts/X11/local/hgm12.pcf.gz
+share/fonts/X11/local/hgm14.pcf.gz
+share/fonts/X11/local/hgm16.pcf.gz
+share/fonts/X11/local/hgm18.pcf.gz
+share/fonts/X11/local/hgm20.pcf.gz
+share/fonts/X11/local/hmm10.pcf.gz
+share/fonts/X11/local/hmm12.pcf.gz
+share/fonts/X11/local/hmm14.pcf.gz
+share/fonts/X11/local/hmm16.pcf.gz
+share/fonts/X11/local/hmm18.pcf.gz
+share/fonts/X11/local/hmm20.pcf.gz

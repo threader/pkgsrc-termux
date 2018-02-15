@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.8 2016/06/16 04:06:09 markd Exp $
+share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-ec.tex
+share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-il2.tex
+share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-il3.tex
+share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-l7x.tex
+share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-lmc.tex
+share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-lth.tex
+share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-qx.tex
+share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-t2a.tex
+share/texmf-dist/tex/generic/hyph-utf8/conversions/conv-utf8-t8m.tex
+share/texmf-dist/tex/luatex/hyph-utf8/etex.src
+share/texmf-dist/tex/luatex/hyph-utf8/luatex-hyphen.lua

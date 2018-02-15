@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.6 2014/02/22 14:51:03 wiedi Exp $
+bin/darkice
+man/man1/darkice.1
+man/man5/darkice.conf.5
+share/examples/darkice/darkice.conf

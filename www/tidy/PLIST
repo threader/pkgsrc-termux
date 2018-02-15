@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.9 2017/11/27 13:01:37 adam Exp $
+bin/tidy
+include/tidy/tidy.h
+include/tidy/tidybuffio.h
+include/tidy/tidyenum.h
+include/tidy/tidyplatform.h
+lib/libtidy.so
+lib/libtidy.so.5
+lib/libtidy.so.${PKGVERSION}
+lib/libtidys.a
+lib/pkgconfig/tidy.pc
+man/man1/tidy.1

@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2017/09/06 16:49:22 wiz Exp $
+
+Most programs that use the lib will look first in the directory
+specified by the environment variable T1LIB_CONFIG_DIR, and then
+${PREFIX}/share/t1lib. However, you *must* set T1LIB_CONFIG_DIR
+to run the "xglyph" test X client. E.g, for Bourne shells:
+ ``T1LIB_CONFIG_DIR=${PREFIX}/share/t1lib xglyph &''
+
+The complete documentation requires LaTeX to build. If you have
+the meta-pkgs/texlive-collection-all package (or some subset),
+``cd ${PREFIX}/share/doc/t1lib; make'' to build t1lib_doc.dvi.
+
+===========================================================================

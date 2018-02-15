@@ -1,0 +1,30 @@
+# $NetBSD: Makefile,v 1.68.2.1 2018/01/19 20:20:44 spz Exp $
+
+DISTNAME=	global-6.6.1
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GNU:=global/}
+
+MAINTAINER=	uebayasi@NetBSD.org
+HOMEPAGE=	http://www.gnu.org/software/global/
+COMMENT=	Source code tag system including web browser output
+LICENSE=	gnu-gpl-v3
+
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-posix-sort=${SORT:Q}
+
+INFO_FILES=		YES
+USE_LANGUAGES=		c99
+USE_LIBTOOL=		YES
+USE_TOOLS+=		perl:run sort:run
+
+CONF_FILES=	${PREFIX}/share/gtags/gtags.conf ${PKG_SYSCONFDIR}/gtags.conf
+
+REPLACE_PYTHON+=	plugin-factory/pygments_parser.py
+REPLACE_PERL+=		plugin-factory/maps2conf.pl
+
+.include "options.mk"
+
+.include "../../lang/python/application.mk"
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

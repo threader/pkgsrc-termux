@@ -1,0 +1,33 @@
+# $NetBSD: Makefile,v 1.26 2015/03/15 01:04:27 tnn Exp $
+#
+
+DISTNAME=	html-4.01
+PKGREVISION=	4
+CATEGORIES=	textproc
+MASTER_SITES=	ftp://ftp.FreeBSD.org/pub/FreeBSD/ports/distfiles/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.w3.org/TR/REC-html40/
+COMMENT=	SGML DTDs for the Hypertext Markup Language
+
+DEPENDS+=	iso8879>=1986:../../textproc/iso8879
+
+WRKSRC=		${WRKDIR}
+EXTRACT_ONLY=	# empty
+NO_BUILD=	yes
+USE_TOOLS+=	gzip tar
+
+INSTDIR=	${PREFIX}/share/sgml/html
+ISOCAT=		${PREFIX}/share/sgml/iso8879/catalog
+
+SGML_CATALOGS=	${INSTDIR}/catalog
+
+INSTALLATION_DIRS=	${INSTDIR}
+
+do-install:
+	cd ${DESTDIR}${INSTDIR} && \
+		${TAR} -zxf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+	${ECHO} "CATALOG \"${ISOCAT}\"" >> ${DESTDIR}${INSTDIR}/catalog
+
+.include "../../textproc/xmlcatmgr/catalogs.mk"
+.include "../../mk/bsd.pkg.mk"

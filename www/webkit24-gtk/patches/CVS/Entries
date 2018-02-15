@@ -1,0 +1,20 @@
+/patch-Source_JavaScriptCore_API_JSStringRef.cpp/1.1/Mon Apr 24 15:40:12 2017//Tpkgsrc-2017Q4
+/patch-Source_JavaScriptCore_ForwardingHeaders_JavaScriptCore_JSCallbackFunction.h/1.1/Sun Jul 12 00:37:47 2015//Tpkgsrc-2017Q4
+/patch-Source_JavaScriptCore_assembler_ARMAssembler.h/1.1/Sun Jul 12 00:37:47 2015//Tpkgsrc-2017Q4
+/patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp/1.1/Sun Jul 12 00:37:47 2015//Tpkgsrc-2017Q4
+/patch-Source_JavaScriptCore_dfg_DFGNode.h/1.1/Sun Jul 12 00:37:47 2015//Tpkgsrc-2017Q4
+/patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp/1.1/Sun Jul 12 00:37:47 2015//Tpkgsrc-2017Q4
+/patch-Source_JavaScriptCore_runtime_VM.cpp/1.1/Sat Dec  3 16:30:05 2016//Tpkgsrc-2017Q4
+/patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h/1.1/Sun Jul 12 00:37:47 2015//Tpkgsrc-2017Q4
+/patch-Source_WTF_wtf_MathExtras.h/1.1/Sun Jul 12 00:37:47 2015//Tpkgsrc-2017Q4
+/patch-Source_WTF_wtf_Platform.h/1.3/Mon Apr 24 15:40:12 2017//Tpkgsrc-2017Q4
+/patch-Source_WTF_wtf_dtoa_utils.h/1.1/Sat Dec  3 16:30:05 2016//Tpkgsrc-2017Q4
+/patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp/1.1/Sun Jul 12 00:37:47 2015//Tpkgsrc-2017Q4
+/patch-Source_WebCore_platform_graphics_cpu_arm_filters_FELightingNEON.cpp/1.1/Sun Jul 12 00:37:47 2015//Tpkgsrc-2017Q4
+/patch-Tools_DumpRenderTree_gtk_DumpRenderTree.cpp/1.1/Sun Jul 12 00:37:47 2015//Tpkgsrc-2017Q4
+/patch-ai/1.1/Sun Jul 12 00:37:47 2015//Tpkgsrc-2017Q4
+/patch-aj/1.1/Sun Jul 12 00:37:47 2015//Tpkgsrc-2017Q4
+/patch-ak/1.1/Sun Jul 12 00:37:47 2015//Tpkgsrc-2017Q4
+/patch-am/1.1/Sun Jul 12 00:37:47 2015//Tpkgsrc-2017Q4
+/patch-configure/1.1/Sun Jul 12 00:37:47 2015//Tpkgsrc-2017Q4
+D

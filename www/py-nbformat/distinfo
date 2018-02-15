@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/10/17 18:30:02 adam Exp $
+
+SHA1 (nbformat-4.4.0.tar.gz) = f3d7723747a1587d3e1ad8bd2836dbe192a843cb
+RMD160 (nbformat-4.4.0.tar.gz) = 8317a6ae2072eeb3a860dbe4080a918cdd203e51
+SHA512 (nbformat-4.4.0.tar.gz) = 46cb78bca374ef49c4461f230cbb8eb4af611d7be395a448680964c759d47fa8558dd07de96c43921ca171c486707dc823e278b724d9dab51bd30c3dab47ff6e
+Size (nbformat-4.4.0.tar.gz) = 113683 bytes

@@ -1,0 +1,13 @@
+/patch-generic_tclInt.h/1.1/Mon Mar 10 14:20:44 2014//Tpkgsrc-2017Q4
+/patch-generic_tclPort.h/1.1/Mon Mar 10 14:20:44 2014//Tpkgsrc-2017Q4
+/patch-generic_tclPosixStr.c/1.1/Mon Mar 10 14:20:44 2014//Tpkgsrc-2017Q4
+/patch-tests_load.test/1.1/Mon Mar 10 14:20:44 2014//Tpkgsrc-2017Q4
+/patch-tests_pkgMkIndex.test/1.1/Mon Mar 10 14:20:44 2014//Tpkgsrc-2017Q4
+/patch-unix_Makefile.in/1.2/Thu Mar  3 21:16:46 2016//Tpkgsrc-2017Q4
+/patch-unix_configure/1.2/Thu Mar  3 21:16:46 2016//Tpkgsrc-2017Q4
+/patch-unix_tclConfig.sh.in/1.2/Thu Mar  3 21:16:46 2016//Tpkgsrc-2017Q4
+/patch-unix_tclUnixCompat.c/1.1/Mon Mar 10 14:20:44 2014//Tpkgsrc-2017Q4
+/patch-unix_tclUnixFCmd.c/1.1/Mon Mar 10 14:20:44 2014//Tpkgsrc-2017Q4
+/patch-unix_tclUnixInit.c/1.2/Thu Mar  3 21:16:46 2016//Tpkgsrc-2017Q4
+/patch-unix_tclUnixPort.h/1.1/Mon Mar 10 14:20:44 2014//Tpkgsrc-2017Q4
+D

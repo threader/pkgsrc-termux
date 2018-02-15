@@ -1,0 +1,43 @@
+# $NetBSD: Makefile,v 1.55 2017/11/24 22:15:58 wiz Exp $
+
+PKGNAME=		${PYPKGPREFIX}-gobject-2.28.6
+PKGREVISION=		12
+
+# only noticeable by running codegen.py
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.28.6
+
+DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
+
+.include "Makefile.common"
+
+SUBST_CLASSES+=		codegen
+SUBST_STAGE.codegen=	pre-configure
+SUBST_FILES.codegen=	dsextras.py
+SUBST_SED.codegen=	-e "s|@PYGTKCODEGEN@|${PREFIX}/share/pygobject/2.0|"
+
+REPLACE_PYTHON+=	codegen/code-coverage.py
+REPLACE_PYTHON+=	codegen/codegen.py
+REPLACE_PYTHON+=	codegen/createdefs.py
+REPLACE_PYTHON+=	codegen/defsconvert.py
+REPLACE_PYTHON+=	codegen/defsgen.py
+REPLACE_PYTHON+=	codegen/docextract_to_xml.py
+REPLACE_PYTHON+=	codegen/docgen.py
+REPLACE_PYTHON+=	codegen/h2def.py
+REPLACE_PYTHON+=	codegen/mergedefs.py
+REPLACE_PYTHON+=	codegen/missingdefs.py
+REPLACE_PYTHON+=	codegen/mkskel.py
+REPLACE_PYTHON+=	codegen/scanvirtuals.py
+REPLACE_PYTHON+=	codegen/scmexpr.py
+REPLACE_PYTHON+=	docs/xsl/fixxref.py.in
+
+PY_PEP3147=	no
+
+BUILDLINK_API_DEPENDS.py-gobject-shared+= py-gobject-shared>=${PKGVERSION_NOREV}
+
+CONFIGURE_ARGS+=	--disable-introspection
+
+.include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
+.include "../../devel/py-gobject-shared/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

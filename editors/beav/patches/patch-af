@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.3 2016/03/30 10:03:46 jperkin Exp $
+
+Remove unused functions.
+
+--- random.c.orig	2007-11-25 12:03:46.000000000 +0000
++++ random.c
+@@ -73,7 +73,6 @@ extern bool read_pat_mode;
+ extern bool dont_repeat;
+ extern BUFFER sav_buf;
+ 
+-char dec_chr_ok ();
+ ulong get_long ();
+ void wind_on_dot_all ();
+ 

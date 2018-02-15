@@ -1,0 +1,35 @@
+$NetBSD: patch-ad,v 1.2 2016/05/25 21:39:44 fhajny Exp $
+
+Default dirs.
+
+--- etc/sqlgrey.conf.orig	2012-02-13 16:54:08.000000000 +0000
++++ etc/sqlgrey.conf
+@@ -7,7 +7,7 @@
+ # - SQLgrey uses a specific config file when called with -f <conf_file>
+ 
+ ## Configuration files
+-# conf_dir = /etc/sqlgrey
++# conf_dir = @PKG_SYSCONFDIR@
+ 
+ ## Log level
+ # Uncomment to change the log level (default is normal: 2)
+@@ -59,8 +59,8 @@
+ # log_ident =
+ 
+ ## username and groupname the daemon runs as
+-# user = sqlgrey
+-# group = sqlgrey
++# user = @SQLGREY_USER@
++# group = @SQLGREY_GROUP@
+ 
+ ## Socket
+ # On which socket do SQLgrey wait for queries
+@@ -73,7 +73,7 @@
+ 
+ ## PID
+ # where to store the process PID
+-# pidfile = /var/run/sqlgrey.pid
++# pidfile = @SQLGREY_PIDDIR@/sqlgrey.pid
+ 
+ ## Greylisting delays
+ # If you want to be really strict (RFC-wise) use these

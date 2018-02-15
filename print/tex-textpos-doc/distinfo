@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2016/08/07 09:09:41 markd Exp $
+
+SHA1 (tex-textpos-41331/textpos.doc.tar.xz) = 672d7011e6f6c574fd933913406c95004aa82b70
+RMD160 (tex-textpos-41331/textpos.doc.tar.xz) = 5aa6c78f02a0166664d14e232d497293dc2d2805
+SHA512 (tex-textpos-41331/textpos.doc.tar.xz) = fc7610cb80dd8673e4e2ffec894eee38c7f4403a228320b9b827c42db02e625ca1e44ec370a2517688a9fa47f2c50a8c49120c8d3b99f7f01070c4009e8633c4
+Size (tex-textpos-41331/textpos.doc.tar.xz) = 307400 bytes

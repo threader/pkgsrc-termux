@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.3 2016/10/22 00:18:39 kamil Exp $
+bin/lemon
+share/doc/lemon/lemon.html
+share/lemon/lempar.c

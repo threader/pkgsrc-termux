@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.8 2015/05/03 01:45:33 wen Exp $
+
+--- rc/Makefile.in.orig	2015-05-03 09:22:39.000000000 +0000
++++ rc/Makefile.in
+@@ -286,16 +286,16 @@ install-sysconf_joeDATA: $(sysconf_joe_D
+ 	@$(NORMAL_INSTALL)
+ 	@list='$(sysconf_joe_DATA)'; test -n "$(sysconf_joedir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconf_joedir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(sysconf_joedir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(datarootdir)/examples/joe'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(datarootdir)/examples/joe" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconf_joedir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconf_joedir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(datarootdir)/examples/joe'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(datarootdir)/examples/joe" || exit $$?; \
+ 	done
+ 
+ uninstall-sysconf_joeDATA:

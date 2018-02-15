@@ -1,0 +1,23 @@
+/patch-common.gypi/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-deps_cares_cares.gyp/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-deps_npm_node__modules_node-gyp_gyp_pylib_gyp_generator_make.py/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-deps_npm_node__modules_node-gyp_gyp_pylib_gyp_xcode__emulation.py/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-deps_uv_common.gypi/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-deps_uv_src_unix_netbsd.c/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-deps_v8_src_arm_cpu-arm.cc/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-deps_v8_src_base_atomicops.h/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-deps_v8_src_base_platform_platform-freebsd.cc/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-deps_v8_src_base_platform_platform-openbsd.cc/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-deps_v8_src_base_platform_platform-posix.cc/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-deps_v8_src_base_platform_semaphore.cc/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-deps_v8_src_compiler_types.h/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-deps_v8_src_globals.h/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-deps_v8_src_log-utils.h/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-deps_v8_tools_run-llprof.sh/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-src_cares__wrap.cc/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-src_inspector__agent.cc/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-tools_gyp_pylib_gyp_common.py/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-tools_gyp_pylib_gyp_generator_make.py/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-tools_gyp_pylib_gyp_xcode__emulation.py/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+/patch-tools_install.py/1.1/Wed Nov  1 12:07:31 2017//Tpkgsrc-2017Q4
+D

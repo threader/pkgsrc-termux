@@ -1,0 +1,7 @@
+/patch-agentserver_CMakeLists.txt/1.1/Mon Aug 31 16:16:31 2015//Tpkgsrc-2017Q4
+/patch-cmake_modules_FindSqlite.cmake/1.2/Thu Nov 13 09:44:02 2014//Tpkgsrc-2017Q4
+/patch-git_21465191/1.1/Thu Nov 13 09:44:02 2014//Tpkgsrc-2017Q4
+/patch-libs_xdgbasedirs.cpp/1.1/Mon Aug 31 16:16:31 2015//Tpkgsrc-2017Q4
+/patch-server_src_storage_partstreamer.cpp/1.1/Sun Jan 10 19:40:30 2016//Tpkgsrc-2017Q4
+/patch-server_tests_unittest_partstreamertest.cpp/1.1/Sun Jan 10 19:40:30 2016//Tpkgsrc-2017Q4
+D

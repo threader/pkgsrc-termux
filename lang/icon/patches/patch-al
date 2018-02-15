@@ -1,0 +1,17 @@
+$NetBSD: patch-al,v 1.5 2015/12/29 23:34:48 dholland Exp $
+
+Use the right library path.
+
+--- ipl/BuildBin.orig
++++ ipl/BuildBin
+@@ -13,8 +13,8 @@
+ TOP=`cd ..; pwd`
+ BIN=$TOP/bin
+ PATH=$BIN:$PATH
+-IPATH=$TOP/lib
+-LPATH=$TOP/lib
++IPATH=$TOP/lib/icon
++LPATH=$TOP/lib/icon
+ export PATH IPATH LPATH
+ 
+ #  Figure out executable extension

@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.6 2015/04/22 06:33:25 wiz Exp $
+share/doc/p5-CGI/examples/clickable_image.cgi
+share/doc/p5-CGI/examples/cookie.cgi
+share/doc/p5-CGI/examples/crash.cgi
+share/doc/p5-CGI/examples/file_upload.cgi
+share/doc/p5-CGI/examples/mojo_proxy.pl
+share/doc/p5-CGI/examples/wikipedia_example.cgi
+share/doc/p5-CGI/examples/wilogo.gif

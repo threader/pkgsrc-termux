@@ -1,0 +1,12 @@
+/patch-src_build-data_arch_arm.txt/1.2/Thu May 19 22:10:24 2016//Tpkgsrc-2017Q4
+/patch-src_build-data_makefile_unix.in/1.1/Thu May 19 22:10:24 2016//Tpkgsrc-2017Q4
+/patch-src_build-data_makefile_unix__shr.in/1.1/Thu May 19 22:10:24 2016//Tpkgsrc-2017Q4
+/patch-src_build-data_os_solaris.txt/1.1/Fri Jun  3 11:52:42 2016//Tpkgsrc-2017Q4
+/patch-src_entropy_unix_procs_info.txt/1.2/Thu May 19 22:10:24 2016//Tpkgsrc-2017Q4
+/patch-src_ssl_rec__wri.cpp/1.1/Tue May 31 21:36:17 2016//Tpkgsrc-2017Q4
+/patch-src_ssl_tls__client.cpp/1.1/Tue May 31 21:36:17 2016//Tpkgsrc-2017Q4
+/patch-src_ssl_tls__client.h/1.1/Tue May 31 21:36:17 2016//Tpkgsrc-2017Q4
+/patch-src_ssl_tls__record.h/1.1/Tue May 31 21:36:17 2016//Tpkgsrc-2017Q4
+/patch-src_ssl_tls__server.cpp/1.1/Tue May 31 21:36:17 2016//Tpkgsrc-2017Q4
+/patch-src_ssl_tls__server.h/1.1/Tue May 31 21:36:17 2016//Tpkgsrc-2017Q4
+D

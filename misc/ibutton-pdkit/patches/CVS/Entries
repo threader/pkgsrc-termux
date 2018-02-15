@@ -1,0 +1,26 @@
+/patch-1wsensor.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-aa/1.1.1.1/Mon Dec 18 23:33:32 2000//Tpkgsrc-2017Q4
+/patch-ab/1.1/Sat Mar 25 18:04:04 2006//Tpkgsrc-2017Q4
+/patch-ac/1.1/Sat Mar 25 18:04:04 2006//Tpkgsrc-2017Q4
+/patch-ad/1.1/Sat Mar 25 18:04:04 2006//Tpkgsrc-2017Q4
+/patch-ae/1.1/Thu Dec 20 13:12:13 2007//Tpkgsrc-2017Q4
+/patch-atodtst.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-counter.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-coupler.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-debit.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-dumptag.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-initcopr.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-initrov.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-list2tag.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-mktag.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-mweather.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-swtloop.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-swtoper.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-swtsngl.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-temp.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-thermodl.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-thermoms.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-tstfind.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-tstow.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+/patch-tstowe.c/1.1/Fri Jan 11 13:30:32 2013//Tpkgsrc-2017Q4
+D

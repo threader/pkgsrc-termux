@@ -1,0 +1,24 @@
+/patch-ConfigureChecks.cmake/1.1/Sat Jun 16 04:45:40 2012//Tpkgsrc-2017Q4
+/patch-aa/1.3/Thu Feb 18 23:24:46 2016//Tpkgsrc-2017Q4
+/patch-ab/1.2/Mon Mar 19 11:28:49 2012//Tpkgsrc-2017Q4
+/patch-ac/1.4/Mon Mar 19 11:28:49 2012//Tpkgsrc-2017Q4
+/patch-ad/1.2/Mon Mar 19 11:28:49 2012//Tpkgsrc-2017Q4
+/patch-ag/1.2/Mon Mar 19 11:28:49 2012//Tpkgsrc-2017Q4
+/patch-ah/1.2/Mon Mar 19 11:28:49 2012//Tpkgsrc-2017Q4
+/patch-aj/1.2/Mon Mar 19 11:28:49 2012//Tpkgsrc-2017Q4
+/patch-ak/1.4/Mon Mar 19 11:28:49 2012//Tpkgsrc-2017Q4
+/patch-al/1.3/Thu Feb 18 23:24:46 2016//Tpkgsrc-2017Q4
+/patch-am/1.2/Mon Mar 19 11:28:49 2012//Tpkgsrc-2017Q4
+/patch-cmake_modules_FindKDE4Internal.cmake/1.4/Thu Feb 18 23:24:46 2016//Tpkgsrc-2017Q4
+/patch-kdecore_io_kdirwatch__p.h/1.1/Sat Jan 31 22:52:56 2015//Tpkgsrc-2017Q4
+/patch-kdecore_localization_klocale_kde.cpp/1.1/Mon Mar 19 11:28:49 2012//Tpkgsrc-2017Q4
+/patch-kdecore_network_ConfigureChecks.cmake/1.1/Sat Jul  7 11:52:29 2012//Tpkgsrc-2017Q4
+/patch-kdecore_tests_CMakeLists.txt/1.2/Thu Nov  7 13:35:56 2013//Tpkgsrc-2017Q4
+/patch-kdecore_util_kshareddatacache_p.h/1.1/Mon Mar 19 11:28:49 2012//Tpkgsrc-2017Q4
+/patch-kdeui_CMakeLists.txt/1.1/Sat Jul 22 13:40:54 2017//Tpkgsrc-2017Q4
+/patch-kinit_CMakeLists.txt/1.1/Thu Feb 18 23:24:46 2016//Tpkgsrc-2017Q4
+/patch-kjs_JSImmediate.h/1.3/Sat Mar 31 21:46:55 2012//Tpkgsrc-2017Q4
+/patch-kjs_interpreter.cpp/1.1/Mon May  6 15:03:19 2013//Tpkgsrc-2017Q4
+/patch-kjs_wtf_DisallowCType.h/1.1/Mon May  6 15:03:19 2013//Tpkgsrc-2017Q4
+/patch-kpty_kpty.cpp/1.1/Sat Jun 16 04:45:40 2012//Tpkgsrc-2017Q4
+D

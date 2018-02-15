@@ -1,0 +1,24 @@
+/patch-ac/1.1/Sat Nov  5 22:54:44 2011//Tpkgsrc-2017Q4
+/patch-compiler_cpp_src_generate_t__rb__generator.cc/1.1/Tue May 14 19:15:36 2013//Tpkgsrc-2017Q4
+/patch-compiler_cpp_src_thrifty.yy/1.1/Tue May 14 19:15:36 2013//Tpkgsrc-2017Q4
+/patch-lib__rb__ext__extconf.rb/1.1/Fri Mar  9 14:31:08 2012//Tpkgsrc-2017Q4
+/patch-lib__rb__setup.rb/1.2/Mon May 30 09:22:58 2016//Tpkgsrc-2017Q4
+/patch-lib_cpp_src_async_TAsyncBufferProcessor.h/1.1/Tue May 14 19:15:36 2013//Tpkgsrc-2017Q4
+/patch-lib_cpp_src_async_TAsyncChannel.cpp/1.1/Tue May 14 19:15:36 2013//Tpkgsrc-2017Q4
+/patch-lib_cpp_src_async_TAsyncChannel.h/1.1/Tue May 14 19:15:36 2013//Tpkgsrc-2017Q4
+/patch-lib_cpp_src_async_TAsyncProcessor.h/1.1/Tue May 14 19:15:36 2013//Tpkgsrc-2017Q4
+/patch-lib_cpp_src_async_TAsyncProtocolProcessor.cpp/1.1/Tue May 14 19:15:36 2013//Tpkgsrc-2017Q4
+/patch-lib_cpp_src_async_TAsyncProtocolProcessor.h/1.1/Tue May 14 19:15:36 2013//Tpkgsrc-2017Q4
+/patch-lib_cpp_src_async_TEvhttpServer.cpp/1.1/Tue May 14 19:15:36 2013//Tpkgsrc-2017Q4
+/patch-lib_cpp_src_concurrency_FunctionRunner.h/1.1/Tue May 14 19:15:36 2013//Tpkgsrc-2017Q4
+/patch-lib_cpp_src_concurrency_ThreadManager.h/1.1/Tue May 14 19:15:36 2013//Tpkgsrc-2017Q4
+/patch-lib_cpp_src_protocol_TBase64Utils.cpp/1.1/Sat Sep 16 12:30:28 2017//Tpkgsrc-2017Q4
+/patch-lib_cpp_src_server_TNonblockingServer.cpp/1.1/Tue May 14 19:15:36 2013//Tpkgsrc-2017Q4
+/patch-lib_cpp_src_transport_TFileTransport.cpp/1.1/Thu Dec 15 23:50:01 2016//Tpkgsrc-2017Q4
+/patch-lib_cpp_src_transport_TSSLSocket.cpp/1.1/Tue May 14 19:15:36 2013//Tpkgsrc-2017Q4
+/patch-lib_cpp_src_transport_TServerSocket.cpp/1.1/Tue May 14 19:15:36 2013//Tpkgsrc-2017Q4
+/patch-lib_cpp_test_Benchmark.cpp/1.1/Tue May 28 19:01:00 2013//Tpkgsrc-2017Q4
+/patch-lib_erl_Makefile.in/1.1/Mon Sep 12 15:51:02 2011//Tpkgsrc-2017Q4
+/patch-lib_php_src_ext_thrift__protocol_php__thrift__protocol.cpp/1.1/Sat Jun 16 01:42:58 2012//Tpkgsrc-2017Q4
+/patch-lib_rb_Makefile.in/1.1/Mon May 30 16:03:13 2016//Tpkgsrc-2017Q4
+D

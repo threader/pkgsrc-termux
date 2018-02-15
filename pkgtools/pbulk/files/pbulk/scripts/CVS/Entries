@@ -1,0 +1,21 @@
+/Makefile/1.4/Sun Dec 18 22:38:16 2016//Tpkgsrc-2017Q4
+/build/1.5/Tue Sep 16 18:21:30 2008//Tpkgsrc-2017Q4
+/build-client-start/1.5/Sun Dec 18 22:59:35 2016//Tpkgsrc-2017Q4
+/bulkbuild/1.1.1.1/Tue Jun 19 19:49:59 2007//Tpkgsrc-2017Q4
+/bulkbuild-rebuild/1.3/Tue Sep 16 18:21:30 2008//Tpkgsrc-2017Q4
+/bulkbuild-restart/1.4/Sun Dec 18 22:38:16 2016//Tpkgsrc-2017Q4
+/client-clean/1.9/Tue Sep 16 18:21:30 2008//Tpkgsrc-2017Q4
+/client-prepare/1.3/Sun Dec 18 22:59:35 2016//Tpkgsrc-2017Q4
+/compute-packages.awk/1.4/Sun May 20 20:12:02 2012//Tpkgsrc-2017Q4
+/create-broken-graph.awk/1.2/Fri Jun 29 22:43:26 2007//Tpkgsrc-2017Q4
+/create-report-html.awk/1.15/Wed May 14 14:45:26 2014//Tpkgsrc-2017Q4
+/create-report-txt.awk/1.8/Sat Mar  1 19:04:37 2008//Tpkgsrc-2017Q4
+/create-report.awk/1.4/Sun Sep 14 18:59:02 2008//Tpkgsrc-2017Q4
+/pkg-build/1.31/Sun Dec 18 09:36:38 2016//Tpkgsrc-2017Q4
+/pkg-up-to-date/1.9/Wed Feb 24 22:51:37 2010//Tpkgsrc-2017Q4
+/pre-build/1.14/Sat Sep 12 23:04:30 2015//Tpkgsrc-2017Q4
+/report/1.8/Tue Sep 16 18:21:30 2008//Tpkgsrc-2017Q4
+/scan/1.9/Mon Nov 24 00:52:09 2014//Tpkgsrc-2017Q4
+/scan-client-start/1.7/Sun Dec 18 22:59:35 2016//Tpkgsrc-2017Q4
+/upload/1.4/Sat Feb 22 00:35:41 2014//Tpkgsrc-2017Q4
+D

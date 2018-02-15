@@ -1,0 +1,27 @@
+/patch-src_Makefile/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_armor.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_codex.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_conversation.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_creature.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_debug.h/1.1/Mon Apr 29 21:31:11 2013//Tpkgsrc-2017Q4
+/patch-src_dialogueloader.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_dialogueloader__tlk.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_direction.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_imageloader.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_imageloader__png.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_imagemgr.h/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_intro.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_item.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_lzw_u6decode.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_menuitem_cpp/1.1/Wed May 23 06:35:17 2012//Tpkgsrc-2017Q4
+/patch-src_moongate.cpp/1.1/Mon Dec 24 06:28:16 2012//Tpkgsrc-2017Q4
+/patch-src_person.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_savegame.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_screen.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_settings.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_spell.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_stats.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_textview.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_u4file.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+/patch-src_weapon.cpp/1.1.1.1/Sun Jan  8 15:52:12 2012//Tpkgsrc-2017Q4
+D

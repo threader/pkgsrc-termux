@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2017/11/24 11:24:24 leot Exp $
+
+SHA1 (python/python-3.5.4-docs-html.tar.bz2) = a5ac35bf112cfb430a287fb0e6f0c6170bcfe70c
+RMD160 (python/python-3.5.4-docs-html.tar.bz2) = c690c56dca778f29e2ba5f79fbee2e1ec94f86e5
+SHA512 (python/python-3.5.4-docs-html.tar.bz2) = b1c6028e91bdb0a85a6765ab66c50574804f0aa799c6d13ed4163e6aaba98eeecfacd8576fbb6a721028fe84049ac1718497ad491f993973e3e410a660a10084
+Size (python/python-3.5.4-docs-html.tar.bz2) = 5747840 bytes

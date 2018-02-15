@@ -1,0 +1,13 @@
+/patch-Makefile.in/1.1/Sat Sep 12 22:55:18 2015//Tpkgsrc-2017Q4
+/patch-configs_certs_CA_CA.cnf/1.1/Sat Sep 12 22:55:18 2015//Tpkgsrc-2017Q4
+/patch-configs_certs_CA_burp__ca/1.1/Sat Sep 12 22:55:18 2015//Tpkgsrc-2017Q4
+/patch-configs_client_burp.conf/1.1/Sat Sep 12 22:55:18 2015//Tpkgsrc-2017Q4
+/patch-configs_server_burp.conf/1.1/Sat Sep 12 22:55:18 2015//Tpkgsrc-2017Q4
+/patch-configs_server_summary__script/1.1/Sat Sep 12 22:55:18 2015//Tpkgsrc-2017Q4
+/patch-manpages_Makefile.in/1.1/Sat Sep 12 22:55:18 2015//Tpkgsrc-2017Q4
+/patch-manpages_bedup.8/1.1/Sat Sep 12 22:55:18 2015//Tpkgsrc-2017Q4
+/patch-manpages_burp.8/1.1/Sat Sep 12 22:55:18 2015//Tpkgsrc-2017Q4
+/patch-manpages_burp__ca.8/1.1/Sat Sep 12 22:55:18 2015//Tpkgsrc-2017Q4
+/patch-src-xattr.c/1.1/Wed Sep 23 12:03:48 2015//Tpkgsrc-2017Q4
+/patch-src_server.c/1.1/Sat Dec 17 14:21:27 2016//Tpkgsrc-2017Q4
+D

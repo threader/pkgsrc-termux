@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.8 2014/05/31 07:28:57 obache Exp $
+
+* Change documantation path
+
+--- Makefile.in.orig	2007-03-07 02:41:10.000000000 +0000
++++ Makefile.in
+@@ -45,7 +45,7 @@ MYLIBDIR = @libdir@
+ MYBINDIR = @bindir@
+ MYMAN1DIR = @mandir@/man1
+ MYMAN3DIR = @mandir@/man3
+-MYDATADIR = @datadir@/$(PACKAGE)
++MYDATADIR = @datadir@/doc/$(PACKAGE)
+ MYPCDIR = @libdir@/pkgconfig
+ DESTDIR =
+ 

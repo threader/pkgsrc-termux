@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.3 2016/07/20 14:53:10 mef Exp $
+
+Convert pkgname to CPAN name
+
+--- Makefile.PL.orig	2015-05-06 12:01:31.000000000 +0900
++++ Makefile.PL	2015-05-06 12:03:03.000000000 +0900
+@@ -17,7 +17,7 @@ our $ACCEPT = 0;
+ our $WIN32  = ($^O eq 'MSWin32');
+ 
+ my %opts = (
+-    'NAME'	       => 'Template-Plugin-Latex',
++    'NAME'	       => 'Template::Plugin::Latex',
+     'VERSION_FROM' => 'lib/Template/Plugin/Latex.pm',
+     'PMLIBDIRS'    => [ 'lib' ], 
+     'PREREQ_PM'    => { 

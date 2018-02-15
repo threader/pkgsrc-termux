@@ -1,0 +1,245 @@
+<!-- $NetBSD: bulk.xml,v 1.25 2017/11/27 11:51:47 leot Exp $ -->
+
+<chapter id="bulk">
+<title>Creating binary packages for everything in pkgsrc (bulk
+builds)</title>
+
+<para>For a number of reasons you may want to build binary packages
+for a large selected set of packages in pkgsrc or even for all pkgsrc packages.
+For instance, when you have multiple machines that should run the same software,
+it is wasted time if they all build their packages themselves from source.
+Or you may want to build a list of packages you want and check them before
+deploying onto production system.
+There is a way of getting a set of binary packages:
+The bulk build system, or pbulk ("p" stands for "parallel").
+This chapter describes how to set it up.</para>
+
+<sect1 id="bulk.pre">
+<title>Preparations</title>
+
+<para>First of all, you have to decide whether you build all packages
+or a limited set of them. Full bulk builds usually consume a lot more resources,
+both space and time, than builds for some practical sets of packages.
+There exists a number of particularly heavy packages that are not actually
+interesting to a wide audience.
+<!-- approximate resource consumption for full bulk build is given in section <put a reference here/> -->
+For a limited bulk builds you need to make a list of packages you want to build.
+Note that all their dependencies will be built, so you don't need to track them manually.
+</para>
+
+<para>During bulk builds various packages are installed and deinstalled
+in <filename>/usr/pkg</filename> (or whatever <filename>LOCALBASE</filename> is),
+so make sure that you don't need any package during the builds.
+Essentially, you should provide a fresh system, either a chroot environment
+or something even more restrictive, depending on what the operating system provides,
+or dedicate the whole physical machine.
+As a useful side effect this makes sure that bulk builds cannot
+break anything in your system. There have been numerous cases where
+certain packages tried to install files outside the
+<filename>LOCALBASE</filename> or wanted to edit some files in
+<filename>/etc</filename>.
+</para>
+
+<!-- Developer-only information follows:
+<para>Since a bulk build takes several days or even weeks to finish, you
+should think about the setup before you start everything. Pay attention
+to at least the following points:</para>
+
+<itemizedlist>
+
+<listitem><para>If you want to upload the binary packages to
+ftp.NetBSD.org, make sure the setup complies to the requirements for binary
+packages:</para>
+
+<itemizedlist>
+
+<listitem><para>To end up on ftp.NetBSD.org, the packages must be built
+by a NetBSD developer on a trusted machine (that is, where you and only
+you have root access).</para></listitem>
+
+<listitem><para>Packages on ftp.NetBSD.org should only be created from
+the stable branches (like &pkgsrc.version.latest;), so that users browsing the available
+collections can see at a glance how old the packages
+are.</para></listitem>
+
+<listitem><para>The packages must be built as root, since some packages
+require set-uid binaries at runtime, and creating those packages as
+unprivileged user doesn't work well at the moment.</para></listitem>
+
+</itemizedlist>
+</listitem>
+
+</itemizedlist>
+-->
+</sect1>
+
+<sect1 id="bulk.pbulk">
+<title>Running a pbulk-style bulk build</title>
+
+<para>Running a pbulk-style bulk build works roughly as follows:</para>
+
+<itemizedlist>
+<listitem><para>First, build the pbulk infrastructure in a fresh pkgsrc location.</para></listitem>
+<listitem><para>Then, build each of the packages from a clean installation directory using the infrastructure.</para></listitem>
+</itemizedlist>
+
+<sect2 id="bulk.pbulk.conf">
+<title>Configuration</title>
+
+<para>To simplify configuration, we provide the helper script <filename>mk/pbulk/pbulk.sh</filename>.</para>
+
+<para>In order to use it, prepare a clear system (real one, chroot environment, jail, zone, virtual machine).
+Configure network access to fetch distribution files.
+Create a user with name "pbulk".</para>
+
+<para>Fetch and extract pkgsrc. Use a command like one of these:</para>
+
+<screen>
+&rprompt; <userinput>(cd /usr &amp;&amp; ftp -o - http://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)</userinput>
+&rprompt; <userinput>(cd /usr &amp;&amp; fetch -o - http://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)</userinput>
+&rprompt; <userinput>(cd /usr &amp;&amp; cvs -Q -z3 -d anoncvs@anoncvs.NetBSD.org:/cvsroot get -P pkgsrc)</userinput>
+</screen>
+
+<para>Or any other way that fits (e.g., curl, wget).</para>
+
+<para>Deploy and configure pbulk tools, e.g.:</para>
+
+<screen>
+&rprompt; <userinput>sh pbulk.sh -n # use native make, no bootstrap kit needed (for use on NetBSD)</userinput>
+&rprompt; <userinput>sh pbulk.sh -n -c mk.conf.frag # native, apply settings from given mk.conf fragment</userinput>
+&rprompt; <userinput>sh pbulk.sh -nlc mk.conf.frag # native, apply settings, configure for limited build</userinput>
+</screen>
+
+<note><para><filename>mk.conf.frag</filename> is a fragment of
+<filename>mk.conf</filename> that contains settings you want to
+apply to packages you build. For instance,</para>
+
+<programlisting>
+PKG_DEVELOPER=          yes     # perform more checks
+X11_TYPE=               modular # use pkgsrc X11
+SKIP_LICENSE_CHECK=     yes     # accept all licences (useful
+                                # when building all packages)
+</programlisting>
+</note>
+<!-- Think how to merge this or maintain short reference of useful settings.
+<itemizedlist>
+<listitem><para><literal><varname>WRKOBJDIR</varname>=/tmp/pbulk-outer</literal>, to keep <filename>/usr/pkgsrc</filename> free from any modifications,</para></listitem>
+<listitem><para><literal><varname>DISTDIR</varname>=/distfiles</literal>, to have only one directory in which all distfiles (for the infrastructure and for the actual packages) are downloaded,</para></listitem>
+<listitem><para><literal><varname>ACCEPTABLE_LICENSES</varname>+=...</literal>, to select some licenses additional to the usual Free/Open Source licenses that are acceptable to you,</para></listitem>
+</itemizedlist>
+-->
+
+<para>If configured for limited list, replace the list in <filename>/usr/pbulk/etc/pbulk.list</filename>
+with your list of packages, one per line without empty lines or comments. E.g.:</para>
+
+<programlisting>
+www/firefox
+mail/thunderbird
+misc/libreoffice4
+</programlisting>
+
+<para>At this point you can also review configuration in <filename>/usr/pbulk/etc</filename>
+and make final amendments, if wanted.</para>
+
+<para>Start it:</para>
+
+<screen>
+&rprompt; <userinput>/usr/pbulk/bin/bulkbuild</userinput>
+</screen>
+
+<para>After it finishes, you'll have <filename>/mnt</filename> filled with distribution files, binary packages, and reports,
+plain text summary in <filename>/mnt/bulklog/meta/report.txt</filename>
+</para>
+
+<note><para>The <filename>pbulk.sh</filename> script does not cover all possible use cases.
+While being ready to run, it serves as a good starting point to understand and build more complex setups.
+The script is kept small enough for better understanding.</para>
+</note>
+
+<note><para>The <filename>pbulk.sh</filename> script supports running
+unprivileged bulk build and helps configuring distributed bulk builds.</para>
+</note>
+
+</sect2>
+
+</sect1>
+
+<sect1 id="bulk.req">
+<title>Requirements of a full bulk build</title>
+
+<para>A complete bulk build requires lots of disk space. Some of the
+disk space can be read-only, some other must be writable. Some can be on
+remote filesystems (such as NFS) and some should be local. Some can be
+temporary filesystems, others must survive a sudden reboot.</para>
+
+<itemizedlist>
+
+<listitem><para>40 GB for the distfiles (read-write, remote, temporary)</para></listitem>
+
+<listitem><para>30 GB for the binary packages (read-write, remote, permanent)</para></listitem>
+
+<listitem><para>1 GB for the pkgsrc tree (read-only, remote, permanent)</para></listitem>
+
+<listitem><para>5 GB for <filename>LOCALBASE</filename> (read-write, local, temporary)</para></listitem>
+
+<listitem><para>10 GB for the log files (read-write, remote, permanent)</para></listitem>
+
+<listitem><para>5 GB for temporary files (read-write, local, temporary)</para></listitem>
+
+</itemizedlist>
+
+</sect1>
+
+  <sect1 id="creating-cdroms">
+    <title>Creating a multiple CD-ROM packages collection</title>
+
+    <para>After your pkgsrc bulk-build has completed, you may wish to
+    create a CD-ROM set of the resulting binary packages to assist
+    in installing packages on other machines.  The
+    <filename role="pkg">pkgtools/cdpack</filename> package provides
+    a simple tool for creating the ISO 9660 images.
+    <command>cdpack</command> arranges the packages on the CD-ROMs in a
+    way that keeps all the dependencies for a given package on the same
+    CD as that package.</para>
+
+    <sect2 id="cdpack-example">
+      <title>Example of cdpack</title>
+
+      <para>Complete documentation for cdpack is found in the cdpack(1)
+      man page. The following short example assumes that the binary
+      packages are left in
+      <filename>/usr/pkgsrc/packages/All</filename> and that
+      sufficient disk space exists in <filename>/u2</filename> to
+      hold the ISO 9660 images.</para>
+
+      <screen>
+&rprompt; <userinput>mkdir /u2/images</userinput>
+&rprompt; <userinput>pkg_add /usr/pkgsrc/packages/All/cdpack</userinput>
+&rprompt; <userinput>cdpack /usr/pkgsrc/packages/All /u2/images</userinput>
+      </screen>
+
+      <para>If you wish to include a common set of files
+      (<filename>COPYRIGHT</filename>, <filename>README</filename>,
+      etc.) on each CD in the collection, then you need to create a
+      directory which contains these files. e.g.</para>
+
+      <screen>
+&rprompt; <userinput>mkdir /tmp/common</userinput>
+&rprompt; <userinput>echo "This is a README" &gt; /tmp/common/README</userinput>
+&rprompt; <userinput>echo "Another file" &gt; /tmp/common/COPYING</userinput>
+&rprompt; <userinput>mkdir /tmp/common/bin</userinput>
+&rprompt; <userinput>echo "#!/bin/sh" &gt; /tmp/common/bin/myscript</userinput>
+&rprompt; <userinput>echo "echo Hello world" &gt;&gt; /tmp/common/bin/myscript</userinput>
+&rprompt; <userinput>chmod 755 /tmp/common/bin/myscript</userinput>
+      </screen>
+
+      <para>Now create the images:</para>
+
+      <screen>&rprompt; <userinput>cdpack -x /tmp/common /usr/pkgsrc/packages/All /u2/images</userinput></screen>
+
+      <para>Each image will contain <filename>README</filename>,
+      <filename>COPYING</filename>, and <filename>bin/myscript</filename>
+      in their root directories.</para>
+    </sect2>
+  </sect1>
+</chapter>

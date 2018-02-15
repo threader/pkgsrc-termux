@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.9 2014/03/12 10:04:50 wiz Exp $
+include/readline/chardefs.h
+include/readline/history.h
+include/readline/keymaps.h
+include/readline/readline.h
+include/readline/rlconf.h
+include/readline/rlstdc.h
+include/readline/rltypedefs.h
+include/readline/tilde.h
+info/history.info
+info/readline.info
+info/rluserman.info
+lib/libhistory.la
+lib/libreadline.la
+man/man3/history.3
+man/man3/readline.3
+share/doc/readline/CHANGES
+share/doc/readline/INSTALL
+share/doc/readline/README

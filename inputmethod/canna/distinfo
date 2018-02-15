@@ -1,0 +1,25 @@
+$NetBSD: distinfo,v 1.17 2017/07/22 17:53:16 maya Exp $
+
+SHA1 (Canna37p3.tar.bz2) = e39eece7c70c669dd46dd74b26121a60a2496fde
+RMD160 (Canna37p3.tar.bz2) = 33e5eb9e2dc144835db838612897e652acbc60ed
+SHA512 (Canna37p3.tar.bz2) = 82846f2393aa2654dd2c97a93178098b8bd11e5409b584447f1b6fdf303adacc9802e2293cafd98b68af8b69622625ed00aa9712bf270feaa119adfdf4211158
+Size (Canna37p3.tar.bz2) = 1263065 bytes
+SHA1 (patch-Canna.conf) = 81b46285a2b91c07b8497dc6669eb26552391a6c
+SHA1 (patch-Imakefile) = a70dee63ce9ce392b29b76df70479fee45e1a2b9
+SHA1 (patch-canna_widedef.h) = 711bc129ca58265fb7555b99f9fe7fa72bebd7fc
+SHA1 (patch-canuum_Imakefile) = 5f4e7970a92d514ec538e4591eaa4f46843654a3
+SHA1 (patch-canuum_canna.c) = a543a720fba9e2f770d6397d6b05352cfa58f300
+SHA1 (patch-canuum_config.h.in) = 98547954e459bd85e5b03fc86f34fb5d1e3eed4b
+SHA1 (patch-canuum_configure) = c08efb73bb7d93d8c539873c1337be54ed864902
+SHA1 (patch-canuum_configure.in) = a1a6a821b9e9f9baef450ad340cb57a6f20a6989
+SHA1 (patch-canuum_jhlp.c) = 1d15186608f116cc4fb3e6a9691bb1b701d8b0ec
+SHA1 (patch-canuum_printf.c) = c05ef114fae689855989d5d5eded2f734c62e12e
+SHA1 (patch-canuum_termcap.c) = 958015b3bf4e9f89703e198c1ed28d51ae3f8c4e
+SHA1 (patch-canuum_termio.c) = df9e68c8fb564ee4c4367acf6b042c253d17e525
+SHA1 (patch-cmd_cmd.tmpl) = f6ec97c273aa84eb84bdd24cbe16aaf7e696e041
+SHA1 (patch-dic_phono_Imakefile) = 4e1210517317b57796cad5b350de41e1f0d8157d
+SHA1 (patch-lib_RKC_convert.c) = f196cfa3db3ef163c1869ca6bfd3f22170997aef
+SHA1 (patch-lib_RK_dd.c) = 8055a2a3902e7d4d0cc1d782295c2879311750ec
+SHA1 (patch-lib_RK_ncache.c) = e792592500e7db85a6b2370c4ea9eb533d97bda0
+SHA1 (patch-lib_canna_keydef.c) = af14140f58bf8a6214a7fb9d5d73347c1b3cdd85
+SHA1 (patch-lib_canna_lisp.c) = 0ed74a04406ab21fb88ef94b182cff2ff3c793ef

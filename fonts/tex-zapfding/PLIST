@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 08:43:35 markd Exp $
+share/texmf-dist/dvips/zapfding/config.uzd
+share/texmf-dist/fonts/afm/adobe/zapfding/pzdr.afm
+share/texmf-dist/fonts/afm/urw/zapfding/uzdr.afm
+share/texmf-dist/fonts/map/dvips/zapfding/uzd.map
+share/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm
+share/texmf-dist/fonts/tfm/urw35vf/zapfding/uzdr.tfm
+share/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb
+share/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfm
+share/texmf-dist/tex/latex/zapfding/uuzd.fd

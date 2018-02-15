@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.2 2017/09/20 11:03:14 jperkin Exp $
+
+Use pkgsrc CFLAGS
+Do not strip by default
+
+--- Makefile.in.orig	2002-05-19 03:28:34.000000000 +0000
++++ Makefile.in
+@@ -15,9 +15,11 @@ OBJS = rename.o fixtoken.o misc.o @LIBOB
+ 
+ all: rename
+ 
++$(OBJS):
++	$(CC) $(CFLAGS) $(DEFINES) -c -o $@ $<
++
+ rename:	$(OBJS)
+-	$(CC) $(CFLAGS) -o $@ $^
+-	strip $@
++	$(CC) $(CFLAGS) $(DEFINES) -o $@ $^
+ 
+ static:	$(OBJS)
+ 	$(CC) $(CFLAGS) -static -o $@ $^

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.8 2017/06/21 07:21:39 wiz Exp $
+
+SHA1 (HTTP-Message-6.13.tar.gz) = afddff731603a6bb4ab9838c04a72942705660c5
+RMD160 (HTTP-Message-6.13.tar.gz) = 7fb24c373cb353b42726c3699a6e3608c714fcf2
+SHA512 (HTTP-Message-6.13.tar.gz) = 61e911b0bfec2322fa7a31748c17b38e07ecad006ebe249cc063fc68a5f1779765487b5942569575c558a76f8679e8e7f10992b8894cb6905aa66d9185b084d3
+Size (HTTP-Message-6.13.tar.gz) = 74413 bytes

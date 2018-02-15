@@ -1,0 +1,6 @@
+/patch-configure/1.6/Thu Jan 26 03:46:20 2017//Tpkgsrc-2017Q4
+/patch-src_audio_netbsd_SDL__netbsdaudio.c/1.1/Tue Sep 26 13:10:56 2017//Tpkgsrc-2017Q4
+/patch-src_joystick_bsd_SDL__sysjoystick.c/1.6/Mon Dec 25 00:18:39 2017//Tpkgsrc-2017Q4
+/patch-src_video_SDL__egl.c/1.5/Tue Sep 26 13:10:56 2017//Tpkgsrc-2017Q4
+/patch-src_video_x11_SDL__x11opengl.c/1.2/Thu Jan 26 03:46:20 2017//Tpkgsrc-2017Q4
+D

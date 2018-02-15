@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.10 2017/01/18 18:23:24 wiz Exp $
+
+SHA1 (xf86-video-tdfx-1.4.7.tar.bz2) = 536e3136b85e44deab36be3bf24983453ac0422a
+RMD160 (xf86-video-tdfx-1.4.7.tar.bz2) = 5e62ee026850bc8e3c2faf3bd9dee2043748a08e
+SHA512 (xf86-video-tdfx-1.4.7.tar.bz2) = 573eea7a6b05ed33a963f8e2f80ac1cb14632b7fd10d8d90da16c07db432e73641ced885ee979f68e4ead8429b39506b2f231ca4ac296a0780c9f6d223c3b405
+Size (xf86-video-tdfx-1.4.7.tar.bz2) = 372249 bytes

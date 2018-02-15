@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.8 2017/11/17 11:36:30 adam Exp $
+
+SHA1 (sassc-3.4.7.tar.gz) = 1ee4db9bbcf51ea56141ae229a96fbc93d64e1f3
+RMD160 (sassc-3.4.7.tar.gz) = ddd28449f30ce258e89794eb1556ce9979e5ca4c
+SHA512 (sassc-3.4.7.tar.gz) = f515241260557f17932ed2fc205375169c40d5b83c7a24577487426e33be607a5a8a90e58512a4e6d4ed3796f391b09ef6e148f9b293a76c73cea267dcf9440b
+Size (sassc-3.4.7.tar.gz) = 25834 bytes

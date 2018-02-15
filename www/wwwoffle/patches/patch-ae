@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.2 2016/08/21 09:53:55 bsiegert Exp $
+
+--- cache/search/hyperestraier/conf/estseek.conf.orig	2011-03-27 11:10:23.000000000 +0000
++++ cache/search/hyperestraier/conf/estseek.conf
+@@ -1,4 +1,4 @@
+-indexname: ../db
++indexname: ../db/index
+ tmplfile: estseek.tmpl
+ topfile: estseek.top
+ helpfile: estseek.help
+@@ -24,7 +24,11 @@
+ smplphrase: true
+ candetail: true
+ smlrvnum: 0
++smlrtune: 16 1024 4096
+ spcache:
++wildmax: 256
++qxpndcmd: 
++
+ deftitle: Hyper Estraier search for WWWOFFLE
+ attrwidth: 80
+ scancheck: 3

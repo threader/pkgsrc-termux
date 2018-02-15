@@ -1,0 +1,16 @@
+$NetBSD: patch-ap,v 1.3 2013/08/13 00:40:27 khorben Exp $
+
+--- Input/cdaudio/cdaudio.c.orig	2004-09-16 23:45:15.000000000 +0000
++++ Input/cdaudio/cdaudio.c
+@@ -579,7 +579,11 @@ is_mounted(const char *device_name)
+     FILE *mounts;
+     struct mntent *mnt;
+ #elif defined(HAVE_GETMNTINFO)
++#if defined(__NetBSD__) && defined(HAVE_STATVFS)
++    struct statvfs *fsp;
++#else
+     struct statfs *fsp;
++#endif
+     int entries;
+ #endif
+ 

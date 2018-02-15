@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.6 2016/01/01 12:03:03 wen Exp $
+
+SHA1 (R/e1071_1.6-7.tar.gz) = 5c495353a4cb4a557d92d824e4aa2ad608ac5c37
+RMD160 (R/e1071_1.6-7.tar.gz) = 36274a1d3bcd896f1885f4b45de9ed7a580c5e68
+SHA512 (R/e1071_1.6-7.tar.gz) = 08c11ffddc46ea500320ee30cb800be4da96ea4bc174d82a6cc1c42a11a1e37534b1607367fa776024f559b648ca72af55e11b500f418feae7ace2f059c47e72
+Size (R/e1071_1.6-7.tar.gz) = 600498 bytes

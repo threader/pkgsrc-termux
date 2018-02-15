@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/02/27 10:17:51 wiz Exp $
+
+SHA1 (libixion-0.12.2.tar.xz) = 0ba2fcf947368c6518a41160d524b206cdbac0d7
+RMD160 (libixion-0.12.2.tar.xz) = 92179c732925303aa026ba436a36f838153b3c05
+SHA512 (libixion-0.12.2.tar.xz) = 0a85120a08c79c73a252a997c8b3df461fe1f8ce8b2334aee0e50bfd887a440a220b44922edd18fbd402b1c8ea8be629e6181493bc618eda198f35159813ddcd
+Size (libixion-0.12.2.tar.xz) = 407280 bytes

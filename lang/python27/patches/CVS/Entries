@@ -1,0 +1,27 @@
+/patch-Include_pyerrors.h/1.2/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-Include_pyport.h/1.3/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-Lib_distutils_unixccompiler.py/1.4/Sat Jul  2 15:05:43 2016//Tpkgsrc-2017Q4
+/patch-Lib_multiprocessing_process.py/1.2/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-Makefile.pre.in/1.1/Sun Sep 17 09:54:53 2017//Tpkgsrc-2017Q4
+/patch-Modules___multiprocessing_multiprocessing.h/1.1/Mon May 22 16:45:19 2017//Tpkgsrc-2017Q4
+/patch-Modules___multiprocessing_semaphore.c/1.1/Mon Jul 11 12:17:13 2016//Tpkgsrc-2017Q4
+/patch-Modules__ssl.c/1.1/Sat Feb  6 11:25:09 2016//Tpkgsrc-2017Q4
+/patch-Modules_getaddrinfo.c/1.2/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-Modules_getpath.c/1.3/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-Modules_posixmodule.c/1.2/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-Modules_socketmodule.c/1.5/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-ab/1.4/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-ad/1.3/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-ae/1.3/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-ah/1.8/Sun Jan  8 19:45:33 2017//Tpkgsrc-2017Q4
+/patch-al/1.17/Sun May 24 07:44:07 2015//Tpkgsrc-2017Q4
+/patch-am/1.22/Thu Jan 26 23:10:35 2017//Tpkgsrc-2017Q4
+/patch-an/1.3/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-ao/1.6/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-av/1.3/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-aw/1.3/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-ax/1.6/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-az/1.5/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+/patch-pyconfig.h.in/1.5/Sun May 24 07:44:07 2015//Tpkgsrc-2017Q4
+/patch-xa/1.3/Fri Apr 24 03:01:36 2015//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.9 2017/03/20 21:23:49 mef Exp $
+
+SHA1 (Module-Install-RTx-0.39.tar.gz) = 24ff1a93dd92efc6f82933a6e1fc59ef5e1b220f
+RMD160 (Module-Install-RTx-0.39.tar.gz) = 4db6940b6db9e3735821ef24d1f1a8178c1c336c
+SHA512 (Module-Install-RTx-0.39.tar.gz) = 12bf70f295b85088426c31ac411a562f6c9f39ab562aab29cf90970442f56fd544b5156ba84206567356975a073421f678ecb090d15548dc9a55402c2a9e69fd
+Size (Module-Install-RTx-0.39.tar.gz) = 27343 bytes

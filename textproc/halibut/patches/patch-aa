@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.3 2016/04/01 11:41:42 jperkin Exp $
+
+Use pkgsrc layout.
+
+--- Makefile.orig	2014-12-19 10:03:18.000000000 +0000
++++ Makefile
+@@ -11,7 +11,7 @@
+ #    pattern rules
+ #  - we use .PHONY
+ 
+-prefix=/usr/local
++prefix=$(PREFIX)
+ exec_prefix=$(prefix)
+ bindir=$(exec_prefix)/bin
+ INSTALL=install -c
+@@ -76,7 +76,7 @@ CFLAGS += -DLOGALLOC
+ LIBS += -lefence
+ endif
+ 
+-all: halibut
++all: halibut doc
+ 
+ SRC := ../
+ 
+@@ -109,6 +109,9 @@ halibut: $(OBJECTS)
+ version.o: FORCE
+ 	$(CC) $(VDEF) -MD -c $(SRC)version.c
+ 
++doc:
++	$(MAKE) -C ../doc
++
+ spotless:: clean
+ 	rm -f *.d
+ 
+@@ -116,7 +119,8 @@ clean::
+ 	rm -f *.o halibut core
+ 
+ install:
+-	$(INSTALL) -m 755 halibut $(bindir)/halibut
++	mkdir -p $(DESTDIR)$(bindir)
++	$(INSTALL) -m 755 halibut $(DESTDIR)$(bindir)/halibut
+ 	$(MAKE) -C ../doc install prefix="$(prefix)" INSTALL="$(INSTALL)"
+ 
+ FORCE: # phony target to force version.o to be rebuilt every time

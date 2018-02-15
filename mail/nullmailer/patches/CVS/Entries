@@ -1,0 +1,10 @@
+/patch-Makefile.in/1.1/Sat Oct 28 04:51:06 2017//Tpkgsrc-2017Q4
+/patch-doc_nullmailer-queue.8/1.1/Sat Oct 28 04:51:06 2017//Tpkgsrc-2017Q4
+/patch-doc_nullmailer-send.8/1.1/Sat Oct 28 04:51:06 2017//Tpkgsrc-2017Q4
+/patch-lib_fdbuf_fdobuf.h/1.1/Fri Jan  2 04:38:20 2015//Tpkgsrc-2017Q4
+/patch-lib_selfpipe.cc/1.2/Sat Oct 28 04:51:06 2017//Tpkgsrc-2017Q4
+/patch-src_sendmail.cc/1.1/Sat Oct 28 04:51:06 2017//Tpkgsrc-2017Q4
+/patch-test_Makefile.am/1.1/Sat Oct 28 04:51:06 2017//Tpkgsrc-2017Q4
+/patch-test_Makefile.in/1.1/Sat Oct 28 04:51:06 2017//Tpkgsrc-2017Q4
+/patch-test_functions.in/1.1/Sat Oct 28 04:51:06 2017//Tpkgsrc-2017Q4
+D

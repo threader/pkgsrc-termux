@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.gtkspell,v 1.2 2016/06/25 14:33:11 jaapb Exp $
+${OCAML_SITELIB}/lablgtk2/gtkSpell.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/gtkSpell.cmx
+${OCAML_SITELIB}/lablgtk2/gtkSpell.ml
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablgtkspell.a
+${OCAML_SITELIB}/lablgtk2/lablgtkspell.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablgtkspell.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablgtkspell.cmxs
+${OCAML_SITELIB}/lablgtk2/liblablgtkspell.a
+${PLIST.stubs}${OCAML_SITELIB}/lablgtk2/dlllablgtkspell.so

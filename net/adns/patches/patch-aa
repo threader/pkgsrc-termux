@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.4 2015/01/29 09:47:03 mef Exp $
+
+date: 2001-11-20 04:39:05 +0900;  author: jlam;  state: Exp;
+Strongly buildlinkify and libtoolize (NetBSD's interesting contributions to
+technical vocabulary).
+
+--- client/Makefile.in.orig	2014-10-20 08:07:01.000000000 +0900
++++ client/Makefile.in	2015-01-29 18:30:26.000000000 +0900
+@@ -30,7 +30,7 @@ PROGRAMS=	adnslogres adnsheloex adnshost
+ PROGRAMS_LOCAL=	fanftest adnstest addrtext
+ PROGRAMS_ALL=	$(PROGRAMS) $(PROGRAMS_LOCAL)
+ 
+-STATIC_LIB=	../src/libadns.a
++STATIC_LIB=	../src/libadns.la
+ 
+ ifeq ($(ENABLE_DYNAMIC),elf)
+ DYNAMIC_DEP=	../dynamic/$(SHLIBFILE)
+@@ -60,13 +60,13 @@ all:		$(TARGETS)
+ install:	$(TARG_INSTALL)
+ 		mkdir -p $(bindir)
+ 		set -xe; for f in $(TARG_INSTALL); \
+-			do $(INSTALL_PROGRAM) $$f $(bindir)/$$f; done
++			do ${LIBTOOL} --mode=install $(INSTALL_PROGRAM) $$f $(bindir)/$$f; done
+ 
+ uninstall:
+ 		for f in $(TARGETS); do rm -f $(bindir)/$$f; done
+ 
+ adnshost:	$(ADH_OBJS) $(DYNAMIC_DEP)
+-		$(CC) $(LDFLAGS) $(ADH_OBJS) $(DYNAMIC_LINK) -o $@ $(LDLIBS)
++		$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) $(ADH_OBJS) $(DYNAMIC_LINK) -o $@ $(LDLIBS)
+ 
+ adnshost_s:	$(ADH_OBJS) $(STATIC_LIB)
+ 		$(CC) $(LDFLAGS) $(ADH_OBJS) $(STATIC_LIB) -o $@ $(LDLIBS)
+@@ -76,7 +76,7 @@ $(ALL_OBJS):		$(ADNSDIR)/adns.h ../src/c
+ adnsresfilter.o:	$(ADNSDIR)/tvarith.h
+ 
+ %:		%.o $(DYNAMIC_DEP)
+-		$(CC) $(LDFLAGS) $< $(DYNAMIC_LINK) -o $@ $(LDLIBS)
++		${LIBTOOL} --mode=link $(CC) $(LDFLAGS) $< $(DYNAMIC_LINK) -o $@ $(LDLIBS)
+ 
+ %_s:		%.o $(STATIC_LIB)
+ 		$(CC) $(LDFLAGS) $< $(STATIC_LIB) -o $@ $(LDLIBS)

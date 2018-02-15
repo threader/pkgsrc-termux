@@ -1,0 +1,17 @@
+/patch-ab/1.7/Thu Aug 16 00:14:43 2007//Tpkgsrc-2017Q4
+/patch-ac/1.1/Tue Feb  7 17:17:23 2006//Tpkgsrc-2017Q4
+/patch-ad/1.1/Thu Aug 16 00:14:43 2007//Tpkgsrc-2017Q4
+/patch-ae/1.1/Thu Aug 16 00:14:43 2007//Tpkgsrc-2017Q4
+/patch-af/1.1/Thu Aug 16 00:14:43 2007//Tpkgsrc-2017Q4
+/patch-src_btree.c/1.1/Thu Feb  9 00:18:01 2017//Tpkgsrc-2017Q4
+/patch-src_compress.c/1.1/Thu Feb  9 00:18:01 2017//Tpkgsrc-2017Q4
+/patch-src_compress.h/1.1/Thu Feb  9 00:18:01 2017//Tpkgsrc-2017Q4
+/patch-src_db__native.c/1.1/Thu Feb  9 00:18:01 2017//Tpkgsrc-2017Q4
+/patch-src_db__read.c/1.1/Thu Feb  9 00:18:01 2017//Tpkgsrc-2017Q4
+/patch-src_db__write.c/1.1/Thu Feb  9 00:18:01 2017//Tpkgsrc-2017Q4
+/patch-src_dump.c/1.1/Thu Feb  9 00:18:01 2017//Tpkgsrc-2017Q4
+/patch-src_index.c/1.1/Thu Feb  9 00:18:01 2017//Tpkgsrc-2017Q4
+/patch-src_merge.c/1.1/Thu Feb  9 00:18:01 2017//Tpkgsrc-2017Q4
+/patch-src_result__sort.c/1.1/Thu Feb  9 00:18:01 2017//Tpkgsrc-2017Q4
+/patch-src_search.c/1.1/Thu Feb  9 00:18:01 2017//Tpkgsrc-2017Q4
+D

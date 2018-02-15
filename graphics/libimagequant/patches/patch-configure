@@ -1,0 +1,72 @@
+$NetBSD: patch-configure,v 1.6 2017/12/20 11:52:23 dholland Exp $
+
+Remove unwanted compiler flags.
+Avoid leaving scratch files in /tmp.
+
+--- configure.orig	2017-11-27 15:38:43.000000000 +0000
++++ configure
+@@ -2,7 +2,7 @@
+ 
+ CONFIG="config.mk"
+ PREFIX="/usr/local"
+-VERSION=$(grep LIQ_VERSION_STRING libimagequant.h | grep -Eo "2\.[0-9.]+")
++VERSION=$(awk -F\" '/LIQ_VERSION_STRING/ {print $2}' libimagequant.h)
+ 
+ DEBUG=
+ QUIET=0
+@@ -124,7 +124,8 @@ if [ "$QUIET" -ne 1 ]; then
+ fi
+ 
+ # /tmp, because mingw has problems opening /dev/null and gives false negative
+-if ! echo "int main(){}" | "$CC" -xc -std=c99 -o /tmp/gcccheck - > /dev/null; then
++# not /tmp, because that's not safe
++if ! echo "int main(){}" | "$CC" -xc -std=c99 -o ./tmp-gcccheck - > /dev/null; then
+     error "Compiler" "$CC failed to compile anything (make sure it's installed and supports C99)"
+ fi
+ 
+@@ -136,7 +137,7 @@ cflags "-std=c99 -I."
+ 
+ # DEBUG
+ if [ -z "$DEBUG" ]; then
+-    cflags "-O3 -DNDEBUG"
++    cflags "-DNDEBUG"
+     status "Debug" "no"
+ else
+     cflags "-O1 -g"
+@@ -174,15 +175,9 @@ if [ -n "$OPENMP" ]; then
+     else
+         OPENMPFLAGS="-fopenmp"
+     fi
+-    if [[ "$("$CC" -xc -E $OPENMPFLAGS <(echo "#ifdef _OPENMP
+-           #include <omp.h>
+-           #endif") 2>&1)" =~ "omp_get_thread_num" ]]; then
+         cflags "$OPENMPFLAGS"
+         lflags "$OPENMPFLAGS"
+         status "OpenMP" "yes"
+-    else
+-        error "OpenMP" "not supported by compiler (please install a compiler that supports OpenMP (e.g. gcc) and specify it with the CC= argument)"
+-    fi
+ else
+     # silence warnings about omp pragmas
+     cflags "-Wno-unknown-pragmas"
+@@ -190,20 +185,10 @@ else
+     status "OpenMP" "no"
+ fi
+ 
+-# Cocoa
+-if [[ "$OSTYPE" =~ "darwin" ]]; then
+-    cflags "-mmacosx-version-min=10.6"
+-    lflags "-mmacosx-version-min=10.6"
+-fi
+ 
+ if [[ "$OSTYPE" =~ "darwin" ]]; then
+     SOLIBSUFFIX=dylib
+ 
+-    # Search Developer SDK paths, since Apple seems to have dropped the standard Unixy ones
+-    XCODE_CMD="xcode-select"
+-    XCODE_PATH=$($XCODE_CMD -p)
+-    DIRS+=("$XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include $XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib")
+-    DIRS+=("$XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include $XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib")
+ elif [[ "$OSTYPE" =~ "msys" ]]; then
+     SOLIBSUFFIX=dll
+ else

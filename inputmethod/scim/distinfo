@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.10 2015/11/03 22:13:38 agc Exp $
+
+SHA1 (scim-1.4.15.tar.gz) = 771d81b5c81164840f7d45c39165c2990cc809bd
+RMD160 (scim-1.4.15.tar.gz) = 07d4337ee0c33ba88ee94fd2dc76e71d1529c2df
+SHA512 (scim-1.4.15.tar.gz) = c7a04fdf33028557d9994c06df05e5d88ff18a90845c2699fdaec2e51dad9ff5a44adf7fa42779336441866a9f93d731903e36531743a0f62adb93320c91b4d4
+Size (scim-1.4.15.tar.gz) = 1374463 bytes
+SHA1 (patch-ab) = 1e10dfb2405849daceda2b3e15835f6a84d8990a
+SHA1 (patch-ac) = c8c4a54b1b6ffd82211616c3b99de1239b29c652
+SHA1 (patch-ad) = 2812ded533f29bd69bad180c33c81fd49e6213e6
+SHA1 (patch-ae) = 61909935f6226d2126392d0990f81243dc2bb933
+SHA1 (patch-af) = 010d4f31d684b8163672d2521ebff74230591d66
+SHA1 (patch-ag) = 2f97e1d9c9a96096524903c43ba4f7626956450d
+SHA1 (patch-ah) = abb315ac44a36e99d8c456b1cb3af9290a29be12
+SHA1 (patch-bb) = 69e001995a8caa65b885e438123a7efb0ad9995b
+SHA1 (patch-extras_immodules_agent_scim-bridge-agent-application.cpp) = 183b9d036a791d2004eac9655406f7501de2fb0d
+SHA1 (patch-extras_immodules_common_scim-bridge-output.h) = 65d32eb28ef92d8580352e333fa2e95243f5d987

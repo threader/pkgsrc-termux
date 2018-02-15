@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.4 2015/12/29 23:34:45 dholland Exp $
+
+Add needed include on NetBSD.
+
+--- native/jni/native-lib/cpnet.h.orig	2006-09-08 08:59:57.000000000 +0000
++++ native/jni/native-lib/cpnet.h
+@@ -43,6 +43,9 @@ exception statement from your version. *
+ #include <string.h>
+ 
+ #include <sys/socket.h>
++#ifdef __NetBSD__
++#include <netinet/in_systm.h>
++#endif
+ #include <netinet/in.h>
+ #include <netinet/ip.h>
+ 

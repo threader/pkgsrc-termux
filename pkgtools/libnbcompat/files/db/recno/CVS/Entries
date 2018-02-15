@@ -1,0 +1,11 @@
+/extern.h/1.1/Fri Oct 10 00:21:44 2008//Tpkgsrc-2017Q4
+/rec_close.c/1.2/Sun Sep  8 16:24:43 2013//Tpkgsrc-2017Q4
+/rec_delete.c/1.1/Fri Oct 10 00:21:44 2008//Tpkgsrc-2017Q4
+/rec_get.c/1.1/Fri Oct 10 00:21:44 2008//Tpkgsrc-2017Q4
+/rec_open.c/1.3/Sun Sep  8 16:24:43 2013//Tpkgsrc-2017Q4
+/rec_put.c/1.1/Fri Oct 10 00:21:44 2008//Tpkgsrc-2017Q4
+/rec_search.c/1.1/Fri Oct 10 00:21:44 2008//Tpkgsrc-2017Q4
+/rec_seq.c/1.1/Fri Oct 10 00:21:44 2008//Tpkgsrc-2017Q4
+/rec_utils.c/1.1/Fri Oct 10 00:21:44 2008//Tpkgsrc-2017Q4
+/recno.h/1.1/Fri Oct 10 00:21:44 2008//Tpkgsrc-2017Q4
+D

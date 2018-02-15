@@ -1,0 +1,18 @@
+/patch-Makefile.in/1.1/Fri Sep 18 08:46:20 2015//Tpkgsrc-2017Q4
+/patch-aa/1.5/Mon Apr 20 13:38:23 2015//Tpkgsrc-2017Q4
+/patch-am/1.7/Sun Jun  5 01:02:38 2016//Tpkgsrc-2017Q4
+/patch-lib-src_FileDialog_Makefile.am/1.2/Sun Jun  5 01:02:38 2016//Tpkgsrc-2017Q4
+/patch-lib-src_FileDialog_Makefile.in/1.1/Sun Jun  5 01:02:38 2016//Tpkgsrc-2017Q4
+/patch-lib-src_lib-widget-extra_Makefile.am/1.2/Sun Jun  5 01:02:39 2016//Tpkgsrc-2017Q4
+/patch-lib-src_libnyquist_nyquist_nyqsrc_sndread.c/1.2/Sun Jun  5 01:02:39 2016//Tpkgsrc-2017Q4
+/patch-lib-src_libnyquist_nyquist_sys_unix_switches.h/1.1/Tue Apr 21 01:33:39 2015//Tpkgsrc-2017Q4
+/patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h/1.1/Tue Apr 21 01:33:39 2015//Tpkgsrc-2017Q4
+/patch-lib-src_portaudio-v19_Makefile.in/1.1/Tue Sep 29 04:49:55 2015//Tpkgsrc-2017Q4
+/patch-lib-src_portmixer_src-extra_Makefile.am/1.1/Fri Sep 18 21:19:07 2015//Tpkgsrc-2017Q4
+/patch-lib-src_sbsms_src-extra_Makefile.am/1.1/Fri Sep 18 21:19:07 2015//Tpkgsrc-2017Q4
+/patch-src_FFmpeg.h/1.1/Sun Jun  5 01:02:39 2016//Tpkgsrc-2017Q4
+/patch-src_effects_NoiseRemoval.cpp/1.2/Mon Apr 20 13:38:23 2015//Tpkgsrc-2017Q4
+/patch-src_effects_VST_VSTEffect.cpp/1.1/Mon Apr 20 13:38:23 2015//Tpkgsrc-2017Q4
+/patch-src_effects_vamp_LoadVamp.cpp/1.1/Sat Jul 16 01:32:51 2016//Tpkgsrc-2017Q4
+/patch-src_import_ImportFLAC.cpp/1.1/Sat Jul 16 01:32:51 2016//Tpkgsrc-2017Q4
+D

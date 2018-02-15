@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.10 2017/03/18 13:54:23 adam Exp $
+
+SHA1 (dvdisaster-0.79.5.tar.bz2) = 23ccf697031280adb5bc3e17a0d5def0421fc28d
+RMD160 (dvdisaster-0.79.5.tar.bz2) = fda87eea610a7882bb01416e4b5452a1b4c2e16d
+SHA512 (dvdisaster-0.79.5.tar.bz2) = 8630d4389983307afc3faa5b4256f531ded370f84ec35d4a363853dc7d79e5e15ee0b81bf64f4b88f57fe6176537df8195f83acf23e770d991c700b7408dd1f5
+Size (dvdisaster-0.79.5.tar.bz2) = 8224726 bytes
+SHA1 (patch-memtrack.c) = f0456f7140bf4cc08c16597beec070a200ca2d10
+SHA1 (patch-rs03-create.c) = 5d3274dc893f91c0e943ebdc29b1a876ca1e2007
+SHA1 (patch-scripts_bash-based-configure) = bf36275921b024e7b4b182c7bb1f980b74d95aee

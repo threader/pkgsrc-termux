@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.2 2017/03/13 05:22:05 adam Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/musicbrainzngs/__init__.py
+${PYSITELIB}/musicbrainzngs/__init__.pyc
+${PYSITELIB}/musicbrainzngs/__init__.pyo
+${PYSITELIB}/musicbrainzngs/caa.py
+${PYSITELIB}/musicbrainzngs/caa.pyc
+${PYSITELIB}/musicbrainzngs/caa.pyo
+${PYSITELIB}/musicbrainzngs/compat.py
+${PYSITELIB}/musicbrainzngs/compat.pyc
+${PYSITELIB}/musicbrainzngs/compat.pyo
+${PYSITELIB}/musicbrainzngs/mbxml.py
+${PYSITELIB}/musicbrainzngs/mbxml.pyc
+${PYSITELIB}/musicbrainzngs/mbxml.pyo
+${PYSITELIB}/musicbrainzngs/musicbrainz.py
+${PYSITELIB}/musicbrainzngs/musicbrainz.pyc
+${PYSITELIB}/musicbrainzngs/musicbrainz.pyo
+${PYSITELIB}/musicbrainzngs/util.py
+${PYSITELIB}/musicbrainzngs/util.pyc
+${PYSITELIB}/musicbrainzngs/util.pyo

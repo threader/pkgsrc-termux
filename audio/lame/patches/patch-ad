@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.5 2017/12/04 08:20:37 he Exp $
+
+Add <float.h> include.
+
+--- libmp3lame/machine.h.orig	2012-02-07 14:04:51.000000000 +0000
++++ libmp3lame/machine.h
+@@ -131,6 +131,7 @@ char   *strchr(), *strrchr();
+ # include <float.h>
+ # define FLOAT_MAX FLT_MAX
+ #else
++# include <float.h>
+ # ifndef FLOAT
+ typedef float FLOAT;
+ #  ifdef FLT_MAX

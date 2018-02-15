@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.7 2015/11/04 00:35:08 agc Exp $
+
+SHA1 (libbind-6.0.tar.gz) = 4664646238cd3602df168da1e9bc9591d3f566b2
+RMD160 (libbind-6.0.tar.gz) = bfafac89a455a05202763f6e10f292978085d811
+SHA512 (libbind-6.0.tar.gz) = a9a244bd56dafcb3b65a9b4712cf10465c6b8c681ac6b2506ebfe56ec7aa41b4306e6f8fbea199f2bb449fff5a862170cd3f1b56f7e55dff50e08611d7ca5e63
+Size (libbind-6.0.tar.gz) = 757162 bytes
+SHA1 (patch-aa) = 7b781478cdc5bf5e665ee61c85d8da872298db14
+SHA1 (patch-ab) = 181cd18ed571b064e13fc83b97cb1f8cc86d5fc2
+SHA1 (patch-config.threads.in) = e6df8706b9ff3251dbf91284c4b19397a4ca05b3
+SHA1 (patch-configure.in) = 6d1549d5b5a63c51e6d47e557b59d819ecf43824
+SHA1 (patch-doc_Makefile.in) = 0ebc227322e3bd10b5b9a242073539868f440ba2

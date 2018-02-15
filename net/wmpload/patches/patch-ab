@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.4 2017/07/15 14:10:52 wiz Exp $
+
+--- Imakefile.orig	2000-02-01 07:49:01.000000000 +0000
++++ Imakefile
+@@ -6,6 +6,7 @@ XCOMM
+ include osdefs.mk
+ DEPLIBS = $(DEPXLIB)
+ LOCAL_LIBRARIES = $(XPMLIB) $(XLIB)
++LOCAL_LDFLAGS=	$(LDFLAGS)
+ SYS_LIBRARIES   = MathLibrary
+ HEADERS = wmpload.h
+ VER = 0.9.5
+@@ -13,7 +14,7 @@ DEFINES = -DVERSION="\"$(VER)\"" $(OSDEF
+ 
+ ComplexProgramTarget(wmpload)
+ 
+-distclean: clean	
++distclean:: clean	
+ 	$(RM) Makefile osdefs.mk core \
+ 	wmpload-$(VER).tar.gz \
+ 	wmpload-$(VER)-1.i386.rpm \

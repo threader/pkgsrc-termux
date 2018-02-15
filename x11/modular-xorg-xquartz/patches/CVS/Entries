@@ -1,0 +1,15 @@
+/patch-fb_fb.h/1.1/Thu Oct  1 12:55:09 2015//Tpkgsrc-2017Q4
+/patch-fb_fbpict.c/1.1/Thu Oct  1 12:55:09 2015//Tpkgsrc-2017Q4
+/patch-fb_fbpict.h/1.1/Thu Oct  1 12:55:09 2015//Tpkgsrc-2017Q4
+/patch-fb_fbscreen.c/1.1/Thu Oct  1 12:55:09 2015//Tpkgsrc-2017Q4
+/patch-fb_fbtrap.c/1.1/Thu Oct  1 12:55:09 2015//Tpkgsrc-2017Q4
+/patch-hw_xfree86_Makefile.am/1.1/Thu Oct  1 12:55:09 2015//Tpkgsrc-2017Q4
+/patch-hw_xquartz_GL_indirect.c/1.1/Thu Oct  1 12:55:09 2015//Tpkgsrc-2017Q4
+/patch-hw_xquartz_X11Controller.m/1.1/Thu Oct  1 12:55:09 2015//Tpkgsrc-2017Q4
+/patch-hw_xquartz_pbproxy_Makefile.in/1.1/Thu Oct  1 12:55:09 2015//Tpkgsrc-2017Q4
+/patch-mi_miexpose.c/1.1/Thu Oct  1 12:55:09 2015//Tpkgsrc-2017Q4
+/patch-render_mipict.c/1.1/Thu Oct  1 12:55:09 2015//Tpkgsrc-2017Q4
+/patch-render_mipict.h/1.1/Thu Oct  1 12:55:09 2015//Tpkgsrc-2017Q4
+/patch-render_mitrap.c/1.1/Thu Oct  1 12:55:09 2015//Tpkgsrc-2017Q4
+/patch-render_mitri.c/1.1/Thu Oct  1 12:55:09 2015//Tpkgsrc-2017Q4
+D

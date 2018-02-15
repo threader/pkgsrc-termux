@@ -1,0 +1,24 @@
+$NetBSD: patch-stunnel.conf-sample.in,v 1.2 2017/08/11 01:30:23 schmonz Exp $
+
+Set pkgsrc defaults: uid, gid, chroot, pidfile.
+
+--- tools/stunnel.conf-sample.in.orig	2016-07-05 21:27:57.000000000 +0000
++++ tools/stunnel.conf-sample.in
+@@ -8,11 +8,14 @@
+ ; **************************************************************************
+ 
+ ; It is recommended to drop root privileges if stunnel is started by root
+-;setuid = nobody
+-;setgid = @DEFAULT_GROUP@
++setuid = @STUNNEL_USER@
++setgid = @STUNNEL_GROUP@
++
++; Default chroot path
++chroot = @localstatedir@/chroot/stunnel/
+ 
+ ; PID file is created inside the chroot jail (if enabled)
+-;pid = @localstatedir@/run/stunnel.pid
++pid = /pid/stunnel.pid
+ 
+ ; Debugging stuff (may be useful for troubleshooting)
+ ;foreground = yes

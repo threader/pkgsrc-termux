@@ -1,0 +1,9 @@
+/patch-configure/1.1/Tue Jan 28 18:00:41 2014//Tpkgsrc-2017Q4
+/patch-gnulib-lib-base64.h/1.1/Sat Jan 25 02:54:27 2014//Tpkgsrc-2017Q4
+/patch-gnulib-lib-fflush.c/1.2/Sat Jan 25 02:54:27 2014//Tpkgsrc-2017Q4
+/patch-gnulib-lib-fseeko.c/1.2/Sat Jan 25 02:54:27 2014//Tpkgsrc-2017Q4
+/patch-src-network-bridge_driver.c/1.1/Sat Jul 26 20:25:04 2014//Tpkgsrc-2017Q4
+/patch-src-rpc-virnetmessage.c/1.1/Sat Jan 25 02:54:27 2014//Tpkgsrc-2017Q4
+/patch-src-util-virutil.c/1.1/Sat Jan 25 02:54:27 2014//Tpkgsrc-2017Q4
+/patch-tools--virsh-secret.c/1.1/Sat Jan 25 02:54:27 2014//Tpkgsrc-2017Q4
+D

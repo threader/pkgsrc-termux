@@ -1,0 +1,24 @@
+$NetBSD: distinfo,v 1.11 2015/12/29 23:34:43 dholland Exp $
+
+SHA1 (STk-4.0.1.tar.gz) = 50dc98c2b64db1c9cca54411cb406feb4cb57600
+RMD160 (STk-4.0.1.tar.gz) = 58ad3c66f77a6ab33db5d4ca9f2510d50b6b6f0d
+SHA512 (STk-4.0.1.tar.gz) = c849077edac124f28e2a3531d818234416e143aab994e9ba55c4bbce90bdc8c0d40c3fbe9dd5af6bfe8a10892fe72dac7215a05cb95574ba03426175b26f9c47
+Size (STk-4.0.1.tar.gz) = 3673684 bytes
+SHA1 (patch-aa) = 9fc50b3a2167dba7515270f7a9d8fd20bcb8e5c9
+SHA1 (patch-ab) = 3d50bb10bc3bd3d34509d2557f52df367373f3d2
+SHA1 (patch-ac) = 1cf5e558abf54488580b6f1631491280039bb45c
+SHA1 (patch-ad) = 5e47ad16fce466834adae0f98ee4cbd1685371b1
+SHA1 (patch-ae) = 42fb25d29636d0f8ca7cbb19f0854a1ee2a5cfdc
+SHA1 (patch-af) = 22540960a77955648c7d04ce8b953fb02d60f528
+SHA1 (patch-ag) = 9814cdcd39c5ad63b886df36b0947e6465fe7de2
+SHA1 (patch-ah) = f9646c94409699afce808806aec14c8d32ca9f30
+SHA1 (patch-ai) = e5c5c48878618112b259f359b584b25a3b183967
+SHA1 (patch-aj) = f50c8039e5d84f3c7383e1283cb327904ccf4646
+SHA1 (patch-ak) = e98ebe1bb4f5cd0aa4bd7e9cea2970121743c01a
+SHA1 (patch-al) = f3c6999e285b88c845089810cabcfadffa77f690
+SHA1 (patch-am) = fbe1a9f119c5065910b194b66cb009dacea0fef3
+SHA1 (patch-an) = 9af8f3fe7edd8462690ad85bdc3332fdc3058ecb
+SHA1 (patch-ao) = 44f2059d04f69f959ca3364a55d0e586688dc793
+SHA1 (patch-ap) = 0d248d4d64435af4f97c25bae347e57143f0db69
+SHA1 (patch-aq) = 02b49edc7fe804db622acd614872dbdace5816b3
+SHA1 (patch-ar) = 2efbf0b68aa90a1b9b9db14652cdde3c02013e41

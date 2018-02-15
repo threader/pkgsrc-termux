@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:12 jperkin Exp $
+man/man7/tags.7
+man/man8/unfsd.8
+sbin/unfsd
+share/examples/unfs3/exports

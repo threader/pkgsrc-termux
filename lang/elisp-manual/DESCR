@@ -1,0 +1,16 @@
+Herein is found the programming manual for elisp (Emacs Lisp), the
+dialect of Lisp used to extend (and write applications inside) GNU
+Emacs.
+
+Because Emacs Lisp is designed for use in an editor, it has special
+features for scanning and parsing text as well as features for
+handling files, buffers, displays, subprocesses, and so on. All Emacs
+editing commands are available.
+
+This manual attempts to be a full description of Emacs Lisp.  For a
+beginner's introduction to Emacs Lisp, see ``An Introduction to Emacs
+Lisp Programming,'' by Bob Chassell. Also see ``The GNU Emacs Manual''.
+
+This package contains the manual corresponding to Emacs 21.x. For
+Emacs 22 and up, the Lisp manual is included in the main Emacs
+distribution and consequently in the main Emacs package.

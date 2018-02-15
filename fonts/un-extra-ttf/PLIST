@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.3 2014/06/01 16:35:37 wiz Exp $
+share/fonts/X11/TTF/UnBom.ttf
+share/fonts/X11/TTF/UnJamoBatang.ttf
+share/fonts/X11/TTF/UnJamoDotum.ttf
+share/fonts/X11/TTF/UnJamoNovel.ttf
+share/fonts/X11/TTF/UnJamoSora.ttf
+share/fonts/X11/TTF/UnPen.ttf
+share/fonts/X11/TTF/UnPenheulim.ttf
+share/fonts/X11/TTF/UnPilgia.ttf
+share/fonts/X11/TTF/UnShinmun.ttf
+share/fonts/X11/TTF/UnTaza.ttf
+share/fonts/X11/TTF/UnVada.ttf
+share/fonts/X11/TTF/UnYetgul.ttf

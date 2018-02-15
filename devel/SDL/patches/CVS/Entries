@@ -1,0 +1,13 @@
+/patch-aa/1.16/Sun Aug 17 09:24:47 2014//Tpkgsrc-2017Q4
+/patch-ac/1.17/Fri Sep 14 13:20:20 2012//Tpkgsrc-2017Q4
+/patch-src_audio_bsd_SDL__bsdaudio.c/1.1/Sun May 31 09:17:53 2015//Tpkgsrc-2017Q4
+/patch-src_audio_dma_SDL__dmaaudio.c/1.1/Fri Oct 27 01:28:53 2017//Tpkgsrc-2017Q4
+/patch-src_audio_sun_SDL__sunaudio.c/1.2/Fri Sep 14 13:20:20 2012//Tpkgsrc-2017Q4
+/patch-src_joystick_bsd_SDL__sysjoystick.c/1.6/Mon Dec 25 00:18:39 2017//Tpkgsrc-2017Q4
+/patch-src_video_quartz_SDL__QuartzVideo.h/1.1/Mon Apr 14 19:27:46 2014//Tpkgsrc-2017Q4
+/patch-src_video_wscons_SDL__wsconsevents.c/1.10/Fri Jan 30 12:02:49 2015//Tpkgsrc-2017Q4
+/patch-src_video_wscons_SDL__wsconsevents__c.h/1.1/Thu Jan 29 01:56:23 2015//Tpkgsrc-2017Q4
+/patch-src_video_wscons_SDL__wsconsvideo.c/1.5/Sun May 31 09:17:53 2015//Tpkgsrc-2017Q4
+/patch-src_video_wscons_SDL__wsconsvideo.h/1.2/Thu Jan 29 11:28:50 2015//Tpkgsrc-2017Q4
+/patch-src_video_x11_SDL_x11video.c/1.1/Mon Feb 20 14:55:59 2012//Tpkgsrc-2017Q4
+D

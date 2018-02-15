@@ -1,0 +1,21 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.4 2014/06/01 16:35:36 wiz Exp $
+
+You must configure your X server to use the new fonts. Add
+these to your /etc/X11/XF86Config. Make sure the TTF and Type1
+font settings are the first FontPath lines.
+
+Section "Files"
+	FontPath     "${PREFIX}/share/fonts/X11/TTF/"
+	FontPath     "${X11BASE}/share/fonts/X11/Type1/"
+	...
+EndSection
+
+Section "Module"
+	...
+	Load  "type1"
+	Load  "freetype"
+	...
+EndSection
+
+===========================================================================

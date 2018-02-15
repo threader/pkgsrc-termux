@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.10 2016/09/15 14:42:48 gdt Exp $
+
+SHA1 (guile-gnome-platform-2.16.4.tar.gz) = 7d230aeaf17e01aab2f82a264e9172b4509ebf8f
+RMD160 (guile-gnome-platform-2.16.4.tar.gz) = 691cf35dae07863e2c814d128a57ed618dc82b2f
+SHA512 (guile-gnome-platform-2.16.4.tar.gz) = c9415eb8d28aec5c743377e37da1b870e5db52a06317a57abde867e6a3f9cb8f62756e25ee186c858efa49f830f3ddd275b26a53c3aedee6a60f33028a822d82
+Size (guile-gnome-platform-2.16.4.tar.gz) = 2598608 bytes

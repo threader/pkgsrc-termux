@@ -1,0 +1,10 @@
+/patch-Makefile/1.2/Thu Feb  5 16:46:17 2015//Tpkgsrc-2017Q4
+/patch-Makefile.common/1.1/Wed Feb  4 22:56:43 2015//Tpkgsrc-2017Q4
+/patch-audio_audio__utils.c/1.1/Tue Apr 21 17:18:01 2015//Tpkgsrc-2017Q4
+/patch-audio_audio__utils.h/1.1/Tue Apr 21 17:18:01 2015//Tpkgsrc-2017Q4
+/patch-audio_drivers__resampler_cc__resampler.c/1.1/Tue Apr 21 17:18:01 2015//Tpkgsrc-2017Q4
+/patch-audio_drivers__resampler_sinc.c/1.1/Tue Apr 21 17:18:01 2015//Tpkgsrc-2017Q4
+/patch-performance.c/1.1/Tue Apr 21 17:18:01 2015//Tpkgsrc-2017Q4
+/patch-qb_config.libs.sh/1.1/Wed Feb  4 22:56:43 2015//Tpkgsrc-2017Q4
+/patch-qb_qb.libs.sh/1.1/Wed Feb  4 22:56:43 2015//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.5 2016/01/11 19:37:43 leot Exp $
+
+o Turn off optimizations present in DEBUG
+o Link against (generic) curses
+o Honors user's CFLAGS and LDFLAGS
+
+--- Makefile.orig	2016-01-11 18:19:51.000000000 +0000
++++ Makefile
+@@ -8,18 +8,18 @@ VERS=1.14
+ 
+ # Use -g to compile the program for debugging.
+ #DEBUG = -g -DDEBUG
+-DEBUG = -O2
++#DEBUG = -O2
+ 
+ # Use -p to profile the program.
+ #PROFILE = -p -DPROFILE
+ PROFILE =
+ 
+-LIBS = -lncurses
++LIBS = -lcurses
+ 
+ # You shouldn't have to modify anything below this line.
+ 
+ # There's a dynamic format in the object-display routines; suppress the warning
+-CFLAGS = $(DEBUG) $(PROFILE) -Wall -Wno-format-security
++CFLAGS += $(DEBUG) $(PROFILE) -Wall -Wno-format-security
+ 
+ FILES = \
+ 	attack.c \
+@@ -58,7 +58,7 @@ OFILES = \
+ all: vms-empire
+ 
+ vms-empire: $(OFILES)
+-	$(CC) $(PROFILE) -o vms-empire $(OFILES) $(LIBS)
++	$(CC) $(PROFILE) -o vms-empire $(OFILES) $(LIBS) $(LDFLAGS)
+ 
+ attack.o:: extern.h empire.h
+ compmove.o:: extern.h empire.h

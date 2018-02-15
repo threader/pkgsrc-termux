@@ -1,0 +1,30 @@
+# $NetBSD: Makefile,v 1.6 2016/11/25 15:50:13 fhajny Exp $
+
+DISTNAME=	LMDB-0.9.18
+PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
+CATEGORIES=	databases
+MASTER_SITES=	${MASTER_SITE_GITHUB:=LMDB/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://symas.com/mdb/
+COMMENT=	Symas Lightning Memory-Mapped Database
+LICENSE=	modified-bsd
+
+GITHUB_PROJECT=	${PKGBASE}
+GITHUB_TAG=	${DISTNAME:S/-/_/}
+WRKSRC=		${WRKDIR}/${PKGBASE}-${GITHUB_TAG}
+
+USE_GCC_RUNTIME=	yes
+USE_TOOLS+=		gmake
+
+BUILD_DIRS=		libraries/liblmdb
+MAKE_FLAGS+=		XCFLAGS=-D_SEM_SEMUN_UNDEFINED
+INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
+
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	include
+INSTALLATION_DIRS+=	lib
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+.include "../../mk/bsd.pkg.mk"

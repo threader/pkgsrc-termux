@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.7 2017/07/09 14:51:09 schmonz Exp $
+
+SHA1 (Ouch-0.0500.tar.gz) = 6a0896e802d7066cf318ab2e200527393f901938
+RMD160 (Ouch-0.0500.tar.gz) = cffaa847cfdb21f2775cf550a6d16446dd9c84f3
+SHA512 (Ouch-0.0500.tar.gz) = 29b8a64c114fda3ee04ca8a855f7cd1dae94acc2e0b768c020ed4e15645a1639d9656e7de742a7876eaa4523591acb24ce75636333ce49a14806e311d8839963
+Size (Ouch-0.0500.tar.gz) = 14331 bytes

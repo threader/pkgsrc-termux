@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.4 2017/09/23 12:18:50 tnn Exp $
+bin/bin2fex
+bin/fex2bin
+bin/sunxi-bootinfo
+bin/sunxi-fel
+bin/sunxi-fexc
+bin/sunxi-nand-part
+bin/sunxi-pio

@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.2 2015/05/03 15:01:11 spz Exp $
+${EMULSUBDIRSLASH}usr/lib/libpthread.so.1.0

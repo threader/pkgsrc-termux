@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2017/12/15 07:53:41 adam Exp $
+
+SHA1 (nose2-0.7.3.tar.gz) = abf36bb4e87c852ec9918b501cabc8b58ec494e8
+RMD160 (nose2-0.7.3.tar.gz) = c87775d3ef31be6d57d3729e94e3a77ed3d66191
+SHA512 (nose2-0.7.3.tar.gz) = ea24a5b09e35db2a9f86c4a544ad21d4d23dd2c02eec0f1d4dd043e78b52f684ef0dc91caa096ef26acf197cd4e81a519aa05a83e1cbd3e71e56682f81c027ad
+Size (nose2-0.7.3.tar.gz) = 139822 bytes

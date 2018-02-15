@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.4 2015/09/13 09:04:52 taca Exp $
+${GEM_HOME}/cache/facade-${PKGVERSION}.gem
+${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/MANIFEST
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/certs/djberg96_pub.pem
+${GEM_LIBDIR}/facade.gemspec
+${GEM_LIBDIR}/lib/facade.rb
+${GEM_LIBDIR}/test/test_facade.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

@@ -1,0 +1,29 @@
+$NetBSD: patch-blas_Makefile,v 1.3 2017/11/10 16:18:47 khorben Exp $
+
+Use LIBTOOL.
+Add support for LDFLAGS.
+
+--- blas/Makefile.orig	2017-03-28 22:22:33.000000000 +0000
++++ blas/Makefile
+@@ -7,16 +7,16 @@ FILES = dnrm2.o daxpy.o ddot.o dscal.o
+ CFLAGS = $(OPTFLAGS)
+ FFLAGS = $(OPTFLAGS)
+ 
+-blas: $(FILES) $(HEADERS)
+-	$(AR) blas.a $(FILES)
+-	$(RANLIB) blas.a
++blas: $(FILES:.o=.lo) $(HEADERS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o libblas.la $(LDFLAGS) $(FILES:.o=.lo)
+ 
+ clean:
+ 	- rm -f *.o
+ 	- rm -f *.a
+ 	- rm -f *~
+ 
+-.c.o:
+-	$(CC) $(CFLAGS) -c $*.c
++.SUFFIXES: .lo
++.c.lo:
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $<
+ 
+ 

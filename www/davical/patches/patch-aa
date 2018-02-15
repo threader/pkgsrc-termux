@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.3 2017/06/18 15:27:24 taca Exp $
+
+Set pkgsrc AWLDIR.
+
+--- dba/create-database.sh.orig	2017-01-23 22:04:46.000000000 +0000
++++ dba/create-database.sh
+@@ -12,7 +12,7 @@ INSTALL_NOTE_FN="`mktemp -t tmp.XXXXXXXX
+ 
+ 
+ # Candidate locations of the AWL directory
+-awldirs="${DBADIR}/../../awl
++AWLDIR="@LIBAWLPATH@"
+ /usr/share/awl
+ /usr/share/php/awl
+ /usr/local/share/awl"
+@@ -184,7 +184,7 @@ rm "${INSTALL_NOTE_FN}"
+ cat <<FRIENDLY
+ *  The password for the 'admin' user has been set to '${ADMINPW}'
+ 
+-Thanks for trying DAViCal! Check the configuration in /etc/davical/config.php.
++Thanks for trying DAViCal! Check the configuration in @PKG_SYSCONFDIR@/config.php.
+ For help, look at our website and wiki, or visit #davical on irc.oftc.net.
+ 
+ FRIENDLY

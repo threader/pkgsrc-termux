@@ -1,0 +1,11 @@
+# $NetBSD: DEINSTALL,v 1.3 2013/11/17 16:45:32 minskim Exp $
+
+case "${STAGE}" in
+DEINSTALL)
+	${RM} -f \
+		@PKG_SYSCONFDIR@/ls-R \
+		@VARBASE@/lib/texmf/ls-R \
+		@TEXMFLOCAL@/ls-R \
+		@PREFIX@/share/texmf-dist/ls-R \
+	;;
+esac

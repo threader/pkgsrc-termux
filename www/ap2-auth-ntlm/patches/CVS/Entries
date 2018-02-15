@@ -1,0 +1,5 @@
+/patch-mod_ntlm.c/1.1.1.1/Fri Oct 17 19:24:10 2008//Tpkgsrc-2017Q4
+/patch-ntlmssp.inc.c/1.2/Mon Feb  9 18:26:46 2009//Tpkgsrc-2017Q4
+/patch-smbencrypt.inc.c/1.1.1.1/Fri Oct 17 19:24:10 2008//Tpkgsrc-2017Q4
+/patch-smblib.inc.c/1.1.1.1/Fri Oct 17 19:24:10 2008//Tpkgsrc-2017Q4
+D

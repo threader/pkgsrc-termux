@@ -1,0 +1,50 @@
+$NetBSD: patch-bc,v 1.2 2015/12/25 00:44:37 dholland Exp $
+
+- remove unnecessary use of <utmp.h>
+- don't provide own strlcpy/strlcat unless needed
+- use ctype.h correctly
+
+--- pppd/utils.c.orig	2004-11-04 11:02:26.000000000 +0100
++++ pppd/utils.c
+@@ -41,7 +41,6 @@
+ #include <syslog.h>
+ #include <netdb.h>
+ #include <time.h>
+-#include <utmp.h>
+ #include <pwd.h>
+ #include <sys/param.h>
+ #include <sys/types.h>
+@@ -76,6 +75,7 @@ struct buffer_info {
+     int len;
+ };
+ 
++#ifndef HAS_STRLFUNCS
+ /*
+  * strlcpy - like strcpy/strncpy, doesn't overflow destination buffer,
+  * always leaves destination null-terminated (for len > 0).
+@@ -113,6 +113,7 @@ strlcat(dest, src, len)
+ 
+     return dlen + strlcpy(dest + dlen, src, (len > dlen? len - dlen: 0));
+ }
++#endif
+ 
+ 
+ /*
+@@ -197,7 +198,7 @@ vslprintf(buf, buflen, fmt, args)
+ 	    width = va_arg(args, int);
+ 	    c = *++fmt;
+ 	} else {
+-	    while (isdigit(c)) {
++	    while (isdigit((unsigned char)c)) {
+ 		width = width * 10 + c - '0';
+ 		c = *++fmt;
+ 	    }
+@@ -209,7 +210,7 @@ vslprintf(buf, buflen, fmt, args)
+ 		c = *++fmt;
+ 	    } else {
+ 		prec = 0;
+-		while (isdigit(c)) {
++		while (isdigit((unsigned char)c)) {
+ 		    prec = prec * 10 + c - '0';
+ 		    c = *++fmt;
+ 		}

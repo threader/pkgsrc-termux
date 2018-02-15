@@ -1,0 +1,22 @@
+/patch-avilib_avidump.c/1.1/Sat Nov 21 17:14:26 2015//Tpkgsrc-2017Q4
+/patch-configure/1.2/Mon May 16 19:41:17 2016//Tpkgsrc-2017Q4
+/patch-encode_encode_lavc.c/1.2/Sat Nov 21 17:14:26 2015//Tpkgsrc-2017Q4
+/patch-export_aud__aux.c/1.1/Sat Nov 21 17:14:26 2015//Tpkgsrc-2017Q4
+/patch-export_export__im.c/1.1/Mon May 16 19:41:17 2016//Tpkgsrc-2017Q4
+/patch-export_export_ffmpeg.c/1.2/Sat Nov 21 17:14:26 2015//Tpkgsrc-2017Q4
+/patch-export_ffmpeg_cfg.c/1.2/Sat Nov 21 17:14:26 2015//Tpkgsrc-2017Q4
+/patch-export_ffmpeg_cfg.h/1.1/Sat Nov 21 17:14:26 2015//Tpkgsrc-2017Q4
+/patch-filter_filter__compare.c/1.1/Mon May 16 19:41:17 2016//Tpkgsrc-2017Q4
+/patch-filter_filter__logo.c/1.1/Mon May 16 19:41:17 2016//Tpkgsrc-2017Q4
+/patch-filter_filter__logoaway.c/1.1/Mon May 16 19:41:17 2016//Tpkgsrc-2017Q4
+/patch-filter_filter__pp.c/1.1/Sat Nov 21 17:14:26 2015//Tpkgsrc-2017Q4
+/patch-filter_subtitler_load_font.c/1.1/Fri Dec 13 20:54:03 2013//Tpkgsrc-2017Q4
+/patch-import_decode_lavc.c/1.2/Sat Nov 21 17:14:26 2015//Tpkgsrc-2017Q4
+/patch-import_import__im.c/1.1/Mon May 16 19:41:17 2016//Tpkgsrc-2017Q4
+/patch-import_import__imlist.c/1.1/Mon May 16 19:41:17 2016//Tpkgsrc-2017Q4
+/patch-import_import_ffmpeg.c/1.2/Sat Nov 21 17:14:26 2015//Tpkgsrc-2017Q4
+/patch-import_nuv_import__nuv.c/1.1/Sat Nov 21 17:14:26 2015//Tpkgsrc-2017Q4
+/patch-import_probe_ffmpeg.c/1.2/Sat Nov 21 17:14:26 2015//Tpkgsrc-2017Q4
+/patch-import_probe_im.c/1.1/Mon May 16 19:41:17 2016//Tpkgsrc-2017Q4
+/patch-libtc_tcavcodec.h/1.2/Sat Nov 21 17:14:26 2015//Tpkgsrc-2017Q4
+D

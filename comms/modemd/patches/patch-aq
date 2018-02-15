@@ -1,0 +1,31 @@
+$NetBSD: patch-aq,v 1.4 2013/09/10 14:15:11 joerg Exp $
+
+--- incoming/connect.c.orig	1996-04-30 07:02:43.000000000 +0000
++++ incoming/connect.c
+@@ -49,14 +49,16 @@ static char copyright[] =
+ #include <sys/fcntl.h>
+ #include <sys/types.h>
+ #include <sys/socket.h>
++#include <arpa/inet.h>
+ #include <netinet/in.h>
+ #include <syslog.h>
+ #include <unistd.h>
+ #include <sys/time.h>
+-#include <sys/errno.h>
++#include <errno.h>
+ #include <netdb.h>
+ #include <sys/stat.h>
+ #include <sys/resource.h>
++#include <stdlib.h>
+ 
+ static void pump PROTO ((int, int));
+ 
+@@ -85,7 +87,7 @@ int tcp_connect (tty)
+   name.sin_family = AF_INET;
+ 
+   /* Allow numeric or symbolic port names... */
+-  if (se = getservbyname (modemcap.connect_port, "tcp"))
++  if ((se = getservbyname (modemcap.connect_port, "tcp")))
+     name.sin_port = se -> s_port;
+   else
+     name.sin_port = htons (atoi (modemcap.connect_port));

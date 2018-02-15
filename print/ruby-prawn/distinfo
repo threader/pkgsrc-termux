@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.10 2017/03/20 14:52:20 taca Exp $
+
+SHA1 (prawn-2.2.2.gem) = 0f714088c390b029e09460b0f3c480e43ddc3772
+RMD160 (prawn-2.2.2.gem) = 7ea946b1a4f4f407ed1f44df587647fc3d0d4261
+SHA512 (prawn-2.2.2.gem) = 59c1fab27099decbbe7eb2b954069131ccdea2c92cdbdac8227fe1036fb9f0af6d2d377777b9c9ab9fff75491f9967b7f169fde66b2a0b3db1a9b4b1ef1104f1
+Size (prawn-2.2.2.gem) = 347648 bytes

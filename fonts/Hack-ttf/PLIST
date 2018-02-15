@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.2 2015/10/14 14:37:43 leot Exp $
+share/fonts/X11/TTF/Hack-Bold.ttf
+share/fonts/X11/TTF/Hack-BoldItalic.ttf
+share/fonts/X11/TTF/Hack-Italic.ttf
+share/fonts/X11/TTF/Hack-Regular.ttf

@@ -1,0 +1,49 @@
+$NetBSD: patch-Makefile,v 1.2 2016/04/21 14:21:08 jperkin Exp $
+
+Install to DESTDIR and fix install flags.
+
+--- Makefile.orig	1999-10-18 17:15:22.000000000 +0000
++++ Makefile
+@@ -16,11 +16,11 @@
+ #     VDIR - aqui será colocado o banco de verbos
+ #     MANDIR - aqui será colocada a man page do conjugue
+ #
+-prefix=/usr/local
++prefix=${PREFIX}
+ BINDIR=$(prefix)/bin
+-HASHDIR=/usr/lib/ispell
++HASHDIR=$(prefix)/lib
+ VDIR=$(prefix)/lib
+-MANDIR=$(prefix)/man
++MANDIR=$(prefix)/${PKGMANDIR}
+ AWK=/usr/bin/gawk
+ 
+ #
+@@ -72,19 +72,19 @@ br.hash: v.ispell
+ # Instala o br.hash
+ #
+ install-hash: br.ispell
+-	install -d $(HASHDIR)
+-	install --mode=644 br.hash br.aff $(HASHDIR)
++	install -d ${DESTDIR}$(HASHDIR)
++	install -m 644 br.hash br.aff ${DESTDIR}$(HASHDIR)
+ 
+ #
+ # Instala o conjugue
+ #
+ install-conjugue: conjugue
+-	install -d $(BINDIR)
+-	install --mode=755 conjugue $(BINDIR)/conjugue
+-	install -d $(VDIR)
+-	install --mode=644 verbos $(VDIR)/verbos
+-	install -d $(MANDIR)/man1
+-	install --mode=644 conjugue.1 $(MANDIR)/man1/conjugue.1
++	install -d ${DESTDIR}$(BINDIR)
++	install -m 755 conjugue ${DESTDIR}$(BINDIR)/conjugue
++	install -d ${DESTDIR}$(VDIR)
++	install -m 644 verbos ${DESTDIR}$(VDIR)/verbos
++	install -d ${DESTDIR}$(MANDIR)/man1
++	install -m 644 conjugue.1 ${DESTDIR}$(MANDIR)/man1/conjugue.1
+ 
+ #
+ # instala tudo

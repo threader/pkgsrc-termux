@@ -1,0 +1,95 @@
+$NetBSD: patch-ab,v 1.6 2016/03/31 17:06:18 agc Exp $
+
+Patch digest man page for rdigest functionality
+
+--- digest.1.orig	2016-03-31 09:37:14.729218330 -0700
++++ digest.1	2016-03-31 09:40:35.110066257 -0700
+@@ -24,20 +24,21 @@
+ .\" THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ .\"
+ .Dd February 16, 2016
+-.Dt DIGEST 1
++.Dt RDIGEST 1
+ .Os
+ .Sh NAME
+-.Nm digest
+-.Nd calculate message digests
++.Nm rdigest
++.Nd calculate message digests of files and directories
+ .Sh SYNOPSIS
+ .Nm
+ .Op Fl "Vt"
++.Op Fl x Ar directory
+ .Ar algorithm
+ .Op Ar
+ .Sh DESCRIPTION
+ The
+ .Nm
+-utility calculates message digests of files or,
++utility calculates message digests of files, directories, or,
+ if no file is specified, standard input.
+ .Pp
+ It can also run self tests via the
+@@ -46,6 +47,12 @@
+ for the
+ .Dv SHA3
+ set of digests.
++The
++.Fl x
++option can be used as many times as required to indicate directories
++not to be included in a directory's hash.
++This allows you to skip, eg, CVS subdirectories in a given tree, which
++can have relatively volatile contents not pertinent to the hash.
+ .Pp
+ The
+ .Fl V
+@@ -111,12 +118,32 @@
+ algorithm implementations, which are located in the standard
+ C library, and was designed to be scalable as new message digest
+ algorithms are developed.
++The checksum for a directory is implemented as the hash over a list of
++one or two hashes for each of the items in the tree.
++.Bl -bullet
++.It
++For a file, the string
++.Dq f \& 
++along with the path make up the data for one hash, and the contents of
++the file is used for the second hash.
++.It
++For a symbolic link, the string
++.Dq l \&
++along with the path to the symbolic link make up the data for one
++hash, and the target of the symbolic link is used for the second hash.
++.It
++For a directory, the string
++.Dq d \&
++along with the path make up the data for one hash.
++There is no second hash for a directory.
++.El
+ .Pp
+ The
+ .Nm
+ utility exits 0 on success, and \*[Gt]0 if an error occurs.
+ .Sh SEE ALSO
+ .Xr cksum 1 ,
++.Xr digest 1 ,
+ .Xr md5 3 ,
+ .Xr rmd160 3 ,
+ .Xr sha1 3
+@@ -124,9 +151,13 @@
+ The
+ .Nm
+ utility first appeared in
+-.Nx 1.6 .
++.Nx 2.0 .
+ .Sh AUTHORS
+ The
++.Xr digest 1
++utility was written by Alistair G. Crooks \*[Lt]agc@netbsd.org\*[Gt].
+ .Nm
+-utility was written by
+-.An Alistair G. Crooks Aq Mt agc@netbsd.org .
++was implemented by Andrew Brown \*[Lt]atatat@netbsd.org\*[Gt] as a
++patch to
++.Xr digest 1
++to add recursive capabilities.

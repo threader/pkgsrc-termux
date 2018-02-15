@@ -1,0 +1,49 @@
+$NetBSD: patch-ab,v 1.5 2013/12/08 00:35:28 jakllsch Exp $
+
+--- test.c.orig	2013-08-10 02:29:44.000000000 +0000
++++ test.c
+@@ -14,7 +14,6 @@
+ #include "stdint.h"
+ #include "cpuid.h"
+ #include "smp.h"
+-#include <sys/io.h>
+ 
+ extern struct cpu_ident cpu_id;
+ extern volatile int    mstr_cpu;
+@@ -29,6 +28,36 @@ void rand_seed( unsigned int seed1, unsi
+ ulong rand(int me);
+ void poll_errors();
+ 
++static inline void outb(unsigned char value, unsigned short int port)
++{
++	asm __volatile__ (
++		"outb %b0,%w1\n\t"
++		: :"a" (value), "Nd" (port)
++	);
++}
++
++static __inline void outb_p(unsigned char value, unsigned short int port)
++{
++	asm __volatile__ (
++		"outb %b0,%w1\n\t"
++		"outb %%al,$0x80\n\t"
++		: : "a" (value), "Nd" (port)
++	);
++}
++
++static __inline unsigned char inb_p(unsigned short int port)
++{
++	unsigned char v;
++
++  	asm __volatile__ (
++		"inb %w1,%0\n\t"
++		"outb %%al,$0x80\n\t"
++		: "=a" (v)
++		: "Nd" (port)
++	);
++	return v;
++}
++
+ static inline ulong roundup(ulong value, ulong mask)
+ {
+ 	return (value + mask) & ~mask;

@@ -1,0 +1,23 @@
+# $NetBSD: Makefile.common,v 1.10 2014/10/05 16:41:08 wiz Exp $
+#
+# used by multimedia/flashplayer/Makefile
+
+DISTNAME=	flash-0.4.10
+CATEGORIES=	multimedia
+MASTER_SITES=	http://www.swift-tools.com/Flash/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://gplflash.sourceforge.net/
+
+USE_LANGUAGES=	c c++
+
+DISTINFO_FILE=	${.CURDIR}/../libflash/distinfo
+PATCHDIR=	${.CURDIR}/../libflash/patches
+
+post-extract: remove-subpackages
+
+remove-subpackages:
+	${RM} -rf ${WRKSRC}/Jpeg ${WRKSRC}/Zlib
+
+.include "../../mk/oss.buildlink3.mk"

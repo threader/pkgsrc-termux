@@ -1,0 +1,38 @@
+# $NetBSD: Makefile.common,v 1.28 2015/07/04 16:18:31 joerg Exp $
+#
+# used by fonts/cyberbit-ttf/Makefile
+# used by fonts/cyberbase-ttf/Makefile
+
+DISTNAME=	# empty
+CATEGORIES=	fonts
+MASTER_SITES=	http://ftp.netscape.com/pub/communicator/extras/fonts/windows/
+DISTFILES=	${FONT_FILE} ReadMe.htm
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.bitstream.com/
+LICENSE=	cyberbit-ttf-license
+
+RESTRICTED=	Redistribution not permitted; single user license only.
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
+NO_BIN_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+
+USE_TOOLS+=     unzip
+
+DIST_SUBDIR=	cyberbit-ttf
+
+EXTRACT_ONLY=		${FONT_FILE}
+#EXTRACT_OPTS_ZIP=	-Laq
+
+NO_CONFIGURE=	YES
+NO_BUILD=	YES
+
+FONTS_DIRS.ttf=	${PREFIX}/share/fonts/X11/TTF
+DOCDIR=		${PREFIX}/share/doc/html/cyberbit-ttf
+
+do-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.ttf}
+	${INSTALL_DATA} ${WRKDIR}/*.ttf ${DESTDIR}${FONTS_DIRS.ttf}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${_DISTDIR}/ReadMe.htm ${DESTDIR}${DOCDIR}

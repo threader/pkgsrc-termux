@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.15 2014/06/01 16:35:32 wiz Exp $
+share/fonts/X11/TTF/Bandal.ttf
+share/fonts/X11/TTF/Bangwool.ttf
+share/fonts/X11/TTF/Eunjin.ttf
+share/fonts/X11/TTF/EunjinNakseo.ttf
+share/fonts/X11/TTF/Guseul.ttf
+share/doc/alee-ttf/COPYING

@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.9 2015/02/15 14:04:59 ryoon Exp $
+
+--- configure.orig	2014-05-14 04:33:43.000000000 +0000
++++ configure
+@@ -17640,7 +17640,7 @@ if ${ac_cv_lib_pthread_pthread_exit+:} f
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpthread  $LIBS"
++LIBS="${PTHREAD_LDFLAGS}  $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -17675,7 +17675,7 @@ if test "x$ac_cv_lib_pthread_pthread_exi
+ #define HAVE_LIBPTHREAD 1
+ _ACEOF
+ 
+-  LIBS="-lpthread $LIBS"
++  LIBS="${PTHREAD_LDFLAGS} $LIBS"
+ 
+ fi
+ 

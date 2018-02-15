@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:11 markd Exp $
+share/texmf-dist/tex/latex/lettrine/lettrine.cfg
+share/texmf-dist/tex/latex/lettrine/lettrine.sty
+share/texmf-dist/tex/latex/lettrine/optfile.cfl
+share/texmf-dist/tex/latex/lettrine/pacl.cfl
+share/texmf-dist/tex/latex/lettrine/padl.cfl
+share/texmf-dist/tex/latex/lettrine/pzc2.cfl
+share/texmf-dist/tex/latex/lettrine/pzc3.cfl

@@ -1,0 +1,33 @@
+$NetBSD: patch-af,v 1.9 2014/03/14 15:59:29 adam Exp $
+
+--- defs.in.orig	2012-06-06 00:58:38.000000000 +0000
++++ defs.in
+@@ -48,12 +48,13 @@ ABI_PATCH        = @ABI_PATCH@
+ # to insufficient; you are better off rerunning the
+ # configure script so that all uses are set correctly.
+ #
+-SPOOL		= @SPOOL@
+-SBIN		= @SBIN@
+-BIN		= @BIN@
+-LIBDATA		= @LIBDATA@
+-LIBDIR		= @LIBDIR@
+-LIBEXEC		= @LIBEXEC@
++PREFIX		= ${DESTDIR}@PREFIX@
++SPOOL		= ${DESTDIR}@SPOOL@
++SBIN		= ${DESTDIR}@SBIN@
++BIN		= ${DESTDIR}@BIN@
++LIBDATA		= ${DESTDIR}@LIBDATA@
++LIBDIR		= ${DESTDIR}@LIBDIR@
++LIBEXEC		= ${DESTDIR}@LIBEXEC@
+ FONTMAP		= @FONTMAP@
+ FONTPATH	= @FONTPATH@
+ SENDMAIL	= @SENDMAIL@
+@@ -328,7 +329,7 @@ INCLDIR		= /usr/include
+ # MANSYS	subdirectory for server & server-related apps
+ # MANFILES	subdirectory for file format info 
+ #
+-MAN		= @MANDIR@
++MAN		= ${DESTDIR}@MANDIR@
+ MANAPPS		= @MANAPPS@
+ MANSYS		= @MANSYS@
+ MANFILES	= @MANFILES@

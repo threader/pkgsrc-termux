@@ -1,0 +1,19 @@
+$NetBSD: patch-ai,v 1.4 2014/05/14 02:28:13 rodent Exp $
+--- languages/english/english.3.orig	Thu Apr 28 22:53:07 2005
++++ languages/english/english.3
+@@ -5175,6 +5175,7 @@ dirk
+ dirndl
+ disaccredit
+ disafforest
++disappear
+ disbranch
+ disbud
+ discalced
+@@ -5209,7 +5210,6 @@ dispersity
+ dispersoid
+ displayable
+ disproven
+-dissappear
+ disseminule
+ dissentious
+ dissepiment

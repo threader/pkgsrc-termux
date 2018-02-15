@@ -1,0 +1,23 @@
+$NetBSD: patch-ak,v 1.3 2014/05/31 07:28:57 obache Exp $
+
+* defined in xqdbm.h.
+
+--- plus/xadbm.h.orig	2006-01-01 05:23:58.000000000 +0000
++++ plus/xadbm.h
+@@ -72,6 +72,7 @@ private:
+  * @param latter the latter datum.
+  * @return reference to a temporary instance.
+  */
++#if 0
+ qdbm::Datum qdbm::operator +(const qdbm::Datum& former, const qdbm::Datum& latter);
+ /**
+  * Temporary concatenation operator for Datum.
+@@ -87,7 +88,7 @@ qdbm::Datum qdbm::operator +(const qdbm:
+  * @return reference to a temporary instance.
+  */
+ qdbm::Datum qdbm::operator +(const char* str, const qdbm::Datum& datum);
+-
++#endif
+ 
+ 
+ /**

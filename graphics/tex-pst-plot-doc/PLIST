@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.4 2017/10/21 03:31:44 markd Exp $
+share/texmf-dist/doc/generic/pst-plot/Changes
+share/texmf-dist/doc/generic/pst-plot/README
+share/texmf-dist/doc/generic/pst-plot/data/Data.dat
+share/texmf-dist/doc/generic/pst-plot/data/LSM.data
+share/texmf-dist/doc/generic/pst-plot/data/LSM2.data
+share/texmf-dist/doc/generic/pst-plot/data/boxplot.data
+share/texmf-dist/doc/generic/pst-plot/data/data.data
+share/texmf-dist/doc/generic/pst-plot/data/data1.dat
+share/texmf-dist/doc/generic/pst-plot/data/data3.data
+share/texmf-dist/doc/generic/pst-plot/data/dataMul.data
+share/texmf-dist/doc/generic/pst-plot/data/demo.txt
+share/texmf-dist/doc/generic/pst-plot/data/demo0.data
+share/texmf-dist/doc/generic/pst-plot/data/demo1.data
+share/texmf-dist/doc/generic/pst-plot/data/demo2.data
+share/texmf-dist/doc/generic/pst-plot/data/demo3.data
+share/texmf-dist/doc/generic/pst-plot/data/dotmatrix.data
+share/texmf-dist/doc/generic/pst-plot/data/pst-plot-doc.eps
+share/texmf-dist/doc/generic/pst-plot/data/pstricks-add-data9.data
+share/texmf-dist/doc/generic/pst-plot/data/test.data
+share/texmf-dist/doc/generic/pst-plot/pst-plot-doc.bib
+share/texmf-dist/doc/generic/pst-plot/pst-plot-doc.pdf
+share/texmf-dist/doc/generic/pst-plot/pst-plot-doc.tex

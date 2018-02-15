@@ -1,0 +1,10 @@
+/DESCR/1.2/Sun Aug 26 14:23:49 2012//Tpkgsrc-2017Q4
+/MESSAGE/1.1.1.1/Wed Mar  7 14:25:00 2012//Tpkgsrc-2017Q4
+/PLIST/1.14/Mon Jul 31 13:42:06 2017//Tpkgsrc-2017Q4
+/buildlink3.mk/1.1.1.1/Wed Mar  7 14:25:00 2012//Tpkgsrc-2017Q4
+/builtin.mk/1.1.1.1/Wed Mar  7 14:25:00 2012//Tpkgsrc-2017Q4
+/options.mk/1.10/Sat Sep 21 16:00:34 2013//Tpkgsrc-2017Q4
+D/files////
+D/patches////
+/Makefile/1.71.6.1/Sat Jan 20 02:38:48 2018//Tpkgsrc-2017Q4
+/distinfo/1.49.6.1/Sat Jan 20 02:38:48 2018//Tpkgsrc-2017Q4

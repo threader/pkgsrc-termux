@@ -1,0 +1,19 @@
+/patch-aa/1.3/Sun Apr 22 21:42:42 2012//Tpkgsrc-2017Q4
+/patch-ab/1.1/Tue Feb 17 19:13:46 2009//Tpkgsrc-2017Q4
+/patch-ac/1.1/Tue Feb 17 19:13:46 2009//Tpkgsrc-2017Q4
+/patch-compiler_AsmStmt.h/1.1/Fri Nov 25 21:48:02 2011//Tpkgsrc-2017Q4
+/patch-compiler_Bytecode.h/1.1/Fri Nov 25 21:48:02 2011//Tpkgsrc-2017Q4
+/patch-compiler_CallStmt.h/1.1/Fri Nov 25 21:48:02 2011//Tpkgsrc-2017Q4
+/patch-compiler_Compiler.h/1.1/Fri Nov 25 21:48:02 2011//Tpkgsrc-2017Q4
+/patch-compiler_Expr.h/1.1/Fri Nov 25 21:48:02 2011//Tpkgsrc-2017Q4
+/patch-compiler_FunctionDef.h/1.1/Fri Nov 25 21:48:02 2011//Tpkgsrc-2017Q4
+/patch-compiler_Mapping.h/1.1/Fri Nov 25 21:48:02 2011//Tpkgsrc-2017Q4
+/patch-compiler_PreProc.h/1.1/Fri Nov 25 21:48:02 2011//Tpkgsrc-2017Q4
+/patch-compiler_Program.h/1.1/Fri Nov 25 21:48:02 2011//Tpkgsrc-2017Q4
+/patch-compiler_Scope.h/1.1/Fri Nov 25 21:48:02 2011//Tpkgsrc-2017Q4
+/patch-compiler_ScopeStmt.h/1.1/Fri Nov 25 21:48:02 2011//Tpkgsrc-2017Q4
+/patch-compiler_Stmt.h/1.1/Fri Nov 25 21:48:02 2011//Tpkgsrc-2017Q4
+/patch-compiler_SwitchStmt.h/1.1/Fri Nov 25 21:48:02 2011//Tpkgsrc-2017Q4
+/patch-nqc_CmdLine.h/1.1/Fri Nov 25 21:48:03 2011//Tpkgsrc-2017Q4
+/patch-platform_PSerial__unix.cpp/1.1/Wed Jul  5 20:23:39 2017//Tpkgsrc-2017Q4
+D

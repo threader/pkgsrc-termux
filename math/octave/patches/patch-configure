@@ -1,0 +1,78 @@
+$NetBSD: patch-configure,v 1.6 2017/08/01 11:06:18 maya Exp $
+
+install .oct loadable modules with INSTALL_LIB to avoid stripping them
+
+we pass and assume a given MACHINE_GNU_PLATFORM, but this package did not
+use this value due to an error.
+the guess it had for linux (x86_64-unknown-linux-gnu), seems to trample
+over our own tools:
+https://mail-index.netbsd.org/pkgsrc-users/2014/03/26/msg019464.html
+
+Allow overriding MKOCTFILE_F77 so we can provide the full path to gfortran
+(for building octave-forge packages like control)
+
+--- configure.orig	2016-11-13 15:22:50.000000000 +0000
++++ configure
+@@ -1971,6 +1971,7 @@ DEFAULT_PAGER
+ GNUPLOT
+ GHOSTSCRIPT
+ DESKTOP_FILE_INSTALL
++INSTALL_LIB
+ LN_S
+ TEXI2PDF
+ TEXI2DVI
+@@ -5938,7 +5939,7 @@ case $host_os in *\ *) host_os=`echo "$h
+     { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: configuring Octave for unknown system type" >&5
+ $as_echo "$as_me: WARNING: configuring Octave for unknown system type" >&2;}
+   fi
+-  canonical_host_type=$host
++  canonical_host_type=$host_alias
+ 
+   if test -z "$host_cpu"; then
+     host_cpu=unknown
+@@ -9211,8 +9212,9 @@ fi
+ 
+ 
+ 
++test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL}'
+ 
+-INSTALL_SCRIPT="${INSTALL}"
++test -z "$INSTALL_LIB" && INSTALL_LIB='${INSTALL_SCRIPT}'
+ 
+ 
+ 
+@@ -28323,7 +28325,12 @@ else
+ fi
+ 	  done
+ 	  ;;
+-	-[lLR]*)
++	-R*)
++	  ac_arg="-Wl,$ac_arg"
++	  shift
++	  set X $ac_arg "$@"
++	  ;;
++	-[lLR]*|-Wl*)
+ 	    ac_exists=false
+   for ac_i in $ac_cv_f77_libs; do
+     if test x"$ac_arg" = x"$ac_i"; then
+@@ -29516,13 +29523,13 @@ if test "$cross_compiling" = yes && test
+   MKOCTFILE_LD_CXX=`echo "$LD_CXX" | $SED "s,$CROSS_TOOL_PREFIX,,"`
+   MKOCTFILE_RANLIB=`echo "$RANLIB" | $SED "s,$CROSS_TOOL_PREFIX,,"`
+ else
+-  MKOCTFILE_AR="$AR"
+-  MKOCTFILE_CC="$CC"
+-  MKOCTFILE_CXX="$CXX"
+-  MKOCTFILE_DL_LD="$DL_LD"
+-  MKOCTFILE_F77="$F77"
+-  MKOCTFILE_LD_CXX="$LD_CXX"
+-  MKOCTFILE_RANLIB="$RANLIB"
++  MKOCTFILE_AR="${MKOCTFILE_AR-$AR}"
++  MKOCTFILE_CC="${MKOCTFILE_CC-$CC}"
++  MKOCTFILE_CXX="${MKOCTFILE_CXX-$CXX}"
++  MKOCTFILE_DL_LD="${MKOCTFILE_DL_LD-$DL_LD}"
++  MKOCTFILE_F77="${MKOCTFILE_F77-$F77}"
++  MKOCTFILE_LD_CXX="${MKOCTFILE_LD_CXX-$LD_CXX}"
++  MKOCTFILE_RANLIB="${MKOCTFILE_RANLIB-$RANLIB}"
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: defining CROSS_TOOL_PREFIX to be $CROSS_TOOL_PREFIX" >&5
+ $as_echo "$as_me: defining CROSS_TOOL_PREFIX to be $CROSS_TOOL_PREFIX" >&6;}

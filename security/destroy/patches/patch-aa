@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.4 2015/07/09 11:49:44 jperkin Exp $
+
+Use nbcompat.
+
+--- destroy.c.orig	2004-04-15 15:21:38.000000000 +0000
++++ destroy.c
+@@ -43,7 +43,12 @@
+ #include        <fcntl.h>
+ #include 	<unistd.h>
+ #include	<errno.h>
++#if defined(HAVE_NBCOMPAT_H)
++#include	<nbcompat.h>
++#include	<nbcompat/fts.h>
++#else
+ #include	<fts.h>
++#endif
+ 
+ #define		MAXBUFFSIZE	8192
+ 
+@@ -196,6 +201,7 @@ void traverse(char **argv, int fflag, in
+ 				}
+ 				break;
+ 			
++#ifdef S_IFWHT
+ 			case S_IFWHT:  		/* whiteout */
+ 				if(fflag) {
+ 					if(!qflag) {
+@@ -206,6 +212,7 @@ void traverse(char **argv, int fflag, in
+ 					fprintf(stderr, "Whiteout: \t %s \t Skipping... no '-f' flag set!\n", p->fts_accpath);
+ 				}
+ 				break;
++#endif
+ 
+ 			default: 
+ 				if(!qflag) {

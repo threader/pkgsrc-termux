@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.3 2016/04/21 16:11:16 jperkin Exp $
+
+--- Makefile.in.orig	1997-04-11 13:13:32.000000000 +0000
++++ Makefile.in
+@@ -22,9 +22,10 @@ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ BINDIR=$(exec_prefix)/bin
+ LIBDIR=$(exec_prefix)/lib
+-ETCDIR=$(exec_prefix)/etc
++ETCDIR=@sysconfdir@
++EGDIR=@datadir@/examples/qterm
+ INCDIR=$(prefix)/include
+-MANDIR=$(prefix)/man
++MANDIR=$(prefix)/${PKGMANDIR}
+ 
+ INSTALL= @INSTALL@
+ INSTALL_DATA= @INSTALL_DATA@
+@@ -53,10 +54,10 @@ qterm.1: qterm.1.in
+ 	$(SED) 's;qterm_etcdir;$(ETCDIR);g' < qterm.1.in > qterm.1
+ 
+ install: qterm qtermtab qterm.1
+-	./mkinstalldirs $(BINDIR) $(ETCDIR) $(MANDIR)/man1
+-	$(INSTALL) -m 755 qterm $(BINDIR)
+-	$(INSTALL) -m 644 qtermtab $(TABFILE)
+-	$(INSTALL) -m 644 qterm.1 $(MANDIR)/man1
++	./mkinstalldirs ${DESTDIR}$(BINDIR) ${DESTDIR}$(EGDIR) ${DESTDIR}$(MANDIR)/man1
++	$(BSD_INSTALL_PROGRAM) qterm ${DESTDIR}$(BINDIR)
++	$(BSD_INSTALL_MAN) qtermtab ${DESTDIR}$(EGDIR)
++	$(BSD_INSTALL_MAN) qterm.1 ${DESTDIR}$(MANDIR)/man1
+ 
+ clean:
+ 	rm -f *.o core log *~ \#* qterm $(OBJS)

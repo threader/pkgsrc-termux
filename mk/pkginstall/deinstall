@@ -1,0 +1,70 @@
+# $NetBSD: deinstall,v 1.5 2017/06/14 16:23:09 prlw1 Exp $
+
+case ${STAGE} in
+DEINSTALL)
+  #
+  # Unregister package from ocaml-findlib.
+  #
+  ${TEST} ! -x ./+OCAML_FINDLIB_REGISTER ||
+    ./+OCAML_FINDLIB_REGISTER REMOVE ${OCAML_FINDLIB_DIR}
+
+	#
+	# Unregister info files.
+	#
+	${TEST} ! -x ./+INFO_FILES ||
+		./+INFO_FILES REMOVE ${PKG_METADATA_DIR}
+	#
+	# Remove any icon theme caches.
+	#
+	${TEST} ! -x ./+ICON_THEMES ||
+		./+ICON_THEMES REMOVE ${PKG_METADATA_DIR}
+	#
+	# Remove shells from /etc/shells.
+	#
+	${TEST} ! -x ./+SHELL ||
+		./+SHELL REMOVE ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+SHELL ||
+		./+SHELL CHECK-REMOVE ${PKG_METADATA_DIR}
+
+	# Remove configuration files if they don't differ from the default
+	# config file.
+	#
+	${TEST} ! -x ./+FILES ||
+		./+FILES REMOVE ${PKG_METADATA_DIR}
+	;;
+
+POST-DEINSTALL)
+	#
+	# Update any fonts databases.
+	#
+	${TEST} ! -x ./+FONTS ||
+		./+FONTS ${PKG_METADATA_DIR}
+	#
+	# Update any icon theme caches.
+	#
+	${TEST} ! -x ./+ICON_THEMES ||
+		./+ICON_THEMES UPDATE ${PKG_METADATA_DIR}
+	#
+	# Rebuild the system run-time library search path database.
+	#
+	${TEST} ! -x ./+SHLIBS ||
+		./+SHLIBS REMOVE ${PKG_METADATA_DIR}
+	#
+	# Remove empty directories and unused users/groups.
+	#
+	${TEST} ! -x ./+DIRS ||
+		./+DIRS REMOVE ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+USERGROUP ||
+		./+USERGROUP REMOVE ${PKG_METADATA_DIR}
+	#
+	# Check for any existing bits after we're finished de-installing.
+	#
+	${TEST} ! -x ./+USERGROUP ||
+		./+USERGROUP CHECK-REMOVE ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+FILES ||
+		./+FILES CHECK-REMOVE ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+DIRS ||
+		./+DIRS CHECK-REMOVE ${PKG_METADATA_DIR}
+	;;
+esac
+

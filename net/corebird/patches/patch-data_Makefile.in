@@ -1,0 +1,19 @@
+$NetBSD: patch-data_Makefile.in,v 1.2 2017/01/14 09:28:41 ryoon Exp $
+
+--- data/Makefile.in.orig	2017-01-08 09:02:29.000000000 +0000
++++ data/Makefile.in
+@@ -824,12 +824,10 @@ uninstall-man: uninstall-man1
+ 
+ 
+ %.desktop: %.desktop.in
+-	msgfmt --desktop -d $(top_srcdir)/po \
+-	--template $< -o $@
++	cp $^ $@
+ 
+ %.appdata.xml: %.appdata.xml.in
+-	msgfmt --xml -d $(top_srcdir)/po \
+-	--template $< -o $@
++	cp $^ $@
+ @GSETTINGS_RULES@
+ 
+ gschemas.compiled: Makefile $(gsettings_SCHEMAS:.xml=.valid)

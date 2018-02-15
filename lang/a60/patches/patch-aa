@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.4 2015/02/21 13:07:02 mef Exp $
+
+Configure for pkgsrc.
+Honor CPPFLAGS and LDFLAGS via autoconf.
+
+--- Makefile.in.orig	2014-07-29 00:27:10.000000000 +0900
++++ Makefile.in	2015-02-21 21:53:23.000000000 +0900
+@@ -34,7 +34,7 @@
+ exec_prefix =	@exec_prefix@
+ 
+ BINDIR = $(exec_prefix)/bin
+-LIBDIR = $(prefix)/lib
++LIBDIR = $(prefix)/share/a60
+ MANDIR = $(prefix)/man/man1
+ MANSUFF = 1
+ 
+@@ -66,13 +66,15 @@
+ DEFS = -DHAVE_CONFIG_H
+ ##
+ 
++CPPFLAGS= @CPPFLAGS@
++
+ ##
+ ## Flags for debugging and production:
+ ##
+ # FLAGS = -g
+ FLAGS = -g -O -DDEBUG
+ # LDFLAGS = -g
+-LDFLAGS =
++LDFLAGS = @LDFLAGS@
+ 
+ ## Uncomment for profiling:
+ # PROF = -pg
+@@ -149,7 +151,7 @@
+ SRCS = $(ISRCS) $(MSRCS)
+ HDRS = $(IHDRS) $(MHDRS)
+ 
+-CFLAGS = $(FLAGS) $(PROF) $(WARN) $(DEFS) $(LIBDIRPATH)
++CFLAGS += $(PROF) $(WARN) $(DEFS) $(LIBDIRPATH)
+ XCFLAGS = $(FLAGS) $(PROF) $(DEFS) $(LIBDIRPATH)
+ 
+ ##

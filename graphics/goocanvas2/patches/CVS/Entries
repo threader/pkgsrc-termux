@@ -1,0 +1,23 @@
+/patch-src_goocanvas.c/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvas.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvasellipse.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvasgrid.c/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvasgrid.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvasgroup.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvasimage.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvasitem.c/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvasitem.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvasitemmodel.c/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvasitemmodel.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvasitemsimple.c/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvasitemsimple.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvaspath.c/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvaspath.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvaspolyline.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvasrect.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvasstyle.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvastable.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvastext.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvasutils.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+/patch-src_goocanvaswidget.h/1.1/Sun Jun  9 13:25:14 2013//Tpkgsrc-2017Q4
+D

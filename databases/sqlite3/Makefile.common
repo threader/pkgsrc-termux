@@ -1,0 +1,10 @@
+# $NetBSD: Makefile.common,v 1.51 2017/02/13 17:44:01 adam Exp $
+#
+# used by databases/sqlite3-tcl/Makefile
+
+DISTNAME=	sqlite-autoconf-${SQLITE3_DISTVERSION}
+
+HOMEPAGE=	http://www.sqlite.org/
+LICENSE=	public-domain
+
+.include "../../databases/sqlite3/Makefile.version"

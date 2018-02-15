@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.2 2017/12/02 08:42:59 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/jaraco/classes/__init__.py
+${PYSITELIB}/jaraco/classes/__init__.pyc
+${PYSITELIB}/jaraco/classes/__init__.pyo
+${PYSITELIB}/jaraco/classes/ancestry.py
+${PYSITELIB}/jaraco/classes/ancestry.pyc
+${PYSITELIB}/jaraco/classes/ancestry.pyo
+${PYSITELIB}/jaraco/classes/meta.py
+${PYSITELIB}/jaraco/classes/meta.pyc
+${PYSITELIB}/jaraco/classes/meta.pyo
+${PYSITELIB}/jaraco/classes/properties.py
+${PYSITELIB}/jaraco/classes/properties.pyc
+${PYSITELIB}/jaraco/classes/properties.pyo

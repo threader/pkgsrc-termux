@@ -1,0 +1,72 @@
+$NetBSD: patch-ab,v 1.11 2017/02/12 01:01:19 mef Exp $
+
+o Delete the -Werror flag in order to recognise the type of sa_len:
+
+    In function ‘main’:
+    warning: variable ‘sa_len_ptr’ set but not used [-Wunused-but-set-variable] uint8_t *sa_len_ptr;
+
+o Add support for DragonFly BSD
+
+--- configure.orig	2014-09-03 14:52:29.000000000 +0000
++++ configure
+@@ -12804,8 +12804,6 @@ if test x"${debug_enabled}" = xt; then
+ else
+     #autoconf_compflags is set to "-g -O2" with GCC
+     #override CFLAGS when running configure to avoid this
+-    CPPFLAGS="$CPPFLAGS${CPPFLAGS:+ }-DDEBUG=0"
+-    CFLAGS="$CFLAGS${CFLAGS:+ }$autoconf_compflags"
+ 
+     case $COMPTYPE in
+ 	gcc)
+@@ -15424,7 +15422,7 @@ if test x"${have_sa_len}" != x; then
+    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for sa_len type" >&5
+ $as_echo_n "checking for sa_len type... " >&6; }
+    oCFLAGS="$CFLAGS"
+-   CFLAGS="$CFLAGS${CFLAGS:+ }$FAILWARN"
++   CFLAGS="$CFLAGS${CFLAGS:+ }"
+    unset sa_len_type_found
+    for type in uint8_t "unsigned char"; do
+        cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -24719,8 +24717,13 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ #include <netdb.h>
+ #include <unistd.h>
+ 
++#if defined(__DragonFly__)
+ struct hostent *
+ gethostbyaddr( const char *, int, int
++#else
++struct hostent *
++gethostbyaddr( const char *, socklen_t, int
++#endif
+ );
+ int
+ main ()
+@@ -24740,9 +24743,18 @@ cat >>confdefs.h <<_ACEOF
+ #define HAVE_PROT_GETHOSTBYADDR_1 const char *
+ _ACEOF
+ 
+-cat >>confdefs.h <<_ACEOF
++case "$host_os" in
++dragonfly*)
++	cat >>confdefs.h <<_ACEOF
+ #define HAVE_PROT_GETHOSTBYADDR_2 int
+ _ACEOF
++;;
++*)
++	cat >>confdefs.h <<_ACEOF
++#define HAVE_PROT_GETHOSTBYADDR_2 socklen_t
++_ACEOF
++;;
++esac
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define HAVE_PROT_GETHOSTBYADDR_3 int
+@@ -67655,7 +67667,7 @@ problems.
+ fi
+ 
+ VINFO=README.latest
+-test -s "$VINFO" && cat "$VINFO"
++test -s "$VINFO" && cat "$VINFO" || true
+ 
+ #XXX depcomp regen hack
+ touch _reconf

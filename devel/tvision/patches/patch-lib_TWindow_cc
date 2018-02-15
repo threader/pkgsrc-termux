@@ -1,0 +1,24 @@
+$NetBSD: patch-lib_TWindow_cc,v 1.2 2016/05/18 20:19:46 joerg Exp $
+
+Silence gcc pointer cast warnings. These have been checked to be
+harmless.
+
+--- lib/TWindow.cc.orig	2001-07-26 07:59:22.000000000 +0000
++++ lib/TWindow.cc
+@@ -20,6 +20,7 @@
+ #define Uses_ipstream
+ #include <tvision/tv.h>
+ 
++#include <inttypes.h>
+ #include <string.h>
+ 
+ const TPoint minWinSize = {16, 6};
+@@ -153,7 +154,7 @@ void TWindow::handleEvent( TEvent& event
+ 		/*
+ 		 * Some non-portable code changed.  See `TProgram.cc'.
+ 		 */
+-		(int)event.message.infoPtr == number &&
++		(int)(intptr_t)event.message.infoPtr == number &&
+              (options & ofSelectable) != 0
+            )
+             {

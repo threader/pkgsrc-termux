@@ -1,0 +1,32 @@
+$NetBSD: distinfo,v 1.13 2015/12/29 23:34:44 dholland Exp $
+
+SHA1 (cl74unix.tar.gz) = feae4a53af78b6c500a03c618dc11444e8b5dc47
+RMD160 (cl74unix.tar.gz) = a00a8de15e042080041076fcf3ad2592d9deb469
+SHA512 (cl74unix.tar.gz) = 4a75a292a21e6a4301b5fe02b123fd3dfe21ed99b36ecd1f37d222e2f330f405b2dec438d0d55ab6a30d5b7312fce064107af60124b46c787fd43f3927d3db26
+Size (cl74unix.tar.gz) = 999170 bytes
+SHA1 (patch-aa) = ddea6ac67bf1d5a794b26dafe882273fadaa4de3
+SHA1 (patch-ab) = 3098db9faa0cd60931c781b4b24f796ac23ef52d
+SHA1 (patch-ac) = 6b268ddd007f73a8bb4085df4826627425eb9658
+SHA1 (patch-ad) = 22c97a5a2ee4a45cd85ae4c886b61cdcf833703a
+SHA1 (patch-ae) = 800928059c173bdcdf61330118d5da82f6d31e3b
+SHA1 (patch-af) = 196fb2ace8ab078bccb2c8dba8b8cff211e6e95c
+SHA1 (patch-ag) = fce329f96d369f86c6fe7e3a30d78bed003d7043
+SHA1 (patch-ah) = 6a83f924ba49ae7121e070dc75432b2009643d9a
+SHA1 (patch-ai) = d9b663b4be634ccb64259c6fe0ddcda193dbbe50
+SHA1 (patch-aj) = 0e9ebfb02fb5efa06e393cf3e0ea3db6acd56acd
+SHA1 (patch-ak) = c24484f6dc1978c8bd04ff125f6fd86812fe68bc
+SHA1 (patch-al) = d4274b118eacf8f6f2a61ddaa8fde7468f45aefc
+SHA1 (patch-am) = a158d8553a85467955394b169ace0081eab65317
+SHA1 (patch-an) = 1bb3d4a32ae15f5639ab7575f50452764cf1d9a5
+SHA1 (patch-ao) = 59ec322fd19a9139fd329a9a36c0640a12306adf
+SHA1 (patch-ap) = e573c67efe96d159b3ab5bedc2ca1a319633a227
+SHA1 (patch-aq) = 00285a3f4cd6beea7a5b1b8f9c7c6810540dc5d8
+SHA1 (patch-ar) = aba9a829916af887d1115b51a57b449aced8535f
+SHA1 (patch-as) = 5d462ae1a1bf72ae1a0f19ff73d4b1b4226dbb32
+SHA1 (patch-at) = 83c69c1635a0c8f038bcd23d00acc4dc406c0684
+SHA1 (patch-au) = 4fe5ac20d7526e782143874b0ce9c7367716dbce
+SHA1 (patch-yacc_error.c) = ff1dd4d57fa7b4dbcc286c72bd21a4a884c05f94
+SHA1 (patch-yacc_main_c) = 1a4670c718c4a3ef3e1ace7dd56c2516a8d3fef3
+SHA1 (patch-yacc_output.c) = c8e8f412c2b911ff0924bc2d080bf490a04c4a73
+SHA1 (patch-yacc_reader.c) = 49c8b66bdb2c3b2712decdab4066e98a52894627
+SHA1 (patch-yacc_verbose.c) = 314a4d0a379028fcc0c0ab4d6d4bf5648312ab48

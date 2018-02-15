@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.31 2017/06/25 05:09:18 mef Exp $
+
+SHA1 (AnyEvent-7.14.tar.gz) = 2e1ebcaaab8a3ffd2238f4a238681661836a5cfc
+RMD160 (AnyEvent-7.14.tar.gz) = 6faad3faaa85523b7152f4fe08ab848d5f0daf66
+SHA512 (AnyEvent-7.14.tar.gz) = 98e7b9e06cf74b99d3407a25b60f3b825fceed3bae43505e1fb90785e24bd88ae25955cff25d29b4cc96957db7f4f5203d19ad2365abb4e3a3227fd91a16fb25
+Size (AnyEvent-7.14.tar.gz) = 301645 bytes

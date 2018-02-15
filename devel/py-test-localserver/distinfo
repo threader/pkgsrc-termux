@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/11/29 08:01:32 adam Exp $
+
+SHA1 (pytest-localserver-0.4.1.tar.gz) = f7f01181d269b24d94a34e7615141bf674911ab4
+RMD160 (pytest-localserver-0.4.1.tar.gz) = fad1f3e8e43838a6f990a56785c2e1c1571ea6b3
+SHA512 (pytest-localserver-0.4.1.tar.gz) = 0f99f0ad4c989c51e82b7515c3981b37a89990ac126aee6d2713511bdd252be75a48d6995d6697b2d0c821f22e0faed0dd836f7258b7e2f2c6b51b4133c4ffb8
+Size (pytest-localserver-0.4.1.tar.gz) = 19901 bytes

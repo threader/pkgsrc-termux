@@ -1,0 +1,9 @@
+This module is intended as a tool for module authors who would like
+to easily test that a module release will not break dependencies.
+This is particularly useful for module authors (like myself) who
+have modules which are a dependency of many other modules.
+
+Internally, this module will download dependencies from CPAN and
+run their tests. If those dependencies in turn have unsatisfied
+dependencies, they are installed into a temporary directory. These
+second-level (and third-, etc) dependencies are not tested.

@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.2 2016/07/19 14:19:34 taca Exp $
+
+Avoid depends on ldap extension in package.xml since it is covered
+by pkgsrc's denedency.
+
+--- ../package.xml.orig	2015-10-30 20:33:00.000000000 +0000
++++ ../package.xml
+@@ -92,9 +92,6 @@
+    <pearinstaller>
+     <min>1.10.1</min>
+    </pearinstaller>
+-   <extension>
+-    <name>ldap</name>
+-   </extension>
+   </required>
+  </dependencies>
+  <phprelease />

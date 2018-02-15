@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.4 2016/03/15 14:48:09 taca Exp $
+
+SHA1 (netaddr-1.5.1.gem) = abd1b92e3f7743496633583e643ce227836d0ae0
+RMD160 (netaddr-1.5.1.gem) = 3372fa3fbcf92befc2051516192746a68e85b151
+SHA512 (netaddr-1.5.1.gem) = 2ecf712c21d1a8d42a350e4328a20736a81211bf4c068e740074fa0e06193add1d6097fa8dd4080727157af76f264a5c33eb32309f33ee086067f3c587c90ffd
+Size (netaddr-1.5.1.gem) = 41472 bytes

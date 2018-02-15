@@ -1,0 +1,6 @@
+/patch-native_fsNotifier_linux_config.h/1.1/Sun Nov 24 10:44:34 2013//Tpkgsrc-2017Q4
+/patch-native_fsNotifier_linux_fam-mntent.h/1.1/Sun Nov 24 10:44:34 2013//Tpkgsrc-2017Q4
+/patch-native_fsNotifier_linux_inotify.c/1.2/Thu Apr 24 16:19:40 2014//Tpkgsrc-2017Q4
+/patch-native_fsNotifier_linux_main.c/1.1/Sun Nov 24 10:44:34 2013//Tpkgsrc-2017Q4
+/patch-native_fsNotifier_linux_mntent__compat.c/1.1/Sun Nov 24 10:44:34 2013//Tpkgsrc-2017Q4
+D

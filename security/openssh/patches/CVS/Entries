@@ -1,0 +1,25 @@
+/patch-Makefile.in/1.5/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-auth-passwd.c/1.4/Sun Sep 18 17:30:11 2016//Tpkgsrc-2017Q4
+/patch-auth-rhosts.c/1.3/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-auth.c/1.4/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-auth2.c/1.6/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-clientloop.c/1.5/Fri Dec 30 04:43:16 2016//Tpkgsrc-2017Q4
+/patch-config.h.in/1.5/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-configure.ac/1.6/Wed May 31 09:30:22 2017//Tpkgsrc-2017Q4
+/patch-defines.h/1.4/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-includes.h/1.4/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-loginrec.c/1.5/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-openbsd-compat_bsd-openpty.c/1.4/Fri Dec 30 04:43:16 2016//Tpkgsrc-2017Q4
+/patch-openbsd-compat_openbsd-compat.h/1.4/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-openbsd-compat_port-tun.c/1.3/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-platform.c/1.5/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-sandbox-darwin.c/1.2/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-scp.c/1.4/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-session.c/1.8/Fri Dec 30 04:43:16 2016//Tpkgsrc-2017Q4
+/patch-sftp-common.c/1.4/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-ssh.c/1.6/Tue Mar 15 20:54:07 2016//Tpkgsrc-2017Q4
+/patch-sshd.8/1.2/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-sshd.c/1.9/Wed Oct  4 11:44:14 2017//Tpkgsrc-2017Q4
+/patch-sshpty.c/1.3/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+/patch-uidswap.c/1.5/Mon Jan 18 12:53:26 2016//Tpkgsrc-2017Q4
+D

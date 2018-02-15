@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.3 2015/11/03 23:33:31 agc Exp $
+
+SHA1 (crfsuite/0.12.tar.gz) = f121cee029613c64c32056f68710c69f28347238
+RMD160 (crfsuite/0.12.tar.gz) = 10e6abffbca2b05229b292e324533eab59742f22
+SHA512 (crfsuite/0.12.tar.gz) = 7cb02c1ac72613bafd639e1ef9a7ce7ddb0d36b2e7038c45f9745ad177344c3f20c7df48dfc1bdce364af1d0a85957a918ed8fee078232d5a2c91ab3796ee7f0
+Size (crfsuite/0.12.tar.gz) = 256160 bytes
+SHA1 (patch-configure.in) = 7c7bc744d32509a354e699e6120db76083db3529
+SHA1 (patch-example_crfutils.py) = 4dad264055b6fd0268b3133d14a22ef8094586e7
+SHA1 (patch-frontend_Makefile.am) = 9ab46935cf7ff0147d138bd5425769dbc3aa9246
+SHA1 (patch-lib_cqdb_Makefile.am) = eb7d78cea673193e2b9910c77f9f7602f7ec61ae
+SHA1 (patch-lib_crf_Makefile.am) = 1ed872381c404a7ab15f67360a76954d2d58a18d

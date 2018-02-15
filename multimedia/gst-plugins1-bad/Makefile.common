@@ -1,0 +1,57 @@
+# $NetBSD: Makefile.common,v 1.26 2017/11/10 09:26:47 prlw1 Exp $
+#
+# used by audio/gst-plugins1-dts/Makefile
+# used by audio/gst-plugins1-faac/Makefile
+# used by audio/gst-plugins1-faad/Makefile
+# used by audio/gst-plugins1-soundtouch/Makefile
+# used by audio/gst-plugins1-spc/Makefile
+# used by net/gst-plugins1-mms/Makefile
+# used by net/gst-plugins1-rtmp/Makefile
+# used by multimedia/gst-plugins1-resindvd/Makefile
+## used by multimedia/gst-plugins1-xvid/Makefile (broken)
+## used by audio/gst-plugins1-musepack/Makefile (probably newer libmusepack or libmpcdec is needed)
+#
+
+GST_PLUGINS1_TYPE=	bad
+GST_PLUGINS1_VER=	1.12.3
+
+# Disable all drivers and features by default.
+.for driver in	\
+		directfb \
+		dts \
+		dvb \
+		faac \
+		faad \
+		fbdev \
+		gsm \
+		hls \
+		libmms \
+		musepack \
+		neon \
+		real \
+		sdl \
+		shm \
+		soundtouch \
+		vcd \
+		vdpau \
+		xvid
+CONFIGURE_ARGS+=	--disable-${driver}
+.endfor
+
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-insertbin.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-bad-audio.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-player.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-gl.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-plugins-bad.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-mpegts.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-bad-base.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-bad-video.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-codecparsers.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-wayland.pc.in
+
+.include "../../devel/orc/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.12.0
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.12.0
+.include "../../multimedia/gst-plugins1-base/plugins.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"

@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile,v 1.2 2017/02/21 22:00:51 kleink Exp $
+
+Disable -march=native since it causes problems on NetBSD.
+
+--- Makefile.orig	2016-10-29 09:24:03.000000000 +0000
++++ Makefile
+@@ -40,7 +40,6 @@ $(info Building without optimizations)
+ 	SRC += src/ref.c
+ else
+ $(info Building with optimizations for $(OPTTARGET))
+-	CFLAGS += -march=$(OPTTARGET)
+ 	SRC += src/opt.c
+ endif
+ 

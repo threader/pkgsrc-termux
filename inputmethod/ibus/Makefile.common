@@ -1,0 +1,15 @@
+# $NetBSD: Makefile.common,v 1.11 2017/11/05 04:19:15 tsutsui Exp $
+#
+# used by inputmethod/ibus/Makefile
+# used by inputmethod/ibus-python/Makefile
+
+DISTNAME=	ibus-1.5.17
+CATEGORIES=	inputmethod
+MASTER_SITES=	https://github.com/ibus/ibus/releases/download/${PKGVERSION_NOREV}/
+
+DISTINFO_FILE=	${.CURDIR}/../../inputmethod/ibus/distinfo
+PATCHDIR=	${.CURDIR}/../../inputmethod/ibus/patches
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/ibus/ibus/wiki
+LICENSE=	gnu-lgpl-v2.1

@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.13 2017/11/23 20:24:13 wiz Exp $
+bin/fftw-wisdom
+bin/fftw-wisdom-to-conf
+include/fftw3.f
+include/fftw3.f03
+include/fftw3.h
+include/fftw3l.f03
+include/fftw3q.f03
+info/fftw3.info
+lib/cmake/fftw3/FFTW3Config.cmake
+lib/cmake/fftw3/FFTW3ConfigVersion.cmake
+lib/libfftw3.la
+${PLIST.pthreads}lib/libfftw3_threads.la
+lib/pkgconfig/fftw3.pc
+man/man1/fftw-wisdom-to-conf.1
+man/man1/fftw-wisdom.1

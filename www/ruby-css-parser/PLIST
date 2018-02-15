@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.4 2016/10/18 15:00:49 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/lib/css_parser.rb
+${GEM_LIBDIR}/lib/css_parser/parser.rb
+${GEM_LIBDIR}/lib/css_parser/regexps.rb
+${GEM_LIBDIR}/lib/css_parser/rule_set.rb
+${GEM_LIBDIR}/lib/css_parser/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

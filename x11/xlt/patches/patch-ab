@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.2 2016/04/01 16:08:36 jperkin Exp $
+
+Honour --mandir.
+
+--- doc/Makefile.in.orig	2005-09-16 13:04:05.000000000 +0000
++++ doc/Makefile.in
+@@ -161,7 +161,7 @@ libexecdir = @libexecdir@
+ link_motif = @link_motif@
+ localstatedir = @localstatedir@
+ 
+-mandir = $(prefix)/man
++mandir = @mandir@
+ oldincludedir = @oldincludedir@
+ prefix = @prefix@
+ program_transform_name = @program_transform_name@
+@@ -219,7 +219,7 @@ html_HTML = SciPlot.html SciPlotProg.htm
+ 
+ html_DATA = $(html_HTML)
+ 
+-htmldir = $(prefix)/Xlt/doc/html
++htmldir = $(prefix)/share/doc/html/Xlt
+ subdir = doc
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs

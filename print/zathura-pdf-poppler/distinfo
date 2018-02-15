@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/01/31 10:12:42 leot Exp $
+
+SHA1 (zathura-pdf-poppler-0.2.7.tar.gz) = b26fc1eed94bf3119fb7144791b2f5e1ceac40ba
+RMD160 (zathura-pdf-poppler-0.2.7.tar.gz) = df5ba8455ca10a6d7e53179e9f27344b81ee7ae5
+SHA512 (zathura-pdf-poppler-0.2.7.tar.gz) = 815ef775059652337ca91ef6a089fa51105bbd3ac649ecd167da7da2a6ac62f617d04e85dbeb311ab47d86929338d8656037bcabc1177435804035914c6dfbdb
+Size (zathura-pdf-poppler-0.2.7.tar.gz) = 9610 bytes

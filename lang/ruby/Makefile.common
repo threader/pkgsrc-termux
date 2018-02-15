@@ -1,0 +1,82 @@
+# $NetBSD: Makefile.common,v 1.35 2017/06/25 02:27:07 taca Exp $
+#
+# Ruby base distribution common definition
+# used by databases/ruby-gdbm/Makefile
+# used by devel/ruby-readline/Makefile
+# used by devel/ruby-mode/Makefile
+# used by devel/ruby-fiddle/Makefile
+# used by lang/ruby22/Makefile
+# used by lang/ruby22-base/Makefile
+# used by lang/ruby23/Makefile
+# used by lang/ruby23-base/Makefile
+# used by lang/ruby24/Makefile
+# used by lang/ruby24-base/Makefile
+# used by textproc/ruby-psych/Makefile
+# used by x11/ruby-tk/Makefile
+#
+# RUBY_EXTNAME
+#	RUBY_EXTNAME defines name of extension which included in
+#	the Ruby's distribution file.
+#
+
+# Ruby's license
+LICENSE=		2-clause-bsd OR ruby-license
+
+#
+# Ruby distribution sites.
+#
+RUBY_SITE_SUBDIR=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
+
+MASTER_SITE_RUBY?= \
+	http://cache.ruby-lang.org/pub/ruby/${RUBY_SITE_SUBDIR}/ \
+	ftp://ftp.ruby-lang.org/pub/ruby/${RUBY_SITE_SUBDIR}/ \
+	ftp://ftp.fu-berlin.de/unix/languages/ruby/${RUBY_SITE_SUBDIR}/ \
+	ftp://ftp.ring.gr.jp/pub/lang/ruby/${RUBY_SITE_SUBDIR}/ \
+	ftp://ftp.iij.ad.jp/pub/lang/ruby/${RUBY_SITE_SUBDIR}/ \
+	ftp://ftp.idaemons.org/pub/mirror/ftp.ruby-lang.org/ruby/${RUBY_SITE_SUBDIR}/
+
+# Ruby distribution
+RUBY_DISTINFO_FILE=	${.CURDIR}/${RUBY_SRCDIR}/distinfo
+
+RUBY_HOMEPAGE=		http://www.ruby-lang.org/en/
+
+RUBY_WRKSRC?=		${WRKDIR}/${RUBY_DISTNAME}
+EXTRACT_SUFX=		.tar.bz2
+STRIP?=			strip
+
+#
+# substitutions
+#
+MESSAGE_SUBST+=		RUBY_DISTNAME=${RUBY_DISTNAME}
+PLIST_SUBST+=		RUBY_SHLIBVER=${RUBY_SHLIBVER:Q} \
+			RUBY_SHLIBMAJOR=${RUBY_SHLIBMAJOR:Q} \
+			RUBY_NOSHLIBMAJOR=${RUBY_NOSHLIBMAJOR} \
+			RUBY_NAME=${RUBY_NAME:Q}
+
+.if !empty(RUBY_EXTNAME)
+
+PKGNAME?=		${RUBY_PKGPREFIX}-${RUBY_EXTNAME}-${RUBY_VERSION}
+DISTINFO_FILE=		${.CURDIR}/${RUBY_SRCDIR}/distinfo
+PATCHDIR=		${.CURDIR}/${RUBY_SRCDIR}/patches
+do-patch:
+	${_PKG_SILENT}${_PKG_DEBUG}	\
+	cd ${WRKSRC};			\
+	for p in `${EGREP} -l '^\+\+\+ ext/${RUBY_EXTNAME}/' ${PATCHDIR}/patch-*`;do \
+		${SED} -e 's,^+++ ext/${RUBY_EXTNAME}/,+++ ,' $$p | \
+		${PATCH} ${PATCH_ARGS}; \
+	done || ${TRUE}
+.endif
+
+.include "replace.mk"
+
+.if !empty(RUBY_USE_PTHREAD:M[nN][oO])
+CONFIGURE_ARGS+=	--disable-pthread
+.else
+CONFIGURE_ARGS+=	--enable-pthread
+
+PTHREAD_OPTS+=		native
+PTHREAD_AUTO_VARS=	yes
+
+.include "../../mk/pthread.buildlink3.mk"
+.endif
+.include "../../mk/dlopen.buildlink3.mk"

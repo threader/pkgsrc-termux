@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.13 2017/07/23 19:04:10 adam Exp $
+
+SHA1 (beets-1.4.5.tar.gz) = a6df07def889877d586403fb7092ca3d2d91712b
+RMD160 (beets-1.4.5.tar.gz) = d0d97a3764e131bd1ed0bf02952993af0297466f
+SHA512 (beets-1.4.5.tar.gz) = b1ec96bf90e9e11be70085af87fe124ca52bf939ea5334379eb8f42b948cb2f534afc804428e3b928439e92fbd46e6fc1a00a71b16f9f35646ef6e94a6f9148c
+Size (beets-1.4.5.tar.gz) = 1445173 bytes

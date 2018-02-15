@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.8 2017/10/12 17:56:45 leot Exp $
+
+SHA1 (entr-3.9.tar.gz) = cb6dcec9182697ddf7ebee62508eb1efdf1470fb
+RMD160 (entr-3.9.tar.gz) = 51b2450b98fcad0b3bfbd5a3b99167189dc07f50
+SHA512 (entr-3.9.tar.gz) = e0d58b7f4dc20ba9cfb12a165172817dfd647e859e2133b01b59427f9bb9612ee5b8e8f6563f31cc15b57251e60b2cb639c764f65d6daeb4456ecbccc7b39c12
+Size (entr-3.9.tar.gz) = 24554 bytes

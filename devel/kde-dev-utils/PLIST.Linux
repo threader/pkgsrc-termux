@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST.Linux,v 1.2 2016/01/11 02:45:05 markd Exp $
+bin/demangle
+bin/kminspector
+bin/kmmatch
+bin/kmtrace
+bin/kstartperf
+include/ktrace.h
+lib/kde4/kstartperf.so
+lib/libktrace.so
+lib/libktrace.so.4
+lib/libktrace.so.${KDELIBSVER}
+man/man1/demangle.1
+share/kde/apps/kmtrace/kde.excludes
+

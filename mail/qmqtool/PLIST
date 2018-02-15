@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.4 2017/04/04 08:27:56 schmonz Exp $
+man/man8/qmqtool.8
+sbin/qmqtool
+share/doc/qmqtool/Artistic
+share/doc/qmqtool/ChangeLog
+share/doc/qmqtool/FAQ
+share/doc/qmqtool/README
+share/examples/qmqtool/contrib/argus/README
+share/examples/qmqtool/contrib/argus/config
+share/examples/qmqtool/contrib/cricket/Defaults
+share/examples/qmqtool/contrib/cricket/README
+share/examples/qmqtool/contrib/cricket/Targets
+share/examples/qmqtool/contrib/net-snmp/snmpd.local.conf

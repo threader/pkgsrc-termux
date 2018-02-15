@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.5 2017/10/23 15:45:29 adam Exp $
+
+SHA1 (httpbin-0.6.2.tar.gz) = 8f9dca3627146f52edd6dccae5df9b4dcc87d8da
+RMD160 (httpbin-0.6.2.tar.gz) = a4289a0d8d80fca2bd5b752dc2ee47bb4b13af55
+SHA512 (httpbin-0.6.2.tar.gz) = 6e9a95a8fb8e086b7b27959eea8ca9b79dc925ebbd87db71a8935029e7762dda2c15d0b928330ddc32f08d44a5283be4d14651573738ea7c89597fec704b646a
+Size (httpbin-0.6.2.tar.gz) = 86288 bytes

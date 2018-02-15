@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2017/02/11 14:24:37 adam Exp $
+
+SHA1 (bitstream-1.2.tar.bz2) = 55fc02b14005102f89414b06c6e419c4ecbc6adf
+RMD160 (bitstream-1.2.tar.bz2) = 3b83c240563b12c4f2939a977983e7001906bbc6
+SHA512 (bitstream-1.2.tar.bz2) = a286a6d6f5b26bd7e037a2130a0b1105a79ceb180ea5db9a4ef8bc652cce686bf4cf38e3cd79336b34ef40fffc3bc79b132a2ee6c7508c5abe2e964c3e9a1c8c
+Size (bitstream-1.2.tar.bz2) = 115009 bytes

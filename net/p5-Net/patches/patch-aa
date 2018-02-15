@@ -1,0 +1,151 @@
+$NetBSD: patch-aa,v 1.11 2017/11/15 11:41:24 wiz Exp $
+
+Make configure step non-interactive.
+
+--- Configure.orig	2014-05-30 22:05:23.000000000 +0000
++++ Configure
+@@ -258,6 +258,7 @@ $oldcfg{'test_hosts'} = 1 unless exists 
+ 
+ #---------------------------------------------------------------------------
+ 
++$have_old = 0;
+ if($have_old && !$opt_d)
+  {
+   $msg = <<EDQ;
+@@ -286,7 +287,7 @@ it will require you to be on-line.
+ Do you want me to perform hostname lookups (y|n) ?
+ EDQ
+ 
+-$cfg{'test_exist'} = get_bool($msg, $oldcfg{'test_exist'});
++$cfg{'test_exist'} = 1;
+ 
+ print <<EDQ unless $cfg{'test_exist'};
+ 
+@@ -315,7 +316,7 @@ $msg = 'Enter a list of available NNTP h
+ $def = $oldcfg{'nntp_hosts'} ||
+         [ default_hostname($ENV{NNTPSERVER},$ENV{NEWSHOST},'news') ];
+ 
+-$cfg{'nntp_hosts'} = get_host_list($msg,$def);
++$cfg{'nntp_hosts'} = $def;
+ 
+ #---------------------------------------------------------------------------
+ 
+@@ -324,7 +325,7 @@ $msg = 'Enter a list of available SMTP h
+ $def = $oldcfg{'smtp_hosts'} ||
+         [ default_hostname(split(/:/,$ENV{SMTPHOSTS} || ""), 'mailhost') ];
+ 
+-$cfg{'smtp_hosts'} = get_host_list($msg,$def);
++$cfg{'smtp_hosts'} = $def;
+ 
+ #---------------------------------------------------------------------------
+ 
+@@ -332,7 +333,7 @@ $msg = 'Enter a list of available POP3 h
+ 
+ $def = $oldcfg{'pop3_hosts'} || [];
+ 
+-$cfg{'pop3_hosts'} = get_host_list($msg,$def);
++$cfg{'pop3_hosts'} = $def;
+ 
+ #---------------------------------------------------------------------------
+ 
+@@ -340,7 +341,7 @@ $msg = 'Enter a list of available SNPP h
+ 
+ $def = $oldcfg{'snpp_hosts'} || [];
+ 
+-$cfg{'snpp_hosts'} = get_host_list($msg,$def);
++$cfg{'snpp_hosts'} = $def;
+ 
+ #---------------------------------------------------------------------------
+ 
+@@ -349,7 +350,7 @@ $msg = 'Enter a list of available PH Hos
+ $def = $oldcfg{'ph_hosts'} ||
+         [ default_hostname('dirserv') ];
+ 
+-$cfg{'ph_hosts'}   =  get_host_list($msg,$def);
++$cfg{'ph_hosts'}   =  $def;
+ 
+ #---------------------------------------------------------------------------
+ 
+@@ -357,7 +358,7 @@ $msg = 'Enter a list of available TIME H
+ 
+ $def = $oldcfg{'time_hosts'} || [];
+ 
+-$cfg{'time_hosts'} = get_host_list($msg,$def);
++$cfg{'time_hosts'} = $def;
+ 
+ #---------------------------------------------------------------------------
+ 
+@@ -365,7 +366,7 @@ $msg = 'Enter a list of available DAYTIM
+ 
+ $def = $oldcfg{'daytime_hosts'} || $oldcfg{'time_hosts'};
+ 
+-$cfg{'daytime_hosts'} = get_host_list($msg,$def);
++$cfg{'daytime_hosts'} = $def;
+ 
+ #---------------------------------------------------------------------------
+ 
+@@ -378,7 +379,8 @@ If you use a SOCKS firewall answer no
+ (y|n) ?
+ EDQ
+ 
+-if(get_bool($msg,0)) {
++# XXX Should probably honor socks option? --mjl
++if(0 && get_bool($msg,0)) {
+ 
+   $msg = <<'EDQ';
+ What series of FTP commands do you need to send to your
+@@ -489,15 +491,15 @@ current list and an empty line to contin
+ 
+ #---------------------------------------------------------------------------
+ 
+-print <<EDQ;
+-
+-Normally when FTP needs a data connection the client tells the server
+-a port to connect to, and the server initiates a connection to the client.
+-
+-Some setups, in particular firewall setups, can/do not work using this
+-protocol. In these situations the client must make the connection to the
+-server, this is called a passive transfer.
+-EDQ
++# print <<EDQ;
++# 
++# Normally when FTP needs a data connection the client tells the server
++# a port to connect to, and the server initiates a connection to the client.
++# 
++# Some setups, in particular firewall setups, can/do not work using this
++# protocol. In these situations the client must make the connection to the
++# server, this is called a passive transfer.
++# EDQ
+ 
+ if (defined $cfg{'ftp_firewall'}) {
+   $msg = "\nShould all FTP connections via a firewall/proxy be passive (y|n) ?";
+@@ -515,16 +517,16 @@ else {
+ 
+ $def = $oldcfg{'ftp_int_passive'} || 0;
+ 
+-$cfg{'ftp_int_passive'} = get_bool($msg,$def);
++$cfg{'ftp_int_passive'} = 0;
+ 
+ 
+ #---------------------------------------------------------------------------
+ 
+-$def = $oldcfg{'inet_domain'} || $ENV{LOCALDOMAIN};
++$def = $oldcfg{'inet_domain'} || $ENV{DOMAIN_NAME};
+ 
+-$ans = Prompt("\nWhat is your local internet domain name :",$def);
++# $ans = Prompt("\nWhat is your local internet domain name :",$def);
+ 
+-$cfg{'inet_domain'} = ($ans =~ /(\S+)/)[0];
++$cfg{'inet_domain'} = $def;
+ 
+ #---------------------------------------------------------------------------
+ 
+@@ -540,7 +542,7 @@ unless the hosts are local.
+ Do you want me to run these tests (y|n) ?
+ EDQ
+ 
+-$cfg{'test_hosts'} = get_bool($msg,$oldcfg{'test_hosts'});
++$cfg{'test_hosts'} = 0;
+ 
+ #---------------------------------------------------------------------------
+ 

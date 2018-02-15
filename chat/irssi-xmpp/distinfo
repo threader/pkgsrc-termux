@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.13.2.1 2018/01/19 20:18:47 spz Exp $
+
+SHA1 (irssi-1.0.6.tar.gz) = 91f85c233d148e61768d8fe4ed173238d0268c00
+RMD160 (irssi-1.0.6.tar.gz) = 8cbab61ab9287a118752d63677c705920cbf904e
+SHA512 (irssi-1.0.6.tar.gz) = 105ae44d7a2d96315b2456f709c7c12d7d36004bff2f82584d356208211cac39a2274386b733c81449231a6314b97b5a35c956d0e5e009d5609b1e9bb7d4ccb6
+Size (irssi-1.0.6.tar.gz) = 1600284 bytes
+SHA1 (irssi-xmpp-0.53.tar.gz) = 57d993bbebc30c72b500e2c4b4c4e79c15d8b6f9
+RMD160 (irssi-xmpp-0.53.tar.gz) = ed65af7220834f7fb6701612e81c6a523f730b06
+SHA512 (irssi-xmpp-0.53.tar.gz) = 09969db01b77e95248a080599d480b8271dcbe6d42bc90e5e2bb304a2d1b9695b70090ef0a6b7342bf6e17326e0f7a50c11c85e02e6ed742ec55820ffad655be
+Size (irssi-xmpp-0.53.tar.gz) = 65649 bytes
+SHA1 (patch-src_core_xmpp-servers.c) = a07b88b7ca63ca3d7b1c742ee49315f681f9c5ef

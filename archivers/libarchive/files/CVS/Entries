@@ -1,0 +1,21 @@
+/CMakeLists.txt/1.6/Tue Aug  1 22:26:22 2017//Tpkgsrc-2017Q4
+/COPYING/1.5/Mon Jun 20 17:24:55 2016//Tpkgsrc-2017Q4
+/INSTALL/1.5/Mon Jun 20 17:24:55 2016//Tpkgsrc-2017Q4
+/Makefile.am/1.9/Tue Aug  1 22:26:22 2017//Tpkgsrc-2017Q4
+/Makefile.in/1.11/Tue Aug  1 22:26:22 2017//Tpkgsrc-2017Q4
+/NEWS/1.10/Tue Aug  1 22:26:22 2017//Tpkgsrc-2017Q4
+/README.md/1.1.1.1/Sat Feb 25 20:54:04 2017//Tpkgsrc-2017Q4
+/aclocal.m4/1.10/Sat Feb 25 21:11:18 2017//Tpkgsrc-2017Q4
+/config.h.in/1.12/Tue Aug  1 22:26:22 2017//Tpkgsrc-2017Q4
+/configure/1.18/Tue Aug  1 22:26:22 2017//Tpkgsrc-2017Q4
+/configure.ac/1.18/Tue Aug  1 22:26:22 2017//Tpkgsrc-2017Q4
+D/build////
+D/cat////
+D/contrib////
+D/cpio////
+D/doc////
+D/examples////
+D/libarchive////
+D/libarchive_fe////
+D/tar////
+D/test_utils////

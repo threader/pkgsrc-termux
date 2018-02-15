@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.2 2017/02/09 18:16:07 scole Exp $
+bin/mksquashfs
+bin/unsquashfs
+share/doc/squashfs/ACKNOWLEDGEMENTS
+share/doc/squashfs/CHANGES
+share/doc/squashfs/COPYING
+share/doc/squashfs/DONATIONS
+share/doc/squashfs/INSTALL
+share/doc/squashfs/PERFORMANCE.README
+share/doc/squashfs/README
+share/doc/squashfs/README-4.3
+share/doc/squashfs/OLD-READMEs/README-2.0
+share/doc/squashfs/OLD-READMEs/README-2.1
+share/doc/squashfs/OLD-READMEs/README-3.0
+share/doc/squashfs/OLD-READMEs/README-3.1
+share/doc/squashfs/OLD-READMEs/README-3.2
+share/doc/squashfs/OLD-READMEs/README-3.3
+share/doc/squashfs/OLD-READMEs/README-4.0
+share/doc/squashfs/OLD-READMEs/README-4.1
+share/doc/squashfs/OLD-READMEs/README-4.2
+share/doc/squashfs/OLD-READMEs/README-AMD64
+share/examples/squashfs/pseudo-file.example

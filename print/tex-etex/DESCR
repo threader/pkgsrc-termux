@@ -1,0 +1,7 @@
+An extended version of TeX (which is capable of running as if
+it were TeX unmodified). E-TeX has been specified by the LaTeX
+team as the engine for the development of LaTeX 2e, in the
+immediate future; as a result, LaTeX programmers may (in all
+current TeX distributions) assume e-TeX functionality.
+Development versions of e-TeX are to be found in the TeX live
+source repository.

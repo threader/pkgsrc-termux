@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.6 2017/01/26 03:46:20 nat Exp $
+
+Adding --enable-new-dtags breaks sdl2-config on NetBSD.
+
+--- configure.orig	2016-10-20 03:56:27.000000000 +0000
++++ configure
+@@ -23955,7 +23955,7 @@ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+ 
+     have_enable_new_dtags=yes
+-    SDL_RLD_FLAGS="$SDL_RLD_FLAGS -Wl,--enable-new-dtags"
++    SDL_RLD_FLAGS="$SDL_RLD_FLAGS"
+ 
+ fi
+ rm -f core conftest.err conftest.$ac_objext \

@@ -1,0 +1,15 @@
+/Makefile/1.1/Wed Feb  8 01:02:19 2017//Tpkgsrc-2017Q4
+/pthread.h/1.1/Wed Feb  8 01:02:19 2017//Tpkgsrc-2017Q4
+/pthread_dbg.3/1.1/Wed Feb  8 01:02:19 2017//Tpkgsrc-2017Q4
+/pthread_dbg.c/1.1/Wed Feb  8 01:02:19 2017//Tpkgsrc-2017Q4
+/pthread_dbg.h/1.1/Wed Feb  8 01:02:19 2017//Tpkgsrc-2017Q4
+/pthread_dbg_int.h/1.1/Wed Feb  8 01:02:19 2017//Tpkgsrc-2017Q4
+/pthread_int.h/1.1/Wed Feb  8 01:02:19 2017//Tpkgsrc-2017Q4
+/shlib_version/1.1/Wed Feb  8 01:02:19 2017//Tpkgsrc-2017Q4
+/td_map_pth2thr.3/1.1/Wed Feb  8 01:02:19 2017//Tpkgsrc-2017Q4
+/td_open.3/1.1/Wed Feb  8 01:02:19 2017//Tpkgsrc-2017Q4
+/td_thr_getname.3/1.1/Wed Feb  8 01:02:19 2017//Tpkgsrc-2017Q4
+/td_thr_info.3/1.1/Wed Feb  8 01:02:19 2017//Tpkgsrc-2017Q4
+/td_thr_iter.3/1.1/Wed Feb  8 01:02:19 2017//Tpkgsrc-2017Q4
+D/arch////
+D/tests////

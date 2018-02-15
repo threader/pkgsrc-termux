@@ -1,0 +1,27 @@
+/patch-libbackend-elements-1.6.1_backend-elements_indentation_cxx.hxx/1.2/Tue Jun  7 17:59:51 2016//Tpkgsrc-2017Q4
+/patch-libcult-1.4.2_cult_cli_file-arguments.hxx/1.2/Tue Jun  7 17:59:51 2016//Tpkgsrc-2017Q4
+/patch-libcult-1.4.2_cult_containers_deque.hxx/1.1/Tue Jun  7 17:59:51 2016//Tpkgsrc-2017Q4
+/patch-libcult-1.4.2_cult_containers_graph.txx/1.2/Tue Jun  7 17:59:51 2016//Tpkgsrc-2017Q4
+/patch-libcult-1.4.2_cult_containers_map.hxx/1.1/Tue Jun  7 17:59:51 2016//Tpkgsrc-2017Q4
+/patch-libcult-1.4.2_cult_containers_vector.hxx/1.1/Tue Jun  7 17:59:51 2016//Tpkgsrc-2017Q4
+/patch-libcult-1.4.2_cult_mm_bits_evptr.hxx/1.1/Sun Mar 24 16:58:28 2013//Tpkgsrc-2017Q4
+/patch-libcult-1.4.2_cult_mm_evptr.hxx/1.1/Sun Mar 24 16:58:28 2013//Tpkgsrc-2017Q4
+/patch-libcult-1.4.2_cult_mm_shptr.hxx/1.1/Sun Mar 24 16:58:28 2013//Tpkgsrc-2017Q4
+/patch-libcult-1.4.2_cult_mm_static-ptr.hxx/1.1/Sun Mar 24 16:58:28 2013//Tpkgsrc-2017Q4
+/patch-libcult-1.4.2_cult_types_fundamental.hxx/1.1/Tue May 21 16:36:22 2013//Tpkgsrc-2017Q4
+/patch-libfrontend-elements-1.1.1_frontend-elements_context.hxx/1.2/Tue Jun  7 17:59:51 2016//Tpkgsrc-2017Q4
+/patch-libxsd-frontend-1.15.0_xsd-frontend_parser.cxx/1.1/Sun Mar 24 16:58:28 2013//Tpkgsrc-2017Q4
+/patch-libxsd-frontend-1.15.0_xsd-frontend_semantic-graph_elements.cxx/1.1/Sun Mar 24 16:58:28 2013//Tpkgsrc-2017Q4
+/patch-libxsd-frontend-1.15.0_xsd-frontend_semantic-graph_elements.hxx/1.2/Tue Jun  7 17:59:51 2016//Tpkgsrc-2017Q4
+/patch-libxsd-frontend-1.15.0_xsd-frontend_semantic-graph_schema.hxx/1.1/Sun Mar 24 16:58:28 2013//Tpkgsrc-2017Q4
+/patch-libxsd-frontend-1.15.0_xsd-frontend_transformations_anonymous.cxx/1.1/Sun Mar 24 16:58:29 2013//Tpkgsrc-2017Q4
+/patch-libxsd-frontend-1.15.0_xsd-frontend_transformations_schema-per-type.cxx/1.1/Sun Mar 24 16:58:29 2013//Tpkgsrc-2017Q4
+/patch-xsd-3.2.0-2_xsd_cxx_elements.cxx/1.1/Sun Mar 24 16:58:29 2013//Tpkgsrc-2017Q4
+/patch-xsd-3.2.0-2_xsd_cxx_parser_elements.cxx/1.1/Sun Mar 24 16:58:29 2013//Tpkgsrc-2017Q4
+/patch-xsd-3.2.0-2_xsd_cxx_parser_generator.cxx/1.2/Thu Mar 28 21:20:15 2013//Tpkgsrc-2017Q4
+/patch-xsd-3.2.0-2_xsd_cxx_parser_state-processor.cxx/1.2/Tue Jun  7 17:59:51 2016//Tpkgsrc-2017Q4
+/patch-xsd-3.2.0-2_xsd_cxx_tree_elements.cxx/1.1/Thu Mar 28 21:20:15 2013//Tpkgsrc-2017Q4
+/patch-xsd-3.2.0-2_xsd_cxx_tree_generator.cxx/1.1/Thu Mar 28 21:20:15 2013//Tpkgsrc-2017Q4
+/patch-xsd-3.2.0-2_xsd_xsd.cxx/1.1/Sun Mar 24 16:58:29 2013//Tpkgsrc-2017Q4
+/patch-xsd-3.2.0-2_xsd_xsd.hxx/1.1/Sun Mar 24 16:58:29 2013//Tpkgsrc-2017Q4
+D

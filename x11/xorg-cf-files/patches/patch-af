@@ -1,0 +1,87 @@
+$NetBSD: patch-af,v 1.9 2016/09/20 16:37:24 jperkin Exp $
+
+- Ensure all programs and libraries have a LOCALBASE rpath.
+- Disable Solaris64bitSubdir, at least until multi-arch is supported.
+- Use pkgsrc CC, CXX, CFLAGS and INSTALL.
+
+--- sun.cf.orig	2015-12-22 01:28:02.000000000 +0000
++++ sun.cf
+@@ -430,9 +430,9 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
+ #  endif
+ # endif
+ # if OSMinorVersion > 10
+-#  define InstallCmd	    /usr/gnu/bin/install
++#  define InstallCmd	    @@INSTALL@@
+ # elif OSMinorVersion > 3
+-#  define InstallCmd	    /usr/ucb/install
++#  define InstallCmd	    @@INSTALL@@
+ # endif
+ #ifndef LargefileDefines
+ # if (OSMajorVersion > 5) || (OSMajorVersion == 5 && OSMinorVersion >= 6)
+@@ -682,29 +682,29 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
+ # endif
+ # if HasGcc2
+ #  ifndef CcCmd
+-#   define CcCmd gcc
++#   define CcCmd @@PKGSRC_CC@@
++#  endif
++#  ifndef CppCmd
++#   define CppCmd @@PKGSRC_CPP@@
++#  endif
++#  ifndef CplusplusCmd
++#   define CplusplusCmd @@PKGSRC_CXX@@
+ #  endif
+ #  ifndef AsCmd
+ #   define AsCmd CcCmd -c -x assembler
+ #  endif
+ #  ifndef OptimizedCDebugFlags
+-#   ifdef i386Architecture
+-#    define OptimizedCDebugFlags DefaultGcc2i386Opt
+-#   elif defined(AMD64Architecture)
+-#    define OptimizedCDebugFlags DefaultGcc2AMD64Opt
+-#   else
+-#    define OptimizedCDebugFlags -O2
+-#   endif
++#   define OptimizedCDebugFlags @@PKGSRC_CFLAGS@@
+ #  endif
+ #  if !defined(SharedLibraryLoadFlags) && !defined(SharedLibraryLdCmd)
+-#   if OSMajorVersion == 5 && OSMinorVersion > 6 && defined(i386Architecture)
++#   if OSMajorVersion == 5 && OSMinorVersion > 6 && OSMinorVersion < 8 && defined(i386Architecture)
+     /* This is to work around what appears to be a PIC bug in some gcc/egcs
+        versions that shows up with the Solaris 7/x86 <ctype.h>. */
+ #    define SharedLibraryLdCmd $(LD)
+ #    define SharedLibraryLoadFlags -G -z textwarn
+ #   else
+ #    define SharedLibraryLdCmd $(CC)
+-#    define SharedLibraryLoadFlags -shared -z text
++#    define SharedLibraryLoadFlags -shared -z text RpathLoadFlags
+ #   endif
+ #  endif
+ # else
+@@ -829,7 +829,7 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
+ # endif
+ #endif
+ #ifndef Mapfile_NoExData
+-# if defined(SparcArchitecture)
++# if defined(SparcArchitecture) || defined(Sparc64Architecture)
+ /* SPARC archictecture requires PLT section in .data be executable, so
+    we can only make .bss, not all of .data no-exec on SPARC */
+ #   define Mapfile_NoExData /**/
+@@ -846,7 +846,7 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
+ MAPFILES_FOR_PROGS = Mapfile_BssAlign Mapfile_NoExStack
+ /* ExtraLoadFlags apply to all binaries - programs & libraries */
+ # ifndef ExtraLoadFlags
+-#  define ExtraLoadFlags LazyLoadFlag $(MAPFILES_FOR_ALL)
++#  define ExtraLoadFlags RpathLoadFlags LazyLoadFlag $(MAPFILES_FOR_ALL)
+ # endif
+ /* ExtraLoadOptions only apply to programs */
+ # ifndef ExtraLoadOptions
+@@ -863,7 +863,7 @@ MAPFILES_FOR_PROGS = Mapfile_BssAlign Ma
+ # endif
+ #endif
+ 
+-#ifdef Solaris64bitSubdir
++#ifdef NotYetSolaris64bitSubdir
+ # define LibDirName Concat3(lib,/,Solaris64bitSubdir)
+ #endif
+ 

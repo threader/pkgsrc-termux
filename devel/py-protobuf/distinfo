@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.12 2017/11/17 22:09:11 he Exp $
+
+SHA1 (protobuf-python-3.5.0.tar.gz) = 4813791e9deecaea862e83217564df0ce56a80c6
+RMD160 (protobuf-python-3.5.0.tar.gz) = bbef18f7312f450c7fc8b6954a3bad8693666104
+SHA512 (protobuf-python-3.5.0.tar.gz) = d641048f61b52cdf3f30730ba9c2c4d6d48fdf021fc7037bb55f87e3a4e350b47010f6eaef881b2de5fdfc7e67ed109a9529c6c75888aa6391f3a1b4a1be56e9
+Size (protobuf-python-3.5.0.tar.gz) = 4560124 bytes
+SHA1 (patch-configure) = ec7003c29d2d3e9aeb9ea90921313e9eb68d3127
+SHA1 (patch-configure.ac) = 208a5ce72905aa95ad73ee0f751d4a58f0c37f5f
+SHA1 (patch-gmock_configure) = a39355c602366450e3cdb6bc7dbc0523fc194319
+SHA1 (patch-gmock_configure.ac) = cfd7b7c87eff4b06ce6ecb34dec046561bbdc113
+SHA1 (patch-m4_acx__check__suncc.m4) = faf96ee5d305c08d30e7c7d3578896971983e1dd
+SHA1 (patch-src_google_protobuf_message__lite.cc) = 8f2ffe07b2710de5365148153978ad6d9939f522
+SHA1 (patch-src_google_protobuf_stubs_atomicops.h) = 9ec851134da674980a49302e9582a432a47f7974
+SHA1 (patch-src_google_protobuf_stubs_atomicops__internals__arm__gcc.h) = d60c554be8ff7fc9370bb036eef9101f9a6433e3

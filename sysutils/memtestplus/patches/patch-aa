@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.6 2015/03/21 02:18:39 tnn Exp $
+
+--- Makefile.orig	2013-08-10 02:01:58.000000000 +0000
++++ Makefile
+@@ -7,7 +7,7 @@
+ #
+ # Path for the floppy disk device
+ #
+-FDISK=/dev/fd0
++FDISK=/dev/fd0a
+ 
+ AS=as -32
+ CC=gcc
+@@ -20,22 +20,24 @@ OBJS= head.o reloc.o main.o test.o init.
+       smp.o vmem.o random.o
+       
+ 
+-all: clean memtest.bin memtest 
+-		 scp memtest.bin root@192.168.0.12:/srv/tftp/mt86plus
++all: memtest.bin memtest 
+ 
+ # Link it statically once so I know I don't have undefined
+ # symbols and then link it dynamically so I have full
+ # relocation information
+ memtest_shared: $(OBJS) memtest_shared.lds Makefile
+-	$(LD) --warn-constructors --warn-common -static -T memtest_shared.lds \
++	$(LD) --allow-multiple-definition --warn-constructors --warn-common -static -T memtest_shared.lds \
+ 	 -o $@ $(OBJS) && \
+-	$(LD) -shared -Bsymbolic -T memtest_shared.lds -o $@ $(OBJS)
++	$(LD) --allow-multiple-definition -shared -Bsymbolic -T memtest_shared.lds -o $@ $(OBJS)
+ 
+ memtest_shared.bin: memtest_shared
+ 	objcopy -O binary $< memtest_shared.bin
+ 
+-memtest: memtest_shared.bin memtest.lds
+-	$(LD) -s -T memtest.lds -b binary memtest_shared.bin -o $@
++nbstart.s: nbstart.S config.h defs.h
++	$(CC) -E -traditional $< -o $@
++
++memtest: memtest_shared.bin memtest.lds nbstart.o
++	$(LD) -T memtest.lds -z max-page-size=0x1000 nbstart.o -b binary memtest_shared.bin -o $@
+ 
+ head.s: head.S config.h defs.h test.h
+ 	$(CC) -E -traditional $< -o $@

@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.5 2017/08/11 16:09:47 nros Exp $
+bin/cwebp
+bin/dwebp
+bin/gif2webp
+bin/img2webp
+bin/webpmux
+include/webp/decode.h
+include/webp/demux.h
+include/webp/encode.h
+include/webp/mux.h
+include/webp/mux_types.h
+include/webp/types.h
+lib/libwebp.la
+lib/libwebpdecoder.la
+lib/libwebpdemux.la
+lib/libwebpmux.la
+lib/pkgconfig/libwebp.pc
+lib/pkgconfig/libwebpdecoder.pc
+lib/pkgconfig/libwebpdemux.pc
+lib/pkgconfig/libwebpmux.pc
+man/man1/cwebp.1
+man/man1/dwebp.1
+man/man1/gif2webp.1
+man/man1/webpmux.1
+share/doc/libwebp/COPYING

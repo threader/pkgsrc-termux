@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.19 2017/11/28 17:52:02 minskim Exp $
+
+SHA1 (netcdf-4.4.1.1.tar.gz) = 0c77ed993c614653613905a1a52802a38f578b0b
+RMD160 (netcdf-4.4.1.1.tar.gz) = 027c1f71936a253cf388f7a44395f53b6ca54e70
+SHA512 (netcdf-4.4.1.1.tar.gz) = 36c041e2f7ed5fc4f47fc4fa2afcdce2247f1d3794525ebdbd97d359d3ed98f150664ccf77c5366da4db2b9f0f4b17f871d861473ca9afee1462c75a302b07bb
+Size (netcdf-4.4.1.1.tar.gz) = 5250973 bytes
+SHA1 (patch-configure) = 74457173c01355cd0f99f136ae10bdc67e831489
+SHA1 (patch-ncdap__test_testauth.sh) = 710879f36c1a4d54466c9065644db326db0c4ed8

@@ -1,0 +1,51 @@
+$NetBSD: patch-ac,v 1.7 2016/12/06 23:53:36 wiedi Exp $
+
+write_index() uses bodysum, call it only after calculating it.
+otherwise the initial value of 0 is used.
+
+PR pkg/18422.
+
+--- distribute.c.orig	2016-12-06 23:29:55.439064411 +0000
++++ distribute.c
+@@ -49,7 +49,8 @@
+ #define	index	strchr
+ #endif
+ 
+-#if defined(__bsdi__)		/* may be wrong -- we need to use NET/2 def.*/
++/* may be wrong -- we need to use NET/2 def.*/
++#if !defined(_PATH_SENDMAIL)
+ # include <paths.h>		/* for sendmail path */
+ #endif
+ 
+@@ -1541,15 +1542,6 @@ send_message()
+      */
+     putc('\n', pipe);
+     
+-    /* If message have not reject, then write index here.  (since we
+-     * have subject information here! -- We assume here that sendmail
+-     * will not fork shell(in this case, archive) before closing pipe. 
+-     * so archive will run AFTER we correctly wrote index.
+-     */
+-    if (reject == 0) {
+-	write_index();		/* write out index if succeed */
+-    }
+-    
+     /* Dump the message thru the pipe.  We push out the header(leader),
+      * then the message body, then the footer.
+      */
+@@ -1570,6 +1562,15 @@ send_message()
+ 	}
+     }
+     
++    /* If message have not reject, then write index here.  (since we
++     * have subject information here! -- We assume here that sendmail
++     * will not fork shell(in this case, archive) before closing pipe. 
++     * so archive will run AFTER we correctly wrote index.
++     */
++    if (reject == 0) {
++	write_index();		/* write out index if succeed */
++    }
++    
+ 
+     /* clean-up
+      */

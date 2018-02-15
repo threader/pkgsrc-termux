@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.2 2015/12/29 23:34:43 dholland Exp $
+
+Avoid rebuilding the manual at install time. (?)
+
+--- Doc/Reference/Makefile.orig
++++ Doc/Reference/Makefile
+@@ -10,7 +10,7 @@
+ dvi: 	manual.dvi
+ ps: 	manual.ps
+ 
+-install: ps
++install:
+ 	$(CP) manual.ps $(DOC_DIR)
+ 
+ manual.dvi: bibli $(TEX) 

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.8 2016/07/07 08:31:20 wiz Exp $
+
+SHA1 (minidlna-1.1.5.tar.gz) = 8185337621f5f9111118d8a4bca1e8cfcdd19505
+RMD160 (minidlna-1.1.5.tar.gz) = 6a86c63ca1186105ef4cdc5e98d06e95d536d1b8
+SHA512 (minidlna-1.1.5.tar.gz) = 2a8eaa42fcda6f98648f1726af5cdba6d2358c386440dd0de933364cfbd1ced2fee5f883033e1a5a692b760749beb2c12798020a3591ddcea22663102d4f3dfa
+Size (minidlna-1.1.5.tar.gz) = 488191 bytes
+SHA1 (patch-icons.c) = 953a0fa460c674c0cacba133c640028ef282fd8f

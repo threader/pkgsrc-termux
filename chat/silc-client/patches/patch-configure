@@ -1,0 +1,39 @@
+$NetBSD: patch-configure,v 1.2 2014/04/23 20:31:45 asau Exp $
+
+--- configure.orig	2009-08-01 06:53:41.000000000 +0000
++++ configure
+@@ -9245,7 +9245,7 @@ if test -z "$aix_libpath"; then aix_libp
+       hardcode_shlibpath_var=no
+       ;;
+ 
+-    freebsd1*)
++    freebsd1|freebsd1.*)
+       ld_shlibs=no
+       ;;
+ 
+@@ -10146,7 +10146,7 @@ dgux*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1|freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -10157,7 +10157,7 @@ freebsd* | dragonfly*)
+     objformat=`/usr/bin/objformat`
+   else
+     case $host_os in
+-    freebsd[123]*) objformat=aout ;;
++    freebsd[123]|freebsd[123].*) objformat=aout ;;
+     *) objformat=elf ;;
+     esac
+   fi
+@@ -22229,7 +22229,6 @@ esac
+ fi
+ 
+  tmp_CFLAGS="SILC_CRYPTO_CFLAGS"
+-  SILC_CRYPTO_CFLAGS="${SILC_CRYPTO_CFLAGS} -fno-regmove"
+   { $as_echo "$as_me:$LINENO: checking whether $CC accepts -fno-regmove flag" >&5
+ $as_echo_n "checking whether $CC accepts -fno-regmove flag... " >&6; }
+   cat >conftest.$ac_ext <<_ACEOF

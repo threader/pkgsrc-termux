@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.74 2017/08/16 07:33:39 wiz Exp $
+
+SHA1 (xscreensaver/xscreensaver-5.37.tar.gz) = 22e438589c25a485a12ba5ae8462e38c5f5f0e07
+RMD160 (xscreensaver/xscreensaver-5.37.tar.gz) = 301c3ec03e76fee84801034ffd9cc01963942bff
+SHA512 (xscreensaver/xscreensaver-5.37.tar.gz) = 9bef3caf4eb495bebb4c1818ed0bb222be28a7a8d525e2bce70e92d7617bc8cf89750dfaa8cf7a3cd0c489b4831c95f9ff8a0164579cf047aa63681254c8e443
+Size (xscreensaver/xscreensaver-5.37.tar.gz) = 10598833 bytes
+SHA1 (patch-ad) = ff03b044ca82964c3b9535b84a7dcca6d5f8f1bb
+SHA1 (patch-af) = 4ee300a205a0ac448939ac2776087db48d808ad8

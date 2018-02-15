@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.4 2015/11/03 03:27:54 agc Exp $
+
+SHA1 (uuid-1.6.2.tar.gz) = 3e22126f0842073f4ea6a50b1f59dcb9d094719f
+RMD160 (uuid-1.6.2.tar.gz) = f9cd513577557c4f1d7de869f80035b8844b56d7
+SHA512 (uuid-1.6.2.tar.gz) = 16c7e016ce08d7679cc6ee7dec43a886a8c351960acdde99f8f9b590c7232d521bc6e66e4766d969d22c3f835dcc2814fdecc44eef1cd11e7b9b0f9c41b5c03e
+Size (uuid-1.6.2.tar.gz) = 397048 bytes
+SHA1 (patch-aa) = 45bf02ae84db3215fd0bce6a751753f708a33bda
+SHA1 (patch-perl_Makefile.PL) = ade3f5d3f49ba6e5300017500da7dca1f4c4f4a7
+SHA1 (patch-php_config.m4) = 8953299eaae14b39f3ae2e6c9739914654348f5b
+SHA1 (patch-uuid++.pod) = e3e25151aab22976b1f392e130974a07fd571d97
+SHA1 (patch-uuid-config.in) = bdd46fdeef93799405e7672e649caa61b59530e6
+SHA1 (patch-uuid.pc.in) = 496471bf24c88afe4713b7aaf3c07b837f4cf3b6
+SHA1 (patch-uuid.pod) = 4c9d7dbfc428a8794c5dea436beaa6d18f6d7a12
+SHA1 (patch-uuid__cli.c) = 515be1ca002ca17296cc5cecc00072a8714478b7
+SHA1 (patch-uuid__cli.pod) = 86c475d361b08ff3807e269bf0808e0f8b87071d

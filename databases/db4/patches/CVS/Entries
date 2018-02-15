@@ -1,0 +1,15 @@
+/patch-aa/1.16/Wed Jun  2 12:06:22 2010//Tpkgsrc-2017Q4
+/patch-ab/1.25/Sat Jun  7 08:19:14 2014//Tpkgsrc-2017Q4
+/patch-ac/1.9/Sat Sep  6 20:53:51 2008//Tpkgsrc-2017Q4
+/patch-ae/1.1/Tue Sep 28 11:08:29 2010//Tpkgsrc-2017Q4
+/patch-db__sql_sqlite_sqliteInt.h/1.1/Thu Sep  8 16:10:24 2016//Tpkgsrc-2017Q4
+/patch-dbinc_atomic.h/1.2/Tue Sep  8 18:51:27 2015//Tpkgsrc-2017Q4
+/patch-dist_s__sig/1.2/Wed Jul 23 00:22:42 2014//Tpkgsrc-2017Q4
+/patch-env_env__sig.c/1.2/Wed Jul 23 00:22:42 2014//Tpkgsrc-2017Q4
+/patch-mp_mp__fget.c/1.1/Tue Sep  8 18:51:27 2015//Tpkgsrc-2017Q4
+/patch-mp_mp__mvcc.c/1.1/Tue Sep  8 18:51:27 2015//Tpkgsrc-2017Q4
+/patch-mp_mp__region.c/1.1/Tue Sep  8 18:51:27 2015//Tpkgsrc-2017Q4
+/patch-mutex_mut__method.c/1.1/Tue Sep  8 18:51:27 2015//Tpkgsrc-2017Q4
+/patch-mutex_mut__tas.c/1.1/Wed Sep  9 11:11:45 2015//Tpkgsrc-2017Q4
+/patch-repmgr_repmgr__posix.c/1.1/Sat Jun  7 08:17:52 2014//Tpkgsrc-2017Q4
+D

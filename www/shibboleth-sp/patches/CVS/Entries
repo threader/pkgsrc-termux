@@ -1,0 +1,9 @@
+/patch-ab/1.1.1.1/Tue Mar 15 13:15:37 2011//Tpkgsrc-2017Q4
+/patch-configs_Makefile.in/1.2/Fri Oct 23 07:35:08 2015//Tpkgsrc-2017Q4
+/patch-shibsp_SPConfig.cpp/1.2/Fri Oct 23 07:35:08 2015//Tpkgsrc-2017Q4
+/patch-shibsp_attribute_filtering_impl_XMLAttributeFilter.cpp/1.1/Sun Sep 29 10:19:47 2013//Tpkgsrc-2017Q4
+/patch-shibsp_attribute_resolver_impl_ChainingAttributeExtractor.cpp/1.2/Fri Oct 23 07:35:08 2015//Tpkgsrc-2017Q4
+/patch-shibsp_attribute_resolver_impl_ChainingAttributeResolver.cpp/1.2/Fri Oct 23 07:35:08 2015//Tpkgsrc-2017Q4
+/patch-shibsp_attribute_resolver_impl_QueryAttributeResolver.cpp/1.1/Sun Sep 29 10:19:47 2013//Tpkgsrc-2017Q4
+/patch-shibsp_base.h/1.1/Fri Sep 20 23:11:01 2013//Tpkgsrc-2017Q4
+D

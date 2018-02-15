@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.2 2015/12/29 23:34:51 dholland Exp $
+
+Use own headers.
+
+--- src/Interface/dagNode.hh.orig	2006-05-02 13:09:05.000000000 +0000
++++ src/Interface/dagNode.hh
+@@ -181,6 +181,7 @@ private:  
+ ostream& operator<<(ostream& s, DagNode* dagNode);
+ 
+ #include "memoryCell.hh"
++#include "symbol.hh"
+ 
+ inline MemoryCell*
+ DagNode::getMemoryCell()

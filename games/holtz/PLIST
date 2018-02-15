@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.2 2015/08/26 21:38:33 shattered Exp $
+bin/holtz
+bin/relax
+share/holtz/help/help_en.zip
+share/holtz/skins/bloks20.zip
+share/holtz/skins/bloks35.zip
+share/holtz/skins/bloks50.zip
+share/holtz/skins/dvonn50.zip
+share/holtz/skins/dvonn60.zip
+share/holtz/skins/dvonn70.zip
+share/holtz/skins/hex100.zip
+share/holtz/skins/hex50.zip
+share/holtz/skins/hex60.zip
+share/holtz/skins/hex70.zip
+share/holtz/skins/purist50.zip
+share/holtz/skins/relax60.zip
+share/holtz/skins/relax60_rotated.zip
+share/holtz/skins/zertz60.zip
+share/holtz/skins/zertz70.zip
+share/holtz/skins/zertz80.zip
+share/holtz/sounds/beep.wav
+share/locale/de/LC_MESSAGES/holtz-hotkey.mo
+share/locale/de/LC_MESSAGES/holtz.mo
+

@@ -1,0 +1,12 @@
+/patch-config_Makefile.in/1.1/Fri Sep 14 19:23:31 2012//Tpkgsrc-2017Q4
+/patch-config_configure.in/1.6/Mon Aug 15 15:48:19 2016//Tpkgsrc-2017Q4
+/patch-src_config_unix_os_stubs.c.c/1.1/Mon Aug 15 15:48:19 2016//Tpkgsrc-2017Q4
+/patch-src_networks_donkey_donkeyGlobals.ml/1.1/Mon Aug 15 15:48:19 2016//Tpkgsrc-2017Q4
+/patch-src_utils_cdk_gdstubs.c/1.1/Mon Aug 15 15:48:19 2016//Tpkgsrc-2017Q4
+/patch-src_utils_cdk_zip.ml/1.1/Mon Aug 15 15:48:19 2016//Tpkgsrc-2017Q4
+/patch-src_utils_cdk_zlibstubs.c/1.1/Mon Aug 15 15:48:19 2016//Tpkgsrc-2017Q4
+/patch-src_utils_lib_fst_hash.c/1.1/Mon Aug 15 15:48:19 2016//Tpkgsrc-2017Q4
+/patch-src_utils_lib_options.ml4/1.1/Mon Aug 15 15:48:19 2016//Tpkgsrc-2017Q4
+/patch-src_utils_lib_os_stubs.h/1.1/Mon Aug 15 15:48:19 2016//Tpkgsrc-2017Q4
+/patch-src_utils_net_terminal.ml/1.1/Mon Oct 20 10:12:51 2014//Tpkgsrc-2017Q4
+D

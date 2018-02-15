@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.4 2014/06/08 23:26:35 rodent Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/httplib2/__init__.py
+${PYSITELIB}/httplib2/__init__.pyc
+${PYSITELIB}/httplib2/__init__.pyo
+${PYSITELIB}/httplib2/cacerts.txt
+${PYSITELIB}/httplib2/iri2uri.py
+${PYSITELIB}/httplib2/iri2uri.pyc
+${PYSITELIB}/httplib2/iri2uri.pyo
+${PLIST.py2x}${PYSITELIB}/httplib2/socks.py
+${PLIST.py2x}${PYSITELIB}/httplib2/socks.pyc
+${PLIST.py2x}${PYSITELIB}/httplib2/socks.pyo

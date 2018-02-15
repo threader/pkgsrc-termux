@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.2 2016/11/20 21:13:04 joerg Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/m3u8/__init__.py
+${PYSITELIB}/m3u8/__init__.pyc
+${PYSITELIB}/m3u8/__init__.pyo
+${PYSITELIB}/m3u8/mixins.py
+${PYSITELIB}/m3u8/mixins.pyc
+${PYSITELIB}/m3u8/mixins.pyo
+${PYSITELIB}/m3u8/model.py
+${PYSITELIB}/m3u8/model.pyc
+${PYSITELIB}/m3u8/model.pyo
+${PYSITELIB}/m3u8/parser.py
+${PYSITELIB}/m3u8/parser.pyc
+${PYSITELIB}/m3u8/parser.pyo
+${PYSITELIB}/m3u8/protocol.py
+${PYSITELIB}/m3u8/protocol.pyc
+${PYSITELIB}/m3u8/protocol.pyo

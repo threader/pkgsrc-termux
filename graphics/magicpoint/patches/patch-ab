@@ -1,0 +1,77 @@
+$NetBSD: patch-ab,v 1.7 2014/03/23 01:37:27 spz Exp $
+
+* Add support for freetype2 (2.4.* and 2.5.*).
+* Add some prototypes.
+
+--- mgp.h.orig	2008-01-18 17:43:20.000000000 +0000
++++ mgp.h
+@@ -64,7 +64,10 @@
+ #ifdef USE_XFT2
+ #include <ft2build.h>
+ #include FT_FREETYPE_H
+-#include <fontconfig/fontconfig.h>
++#include FT_CONFIG_CONFIG_H
++#include FT_TYPES_H
++#include FT_ERRORS_H
++#include FT_FREETYPE_H
+ #include <X11/Xft/Xft.h>
+ #ifdef HAVE_ICONV
+ #include <iconv.h>
+@@ -308,6 +311,12 @@ struct ctrl_pcache {
+ struct ctrl {
+ 	u_char ct_op;
+ 	u_char ct_flag;
++	enum {
++		CTRL_DOUBLE, CTRL_INT, CTRL_INT2, CTRL_INT3,
++		CTRL_LONG, CTRL_CHAR, CTRL_CHAR2, CTRL_IMAGE,
++		CTRL_GRAD, CTRL_BAR, CTRL_ARGS, CTRL_ICON,
++		CTRL_AREA, CTRL_PCACHE, CTRL_VOID
++	} ct_type;
+ 	u_int ct_page;
+ 	struct ctrl *ct_next;
+ 	union {
+@@ -507,7 +516,7 @@ struct render_object {
+ 			float xzoom, yzoom;
+ #ifdef USE_IMLIB
+ 			int zoomonclk;
+-			ImlibImage *imimage;
++			Imlib_Image *imimage;
+ #endif
+ 		} image;
+ 		struct {
+@@ -745,6 +754,12 @@ extern int get_regid __P((char *));
+ extern void draw_line_itemsize __P((struct render_state *, int, int, int));
+ extern void draw_line_start __P((struct render_state *));
+ extern void draw_line_end __P ((struct render_state *));
++#ifdef USE_IMLIB
++void manage_pixmap(Pixmap, int, int);
++int search_zimage(int, int, int);
++void zoomin_zimage(int);
++void zoomout_zimage(int);
++#endif
+ 
+ #ifdef USE_M17N
+ extern int obj_new_mtext __P((struct render_state *, int, int,
+@@ -814,6 +829,9 @@ extern XImage *tfc_image __P((struct tfo
+ 
+ /* unimap.c */
+ extern void latin_unicode_map_init();
++#ifdef FREETYPE_CHARSET16
++extern void unicode_map_init();
++#endif
+ 
+ /* embed.c */
+ extern char *embed_fname __P((char *));
+@@ -843,6 +861,12 @@ extern void usleep __P((u_int));
+ #define COLOR_BUGFIX
+ #endif
+ 
++#ifdef MNG
++/*mng.c*/
++void mngload(char *, int, int, int, int);
++void mngpreload(struct render_state *, char *, int *, int *);
++#endif
++
+ #ifdef USE_M17N
+ /*m17n.c*/
+ extern void M17N_init __P((void));

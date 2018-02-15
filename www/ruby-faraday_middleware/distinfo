@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/09/18 01:07:42 taca Exp $
+
+SHA1 (faraday_middleware-0.12.2.gem) = 045976e980baf4056fb3b09a1d12a6d9490cf5e2
+RMD160 (faraday_middleware-0.12.2.gem) = 181bb238a2daf979e70089a95d4ce35a4a93c30e
+SHA512 (faraday_middleware-0.12.2.gem) = 8ce519a78129c5b24c73f0a5b8ad785898e6a9f91835bf5fe08a04976e9eeb9d15749a79cdb52df45257e492672dbc74bd0edc54a6f0e205e369b88c0cc77024
+Size (faraday_middleware-0.12.2.gem) = 16384 bytes

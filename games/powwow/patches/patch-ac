@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.3 2013/08/17 11:14:54 joerg Exp $
+
+--- follow.c.orig	2002-02-19 19:42:34.000000000 +0000
++++ follow.c
+@@ -8,6 +8,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <signal.h>
++#include <termios.h>
+ #include <time.h>
+ #include <unistd.h>
+ #include <sys/time.h>
+@@ -96,7 +97,7 @@ void set_terminal()
+     ioctl(0, TIOCGLTC, &ltcsave);
+     ttyb = ttybsave;
+     ttyb.sg_flags = (ttyb.sg_flags|O_CBREAK) & ~O_ECHO;
+-    ioctl(tty_read_fd, TIOCSETP, &ttyb);
++    ioctl(0, TIOCSETP, &ttyb);
+     ltc = ltcsave;
+     ltc.t_suspc = -1;
+     ioctl(0, TIOCSLTC, &ltc);

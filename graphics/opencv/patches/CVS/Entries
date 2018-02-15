@@ -1,0 +1,11 @@
+/patch-3rdparty_ippicv_ippicv.cmake/1.1/Mon Sep  4 15:23:49 2017//Tpkgsrc-2017Q4
+/patch-3rdparty_protobuf_src_google_protobuf_message__lite.cc/1.1/Mon Sep  4 15:23:49 2017//Tpkgsrc-2017Q4
+/patch-cmake_OpenCVDetectCXXCompiler.cmake/1.1/Thu Oct  8 17:45:59 2015//Tpkgsrc-2017Q4
+/patch-modules_core_include_opencv2_core_types_c.h/1.2/Thu Oct  8 17:45:59 2015//Tpkgsrc-2017Q4
+/patch-modules_core_src_downhill__simplex.cpp/1.1/Thu Oct  8 17:45:59 2015//Tpkgsrc-2017Q4
+/patch-modules_core_src_parallel__pthreads.cpp/1.3/Mon Sep  4 15:23:49 2017//Tpkgsrc-2017Q4
+/patch-modules_core_src_system.cpp/1.1/Mon Apr 29 21:31:12 2013//Tpkgsrc-2017Q4
+/patch-modules_flann_include_opencv2_flann_defines.h/1.1/Wed Jun 12 10:13:58 2013//Tpkgsrc-2017Q4
+/patch-modules_ts_src_ts.cpp/1.3/Thu Oct  8 17:45:59 2015//Tpkgsrc-2017Q4
+/patch-modules_videoio_src_cap__v4l.cpp/1.3/Mon Sep  4 15:23:49 2017//Tpkgsrc-2017Q4
+D

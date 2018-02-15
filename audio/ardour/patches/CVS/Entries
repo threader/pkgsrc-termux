@@ -1,0 +1,20 @@
+/patch-gtk2__ardour_ardour.sh.in/1.1/Mon Jun 20 08:17:43 2016//Tpkgsrc-2017Q4
+/patch-gtk2__ardour_editor.cc/1.1/Thu Dec 15 23:45:07 2016//Tpkgsrc-2017Q4
+/patch-gtk2__ardour_fft__graph.cc/1.1/Thu Dec 15 23:45:07 2016//Tpkgsrc-2017Q4
+/patch-gtk2__ardour_startup.cc/1.1/Thu Dec 15 23:45:07 2016//Tpkgsrc-2017Q4
+/patch-gtk2__ardour_wscript/1.1/Mon Jun 20 08:17:43 2016//Tpkgsrc-2017Q4
+/patch-libs_ardour_session__state.cc/1.1/Mon Jun 20 08:17:43 2016//Tpkgsrc-2017Q4
+/patch-libs_ardouralsautil_wscript/1.1/Mon Jun 20 08:17:43 2016//Tpkgsrc-2017Q4
+/patch-libs_backends_alsa_zita-alsa-pcmi.cc/1.1/Mon Jun 20 08:17:43 2016//Tpkgsrc-2017Q4
+/patch-libs_backends_jack_wscript/1.1/Mon Jun 20 08:17:43 2016//Tpkgsrc-2017Q4
+/patch-libs_canvas_stateful__image.cc/1.1/Thu Dec 15 23:45:07 2016//Tpkgsrc-2017Q4
+/patch-libs_fst_wscript/1.1/Mon Jun 20 08:17:43 2016//Tpkgsrc-2017Q4
+/patch-libs_gtkmm2ext_actions.cc/1.1/Thu Dec 15 23:45:07 2016//Tpkgsrc-2017Q4
+/patch-libs_gtkmm2ext_fastmeter.cc/1.1/Thu Dec 15 23:45:07 2016//Tpkgsrc-2017Q4
+/patch-libs_pbd_fpu.cc/1.1/Mon Jun 20 08:17:43 2016//Tpkgsrc-2017Q4
+/patch-libs_pbd_mountpoint.cc/1.1/Mon Jun 20 08:17:43 2016//Tpkgsrc-2017Q4
+/patch-libs_pbd_wscript/1.1/Mon Jun 20 08:17:43 2016//Tpkgsrc-2017Q4
+/patch-libs_ptformat_ptfformat.cc/1.1/Sat Aug 27 18:09:16 2016//Tpkgsrc-2017Q4
+/patch-libs_vfork_wscript/1.1/Mon Jun 20 08:17:43 2016//Tpkgsrc-2017Q4
+/patch-wscript/1.1/Mon Jun 20 08:17:43 2016//Tpkgsrc-2017Q4
+D

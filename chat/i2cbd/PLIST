@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:04:58 jperkin Exp $
+man/man8/icbd.8
+man/man8/icbdb.8
+sbin/icbd
+sbin/icbdb
+share/examples/i2cbd/icbd.deny
+share/examples/i2cbd/icbd_help
+share/examples/i2cbd/motd
+share/examples/i2cbd/news.1

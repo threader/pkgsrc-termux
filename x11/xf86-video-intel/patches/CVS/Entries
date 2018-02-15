@@ -1,0 +1,14 @@
+/patch-src_backlight.c/1.2/Fri May 22 05:40:36 2015//Tpkgsrc-2017Q4
+/patch-src_compat-api.h/1.1/Wed Dec  7 21:59:54 2016//Tpkgsrc-2017Q4
+/patch-src_legacy_i810_i810__dri.c/1.1/Mon Apr 20 13:39:00 2015//Tpkgsrc-2017Q4
+/patch-src_legacy_i810_i810__video.c/1.1/Wed Dec  7 21:59:54 2016//Tpkgsrc-2017Q4
+/patch-src_sna_sna.h/1.1/Wed Dec  7 21:59:54 2016//Tpkgsrc-2017Q4
+/patch-src_sna_sna__accel.c/1.1/Wed Dec  7 21:59:54 2016//Tpkgsrc-2017Q4
+/patch-src_sna_sna__acpi.c/1.1/Wed Dec  7 21:59:54 2016//Tpkgsrc-2017Q4
+/patch-src_sna_sna__display.c/1.1/Fri May 22 05:40:36 2015//Tpkgsrc-2017Q4
+/patch-src_sna_sna__dri2.c/1.1/Tue Mar  3 01:02:05 2015//Tpkgsrc-2017Q4
+/patch-src_sna_sna__driver.c/1.1/Wed Dec  7 21:59:54 2016//Tpkgsrc-2017Q4
+/patch-src_uxa_intel.h/1.1/Wed Dec  7 21:59:54 2016//Tpkgsrc-2017Q4
+/patch-src_uxa_intel__display.c/1.1/Wed Dec  7 21:59:54 2016//Tpkgsrc-2017Q4
+/patch-src_uxa_intel__driver.c/1.2/Wed Dec  7 21:59:54 2016//Tpkgsrc-2017Q4
+D

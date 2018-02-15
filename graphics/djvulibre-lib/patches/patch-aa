@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.2 2015/09/24 23:05:31 ryoon Exp $
+
+--- tools/Makefile.in.orig	2015-02-12 16:04:02.000000000 +0000
++++ tools/Makefile.in
+@@ -424,7 +424,7 @@ jb2cmp_SOURCES = jb2cmp/classify.cpp jb2
+ 
+ AM_CPPFLAGS = -I$(top_srcdir)/libdjvu
+ AM_CXXFLAGS = $(PTHREAD_CFLAGS)
+-DJLIB = $(top_builddir)/libdjvu/libdjvulibre.la
++DJLIB = $(prefix)/lib/libdjvulibre.la
+ bzz_SOURCES = bzz.cpp common.h
+ bzz_LDADD = $(DJLIB) $(PTHREAD_LIBS)
+ c44_SOURCES = c44.cpp common.h

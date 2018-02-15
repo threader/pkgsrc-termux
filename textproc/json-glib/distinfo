@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.17 2017/09/09 06:15:37 ryoon Exp $
+
+SHA1 (json-glib-1.2.8.tar.xz) = f340a7d4c645bb26ec1b0feccb80346094ee2f05
+RMD160 (json-glib-1.2.8.tar.xz) = c13f30676cb2ca224f1c21e4ef4f9aa77c19a0c5
+SHA512 (json-glib-1.2.8.tar.xz) = 85d8ad431363b8698d71684927b8aa38749d99ea7236334ec09fd81482489f1ab9cb12dabcbe13f6b6ffd7e5d70ade47a36b511e275915d4aa858af647db90ba
+Size (json-glib-1.2.8.tar.xz) = 604336 bytes

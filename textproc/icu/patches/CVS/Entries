@@ -1,0 +1,18 @@
+/patch-Makefile.in/1.1/Sat Apr 22 20:11:45 2017//Tpkgsrc-2017Q4
+/patch-acinclude.m4/1.4/Mon Aug 31 15:26:19 2015//Tpkgsrc-2017Q4
+/patch-common_putil.cpp/1.3/Sat Apr 22 20:11:45 2017//Tpkgsrc-2017Q4
+/patch-common_putilimp.h/1.4/Tue Nov  5 15:25:37 2013//Tpkgsrc-2017Q4
+/patch-common_umutex.h/1.1/Tue Mar  4 12:07:16 2014//Tpkgsrc-2017Q4
+/patch-common_unicode_platform.h/1.7/Fri Oct  9 23:15:34 2015//Tpkgsrc-2017Q4
+/patch-common_uposixdefs.h/1.3/Sat Apr 22 20:11:45 2017//Tpkgsrc-2017Q4
+/patch-config_Makefile.inc.in/1.1/Sat Apr 22 20:11:45 2017//Tpkgsrc-2017Q4
+/patch-config_icu-config-bottom/1.3/Sat Oct 19 08:47:36 2013//Tpkgsrc-2017Q4
+/patch-config_mh-darwin/1.1/Sat Apr 22 20:11:45 2017//Tpkgsrc-2017Q4
+/patch-config_mh-scoosr5/1.1/Fri Jul 18 10:28:11 2014//Tpkgsrc-2017Q4
+/patch-config_mh-solaris-gcc/1.4/Wed Oct  4 10:52:40 2017//Tpkgsrc-2017Q4
+/patch-configure/1.9/Tue Apr 25 08:58:44 2017//Tpkgsrc-2017Q4
+/patch-configure.ac/1.5/Fri Oct  9 23:15:34 2015//Tpkgsrc-2017Q4
+/patch-icudefs.mk.in/1.1/Sat Apr 22 20:11:45 2017//Tpkgsrc-2017Q4
+/patch-runConfigureICU/1.1/Sat Apr 22 20:11:45 2017//Tpkgsrc-2017Q4
+/patch-tools-toolutil-pkg_genc.cpp/1.1/Sat Apr 22 20:11:45 2017//Tpkgsrc-2017Q4
+D

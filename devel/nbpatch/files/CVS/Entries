@@ -1,0 +1,16 @@
+/Makefile/1.2/Tue Apr 20 15:41:20 2010//Tpkgsrc-2017Q4
+/backupfile.c/1.3/Sat Nov  7 18:29:50 2015//Tpkgsrc-2017Q4
+/backupfile.h/1.1.1.1/Wed Sep 10 11:03:21 2008//Tpkgsrc-2017Q4
+/common.h/1.5/Sat Nov  7 18:29:50 2015//Tpkgsrc-2017Q4
+/inp.c/1.7/Sat Nov  7 18:29:50 2015//Tpkgsrc-2017Q4
+/inp.h/1.1.1.1/Wed Sep 10 11:03:21 2008//Tpkgsrc-2017Q4
+/mkpath.c/1.1.1.1/Wed Sep 10 11:03:21 2008//Tpkgsrc-2017Q4
+/nbpatch.1/1.2/Sat Nov  7 18:29:50 2015//Tpkgsrc-2017Q4
+/nbpatch.cat1/1.2/Sat Nov  7 18:29:50 2015//Tpkgsrc-2017Q4
+/patch.c/1.3/Sat Nov  7 18:29:50 2015//Tpkgsrc-2017Q4
+/pathnames.h/1.3/Sat May  9 20:15:35 2009//Tpkgsrc-2017Q4
+/pch.c/1.2/Sat Nov  7 18:29:50 2015//Tpkgsrc-2017Q4
+/pch.h/1.1.1.1/Wed Sep 10 11:03:21 2008//Tpkgsrc-2017Q4
+/util.c/1.4/Sat Jan 23 23:08:03 2010//Tpkgsrc-2017Q4
+/util.h/1.2/Fri Jun  5 19:43:12 2009//Tpkgsrc-2017Q4
+D

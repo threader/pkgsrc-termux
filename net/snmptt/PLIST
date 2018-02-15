@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.2 2014/03/11 14:05:11 jperkin Exp $
+sbin/snmptt
+sbin/snmptt-net-snmp-test
+sbin/snmpttconvert
+sbin/snmptthandler
+sbin/snmptthandler-embedded
+sbin/snmpttconvertmib
+share/doc/html/snmptt/faqs.html
+share/doc/html/snmptt/index.html
+share/doc/html/snmptt/layout1.css
+share/doc/html/snmptt/snmptt.html
+share/doc/html/snmptt/snmpttconvert.html
+share/doc/html/snmptt/snmpttconvertmib.html
+share/examples/snmptt/snmptt.ini

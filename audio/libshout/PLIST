@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.6 2015/11/23 09:51:48 wiz Exp $
+include/shout/shout.h
+lib/ckport/db/libshout.ckport
+lib/libshout.la
+lib/pkgconfig/shout.pc
+share/aclocal/shout.m4
+share/doc/libshout/COPYING
+share/doc/libshout/NEWS
+share/doc/libshout/README
+share/doc/libshout/example.c
+share/doc/libshout/nonblocking.c

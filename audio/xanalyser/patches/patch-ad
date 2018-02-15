@@ -1,0 +1,35 @@
+$NetBSD: patch-ad,v 1.5 2014/09/14 12:48:35 shattered Exp $
+
+--- src/Makefile.in.orig	2008-12-06 11:52:34.000000000 +0000
++++ src/Makefile.in
+@@ -195,7 +195,7 @@ xanalyser_SOURCES = \
+ 	Trans.h
+ 
+ xanalyser_LDADD = -lXext -lXm -lXt -lSM -lICE -lXmu -lXpm -lX11		\
+-	$(FFTWLDADD) $(ALSALDADD)
++	${LIBOSSAUDIO} $(FFTWLDADD) $(ALSALDADD)
+ 
+ EXTRA_DIST = XAnalyser.ad help.txt *.xpm
+ all: all-am
+@@ -465,8 +465,8 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 
+ main.cc: XAnalyser.ad.h
+ 
+-XAnalyser.ad.h: XAnalyser.ad
+-	ad2c XAnalyser.ad > XAnalyser.ad.h
++#XAnalyser.ad.h: XAnalyser.ad
++#	ad2c XAnalyser.ad > XAnalyser.ad.h
+ 
+ help.cc: help.txt.h
+ 
+@@ -474,8 +474,8 @@ help.txt.h: help.txt
+ 	txt2c help.txt > help.txt.h
+ 
+ install-data-hook:
+-	mkdir -p $(DESTDIR)/usr/share/X11/app-defaults
+-	cp XAnalyser.ad $(DESTDIR)/usr/share/X11/app-defaults/XAnalyser
++	mkdir -p $(DESTDIR)$(prefix)/lib/X11/app-defaults
++	cp XAnalyser.ad $(DESTDIR)$(prefix)/lib/X11/app-defaults/XAnalyser
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

@@ -1,0 +1,221 @@
+--- libstdc++-v3/config/locale/dragonfly/c_locale.cc.orig
++++ libstdc++-v3/config/locale/dragonfly/c_locale.cc
+@@ -36,6 +36,7 @@
+ #include <locale>
+ #include <limits>
+ 
++#include <xlocale.h>
+ #ifdef _GLIBCXX_HAVE_IEEEFP_H
+ #include <ieeefp.h>
+ #endif
+@@ -206,61 +207,45 @@
+       delete [] __sav;
+     }
+ 
+-
+-  /*  DragonFly's implementation of setlocale won't accept something like
+-      "de_DE".  According to nls manpage, the expected format is:
+-      language[_territory][.codeset][@modifier], but it seems that both
+-      the _territory and .codeset components are required.
+-      
+-      As an attempt to correct for this, we'll tack on ".UTF-8" if 
+-      a period is not detected in the locale string.  
+-
+-      There are no locales with modifiers on DragonFly so if found, they
+-      will just be stripped off silently.  e.g "de_DE@euro" will be reduced
+-      to "de_DE".  The UTF-8 default would be added after that.
+-  */
+-
+   void
+   locale::facet::_S_create_c_locale(__c_locale& __cloc, const char* __s,
+-				    __c_locale)
++				    __c_locale __old)
+   {
+-    const size_t size__s = (__s == NULL) ? 1 : strlen (__s);
+-    const char UTF8[] = ".UTF-8";
+-    char localspec[size__s + 6 + 1];
+-    
+-    if (__s == NULL) {
+-       localspec[0] = '\0';
+-    } else {
+-       strcpy (localspec, __s);
+-       char * pch = strchr (localspec, '@');
+-       if (pch != NULL)
+-          *pch = 0;
+-
+-       if (  (strchr (__s, '.') == NULL)
+-          && (strcmp (__s, "C") != 0)
+-          && (strcmp (__s, "POSIX") != 0))
+-          strncat (localspec, UTF8, 6);
+-    }
+-
+-    const char * result = std::setlocale(LC_ALL, localspec);
++    __cloc = (__c_locale)newlocale(LC_ALL_MASK, __s, (locale_t)__old);
+     
+-    if ((strcmp(result, "C") != 0) && (strcmp (result, localspec) != 0))
++    if (!__cloc)
+       __throw_runtime_error(__N("locale::facet::_S_create_c_locale "
+ 			    "name not valid"));
+-    __cloc = 0;
+   }
+ 
+   void
+   locale::facet::_S_destroy_c_locale(__c_locale& __cloc)
+-  { __cloc = 0; }
++  {
++    if (__cloc && _S_get_c_locale() != __cloc)
++      freelocale((locale_t)__cloc);
++  }
+ 
+   __c_locale
+-  locale::facet::_S_clone_c_locale(__c_locale&) throw()
+-  { return __c_locale(); }
++  locale::facet::_S_clone_c_locale(__c_locale& __cloc) throw()
++  { return (__c_locale)duplocale((locale_t)__cloc); }
+ 
+   __c_locale
+-  locale::facet::_S_lc_ctype_c_locale(__c_locale, const char*)
+-  { return __c_locale(); }
++  locale::facet::_S_lc_ctype_c_locale(__c_locale __cloc, const char* __s)
++  { 
++    __c_locale __dup = (__c_locale)duplocale((locale_t)__cloc);
++    if (__dup == __c_locale(0))
++      __throw_runtime_error(__N("locale::facet::_S_lc_ctype_c_locale "
++				"duplocale error"));
++    __c_locale __changed = (__c_locale)newlocale(LC_CTYPE_MASK, __s,
++                                                   (locale_t)__dup);
++    if (__changed == __c_locale(0))
++      {
++	freelocale((locale_t)__dup);
++	__throw_runtime_error(__N("locale::facet::_S_lc_ctype_c_locale "
++				  "newlocale error"));
++      }
++    return __changed;
++  }
+ 
+ _GLIBCXX_END_NAMESPACE_VERSION
+ } // namespace
+--- libstdc++-v3/config/os/bsd/dragonfly/os_defines.h.orig
++++ libstdc++-v3/config/os/bsd/dragonfly/os_defines.h
+@@ -29,4 +29,9 @@
+ // System-specific #define, typedefs, corrections, etc, go here.  This
+ // file will come before all others.
+ 
++#define _GLIBCXX_USE_C99_CHECK 1
++#define _GLIBCXX_USE_C99_DYNAMIC (!(__ISO_C_VISIBLE >= 1999))
++#define _GLIBCXX_USE_C99_LONG_LONG_CHECK 1
++#define _GLIBCXX_USE_C99_LONG_LONG_DYNAMIC (_GLIBCXX_USE_C99_DYNAMIC || !defined __LONG_LONG_SUPPORTED)
++
+ #endif
+--- libstdc++-v3/config/os/bsd/netbsd/ctype_base.h.orig
++++ libstdc++-v3/config/os/bsd/netbsd/ctype_base.h
+@@ -43,9 +43,22 @@
+ 
+     // NB: Offsets into ctype<char>::_M_table force a particular size
+     // on the mask type. Because of this, we don't use an enum.
+-    typedef unsigned char      	mask;
+ 
+-#ifndef _CTYPE_U
++#if defined(_CTYPE_BL)
++    typedef unsigned short      mask;
++    static const mask upper     = _CTYPE_U;
++    static const mask lower     = _CTYPE_L;
++    static const mask alpha     = _CTYPE_A;
++    static const mask digit     = _CTYPE_D;
++    static const mask xdigit    = _CTYPE_X;
++    static const mask space     = _CTYPE_S;
++    static const mask print     = _CTYPE_R;
++    static const mask graph     = _CTYPE_G;
++    static const mask cntrl     = _CTYPE_C;
++    static const mask punct     = _CTYPE_P;
++    static const mask alnum     = _CTYPE_A | _CTYPE_D;
++#elif !defined(_CTYPE_U)
++    typedef unsigned char      	mask;
+     static const mask upper    	= _U;
+     static const mask lower 	= _L;
+     static const mask alpha 	= _U | _L;
+@@ -58,6 +71,7 @@
+     static const mask punct 	= _P;
+     static const mask alnum 	= _U | _L | _N;
+ #else
++    typedef unsigned char      	mask;
+     static const mask upper    	= _CTYPE_U;
+     static const mask lower 	= _CTYPE_L;
+     static const mask alpha 	= _CTYPE_U | _CTYPE_L;
+--- libstdc++-v3/config/os/bsd/netbsd/ctype_configure_char.cc.orig
++++ libstdc++-v3/config/os/bsd/netbsd/ctype_configure_char.cc
+@@ -38,11 +38,17 @@
+ 
+ // Information as gleaned from /usr/include/ctype.h
+ 
++#ifndef _CTYPE_BL
+   extern "C" const u_int8_t _C_ctype_[];
++#endif
+ 
+   const ctype_base::mask*
+   ctype<char>::classic_table() throw()
++#ifdef _CTYPE_BL
++  { return _C_ctype_tab_ + 1; }
++#else
+   { return _C_ctype_ + 1; }
++#endif
+ 
+   ctype<char>::ctype(__c_locale, const mask* __table, bool __del, 
+ 		     size_t __refs) 
+@@ -69,14 +75,14 @@
+ 
+   char
+   ctype<char>::do_toupper(char __c) const
+-  { return ::toupper((int) __c); }
++  { return ::toupper((int)(unsigned char) __c); }
+ 
+   const char*
+   ctype<char>::do_toupper(char* __low, const char* __high) const
+   {
+     while (__low < __high)
+       {
+-	*__low = ::toupper((int) *__low);
++	*__low = ::toupper((int)(unsigned char) *__low);
+ 	++__low;
+       }
+     return __high;
+@@ -84,14 +90,14 @@
+ 
+   char
+   ctype<char>::do_tolower(char __c) const
+-  { return ::tolower((int) __c); }
++  { return ::tolower((int)(unsigned char) __c); }
+ 
+   const char* 
+   ctype<char>::do_tolower(char* __low, const char* __high) const
+   {
+     while (__low < __high)
+       {
+-	*__low = ::tolower((int) *__low);
++	*__low = ::tolower((int)(unsigned char) *__low);
+ 	++__low;
+       }
+     return __high;
+--- libstdc++-v3/config/os/bsd/netbsd/ctype_inline.h.orig
++++ libstdc++-v3/config/os/bsd/netbsd/ctype_inline.h
+@@ -48,7 +48,7 @@
+   is(const char* __low, const char* __high, mask* __vec) const
+   {
+     while (__low < __high)
+-      *__vec++ = _M_table[*__low++];
++      *__vec++ = _M_table[(unsigned char)*__low++];
+     return __high;
+   }
+ 
+--- libstdc++-v3/configure.host.orig
++++ libstdc++-v3/configure.host
+@@ -270,6 +270,9 @@
+   dragonfly*)
+     os_include_dir="os/bsd/dragonfly"
+     ;;
++  linux-androideabi)
++    os_include_dir="os/bionic"
++    ;;
+   freebsd*)
+     os_include_dir="os/bsd/freebsd"
+     ;;

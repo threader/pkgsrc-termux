@@ -1,0 +1,49 @@
+# $NetBSD: Makefile,v 1.81 2017/12/21 13:15:21 ryoon Exp $
+
+DISTNAME=	gnupg-2.2.4
+PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
+CATEGORIES=	security
+MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	ada@netbsdfr.org
+HOMEPAGE=	https://www.gnupg.org/
+COMMENT=	GnuPG with OpenPGP and S/MIME capabilities
+LICENSE=	gnu-gpl-v3
+
+DEPENDS+=	pinentry-[0-9]*:../../security/pinentry
+
+BUILD_DEFS+=		VARBASE
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake pkg-config makeinfo
+USE_LIBTOOL=		yes
+INFO_FILES=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-g13
+CONFIGURE_ARGS+=	--enable-gpg-is-gpg2
+
+TEST_TARGET=		check
+
+# SunOS does have getaddrinfo() and the code knows how to use it
+CONFIGURE_ARGS.SunOS+=	ac_cv_func_getaddrinfo=yes
+
+LDFLAGS.Darwin+=	-lintl -lresolv
+LDFLAGS.FreeBSD+=	-lintl
+LDFLAGS.SunOS+=		-lintl -lsocket
+
+.include "options.mk"
+
+.include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.7
+.include "../../security/libgcrypt/buildlink3.mk"
+BUILDLINK_API_DEPENDS.sqlite3+=		sqlite3>=3.7.15
+.include "../../databases/sqlite3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.24
+.include "../../security/libgpg-error/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.5.1
+.include "../../security/libassuan2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.3.4
+.include "../../security/libksba/buildlink3.mk"
+BUILDLINK_API_DEPENDS.npth+=		npth>=1.2
+.include "../../devel/npth/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

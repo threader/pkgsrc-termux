@@ -1,0 +1,15 @@
+$NetBSD: patch-solaris_quagga.init.in,v 1.4 2017/10/08 15:25:45 gdt Exp $
+
+Disable the broken upgrade function, unsuitable and unnecessary for pkgsrc.
+
+--- solaris/quagga.init.in.orig	2017-10-03 14:57:10.000000000 +0000
++++ solaris/quagga.init.in
+@@ -229,7 +229,7 @@ else
+ 	fi
+ fi
+ 
+-upgrade_config "$DAEMON"
++#upgrade_config "$DAEMON"
+ 
+ CONF_FILE=`get_routeadm_property $SMF_FMRI config_file`
+ if [ -z "$CONF_FILE" ] ; then

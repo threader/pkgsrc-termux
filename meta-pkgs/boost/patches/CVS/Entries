@@ -1,0 +1,27 @@
+/patch-boost_archive_basic__archive.hpp/1.1/Thu Aug 24 19:31:32 2017//Tpkgsrc-2017Q4
+/patch-boost_atomic_detail_ops_gcc_sparc.hpp/1.2/Sun Jan  1 15:32:47 2017//Tpkgsrc-2017Q4
+/patch-boost_config_detail_posix__features.hpp/1.1/Thu Aug 24 19:31:32 2017//Tpkgsrc-2017Q4
+/patch-boost_config_detail_suffix.hpp/1.1/Thu Aug 24 19:31:32 2017//Tpkgsrc-2017Q4
+/patch-boost_config_platform_bsd.hpp/1.1/Thu Aug 24 19:31:32 2017//Tpkgsrc-2017Q4
+/patch-boost_config_stdlib_libcpp.hpp/1.5/Sun Jan  1 15:32:47 2017//Tpkgsrc-2017Q4
+/patch-boost_config_stdlib_libstdcpp3.hpp/1.2/Fri Apr 17 14:04:47 2015//Tpkgsrc-2017Q4
+/patch-boost_core_noncopyable.hpp/1.1/Wed Aug 13 10:56:36 2014//Tpkgsrc-2017Q4
+/patch-boost_math_special__functions_expm1.hpp/1.1/Mon May 29 14:39:29 2017//Tpkgsrc-2017Q4
+/patch-boost_math_special__functions_log1p.hpp/1.1/Mon May 29 14:39:29 2017//Tpkgsrc-2017Q4
+/patch-boost_math_tools_config.hpp/1.4/Mon May 29 14:39:29 2017//Tpkgsrc-2017Q4
+/patch-boost_numeric_ublas_storage.hpp/1.2/Wed Jun 28 08:27:00 2017//Tpkgsrc-2017Q4
+/patch-boost_property__tree_detail_xml__parser__read__rapidxml.hpp/1.1/Thu Aug 24 19:31:32 2017//Tpkgsrc-2017Q4
+/patch-boost_regex_config.hpp/1.1/Tue May 13 18:48:49 2014//Tpkgsrc-2017Q4
+/patch-boost_stacktrace_detail_collect__unwind.ipp/1.1/Fri Aug 25 21:49:43 2017//Tpkgsrc-2017Q4
+/patch-boost_stacktrace_detail_frame__unwind.ipp/1.1/Wed Sep 20 14:33:25 2017//Tpkgsrc-2017Q4
+/patch-boost_stacktrace_detail_location__from__symbol.hpp/1.1/Wed Sep 20 14:33:25 2017//Tpkgsrc-2017Q4
+/patch-boost_test_impl_execution__monitor.ipp/1.1/Thu Aug 24 19:31:32 2017//Tpkgsrc-2017Q4
+/patch-boostcpp.jam/1.1/Thu Aug 24 19:31:32 2017//Tpkgsrc-2017Q4
+/patch-libs_config_configure/1.1/Fri Apr 12 13:34:42 2013//Tpkgsrc-2017Q4
+/patch-libs_config_test_boost__no__range__based__for.ipp/1.1/Thu Sep 24 23:02:54 2015//Tpkgsrc-2017Q4
+/patch-libs_context_src_asm_jump_arm_aapcs_elf_gas.S/1.2/Sun Sep  3 01:41:00 2017//Tpkgsrc-2017Q4
+/patch-libs_context_src_asm_ontop_arm_aapcs_elf_gas.S/1.2/Sun Sep  3 01:41:00 2017//Tpkgsrc-2017Q4
+/patch-libs_fiber_build_Jamfile.v2/1.1/Thu Mar  9 16:30:12 2017//Tpkgsrc-2017Q4
+/patch-tools_build_src_engine_build.jam/1.1/Thu Aug 24 19:31:32 2017//Tpkgsrc-2017Q4
+/patch-tools_build_src_engine_build.sh/1.1/Thu Aug 24 19:31:32 2017//Tpkgsrc-2017Q4
+D

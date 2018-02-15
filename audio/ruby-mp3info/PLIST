@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.5 2016/11/01 16:40:47 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/mp3info.rb
+${GEM_LIBDIR}/lib/mp3info/extension_modules.rb
+${GEM_LIBDIR}/lib/mp3info/id3v2.rb
+${GEM_LIBDIR}/test/fixtures.yml
+${GEM_LIBDIR}/test/test_ruby-mp3info.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

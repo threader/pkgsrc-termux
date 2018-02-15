@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.3 2016/07/02 08:51:09 jaapb Exp $
+${OCAML_SITELIB}/bz2/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/bz2/bz2.a
+${OCAML_SITELIB}/bz2/bz2.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/bz2/bz2.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/bz2/bz2.cmxa
+${OCAML_SITELIB}/bz2/bz2.cmi
+${OCAML_SITELIB}/bz2/bz2.mli
+${OCAML_SITELIB}/bz2/dllcamlbz2.so
+${OCAML_SITELIB}/bz2/libcamlbz2.a

@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.6 2015/12/29 23:34:46 dholland Exp $
+
+Don't declare own errno.
+
+--- src/io.c.orig	2006-01-09 22:17:25.000000000 +0000
++++ src/io.c
+@@ -48,7 +48,6 @@
+ 
+ extern void Flush_Output (Object);
+ 
+-extern int errno;
+ extern char *getenv();
+ 
+ Object Curr_Input_Port, Curr_Output_Port;

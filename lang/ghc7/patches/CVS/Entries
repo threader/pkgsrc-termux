@@ -1,0 +1,17 @@
+/patch-Makefile/1.1/Thu Dec 12 12:47:17 2013//Tpkgsrc-2017Q4
+/patch-ghc.mk/1.1/Thu Dec 12 12:47:17 2013//Tpkgsrc-2017Q4
+/patch-libffi_ghc.mk/1.1/Sat May  7 10:02:06 2016//Tpkgsrc-2017Q4
+/patch-libraries_base_configure.ac/1.2/Mon Feb 16 07:04:58 2015//Tpkgsrc-2017Q4
+/patch-libraries_integer-gmp_configure.ac/1.1/Thu Dec 12 12:47:17 2013//Tpkgsrc-2017Q4
+/patch-libraries_integer-simple_GHC_Integer.hs/1.1/Thu Dec 12 12:47:17 2013//Tpkgsrc-2017Q4
+/patch-libraries_integer-simple_GHC_Integer_Type.hs/1.1/Thu Dec 12 12:47:17 2013//Tpkgsrc-2017Q4
+/patch-libraries_time_Data_Time_Clock_CTimeval.hs/1.1/Fri Feb 13 19:28:40 2015//Tpkgsrc-2017Q4
+/patch-libraries_unix_System_Posix_Files.hsc/1.1/Wed May 21 16:07:59 2014//Tpkgsrc-2017Q4
+/patch-libraries_unix_System_Posix_Signals.hsc/1.1/Fri Feb 13 19:28:40 2015//Tpkgsrc-2017Q4
+/patch-libraries_unix_cbits_execvpe.c/1.1/Fri Oct 23 20:46:22 2015//Tpkgsrc-2017Q4
+/patch-libraries_unix_include_execvpe.h/1.1/Fri Oct 23 20:46:22 2015//Tpkgsrc-2017Q4
+/patch-mk_config.mk.in/1.1/Wed May 21 16:07:59 2014//Tpkgsrc-2017Q4
+/patch-rts_Linker.c/1.2/Wed May 21 16:07:59 2014//Tpkgsrc-2017Q4
+/patch-rts_StgCRun.c/1.2/Thu Feb  5 00:59:10 2015//Tpkgsrc-2017Q4
+/patch-rts_ghc.mk/1.6/Sat May  7 10:02:06 2016//Tpkgsrc-2017Q4
+D

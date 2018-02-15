@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.6 2016/08/26 14:43:21 mef Exp $
+
+SHA1 (Data-MessagePack-1.00.tar.gz) = 0a3cfe57954f4e0efcdb5e15f97ecf1d6d6ac930
+RMD160 (Data-MessagePack-1.00.tar.gz) = 5e8aa65e2ff3b663a7ce4cb48080973f75aa1521
+SHA512 (Data-MessagePack-1.00.tar.gz) = 4dbf9c8eb65b1f8c4f48ac97ffc39f6984c79eaf474445f052e8def5273b117ca2f43ccbf9792559691b3a4e4c3fb190a7c5b173ca9f3db390d4d3cc213324b1
+Size (Data-MessagePack-1.00.tar.gz) = 95172 bytes

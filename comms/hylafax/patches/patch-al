@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.7 2014/03/14 15:59:29 adam Exp $
+
+--- faxd/Getty.c++.orig	2005-01-01 21:27:15.000000000 +0000
++++ faxd/Getty.c++
+@@ -230,7 +230,7 @@ Getty::hangup()
+     // NB: this is executed in the parent
+     fxStr device = fxStr::format("%s" | line, _PATH_DEV);
+     Sys::chown(device, UUCPLock::getUUCPUid(), UUCPLock::getUUCPGid());
+-    Sys::chmod(device, 0600);			// reset protection
++    Sys::chmod(device, 0660);			// reset protection
+ }
+ 
+ extern void vlogError(const char* fmt, va_list ap);

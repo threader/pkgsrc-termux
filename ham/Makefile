@@ -1,0 +1,58 @@
+# $NetBSD: Makefile,v 1.38 2017/09/26 10:27:05 wiz Exp $
+#
+
+COMMENT=	Wireless communication tools and applications
+SUBDIR+=	7plus
+SUBDIR+=	chirp
+SUBDIR+=	codec2
+SUBDIR+=	cwtext
+SUBDIR+=	dpbox
+SUBDIR+=	fl_logbook
+SUBDIR+=	fldigi
+SUBDIR+=	flxmlrpc
+SUBDIR+=	freedv
+SUBDIR+=	gmfsk
+SUBDIR+=	gnuradio-atsc
+SUBDIR+=	gnuradio-channels
+SUBDIR+=	gnuradio-companion
+SUBDIR+=	gnuradio-core
+SUBDIR+=	gnuradio-ctrlport
+SUBDIR+=	gnuradio-digital
+SUBDIR+=	gnuradio-doxygen
+SUBDIR+=	gnuradio-dtv
+SUBDIR+=	gnuradio-fcd
+SUBDIR+=	gnuradio-fec
+SUBDIR+=	gnuradio-noaa
+SUBDIR+=	gnuradio-pager
+SUBDIR+=	gnuradio-qtgui
+SUBDIR+=	gnuradio-trellis
+SUBDIR+=	gnuradio-uhd
+SUBDIR+=	gnuradio-utils
+SUBDIR+=	gnuradio-video-sdl
+SUBDIR+=	gnuradio-vocoder
+SUBDIR+=	gnuradio-wavelet
+SUBDIR+=	gnuradio-wxgui
+SUBDIR+=	gnuradio-zeromq
+SUBDIR+=	gpredict
+SUBDIR+=	gr-fcdproplus
+SUBDIR+=	gr-osmosdr
+SUBDIR+=	grig
+SUBDIR+=	hackrf
+SUBDIR+=	hamlib
+SUBDIR+=	libmirisdr
+SUBDIR+=	locator
+SUBDIR+=	nec2c
+SUBDIR+=	osmo-sdr
+SUBDIR+=	rtl-sdr
+SUBDIR+=	tfkiss
+SUBDIR+=	tlf
+SUBDIR+=	tnt
+SUBDIR+=	trustedQSL
+SUBDIR+=	uhd
+SUBDIR+=	wwl
+SUBDIR+=	xdx
+SUBDIR+=	xlog
+SUBDIR+=	xnec2c
+SUBDIR+=	yaesu
+
+.include "../mk/misc/category.mk"

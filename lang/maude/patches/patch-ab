@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.2 2015/12/29 23:34:51 dholland Exp $
+
+Use own headers.
+
+--- src/Core/argVec.hh.orig	2006-05-02 13:02:12.000000000 +0000
++++ src/Core/argVec.hh
+@@ -91,6 +91,9 @@ private:
+   pointer basePtr;
+ };
+ 
++#include "dagNode.hh"
++#include "memoryCell.hh"
++
+ template<class T>
+ inline
+ ArgVec<T>::ArgVec(size_type length)

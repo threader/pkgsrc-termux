@@ -1,0 +1,74 @@
+$NetBSD: patch-ai,v 1.7 2017/07/14 12:56:41 joerg Exp $
+
+--- fep_hist.c.orig	1988-11-25 06:45:42.000000000 -0500
++++ fep_hist.c	2005-12-10 16:59:27.000000000 -0500
+@@ -6 +6 @@
+-#endif lint
++#endif /* lint */
+@@ -7,5 +7,8 @@
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <unistd.h>
+ #include <ctype.h>
++#include <re_comp.h>
+ #include "fep_defs.h"
+ #include "fep_glob.h"
+@@ -255,7 +258,7 @@
+ 
+ 	default:
+ 	    {
+-		char *buf[64];
++		char buf[64];
+ 
+ 		strcpy (buf, "^");
+ 		strncat (buf, string, 64);
+@@ -267,9 +270,9 @@
+ 
+ char *
+ search_reverse_history (string)
++    char *string;
+ {
+     register int i;
+-    char *re_comp();
+ 
+     if (string != NULL) {
+ 	set_var ("search-string", string);
+@@ -291,9 +294,9 @@
+ 
+ char *
+ search_forward_history (string)
++    char *string;
+ {
+     register int i;
+-    char *re_comp();
+ 
+     if (string != NULL) {
+ 	if (re_comp(string) != (char *)0)
+@@ -412,7 +415,7 @@
+ mk_home_relative (cp)
+     char *cp;
+ {
+-    char buf[256];
++    static char buf[256];
+ 
+     /*
+      * If variable "history-file" is not absolute path name,
+@@ -540,7 +543,7 @@
+     char *file;
+ {
+     FILE *fp;
+-    char line [MAXCOMLEN];
++    char line [MAXCMDLEN];
+     register int i;
+ 
+     if ((fp = fopen (file, "r")) == NULL) {
+@@ -550,7 +553,7 @@
+ 	return;
+     }
+ 
+-    while (fgets (line, MAXCOMLEN, fp)) {
++    while (fgets (line, MAXCMDLEN, fp)) {
+ 	i = strlen (line) - 1;
+ 	if (line [i] == '\n')
+ 	    line [i] = '\0';

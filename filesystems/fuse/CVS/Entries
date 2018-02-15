@@ -1,0 +1,9 @@
+/DESCR/1.2/Wed Feb 21 06:08:30 2007//Tpkgsrc-2017Q4
+/MESSAGE.Linux/1.1/Wed Aug 25 08:02:21 2010//Tpkgsrc-2017Q4
+/Makefile/1.10/Mon Nov 24 13:19:12 2014//Tpkgsrc-2017Q4
+/PLIST.Linux/1.2/Sun Oct 16 23:45:45 2011//Tpkgsrc-2017Q4
+/PLIST.common/1.2/Mon Nov 24 13:23:10 2014//Tpkgsrc-2017Q4
+/buildlink3.mk/1.5/Mon Sep  6 12:13:30 2010//Tpkgsrc-2017Q4
+/builtin.mk/1.4/Sat Sep 17 05:20:34 2016//Tpkgsrc-2017Q4
+/distinfo/1.5/Tue Nov  3 00:15:00 2015//Tpkgsrc-2017Q4
+D/patches////

@@ -1,0 +1,4 @@
+/patch-src__safeclib__strcasestr_s.c/1.1.1.1/Sun Nov  9 01:52:24 2014//Tpkgsrc-2017Q4
+/patch-tests__perf_memcpy32_s.c/1.1.1.1/Sun Nov  9 01:52:24 2014//Tpkgsrc-2017Q4
+/patch-tests__perf_memcpy_s.c/1.1.1.1/Sun Nov  9 01:52:24 2014//Tpkgsrc-2017Q4
+D

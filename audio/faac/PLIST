@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.5 2017/08/15 13:55:17 adam Exp $
+bin/faac
+include/faac.h
+include/faaccfg.h
+lib/libfaac.la
+man/man1/faac.1

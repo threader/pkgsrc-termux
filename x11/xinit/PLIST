@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.4 2013/09/09 09:19:39 wiz Exp $
+bin/startx
+bin/xinit
+man/man1/startx.1
+man/man1/xinit.1
+share/examples/xinit/xinitrc

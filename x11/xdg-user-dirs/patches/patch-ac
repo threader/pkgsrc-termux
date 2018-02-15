@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.3 2017/09/02 22:45:04 leot Exp $
+
+--- Makefile.in.orig	2017-08-21 07:02:40.000000000 +0000
++++ Makefile.in
+@@ -398,11 +398,11 @@ INCLUDES = \
+ EXTRA_DIST = config.rpath translate.c autogen.sh \
+ 	user-dirs.conf user-dirs.defaults xdg-user-dir xdg-user-dirs.desktop
+ 
+-xdgdir = $(sysconfdir)/xdg
++xdgdir = $(prefix)/share/examples/xdg
+ xdg_DATA = user-dirs.conf user-dirs.defaults
+ xdgautostartdir = $(xdgdir)/autostart
+ xdgautostart_DATA = xdg-user-dirs.desktop
+-libraries = $(LIBINTL)
++libraries = $(LIBINTL) $(LIBICONV)
+ bin_SCRIPTS = \
+ 	xdg-user-dir				\
+ 	$(NULL)

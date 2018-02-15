@@ -1,0 +1,13 @@
+/patch-bin_ad_ad__cp.c/1.2/Mon Nov  7 12:46:52 2016//Tpkgsrc-2017Q4
+/patch-config.h.in/1.2/Mon Nov  7 12:46:52 2016//Tpkgsrc-2017Q4
+/patch-config_Makefile.in/1.2/Mon Nov  7 12:46:52 2016//Tpkgsrc-2017Q4
+/patch-config_pam_Makefile.in/1.2/Fri Jun  2 12:19:07 2017//Tpkgsrc-2017Q4
+/patch-distrib_initscripts_Makefile.in/1.2/Mon Nov  7 12:46:52 2016//Tpkgsrc-2017Q4
+/patch-distrib_initscripts_netatalk.xml.tmpl/1.1/Mon Nov  7 00:41:57 2016//Tpkgsrc-2017Q4
+/patch-etc_afpd_quota.c/1.2/Mon Nov  7 12:46:52 2016//Tpkgsrc-2017Q4
+/patch-etc_cnid__dbd_cnid__metad.c/1.2/Mon Nov  7 12:46:52 2016//Tpkgsrc-2017Q4
+/patch-etc_netatalk_netatalk.c/1.2/Mon Nov  7 12:46:52 2016//Tpkgsrc-2017Q4
+/patch-include_atalk_util.h/1.2/Mon Nov  7 12:46:52 2016//Tpkgsrc-2017Q4
+/patch-libatalk_util_getiface.c/1.2/Mon Nov  7 12:46:52 2016//Tpkgsrc-2017Q4
+/patch-macros_quota-check.m4/1.2/Mon Nov  7 12:46:52 2016//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,129 @@
+$NetBSD: patch-configure,v 1.2 2017/06/16 05:39:23 adam Exp $
+
+Add support for DragonFly.
+Use 'amd64' as a synonym for 'x86_64'.
+Avoid endian test failure for -flto.
+Do not force compiler optimisations.
+If we fail an assembly test, continue as if --disable-asm
+was passed.
+
+--- configure.orig	2017-06-15 20:45:03.000000000 +0000
++++ configure
+@@ -612,6 +612,10 @@ case $host_os in
+         SYS="FREEBSD"
+         libm="-lm"
+         ;;
++    dragonfly*)
++        SYS="DRAGONFLY"
++        LDFLAGS="$LDFLAGS -lm"
++        ;;
+     kfreebsd*-gnu)
+         SYS="FREEBSD"
+         define HAVE_MALLOC_H
+@@ -712,7 +716,7 @@ case $host_cpu in
+             ASFLAGS="$ASFLAGS -f elf32"
+         fi
+         ;;
+-    x86_64)
++    x86_64|amd64)
+         ARCH="X86_64"
+         AS="${AS-nasm}"
+         AS_EXT=".asm"
+@@ -741,14 +745,15 @@ case $host_cpu in
+         fi
+         ;;
+     powerpc*)
+-        ARCH="PPC"
+         if [ $asm = auto ] ; then
+             define HAVE_ALTIVEC
+             AS="${AS-${CC}}"
+             AS_EXT=".c"
+             if [ $SYS = MACOSX ] ; then
++                ARCH="POWERPC"
+                 CFLAGS="$CFLAGS -faltivec -fastf -mcpu=G4"
+             else
++                ARCH="PPC"
+                 CFLAGS="$CFLAGS -maltivec -mabi=altivec"
+                 define HAVE_ALTIVEC_H
+             fi
+@@ -915,8 +920,8 @@ if [ $asm = auto -a $ARCH = ARM ] ; then
+         ASFLAGS="$ASFLAGS -c"
+     else
+         echo "You specified a pre-ARMv6 or Thumb-1 CPU in your CFLAGS."
+-        echo "If you really want to run on such a CPU, configure with --disable-asm."
+-        exit 1
++	echo "Disabling asm"
++	asm="no"
+     fi
+ fi
+ 
+@@ -925,8 +930,8 @@ if [ $asm = auto -a $ARCH = AARCH64 ] ; 
+         ASFLAGS="$ASFLAGS -c"
+     else
+         echo "no NEON support, try adding -mfpu=neon to CFLAGS"
+-        echo "If you really want to run on such a CPU, configure with --disable-asm."
+-        exit 1
++	echo "Disabling asm"
++	asm="no"
+     fi
+ fi
+ 
+@@ -944,8 +949,8 @@ if [ $asm = auto -a $ARCH = MIPS ] ; the
+         define HAVE_MSA
+     else
+         echo "You specified a pre-MSA CPU in your CFLAGS."
+-        echo "If you really want to run on such a CPU, configure with --disable-asm."
+-        exit 1
++	echo "Disabling asm"
++	asm="no"
+     fi
+ fi
+ 
+@@ -962,7 +967,7 @@ ASFLAGS="$ASFLAGS -DSTACK_ALIGNMENT=$sta
+ CPU_ENDIAN="little-endian"
+ if [ $compiler = GNU ]; then
+     echo "int i[2] = {0x42494745,0}; double f[2] = {0x1.0656e6469616ep+102,0};" > conftest.c
+-    $CC $CFLAGS conftest.c -c -o conftest.o 2>/dev/null || die "endian test failed"
++    $CC $CPPFLAGS conftest.c -c -o conftest.o 2>/dev/null || die "endian test failed"
+     if (${cross_prefix}strings -a conftest.o | grep -q BIGE) && (${cross_prefix}strings -a conftest.o | grep -q FPendian) ; then
+         define WORDS_BIGENDIAN
+         CPU_ENDIAN="big-endian"
+@@ -984,7 +989,7 @@ fi
+ 
+ # autodetect options that weren't forced nor disabled
+ 
+-libpthread=""
++libpthread="$PTHREAD_LDFLAGS $PTHREAD_LIBS"
+ if [ "$SYS" = "WINDOWS" -a "$thread" = "posix" ] ; then
+     if [ "$gpl" = "no" ] ; then
+         echo "Warning: pthread-win32 is LGPL and is therefore not supported with --disable-gpl"
+@@ -1205,10 +1210,10 @@ fi
+ cc_check "stdint.h" "" "uint32_t test_vec __attribute__ ((vector_size (16))) = {0,1,2,3};" && define HAVE_VECTOREXT
+ 
+ if [ "$pic" = "yes" ] ; then
+-    [ "$SYS" != WINDOWS -a "$SYS" != CYGWIN ] && CFLAGS="$CFLAGS -fPIC"
++    PICFLAG="-prefer-pic"
+     ASFLAGS="$ASFLAGS -DPIC"
+     # resolve textrels in the x86 asm
+-    cc_check stdio.h "-shared -Wl,-Bsymbolic" && SOFLAGS="$SOFLAGS -Wl,-Bsymbolic"
++    cc_check stdio.h "-Wl,-Bsymbolic" && LDFLAGS="$LDFLAGS -Wl,-Bsymbolic"
+     [ $SYS = SunOS -a "$ARCH" = "X86" ] && SOFLAGS="$SOFLAGS -mimpure-text"
+ fi
+ 
+@@ -1224,7 +1229,6 @@ if [ "$debug" = "yes" ]; then
+     CFLAGS="-O1 -g $CFLAGS"
+     RCFLAGS="$RCFLAGS -DDEBUG"
+ else
+-    CFLAGS="-O3 -ffast-math $CFLAGS"
+     if [ "$lto" = "auto" ] && [ $compiler = GNU ] && cc_check "" "-flto" ; then
+         lto="yes"
+         CFLAGS="$CFLAGS -flto"
+@@ -1359,7 +1363,7 @@ else # gcc/icc
+     DEPMM="$DEPMM -g0"
+     AR="$AR rc "
+     LD="$CC -o "
+-    LIBX264=libx264.a
++    LIBX264=libx264.la
+     [ -n "$RC" ] && RCFLAGS="$RCFLAGS -I. -o "
+ fi
+ [ $compiler != GNU ] && CFLAGS="$(cc_cflags $CFLAGS)"

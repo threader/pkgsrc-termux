@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2017/07/23 18:52:03 adam Exp $
+
+SHA1 (Unidecode-0.04.21.tar.gz) = a6c0f413bfc5d9de7bf7807b7b7589cea55f7b6b
+RMD160 (Unidecode-0.04.21.tar.gz) = 2c30cc6d15f2761ce7874710c9920968f270605f
+SHA512 (Unidecode-0.04.21.tar.gz) = 33fc546b3eefc4ba5feee90d584e49ccd81dd0ae00671f7e44f43cc3dc8a458b86ed6dbfacba6dac7539112408137fc1db6329cc42f31ee250755d841c7c29c2
+Size (Unidecode-0.04.21.tar.gz) = 205931 bytes

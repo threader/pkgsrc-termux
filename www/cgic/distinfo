@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.6 2015/11/04 02:46:51 agc Exp $
+
+SHA1 (cgic206.tar.gz) = fa4213f3479bb38511adb7fbb685ded96c2b1f72
+RMD160 (cgic206.tar.gz) = 440c9ca887e1d24f8953567174f1a0eb08ee2d61
+SHA512 (cgic206.tar.gz) = 58da23f0608a40999f726d0f2868cc305538819af41c04190f98b1bea1d9a747c677a790861dafb53c3f64bfdbfdb0edcf9b124952b750e8b26aa85e431466c4
+Size (cgic206.tar.gz) = 50167 bytes
+SHA1 (patch-aa) = e90c34b85194524554ecab21a3edd68f50f41bc3
+SHA1 (patch-ab) = 42e8ee71eeb363e702dfab66344811a8967d382d
+SHA1 (patch-ac) = ee06539e395f5027291253c98ec103808f188a66
+SHA1 (patch-ad) = 6ef230a6cc265121dbcbaef392bc1d9c43d167b0
+SHA1 (patch-ae) = 0cbf0e7ceaa69adef326672cf4087a266e1c9512
+SHA1 (patch-af) = 04c73e07a32c7df1b659f181528066d93ed684e5

@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.2 2015/12/29 23:34:49 dholland Exp $
+
+Avoid void main.
+
+--- A+/main.c.orig	Wed May  8 10:32:57 2002
++++ A+/main.c	Wed May  8 10:33:14 2002
+@@ -20,7 +20,7 @@
+ 
+ int optionO;
+ 
+-void main(int argc, char **argv)
++int main(int argc, char **argv)
+ { int i;
+   theprogram = NULL;
+   optionO = 0;
+@@ -50,5 +50,5 @@
+   codePROGRAM(theprogram);
+   if (optionO) optiPROGRAM(theprogram);
+   emitPROGRAM(theprogram);
+-  exit(0);
++  return(0);
+ }

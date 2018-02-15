@@ -1,0 +1,6 @@
+/patch-GDALmake.opt.in/1.3/Fri Jan 13 14:48:26 2017//Tpkgsrc-2017Q4
+/patch-dist__docs_install__unx.sh/1.1/Fri Jan 13 02:26:04 2017//Tpkgsrc-2017Q4
+/patch-frmts_grib_degrib18_degrib_myutil.c/1.1/Sat Dec 12 15:27:50 2015//Tpkgsrc-2017Q4
+/patch-frmts_jpeg2000_jpeg2000__vsil__io.cpp/1.1/Sat Dec 17 23:24:31 2016//Tpkgsrc-2017Q4
+/patch-ogr_ogrsf__frmts_geojson_libjson_GNUmakefile/1.1/Mon Mar 27 13:52:27 2017//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.5 2017/01/19 06:48:46 wen Exp $
+bin/bwbasic
+man/man1/bwbasic.1

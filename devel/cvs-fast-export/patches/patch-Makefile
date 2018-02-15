@@ -1,0 +1,56 @@
+$NetBSD: patch-Makefile,v 1.10 2017/01/29 12:19:08 kim Exp $
+
+* Use ${PREFIX} variable.
+* Comment out "-march=native"
+* Add "all" target.
+* Install man pages in ${PREFIX}/${PKGMANDIR}, not ${PREFIX}/share/man.
+
+--- Makefile.orig	2016-09-08 01:16:05.000000000 +0000
++++ Makefile	2017-01-24 02:22:09.000000000 +0000
+@@ -17,11 +17,12 @@
+ VERSION=1.40
+ 
+ .PATH: $(.PARSEDIR)
+-prefix?=/usr/local
++prefix?=$(PREFIX)
+ target=$(DESTDIR)$(prefix)
+ parsedir:=$(.PARSEDIR)
+ srcdir=$(dir $(abspath $(firstword $(MAKEFILE_LIST))))$(parsedir)
+ VPATH=$(srcdir)
++mandir=$(PKGMANDIR)
+ 
+ INSTALL = install
+ TAR = tar
+@@ -40,7 +41,7 @@
+ CPPFLAGS += -DTHREADS
+ 
+ # Optimizing for speed. Comment this out for distribution builds
+-CFLAGS += -march=native
++#CFLAGS += -march=native
+ 
+ # To enable debugging of the Yacc grammar, uncomment the following line
+ #CPPFLAGS += -DYYDEBUG=1
+@@ -100,6 +101,8 @@
+ 
+ BISON ?= bison
+ 
++all: cvs-fast-export cvs-fast-export.1
++
+ gram.h gram.c: gram.y
+ 	$(BISON)  $(YFLAGS) --defines=gram.h --output-file=gram.c $(srcdir)/gram.y
+ lex.h lex.c: lex.l
+@@ -143,10 +146,10 @@
+ 	$(INSTALL) -d "$(target)/bin"
+ 	$(INSTALL) $^ "$(target)/bin"
+ install-man: man
+-	$(INSTALL) -d "$(target)/share/man/man1"
+-	$(INSTALL) -m 644 cvs-fast-export.1 "$(target)/share/man/man1"
+-	$(INSTALL) -m 644 cvssync.1 "$(target)/share/man/man1"
+-	$(INSTALL) -m 644 cvsconvert.1 "$(target)/share/man/man1"
++	$(INSTALL) -d "$(target)/$(mandir)/man1"
++	$(INSTALL) -m 644 cvs-fast-export.1 "$(target)/$(mandir)/man1"
++	$(INSTALL) -m 644 cvssync.1 "$(target)/$(mandir)/man1"
++	$(INSTALL) -m 644 cvsconvert.1 "$(target)/$(mandir)/man1"
+ uninstall: uninstall-man uninstall-bin
+ uninstall-man:
+ 	cd $(target)/share/man/man1/ && rm -f cvs-fast-export.1 cvssync.1 cvsconvert.1

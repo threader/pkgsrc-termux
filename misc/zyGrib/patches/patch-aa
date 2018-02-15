@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.9 2014/12/30 08:50:55 plunky Exp $
+
+libraries are provided by the buildlink3.mk framework;
+no need to provide paths
+
+--- zyGrib.pro.orig	2014-11-02 00:01:52.000000000 +0000
++++ zyGrib.pro
+@@ -5,7 +5,7 @@ TEMPLATE = app
+ TARGET   = zyGrib
+ 
+ DEPENDPATH  += . util map GUI
+-INCLUDEPATH += . util map GUI curvedrawer qwt-6.0.1/src
++INCLUDEPATH += . util map GUI curvedrawer
+ 
+ # ----------------------------------------------------
+ # platform specific
+@@ -26,7 +26,7 @@ macx {
+ }
+ else {
+ 	DESTDIR = .
+-	LIBS += -lbz2 -lz -lproj -lnova -Lqwt-6.0.1/lib/ -lqwt
++	LIBS += -lbz2 -lz -lproj -lnova -lqwt
+ }
+ }
+ # ----------------------------------------------------

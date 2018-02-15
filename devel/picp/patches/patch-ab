@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.2 2017/06/27 23:50:24 wiedi Exp $
+
+needs include for alloca
+
+--- main.c.orig	2005-07-08 23:10:15.000000000 +0000
++++ main.c
+@@ -67,6 +67,10 @@
+ #include <errno.h>
+ #include	<time.h>
+ 
++#if defined(__INTERIX) || defined(__sun)
++#include <alloca.h>
++#endif
++
+ #ifdef WIN32
+ #include	<windows.h>
+ #include	<malloc.h>

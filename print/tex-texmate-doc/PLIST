@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2015/05/06 09:09:27 wiz Exp $
+share/texmf-dist/doc/latex/texmate/README
+share/texmf-dist/doc/latex/texmate/texmate2manual.pdf
+share/texmf-dist/doc/latex/texmate/texmate2manual.tex

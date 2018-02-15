@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.7 2017/11/23 15:24:55 wiz Exp $
+
+SHA1 (jbig2dec-0.14.tar.gz) = c4c834962d1357f9aaacecd7fca8236326e45975
+RMD160 (jbig2dec-0.14.tar.gz) = c7421f9ff09bc125f3245ba7540fd969932ba8ab
+SHA512 (jbig2dec-0.14.tar.gz) = 066bd880ac0665fc1e42b0ae0e481008b125aab6e173b7f82d61a2a30e72c90085cbded9b2a68c6836f92dea3d8d8d5c2228dba76e0d99c79c922197d215705b
+Size (jbig2dec-0.14.tar.gz) = 463572 bytes

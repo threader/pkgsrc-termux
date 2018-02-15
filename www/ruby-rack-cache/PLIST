@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.4 2016/03/15 16:18:11 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/rack-cache.rb
+${GEM_LIBDIR}/lib/rack/cache.rb
+${GEM_LIBDIR}/lib/rack/cache/app_engine.rb
+${GEM_LIBDIR}/lib/rack/cache/appengine.rb
+${GEM_LIBDIR}/lib/rack/cache/cache_control.rb
+${GEM_LIBDIR}/lib/rack/cache/cachecontrol.rb
+${GEM_LIBDIR}/lib/rack/cache/context.rb
+${GEM_LIBDIR}/lib/rack/cache/entity_store.rb
+${GEM_LIBDIR}/lib/rack/cache/entitystore.rb
+${GEM_LIBDIR}/lib/rack/cache/key.rb
+${GEM_LIBDIR}/lib/rack/cache/meta_store.rb
+${GEM_LIBDIR}/lib/rack/cache/metastore.rb
+${GEM_LIBDIR}/lib/rack/cache/options.rb
+${GEM_LIBDIR}/lib/rack/cache/request.rb
+${GEM_LIBDIR}/lib/rack/cache/response.rb
+${GEM_LIBDIR}/lib/rack/cache/storage.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

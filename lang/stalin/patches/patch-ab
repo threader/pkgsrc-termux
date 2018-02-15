@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.4 2015/12/29 23:34:56 dholland Exp $
+
+Don't use nonstandard headers.
+
+--- stalin-alpha.c.orig	Mon Jun 25 08:04:29 2001
++++ stalin-alpha.c
+@@ -1,7 +1,6 @@
+ #include <stddef.h>
+ #include <assert.h>
+ #include <time.h>
+-#include <alloca.h>
+ #include <gc.h>
+ #include <string.h>
+ #include <math.h>

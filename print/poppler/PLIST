@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.8 2017/12/08 07:48:11 spz Exp $
+lib/libpoppler.so
+lib/libpoppler.so.72
+lib/libpoppler.so.72.0.0
+lib/pkgconfig/poppler-splash.pc
+lib/pkgconfig/poppler.pc
+share/doc/poppler/README
+share/doc/poppler/README-XPDF

@@ -1,0 +1,14 @@
+$NetBSD: patch-at,v 1.5 2015/12/29 23:34:48 dholland Exp $
+
+Don't strip the executables during the build.
+
+--- src/rtt/Makefile.orig
++++ src/rtt/Makefile
+@@ -24,7 +24,6 @@
+ rtt:	$(OBJ)
+ 	$(CC) $(LDFLAGS) -o rtt $(OBJ)
+ 	cp rtt ../../bin
+-	strip ../../bin/rtt$(EXE)
+ 
+ library:	$(OBJ)
+ 		rm -rf rtt.a

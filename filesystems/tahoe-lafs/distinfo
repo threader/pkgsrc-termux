@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.13 2017/01/28 09:09:50 riastradh Exp $
+
+SHA1 (tahoe-lafs-1.12.1.tar.bz2) = cc9c86eecd232fde73bb7078f8c6c4a48536f303
+RMD160 (tahoe-lafs-1.12.1.tar.bz2) = f8fc325c24f3d9c471d2eb1939db661775611388
+SHA512 (tahoe-lafs-1.12.1.tar.bz2) = b1017119164d9a7522d8fc0b1405b0634cb6c0386735847d7261e02cb4d08fdb5af13f6feccec73b789efa5bea6f91008f93368514fcb073638aca686086e3ab
+Size (tahoe-lafs-1.12.1.tar.bz2) = 1387606 bytes

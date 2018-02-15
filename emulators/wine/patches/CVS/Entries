@@ -1,0 +1,7 @@
+/patch-configure/1.1/Fri Jan 17 09:01:58 2014//Tpkgsrc-2017Q4
+/patch-dlls_ntdll_signal__i386.c/1.1/Thu Jun  9 15:26:35 2016//Tpkgsrc-2017Q4
+/patch-dlls_wbemprox_builtin.c/1.1/Fri Jan 17 09:01:58 2014//Tpkgsrc-2017Q4
+/patch-dlls_wineoss.drv_mmdevdrv.c/1.1/Fri Jan 17 09:01:58 2014//Tpkgsrc-2017Q4
+/patch-programs_winhlp32_macro.lex.l/1.1/Wed Jan  4 11:52:24 2017//Tpkgsrc-2017Q4
+/patch-tools_wrc_parser.l/1.1/Wed Jan  4 11:52:24 2017//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,14 @@
+/ALTERNATIVES/1.1/Sat Dec  5 17:12:13 2015//Tpkgsrc-2017Q4
+/DESCR/1.2/Sun Dec  6 09:08:59 2015//Tpkgsrc-2017Q4
+/Makefile/1.12/Wed Dec 13 12:55:32 2017//Tpkgsrc-2017Q4
+/PLIST/1.7/Wed Dec 13 12:55:32 2017//Tpkgsrc-2017Q4
+/PLIST.Darwin/1.1/Sat Dec  5 17:12:13 2015//Tpkgsrc-2017Q4
+/PLIST.FreeBSD/1.1/Sat Dec  5 17:12:13 2015//Tpkgsrc-2017Q4
+/PLIST.IRIX/1.1/Sat Dec  5 17:12:13 2015//Tpkgsrc-2017Q4
+/PLIST.Linux/1.1/Sat Dec  5 17:12:13 2015//Tpkgsrc-2017Q4
+/PLIST.SunOS/1.1/Sat Dec  5 17:12:13 2015//Tpkgsrc-2017Q4
+/buildlink3.mk/1.1/Sat Dec  5 17:12:13 2015//Tpkgsrc-2017Q4
+/dist.mk/1.5/Mon Aug 14 09:16:28 2017//Tpkgsrc-2017Q4
+/distinfo/1.14/Wed Dec 13 12:55:32 2017//Tpkgsrc-2017Q4
+/options.mk/1.2/Sun Jan  1 15:06:24 2017//Tpkgsrc-2017Q4
+D/patches////

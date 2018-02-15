@@ -1,0 +1,17 @@
+/patch-CMakeLists.txt/1.2/Tue Aug  5 05:12:38 2014//Tpkgsrc-2017Q4
+/patch-Engine_entry1.c/1.1/Tue Mar 29 22:06:48 2016//Tpkgsrc-2017Q4
+/patch-Engine_linevent.c/1.2/Tue Aug  5 05:12:38 2014//Tpkgsrc-2017Q4
+/patch-InOut_libsnd.c/1.2/Tue Aug  5 05:12:38 2014//Tpkgsrc-2017Q4
+/patch-InOut_widgets.cpp/1.2/Tue Aug  5 05:12:38 2014//Tpkgsrc-2017Q4
+/patch-InOut_winEPS.c/1.2/Tue Aug  5 05:12:38 2014//Tpkgsrc-2017Q4
+/patch-InOut_winFLTK.c/1.3/Wed Aug  6 06:17:07 2014//Tpkgsrc-2017Q4
+/patch-Opcodes_cpumeter.c/1.3/Wed Aug  6 06:17:07 2014//Tpkgsrc-2017Q4
+/patch-Opcodes_wavegde.h/1.1/Thu Mar  6 10:16:53 2014//Tpkgsrc-2017Q4
+/patch-Top_csmodule.c/1.3/Wed Aug  6 06:17:07 2014//Tpkgsrc-2017Q4
+/patch-Top_csound.c/1.2/Tue Aug  5 05:12:38 2014//Tpkgsrc-2017Q4
+/patch-Top_one_file.c/1.3/Wed Aug  6 06:17:07 2014//Tpkgsrc-2017Q4
+/patch-Top_threads.c/1.2/Tue Aug  5 05:12:38 2014//Tpkgsrc-2017Q4
+/patch-frontends_CsoundVST_ScoreGeneratorVstMain.cpp/1.2/Tue Aug  5 05:12:38 2014//Tpkgsrc-2017Q4
+/patch-include_interlocks.h/1.1/Tue Mar 29 22:06:48 2016//Tpkgsrc-2017Q4
+/patch-include_text.h/1.1/Tue Mar 29 22:06:48 2016//Tpkgsrc-2017Q4
+D

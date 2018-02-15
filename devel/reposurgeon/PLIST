@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.5 2017/01/21 12:07:28 kim Exp $
+bin/repocutter
+bin/repodiffer
+bin/repomapper
+bin/reposurgeon
+bin/repotool
+man/man1/repocutter.1
+man/man1/repodiffer.1
+man/man1/repomapper.1
+man/man1/reposurgeon.1
+man/man1/repotool.1
+share/doc/reposurgeon/NEWS
+share/doc/reposurgeon/README.md
+share/doc/reposurgeon/TODO
+share/doc/reposurgeon/dvcs-migration-guide.html
+share/doc/reposurgeon/features.html
+share/doc/reposurgeon/repocutter.html
+share/doc/reposurgeon/repodiffer.html
+share/doc/reposurgeon/repomapper.html
+share/doc/reposurgeon/reporting-bugs.html
+share/doc/reposurgeon/reposurgeon-git-aliases
+share/doc/reposurgeon/reposurgeon.html
+share/doc/reposurgeon/repotool.html

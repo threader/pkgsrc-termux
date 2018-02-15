@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.6 2015/04/26 14:38:10 mef Exp $
+
+* for the case of ${PKG_SYSCONFDIR} != ${LOCALBASE}/etc
+
+--- Makefile.orig	2011-01-15 21:47:19.000000000 +0900
++++ Makefile	2015-04-26 23:15:46.000000000 +0900
+@@ -39,12 +39,12 @@ SRCS+=	tty.c dispatcher.c setup.c config
+ SRCS+=	rtelnet.c
+ 
+ .if !defined(SMALLPROG)
+-CPPFLAGS+= -DLIBWRAP -DTITS_DEFAULT_CONFIG_FILE=\"${LOCALBASE}/etc/tits.conf\"
++CPPFLAGS+= -DLIBWRAP -DTITS_DEFAULT_CONFIG_FILE=\"${PKG_SYSCONFDIR}/tits.conf\"
+ LDADD+=	-lwrap
+ .else
+ CPPFLAGS+= -DTITS_DEFAULT_CONFIG_FILE=\"/etc/tits.conf\"
+ .endif
+-CPPFLAGS+= -DTITS_DEFAULT_LINKDIR=\"/var/run\"
++CPPFLAGS+= -DTITS_DEFAULT_LINKDIR=\"${VARBASE}/run\"
+ PREFIX?= /usr/local
+ BINDIR?= ${PREFIX}/sbin
+ 

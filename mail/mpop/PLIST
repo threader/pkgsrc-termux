@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.7 2013/08/18 10:32:45 shattered Exp $
+bin/mpop
+info/mpop.info
+man/man1/mpop.1
+share/examples/mpop/mpoprc.example
+share/locale/de/LC_MESSAGES/mpop.mo

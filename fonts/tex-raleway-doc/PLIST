@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.2 2017/06/21 13:25:32 markd Exp $
+share/texmf-dist/doc/latex/raleway/LPPL.txt
+share/texmf-dist/doc/latex/raleway/OFL.txt
+share/texmf-dist/doc/latex/raleway/raleway-otf-specimen.pdf
+share/texmf-dist/doc/latex/raleway/raleway-otf-specimen.tex
+share/texmf-dist/doc/latex/raleway/raleway-type1-specimen.pdf
+share/texmf-dist/doc/latex/raleway/raleway-type1-specimen.tex
+share/texmf-dist/doc/latex/raleway/raleway.pdf
+share/texmf-dist/doc/latex/raleway/raleway.tex

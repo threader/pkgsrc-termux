@@ -1,0 +1,71 @@
+$NetBSD: patch-ad,v 1.6 2014/11/13 08:30:16 markd Exp $
+
+--- PNG/Makefile.PL.orig	2013-11-18 09:04:04.000000000 +0000
++++ PNG/Makefile.PL
+@@ -2,7 +2,6 @@
+ use strict;
+ use Tk::MMutil;
+ use Tk::Config ();
+-use Tk::MMtry;
+ use File::Copy;
+ 
+ my $l = $Config::Config{'lib_ext'};
+@@ -53,8 +52,6 @@ my $all_libs;
+  $all_libs   = "$libpng_libs $zlib_libs";
+ }
+ 
+-if ($Tk::MMtry::VERSION ge '4.007' &&
+-    try_run("config/has_png.c",[$all_cflags],[$all_libs]))
+  {
+   warn "Using system's -lpng\n";
+   Tk::MMutil::TkExtMakefile(
+@@ -67,49 +64,6 @@ if ($Tk::MMtry::VERSION ge '4.007' &&
+        LIBS         => [$all_libs],
+      );
+  }
+-else
+- {
+-  my $ok = 1;
+-  unless (copy("Makefile.libpng.maybe","libpng/Makefile.PL"))
+-   {
+-    warn "Cannot copy Makefile.libpng.maybe => libpng/Makefile.PL ($!)";
+-    $ok = 0;
+-   }
+-  unless (copy("Makefile.zlib.maybe","zlib/Makefile.PL"))
+-   {
+-    warn "Cannot copy Makefile.zlib.maybe => zlib/Makefile.PL ($!)";
+-    $ok = 0;
+-   }
+-  if ($ok)
+-   {
+-    warn "Building libpng$l\n";
+-    my $extlib = "libpng/libpng$l";
+-    if ($cc eq 'cl')
+-     {
+-      $extlib .= " zlib/zlib$l";
+-      $zlib   = "zlib$l";
+-     }
+-    else
+-     {
+-      $extlib .= " zlib/libz$l";
+-     }
+-    Tk::MMutil::TkExtMakefile(
+-           NAME         => 'Tk::PNG',
+-           VERSION_FROM => 'PNG.pm',
+-           XS_VERSION   => $Tk::Config::VERSION,
+-           dist         => { COMPRESS => 'gzip -f9', SUFFIX => '.gz' },
+-           OBJECT       => '$(O_FILES)',
+-           INC          => '-Ilibpng -Izlib',
+-           MYEXTLIB     => $extlib,
+-           LIBS         => ['-lm'],
+-         );
+-    }
+-   else
+-    {
+-     warn "Cannot build libpng$l\n";
+-     ExtUtils::MakeMaker::WriteEmptyMakefile();
+-    }
+- }
+ 
+ sub MY::test_via_harness
+ {

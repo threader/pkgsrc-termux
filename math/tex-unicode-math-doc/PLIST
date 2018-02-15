@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.2 2017/10/23 09:23:44 markd Exp $
+share/texmf-dist/doc/latex/unicode-math/CHANGES.md
+share/texmf-dist/doc/latex/unicode-math/CONTRIBUTING.md
+share/texmf-dist/doc/latex/unicode-math/README.md
+share/texmf-dist/doc/latex/unicode-math/unicode-math-doc.tex
+share/texmf-dist/doc/latex/unicode-math/unicode-math.pdf
+share/texmf-dist/doc/latex/unicode-math/unimath-example.ltx
+share/texmf-dist/doc/latex/unicode-math/unimath-symbols.ltx
+share/texmf-dist/doc/latex/unicode-math/unimath-symbols.pdf

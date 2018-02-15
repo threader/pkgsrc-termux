@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.4 2017/10/07 11:18:28 adam Exp $
+
+SHA1 (structlog-17.2.0.tar.gz) = 823f169e36ded14ed1674486eb635d57c67451aa
+RMD160 (structlog-17.2.0.tar.gz) = 27c6a038197a267666d3d5320c7626b02c59b827
+SHA512 (structlog-17.2.0.tar.gz) = 1b3d1d9a735b534606ec63b378fccf8301b867946e90d88ed4e491000e0c77a2179d10d7238cd5e4f09d6b45c2cbfc4362e8a73cc567db7fd0bfac43059d260f
+Size (structlog-17.2.0.tar.gz) = 312342 bytes

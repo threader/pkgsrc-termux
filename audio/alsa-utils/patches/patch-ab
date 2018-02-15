@@ -1,0 +1,39 @@
+$NetBSD: patch-ab,v 1.5 2014/09/24 11:10:38 jperkin Exp $
+
+--- aplay/aplay.c.orig	2013-07-09 15:28:37.000000000 +0000
++++ aplay/aplay.c
+@@ -48,7 +48,11 @@
+ #include <sys/time.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
++#if defined(__linux__)
+ #include <endian.h>
++#elif !defined(__sun)
++#include <sys/endian.h>
++#endif
+ #include "aconfig.h"
+ #include "gettext.h"
+ #include "formats.h"
+@@ -70,6 +74,22 @@
+ #define be32toh(x) __be32_to_cpu(x)
+ #endif
+ 
++#if defined(__NetBSD__) || defined(__DragonFly__)
++#define open64 open
++#define lseek64 lseek
++#define off64_t off_t
++#define ESTRPIPE EPIPE
++#define __le16_to_cpu le16toh
++#define __le32_to_cpu le32toh
++#define __be16_to_cpu be16toh
++#define __be32_to_cpu be32toh
++#elif defined(__sun)
++#define __le16_to_cpu LE_16
++#define __le32_to_cpu LE_32
++#define __be16_to_cpu BE_16
++#define __be32_to_cpu BE_32
++#endif
++
+ #define DEFAULT_FORMAT		SND_PCM_FORMAT_U8
+ #define DEFAULT_SPEED 		8000
+ 

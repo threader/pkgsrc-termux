@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.29.2.1 2018/01/19 21:42:37 spz Exp $
+
+SHA1 (bind-9.10.6-P1.tar.gz) = adb06033d5538f2412c8f61ffca123e293ca393a
+RMD160 (bind-9.10.6-P1.tar.gz) = 9795dab8352b17638915a4252252fba08111ae17
+SHA512 (bind-9.10.6-P1.tar.gz) = f45647ad6f6afc26098bdc4a18fd3468a1d769ebaddeb92aee87b4f93791c2cff27f07d49116c0b9c53547f8eb93e7c720bec1cec38b9cecb3829da1fe9ae833
+Size (bind-9.10.6-P1.tar.gz) = 9452495 bytes
+SHA1 (patch-bin_dig_dighost.c) = 983e23a30d519982cbe88ed2277fcffc9cad616e
+SHA1 (patch-bin_tests_system_Makefile.in) = ba368204f8eeaa12be366a532c75a2e3cc8fae98
+SHA1 (patch-config.threads.in) = 227b83efe9cb3e301aaac9b97cf42f1fb8ad06b2
+SHA1 (patch-configure) = 66e0ba57e77b8a47b5882a1b0b276a25474f7a58
+SHA1 (patch-contrib_dlz_config.dlz.in) = f18bec63fbfce7cb2cd72929058ce3770fce458f
+SHA1 (patch-lib_dns_rbt.c) = 7e37f411d084e5363c6a5023e1915d224321c3e3
+SHA1 (patch-lib_lwres_getaddrinfo.c) = 69e9c8049fedcb93bd219c6053163f21ce3b2535
+SHA1 (patch-lib_lwres_getnameinfo.c) = 418ad349cf52925c9e8051b5c71d9d51ea8d2fb1

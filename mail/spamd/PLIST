@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:05 jperkin Exp $
+libexec/spamd
+libexec/spamd-setup
+libexec/spamlogd
+man/man5/spamd.conf.5
+man/man8/spamd-setup.8
+man/man8/spamd.8
+man/man8/spamdb.8
+man/man8/spamlogd.8
+sbin/spamdb
+share/examples/spamd/spamd.conf

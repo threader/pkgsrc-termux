@@ -1,0 +1,8 @@
+/patch-CMakeLists.txt/1.1/Thu Dec 19 09:34:28 2013//Tpkgsrc-2017Q4
+/patch-client_X11_CMakeLists.txt/1.2/Tue Oct  8 12:14:03 2013//Tpkgsrc-2017Q4
+/patch-libfreerdp-codec_color.c/1.2/Fri Jun 24 16:39:58 2016//Tpkgsrc-2017Q4
+/patch-libfreerdp-core_crypto.c/1.1/Fri Jun 24 16:39:58 2016//Tpkgsrc-2017Q4
+/patch-libfreerdp-core_listener.c/1.1/Tue Oct  8 12:31:22 2013//Tpkgsrc-2017Q4
+/patch-libfreerdp-core_orders.c/1.2/Fri Jun 24 16:39:58 2016//Tpkgsrc-2017Q4
+/patch-libfreerdp-core_tcp.c/1.1/Tue Oct  8 12:31:22 2013//Tpkgsrc-2017Q4
+D

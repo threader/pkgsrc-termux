@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.6 2017/06/14 13:41:45 wiz Exp $
+
+SHA1 (WebService-MusicBrainz-1.0.2.tar.gz) = de3348df38466ca17c560b14e57e6706c097c4ca
+RMD160 (WebService-MusicBrainz-1.0.2.tar.gz) = a80bd93699fb342e9af3e38c5c00f32d5c332b56
+SHA512 (WebService-MusicBrainz-1.0.2.tar.gz) = fc5f2744ad52d01e671c6dfcf011c334762f3655d200e47ab8aa48752755a74530f854870961243e2ccea727b287df549fbebe579c6ca5bb70d94edf5c508ce6
+Size (WebService-MusicBrainz-1.0.2.tar.gz) = 9547 bytes

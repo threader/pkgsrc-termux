@@ -1,0 +1,11 @@
+/patch-Clients_dns-sd.c/1.4/Tue Oct  4 14:08:48 2011//Tpkgsrc-2017Q4
+/patch-aa/1.14/Sat Aug 29 17:41:07 2015//Tpkgsrc-2017Q4
+/patch-ab/1.9/Mon May 12 15:06:56 2014//Tpkgsrc-2017Q4
+/patch-ac/1.11/Fri Nov 20 09:32:53 2015//Tpkgsrc-2017Q4
+/patch-ad/1.4/Fri Nov 10 11:21:52 2017//Tpkgsrc-2017Q4
+/patch-ae/1.6/Mon May 12 15:06:56 2014//Tpkgsrc-2017Q4
+/patch-af/1.2/Sat Aug 29 17:41:07 2015//Tpkgsrc-2017Q4
+/patch-mDNSShared_dnsextd__parser.y/1.1/Fri Aug 16 10:10:26 2013//Tpkgsrc-2017Q4
+/patch-mDNSShared_dnssd__clientstub.c/1.1/Mon May 12 15:06:56 2014//Tpkgsrc-2017Q4
+/patch-mDNSShared_uds__daemon.c/1.1/Mon May 12 15:06:56 2014//Tpkgsrc-2017Q4
+D

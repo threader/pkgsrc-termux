@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.15 2016/07/11 18:26:52 schmonz Exp $
+
+SHA1 (astyle_2.05.1_linux.tar.gz) = b2ccedbb49f7f892afd6a9a59a67b57c36c41df3
+RMD160 (astyle_2.05.1_linux.tar.gz) = fc3bc88bc18a6d7177f3e645fda7cc79c497a968
+SHA512 (astyle_2.05.1_linux.tar.gz) = 853bf84cb196f2300ca00fb7f18fe336764f1205ae0674a75c1a019bf734495d8fb3d9b6aca0ea258b6632921fb268906128c1afb80596532489749cd2cbe495
+Size (astyle_2.05.1_linux.tar.gz) = 152765 bytes

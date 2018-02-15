@@ -1,0 +1,20 @@
+/patch-CMakeLists.txt/1.2/Thu Jan 21 13:42:33 2016//Tpkgsrc-2017Q4
+/patch-Source_JavaScriptCore_API_JSStringRef.cpp/1.1/Tue Apr 25 10:37:26 2017//Tpkgsrc-2017Q4
+/patch-Source_JavaScriptCore_assembler_ARMAssembler.h/1.6/Thu Jan 21 13:42:33 2016//Tpkgsrc-2017Q4
+/patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp/1.5/Thu Jan 21 13:42:33 2016//Tpkgsrc-2017Q4
+/patch-Source_JavaScriptCore_dfg_DFGNode.h/1.5/Thu Jan 21 13:42:33 2016//Tpkgsrc-2017Q4
+/patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp/1.5/Thu Apr 13 16:58:14 2017//Tpkgsrc-2017Q4
+/patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h/1.3/Sun Aug  3 22:30:05 2014//Tpkgsrc-2017Q4
+/patch-Source_WTF_wtf_Compiler.h/1.3/Thu Jun 16 20:42:36 2016//Tpkgsrc-2017Q4
+/patch-Source_WTF_wtf_MathExtras.h/1.6/Thu Jan 21 13:42:33 2016//Tpkgsrc-2017Q4
+/patch-Source_WebCore_platform_FileSystem.cpp/1.1/Thu Apr 13 16:58:14 2017//Tpkgsrc-2017Q4
+/patch-Source_WebCore_rendering_shapes_RasterShape.cpp/1.1/Thu Apr 13 16:58:14 2017//Tpkgsrc-2017Q4
+/patch-Source_WebKit2_CMakeLists.txt/1.1/Thu Apr 13 16:58:14 2017//Tpkgsrc-2017Q4
+/patch-Source_WebKit2_NetworkProcess_cache_NetworkCacheFileSystem.cpp/1.1/Thu Apr 13 16:58:14 2017//Tpkgsrc-2017Q4
+/patch-Source_WebKit2_Shared_API_c_WKString.cpp/1.1/Tue Apr 25 10:37:26 2017//Tpkgsrc-2017Q4
+/patch-Source_WebKit2_UIProcess_UserContent_WebUserContentControllerProxy.cpp/1.1/Mon Oct 10 21:11:48 2016//Tpkgsrc-2017Q4
+/patch-Source_cmake_OptionsCommon.cmake/1.3/Thu Jan 21 13:42:33 2016//Tpkgsrc-2017Q4
+/patch-Source_cmake_OptionsGTK.cmake/1.12/Thu Apr 13 16:58:14 2017//Tpkgsrc-2017Q4
+/patch-ai/1.7/Thu Jan 21 13:42:33 2016//Tpkgsrc-2017Q4
+/patch-aj/1.5/Sat Sep 26 10:16:38 2015//Tpkgsrc-2017Q4
+D

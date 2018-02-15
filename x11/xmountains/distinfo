@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.7 2015/11/04 03:29:09 agc Exp $
+
+SHA1 (xmountains_2.7.tar.gz) = 707f5d5eb566b8163b1a175fc0aa42ce9ddeb98b
+RMD160 (xmountains_2.7.tar.gz) = b11828bff1074b45c69162eb120dc9cc3e00dad8
+SHA512 (xmountains_2.7.tar.gz) = 327bfc96e79ef51911741ef98f97677d64af30fbe4c2cbb27cd77c05b7320f490f9a0c139cc701e763a3754fe0dddc54d00ae63f8c3fd7176e2ba7851fab2302
+Size (xmountains_2.7.tar.gz) = 27616 bytes
+SHA1 (patch-X__graphics_c) = 1c6d93f9920d74aaeb04590c6a3908948859865e
+SHA1 (patch-artist_c) = e09674e7cfb876d8974a1eff2e56cc34477be73d
+SHA1 (patch-calcalt_c) = c17bd233c77d412ac78883239eeafa2bba6ecc40
+SHA1 (patch-paint_h) = 5a8c189ddc07b5fa3c3afd5026ca522d5d31702b
+SHA1 (patch-random_c) = 645eb0e591e36004e1892f4524c38a3efabf6075
+SHA1 (patch-vroot_h) = d2c2bed7a1bbe8b08e140ec875344b5bfd6144b1
+SHA1 (patch-xmountains_c) = 1beff395ab078b98752a6585284730acfd93ffcd

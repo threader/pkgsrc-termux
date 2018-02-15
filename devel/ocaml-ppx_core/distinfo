@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.5 2017/07/21 13:27:52 jaapb Exp $
+
+SHA1 (ppx_core-0.9.0.tar.gz) = ba235fe3fd720c9884f20cbd014694478f242469
+RMD160 (ppx_core-0.9.0.tar.gz) = 260aafb5bc6f9c0fcb699b60f3869f156486fbc0
+SHA512 (ppx_core-0.9.0.tar.gz) = 04b0e096aa545c27f040feeea8745078e0fb9dbe4816ade6d3f39b6690da669c6c786334381dbccd74dfd46514ae88c6475b14db8c3216167a6acfea79601e06
+Size (ppx_core-0.9.0.tar.gz) = 44525 bytes

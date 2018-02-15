@@ -1,0 +1,12 @@
+/patch-configure/1.1/Sat Jul 16 03:32:32 2016//Tpkgsrc-2017Q4
+/patch-include_svncpp_dirent.hpp/1.1/Thu Mar 31 09:00:39 2016//Tpkgsrc-2017Q4
+/patch-src_filelist_ctrl.cpp/1.1/Sat Jul 16 03:32:32 2016//Tpkgsrc-2017Q4
+/patch-src_filelist_ctrl.hpp/1.1/Sat Jul 16 03:32:32 2016//Tpkgsrc-2017Q4
+/patch-src_hist_val.cpp/1.1/Sat Jul 16 03:32:32 2016//Tpkgsrc-2017Q4
+/patch-src_listener.cpp/1.1/Sat Jul 16 03:32:32 2016//Tpkgsrc-2017Q4
+/patch-src_locale_Makefile.in/1.1/Tue Dec  6 23:40:08 2011//Tpkgsrc-2017Q4
+/patch-src_log_dlg.cpp/1.1/Sat Jul 16 03:32:32 2016//Tpkgsrc-2017Q4
+/patch-src_preferences_dlg.cpp/1.1/Sat Jul 16 03:32:32 2016//Tpkgsrc-2017Q4
+/patch-src_svncpp_client_ls.cpp/1.1/Thu Mar 31 09:00:39 2016//Tpkgsrc-2017Q4
+/patch-src_svncpp_dirent.cpp/1.1/Thu Mar 31 09:00:39 2016//Tpkgsrc-2017Q4
+D

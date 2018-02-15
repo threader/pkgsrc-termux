@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.13 2017/08/23 17:53:55 jlam Exp $
+
+--- Makefile.orig	2013-03-31 19:37:51.000000000 +0000
++++ Makefile
+@@ -25,6 +25,7 @@ DISTFILES = $(SOURCES) $(POSTSCRIPT)
+ INSTALL		:= install -m 0755
+ INSTALL_DIR	:= install -d -m 0755
+ INSTALL_FILE	:= install -m 0644
++INSTALL_MAN	:= install -m 0644
+ 
+ # Makefile macros....
+ #1.  $@ is the name of the file to be made.
+@@ -52,7 +53,7 @@ install: all
+ 	@echo ""
+ 	$(INSTALL_DIR) $(BIN_DIR)
+ 	$(INSTALL) cdlabelgen $(BIN_DIR)
+-	$(INSTALL_FILE) cdlabelgen.1 $(MAN_DIR)/man1
++	$(INSTALL_MAN) cdlabelgen.1 $(MAN_DIR)/man1
+ 	$(INSTALL_DIR) $(LIB_DIR)
+ 	set -e; \
+ 	for file in $(POSTSCRIPT); do \

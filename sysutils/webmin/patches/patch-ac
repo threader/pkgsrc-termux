@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.6 2017/02/01 13:00:44 mef Exp $
+
+
+--- software/search.cgi.orig	2016-10-03 12:34:48.000000000 +0900
++++ software/search.cgi	2016-11-12 07:47:09.000000000 +0900
+@@ -49,7 +49,8 @@ if (@match) {
+ 		local @cols;
+ 		local $v = $packages{$i,'shortversion'} ||
+ 			   $packages{$i,'version'};
+-		push(@cols, &ui_link("edit_pack.cgi?search=$s&package=".
++		push(@cols, &ui_link("edit_pack.cgi?search=" .
++		      &urlize($s) . "&package=".
+ 		      &urlize($packages{$i,'name'})."&version=".
+ 		      &urlize($packages{$i,'version'}), &html_escape(
+ 			$packages{$i,'name'}.($v ?  " $v" : "")) ) );

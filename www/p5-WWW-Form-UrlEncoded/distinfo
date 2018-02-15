@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2017/09/27 16:45:52 wiz Exp $
+
+SHA1 (WWW-Form-UrlEncoded-0.24.tar.gz) = 5fd54c335abc68dc5f1f7f071c43fe2b44d71319
+RMD160 (WWW-Form-UrlEncoded-0.24.tar.gz) = 001260d7d497ae744519f328e9821bce6680c2bb
+SHA512 (WWW-Form-UrlEncoded-0.24.tar.gz) = 57dfcccd059534d3d0cb2b1d8ee826e4a31e77920a43b72c5939a866de9d4b526e2f59411507c3287f8c7ae283f7ebeed07cda543f0d36663e6b155952cec63e
+Size (WWW-Form-UrlEncoded-0.24.tar.gz) = 15060 bytes

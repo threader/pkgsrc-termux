@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.23 2017/11/23 20:24:13 wiz Exp $
+
+SHA1 (fftw-3.3.7.tar.gz) = 2ae980a8d44c161ce4a09c6e2d1c79243ecbabb2
+RMD160 (fftw-3.3.7.tar.gz) = 6fb90ce7190190998ff4c579934b76de270db271
+SHA512 (fftw-3.3.7.tar.gz) = a5db54293a6d711408bed5894766437eee920be015ad27023c7a91d4581e2ff5b96e3db0201e6eaccf7b064c4d32db1a2a8fab3e6813e524b4743ddd6216ba77
+Size (fftw-3.3.7.tar.gz) = 4105807 bytes

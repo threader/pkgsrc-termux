@@ -1,0 +1,9 @@
+/patch-CMakeLists.txt/1.1/Tue Nov  3 20:28:57 2015//Tpkgsrc-2017Q4
+/patch-README/1.1/Tue Nov  3 20:28:57 2015//Tpkgsrc-2017Q4
+/patch-libkface_CMakeLists.txt/1.1/Tue Nov  3 20:28:57 2015//Tpkgsrc-2017Q4
+/patch-libkface_detection_opencvfacedetector.cpp/1.1/Tue Nov  3 20:28:57 2015//Tpkgsrc-2017Q4
+/patch-libkface_libopencv.h.cmake.in/1.1/Tue Nov  3 20:28:57 2015//Tpkgsrc-2017Q4
+/patch-libkface_recognition-opencv-lbph_facerec_borrowed.cpp/1.2/Tue Mar 29 10:14:05 2016//Tpkgsrc-2017Q4
+/patch-libkface_recognition-opencv-lbph_facerec_borrowed.h/1.2/Tue Mar 29 10:14:05 2016//Tpkgsrc-2017Q4
+/patch-libkface_recognition-opencv-lbph_lbphfacemodel.cpp/1.1/Tue Nov  3 20:28:57 2015//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,19 @@
+/patch-docs_man_man1_ansible/1.2/Mon Aug  7 17:56:13 2017//Tpkgsrc-2017Q4
+/patch-docs_man_man1_ansible-asciidoc/1.2/Mon Aug  7 17:56:13 2017//Tpkgsrc-2017Q4
+/patch-docs_man_man1_ansible-galaxy/1.2/Mon Aug  7 17:56:13 2017//Tpkgsrc-2017Q4
+/patch-docs_man_man1_ansible-galaxy-asciidoc/1.2/Mon Aug  7 17:56:13 2017//Tpkgsrc-2017Q4
+/patch-docs_man_man1_ansible-playbook/1.2/Mon Aug  7 17:56:13 2017//Tpkgsrc-2017Q4
+/patch-docs_man_man1_ansible-playbook-asciidoc/1.2/Mon Aug  7 17:56:13 2017//Tpkgsrc-2017Q4
+/patch-examples_ansible/1.2/Mon Aug  7 17:56:13 2017//Tpkgsrc-2017Q4
+/patch-examples_hosts/1.2/Mon Aug  7 17:56:13 2017//Tpkgsrc-2017Q4
+/patch-lib_ansible_callbacks/1.1/Wed Feb 17 20:31:45 2016//Tpkgsrc-2017Q4
+/patch-lib_ansible_constants/1.3/Mon Aug  7 17:56:13 2017//Tpkgsrc-2017Q4
+/patch-lib_ansible_modules_core_system_ping/1.1/Wed Feb 17 20:31:45 2016//Tpkgsrc-2017Q4
+/patch-lib_ansible_modules_core_system_setup/1.1/Wed Feb 17 20:31:45 2016//Tpkgsrc-2017Q4
+/patch-lib_ansible_modules_extras_database_misc_riak/1.2/Mon Aug  7 17:56:13 2017//Tpkgsrc-2017Q4
+/patch-lib_ansible_modules_extras_monitoring_nagios/1.2/Mon Aug  7 17:56:13 2017//Tpkgsrc-2017Q4
+/patch-lib_ansible_modules_extras_packaging_os_pkgin/1.1/Wed Feb 17 20:31:45 2016//Tpkgsrc-2017Q4
+/patch-plugins_README/1.2/Mon Aug  7 17:56:13 2017//Tpkgsrc-2017Q4
+/patch-plugins_inventory_cobbler/1.2/Mon Aug  7 17:56:13 2017//Tpkgsrc-2017Q4
+/patch-plugins_inventory_collins/1.2/Mon Aug  7 17:56:13 2017//Tpkgsrc-2017Q4
+D

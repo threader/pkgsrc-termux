@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.3 2016/06/16 03:54:44 markd Exp $
+share/texmf-dist/doc/luatex/luatexbase/README.md
+share/texmf-dist/doc/luatex/luatexbase/luatexbase.pdf

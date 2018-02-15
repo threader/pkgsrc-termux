@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.6 2017/05/09 05:09:15 pho Exp $
+
+SHA1 (markdown-mode-2.1/markdown-mode.el) = f6bd0b37a26fa6861c0da8fc008ecb9870eb7f0d
+RMD160 (markdown-mode-2.1/markdown-mode.el) = 09fdbb72bd5550a552df914fb8212806f3f35cf2
+SHA512 (markdown-mode-2.1/markdown-mode.el) = 572ec81d5abee5d0b2e4e8fb51a33627894e6ed5f423e977acbfacd14a8ccba58fd611bb0a4d05980f6c991daf2fdae304be3e2fcf2ac78499c034f0a2bd4645
+Size (markdown-mode-2.1/markdown-mode.el) = 255517 bytes

@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.3 2017/07/08 22:27:36 adam Exp $
+bin/ncftp
+bin/ncftpbatch
+bin/ncftpbookmarks
+bin/ncftpget
+bin/ncftpls
+bin/ncftpput
+bin/ncftpspooler
+man/man1/ncftp.1
+man/man1/ncftpbatch.1
+man/man1/ncftpget.1
+man/man1/ncftpls.1
+man/man1/ncftpput.1
+man/man1/ncftpspooler.1

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2017/09/16 08:39:59 ryoon Exp $
+
+--- configure.orig	2017-07-23 17:10:09.000000000 +0000
++++ configure
+@@ -8787,7 +8787,7 @@ fi
+ 
+ 
+ 
+-if test "x$GXX" == "xyes"; then
++if test "x$GXX" = "xyes"; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for a sed that does not truncate output" >&5
+ $as_echo_n "checking for a sed that does not truncate output... " >&6; }
+ if ${ac_cv_path_SED+:} false; then :

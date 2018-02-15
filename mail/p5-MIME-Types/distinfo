@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.21 2017/11/13 14:01:00 wiz Exp $
+
+SHA1 (MIME-Types-2.14.tar.gz) = 179da86be20f4bb8da90ed21c262e7c042ce42f1
+RMD160 (MIME-Types-2.14.tar.gz) = 4df163babb436b1330366cc03faca16cfebb0ffc
+SHA512 (MIME-Types-2.14.tar.gz) = dc12df5408107cd24819affe1e374a9eba801ebd39ad5c14c40ed46e51d88379c53f4a645a5149842c92e348b3cb80b6784976d71f0dd7f73195072b668926e0
+Size (MIME-Types-2.14.tar.gz) = 58152 bytes

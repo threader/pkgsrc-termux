@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/01/17 17:14:14 fhajny Exp $
+
+SHA1 (future-0.16.0.tar.gz) = 86ed881acef874d04576b9df03c29d25ad2cd25f
+RMD160 (future-0.16.0.tar.gz) = 69456fbc593b4ae123fafca1afb8d58062f44b97
+SHA512 (future-0.16.0.tar.gz) = 41c795cd1746a76df84de2da9fbc611fc6164322c1c712ec9e8a8626c21c2717cb4899ec150d95c5e0c037270e6bb71e099edd169609369aae619daea9df2e5f
+Size (future-0.16.0.tar.gz) = 824484 bytes

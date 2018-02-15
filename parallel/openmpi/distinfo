@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.18 2016/10/23 14:02:28 asau Exp $
+
+SHA1 (openmpi-1.10.4.tar.bz2) = 1676a7da6cc8cde1d46f6296f38d575249b46cd9
+RMD160 (openmpi-1.10.4.tar.bz2) = cea15b9fe8852805a5f8c1591b31907d996587c7
+SHA512 (openmpi-1.10.4.tar.bz2) = 58bcdc48a4d539f2656480751a9d8129597a0460f7b6ecc6f4d0094703c5f1a3f560eaf80b819d902dee91a77a0d21994f6e42728305969647d3170beefe39df
+Size (openmpi-1.10.4.tar.bz2) = 13430203 bytes
+SHA1 (patch-aa) = 6fa20775c6e2abae7c9a2ae858dbb941652beab8
+SHA1 (patch-ai) = 33667fb853caef7ae9a22c7f2e6a016929eb1a13
+SHA1 (patch-aj) = ec79dc2137107d1253e47811c3ea7d00ff988b06
+SHA1 (patch-ak) = fce9064c50f62334ebc30c8488dbf9cc7500a634
+SHA1 (patch-config_opal__setup__wrappers.m4) = c3fe3cb5ff7cedcb5c847f25eea129d4299dd5d2
+SHA1 (patch-configure) = 10b38cc45614258e236b70057c963a0615032e93
+SHA1 (patch-ompi_mpi_java_java_Makefile.in) = bd61f02f56e03af9799d2ba86d66c1ded35f62f4

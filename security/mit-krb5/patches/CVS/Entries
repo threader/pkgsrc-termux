@@ -1,0 +1,26 @@
+/patch-Makefile.in/1.1/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-aa/1.5/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-ae/1.4/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-aj/1.4/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-al/1.7/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-cf/1.3/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-cg/1.3/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-cj/1.2/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-config_lib.in/1.1/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-config_libnover.in/1.1/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-config_pre.in/1.2/Tue Jun 21 14:58:17 2016//Tpkgsrc-2017Q4
+/patch-config_shlib.conf/1.1/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-configure.in/1.2/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-include_osconf.hin/1.1/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-kadmin_cli_ss_wrapper.c/1.1/Fri Oct 28 20:56:14 2016//Tpkgsrc-2017Q4
+/patch-lib_apputils_Makefile.in/1.1/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-lib_apputils_net-server.c/1.3/Sun Apr 17 15:33:13 2016//Tpkgsrc-2017Q4
+/patch-lib_krb5_asn.1_asn1buf.h/1.2/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-lib_krb5_ccache_Makefile.in/1.2/Mon Oct 31 17:15:36 2016//Tpkgsrc-2017Q4
+/patch-plugins_kdb_db2_Makefile.in/1.1/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-plugins_kdb_db2_libdb2_Makefile.in/1.1/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-plugins_preauth_otp_Makefile.in/1.1/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-plugins_preauth_pkinit_Makefile.in/1.1/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-util_k5ev_verto-k5ev.c/1.3/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+/patch-util_ss_Makefile.in/1.3/Tue Mar 15 15:16:39 2016//Tpkgsrc-2017Q4
+D

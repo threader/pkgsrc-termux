@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.4 2014/06/19 07:12:44 asau Exp $
+
+libutil is needed on FreeBSD for fparseln.
+
+--- Makefile.orig	2008-05-30 14:23:54.000000000 +0000
++++ Makefile
+@@ -75,8 +75,8 @@ NON_MACH_DEFINES	= -UMACH
+ #INSTALLATION PARAMETERS
+ PREFIX		       ?= /usr/local/
+ NETBSD_BINDIR		= ${PREFIX}/sbin
+-NETBSD_MAN1		= ${PREFIX}/man/man1
+-NETBSD_MAN8		= ${PREFIX}/man/man8
++NETBSD_MAN1		= ${PREFIX}/${PKGMANDIR}/man1
++NETBSD_MAN8		= ${PREFIX}/${PKGMANDIR}/man8
+ 
+ CFLAGS			= ${DEFS} -O -I.
+ 
+@@ -96,7 +96,7 @@ AFS_LIBPATH		= /usr/afs/lib
+ AFS_LIBS		= -L${AFS_LIBPATH}/afs -lkauth -lprot -L${AFS_LIBPATH} -lubik -lauth -lrxkad -lsys -ldes -lrx -llwp -lcmd -lcom_err -lc ${AFS_LIBPATH}/afs/util.a
+ 
+ NETBSD_LIBS		= -lcrypt
+-FREEBSD_LIBS		= -lcrypt
++FREEBSD_LIBS		= -lcrypt -lutil
+ DRAGONFLY_LIBS		= -lcrypt
+ LINUX_LIBS		= -lcrypt
+ CYGWIN_LIBS		= -lcrypt
+@@ -134,9 +134,9 @@ clean cleandir distclean:
+ 	rm -f ${PROGRAMS} libextra.a netcrypt.c *.o core a.out
+ 
+ install: ${PROGRAMS}
+-	install -cs -m 555 -o bin -g bin ${PROGRAMS} ${NETBSD_BINDIR}
+-	install -c -m 444 -o bin -g bin ${MAN1} ${NETBSD_MAN1}
+-	install -c -m 444 -o bin -g bin ${MAN8} ${NETBSD_MAN8}
++	${BSD_INSTALL_PROGRAM} ${PROGRAMS} ${DESTDIR}${NETBSD_BINDIR}
++	${BSD_INSTALL_MAN} ${MAN1} ${DESTDIR}${NETBSD_MAN1}
++	${BSD_INSTALL_MAN} ${MAN8} ${DESTDIR}${NETBSD_MAN8}
+ 
+ netcrypt.c:
+ 	@echo "[ Using netcryptvoid.c ]"

@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.5 2017/02/22 12:20:51 wiz Exp $
+
+--- src/FbTk/I18n.cc.orig	2015-02-08 10:44:45.000000000 +0000
++++ src/FbTk/I18n.cc
+@@ -209,7 +209,9 @@ void I18n::init(const char* catalog) {
+ I18n::I18n() : m_multibyte(false), m_utf8_translate(false) {
+ #if defined(HAVE_SETLOCALE) && defined(NLS)
+     //make sure we don't get 0 to m_locale string
+-    char *temp = setlocale(LC_MESSAGES, "");
++    char *temp;
++    (void)setlocale(LC_ALL, "");
++    temp = setlocale(LC_MESSAGES, NULL);
+     m_locale = ( temp ?  temp : "");
+     if (m_locale.empty()) {
+         cerr<<"Warning: Failed to set locale, reverting to \"C\""<<endl;

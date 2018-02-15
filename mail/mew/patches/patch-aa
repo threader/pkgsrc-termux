@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.9 2014/04/29 13:41:05 taca Exp $
+
+* Specify default icon directory for pkgsrc.
+
+--- mew-key.el.orig	2014-04-29 11:43:10.000000000 +0000
++++ mew-key.el
+@@ -626,7 +626,7 @@
+ 	(if (file-exists-p (expand-file-name file path))
+ 	    (throw 'loop (expand-file-name "etc" path)))))))
+ 
+-(defvar mew-icon-directory (mew-which-mew-etc))
++(defvar mew-icon-directory "@ICONDIR@")
+ 
+ (defvar mew-icon-separate nil)
+ (defvar mew-icon-blank nil)

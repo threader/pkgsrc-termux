@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.5 2017/01/03 00:02:03 khorben Exp $
+
+SHA1 (openconnect-7.08.tar.gz) = ac106457c6a94808096552b6dc2037ad4cce7858
+RMD160 (openconnect-7.08.tar.gz) = b5f8e916d081011d469f3b180b195113687cdd2b
+SHA512 (openconnect-7.08.tar.gz) = 22f9b0bd4bd17e2ab91ff42b2464c89abba035fe705c037ba4d1042ace460c8738e20481783a1edc3b7dd6503fe9fcc7fdd188552811fb1525310e25a4c2f400
+Size (openconnect-7.08.tar.gz) = 1686133 bytes

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.5 2017/03/12 14:27:40 taca Exp $
+
+SHA1 (php-redis/2.2.8.tar.gz) = 909e04a0770006b7a407d06245af8d9d18268507
+RMD160 (php-redis/2.2.8.tar.gz) = e1699acdec00442189c3b8969aeb0da85eb58d01
+SHA512 (php-redis/2.2.8.tar.gz) = 3a563b52673a4b0ddf855259853abc74ba3e9d1dac7004bb5c21a388f42657caf76e7f101f50e7874498ffc5ba777444b3035a9ff8009cf13dfe88f7ff001514
+Size (php-redis/2.2.8.tar.gz) = 198401 bytes

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/07/16 20:10:37 adam Exp $
+
+SHA1 (backports.functools_lru_cache-1.4.tar.gz) = 8a546e7887e961c2873c9b053f4e2cd2a96bd71d
+RMD160 (backports.functools_lru_cache-1.4.tar.gz) = 40324a0b32d8c16ca34f2d511ef66d64b2cb647d
+SHA512 (backports.functools_lru_cache-1.4.tar.gz) = 78dcd12f392bc110d1556f567a9f8fe977fa4ddc98a2121ceaf43606687171866832b8d32220dfb4ca335f53e89acecabda9e48ad48571f1741b21ab2d3b8a21
+Size (backports.functools_lru_cache-1.4.tar.gz) = 6927 bytes

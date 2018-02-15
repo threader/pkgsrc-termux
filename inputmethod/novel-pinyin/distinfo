@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.4 2015/11/03 22:13:37 agc Exp $
+
+SHA1 (novel-pinyin-0.2.5.tar.gz) = d973b122aed8b844806948e5081f342945df75ff
+RMD160 (novel-pinyin-0.2.5.tar.gz) = 61107040664ddf76a26191401a750ae60397fa4e
+SHA512 (novel-pinyin-0.2.5.tar.gz) = cb28b6dc585d402c720d2ce41903e693fec5c649c01a49b4617d2dcea9d1ac6b6dc414424385ba9cab53cc801c8297263b55a025f0a4ee7d87f0cf626c1158dd
+Size (novel-pinyin-0.2.5.tar.gz) = 6006453 bytes
+SHA1 (patch-aa) = bacaf491f7e7a9085fff5eb1ea15a73e0638c00c
+SHA1 (patch-ab) = 7e50761959a6b17480d524b22cb265cacca44332
+SHA1 (patch-ac) = c48bb8217c590b545a494bfed95b1130a164bb5f
+SHA1 (patch-ad) = 16648a1a547982eac40676d40ed1c9b978476df5
+SHA1 (patch-modules_scim_novel__pinyin__imengine.cpp) = 1a4e139d37139d82a62e7ed720ac13540b75cefa
+SHA1 (patch-src_lookup_lookup.h) = aed5a9b28eb7ac050f3b1c0ea0f2de4b09d596c5
+SHA1 (patch-src_lookup_pinyin__lookup.cpp) = f5ce01b190536e7c8c870a1a2f78f0971a342f56

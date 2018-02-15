@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.11 2017/09/17 11:53:47 adam Exp $
+
+SHA1 (sympy-1.1.1.tar.gz) = d5acc09a7429de76713898728f1ec50a3c48e133
+RMD160 (sympy-1.1.1.tar.gz) = cbbddba9a18146124a5374eafda37c9817baa304
+SHA512 (sympy-1.1.1.tar.gz) = ff8857fd5810795554ca4f636b2d8e633057d7ea7df76461003d823ecbaddc98cde0561eb79a1058741c5ece233c13bfcb5e30d5bfb8ac6dbab3d05d8226f92b
+Size (sympy-1.1.1.tar.gz) = 4580952 bytes

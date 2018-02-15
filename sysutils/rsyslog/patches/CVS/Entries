@@ -1,0 +1,15 @@
+/patch-configure/1.2/Thu May 18 13:27:44 2017//Tpkgsrc-2017Q4
+/patch-grammar_lexer.l/1.4/Mon Feb 13 19:59:36 2017//Tpkgsrc-2017Q4
+/patch-platform_redhat_rsyslog.conf/1.3/Fri Jan 16 16:58:28 2015//Tpkgsrc-2017Q4
+/patch-plugins_imfile_imfile.c/1.5/Tue Jan 26 15:20:33 2016//Tpkgsrc-2017Q4
+/patch-plugins_impstats_impstats.c/1.1/Thu Feb  9 00:18:36 2017//Tpkgsrc-2017Q4
+/patch-plugins_imptcp_imptcp.c/1.1/Fri Jan 16 16:58:28 2015//Tpkgsrc-2017Q4
+/patch-plugins_imuxsock_imuxsock.c/1.2/Fri Dec 12 12:47:46 2014//Tpkgsrc-2017Q4
+/patch-plugins_mmexternal_mmexternal.c/1.6/Thu May 18 13:27:44 2017//Tpkgsrc-2017Q4
+/patch-plugins_omkafka_omkafka.c/1.2/Tue Jul  4 13:31:16 2017//Tpkgsrc-2017Q4
+/patch-runtime_lookup.c/1.4/Tue Jul  4 13:31:16 2017//Tpkgsrc-2017Q4
+/patch-runtime_nsd__ptcp.c/1.1/Fri Jan 16 16:58:28 2015//Tpkgsrc-2017Q4
+/patch-tools_rsyslogd.8/1.1/Fri Dec 12 12:47:46 2014//Tpkgsrc-2017Q4
+/patch-tools_rsyslogd.c/1.5/Mon Feb 13 19:59:36 2017//Tpkgsrc-2017Q4
+/patch-tools_syslogd.c/1.3/Fri Jan 16 16:58:28 2015//Tpkgsrc-2017Q4
+D

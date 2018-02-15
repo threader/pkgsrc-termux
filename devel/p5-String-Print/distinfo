@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.5 2017/07/09 14:47:12 wen Exp $
+
+SHA1 (String-Print-0.92.tar.gz) = a134923192a7f9c6f389cf4c9d943fee73b42ab2
+RMD160 (String-Print-0.92.tar.gz) = 27495cc80831a1aff180adcee8a03bcafc179458
+SHA512 (String-Print-0.92.tar.gz) = bc1eb3d7dd0110701e4c8e15a0572fb1d8f1e2c93bc43351c433d038aa5d86f7cfce91eb05dbab62b338ee2f7f2826f3b4df08b5d5e30f857cab01f31df42ad6
+Size (String-Print-0.92.tar.gz) = 21134 bytes

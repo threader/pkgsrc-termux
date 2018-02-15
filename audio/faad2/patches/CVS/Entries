@@ -1,0 +1,10 @@
+/patch-common_mp4ff_Makefile.am/1.1/Sun Jul 23 16:09:17 2017//Tpkgsrc-2017Q4
+/patch-configure.ac/1.1/Fri Dec  1 11:17:51 2017//Tpkgsrc-2017Q4
+/patch-frontend_Makefile.am/1.2/Fri Dec  1 11:17:51 2017//Tpkgsrc-2017Q4
+/patch-frontend_getopt.c/1.2/Fri Dec  1 11:17:51 2017//Tpkgsrc-2017Q4
+/patch-frontend_mp4read.c/1.1/Fri Dec  1 11:17:51 2017//Tpkgsrc-2017Q4
+/patch-libfaad_Makefile.am/1.2/Fri Dec  1 11:17:51 2017//Tpkgsrc-2017Q4
+/patch-libfaad_common.h/1.1/Sun Jul 23 16:09:17 2017//Tpkgsrc-2017Q4
+/patch-plugins_xmms_src_Makefile.am/1.1/Sun Jul 23 16:09:17 2017//Tpkgsrc-2017Q4
+/patch-plugins_xmms_src_libmp4.c/1.1/Sun Jul 23 16:09:17 2017//Tpkgsrc-2017Q4
+D

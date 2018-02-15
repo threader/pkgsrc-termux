@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.svg,v 1.2 2016/06/25 14:33:11 jaapb Exp $
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablrsvg.a
+${OCAML_SITELIB}/lablgtk2/lablrsvg.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablrsvg.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablrsvg.cmxs
+${OCAML_SITELIB}/lablgtk2/liblablrsvg.a
+${OCAML_SITELIB}/lablgtk2/rsvg.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/rsvg.cmx
+${OCAML_SITELIB}/lablgtk2/rsvg.ml
+${PLIST.stubs}${OCAML_SITELIB}/lablgtk2/dlllablrsvg.so

@@ -1,0 +1,17 @@
+/patch-aa/1.3/Tue Oct 25 19:38:10 2011//Tpkgsrc-2017Q4
+/patch-ab/1.4/Tue Oct 25 19:38:10 2011//Tpkgsrc-2017Q4
+/patch-bin_rt.in/1.1/Wed Apr 19 06:34:10 2017//Tpkgsrc-2017Q4
+/patch-lib_RT.pm/1.3/Sun Mar 12 19:55:49 2017//Tpkgsrc-2017Q4
+/patch-lib_RT_CustomFieldValues_External.pm/1.1/Tue Oct 25 19:38:10 2011//Tpkgsrc-2017Q4
+/patch-lib_RT_Date.pm/1.1/Sun Mar 12 19:55:49 2017//Tpkgsrc-2017Q4
+/patch-lib_RT_Interface_Email.pm/1.1/Tue Oct 25 19:38:10 2011//Tpkgsrc-2017Q4
+/patch-lib_RT_Interface_Email_Auth_GnuPG.pm/1.2/Wed Oct 31 20:39:26 2012//Tpkgsrc-2017Q4
+/patch-lib_RT_Interface_Web.pm/1.1/Sun Mar 12 19:55:49 2017//Tpkgsrc-2017Q4
+/patch-sbin_rt-attributes-viewer/1.1/Tue Oct 25 19:38:10 2011//Tpkgsrc-2017Q4
+/patch-sbin_rt-attributes-viewer.in/1.1/Tue Oct 25 19:38:10 2011//Tpkgsrc-2017Q4
+/patch-share_html_Helpers_CalPopup.html/1.1/Tue Oct 25 19:38:10 2011//Tpkgsrc-2017Q4
+/patch-share_html_REST_1.0_Forms_ticket_default/1.1/Wed Apr 19 06:34:10 2017//Tpkgsrc-2017Q4
+/patch-share_html_Search_Elements_ResultsRSSView/1.1/Sun Mar  1 22:45:26 2015//Tpkgsrc-2017Q4
+/patch-t_approval_admincc.t/1.1/Tue Oct 25 19:38:10 2011//Tpkgsrc-2017Q4
+/patch-t_approval_basic.t/1.1/Tue Oct 25 19:38:10 2011//Tpkgsrc-2017Q4
+D

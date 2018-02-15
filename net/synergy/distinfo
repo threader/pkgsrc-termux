@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.25 2017/07/28 07:46:45 tnn Exp $
+
+SHA1 (synergy-1.8.8.tar.gz) = 6e01c68e5f20382ec9e77c25cfdf1525bdd513bb
+RMD160 (synergy-1.8.8.tar.gz) = 92d0c32ab8075169994f15d4db550ef916e9d7f8
+SHA512 (synergy-1.8.8.tar.gz) = b4909930af7da10d877297e674df4c042ec54333eed585334da4a8c834c0ca3ad7c93fd2436c7d8d2f0e9e039d7bd385bb9e8a8c706750cbab3c3664a9b16bc6
+Size (synergy-1.8.8.tar.gz) = 13498599 bytes
+SHA1 (patch-src_lib_server_CConfig.cpp) = 94c5e9a57f9880ab8fcb75320bd2dbb306540966
+SHA1 (patch-tools_gmock-1.6.0_configure) = 3a10f06cba4f0af02e0175bf007d1937e3b5a25e
+SHA1 (patch-tools_gmock-1.6.0_include_gmock_internal_gmock-port.h) = 7e3b8ac2209e895f8949f35ef710300b727384ce
+SHA1 (patch-tools_gtest-1.6.0_configure) = 85386ecd2bf9ab8247ed7d244d6e96887b3c1d5d
+SHA1 (patch-tools_gtest-1.6.0_include_gtest_internal_gtest-port.h) = 2db6f0bc8a2e38b1beb56ac51428c8aaa5ef3b75

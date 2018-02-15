@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.5 2013/10/09 17:38:26 wiz Exp $
+include/libmng.h
+include/libmng_conf.h
+include/libmng_types.h
+lib/libmng.la
+lib/pkgconfig/libmng.pc
+man/man3/libmng.3
+man/man5/jng.5
+man/man5/mng.5
+share/doc/mng/Plan1.png
+share/doc/mng/Plan2.png
+share/doc/mng/libmng.txt

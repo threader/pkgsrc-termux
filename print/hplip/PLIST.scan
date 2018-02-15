@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST.scan,v 1.3 2013/10/30 23:37:31 schnoebe Exp $
+${PYSITELIB}/scanext.la
+lib/sane/libsane-hpaio.la
+share/hplip/scan/__init__.py
+share/hplip/scan/__init__.pyc
+share/hplip/scan/sane.py
+share/hplip/scan/sane.pyc
+share/examples/hplip/sane.d/dll.conf

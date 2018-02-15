@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2016/07/22 12:22:43 nros Exp $
+
+SHA1 (qore-xml-module-1.3.tar.bz2) = 0a85604cbf77c486bce08ff70939ae17f2455a93
+RMD160 (qore-xml-module-1.3.tar.bz2) = f9dca0b0faeeed6144242c592fcfd1944bb90533
+SHA512 (qore-xml-module-1.3.tar.bz2) = 60a716aaf3a3fc6c6074a747efca5f0e518981a76faacee8e629d6743dc268937ed09d8242e34cc4668c3ead18fcae9ca2b7eda73f04d647726cc43ae196ef8a
+Size (qore-xml-module-1.3.tar.bz2) = 1106271 bytes

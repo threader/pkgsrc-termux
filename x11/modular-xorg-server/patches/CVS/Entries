@@ -1,0 +1,13 @@
+/patch-configure/1.4/Sat Jan 28 21:47:55 2017//Tpkgsrc-2017Q4
+/patch-hw_xfree86_common_xf86pciBus.c/1.1/Fri Nov  4 01:12:51 2016//Tpkgsrc-2017Q4
+/patch-hw_xfree86_common_xf86sbusBus.h/1.1/Sat Apr 25 11:47:03 2015//Tpkgsrc-2017Q4
+/patch-hw_xfree86_dri2_dri2.c/1.2/Sat Apr 25 11:47:03 2015//Tpkgsrc-2017Q4
+/patch-hw_xfree86_os-support_bsd_arm__video.c/1.1/Tue Feb 23 22:32:45 2016//Tpkgsrc-2017Q4
+/patch-hw_xfree86_os-support_bsd_bsd__VTsw.c/1.1/Sun Oct 11 18:28:53 2015//Tpkgsrc-2017Q4
+/patch-hw_xfree86_os-support_bsd_i386__video.c/1.1/Sat Apr 25 11:47:03 2015//Tpkgsrc-2017Q4
+/patch-hw_xfree86_os-support_bus_Sbus.c/1.3/Wed Nov 16 10:14:37 2016//Tpkgsrc-2017Q4
+/patch-hw_xfree86_os-support_xf86_OSproc.h/1.1/Tue Feb 23 22:32:45 2016//Tpkgsrc-2017Q4
+/patch-hw_xfree86_os_support_bus_xf86Sbus.h/1.1/Sat Apr 25 11:47:03 2015//Tpkgsrc-2017Q4
+/patch-hw_xfree86_sdksyms.sh/1.1/Sun Apr 10 07:35:20 2016//Tpkgsrc-2017Q4
+/patch-os_xstrans.c/1.1/Sat Sep 26 18:35:41 2015//Tpkgsrc-2017Q4
+D

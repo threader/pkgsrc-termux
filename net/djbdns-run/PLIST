@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:05:07 jperkin Exp $
+share/doc/djbdns-run/README.pkgsrc

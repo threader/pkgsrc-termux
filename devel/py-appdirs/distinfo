@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2017/04/07 03:31:06 adam Exp $
+
+SHA1 (appdirs-1.4.3.tar.gz) = 9ad09395ed489ad66e9688e49087ce1814c64276
+RMD160 (appdirs-1.4.3.tar.gz) = 5c20593d89aa579dc571d533efeeb8ee72eb0d58
+SHA512 (appdirs-1.4.3.tar.gz) = 964db6c9f830c9b23d78f0230c5f574f214f08faf3fd24f10ccc941d23e38de66186461d754f7effb94aa0553c25df4843c9ff5dcd375c992c322550b3d98cce
+Size (appdirs-1.4.3.tar.gz) = 12700 bytes

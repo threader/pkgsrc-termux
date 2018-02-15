@@ -1,0 +1,38 @@
+$NetBSD: patch-bin_ps4pdf,v 1.2 2016/08/07 10:38:00 markd Exp $
+
+--- bin/ps4pdf.orig	2016-07-15 23:20:24.000000000 +0000
++++ bin/ps4pdf
+@@ -88,11 +88,11 @@ log=$tmpdir/log
+ version="1.0"
+ 
+ ## the defaults
+-ENGINE1=latex
++ENGINE1=@LATEX@
+ OPTIONS=
+-ENGINE2=pdflatex
+-DVIPS=dvips
+-PS2PDF=ps2pdf
++ENGINE2=@PDFLATEX@
++DVIPS=@DVIPS@
++PS2PDF=@PS2PDF@
+ FILE=$1
+ 
+ # look for optional things first
+@@ -134,7 +134,7 @@ fi
+ 
+ # jobname von TeX: Verzeichnisse entfernen, evtl. vorhandene Extension
+ # entfernen.
+-job=`echo "x$1" | sed 's@x@@; s@.*/@@; s@\.[^.]*$@@'`
++job=`echo "x$1" | @SED@ 's@x@@; s@.*/@@; s@\.[^.]*$@@'`
+ 
+ setupTmpDir
+ myexec ${ENGINE1} ${OPTIONS} "\AtBeginDocument{\RequirePackage{pst-pdf}} \input{$FILE}"
+@@ -148,7 +148,7 @@ fi
+ test -f "$job-pics.ps" && myexec ${PS2PDF} "$ps2pdf_opts" "$job-pics.ps" "$job-pics.pdf"
+ 
+ if $crop; then
+-  myexec pdfcrop "$job-pics.pdf" "$job-pics-crop.pdf" 
++  myexec @PDFCROP@ "$job-pics.pdf" "$job-pics-crop.pdf" 
+   mv "$job-pics-crop.pdf" "$job-pics.pdf"
+ fi
+ myexec ${ENGINE2} "\AtBeginDocument{\RequirePackage{pst-pdf}} \input{$FILE}"

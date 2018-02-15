@@ -1,0 +1,14 @@
+/patch-CMakeLists.txt/1.4/Mon Jul  3 20:48:03 2017//Tpkgsrc-2017Q4
+/patch-CMakeModules_FindPNG.cmake/1.1/Sun Oct 18 15:56:56 2015//Tpkgsrc-2017Q4
+/patch-doc_deghosting_mask.pod/1.1/Sun Oct 18 15:56:56 2015//Tpkgsrc-2017Q4
+/patch-src_hugin1_base__wx_StitchingExecutor.cpp/1.2/Mon Jul  3 20:48:03 2017//Tpkgsrc-2017Q4
+/patch-src_hugin1_base__wx_platform.cpp/1.1/Thu Apr  7 19:23:26 2016//Tpkgsrc-2017Q4
+/patch-src_hugin1_base__wx_wxPanoCommand.cpp/1.1/Sun Oct 18 15:56:56 2015//Tpkgsrc-2017Q4
+/patch-src_hugin1_calibrate__lens_LensCalFrame.cpp/1.1/Sun Oct 18 15:56:56 2015//Tpkgsrc-2017Q4
+/patch-src_hugin1_hugin_CPEditorPanel.cpp/1.1/Thu Apr  7 19:23:26 2016//Tpkgsrc-2017Q4
+/patch-src_hugin1_hugin_GLPreviewFrame.cpp/1.2/Sun Nov  6 16:08:00 2016//Tpkgsrc-2017Q4
+/patch-src_hugin1_ptbatcher_BatchFrame.cpp/1.1/Sun Oct 18 15:56:56 2015//Tpkgsrc-2017Q4
+/patch-src_hugin__script__interface_hsi.i/1.1/Mon Jul  3 20:48:04 2017//Tpkgsrc-2017Q4
+/patch-src_tools_align_image_stack.cpp/1.2/Thu Apr  7 19:23:26 2016//Tpkgsrc-2017Q4
+/patch-src_tools_tca__correct.cpp/1.2/Thu Apr  7 19:23:26 2016//Tpkgsrc-2017Q4
+D

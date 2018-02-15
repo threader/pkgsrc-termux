@@ -1,0 +1,9 @@
+/patch-ab/1.9/Mon Jan  2 14:13:32 2017//Tpkgsrc-2017Q4
+/patch-crypto_hmac-md5.c/1.2/Mon Jan  2 02:18:30 2017//Tpkgsrc-2017Q4
+/patch-crypto_hmac-sha1.c/1.2/Mon Jan  2 02:18:30 2017//Tpkgsrc-2017Q4
+/patch-crypto_hmac-sha256.c/1.2/Mon Jan  2 02:18:30 2017//Tpkgsrc-2017Q4
+/patch-crypto_hmac-sha384.c/1.2/Mon Jan  2 02:18:30 2017//Tpkgsrc-2017Q4
+/patch-crypto_hmac-sha512.c/1.2/Mon Jan  2 02:18:30 2017//Tpkgsrc-2017Q4
+/patch-crypto_hmac.c/1.2/Mon Jan  2 02:18:30 2017//Tpkgsrc-2017Q4
+/patch-include_hmac.h/1.1/Mon Jan  2 02:18:30 2017//Tpkgsrc-2017Q4
+D

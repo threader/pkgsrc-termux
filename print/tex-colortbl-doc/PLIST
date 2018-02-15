@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.2 2015/04/22 10:29:38 markd Exp $
+share/texmf-dist/doc/latex/colortbl/README
+share/texmf-dist/doc/latex/colortbl/colortbl-DE.pdf
+share/texmf-dist/doc/latex/colortbl/colortbl-DE.tex
+share/texmf-dist/doc/latex/colortbl/colortbl.pdf

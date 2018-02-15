@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.5 2017/03/06 12:59:53 fhajny Exp $
+man/man5/logrotate.conf.5
+man/man8/logrotate.8
+sbin/logrotate
+share/examples/logrotate/logrotate.conf
+share/examples/logrotate/logrotate.cron

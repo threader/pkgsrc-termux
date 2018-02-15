@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.6 2015/05/12 07:49:16 kim Exp $
+
+Do not build conf (installed "manually" by pkgsrc Makefile),
+win32 (not needed) or examples (not wanted).
+
+--- Makefile.in.orig	2015-04-08 10:11:17.000000000 +0000
++++ Makefile.in	2015-05-12 07:15:38.000000000 +0000
+@@ -386,7 +386,7 @@
+ top_srcdir = @top_srcdir@
+ AUTOMAKE_OPTIONS = foreign dist-zip
+ ACLOCAL_AMFLAGS = -I m4
+-SUBDIRS = src conf doc web admin win32 examples
++SUBDIRS = src doc web admin
+ EXTRA_DIST = HACKING m4/acx_pthread.m4 m4/ogg.m4 \
+     m4/theora.m4 m4/vorbis.m4 m4/speex.m4 \
+     m4/xiph_compiler.m4 m4/xiph_curl.m4 m4/xiph_net.m4 \

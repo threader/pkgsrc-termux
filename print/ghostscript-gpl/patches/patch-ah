@@ -1,0 +1,88 @@
+$NetBSD: patch-ah,v 1.7 2017/10/27 16:17:49 jperkin Exp $
+
+(1) First chunk to fix the X11_TYPE=native problem, which
+    freetype2 in /usr/X11R7/ is way old, and work around to 
+    use ghostscript-provided freetype2.
+    This part is not necessary for NetBSD 6.0, 6.1.
+
+(2) Second chunk for X11_TYPE=native, will have following problem without
+    this patch:
+    |  Shared object "libpaper.so.1" not found
+
+(3) SCO_SV chunk for SCO OpenServer 5.0.7/3.2's linker.
+
+--- configure.orig	2012-08-08 08:04:57.000000000 +0000
++++ configure
+@@ -3756,7 +3756,7 @@ $as_echo "$as_me: WARNING: disabling con
+     ;;
+     *)
+ #     This is just an arbitrary file in contrib to check
+-      if !(test -f contrib/gdevbjc_.c); then
++      if ! (test -f contrib/gdevbjc_.c); then
+         enable_contrib=no
+       fi
+     ;;
+@@ -3786,13 +3786,13 @@ case `uname` in
+         ;;
+         *BSD)
+         if test $ac_cv_c_compiler_gnu = yes; then
+-            CC_OPT_FLAGS_TO_TRY="-O2"
++            CC_OPT_FLAGS_TO_TRY="-O2 -I./freetype/include"
+             CC_DBG_FLAGS_TO_TRY="-g -O0"
+         fi
+         ;;
+         Darwin*)
+         if test $ac_cv_c_compiler_gnu = yes; then
+-            CC_OPT_FLAGS_TO_TRY="-O2"
++            CC_OPT_FLAGS_TO_TRY="-O2 -I./freetype/include"
+             CC_DBG_FLAGS_TO_TRY="-g -O0"
+         fi
+         SET_DT_SONAME=""
+@@ -3806,6 +3806,9 @@ case `uname` in
+         fi
+         CC_DBG_FLAGS_TO_TRY="-g -O0"
+         ;;
++	SCO_SV)
++	SET_DT_SONAME="-h,"
++	;;
+ esac
+ 
+ 
+@@ -5331,7 +5334,7 @@ fi
+ fi
+ 
+ if test x$with_libpaper != xno; then
+-    LIBS="$LIBS -lpaper"
++    LIBS="$LIBS -L${LPLIBDIR} -Wl,-R${LPLIBDIR} -lpaper"
+ 
+ $as_echo "#define USE_LIBPAPER 1" >>confdefs.h
+ 
+@@ -5832,7 +5835,7 @@ if ${ac_cv_lib_z_deflate+:} false; then
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lz  $LIBS"
++LIBS="-L${ZLIB_DIR} -Wl,-R${ZLIB_DIR} -lz $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -5871,7 +5874,7 @@ if test "x$ac_cv_header_zlib_h" = xyes;
+   cat >>confdefs.h <<_ACEOF
+ #define HAVE_ZLIB_H 1
+ _ACEOF
+- SHARE_ZLIB=1; AUX_SHARED_ZLIB="-l\$(ZLIB_NAME)"
++ SHARE_ZLIB=1; AUX_SHARED_ZLIB="-L${ZLIB_DIR} -Wl,-R${ZLIB_DIR} -l\$(ZLIB_NAME)"
+ fi
+ 
+ done
+@@ -6474,7 +6477,9 @@ done
+                 LCUPSINCLUDE="include \$(GLSRCDIR)/lcups.mak"
+                 LCUPSIINCLUDE="include \$(GLSRCDIR)/lcupsi.mak"
+                 if ( test x$with_pdftoraster != xno ); then
+-                    if test "$CUPSVERSION" ">" "1.2"; then
++                    if echo "$CUPSVERSION" | grep -q '^1\.[2-9]'; then
++                        CUPSPDFTORASTER="1"
++                    elif echo "$CUPSVERSION" | grep -q '^[2-9]\.[0-9]'; then
+                         CUPSPDFTORASTER="1"
+                     fi
+                 fi

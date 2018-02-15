@@ -1,0 +1,83 @@
+$NetBSD: patch-ak,v 1.4 2014/05/30 11:34:01 joerg Exp $
+
+* Fixes build with giflib>=5
+
+--- gdk_imlib/io-gif.c.orig	2002-03-04 17:06:29.000000000 +0000
++++ gdk_imlib/io-gif.c
+@@ -10,6 +10,16 @@ unsigned char loader_gif (FILE *f, int *
+ #else
+ #include <gif_lib.h>
+ 
++static void
++PrintGifError(int ErrorCode) {
++    char *Err = GifErrorString(ErrorCode);
++
++    if (Err != NULL)
++        fprintf(stderr, "GIF-LIB error: %s.\n", Err);
++    else
++        fprintf(stderr, "GIF-LIB undefined error %d.\n", ErrorCode);
++}
++
+ unsigned char      *
+ loader_gif(FILE *f, int *w, int *h, int *t)
+ {
+@@ -30,7 +40,7 @@ loader_gif(FILE *f, int *w, int *h, int 
+   fd = fileno(f);
+   /* Apparently rewind(f) isn't sufficient */
+   lseek(fd, (long) 0, 0);
+-  gif = DGifOpenFileHandle(fd);
++  gif = DGifOpenFileHandle(fd, NULL);
+ 
+   transp = -1;
+   data = NULL;
+@@ -43,14 +53,14 @@ loader_gif(FILE *f, int *w, int *h, int 
+     {
+       if (DGifGetRecordType(gif, &rec) == GIF_ERROR)
+ 	{
+-	  PrintGifError();
++	  PrintGifError(gif->Error);
+ 	  rec = TERMINATE_RECORD_TYPE;
+ 	}
+       if ((rec == IMAGE_DESC_RECORD_TYPE) && (!done))
+ 	{
+ 	  if (DGifGetImageDesc(gif) == GIF_ERROR)
+ 	    {
+-	      PrintGifError();
++	      PrintGifError(gif->Error);
+ 	      rec = TERMINATE_RECORD_TYPE;
+ 	    }
+ 	  *w = gif->Image.Width;
+@@ -62,13 +72,13 @@ loader_gif(FILE *f, int *w, int *h, int 
+ 	  rows = malloc(*h * sizeof(GifRowType *));
+ 	  if (!rows)
+ 	    {
+-	      DGifCloseFile(gif);
++	      DGifCloseFile(gif, NULL);
+ 	      return NULL;
+ 	    }
+ 	  data = _gdk_malloc_image(*w, *h);
+ 	  if (!data)
+ 	    {
+-	      DGifCloseFile(gif);
++	      DGifCloseFile(gif, NULL);
+ 	      free(rows);
+ 	      return NULL;
+ 	    }
+@@ -79,7 +89,7 @@ loader_gif(FILE *f, int *w, int *h, int 
+ 	      rows[i] = malloc(*w * sizeof(GifPixelType));
+ 	      if (!rows[i])
+ 		{
+-		  DGifCloseFile(gif);
++		  DGifCloseFile(gif, NULL);
+ 		  for (i = 0; i < *h; i++)
+ 		    if (rows[i])
+ 		      free(rows[i]);
+@@ -168,7 +178,7 @@ loader_gif(FILE *f, int *w, int *h, int 
+ 	    }
+ 	}
+     }
+-  DGifCloseFile(gif);
++  DGifCloseFile(gif, NULL);
+   for (i = 0; i < *h; i++)
+     free(rows[i]);
+   free(rows);

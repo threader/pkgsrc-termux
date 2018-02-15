@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.5 2017/12/09 17:48:43 tsutsui Exp $
+
+SHA1 (http-form_data-2.0.0.gem) = 823d4716d9314fc6edcc43343be9fa7bf3c6d1d7
+RMD160 (http-form_data-2.0.0.gem) = e74912388f7c1f8bb4661318b80239f009526edc
+SHA512 (http-form_data-2.0.0.gem) = 2abb3742da142bfca5ad216140ad70493885ddceb258c7af1e14fec57172bdc976646e90de4b3d51c3af7eebb5d820771cba7d7a1798100ceb3c696c971d5ba8
+Size (http-form_data-2.0.0.gem) = 16384 bytes

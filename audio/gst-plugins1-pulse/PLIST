@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.2 2017/09/12 09:32:43 wiz Exp $
+lib/gstreamer-1.0/libgstpulseaudio.la

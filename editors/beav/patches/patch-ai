@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.2 2016/03/30 10:03:46 jperkin Exp $
+
+Remove unused functions.
+
+--- basic.c.orig	2005-12-09 13:48:37.000000000 +0000
++++ basic.c
+@@ -9,7 +9,6 @@
+ 
+ #include    "def.h"
+ 
+-bool move_ptr ();
+ bool forwchar ();
+ bool wind_on_dot ();
+ bool backline ();

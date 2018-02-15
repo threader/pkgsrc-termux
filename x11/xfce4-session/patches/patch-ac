@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.4 2017/06/22 09:40:24 youri Exp $
+
+Adjust config path.
+
+--- settings/Makefile.in.orig	2015-03-16 07:29:45.000000000 +0000
++++ settings/Makefile.in
+@@ -452,7 +452,7 @@ xfce4_session_settings_LDADD = \
+ xfce4_session_settings_DEPENDENCIES = \
+ 	$(top_builddir)/libxfsm/libxfsm-4.6.la
+ 
+-settingsdir = $(sysconfdir)/xdg/xfce4/xfconf/xfce-perchannel-xml
++settingsdir = $(datadir)/examples/xfce4/xfconf/xfce-perchannel-xml
+ settings_DATA = xfce4-session.xml
+ desktopdir = $(datadir)/applications
+ desktop_in_files = xfce-session-settings.desktop.in

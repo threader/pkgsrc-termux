@@ -1,0 +1,13 @@
+/patch-configure/1.1/Sun Jul 29 21:44:13 2012//Tpkgsrc-2017Q4
+/patch-grub-core_lib_posix__wrap_sys_types.h/1.1/Sun Jul 29 21:44:13 2012//Tpkgsrc-2017Q4
+/patch-grub-core_lib_posix__wrap_wchar.h/1.1/Sun Jul 29 21:44:13 2012//Tpkgsrc-2017Q4
+/patch-grub-core_lib_xzembed_xz__dec__lzma2.c/1.1/Fri Sep  5 12:14:24 2014//Tpkgsrc-2017Q4
+/patch-grub-core_loader_i386_pc_plan9.c/1.1/Sun Jul 29 21:44:13 2012//Tpkgsrc-2017Q4
+/patch-grub-core_net_bootp.c/1.1/Tue May  3 14:53:14 2016//Tpkgsrc-2017Q4
+/patch-grub-core_script_yylex.l/1.1/Sun Aug 12 13:15:12 2012//Tpkgsrc-2017Q4
+/patch-stpcpy-1.diff/1.1/Sun Jul 29 21:44:13 2012//Tpkgsrc-2017Q4
+/patch-stpcpy-2-gen.diff/1.1/Sun Jul 29 21:44:13 2012//Tpkgsrc-2017Q4
+/patch-util_getroot.c/1.1/Fri Sep  5 12:14:24 2014//Tpkgsrc-2017Q4
+/patch-util_grub-mkfont.c/1.1/Fri Jul 11 10:58:43 2014//Tpkgsrc-2017Q4
+/patch-util_grub.d_10__netbsd.in/1.1/Sun Jul 29 21:44:13 2012//Tpkgsrc-2017Q4
+D

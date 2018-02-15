@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.4 2016/11/12 07:47:34 adam Exp $
+include/pthread-barrier.h
+include/uv-aix.h
+include/uv-bsd.h
+include/uv-darwin.h
+include/uv-errno.h
+include/uv-linux.h
+include/uv-sunos.h
+include/uv-threadpool.h
+include/uv-unix.h
+include/uv-version.h
+include/uv-win.h
+include/uv.h
+lib/libuv.la
+lib/pkgconfig/libuv.pc

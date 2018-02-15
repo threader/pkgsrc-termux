@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.2 2015/09/24 23:05:31 ryoon Exp $
+
+--- xmltools/Makefile.in.orig	2015-02-12 16:04:02.000000000 +0000
++++ xmltools/Makefile.in
+@@ -335,7 +335,7 @@ top_srcdir = @top_srcdir@
+ version_info = @version_info@
+ AM_CPPFLAGS = -I$(top_srcdir)/libdjvu -I$(top_srcdir)/tools
+ AM_CXXFLAGS = $(PTHREAD_CFLAGS)
+-DJLIB = $(top_builddir)/libdjvu/libdjvulibre.la
++DJLIB = $(prefix)/lib/libdjvulibre.la
+ djvutoxml_SOURCES = djvutoxml.cpp
+ djvutoxml_LDADD = $(DJLIB) $(PTHREAD_LIBS)
+ djvuxmlparser_SOURCES = djvuxmlparser.cpp

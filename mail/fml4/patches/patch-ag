@@ -1,0 +1,50 @@
+$NetBSD: patch-ag,v 1.3 2015/07/20 00:06:18 taca Exp $
+
+Avoid use of obsolete perl syntax.
+
+--- cf/config.orig	2003-01-15 18:07:38.000000000 +0000
++++ cf/config
+@@ -657,10 +657,10 @@ sub main'reverse
+ 	    if (defined $entry) {
+ 		print STDERR "GO \$\t$key\n";
+ 	    }
+-	    elsif (defined @entry) {
++	    elsif (@entry) {
+ 		print STDERR "GO \@\t$key\n";
+ 	    }
+-	    elsif (defined %entry) {
++	    elsif (%entry) {
+ 		print STDERR "GO \%\t$key\n";
+ 	    }
+ 	    elsif (defined &entry) {
+@@ -703,7 +703,7 @@ sub main'reverse
+ 	    next;
+ 	}
+ 
+-	if (defined @entry) {
++	if (@entry) {
+ 	    undef $num;
+ 	    $OUT'LOCAL .=  "\@$key = (";
+ 	    foreach (@entry) {
+@@ -718,7 +718,7 @@ sub main'reverse
+ 	# Is there an associative array that isn't the one
+ 	# we're currently iterating through?
+ 	
+-	if ($key ne "_$package" && defined %entry) {
++	if ($key ne "_$package" && %entry) {
+ 	    $OUT'LOCAL .= "\%$key = (\n"; #';
+ 	    foreach $key (sort keys(%entry)) {
+ 		$OUT'LOCAL .= "'$key', '". $entry{$key} ."',\n";#';
+@@ -791,10 +791,10 @@ sub rv'PreScanConfigPH #';
+ 	if (defined $entry) {
+ 	    eval("$rv'\$$key = 1; undef $rv'\$$key");
+ 	}
+-	elsif (defined @entry) {
++	elsif (@entry) {
+ 	    eval("$rv'\@$key = 1; undef $rv'\@$key");
+ 	}
+-	elsif ($key ne "_$package" && $key ne "_DB" && defined %entry) {
++	elsif ($key ne "_$package" && $key ne "_DB" && %entry) {
+ 	    eval("$rv'\%$key = 1; undef $rv'\%$key");
+ 	}
+ 	else {

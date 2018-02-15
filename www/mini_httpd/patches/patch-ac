@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.2 2015/04/11 16:16:54 schwarz Exp $
+
+--- mini_httpd.c.orig	2014-10-19 08:33:10.000000000 +0200
++++ mini_httpd.c	2015-04-11 17:54:03.000000000 +0200
+@@ -833,6 +833,10 @@
+ 	    if ( errno == EPROTO )
+ 		continue;	/* try again */
+ #endif /* EPROTO */
++#ifdef ECONNABORTED
++	    if ( errno == ECONNABORTED )
++		continue;	/* try again */
++#endif /* ECONNABORTED */
+ 	    syslog( LOG_CRIT, "accept - %m" );
+ 	    perror( "accept" );
+ 	    exit( 1 );

@@ -1,0 +1,19 @@
+/patch-configure/1.2/Tue Jun 27 15:25:19 2017//Tpkgsrc-2017Q4
+/patch-ext_dbm_extconf.rb/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-lib_mkmf.rb/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-lib_rdoc_ri_driver.rb/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-lib_rubygems.rb/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-lib_rubygems_commands_setup__command.rb/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-lib_rubygems_config__file.rb/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-lib_rubygems_defaults.rb/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-lib_rubygems_dependency__installer.rb/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-lib_rubygems_install__update__options.rb/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-lib_rubygems_installer.rb/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-lib_rubygems_platform.rb/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-lib_rubygems_specification.rb/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-man_erb.1/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-man_irb.1/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-man_ri.1/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-man_ruby.1/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+/patch-test_rubygems_test__gem.rb/1.1/Sun Jun 18 13:45:11 2017//Tpkgsrc-2017Q4
+D

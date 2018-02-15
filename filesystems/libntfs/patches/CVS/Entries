@@ -1,0 +1,11 @@
+/patch-Makefile.in/1.1/Mon May 19 12:22:06 2014//Tpkgsrc-2017Q4
+/patch-include_ntfs-3g_compat.h/1.1/Mon May 19 12:22:06 2014//Tpkgsrc-2017Q4
+/patch-include_ntfs-3g_types.h/1.2/Tue Nov 10 17:45:22 2015//Tpkgsrc-2017Q4
+/patch-libntfs-3g_Makefile.in/1.1/Mon May 19 12:22:06 2014//Tpkgsrc-2017Q4
+/patch-libntfs-3g_compat.c/1.1/Tue Nov 10 17:45:22 2015//Tpkgsrc-2017Q4
+/patch-libntfs-3g_device.c/1.1/Mon May 19 12:22:06 2014//Tpkgsrc-2017Q4
+/patch-ntfsprogs_Makefile.in/1.1/Mon May 19 12:22:06 2014//Tpkgsrc-2017Q4
+/patch-ntfsprogs_ntfsclone.c/1.1/Mon May 19 12:22:06 2014//Tpkgsrc-2017Q4
+/patch-src_Makefile.in/1.2/Tue Nov 10 17:45:22 2015//Tpkgsrc-2017Q4
+/patch-src_ntfs-3g.c/1.1/Tue Nov 10 17:45:22 2015//Tpkgsrc-2017Q4
+D

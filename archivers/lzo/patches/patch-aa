@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.2 2014/06/29 13:38:53 schwarz Exp $
+
+--- src/lzo_supp.h.orig	2014-06-29 15:25:50.000000000 +0200
++++ src/lzo_supp.h	2014-06-29 15:27:27.000000000 +0200
+@@ -53,7 +53,7 @@
+ #define HAVE_FCNTL_H 1
+ #define HAVE_FLOAT_H 1
+ #define HAVE_LIMITS_H 1
+-#define HAVE_MALLOC_H 1
++/* #undef HAVE_MALLOC_H */
+ #define HAVE_MEMORY_H 1
+ #define HAVE_SETJMP_H 1
+ #define HAVE_SIGNAL_H 1

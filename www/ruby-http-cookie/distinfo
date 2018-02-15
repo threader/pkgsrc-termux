@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2016/09/30 15:36:59 taca Exp $
+
+SHA1 (http-cookie-1.0.3.gem) = 34c03e5f450d33591f47d9934dd9315577a3da57
+RMD160 (http-cookie-1.0.3.gem) = 2a9f8615630a5ceafde2facce672d0b6b3eaae2c
+SHA512 (http-cookie-1.0.3.gem) = 43ac1218e98dd47ee22e33e72e20bc5b55f65e60aadd417641f8a4221eba88995d418c7738a4c35dfba132e05c0c4b0df2b2bedd56c22e82c062d1f03de0052f
+Size (http-cookie-1.0.3.gem) = 38400 bytes

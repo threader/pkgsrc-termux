@@ -1,0 +1,34 @@
+$NetBSD: patch-aj,v 1.3 2014/09/25 10:58:02 jperkin Exp $
+
+Support strerror().
+
+--- rw/libpnmrw.c.orig	1996-06-25 08:50:42.000000000 +0000
++++ rw/libpnmrw.c
+@@ -32,6 +32,7 @@
+ /* #define MSDOS */
+ #endif
+ 
++#include <errno.h>
+ #include <stdio.h>
+ #include "libpnmrw.h"
+ 
+@@ -128,15 +129,13 @@ pm_freearray(char **its, int rows)
+ static void
+ pm_perror(char *reason)
+ {
+-#if defined(BSD4_4)
+-    __const extern char *__const sys_errlist[];
+-#else
+-    extern char *sys_errlist[];
+-#endif
+-    extern int errno;
+     char *e;
+ 
++#if defined(__STDC__) && !defined(MISSING_STRERROR)
++    e = strerror(errno);
++#else
+     e = sys_errlist[errno];
++#endif
+ 
+     if (reason != 0 && reason[0] != '\0')
+ 	fprintf(stderr, "%s: %s - %s\n", progname, reason, e);

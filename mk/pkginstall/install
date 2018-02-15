@@ -1,0 +1,87 @@
+# $NetBSD: install,v 1.5 2017/06/14 16:23:09 prlw1 Exp $
+
+case ${STAGE} in
+PRE-INSTALL)
+	#
+	# Unpack the helper scriptlets.
+	#
+	${SH} ${SELF} ${PKGNAME} UNPACK
+	#
+	# Require that necessary users and groups exist or else fail the
+	# installation of the package.
+	#
+	${TEST} ! -x ./+USERGROUP ||
+		{ ./+USERGROUP ADD ${PKG_METADATA_DIR}
+		  if ./+USERGROUP CHECK-ADD ${PKG_METADATA_DIR}; then
+			:
+		  else
+			exit 1
+		  fi; }
+	${TEST} ! -x ./+DIRS ||
+		./+DIRS ADD ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+DIRS ||
+		./+DIRS PERMS ${PKG_METADATA_DIR}
+        ;;
+
+POST-INSTALL)
+	#
+	# Rebuild the system run-time library search path database.
+	#
+	${TEST} ! -x ./+SHLIBS ||
+		./+SHLIBS ADD ${PKG_METADATA_DIR}
+	#
+	# Copy configuration/support files into place.
+	#
+        ${TEST} ! -x ./+FILES ||
+		./+FILES ADD ${PKG_METADATA_DIR}
+        ${TEST} ! -x ./+FILES ||
+		./+FILES PERMS ${PKG_METADATA_DIR}
+	#
+	# Set special permissions on any files/directories that need them.
+	#
+	${TEST} ! -x ./+PERMS ||
+		./+PERMS ${PKG_METADATA_DIR}
+	#
+	# Update any fonts databases.
+	#
+	${TEST} ! -x ./+FONTS ||
+		./+FONTS ${PKG_METADATA_DIR}
+
+	#
+	# Update any icon theme caches.
+	#
+	${TEST} ! -x ./+ICON_THEMES ||
+		./+ICON_THEMES UPDATE ${PKG_METADATA_DIR}
+
+	# Check for any missing bits after we're finished installing.
+	#
+	${TEST} ! -x ./+DIRS ||
+		./+DIRS CHECK-ADD ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+DIRS ||
+		./+DIRS CHECK-PERMS ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+FILES ||
+		./+FILES CHECK-ADD ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+FILES ||
+		./+FILES CHECK-PERMS ${PKG_METADATA_DIR}
+
+	#
+	# Register shells in /etc/shells.
+	#
+	${TEST} ! -x ./+SHELL ||
+		./+SHELL ADD ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+SHELL ||
+		./+SHELL CHECK-ADD ${PKG_METADATA_DIR}
+	#
+	# Register info files.
+	#
+	${TEST} ! -x ./+INFO_FILES ||
+		./+INFO_FILES ADD ${PKG_METADATA_DIR}
+
+  #
+  # Register package into ocaml-findlib.
+  #
+  ${TEST} ! -x ./+OCAML_FINDLIB_REGISTER ||
+    ./+OCAML_FINDLIB_REGISTER ADD ${PKG_METADATA_DIR}
+	;;
+esac
+

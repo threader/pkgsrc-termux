@@ -1,0 +1,5 @@
+/patch-imap_src_c-client_auth_gss.c/1.1/Wed Oct 10 19:49:07 2012//Tpkgsrc-2017Q4
+/patch-imap_src_mtest_mtest.c/1.1/Sun Nov  8 20:57:37 2015//Tpkgsrc-2017Q4
+/patch-imap_src_osdep_unix_Makefile.gss/1.1/Wed Oct 10 19:49:07 2012//Tpkgsrc-2017Q4
+/patch-imap_src_osdep_unix_kerb_mit.c/1.1/Wed Oct 10 19:49:08 2012//Tpkgsrc-2017Q4
+D

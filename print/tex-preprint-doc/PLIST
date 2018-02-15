@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 04:21:21 markd Exp $
+share/texmf-dist/doc/latex/preprint/README
+share/texmf-dist/doc/latex/preprint/authblk.pdf
+share/texmf-dist/doc/latex/preprint/balance.pdf
+share/texmf-dist/doc/latex/preprint/figcaps.pdf
+share/texmf-dist/doc/latex/preprint/fullpage.pdf
+share/texmf-dist/doc/latex/preprint/sublabel.pdf

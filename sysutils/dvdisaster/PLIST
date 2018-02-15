@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.6 2017/03/18 13:54:23 adam Exp $
+bin/dvdisaster
+man/de/man1/dvdisaster.1
+man/man1/dvdisaster.1
+share/doc/${PKGNAME}/CHANGELOG
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/CREDITS.de
+share/doc/${PKGNAME}/CREDITS.en
+share/doc/${PKGNAME}/README.MODIFYING
+share/doc/${PKGNAME}/TODO
+share/doc/${PKGNAME}/manual.pdf
+share/locale/cs/LC_MESSAGES/dvdisaster.mo
+share/locale/de/LC_MESSAGES/dvdisaster.mo
+share/locale/it/LC_MESSAGES/dvdisaster.mo
+share/locale/pt_BR/LC_MESSAGES/dvdisaster.mo
+share/locale/ru/LC_MESSAGES/dvdisaster.mo
+share/locale/sv/LC_MESSAGES/dvdisaster.mo

@@ -1,0 +1,27 @@
+$NetBSD: patch-CMakeLists.txt,v 1.2 2017/10/27 16:45:34 minskim Exp $
+
+Make this build with pkgsrc google-benchmark and libcares.
+
+--- CMakeLists.txt.orig	2017-10-26 19:11:22.000000000 +0000
++++ CMakeLists.txt
+@@ -144,9 +144,11 @@ if("${gRPC_CARES_PROVIDER}" STREQUAL "mo
+     set(gRPC_INSTALL FALSE)
+   endif()
+ elseif("${gRPC_CARES_PROVIDER}" STREQUAL "package")
+-  find_package(c-ares REQUIRED CONFIG)
++  find_library(cares REQUIRED)
+   if(TARGET c-ares::cares)
+     set(_gRPC_CARES_LIBRARIES c-ares::cares)
++  else()
++    set(_gRPC_CARES_LIBRARIES cares)
+   endif()
+   set(_gRPC_FIND_CARES "if(NOT c-ares_FOUND)\n  find_package(c-ares CONFIG)\nendif()")
+ endif()
+@@ -271,7 +273,6 @@ if("${gRPC_BENCHMARK_PROVIDER}" STREQUAL
+       message(WARNING "gRPC_BENCHMARK_PROVIDER is \"module\" but BENCHMARK_ROOT_DIR is wrong")
+   endif()
+ elseif("${gRPC_BENCHMARK_PROVIDER}" STREQUAL "package")
+-  find_package(benchmark)
+   if(TARGET benchmark::benchmark)
+     set(_gRPC_BENCHMARK_LIBRARIES benchmark::benchmark)
+   endif()

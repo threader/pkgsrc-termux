@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2017/06/23 17:24:57 youri Exp $
+
+SHA1 (mate-panel-1.18.3.tar.xz) = 9307cdfa2e34cf18c4863e73023c562d42cef150
+RMD160 (mate-panel-1.18.3.tar.xz) = 9586d5c8bb8088205ceb69f081e5b8cdc803bd5c
+SHA512 (mate-panel-1.18.3.tar.xz) = 55eea63abe1b60a04c72a4e8158e62eab9101545343d2063bd9f98d21c5e87c283ad942bca7c160403e6ed4bf9250b850c67d4b9a6e56b602487895e2ce16ca3
+Size (mate-panel-1.18.3.tar.xz) = 1976968 bytes

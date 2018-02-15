@@ -1,0 +1,13 @@
+/patch-Lib_distutils_command_install.py/1.1/Sat Dec  5 17:12:13 2015//Tpkgsrc-2017Q4
+/patch-Lib_distutils_unixccompiler.py/1.3/Thu Jan 19 13:55:53 2017//Tpkgsrc-2017Q4
+/patch-Makefile.pre.in/1.5/Wed Dec 13 12:55:32 2017//Tpkgsrc-2017Q4
+/patch-Modules___cursesmodule.c/1.4/Thu Jan  5 23:16:42 2017//Tpkgsrc-2017Q4
+/patch-Modules_makesetup/1.1/Sat Dec  5 17:12:13 2015//Tpkgsrc-2017Q4
+/patch-Modules_nismodule.c/1.1/Sat Dec  5 17:12:13 2015//Tpkgsrc-2017Q4
+/patch-Modules_socketmodule.c/1.1/Tue May 30 14:04:54 2017//Tpkgsrc-2017Q4
+/patch-Modules_socketmodule.h/1.1/Tue May 30 14:04:54 2017//Tpkgsrc-2017Q4
+/patch-Python_thread__pthread.h/1.1/Sat Dec  5 17:12:13 2015//Tpkgsrc-2017Q4
+/patch-configure/1.2/Tue May 30 14:04:54 2017//Tpkgsrc-2017Q4
+/patch-pyconfig.h.in/1.1/Tue May 30 14:04:54 2017//Tpkgsrc-2017Q4
+/patch-setup.py/1.4/Thu Jan 26 09:45:23 2017//Tpkgsrc-2017Q4
+D

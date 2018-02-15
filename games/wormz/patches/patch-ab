@@ -1,0 +1,42 @@
+$NetBSD: patch-ab,v 1.4 2014/09/25 12:25:07 jperkin Exp $
+
+--- include/Compat.hh.orig	1998-07-07 21:02:01.000000000 +0000
++++ include/Compat.hh
+@@ -14,7 +14,8 @@ int gethostname(char * name, int namelen
+ 
+ #ifndef Linux
+ 
+-#include <bool.h>
++#define TRUE 1
++#define FALSE 0
+ #include <string.h>
+ 
+ inline void bzero(void * data, int size)
+@@ -22,7 +23,9 @@ inline void bzero(void * data, int size)
+ 	memset(data, 0, size);
+ }
+ 
++#if !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(__sun)
+ const double PI=3.1415926535797;
++#endif
+ 
+ inline int byteswap(int old)
+ {
+@@ -34,12 +37,15 @@ inline int byteswap(int old)
+ 
+ inline int byteswapshort(unsigned short old)
+ {
+-  return ((old & 0xff) << 8)
+-       + ((old & 0xff00) >> 8);
++/*  return ((old & 0xff) << 8)
++       + ((old & 0xff00) >> 8);*/
++	return(old);
+ }
++#if !defined(__NetBSD__) && !defined(__DragonFly__)
+ extern "C" {
+ int usleep(unsigned int);
+ }
++#endif
+ 
+ #endif
+ #ifdef Linux

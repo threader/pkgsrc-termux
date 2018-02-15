@@ -1,0 +1,35 @@
+$NetBSD: patch-ak,v 1.3 2013/12/31 10:42:59 schwarz Exp $
+
+--- configure.orig	2012-06-29 00:37:06.000000000 +0200
++++ configure	2013-12-20 01:43:57.000000000 +0100
+@@ -3151,8 +3151,8 @@
+ 	# XXX: not sure if /usr/local is necessary.
+ 	# XXX: linux libwrap needs -lnsl. configure should check for
+ 	#      existence of libnsl instead of hard-coding
+-	CPPFLAGS="$CFLAGS -I/usr/local/include"; export CPPFLAGS
+-	LDFLAGS="$LDFLAGS -L/usr/local/lib -L/lib"; export LDFLAGS
++	# CPPFLAGS="$CFLAGS -I/usr/local/include"; export CPPFLAGS
++	# LDFLAGS="$LDFLAGS -L/usr/local/lib -L/lib"; export LDFLAGS
+ 	LIBS="-lnsl -lcrypt $LIBS"; export LIBS
+         $as_echo "#define LINUX 1" >>confdefs.h
+ 
+@@ -3160,15 +3160,15 @@
+ 	# XXX: does linux need glibc: -DGLIBC
+     ;;
+     *mips* )
+-	CPPFLAGS="$CFLAGS -I/usr/local/include"; export CPPFLAGS
+-	LDFLAGS="$LDFLAGS -L/usr/local/lib"; export LDFLAGS
++	# CPPFLAGS="$CFLAGS -I/usr/local/include"; export CPPFLAGS
++	# LDFLAGS="$LDFLAGS -L/usr/local/lib"; export LDFLAGS
+ 	LIBS="-lcrypt $LIBS"; export LIBS
+         $as_echo "#define MIPS 1" >>confdefs.h
+ 
+     ;;
+     * )
+-	CPPFLAGS="$CFLAGS -I/usr/local/include"; export CPPFLAGS
+-	LDFLAGS="$LDFLAGS -L/usr/local/lib"; export LDFLAGS
++	# CPPFLAGS="$CFLAGS -I/usr/local/include"; export CPPFLAGS
++	# LDFLAGS="$LDFLAGS -L/usr/local/lib"; export LDFLAGS
+     ;;
+ esac
+ 

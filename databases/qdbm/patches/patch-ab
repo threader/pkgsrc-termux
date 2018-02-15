@@ -1,0 +1,51 @@
+$NetBSD: patch-ab,v 1.4 2014/05/31 07:28:57 obache Exp $
+
+* Change documentation path
+* Prevent to hard code, honor user settings.
+* install perl modules as vendor
+
+--- perl/Makefile.in.orig	2006-11-12 12:18:12.000000000 +0000
++++ perl/Makefile.in
+@@ -21,16 +21,16 @@ MYDOCS = plspex.html plspex-ja.html plap
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ MYBINDIR = @bindir@
+-MYDATADIR = @datadir@/$(PACKAGE)/perl
++MYDATADIR = @datadir@/doc/$(PACKAGE)/perl
+ DESTDIR =
+ 
+ # Building binaries
+-CC = gcc
+-INC = -I. -I../.. -I$(HOME)/include -I/usr/local/include
+-OPTIMIZE = -O2
+-LD = gcc
+-LIBS = -L../.. -I$(HOME)/lib -L/usr/local/lib -lqdbm @LIBS@
+-RUNENV = LD_LIBRARY_PATH=.:..:../..:/usr/local/lib:$(HOME)/lib
++CC = @CC@
++INC = -I. -I../..
++OPTIMIZE = @CFLAGS@
++LD = @CC@
++LIBS = -L../.. -lqdbm @LIBS@
++RUNENV = LD_LIBRARY_PATH=.:..:../..
+ 
+ 
+ 
+@@ -42,15 +42,15 @@ RUNENV = LD_LIBRARY_PATH=.:..:../..:/usr
+ all :
+ 	cd depot && [ -f Makefile ] || \
+ 	  $(RUNENV) perl Makefile.PL CC="$(CC)" INC="$(INC)" OPTIMIZE="$(OPTIMIZE)" \
+-	    LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" ; \
++	    LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" INSTALLDIRS=vendor ; \
+ 	  $(RUNENV) make
+ 	cd curia && [ -f Makefile ] || \
+ 	  $(RUNENV) perl Makefile.PL CC="$(CC)" INC="$(INC)" OPTIMIZE="$(OPTIMIZE)" \
+-	    LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" ; \
++	    LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" INSTALLDIRS=vendor ; \
+ 	  $(RUNENV) make
+ 	cd villa && [ -f Makefile ] || \
+ 	  $(RUNENV) perl Makefile.PL CC="$(CC)" INC="$(INC)" OPTIMIZE="$(OPTIMIZE)" \
+-	    LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" ; \
++	    LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" INSTALLDIRS=vendor ; \
+ 	  $(RUNENV) make
+ 	@printf '\n'
+ 	@printf '#================================================================\n'

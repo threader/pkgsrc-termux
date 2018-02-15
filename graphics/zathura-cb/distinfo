@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/01/31 10:13:46 leot Exp $
+
+SHA1 (zathura-cb-0.1.6.tar.gz) = 73b7cea040ebf603253894f6e08c1b5bd183cd76
+RMD160 (zathura-cb-0.1.6.tar.gz) = 4229f69ec434299bd4ddf6df32f9116668409b20
+SHA512 (zathura-cb-0.1.6.tar.gz) = 986293957b6bc5e5fe7033bb7c91e857b1089fe1a041eb39e516b4e906c2619d22d7ebfa0bfaba982cc6145cba4c6a2af01be810c6da71f4c862fb42bc91f230
+Size (zathura-cb-0.1.6.tar.gz) = 7205 bytes

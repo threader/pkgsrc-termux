@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.4 2017/11/15 10:05:28 wiz Exp $
+
+SHA1 (Sereal-4.004.tar.gz) = b63d721e110e9746a642be5ec5ba9e1488f57598
+RMD160 (Sereal-4.004.tar.gz) = a97df2f47caf43d2b49eaa182d285032b689c616
+SHA512 (Sereal-4.004.tar.gz) = c4fed38af587a852c294bdbe4bc17fc2b5cc55592d0d63deb5c155c974e45befad141d6e655fdb72bf88a50a26cdeb500e0e717b1cf6d936778de49825664f1e
+Size (Sereal-4.004.tar.gz) = 193361 bytes

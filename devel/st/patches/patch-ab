@@ -1,0 +1,48 @@
+$NetBSD: patch-ab,v 1.4 2017/11/29 16:52:44 gson Exp $
+
+--- examples/Makefile.orig	2009-10-01 18:35:55.000000000 +0000
++++ examples/Makefile
+@@ -61,7 +61,7 @@ OTHER_FLAGS =
+ 
+ OBJDIR      = $(DEPTH)/$(TARGETDIR)
+ INCDIR      = $(DEPTH)/$(TARGETDIR)
+-LIBST       = $(OBJDIR)/libst.a
++LIBST       = $(OBJDIR)/libst.la
+ HEADER      = $(INCDIR)/st.h
+ 
+ LIBRESOLV   =
+@@ -70,7 +70,7 @@ EXTRALIBS   =
+ ifeq ($(OS),)
+ EXAMPLES    = unknown
+ else
+-EXAMPLES    = $(OBJDIR)/lookupdns $(OBJDIR)/proxy $(OBJDIR)/server
++EXAMPLES    = lookupdns proxy server
+ endif
+ 
+ 
+@@ -98,17 +98,17 @@ endif
+ 
+ all: $(EXAMPLES)
+ 
+-$(OBJDIR)/lookupdns: lookupdns.c $(OBJDIR)/res.o $(LIBST) $(HEADER)
+-	$(CC) $(CFLAGS) -I$(INCDIR) lookupdns.c $(OBJDIR)/res.o $(LIBST) $(LIBRESOLV) $(EXTRALIBS) -o $@
++lookupdns: lookupdns.lo res.lo $(LIBST) $(HEADER)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -I$(INCDIR) lookupdns.lo res.lo $(LIBST) $(LIBRESOLV) $(EXTRALIBS) -o $@
+ 
+-$(OBJDIR)/proxy: proxy.c $(LIBST) $(HEADER)
+-	$(CC) $(CFLAGS) -I$(INCDIR) proxy.c $(LIBST) $(EXTRALIBS) -o $@
++proxy: proxy.lo $(LIBST) $(HEADER)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -I$(INCDIR) proxy.lo $(LIBST) $(EXTRALIBS) -o $@
+ 
+-$(OBJDIR)/server: server.c $(OBJDIR)/error.o $(LIBST) $(HEADER)
+-	$(CC) $(CFLAGS) -I$(INCDIR) server.c $(OBJDIR)/error.o $(LIBST) $(EXTRALIBS) -o $@
++server: server.lo error.lo $(LIBST) $(HEADER)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -I$(INCDIR) server.lo error.lo $(LIBST) $(EXTRALIBS) -o $@
+ 
+-$(OBJDIR)/%.o: %.c
+-	$(CC) $(CFLAGS) -I$(INCDIR) -c $< -o $@
++%.lo: %.c
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -I$(INCDIR) -c $< -o $@
+ 
+ .DEFAULT:
+ 	@cd $(DEPTH); $(MAKE) $@

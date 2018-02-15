@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.4 2016/03/15 12:15:26 wiz Exp $
+
+Support DragonFly and NetBSD.
+
+--- configure.orig	2000-03-07 02:12:40.000000000 +0000
++++ configure
+@@ -227,9 +227,12 @@ CRAY*)
+ *-sgi-irix*)
+ 	fname=irix.mk
+ 	;;
+-*-freebsd)
++*-freebsd | *-dragonfly*)
+ 	fname=freebsd.mk
+ 	;;
++*-netbsd)
++	fname=netbsd.mk
++	;;
+ *-bsdi)
+ 	fname=bsdi.mk
+ 	;;

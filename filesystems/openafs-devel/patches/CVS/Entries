@@ -1,0 +1,24 @@
+/patch-acinclude.m4/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-configure/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-configure-libafs/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-afs-NBSD-osi_crypto.c/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-afs-NBSD-osi_kmod.c/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-afs-NBSD-osi_machdep.h/1.1/Mon Jan  7 00:03:43 2013//Tpkgsrc-2017Q4
+/patch-src-afs-NBSD-osi_vm.c/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-afs-NBSD-osi_vnodeops.c/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-auth-cellconfig.c/1.1/Mon Jan  7 00:03:16 2013//Tpkgsrc-2017Q4
+/patch-src-bucoord-Makefile.n/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-cf-osconf.m4/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-config-param.amd64_nbsd70.h/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-config-param.i386_nbsd70.h/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-config-param.nbsd60.h/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-config-param.nbsd70.h/1.3/Mon Jun 17 03:15:57 2013//Tpkgsrc-2017Q4
+/patch-src-config-shlib-build.in/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-config-shlib-install.in/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-crypto-hcrypto-kernel-config.h/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-external-heimdal-roken-roken-common.h/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-external-heimdal-roken-roken.h.in/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-libafs-MakefileProto.NBSD.in/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-src-rxkad-fcrypt.c/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+/patch-sys-config-afs_sysnames.h/1.1/Thu Aug 30 17:37:55 2012//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.15 2017/05/15 13:53:26 jperkin Exp $
+
+SHA1 (nulibdist-220.tar.gz) = 8b8ca835d4e3e3d8a5e1ae9830fdfd0ed0bb07e3
+RMD160 (nulibdist-220.tar.gz) = a6b0d5bd0d0d413741fd1d46da80ef699f084321
+SHA512 (nulibdist-220.tar.gz) = 15fd5dde8e1c5ccfd52298c4379e3953c3574e797540ddb57e3d3c2978613be6c2567854860846a8d431e2c9d31fc7d5bcf624b6a7e8aff66639463f87e22b02
+Size (nulibdist-220.tar.gz) = 390564 bytes
+SHA1 (patch-aa) = b7fe0d23e1c22c67e48e0db5b7fc905756322717
+SHA1 (patch-ab) = 645a9c68d0b712ebc4d64284681a6168d66e4522
+SHA1 (patch-ac) = 17499d8a0c60e98282fc441723e10a01e2a644ec
+SHA1 (patch-ad) = 3793ac2fb1eb67472091c5a902c56d1483e0dd04
+SHA1 (patch-ae) = fb51aefedecd63dcb8c298111652a1782a70d511
+SHA1 (patch-af) = 7caa9a570f5bec136f555e01ca86a6c4c591a7a3
+SHA1 (patch-nufxlib-220_samples_Makefile.in) = 570f3cb4a263fba2b83cb67dc9856ec6ba5d3401

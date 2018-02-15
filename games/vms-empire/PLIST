@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.2 2016/01/11 19:37:43 leot Exp $
+bin/vms-empire
+man/man6/vms-empire.6
+share/appdata/vms-empire.xml
+share/applications/vms-empire.desktop
+share/icons/hicolor/48x48/apps/vms-empire.png

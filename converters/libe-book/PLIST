@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.2 2014/07/23 06:15:22 wiz Exp $
+bin/ebook2html
+bin/ebook2raw
+bin/ebook2text
+include/libe-book-0.1/libe-book/EBOOKDocument.h
+include/libe-book-0.1/libe-book/libe-book.h
+lib/libe-book-0.1.la
+lib/pkgconfig/libe-book-0.1.pc

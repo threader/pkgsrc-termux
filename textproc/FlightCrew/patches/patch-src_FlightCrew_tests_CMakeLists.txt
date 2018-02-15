@@ -1,0 +1,22 @@
+$NetBSD: patch-src_FlightCrew_tests_CMakeLists.txt,v 1.2 2016/07/02 14:43:12 joerg Exp $
+
+* libgtest is needed.
+
+--- src/FlightCrew/tests/CMakeLists.txt.orig	2011-08-11 21:03:56.000000000 +0000
++++ src/FlightCrew/tests/CMakeLists.txt
+@@ -59,13 +59,13 @@ set( ALL_INCLUDES ${gtest_SOURCE_DIR}/in
+ 
+ set( GCC_PCH_TARGET gccPCH_tests )
+ 
+-precompiled_header( TEST_SOURCES ALL_INCLUDES ${GCC_PCH_TARGET} ${PCH_NAME} )
++# precompiled_header( TEST_SOURCES ALL_INCLUDES ${GCC_PCH_TARGET} ${PCH_NAME} )
+ 
+ #############################################################################
+ 
+ add_executable( ${PROJECT_NAME} ${TEST_SOURCES} )
+ 
+-target_link_libraries( ${PROJECT_NAME} FlightCrew gmock )
++target_link_libraries( ${PROJECT_NAME} FlightCrew gmock gtest )
+ 
+ #############################################################################
+ 

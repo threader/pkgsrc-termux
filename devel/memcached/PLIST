@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.13 2017/12/21 08:37:14 adam Exp $
+bin/memcached
+bin/memcached-tool
+include/memcached/protocol_binary.h
+man/man1/memcached.1
+share/doc/memcached/new_lru.txt
+share/doc/memcached/protocol.txt
+share/doc/memcached/readme.txt
+share/doc/memcached/storage.txt
+share/doc/memcached/threads.txt

@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.2 2017/07/31 04:55:26 adam Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/audioread/__init__.py
+${PYSITELIB}/audioread/__init__.pyc
+${PYSITELIB}/audioread/__init__.pyo
+${PYSITELIB}/audioread/ffdec.py
+${PYSITELIB}/audioread/ffdec.pyc
+${PYSITELIB}/audioread/ffdec.pyo
+${PYSITELIB}/audioread/gstdec.py
+${PYSITELIB}/audioread/gstdec.pyc
+${PYSITELIB}/audioread/gstdec.pyo
+${PYSITELIB}/audioread/macca.py
+${PYSITELIB}/audioread/macca.pyc
+${PYSITELIB}/audioread/macca.pyo
+${PYSITELIB}/audioread/maddec.py
+${PYSITELIB}/audioread/maddec.pyc
+${PYSITELIB}/audioread/maddec.pyo
+${PYSITELIB}/audioread/rawread.py
+${PYSITELIB}/audioread/rawread.pyc
+${PYSITELIB}/audioread/rawread.pyo
+${PYSITELIB}/audioread/version.py
+${PYSITELIB}/audioread/version.pyc
+${PYSITELIB}/audioread/version.pyo

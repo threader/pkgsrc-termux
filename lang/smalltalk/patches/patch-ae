@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.7 2017/12/29 03:56:42 dholland Exp $
+
+- update for readline API changes
+
+--- configure.orig	2013-04-08 05:52:20.000000000 +0000
++++ configure
+@@ -19012,7 +19012,7 @@ main()
+ {
+   rl_bind_key ('\t', rl_insert);
+   /* This is missing in BSD libedit!  */
+-  rl_filename_quoting_function = (CPFunction *) readline_quote_filename;
++  rl_filename_quoting_function = (rl_quote_func_t *) readline_quote_filename;
+   exit(0);
+ }
+ EOF

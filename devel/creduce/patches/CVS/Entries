@@ -1,0 +1,10 @@
+/patch-clang__delta_EmptyStructToInt.cpp/1.1/Fri Nov 18 18:20:05 2016//Tpkgsrc-2017Q4
+/patch-clang__delta_Makefile.am/1.1/Wed Nov  2 00:15:43 2016//Tpkgsrc-2017Q4
+/patch-clang__delta_Makefile.in/1.1/Wed Nov  2 00:15:43 2016//Tpkgsrc-2017Q4
+/patch-clang__delta_RemoveBaseClass.cpp/1.1/Fri Nov 18 18:20:05 2016//Tpkgsrc-2017Q4
+/patch-clang__delta_RemoveUnusedOuterClass.cpp/1.1/Fri Nov 18 18:20:05 2016//Tpkgsrc-2017Q4
+/patch-clang__delta_RewriteUtils.cpp/1.1/Fri Nov 18 18:20:05 2016//Tpkgsrc-2017Q4
+/patch-clang__delta_SimplifyNestedClass.cpp/1.1/Sun Nov 20 22:14:07 2016//Tpkgsrc-2017Q4
+/patch-clang__delta_SimplifyStruct.cpp/1.1/Fri Nov 18 18:20:05 2016//Tpkgsrc-2017Q4
+/patch-clang__delta_TransformationManager.cpp/1.1/Fri Nov 18 18:20:05 2016//Tpkgsrc-2017Q4
+D

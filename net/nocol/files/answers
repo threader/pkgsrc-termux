@@ -1,0 +1,11 @@
+@PREFIX@    
+@PREFIX@/@PKGMANDIR@/mann
+n
+@FQDN@
+/usr/bin/mail
+root@@FQDN@
+root@@FQDN@
+cc
+-O
+yacc
+@PREFIX@/bin/perl

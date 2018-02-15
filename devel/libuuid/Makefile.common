@@ -1,0 +1,32 @@
+# $NetBSD: Makefile.common,v 1.3 2017/12/29 06:59:54 maya Exp $
+# used by devel/libblkid/Makefile
+# used by devel/libuuid/Makefile
+# used by x11/mcookie/Makefile
+
+DISTNAME=	util-linux-2.31
+MASTER_SITES=	https://www.kernel.org/pub/linux/utils/util-linux/v${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.xz
+EXTRACT_USING=	bsdtar
+
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/karelzak/util-linux
+
+DISTINFO_FILE=	${.CURDIR}/../../devel/libuuid/distinfo
+PATCHDIR=	${.CURDIR}/../../devel/libuuid/patches
+
+USE_GCC_RUNTIME=	yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config ksh
+# XXX PR pkg/52877 configure is broken on netbsd6
+CONFIG_SHELL=		ksh
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-all-programs
+CONFIGURE_ARGS+=	--disable-bash-completion
+CONFIGURE_ARGS+=	--without-ncurses
+CONFIGURE_ARGS+=	--without-ncursesw
+
+# netbsd libintl lacks _nl_expand_alias, resulting in NLS being
+# disabled. for consistency, disable for all
+CONFIGURE_ARGS+=	--disable-nls
+
+TEST_TARGET=		check

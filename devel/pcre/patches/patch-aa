@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.16 2014/11/30 14:48:43 spz Exp $
+
+Use pkgsrc's COMPILER_RPATH_FLAG variable, so this works on all pkgsrc platforms.
+
+--- pcre-config.in.orig	2014-01-31 14:32:51.000000000 +0000
++++ pcre-config.in
+@@ -32,15 +32,7 @@ if test $# -eq 0; then
+       exit 1
+ fi
+ 
+-libR=
+-case `uname -s` in
+-  *SunOS*)
+-  libR=" -R@libdir@"
+-  ;;
+-  *BSD*)
+-  libR=" -Wl,-R@libdir@"
+-  ;;
+-esac
++libR=" @COMPILER_RPATH_FLAG@@libdir@"
+ 
+ libS=
+ if test @libdir@ != /usr/lib ; then

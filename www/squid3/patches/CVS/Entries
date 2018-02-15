@@ -1,0 +1,10 @@
+/patch-compat_compat.h/1.1/Sat Jan 17 10:20:58 2015//Tpkgsrc-2017Q4
+/patch-compat_debug.cc/1.1/Wed Sep 23 03:59:04 2015//Tpkgsrc-2017Q4
+/patch-compat_debug.h/1.1/Wed Sep 23 03:59:04 2015//Tpkgsrc-2017Q4
+/patch-errors_Makefile.in/1.1/Sun Feb 10 18:16:53 2013//Tpkgsrc-2017Q4
+/patch-src_Makefile.in/1.4/Wed Jan 21 11:23:16 2015//Tpkgsrc-2017Q4
+/patch-src_adaptation_ecap_ServiceRep.cc/1.1/Thu Jun 23 15:10:36 2016//Tpkgsrc-2017Q4
+/patch-src_base_TidyPointer.h/1.2/Fri May 29 07:50:59 2015//Tpkgsrc-2017Q4
+/patch-src_store.cc/1.1/Sun Feb 10 18:16:53 2013//Tpkgsrc-2017Q4
+/patch-tools_Makefile.in/1.1/Sun Feb 10 18:16:53 2013//Tpkgsrc-2017Q4
+D

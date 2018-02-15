@@ -1,0 +1,5 @@
+Biber is a BibTeX replacement for users of biblatex, with full
+Unicode support.
+
+Biber is written in Perl with the aim of providing a customised
+and sophisticated data preparation backend for biblatex.

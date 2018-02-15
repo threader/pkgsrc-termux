@@ -1,0 +1,35 @@
+$NetBSD: patch-ak,v 1.3 2013/10/27 21:21:26 dholland Exp $
+
+- fix locale directory
+- use libintl where needed
+
+--- src/celestia/Makefile.in.orig	2011-06-05 18:34:28.000000000 +0000
++++ src/celestia/Makefile.in
+@@ -213,7 +213,7 @@ DCOPIDL = @DCOPIDL@
+ DCOPIDL2CPP = @DCOPIDL2CPP@
+ DCOPIDLNG = @DCOPIDLNG@
+ DCOP_DEPENDENCIES = @DCOP_DEPENDENCIES@
+-DEFS = -DCONFIG_DATA_DIR='"$(PKGDATADIR)"' -DLOCALEDIR='"$(datadir)/locale"' @DEFS@
++DEFS = -DCONFIG_DATA_DIR='"$(PKGDATADIR)"' -DLOCALEDIR='"$(localedir)"' @DEFS@
+ DEPDIR = @DEPDIR@
+ DL_LIBS = @DL_LIBS@
+ DSYMUTIL = @DSYMUTIL@
+@@ -474,7 +474,7 @@ xdg_menudir = @xdg_menudir@
+ SUBDIRS = res $(am__append_1) $(am__append_2)
+ INCLUDES = -I..
+ @ENABLE_KDE_TRUE@celestiaKDELIBS = $(LIB_QT) $(LIB_KDECORE) $(LIB_KDEUI) $(LIB_KFILE) \
+-@ENABLE_KDE_TRUE@                  $(LIBSOCKET) -lDCOP kde/libkdegui.a
++@ENABLE_KDE_TRUE@                  $(LIBSOCKET) $(LIBINTL) -lDCOP kde/libkdegui.a
+ 
+ @ENABLE_KDE_TRUE@celestia_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ @ENABLE_GTK_TRUE@celestiaGTKLIBS = $(GTK_LIBS) gtk/libgtkgui.a
+@@ -538,7 +538,8 @@ celestia_LDADD = \
+ 	../cel3ds/libcel3ds.a \
+ 	../celmath/libcelmath.a \
+ 	../celutil/libcelutil.a \
+-	$(SPICE_LIBS)
++	$(SPICE_LIBS) \
++	$(INTLLIBS)
+ 
+ noinst_HEADERS = $(wildcard *.h)
+ noinst_DATA = ../../celestia

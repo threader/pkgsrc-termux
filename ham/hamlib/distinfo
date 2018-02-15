@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.20 2017/10/24 23:41:39 gdt Exp $
+
+SHA1 (hamlib-3.1.tar.gz) = b70bf338c2663f31942e8e3ab197563aaa4e5e16
+RMD160 (hamlib-3.1.tar.gz) = 5aca1b019268b6731d66a3b5f0472e2c01520d5b
+SHA512 (hamlib-3.1.tar.gz) = befc5c407379e30711bde2affb9c191add6dbb04a36c1309f8771170cf04156c48609a094775638036282e085de6c78d09ef8d2760d69c595471e16e985e0885
+Size (hamlib-3.1.tar.gz) = 2130615 bytes

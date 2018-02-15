@@ -1,0 +1,78 @@
+$NetBSD: patch-ac,v 1.7 2017/05/24 09:13:09 jperkin Exp $
+
+--- prog/check_funs.cpp.orig	2011-07-04 09:17:27.000000000 +0000
++++ prog/check_funs.cpp
+@@ -28,6 +28,12 @@
+ 
+ #include <signal.h>
+ 
++#ifdef HAVE_OLD_SIGNAL
++#define SIGNALARG2 (void (*)(...))
++#else
++#define SIGNALARG2 /* empty, no change */
++#endif
++
+ #include "asc_ctype.hpp"
+ #include "check_funs.hpp"
+ #include "convert.hpp"
+@@ -174,8 +180,8 @@ static void suspend_handler(int) {
+   
+ static void continue_handler(int) {
+   restore_state();
+-  signal(SIGTSTP, suspend_handler);
+-  signal(SIGCONT,  continue_handler),
++  signal(SIGTSTP, SIGNALARG2 suspend_handler);
++  signal(SIGCONT, SIGNALARG2 continue_handler),
+     last_signal = 0;
+ }
+ 
+@@ -191,7 +197,7 @@ static void resize() {
+ 
+ static void suspend() {
+   save_state();
+-  signal(SIGTSTP, SIG_DFL);
++  signal(SIGTSTP, SIGNALARG2 SIG_DFL);
+   raise(SIGTSTP);
+   last_signal = 0;
+ }
+@@ -200,7 +206,7 @@ static inline void handle_last_signal()
+   switch (last_signal) {
+   case SIGWINCH:
+     resize();
+-    signal(SIGWINCH, resize_handler);
++    signal(SIGWINCH, SIGNALARG2 resize_handler);
+     break;
+   case SIGTSTP:
+     suspend();
+@@ -216,7 +222,8 @@ static void layout_screen() {
+   choice_w = 0;
+   nonl();
+   noecho();
+-  halfdelay(1);
++  cbreak();
++  timeout(100);
+   keypad(stdscr, true);
+   clear();
+   int height, width;
+@@ -272,9 +279,9 @@ void begin_check() {
+     }
+   }
+   if (use_curses) {
+-    signal(SIGWINCH, resize_handler);
+-    signal(SIGTSTP,  suspend_handler);
+-    signal(SIGCONT,  continue_handler);
++    signal(SIGWINCH, SIGNALARG2 resize_handler);
++    signal(SIGTSTP, SIGNALARG2 suspend_handler);
++    signal(SIGCONT, SIGNALARG2 continue_handler);
+   }
+ #endif
+   if (use_curses) {
+@@ -647,7 +654,7 @@ static void print_truncate(FILE * out, c
+     }
+   }
+   if (i == width-1) {
+-    if (word == '\0')
++    if (*word == '\0')
+       put(out,' ');
+     else if (word[len] == '\0')
+       put(out, word, len);

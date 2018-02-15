@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.2 2014/06/01 16:35:36 wiz Exp $
+share/fonts/X11/misc/ProFontWindows_r400-10.pcf
+share/fonts/X11/misc/ProFontWindows_r400-11.pcf
+share/fonts/X11/misc/ProFontWindows_r400-12.pcf
+share/fonts/X11/misc/ProFontWindows_r400-15.pcf
+share/fonts/X11/misc/ProFontWindows_r400-17.pcf
+share/fonts/X11/misc/ProFontWindows_r400-22.pcf
+share/fonts/X11/misc/ProFontWindows_r400-29.pcf

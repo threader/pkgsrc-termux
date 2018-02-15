@@ -1,0 +1,11 @@
+Scheme 48 is an implementation of the Scheme programming language as
+described in the Revised^5 Report on the Algorithmic Language Scheme.
+It is based on a compiler and interpreter for a virtual Scheme
+machine.  The name derives from our desire to have an implementation
+that is simple and lucid enough that it looks as if it were written in
+just 48 hours.  We don't claim to have reached that stage yet; much
+more simplification is necessary.
+
+Scheme 48 tries to be faithful to Revised^5 Scheme Report, providing
+neither more nor less in the initial user environment. (This is not to
+say that more isn't available in other environments.)

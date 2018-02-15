@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.16 2017/12/03 08:32:15 wiz Exp $
+
+SHA1 (Log-Any-1.703.tar.gz) = 3feed45296805f3ef086ff752f1817a98783fef6
+RMD160 (Log-Any-1.703.tar.gz) = eb457919290b99262d40f0bfb4030b7b3d2a4aa0
+SHA512 (Log-Any-1.703.tar.gz) = 3089366ec13b0f4f1e45ba918251371d108bc178fb08403e953ae50f0f9b3dfa542476e8e8c7fd0e9a9c0d967b342ec07e7d1b56ce01026bade74a4264af7e0a
+Size (Log-Any-1.703.tar.gz) = 48623 bytes

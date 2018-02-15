@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:00 jperkin Exp $
+bin/obexapp
+man/cat1/obexapp.0
+man/man1/obexapp.1

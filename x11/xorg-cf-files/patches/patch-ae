@@ -1,0 +1,31 @@
+$NetBSD: patch-ae,v 1.4 2015/07/15 17:21:10 dholland Exp $
+
+--- DragonFly.cf.orig	2010-05-16 12:38:48.000000000 +0200
++++ DragonFly.cf	2010-05-16 12:41:18.000000000 +0200
+@@ -96,12 +96,12 @@
+ #define HasFlex                  YES
+ 
+ #ifndef CcCmd
+-# define CcCmd                   cc
++# define CcCmd                   @@PKGSRC_CC@@
+ #endif
+ #ifndef CplusplusCmd
+-# define CplusplusCmd            c++
++# define CplusplusCmd            @@PKGSRC_CXX@@
+ #endif
+-#define CppCmd                   /usr/bin/cpp
++#define CppCmd                   @@PKGSRC_CPP@@
+ #define PreProcessCmd            CppCmd
+ #define StandardCppOptions       -traditional
+ #define StandardCppDefines       /**/
+@@ -116,10 +116,6 @@
+ # endif
+ # define DefaultCCOptions -ansi NoSystemWarn -Dasm=__asm GccWarningOptions
+ #endif
+-#ifndef ExtraLibraries
+-/* support for multi-byte locales is in libxpg4 rather than libc */
+-#define ExtraLibraries          -lxpg4
+-#endif
+ #define HasSetUserContext       YES
+ #define HasGetpeereid           YES
+ #define HasMTRRSupport          YES

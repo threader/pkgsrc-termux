@@ -1,0 +1,24 @@
+$NetBSD: patch-ak,v 1.4 2016/03/30 13:24:12 jperkin Exp $
+
+Needs sys/sendfile.h on SunOS.
+
+--- src/netlib.c.orig	2015-04-24 22:08:33.000000000 +0000
++++ src/netlib.c
+@@ -143,6 +143,9 @@ char    netlib_id[]="\
+ #endif /* __sgi */
+ #endif /* _AIX */
+ 
++#ifdef __sun
++#include <sys/sendfile.h>
++#endif
+ 
+ #ifdef HAVE_MPCTL
+ #include <sys/mpctl.h>
+@@ -254,6 +257,7 @@ union   netperf_request_struct  netperf_
+ union   netperf_response_struct netperf_response;
+ 
+ FILE    *where;
++int     fd = -1;
+ 
+ char    libfmt = '?';
+ 

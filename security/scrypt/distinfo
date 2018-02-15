@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.4 2017/04/26 14:54:59 wiz Exp $
+
+SHA1 (scrypt-1.2.1.tgz) = 27663b2311ac0af791ee5b2cde9d68f9c06e1453
+RMD160 (scrypt-1.2.1.tgz) = 2d32ba91eec5fa51bbce0242650ed9fc9230f177
+SHA512 (scrypt-1.2.1.tgz) = ffda0ee90d283985245b77cc1d04b13c52aff78e925f323075d3b2c0439f16bbba1c432de8607820af945e6fa4e3be0e22a422b0b43a1fca0504cee3761004cd
+Size (scrypt-1.2.1.tgz) = 127619 bytes

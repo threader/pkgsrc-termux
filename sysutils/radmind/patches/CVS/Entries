@@ -1,0 +1,15 @@
+/patch-Makefile.in/1.1/Wed Jan  8 11:54:04 2014//Tpkgsrc-2017Q4
+/patch-command.c/1.2/Thu Apr 14 11:17:31 2016//Tpkgsrc-2017Q4
+/patch-command.h/1.1/Wed Jan  8 11:54:04 2014//Tpkgsrc-2017Q4
+/patch-config.h.in/1.1/Wed Jan  8 11:54:04 2014//Tpkgsrc-2017Q4
+/patch-configure/1.1/Wed Jan  8 11:54:04 2014//Tpkgsrc-2017Q4
+/patch-configure.ac/1.1/Wed Jan  8 11:54:04 2014//Tpkgsrc-2017Q4
+/patch-ktcheck.c/1.1/Wed Jan  8 11:54:04 2014//Tpkgsrc-2017Q4
+/patch-largefile.h/1.1/Wed Jan  8 11:54:04 2014//Tpkgsrc-2017Q4
+/patch-lcksum.c/1.1/Wed Jan  8 11:54:04 2014//Tpkgsrc-2017Q4
+/patch-libsnet_snet.c/1.1/Wed Jan  8 11:54:04 2014//Tpkgsrc-2017Q4
+/patch-ra.sh/1.1/Wed Jan  8 11:54:04 2014//Tpkgsrc-2017Q4
+/patch-retr.c/1.1/Wed Jan  8 11:54:04 2014//Tpkgsrc-2017Q4
+/patch-transcript.c/1.1/Wed Jan  8 11:54:04 2014//Tpkgsrc-2017Q4
+/patch-update.c/1.1/Wed Jan  8 11:54:04 2014//Tpkgsrc-2017Q4
+D

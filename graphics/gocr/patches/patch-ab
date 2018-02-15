@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.5 2016/07/24 23:59:55 mef Exp $
+
+--- src/Makefile.in.orig	2009-04-09 18:06:53.000000000 +0900
++++ src/Makefile.in	2016-07-25 08:47:23.000000000 +0900
+@@ -37,6 +37,8 @@ LIBOBJS=pgm2asc.o \
+ # these two lines are for cross-compiling, not tested
+ #srcdir = @srcdir@
+ #VPATH = @srcdir@
++prefix = @prefix@
++exec_prefix = @exec_prefix@
+ bindir = @bindir@
+ #  lib removed for simplification
+ #libdir = @libdir@
+@@ -101,10 +103,7 @@ $(LIBOBJS): Makefile
+ # PHONY = don't look at file clean, -rm = start rm and ignore errors
+ .PHONY : clean proper install uninstall
+ install: all
+-	#$(INSTALL) -d $(DESTDIR)$(bindir) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir)
+-	$(INSTALL) -d $(DESTDIR)$(bindir)
+ 	$(INSTALL) ../bin/$(PROGRAM) $(DESTDIR)$(bindir)
+-	$(INSTALL) ../bin/gocr.tcl   $(DESTDIR)$(bindir)  # better X11/bin?
+ 	if test -f lib$(PGMASCLIB).a; then\
+ 	 $(INSTALL) lib$(PGMASCLIB).a $(DESTDIR)$(libdir);\
+ 	 $(INSTALL) lib$(PGMASCLIB).@PACKAGE_VERSION@.so $(DESTDIR)$(libdir);\

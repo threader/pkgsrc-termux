@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.4 2015/05/05 16:27:41 wiz Exp $
+share/texmf-dist/doc/fonts/amsfonts/OFL-FAQ.txt
+share/texmf-dist/doc/fonts/amsfonts/OFL.txt
+share/texmf-dist/doc/fonts/amsfonts/README
+share/texmf-dist/doc/fonts/amsfonts/amsfndoc.pdf
+share/texmf-dist/doc/fonts/amsfonts/amsfonts.pdf
+share/texmf-dist/doc/fonts/amsfonts/amssymb.pdf
+share/texmf-dist/doc/fonts/amsfonts/cmmib57.pdf
+share/texmf-dist/doc/fonts/amsfonts/eufrak.pdf
+share/texmf-dist/doc/fonts/amsfonts/euscript.pdf

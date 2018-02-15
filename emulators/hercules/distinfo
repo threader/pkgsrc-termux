@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.20 2017/12/13 21:15:12 maya Exp $
+
+SHA1 (hercules-3.11.tar.gz) = f846995600e1be3f851790afa1e3e0f47e59f21a
+RMD160 (hercules-3.11.tar.gz) = 759799fb17e344fd3db7ad9e55473ce0580ea415
+SHA512 (hercules-3.11.tar.gz) = 593594cdf7ce3ffbbcf2355f66a44d3944a2155cd5392967bc07c2ab77a78b796afe276113748c9d028e43f46c1b29b8d61eaa313c1075c62b168391e012b19a
+Size (hercules-3.11.tar.gz) = 2623956 bytes
+SHA1 (patch-Makefile.in) = 16a9b4e47456b789a906f03c942d4e683f18b87a
+SHA1 (patch-autoconf_libtool.m4) = 713bc12bfd176e908fc01b401ee0163660f20da8
+SHA1 (patch-configure.ac) = 038dde8c7f0ff16b7a7661104c5e7fa613261045
+SHA1 (patch-crypto_Makefile.in) = 0e9fa3ce7e2f629d9eaed21dcfe7625087f7103b
+SHA1 (patch-decNumber_Makefile.in) = 98228044642007e894fde580e010c6da874454af
+SHA1 (patch-hercifc.h) = 29674ad8f23f69032248098647811e30438c2e98
+SHA1 (patch-hostopts.h) = f99dbfa7aed8b9e72ec82f32615ac4e3d1900ef9
+SHA1 (patch-hstructs.h) = 040561caac5fa52db26c9dad064ef6a41a23e0d2
+SHA1 (patch-htypes.h) = a3d53bd1d1c7633993b39e34b7c091d036a01816
+SHA1 (patch-scsitape.c) = 13bd1172b5d688ee56c473a1236894d7c5961c71
+SHA1 (patch-tapecopy.c) = c2ef850430f37ae7151985cd7881e6861b5dc538

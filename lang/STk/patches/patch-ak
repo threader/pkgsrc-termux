@@ -1,0 +1,20 @@
+$NetBSD: patch-ak,v 1.2 2015/12/29 23:34:43 dholland Exp $
+
+Don't declare own errno.
+
+--- Tk/unix/tkUnixPort.h.orig	2006-01-11 17:12:28.000000000 +0000
++++ Tk/unix/tkUnixPort.h
+@@ -120,13 +120,6 @@
+ #define MASK_SIZE howmany(FD_SETSIZE, NFDBITS)
+ 
+ /*
+- * Not all systems declare the errno variable in errno.h. so this
+- * file does it explicitly.
+- */
+-
+-extern int errno;
+-
+-/*
+  * Define "NBBY" (number of bits per byte) if it's not already defined.
+  */
+ 

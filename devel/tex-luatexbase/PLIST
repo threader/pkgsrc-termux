@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 03:54:44 markd Exp $
+share/texmf-dist/tex/luatex/luatexbase/luatexbase-attr.sty
+share/texmf-dist/tex/luatex/luatexbase/luatexbase-cctb.sty
+share/texmf-dist/tex/luatex/luatexbase/luatexbase-compat.sty
+share/texmf-dist/tex/luatex/luatexbase/luatexbase-loader.sty
+share/texmf-dist/tex/luatex/luatexbase/luatexbase-mcb.sty
+share/texmf-dist/tex/luatex/luatexbase/luatexbase-modutils.sty
+share/texmf-dist/tex/luatex/luatexbase/luatexbase-regs.sty
+share/texmf-dist/tex/luatex/luatexbase/luatexbase.loader.lua
+share/texmf-dist/tex/luatex/luatexbase/luatexbase.sty

@@ -1,0 +1,349 @@
+$NetBSD: patch-ae,v 1.19 2015/08/10 05:03:36 dholland Exp $
+
+* Customize paths.
+* Configure for pkgsrc.
+* LIBPORT needs to be specified with -L and -l (instead of the path to
+the .a file) to match the other internal libraries. Otherwise the
+wrappers reorder it relative to the other internal libraries and some
+symbols aren't resolved at link time.
+
+--- configure.orig	2012-06-06 00:58:38.000000000 +0000
++++ configure
+@@ -37,23 +37,23 @@
+ #
+ # Setup general configuration parameters.
+ #
+-DIR_BIN=/usr/local/bin
+-DIR_SBIN=/usr/local/sbin
+-DIR_LIBDATA=/usr/local/lib/fax
+-DIR_LIB=/usr/local/lib
+-DIR_LIBEXEC=$DIR_SBIN
+-DIR_SPOOL=/var/spool/hylafax
+-DIR_LOCALE=/usr/local/share/locale
+-DIR_CGI=/var/httpd/cgi-bin
++DIR_BIN=${PREFIX}/bin
++DIR_SBIN=${PREFIX}/sbin
++DIR_LIBDATA=${PREFIX}/libdata/hylafax
++DIR_LIB=${PREFIX}/lib
++DIR_LIBEXEC=${PREFIX}/libexec
++DIR_SPOOL=${VARBASE}/spool/hylafax
++DIR_LOCALE=${PREFIX}/share/locale
++DIR_CGI=${PREFIX}/http/cgi-bin
+ PATH_DPSRIP=$DIR_LIBEXEC/ps2fax.exe
+-PATH_IMPRIP=/usr/lib/print/psrip
++PATH_IMPRIP=${PREFIX}/lib/print/psrip
+ CGIPATH=/cgi-bin
+ LOCALE_DOMAIN=hylafax
+ DEFVRES=98
+ PAGESIZE="North American Letter"
+ FAXUID=uucp
+ FAXGID=
+-SYSUID=bin
++SYSUID=root
+ SYSGID=
+ DSO=auto
+ GETTY=auto
+@@ -70,11 +70,10 @@ GS=no
+ IMP=no
+ UTMP=auto
+ NLS=auto
+-OPTIMIZER="-O"
+ LIBCRYPT=
+ LIBPAM=
+-LIBTIFF="-ltiff"
+-TIFFINC=
++LIBTIFF=`pkg-config --libs libtiff-4`
++TIFFINC=`pkg-config --cflags libtiff-4`
+ TIFFBIN=
+ LIBUTIL=
+ LIBZ=-lz
+@@ -229,6 +228,7 @@ PKG_ARCH
+ PKG_EMAIL
+ PKG_VENDOR
+ PORTFUNCS
++PREFIX
+ PROTOTYPES
+ PSPACKAGE	PS
+ PWDCMD
+@@ -300,7 +300,7 @@ test -d /usr/bsd && PATH=$PATH:/usr/bsd	
+ test -d /usr/ucb && PATH=$PATH:/usr/ucb			# Sun and others
+ test -d /usr/contrib/bin && PATH=$PATH:/usr/contrib/bin	# BSDi
+ test -d /usr/5bin && PATH=/usr/5bin:$PATH:/usr/etc	# Sun and others
+-test -d /usr/local/bin && PATH=/usr/local/bin:$PATH	# for GNU stuff
++test -d ${PREFIX}/bin && PATH=${PREFIX}/bin:$PATH	# for packages stuff
+ PATH=$PATH:$OPATH
+ 
+ POSIXLY_CORRECT=1; export POSIXLY_CORRECT		# disable GNU extensions
+@@ -831,7 +831,7 @@ checkGCCVersion()
+ # NB: use ANSI C prototype to weed out non-ANSI compilers.
+ #
+ cat>dummy.c<<EOF
+-main(int argc, char* argv) { exit(0); }
++int main(int argc, char** argv) { exit(0); }
+ EOF
+ 
+ checkCompiler()
+@@ -982,7 +982,7 @@ fi
+ # Make dependency information.
+ #
+ cat>dummy.c<<EOF
+-main(int argc, char* argv) { exit(0); }
++int main(int argc, char** argv) { exit(0); }
+ EOF
+ capture cat dummy.c
+ if capture "$CCOMPILER -c -M $MKDEPCOPTS dummy.c | grep '^dummy.o[ 	]*:[ 	]*dummy.c'"; then
+@@ -1629,7 +1629,7 @@ pamconv(int num_msg, const struct pam_me
+ {
+     return(0);
+ }
+-main()
++int main()
+ {
+     struct pam_conv conv = { pamconv };
+ }
+@@ -2176,7 +2176,7 @@ EmitConfigurationDefinitions()
+ #
+ CheckForFunc()
+ {
+-    echo "extern int $1(); main(){$1($2);exit(0);}" >t.c
++    echo "extern int $1(); int main(){$1($2);exit(0);}" >t.c
+     capture cat t.c
+     runMake t "t:; \${CC} t.c ${MACHDEPLIBS}"
+ }
+@@ -2448,7 +2448,7 @@ CheckForStructExitStatus()
+ 	echo "$i"
+     done
+     cat<<EOF
+-main()
++int main()
+ {
+     struct $decl x;
+     x.ut_exit.e_exit = 0;
+@@ -2465,7 +2465,7 @@ CheckForTimeZoneHandling()
+ {
+     (echo '#include <time.h>'
+     cat<<EOF
+-main()
++int main()
+ {
+     struct tm x;
+     char* cp;
+@@ -2484,7 +2484,7 @@ CheckForTXCD()
+ {
+     cat>t.c<<EOF
+ #include <sys/ioctl.h>
+-main()
++int main()
+ {
+     ioctl(0, TXADDCD, "rts");
+     ioctl(0, TXDELCD, "rts");
+@@ -2538,7 +2538,7 @@ CheckLibtiff()
+     cat>t.c<<EOF
+ #include <stdio.h>
+ #include "tiffio.h"
+-main()
++int main()
+ {
+     printf( "header_ver=%d lib_ver=%s", TIFFLIB_VERSION, TIFFGetVersion() );
+     exit(0);
+@@ -3281,7 +3281,7 @@ CheckForSyslog()
+ {
+     (echo '#include <syslog.h>';
+      echo '#include "port.h"';
+-     echo 'main(){syslog(0,"foo");exit(0);}') >t.c
++     echo 'int main(){syslog(0,"foo");exit(0);}') >t.c
+     capture cat t.c
+     runMake t "t:; \${CC} t.c ${MACHDEPLIBS}"
+ }
+@@ -3290,7 +3290,7 @@ CheckForVSyslog()
+     (echo '#include <syslog.h>';
+      echo '#include <stdarg.h>';
+      echo '#include "port.h"';
+-     echo 'main(){va_list ap; vsyslog(0,"foo", ap);exit(0);}') >t.c
++     echo 'int main(){va_list ap; vsyslog(0,"foo", ap);exit(0);}') >t.c
+     capture cat t.c
+     runMake t "t:; \${CC} t.c ${MACHDEPLIBS}"
+ }
+@@ -3303,7 +3303,7 @@ else
+     Note "... emulate syslog&co."
+     PORTFUNCS="$PORTFUNCS syslog.c"
+ fi
+-LIBPORT='${PORT}/libport.a'
++LIBPORT='-L${PORT} -lport'
+ 
+ Note "Done checking system libraries."
+ 
+@@ -3314,19 +3314,13 @@ Note "Checking ZLIB support."
+ #
+ cat>t.c<<EOF
+ #include "zlib.h"
+-main()
++int main()
+ {
+     if (strcmp(ZLIB_VERSION, "0.95") < 0) {     /* include file version */
+         printf("old include files: version %u\n", ZLIB_VERSION);
+         exit(-1);
+     }
+-    if (strncmp(zlib_version, ZLIB_VERSION, 4) != 0) {
+-        printf("library/header file incompatibility: %s %s\n",
+-        zlib_version, ZLIB_VERSION);
+-        exit(-1);
+-    } else {
+         exit(0);
+-    }
+ }
+ EOF
+ capture cat t.c
+@@ -3385,7 +3379,7 @@ Note "Checking TIFF support."
+ # Location of TIFF binaries
+ #
+ if [ -z "$TIFFBIN" ]; then
+-    DIRS="/usr/local/bin /usr/contrib/bin /usr/gnu/bin /usr/bin"
++    DIRS="${PREFIX}/bin /usr/local/bin /usr/contrib/bin /usr/gnu/bin /usr/bin"
+     for i in $DIRS; do
+         test -x $i/tiff2ps && { TIFFBIN=$i; break; }
+     done
+@@ -3806,6 +3800,7 @@ if [ -z "$FAXGID" ]; then
+     *-bsdi*)	FAXGID=uucp;;
+     *freebsd2.1*) FAXGID=uucp; break;; # Not sure when this changed..
+     *bsd*)	FAXGID=dialer;;
++    *-dragonfly*)	FAXGID=dialer;;
+     *-hpux*)	FAXGID=sys;;
+     *-irix*)	FAXGID=nuucp;;
+     *-isc*)	FAXGID=uucp;;
+@@ -3834,6 +3829,7 @@ if [ -z "$SYSGID" ]; then
+     *-aix*)	SYSGID=sys;;
+     *netbsd*)	SYSGID=wheel;;
+     *bsd*)	SYSGID=bin;;
++    *-dragonfly*)	SYSGID=bin;;
+     *-hpux*)	SYSGID=bin;;
+     *-irix*)	SYSGID=sys;;
+     *-isc*)	SYSGID=sys;;
+@@ -3878,6 +3874,7 @@ fi
+ if [ "$GETTY" = auto ]; then
+     case $TARGET in
+     *bsd*)	GETTY=BSD;;
++    *-dragonfly*)	GETTY=BSD;;
+     *-sunos*)	GETTY=BSD;;
+     *-ultrix*)	GETTY=BSD;;
+     *darwin*)   GETTY=BSD;;
+@@ -3920,7 +3917,7 @@ fi
+ if [ -z "$PATH_VGETTY" ]; then
+     PATH_VGETTY=`findApp vgetty /usr/libexec:/sbin:$PATH` 
+     if [ -z "$PATH_VGETTY" ]; then
+-	PATH_VGETTY=/bin/vgetty
++	PATH_VGETTY=${PREFIX}/bin/vgetty
+ 	Note "WARNING, no vgetty program found to handle a voice call, using $PATH_VGETTY."
+     else
+ 	Note "Looks like $PATH_VGETTY is the program to exec for a voice call."
+@@ -3933,7 +3930,7 @@ fi
+ if [ -z "$PATH_EGETTY" ]; then
+     PATH_EGETTY=`findApp egetty /usr/libexec:/sbin:$PATH` 
+     if [ -z "$PATH_EGETTY" ]; then
+-	PATH_EGETTY=/bin/egetty
++	PATH_EGETTY=${PREFIX}/bin/egetty
+ 	Note "WARNING, no egetty program found, using $PATH_EGETTY."
+     else
+ 	Note "Looks like $PATH_EGETTY is the program to exec for an extern call."
+@@ -3956,6 +3953,7 @@ if [ "$LOCKS" = auto ]; then
+     *-sysv5*)	LOCKS="+ascii";;
+     *-solaris*)	LOCKS="+ascii";;
+     *-freebsd*)	LOCKS=ascii;;
++    *-dragonfly*)	LOCKS=ascii;;
+     *-netbsd*)	LOCKS=ascii;;
+     *bsd*)	LOCKS=binary;;
+     *)		LOCKS=ascii;;
+@@ -4005,6 +4003,7 @@ PickRIP()
+ {
+     if [ -z "$PATH_GSRIP" ]; then
+ 	GSLOCS="
++	    ${PREFIX}/bin/gs
+ 	    /usr/local/bin/gs
+ 	    /usr/contrib/bin/gs
+ 	    /usr/gnu/bin/gs
+@@ -4052,7 +4051,7 @@ fax software to operate correctly.  See 
+ on building Ghostscript with the necessary TIFF driver.
+ 
+ EOF
+-	PATH_PSRIP=/usr/local/bin/gs
++	PATH_PSRIP=${PREFIX}/bin/gs
+ 	PATH_GSRIP=$PATH_PSRIP
+     fi
+ }
+@@ -4119,9 +4118,9 @@ if [ -z "$PATH_AFM" ]; then
+     else
+         DIR_AFMS="
+ 	    /usr/lib/afm
+-	    /usr/local/lib/afm
+-	    /usr/local/share/ghostscript/fonts
+-	    /usr/local/lib/ghostscript/fonts
++	    ${PREFIX}/lib/afm
++	    ${PREFIX}/share/ghostscript/fonts
++ 	    ${PREFIX}/lib/ghostscript/fonts
+ 	    /usr/share/ghostscript/fonts
+ 	    /usr/gnu/lib/ghostscript/fonts
+ 	    /opt/gnu/lib/ghostscript/fonts
+@@ -4141,7 +4140,7 @@ if [ -z "$PATH_AFM" ]; then
+ fi
+ if [ -z "$PATH_AFM" ]; then
+     # put it where ghostscript normally puts things
+-    PATH_AFM=/usr/local/lib/ghostscript/fonts
++    PATH_AFM=${PREFIX}/share/ghostscript/fonts
+     Note "WARNING, could not locate a directory with font metric information,"
+     Note "guessing that font metric information goes in $PATH_AFM."
+ else
+@@ -4160,7 +4159,7 @@ fi
+ #
+ if [ -z "$DIR_MAN" ]; then
+     MANPATH="
+-	$MANPATH
++	${PREFIX}/man
+ 	/usr/local/man
+ 	/usr/contrib/man
+ 	/usr/catman/local
+@@ -4169,43 +4168,11 @@ if [ -z "$DIR_MAN" ]; then
+     for i in $MANPATH; do
+ 	test -d $i && { DIR_MAN=$i; break; }
+     done
+-    test -z "$DIR_MAN" && DIR_MAN=/usr/local/man
++    test -z "$DIR_MAN" && DIR_MAN=${PREFIX}/man
+ fi
+ Note "Looks like manual pages go in $DIR_MAN."
+ if [ -z "$MANSCHEME" ]; then
+-    case $TARGET in
+-    *-bsdi*|*-netbsd*)		MANSCHEME=bsd-nroff-gzip-0.gz;;
+-    *-freebsd*)			MANSCHEME=bsd-source-cat;;
+-    *-linux*)			MANSCHEME=bsd-source-cat;;
+-    *-ultrix*)			MANSCHEME=bsd-source-cat;;
+-    *-sunos*)			MANSCHEME=bsd-source-cat-strip;;
+-    *-sysv[234]*)		MANSCHEME=sysv-source-cat-strip;;
+-    *-hpux*)			MANSCHEME=sysv-source-cat-strip;;
+-    *-solaris*)			MANSCHEME=sysv-source-cat-strip;;
+-    *-aix*)			MANSCHEME=sysv-source-strip;;
+-    *-isc*|*-*-sco*)		MANSCHEME=sysv-source-cat;;
+-    *-irix*)			MANSCHEME=sysv-nroff-compress-Z;;
+-    *)
+-	#
+-	# Try to deduce the setup from existing manual pages.
+-	# XXX needs more work XXX
+-	#
+-	MANSCHEME=sysv-source-cat
+-	if [ -d /usr/share/man ]; then
+-	    if [ -d /usr/share/man/u_man ]; then
+-	       MANSCHEME=sysv-source-cat
+-	    elif [ -d /usr/share/man/man8 ]; then
+-	       MANSCHEME=bsd-source-cat
+-	    fi
+-	elif [ -d /usr/share/catman ]; then
+-	    if [ -d /usr/share/catman/u_man ]; then
+-	       MANSCHEME=sysv-nroff-cat
+-	    elif [ -d /usr/share/catman/man8 ]; then
+-	       MANSCHEME=bsd-nroff-cat
+-	    fi
+-	fi
+-	;;
+-    esac
++    MANSCHEME=bsd-source-cat-strip
+ fi
+ Note "Looks like manual pages should be installed with $MANSCHEME."
+ 

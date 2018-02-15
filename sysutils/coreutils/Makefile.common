@@ -1,0 +1,71 @@
+# $NetBSD: Makefile.common,v 1.16 2017/01/18 21:10:42 wiz Exp $
+#
+# used by sysutils/coreutils/Makefile
+# used by misc/gnuls/Makefile
+
+DISTNAME=	coreutils-8.26
+CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_GNU:=coreutils/}
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.gnu.org/software/coreutils/
+COMMENT=	GNU basic file, shell and text manipulation utilities
+LICENSE=	gnu-gpl-v3
+
+NOT_FOR_PLATFORM=	NetBSD-2.0[D-H]-*
+
+PATCHDIR=		${.CURDIR}/../../sysutils/coreutils/patches
+DISTINFO_FILE=		${.CURDIR}/../../sysutils/coreutils/distinfo
+
+GNU_CONFIGURE=		YES
+USE_TOOLS+=		msgfmt msgmerge perl xgettext
+USE_PKGLOCALEDIR=	YES
+
+# --- man/chroot.1 ---
+#   GEN      man/chroot.1
+# help2man: can't get `--help' info from chroot.td/chroot
+# Try `--no-discard-stderr' if option outputs to stderr
+# *** [man/chroot.1] Error code 127
+MAKE_JOBS_SAFE=		NO
+
+TEST_TARGET=		check
+
+.include "../../mk/bsd.prefs.mk"
+
+# Otherwise configure aborts when ran by root
+CONFIGURE_ENV+=		FORCE_UNSAFE_CONFIGURE=yes
+
+CONFIGURE_ENV.Interix+=	ac_list_mounted_fs=found
+
+CONFIGURE_ENV.DragonFly+= 	gl_cv_search_pthread_join=-lpthread
+
+# Various tests rely on GCC's -O2 behaviour (e.g. -D__NO_INLINE__) and
+# without it we run into undefined symbol issues.
+.if ${OPSYS} == "Darwin" && ${PKGSRC_COMPILER:Mgcc}
+CFLAGS+=		-O2
+.endif
+
+# Explicitly disable inotify support whilst it is Linux-specific.
+CONFIGURE_ENV.SunOS+=	ac_cv_func_inotify_init=no
+
+.if !empty(MACHINE_PLATFORM:MDarwin-[9].*-*)
+CONFIGURE_ENV+=		ac_cv_header_sys_acl_h=no jm_cv_func_svid_putenv=yes
+.endif
+
+# XXX - this hack is bound to cause fallout on some platform at some point.
+# How can we determine the API version of the builtin gettext?
+.if ${OPSYS} != "Linux"
+CONFIGURE_ENV+=		gt_cv_func_gnugettext3_libintl=yes
+.endif
+CONFIGURE_ENV+=		MKDIR_P=${MKDIR:Q}
+
+CONFIGURE_ARGS+=	--program-prefix=g
+
+#CONFIGURE_ARGS+=	--enable-install-program=su
+#.if ${OPSYS} == "NetBSD" ||  ${OPSYS} == "FreeBSD" || \
+#  ${OPSYS} == "OpenBSD"
+#MAKE_FLAGS+=	setuid_root_mode=a=rx
+#MESSAGE_SRC=	${.CURDIR}/MESSAGE.gsu
+#MESSAGE_SUBST+=	OPSYS=${OPSYS:Q}
+#.endif

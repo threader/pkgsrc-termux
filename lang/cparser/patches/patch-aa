@@ -1,0 +1,89 @@
+$NetBSD: patch-aa,v 1.5 2015/12/29 23:34:45 dholland Exp $
+
+Configure for pkgsrc.
+Use libtool.
+
+--- Makefile.orig	2012-11-21 17:50:43.000000000 +0000
++++ Makefile
+@@ -24,7 +24,7 @@ FIRM_LIBS     ?= `pkg-config --libs libf
+ LIBFIRM_FILE =
+ endif
+ 
+-CPPFLAGS  = -I.
++CPPFLAGS += -I.
+ CPPFLAGS += $(FIRM_CPPFLAGS)
+ 
+ CFLAGS += -Wall -W -Wstrict-prototypes -Wmissing-prototypes -std=c99
+@@ -72,14 +72,14 @@ cparser_SOURCES = \
+ 	wrappergen/write_fluffy.c \
+ 	wrappergen/write_jna.c \
+ 	wrappergen/write_compoundsizes.c
+-cparser_OBJECTS = $(cparser_SOURCES:%.c=$(builddir)/%.o)
++cparser_OBJECTS = $(cparser_SOURCES:%.c=$(builddir)/%.lo)
+ cparser_DEPS    = $(cparser_OBJECTS:%.o=%.d)
+ 
+ SPLINTS = $(addsuffix .splint, $(cparser_SOURCES))
+ CPARSERS = $(addsuffix .cparser, $(cparser_SOURCES))
+-CPARSEROS = $(cparser_SOURCES:%.c=$(builddir)/cpb/%.o)
+-CPARSEROS_E = $(cparser_SOURCES:%.c=$(builddir)/cpbe/%.o)
+-CPARSEROS2 = $(cparser_SOURCES:%.c=$(builddir)/cpb2/%.o)
++CPARSEROS = $(cparser_SOURCES:%.c=$(builddir)/cpb/%.lo)
++CPARSEROS_E = $(cparser_SOURCES:%.c=$(builddir)/cpbe/%.lo)
++CPARSEROS2 = $(cparser_SOURCES:%.c=$(builddir)/cpb2/%.lo)
+ 
+ Q = @
+ 
+@@ -113,7 +113,7 @@ UNUSED := $(shell mkdir -p $(DIRS) $(DIR
+ 
+ $(GOAL): $(LIBFIRM_FILE) $(cparser_OBJECTS)
+ 	@echo "===> LD $@"
+-	$(Q)$(CC) $(cparser_OBJECTS) $(LIBFIRM_FILE) -o $(GOAL) $(LINKFLAGS)
++	$(Q)$(LIBTOOL) --mode=link --tag=CC $(CC) $(cparser_OBJECTS) $(LIBFIRM_FILE) -o $(GOAL) $(LINKFLAGS)
+ 
+ ifneq ("$(LIBFIRM_FILE)", "")
+ ifneq ("$(MAKECMDGOALS)", "clean")
+@@ -144,33 +144,33 @@ bootstrap2: cparser.bootstrap2
+ 	@echo '===> CPARSER $<'
+ 	$(Q)./cparser $(CPPFLAGS) -fsyntax-only $<
+ 
+-$(builddir)/cpb/%.o: %.c $(builddir)/cparser
++$(builddir)/cpb/%.lo: %.c $(builddir)/cparser
+ 	@echo '===> CPARSER $<'
+-	$(Q)./$(builddir)/cparser $(CPPFLAGS) -std=c99 -Wall -g3 -c $< -o $@
++	$(Q)$(LIBTOOL) --mode=compile --tag=CC ./$(builddir)/cparser $(CPPFLAGS) -std=c99 -Wall -g3 -c $< -o $@
+ 
+-$(builddir)/cpbe/%.o: %.c
++$(builddir)/cpbe/%.lo: %.c
+ 	@echo '===> ECCP $@'
+-	$(Q)eccp $(CPPFLAGS) -std=c99 -Wall -c $< -o $@
++	$(Q)$(LIBTOOL) --mode=compile --tag=CC eccp $(CPPFLAGS) -std=c99 -Wall -c $< -o $@
+ 
+-$(builddir)/cpb2/%.o: %.c cparser.bootstrap
++$(builddir)/cpb2/%.lo: %.c cparser.bootstrap
+ 	@echo '===> CPARSER.BOOTSTRAP $<'
+-	$(Q)./cparser.bootstrap $(CPPFLAGS) -Wall -g -c $< -o $@
++	$(Q)$(LIBTOOL) --mode=compile --tag=CC ./cparser.bootstrap $(CPPFLAGS) -Wall -g -c $< -o $@
+ 
+ cparser.bootstrap: $(CPARSEROS)
+ 	@echo "===> LD $@"
+-	$(Q)./$(builddir)/cparser $(CPARSEROS) $(LIBFIRM_FILE) $(LINKFLAGS) -o $@
++	$(Q)$(LIBTOOL) --mode=link ./$(builddir)/cparser $(CPARSEROS) $(LIBFIRM_FILE) $(LINKFLAGS) -o $@
+ 
+ cparser.bootstrape: $(CPARSEROS_E)
+ 	@echo "===> LD $@"
+-	$(Q)gcc $(CPARSEROS_E) $(LINKFLAGS) -o $@
++	$(Q)$(LIBTOOL) --mode=link gcc $(CPARSEROS_E) $(LINKFLAGS) -o $@
+ 
+ cparser.bootstrap2: cparser.bootstrap $(CPARSEROS2)
+ 	@echo "===> LD $@"
+-	$(Q)./cparser.bootstrap $(CPARSEROS2) $(LIBFIRM_FILE) $(LINKFLAGS) -o $@
++	$(Q)$(LIBTOOL) --mode=link ./cparser.bootstrap $(CPARSEROS2) $(LIBFIRM_FILE) $(LINKFLAGS) -o $@
+ 
+-$(builddir)/%.o: %.c
++$(builddir)/%.lo: %.c
+ 	@echo '===> CC $@'
+-	$(Q)$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c -o $@ $<
++	$(Q)$(LIBTOOL) --mode=compile --tag=CC $(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c -o $@ $<
+ 
+ clean:
+ 	@echo '===> CLEAN'

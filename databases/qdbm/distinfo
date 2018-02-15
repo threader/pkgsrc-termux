@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.29 2015/11/03 01:56:29 agc Exp $
+
+SHA1 (qdbm-1.8.78.tar.gz) = 8c2ab938c2dad8067c29b0aa93efc6389f0e7076
+RMD160 (qdbm-1.8.78.tar.gz) = 84c812eaa0ddde822dd37515de67287098bd3a4b
+SHA512 (qdbm-1.8.78.tar.gz) = 480549c56071bf82edf714a611aef863599c858ed63702820ae0890fd2c0029d1a231ed94a8090c74420dd648bd3625d270a5c078b113cbb86a12ef509e19037
+Size (qdbm-1.8.78.tar.gz) = 1015429 bytes
+SHA1 (patch-aa) = aa83e9ce9ebd7aba7c579a641c8d79905b6ee388
+SHA1 (patch-ab) = f8f73b014bd560af11cf97043f429434d689bc3f
+SHA1 (patch-ac) = f6d5d4617815829421e4c7d04d404052f9bf795c
+SHA1 (patch-ad) = f201cc735301c6db632b6526d0c82167a731c7e6
+SHA1 (patch-ae) = 703663e50be542b4496a2d10d1aad63233ec5ceb
+SHA1 (patch-af) = 3595dd43196b0934a7cf3c1b9d14345c5f6328ef
+SHA1 (patch-ag) = 2055b75bda7793cd3f7bfdbebc8761527d50e219
+SHA1 (patch-ah) = e857d2bd82ace8396316c70fe2e35c450477616f
+SHA1 (patch-ai) = 68f87529b45a1f4b87cdb598ef0cb4eb13bef035
+SHA1 (patch-aj) = e1e6d3b73f8abbf2329b12d5b3ff3aa82f6421b3
+SHA1 (patch-ak) = 20d8b98702b4606d35b7207718d2e2758244aecb
+SHA1 (patch-java_configure) = c3c7c28bfccb9b9bfce47cd87f90ba6a808e893d

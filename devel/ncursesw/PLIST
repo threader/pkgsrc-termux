@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.7 2016/12/18 23:30:34 joerg Exp $
+bin/ncursesw6-config
+include/ncursesw/curses.h
+include/ncursesw/nc_tparm.h
+include/ncursesw/ncurses.h
+include/ncursesw/ncurses_dll.h
+include/ncursesw/term.h
+include/ncursesw/term_entry.h
+include/ncursesw/termcap.h
+include/ncursesw/tic.h
+include/ncursesw/unctrl.h
+lib/libgnuformw.la
+lib/libgnumenuw.la
+lib/libncurses++w.la
+lib/libncursesw.la
+lib/libgnupanelw.la

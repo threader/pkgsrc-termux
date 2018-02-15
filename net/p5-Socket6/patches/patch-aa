@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.2 2014/09/06 12:09:10 wiz Exp $
+
+--- Makefile.PL.orig	2013-12-08 17:21:56.000000000 +0000
++++ Makefile.PL
+@@ -46,7 +46,6 @@ WriteMakefile(
+     VERSION_FROM => 'Socket6.pm',
+     XSPROTOARG	 => '-noprototypes',	# XXX remove later?
+     PM		 => {'Socket6.pm' => '$(INST_LIBDIR)/Socket6.pm'},
+-    CONFIGURE	 => sub { { CC => "${cc}" } },
+     LIBS	 => ["${libs}"],
+     realclean	 => {FILES => 'config.cache config.h config.log config.pl config.status gailookup.pl'},
+ );

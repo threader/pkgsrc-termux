@@ -1,0 +1,76 @@
+$NetBSD: CHANGES-pkgsrc-2017Q4,v 1.1.2.7 2018/01/19 22:15:22 spz Exp $
+
+Changes to packages and infrastructure on the pkgsrc-2017Q4 branch:
+
+Pullup ticket #5664 - requested by he
+devel/gnustep-objc: build fix
+
+Pullup ticket #5665 - requested by tsutsui
+inputmethod/mozc-server: build fix
+
+Pullup ticket #5666 - requested by tsutsui
+net/sayaka: build fix
+
+Pullup ticket #5667 - requested by bacon
+devel/netcdf: build fix
+
+Pullup ticket #5668 - requested by bsiegert
+math/nickle: build fix
+
+Pullup ticket #5669 - requested by bsiegert
+net/go-net: build fix
+
+Pullup ticket #5671 - requested by snj
+net/rsync: security patch
+
+Pullup ticket #5672 - requested by dholland
+lang/micropython: build fix
+
+Pullup ticket #5673 - requested by taca
+lang/php56: security fix
+
+Pullup ticket #5674 - requested by taca
+lang/php70: security fix
+
+Pullup ticket #5675 - requested by taca
+lang/php71: security fix
+
+Pullup ticket #5676 - requested by taca
+lang/php72: security fix
+
+Pullup ticket #5677 - requested by taca
+converters/php-iconv: reset PKGREVISION
+databases/php-pdo_sqlite: reset PKGREVISION
+textproc/php-intl: reset PKGREVISION
+textproc/php-json: reset PKGREVISION
+
+chat/irssi: security update
+chat/irssi-icb: dependent update
+chat/irssi-xmpp: dependent update
+
+Pullup ticket #5679 - requested by wiz
+devel/global: security update
+
+Pullup ticket #5680 - requested by maya
+security/sudo: function fix
+
+Pullup ticket #5681 - requested by he
+fonts/fontconfig: build fix
+
+Pullup ticket #5682 - requested by maya
+cross/cross-libtool-base: build fix
+
+Pullup ticket #5683 - requested by wiz
+net/transmission: security update
+net/transmission-qt: security update
+net/transmission-gtk: security update
+
+Pullup ticket #5684 - requested by taca
+net/bind910: security update
+
+Pullup ticket #5685 - requested by taca
+net/bind99: security update
+
+Pullup ticket #5686 - requested by taca
+www/contao35: security update
+

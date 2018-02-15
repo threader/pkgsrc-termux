@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.6 2016/05/08 11:23:15 nonaka Exp $
+
+Match x86 SunOS platforms correctly.
+Remove os_solaris=yes to avoid special man page section handling (PR 38199).
+
+--- configure.orig	2016-05-07 11:18:29.000000000 +0000
++++ configure	2016-05-08 06:41:03.000000000 +0000
+@@ -6659,13 +6659,11 @@ fi
+     test "$with_solaris_sparc_ata" = "yes" \
+       && os_deps="$os_deps os_solaris_ata.o"
+     os_mailer='mailx'
+-    os_solaris=yes
+     os_man_filter=Solaris
+     ;;
+-  *-pc-solaris*)
++  *-solaris*)
+     os_deps='os_solaris.o'
+     os_mailer='mailx'
+-    os_solaris=yes
+     os_man_filter=Solaris
+     ;;
+   *-*-netbsd*)

@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.29 2017/11/23 19:16:28 snj Exp $
+
+SHA1 (jasper-2.0.14.tar.gz) = 32c959d883fdb661c32afd76c94b206638972cb1
+RMD160 (jasper-2.0.14.tar.gz) = 0b2b51b22b7421773255955de6bad27f9b434712
+SHA512 (jasper-2.0.14.tar.gz) = 9e5cffd2e899e37ba08890e2377ddfc3c2fb13d9fe00dea6b4612e4d241a6f4327de6835809b415c41ae4bf44208cf7871c1982ff5fc04ae6bc09fd376b0afc8
+Size (jasper-2.0.14.tar.gz) = 1677951 bytes
+SHA1 (patch-CMakeLists.txt) = 047ea526e4f4d81036043e0d831ef76be1e3b456
+SHA1 (patch-doc_CMakeLists.txt) = 08156df737458cec48ea1965586b9acdbf30753b
+SHA1 (patch-src_libjasper_base_jas__seq.c) = a0208cd0271388ae0fdc2e359da3223a35a7ae14
+SHA1 (patch-src_libjasper_base_jas__stream.c) = 2e9ad538ab2c0191063fef06202949b435b0085e
+SHA1 (patch-src_libjasper_jp2_jp2__cod.c) = bfbe752e105d75fbad71a01080013c7a5a8645d8
+SHA1 (patch-src_libjasper_jp2_jp2__dec.c) = df04d8af9004fb133d4ae1429ecda77197fc3e77
+SHA1 (patch-src_libjasper_jp2_jp2__enc.c) = 9a78860496f1d0ce35f94843f6a7d754a5565716
+SHA1 (patch-src_libjasper_jpc_jpc__dec.c) = f76765ff7656af6b44cd4035b26656909abe45f9
+SHA1 (patch-src_libjasper_jpc_jpc__enc.c) = 83068e4f4ec96b7f9816f3dac1f68ef6efde986f
+SHA1 (patch-src_libjasper_pnm_pnm__enc.c) = a2d5d53cd28f653f9e6e302f76c187fba50b1ce2

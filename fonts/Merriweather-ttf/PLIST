@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.2 2017/11/22 13:41:20 wiz Exp $
+share/fonts/X11/OTF/Merriweather-Black.otf
+share/fonts/X11/OTF/Merriweather-BlackItalic.otf
+share/fonts/X11/OTF/Merriweather-Bold.otf
+share/fonts/X11/OTF/Merriweather-BoldItalic.otf
+share/fonts/X11/OTF/Merriweather-Italic.otf
+share/fonts/X11/OTF/Merriweather-Light.otf
+share/fonts/X11/OTF/Merriweather-LightItalic.otf
+share/fonts/X11/OTF/Merriweather-Regular.otf

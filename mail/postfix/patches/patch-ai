@@ -1,0 +1,215 @@
+$NetBSD: patch-ai,v 1.40 2017/06/23 19:18:07 maya Exp $
+
+1) Add shlib definitions for NetBSD 5; the build system must be
+hard-coded per OS per version.  Not yet reported upstream.
+
+2) Make this pkgsrc friendly.
+
+3) Add support for FreeBSD 11 & 12.
+
+--- makedefs.orig	2017-02-12 15:32:10.000000000 +0000
++++ makedefs
+@@ -284,6 +284,24 @@ case "$SYSTEM.$RELEASE" in
+ 		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
+ 		: ${PLUGIN_LD="${CC} -shared"}
+ 		;;
++  FreeBSD.11*)	SYSTYPE=FREEBSD11
++		: ${CC=cc}
++		: ${SHLIB_SUFFIX=.so}
++		: ${SHLIB_CFLAGS=-fPIC}
++		: ${SHLIB_LD="${CC} -shared"' -Wl,-soname,${LIB}'}
++		: ${SHLIB_RPATH='-Wl,-rpath,${SHLIB_DIR}'}
++		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
++		: ${PLUGIN_LD="${CC} -shared"}
++		;;
++  FreeBSD.12*)	SYSTYPE=FREEBSD12
++		: ${CC=cc}
++		: ${SHLIB_SUFFIX=.so}
++		: ${SHLIB_CFLAGS=-fPIC}
++		: ${SHLIB_LD="${CC} -shared"' -Wl,-soname,${LIB}'}
++		: ${SHLIB_RPATH='-Wl,-rpath,${SHLIB_DIR}'}
++		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
++		: ${PLUGIN_LD="${CC} -shared"}
++		;;
+  DragonFly.*)	SYSTYPE=DRAGONFLY
+ 		;;
+   OpenBSD.2*)	SYSTYPE=OPENBSD2
+@@ -312,25 +330,7 @@ case "$SYSTEM.$RELEASE" in
+ 		;;
+   ekkoBSD.1*)	SYSTYPE=EKKOBSD1
+ 		;;
+-   NetBSD.1*)	SYSTYPE=NETBSD1
+-		;;
+-   NetBSD.2*)	SYSTYPE=NETBSD2
+-		;;
+-   NetBSD.3*)	SYSTYPE=NETBSD3
+-		;;
+-   NetBSD.4*)	SYSTYPE=NETBSD4
+-		;;
+-   NetBSD.5*)	SYSTYPE=NETBSD5
+-		;;
+-   NetBSD.6*)	SYSTYPE=NETBSD6
+-		: ${SHLIB_SUFFIX=.so}
+-		: ${SHLIB_CFLAGS=-fPIC}
+-		: ${SHLIB_LD="${CC-gcc} -shared"' -Wl,-soname,${LIB}'}
+-		: ${SHLIB_RPATH='-Wl,-rpath,${SHLIB_DIR}'}
+-		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
+-		: ${PLUGIN_LD="${CC-gcc} -shared"}
+-               ;;
+-   NetBSD.7*)  SYSTYPE=NETBSD7
++   NetBSD*)	SYSTYPE=NETBSD
+ 		: ${SHLIB_SUFFIX=.so}
+ 		: ${SHLIB_CFLAGS=-fPIC}
+ 		: ${SHLIB_LD="${CC-gcc} -shared"' -Wl,-soname,${LIB}'}
+@@ -409,13 +409,6 @@ case "$SYSTEM.$RELEASE" in
+ 		esac
+ 		;;
+    ULTRIX.4*)	SYSTYPE=ULTRIX4
+-		if [ -f /usr/local/lib/libdb.a ]; then
+-		    SYSLIBS="$SYSLIBS -ldb"
+-		    CCARGS="$CCARGS -DHAS_DB"
+-		    if [ -d /usr/local/include/db ]; then
+-			CCARGS="$CCARGS -I/usr/local/include/db"
+-		    fi
+-		fi
+ 		for l in syslog resolv; do
+ 		    if [ -f /usr/local/lib/lib$l.a ]; then
+ 			SYSLIBS="$SYSLIBS -l$l"
+@@ -457,33 +450,8 @@ case "$SYSTEM.$RELEASE" in
+ 		esac;;
+ 		# Tested with RedHat 3.03 on 20020729.
+     Linux.1*)	SYSTYPE=LINUX1
+-		case "$CCARGS" in
+-		 *-DNO_DB*) ;;
+-		 *-DHAS_DB*) ;;
+-		 *) SYSLIBS="-ldb";;
+-		esac
+ 		;;
+     Linux.2*)	SYSTYPE=LINUX2
+-		case "$CCARGS" in
+-		 *-DNO_DB*) ;;
+-		 *-DHAS_DB*) ;;
+-		 *) if [ -f /usr/include/db.h ]
+-		    then
+-			: we are all set
+-		    elif [ -f /usr/include/db/db.h ]
+-		    then
+-			CCARGS="$CCARGS -I/usr/include/db"
+-		    else
+-			# No, we're not going to try db1 db2 db3 etc.
+-			# On a properly installed system, Postfix builds
+-			# by including <db.h> and by linking with -ldb
+-			echo "No <db.h> include file found." 1>&2
+-			echo "Install the appropriate db*-devel package first." 1>&2
+-			exit 1
+-		    fi
+-		    SYSLIBS="-ldb"
+-		    ;;
+-		esac
+ 		for name in nsl resolv $GDBM_LIBS
+ 		do
+ 		    for lib in /usr/lib64 /lib64 /usr/lib /lib
+@@ -544,25 +512,6 @@ EOF
+ 		: ${PLUGIN_LD="${CC-gcc} -shared"}
+ 		;;
+   Linux.[34].*)	SYSTYPE=LINUX$RELEASE_MAJOR
+-		case "$CCARGS" in
+-		 *-DNO_DB*) ;;
+-		 *-DHAS_DB*) ;;
+-		 *) if [ -f /usr/include/db.h ]
+-		    then
+-			: we are all set
+-		    elif [ -f /usr/include/db/db.h ]
+-		    then
+-			CCARGS="$CCARGS -I/usr/include/db"
+-		    else
+-			# On a properly installed system, Postfix builds
+-			# by including <db.h> and by linking with -ldb
+-			echo "No <db.h> include file found." 1>&2
+-			echo "Install the appropriate db*-devel package first." 1>&2
+-			exit 1
+-		    fi
+-		    SYSLIBS="-ldb"
+-		    ;;
+-		esac
+ 		for name in nsl resolv
+ 		do
+ 		    for lib in /usr/lib64 /lib64 /usr/lib /usr/lib/* /lib /lib/*
+@@ -583,24 +532,6 @@ EOF
+ 		;;
+      GNU.0*|GNU/kFreeBSD.[567]*)
+ 		SYSTYPE=GNU0
+-		case "$CCARGS" in
+-		 *-DNO_DB*) ;;
+-		 *) if [ -f /usr/include/db.h ]
+-		    then
+-			: we are all set
+-		    elif [ -f /usr/include/db/db.h ]
+-		    then
+-			CCARGS="$CCARGS -I/usr/include/db"
+-		    else
+-			# On a properly installed system, Postfix builds
+-			# by including <db.h> and by linking with -ldb
+-			echo "No <db.h> include file found." 1>&2
+-			echo "Install the appropriate db*-devel package first." 1>&2
+-			exit 1
+-		    fi
+-		    SYSLIBS="-ldb"
+-		    ;;
+-		esac
+ 		for name in nsl resolv
+ 		do
+ 		    for lib in /usr/lib64 /lib64 /usr/lib /lib
+@@ -631,26 +562,14 @@ EOF
+ HP-UX.A.09.*)	SYSTYPE=HPUX9
+ 		SYSLIBS=-ldbm
+ 		CCARGS="$CCARGS -DMISSING_USLEEP -DNO_SNPRINTF"
+-		if [ -f /usr/lib/libdb.a ]; then
+-		    CCARGS="$CCARGS -DHAS_DB"
+-		    SYSLIBS="$SYSLIBS -ldb"
+-		fi
+ 		;;
+ HP-UX.B.10.*)	SYSTYPE=HPUX10
+ 		CCARGS="$CCARGS `nm /usr/lib/libc.a 2>/dev/null |
+ 		    (grep usleep >/dev/null || echo '-DMISSING_USLEEP')`"
+ 		CCARGS="$CCARGS -DNO_SNPRINTF"
+-		if [ -f /usr/lib/libdb.a ]; then
+-		    CCARGS="$CCARGS -DHAS_DB"
+-		    SYSLIBS=-ldb
+-		fi
+ 		;;
+ HP-UX.B.11.*)	SYSTYPE=HPUX11
+ 		SYSLIBS=-lnsl
+-		if [ -f /usr/lib/libdb.a ]; then
+-		    CCARGS="$CCARGS -DHAS_DB"
+-		    SYSLIBS="$SYSLIBS -ldb"
+-		fi
+ 		;;
+ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix543
+ 		RANLIB=echo
+@@ -692,12 +611,12 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
+ 		esac
+ 		: ${SHLIB_CFLAGS=-fPIC}
+ 		: ${SHLIB_SUFFIX=.dylib}
+-		: ${SHLIB_LD='cc -shared -Wl,-flat_namespace -Wl,-undefined,dynamic_lookup -Wl,-install_name,@rpath/${LIB}'}
++		: ${SHLIB_LD='${CC} -shared -Wl,-flat_namespace -Wl,-undefined,dynamic_lookup -Wl,-install_name,@rpath/${LIB}'}
+ 		: ${SHLIB_RPATH='-Wl,-rpath,${SHLIB_DIR}'}
+                 # In MacOS/X 10.11.x /bin/sh unsets DYLD_LIBRARY_PATH, so we
+                 # have export it into postfix-install indirectly!
+ 		: ${SHLIB_ENV="DYLD_LIBRARY_PATH=`pwd`/lib SHLIB_ENV_VAR=DYLD_LIBRARY_PATH SHLIB_ENV_VAL=`pwd`/lib"}
+-		: ${PLUGIN_LD='cc -shared -Wl,-flat_namespace -Wl,-undefined,dynamic_lookup'}
++		: ${PLUGIN_LD='${CC} -shared -Wl,-flat_namespace -Wl,-undefined,dynamic_lookup'}
+ 		;;
+     dcosx.1*)	SYSTYPE=DCOSX1
+ 		RANLIB=echo
+@@ -778,8 +697,8 @@ esac
+ #
+ case "$CCARGS" in
+ *-DNO_EAI*) CCARGS="$CCARGS "'-DDEF_SMTPUTF8_ENABLE=\"no\"';;
+-	 *) icu_cppflags=`(icu-config --cppflags) 2>/dev/null` && {
+-		icu_ldflags=`(icu-config --ldflags) 2>/dev/null` && {
++	 *) icu_cppflags=`(pkg-config --cflags icu-i18n) 2>/dev/null` && {
++		icu_ldflags=`(pkg-config --libs icu-i18n) 2>/dev/null` && {
+ 		    trap 'rm -f makedefs.test makedefs.test.[co]' 1 2 3 15
+ 		    cat >makedefs.test.c <<'EOF'
+ #include <unicode/uidna.h>

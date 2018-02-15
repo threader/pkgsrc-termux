@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.6 2013/10/06 17:15:35 adam Exp $
+bin/barcode
+bin/sample
+info/barcode.info

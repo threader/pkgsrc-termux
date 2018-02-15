@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2017/05/19 11:38:36 fhajny Exp $
+
+SHA1 (jo-1.1.tar.gz) = 265230a08c761088d70c6ff16a226ba3bed9d6db
+RMD160 (jo-1.1.tar.gz) = b98c0234edd6c101b51aba2e78f6d73a0c748e2e
+SHA512 (jo-1.1.tar.gz) = 170b86f7eff6cf2a06bf60e98982cc1d4cae11802e6149bf5fca9d4d8910abd1e960619209f3330c140abbac69d76386eafdae627ed4fc5aa1f36c9ee57ffc5a
+Size (jo-1.1.tar.gz) = 137087 bytes

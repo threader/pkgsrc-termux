@@ -1,0 +1,13 @@
+/README.pkgsrc/1.4/Mon Jan  9 04:58:09 2017//Tpkgsrc-2017Q4
+/mailer.conf/1.5/Wed Nov 25 12:51:30 2015//Tpkgsrc-2017Q4
+/qmail-procmail.sh/1.4/Wed Nov 25 12:51:30 2015//Tpkgsrc-2017Q4
+/qmail-qread-client.sh/1.5/Tue Apr 11 14:04:37 2017//Tpkgsrc-2017Q4
+/qmail.sh/1.7/Sat Aug  5 03:03:17 2017//Tpkgsrc-2017Q4
+/qmailofmipd.sh/1.9/Sat Aug  5 15:21:03 2017//Tpkgsrc-2017Q4
+/qmailpop3d.sh/1.17/Sat Aug  5 15:21:03 2017//Tpkgsrc-2017Q4
+/qmailqread.sh/1.14/Sat Aug  5 15:21:03 2017//Tpkgsrc-2017Q4
+/qmailsend.sh/1.12/Sat Aug  5 03:03:17 2017//Tpkgsrc-2017Q4
+/qmailsmtpd.sh/1.17/Sat Aug  5 15:21:03 2017//Tpkgsrc-2017Q4
+/spamdyke-ofmipd.conf/1.1/Mon Jan  9 04:58:09 2017//Tpkgsrc-2017Q4
+/stunnel.conf/1.1/Mon Jan  9 04:58:09 2017//Tpkgsrc-2017Q4
+D

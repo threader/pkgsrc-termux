@@ -1,0 +1,32 @@
+# $NetBSD: Makefile.common,v 1.16 2017/11/15 20:28:27 minskim Exp $
+# used by devel/hdf5/Makefile
+# used by devel/hdf5-c++/Makefile
+
+DISTNAME=	hdf5-1.10.1
+CATEGORIES=	devel
+MASTER_SITES=	https://support.hdfgroup.org/ftp/HDF5/current/src/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.hdfgroup.org/HDF5/
+LICENSE=	original-bsd
+
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pax tr
+GNU_CONFIGURE=		yes
+TEST_TARGET=		check
+
+CFLAGS.SunOS+=		-std=c99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__
+
+DISTINFO_FILE=	${.CURDIR}/../../devel/hdf5/distinfo
+PATCHDIR=	${.CURDIR}/../../devel/hdf5/patches
+
+# it appears that this file is informative only and is not actually
+# used by any installed tools
+CHECK_WRKREF_SKIP=	${PREFIX}/lib/libhdf5.settings
+
+INSTALL_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
+
+post-extract:
+	${CP} ${WRKSRC}/config/freebsd ${WRKSRC}/config/netbsd
+	${CP} ${WRKSRC}/config/freebsd ${WRKSRC}/config/netbsdelf

@@ -1,0 +1,23 @@
+/manual-patch-avidemux_ADM__libraries_ffmpeg_libavcodec_x86_dsputil__mmx.c/1.1/Tue Jul  3 17:38:31 2012//Tpkgsrc-2017Q4
+/manual-patch-avidemux_ADM__libraries_ffmpeg_libavcodec_x86_snowdsp__mmx.c/1.1/Tue Jul  3 17:38:31 2012//Tpkgsrc-2017Q4
+/patch-CMakeLists.txt/1.1/Thu Feb 17 09:20:17 2011//Tpkgsrc-2017Q4
+/patch-ab/1.8/Thu Feb 17 09:20:17 2011//Tpkgsrc-2017Q4
+/patch-addons_avsfilter_CMakeLists.txt/1.1/Thu Feb 17 09:20:17 2011//Tpkgsrc-2017Q4
+/patch-as/1.2/Thu Feb 17 09:20:17 2011//Tpkgsrc-2017Q4
+/patch-avidemux_ADM__coreImage_src_ADM__vidFieldASM.cpp/1.1/Tue Jul  3 17:38:31 2012//Tpkgsrc-2017Q4
+/patch-avidemux_ADM__coreImage_src_ADM__vidFieldBlend.cpp/1.1/Tue Jul  3 17:38:31 2012//Tpkgsrc-2017Q4
+/patch-avidemux_ADM__coreUI_include_DIA__factory.h/1.1/Tue Jul  3 17:38:31 2012//Tpkgsrc-2017Q4
+/patch-avidemux_ADM__core_include_ADM__assert.h/1.1/Thu Jun 13 14:30:17 2013//Tpkgsrc-2017Q4
+/patch-avidemux_ADM__core_include_ADM__mangle.h/1.1/Tue Jul  3 17:38:31 2012//Tpkgsrc-2017Q4
+/patch-avidemux_ADM__userInterfaces_ADM__GTK_ADM__toolkit__gtk_jogshuttle.c/1.1/Tue Jul  3 17:38:31 2012//Tpkgsrc-2017Q4
+/patch-avidemux_ADM_core_src_ADM_cpuCap.cpp/1.1/Thu Feb 17 09:20:17 2011//Tpkgsrc-2017Q4
+/patch-avidemux_ADM_core_src_ADM_crashdump.cpp/1.1/Thu Feb 17 09:20:17 2011//Tpkgsrc-2017Q4
+/patch-avidemux_ADM_userInterfaces_ADM_render_GUI_sdlRender.cpp/1.1/Thu Feb 17 09:20:17 2011//Tpkgsrc-2017Q4
+/patch-avidemux_CMakeLists.txt/1.1/Thu Feb 17 09:20:17 2011//Tpkgsrc-2017Q4
+/patch-ax/1.2/Thu Sep 18 13:23:03 2008//Tpkgsrc-2017Q4
+/patch-cmake_admCheckMiscLibs.cmake/1.1/Thu Feb 17 09:20:17 2011//Tpkgsrc-2017Q4
+/patch-cmake_admFFmpegPrepareTar.cmake/1.1/Thu Feb 17 09:20:17 2011//Tpkgsrc-2017Q4
+/patch-db/1.1/Thu Sep 18 13:23:03 2008//Tpkgsrc-2017Q4
+/patch-plugins_ADM_audioDevices_Oss_ADM_deviceoss.cpp/1.1/Thu Feb 17 09:20:17 2011//Tpkgsrc-2017Q4
+/patch-plugins_ADM_audioDevices_Sdl_ADM_deviceSDL.cpp/1.1/Thu Feb 17 09:20:17 2011//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,9 @@
+/patch-Makefile.in/1.3/Fri Jul  1 04:51:15 2016//Tpkgsrc-2017Q4
+/patch-configure.seed/1.2/Fri Jul  1 04:51:15 2016//Tpkgsrc-2017Q4
+/patch-include_ntop__includes.h/1.2/Thu Jun 15 14:54:45 2017//Tpkgsrc-2017Q4
+/patch-src_DivertInterface.cpp/1.1/Fri Jul  1 04:51:15 2016//Tpkgsrc-2017Q4
+/patch-src_PacketDumperTuntap.cpp/1.2/Thu Jun 15 14:54:45 2017//Tpkgsrc-2017Q4
+/patch-src_Redis.cpp/1.1/Fri Apr  8 16:59:07 2016//Tpkgsrc-2017Q4
+/patch-src_Utils.cpp/1.1/Thu Jun 15 14:54:45 2017//Tpkgsrc-2017Q4
+/patch-third-party_snmp_net.c/1.1/Thu Jun 15 14:54:45 2017//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,27 @@
+/patch-bin_override.c/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-compat_Makefile.am/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-compat_Makefile.in/1.3/Fri May 26 13:26:37 2017//Tpkgsrc-2017Q4
+/patch-configure/1.8/Mon May 15 11:11:35 2017//Tpkgsrc-2017Q4
+/patch-include_vlc__common.h/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-include_vlc__fixups.h/1.3/Tue Jun 21 17:58:05 2016//Tpkgsrc-2017Q4
+/patch-include_vlc_atomic.h/1.3/Fri May 26 13:26:37 2017//Tpkgsrc-2017Q4
+/patch-modules_access_directory.c/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-modules_access_file.c/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-modules_access_rtp_Makefile.am/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-modules_gui_qt4_components_controller.cpp/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-modules_gui_qt4_components_extended__panels.cpp/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-modules_gui_qt4_components_interface__widgets.cpp/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-modules_gui_qt4_components_interface__widgets.hpp/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-modules_gui_qt4_dialogs_messages.cpp/1.1/Sun Nov  1 20:15:06 2015//Tpkgsrc-2017Q4
+/patch-modules_gui_qt4_input__manager.cpp/1.2/Thu May 12 15:56:15 2016//Tpkgsrc-2017Q4
+/patch-modules_gui_qt4_input__manager.hpp/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-modules_gui_qt4_main__interface.cpp/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-modules_gui_qt4_main__interface.hpp/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-modules_gui_qt4_util_input__slider.cpp/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-modules_gui_qt4_util_input__slider.hpp/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-modules_gui_skins2_src_theme__loader.cpp/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-modules_misc_inhibit_xdg.c/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-modules_services__discovery_mtp.c/1.1/Mon May 15 10:26:19 2017//Tpkgsrc-2017Q4
+/patch-modules_video__output_sdl.c/1.1/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+/patch-src_config_file.c/1.3/Sun Oct 25 11:00:18 2015//Tpkgsrc-2017Q4
+D

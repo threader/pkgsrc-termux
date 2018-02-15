@@ -1,0 +1,16 @@
+/DESCR/1.2/Sun Apr  9 06:34:32 2006//Tpkgsrc-2017Q4
+/Makefile/1.243/Thu Nov 16 10:28:26 2017//Tpkgsrc-2017Q4
+/Makefile.common/1.32/Wed Oct  4 12:54:17 2017//Tpkgsrc-2017Q4
+/PLIST/1.6/Fri Nov  2 07:29:30 2012//Tpkgsrc-2017Q4
+/buildlink3.mk/1.61/Thu Jun  8 11:05:33 2017//Tpkgsrc-2017Q4
+/dirs.mk/1.2/Mon May 16 07:59:04 2011//Tpkgsrc-2017Q4
+/distinfo/1.147/Thu Nov 16 10:28:26 2017//Tpkgsrc-2017Q4
+/hacks.mk/1.19/Fri Oct 28 15:55:50 2016//Tpkgsrc-2017Q4
+/license.mk/1.2/Fri Jul 17 06:44:46 2009//Tpkgsrc-2017Q4
+/module.mk/1.72/Sat Feb  6 00:46:11 2016//Tpkgsrc-2017Q4
+/options.mk/1.12/Mon Jun 20 17:19:56 2016//Tpkgsrc-2017Q4
+/packlist.mk/1.19/Thu Nov 13 17:48:59 2014//Tpkgsrc-2017Q4
+/vars.mk/1.5/Fri Oct 28 07:41:52 2011//Tpkgsrc-2017Q4
+/version.mk/1.4/Fri Aug  5 18:06:14 2011//Tpkgsrc-2017Q4
+D/files////
+D/patches////

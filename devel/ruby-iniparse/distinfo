@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/07/13 15:34:08 taca Exp $
+
+SHA1 (iniparse-1.4.4.gem) = 003ff325c26190f133ced44cc89af7758717f2c6
+RMD160 (iniparse-1.4.4.gem) = 39bf69b9b35ce5c11f6ae293b3f8355cf013f07b
+SHA512 (iniparse-1.4.4.gem) = fad9aa555207d3c622ef28d5edafdb01cbdcfde2e61a32ec22f829d4ee9a1991affb7f684a0c4909b1a3bbce21e5f15200088dc49271a0eb604a2a557aa1433b
+Size (iniparse-1.4.4.gem) = 15872 bytes

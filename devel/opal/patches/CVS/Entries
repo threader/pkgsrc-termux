@@ -1,0 +1,13 @@
+/patch-configure/1.2/Fri Apr 20 07:24:39 2012//Tpkgsrc-2017Q4
+/patch-configure.ac/1.1/Sun Dec  4 22:06:04 2011//Tpkgsrc-2017Q4
+/patch-include_opal_opalmixer.h/1.1/Sun Mar 24 16:59:42 2013//Tpkgsrc-2017Q4
+/patch-plugins_configure/1.1/Sun Dec  4 22:06:04 2011//Tpkgsrc-2017Q4
+/patch-plugins_configure.ac/1.1/Sun Dec  4 22:06:04 2011//Tpkgsrc-2017Q4
+/patch-plugins_video_H.263-1998_h263-1993.cxx/1.2/Sat Jan 19 20:29:24 2013//Tpkgsrc-2017Q4
+/patch-plugins_video_H.263-1998_h263pframe.cxx/1.1/Thu Apr 19 12:44:07 2012//Tpkgsrc-2017Q4
+/patch-plugins_video_H.264_Makefile.in/1.1/Thu Apr 19 12:44:07 2012//Tpkgsrc-2017Q4
+/patch-plugins_video_H.264_gpl_Makefile.in/1.1/Thu Apr 19 12:44:07 2012//Tpkgsrc-2017Q4
+/patch-plugins_video_H.264_h264pipe__unix.cxx/1.1/Tue Oct 15 14:42:10 2013//Tpkgsrc-2017Q4
+/patch-plugins_video_MPEG4-ffmpeg_mpeg4.cxx/1.1/Sun Dec  4 22:06:04 2011//Tpkgsrc-2017Q4
+/patch-plugins_video_common_dyna.cxx/1.1/Sun Dec  4 22:06:04 2011//Tpkgsrc-2017Q4
+D

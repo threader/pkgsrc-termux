@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.8 2017/05/09 18:58:29 leot Exp $
+
+SHA1 (xdg-utils-1.1.2.tar.gz) = 20cd4cc5cfaa904b12abf6d584deb568367f4d83
+RMD160 (xdg-utils-1.1.2.tar.gz) = 260b73a6a45e5a8b7de4f98c2b8ccf7a44238b64
+SHA512 (xdg-utils-1.1.2.tar.gz) = 1927506065788b5f8bba8b0617a8ee585265342fa40c4b73000d320acd5909036daef94d49495b00982dbb67b7706b2f1ed949cb4cc519dfa534be2c1c8f74db
+Size (xdg-utils-1.1.2.tar.gz) = 296735 bytes

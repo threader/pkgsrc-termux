@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.5 2017/10/08 12:28:55 wiedi Exp $
+
+SHA1 (osm2pgsql-0.94.0.tar.gz) = 1cd653cce2fd2fdcade6872483bc74509d237feb
+RMD160 (osm2pgsql-0.94.0.tar.gz) = 02a86aecd7451810c00d326bcfcceb7ba0e75ff6
+SHA512 (osm2pgsql-0.94.0.tar.gz) = eceb5de7679048f51a9ad1be4ecf5b2d26da827b3eb8d6b0e86657603c8bf8a6f8d6f665c8ff8db91070a2966057f2deed5e4a3cc8bfb28e60a6031454e4758e
+Size (osm2pgsql-0.94.0.tar.gz) = 1203310 bytes
+SHA1 (patch-CMakeLists.txt) = a33fcf5b935c515a82817fe233a9d9bb6b9e7372

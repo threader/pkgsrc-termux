@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.9 2017/03/16 14:57:13 wiz Exp $
+
+SHA1 (gst123-0.3.4.tar.bz2) = 6096e8478691cf10354bf6bbd5551056bc48467c
+RMD160 (gst123-0.3.4.tar.bz2) = c17b44438a64e541d8feb226ca60d7be1c0c6abf
+SHA512 (gst123-0.3.4.tar.bz2) = 7a5afddd4337b9d843949f49231b64bbc0390b97c40caa3cdac1fe0fd2a7e8a0ce01a77817735770b7a524459daa7e61e79e25c2e3e33769fd29e535d39d866f
+Size (gst123-0.3.4.tar.bz2) = 123399 bytes

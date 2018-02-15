@@ -1,0 +1,16 @@
+/patch-aa/1.2/Wed Feb  9 20:49:02 2005//Tpkgsrc-2017Q4
+/patch-ab/1.2/Fri Nov 16 20:10:20 2012//Tpkgsrc-2017Q4
+/patch-src_Makefile.am/1.1/Fri Nov 16 20:10:20 2012//Tpkgsrc-2017Q4
+/patch-src_Makefile.in/1.1/Fri Nov 16 20:10:20 2012//Tpkgsrc-2017Q4
+/patch-src_bget.c/1.1/Fri Nov 16 20:10:20 2012//Tpkgsrc-2017Q4
+/patch-src_ctl.c/1.1/Fri Nov 16 20:10:20 2012//Tpkgsrc-2017Q4
+/patch-src_getopt.c/1.1/Fri Nov 16 20:10:21 2012//Tpkgsrc-2017Q4
+/patch-src_getopt1.c/1.1/Fri Nov 16 20:10:21 2012//Tpkgsrc-2017Q4
+/patch-src_labrea.c/1.1/Fri Nov 16 20:10:21 2012//Tpkgsrc-2017Q4
+/patch-src_labrea__init.c/1.1/Fri Nov 16 20:10:21 2012//Tpkgsrc-2017Q4
+/patch-src_lbio.c/1.1/Fri Nov 16 20:10:21 2012//Tpkgsrc-2017Q4
+/patch-src_pkt.c/1.1/Fri Nov 16 20:10:21 2012//Tpkgsrc-2017Q4
+/patch-src_pkt__handler.c/1.1/Fri Nov 16 20:10:21 2012//Tpkgsrc-2017Q4
+/patch-src_syslog.c/1.1/Fri Nov 16 20:10:21 2012//Tpkgsrc-2017Q4
+/patch-src_utils.c/1.1/Fri Nov 16 20:10:21 2012//Tpkgsrc-2017Q4
+D

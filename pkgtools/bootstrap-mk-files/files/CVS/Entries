@@ -1,0 +1,22 @@
+/bootstrap.sh/1.4/Mon Mar 18 11:24:42 2013//Tpkgsrc-2017Q4
+/bsd.README/1.3/Tue Sep  8 04:41:04 2015//Tpkgsrc-2017Q4
+/bsd.dep.mk/1.2/Tue Apr 15 16:49:56 2008//Tpkgsrc-2017Q4
+/bsd.depall.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//Tpkgsrc-2017Q4
+/bsd.doc.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//Tpkgsrc-2017Q4
+/bsd.files.mk/1.2/Fri Jan 15 22:00:36 2010//Tpkgsrc-2017Q4
+/bsd.hostprog.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//Tpkgsrc-2017Q4
+/bsd.inc.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//Tpkgsrc-2017Q4
+/bsd.info.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//Tpkgsrc-2017Q4
+/bsd.kernobj.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//Tpkgsrc-2017Q4
+/bsd.kinc.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//Tpkgsrc-2017Q4
+/bsd.kmod.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//Tpkgsrc-2017Q4
+/bsd.lib.mk/1.7/Sat Jul  4 12:33:36 2015//Tpkgsrc-2017Q4
+/bsd.links.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//Tpkgsrc-2017Q4
+/bsd.man.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//Tpkgsrc-2017Q4
+/bsd.nls.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//Tpkgsrc-2017Q4
+/bsd.obj.mk/1.1.1.1/Fri Jul 14 23:13:01 2006//Tpkgsrc-2017Q4
+/bsd.prog.mk/1.2/Tue Dec 31 19:10:20 2013//Tpkgsrc-2017Q4
+/bsd.subdir.mk/1.1.1.1/Fri Jul 14 23:13:01 2006//Tpkgsrc-2017Q4
+/bsd.sys.mk/1.4/Wed Aug  2 09:38:06 2017//Tpkgsrc-2017Q4
+/sys.mk/1.2/Thu Sep  8 14:28:12 2016//Tpkgsrc-2017Q4
+D/mods////

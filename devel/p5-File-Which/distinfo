@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.11 2017/09/10 21:28:57 wiz Exp $
+
+SHA1 (File-Which-1.22.tar.gz) = 770ebe5dfa4076abc9923d8c4993d90dd6d2db9a
+RMD160 (File-Which-1.22.tar.gz) = efa2c38e8886ea37ce52ea0a42a2654df25e78d0
+SHA512 (File-Which-1.22.tar.gz) = 9efd8cc6d08e82a429ab3b0ec5193cb894432311338dc4cdcb73b4536a40bf4829c414e75e5dcb0d03b9190511b232f1d27e441657afa7299b0a5b882877f2d1
+Size (File-Which-1.22.tar.gz) = 21685 bytes

@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.3 2014/01/22 01:17:27 gdt Exp $
+include/compat_time.h
+include/doublefann.h
+include/fann.h
+include/fann_activation.h
+include/fann_cascade.h
+include/fann_cpp.h
+include/fann_data.h
+include/fann_error.h
+include/fann_internal.h
+include/fann_io.h
+include/fann_train.h
+include/fixedfann.h
+include/floatfann.h
+lib/libdoublefann.so
+lib/libdoublefann.so.2
+lib/libdoublefann.so.${PKGVERSION}
+lib/libfann.so
+lib/libfann.so.2
+lib/libfann.so.${PKGVERSION}
+lib/libfixedfann.so
+lib/libfixedfann.so.2
+lib/libfixedfann.so.${PKGVERSION}
+lib/libfloatfann.so
+lib/libfloatfann.so.2
+lib/libfloatfann.so.${PKGVERSION}
+lib/pkgconfig/fann.pc

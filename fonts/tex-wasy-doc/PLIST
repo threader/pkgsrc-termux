@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.2 2015/04/25 08:36:58 markd Exp $
+share/texmf-dist/doc/fonts/wasy/legal.txt
+share/texmf-dist/doc/fonts/wasy/wasydoc.pdf
+share/texmf-dist/doc/fonts/wasy/wasydoc.tex
+share/texmf-dist/doc/fonts/wasy/wasyfont.2

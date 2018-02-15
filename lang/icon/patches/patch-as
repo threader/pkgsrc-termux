@@ -1,0 +1,15 @@
+$NetBSD: patch-as,v 1.5 2015/12/29 23:34:48 dholland Exp $
+
+Use the right library path at runtime.
+
+--- src/runtime/imain.r.orig
++++ src/runtime/imain.r
+@@ -67,7 +67,7 @@
+       {
+          char *p, *q, buf[1000];
+          p = getenv("FPATH");
+-         q = relfile(argv[0], "/..");
++         q = relfile(argv[0], "/../../lib/icon");
+          sprintf(buf, "FPATH=%s %s", (p ? p : "."), (q ? q : "."));
+          putenv(buf);
+          }

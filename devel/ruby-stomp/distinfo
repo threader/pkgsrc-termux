@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.11 2017/06/12 15:50:11 taca Exp $
+
+SHA1 (stomp-1.4.4.gem) = d69da77d451427a6f56e63734b5d9a0c08ff2d0b
+RMD160 (stomp-1.4.4.gem) = 56b7a370bdc9a0c428a40f53909dcacc022c49f9
+SHA512 (stomp-1.4.4.gem) = 77c5a53b56177869beb9ff236405479d1fe48ba6841f42eefbd104a5e1b8f82584283c909bb2f6ec5a34ae99c0dfa91079d0716d1bef65db24c5b1414c1ed673
+Size (stomp-1.4.4.gem) = 93696 bytes

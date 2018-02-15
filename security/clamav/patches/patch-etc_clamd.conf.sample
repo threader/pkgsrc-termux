@@ -1,0 +1,33 @@
+$NetBSD: patch-etc_clamd.conf.sample,v 1.2 2016/06/12 16:06:01 taca Exp $
+
+Make this useable out of the box.
+
+--- etc/clamd.conf.sample.orig	2016-04-22 15:02:19.000000000 +0000
++++ etc/clamd.conf.sample
+@@ -5,7 +5,7 @@
+ 
+ 
+ # Comment or remove the line below.
+-Example
++# Example
+ 
+ # Uncomment this option to enable logging.
+ # LogFile must be writable for the user running daemon.
+@@ -63,7 +63,7 @@ Example
+ # This option allows you to save a process identifier of the listening
+ # daemon (main thread).
+ # Default: disabled
+-#PidFile /var/run/clamd.pid
++PidFile @CLAMAV_DBDIR@/clamd.pid
+ 
+ # Optional path to the global temporary directory.
+ # Default: system specific (usually /tmp or /var/tmp).
+@@ -82,7 +82,7 @@ Example
+ 
+ # Path to a local socket file the daemon will listen on.
+ # Default: disabled (must be specified by a user)
+-#LocalSocket /tmp/clamd.socket
++LocalSocket @CLAMAV_DBDIR@/clamd.sock
+ 
+ # Sets the group ownership on the unix socket.
+ # Default: disabled (the primary group of the user running clamd)

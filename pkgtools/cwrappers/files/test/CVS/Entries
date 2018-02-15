@@ -1,0 +1,19 @@
+/Makefile/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+/TODO/1.2/Thu Nov 27 20:36:44 2014//Tpkgsrc-2017Q4
+/setup_common.sh/1.2/Thu Nov 27 20:36:44 2014//Tpkgsrc-2017Q4
+/test-include_pkgdir.sh/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+/test-include_usr_include.sh/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+/test-lib_expand.sh/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+/test-libdir_pkgdir.sh/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+/test-libdir_usr_lib.sh/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+/test-libpath.sh/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+/test-no_abspath.sh/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+/test-option.sh/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+/test-quoted_arg.sh/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+/test-remove_dir.sh/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+/test-repeated_arg.sh/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+/test-rpath_merge.sh/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+/test-rpath_pkgdir.sh/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+/test-rpath_split.sh/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+/test-rpath_usr_lib.sh/1.1/Wed Sep 17 12:40:56 2014//Tpkgsrc-2017Q4
+D

@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.2 2016/02/12 14:11:24 mef Exp $
+bin/amtterm
+${PLIST.gamt}bin/gamt
+bin/amttool
+man/man1/amtterm.1
+man/man1/amttool.1
+man/man1/gamt.1
+man/man7/amt-howto.7
+share/applications/gamt.desktop

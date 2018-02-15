@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.2 2016/06/19 16:20:27 wiz Exp $
+cross/bin/crunchide

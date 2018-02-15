@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.6 2017/04/18 00:44:27 minskim Exp $
+
+* Make ruby and swig commands are settable.
+* support DESTDIR.
+* Add an include directory for ruby 1.9 and later.
+* Fix build for Ruby 2.2 and later.
+
+--- Makefile.orig	2016-08-15 17:12:01.000000000 +0000
++++ Makefile
+@@ -1,9 +1,8 @@
+ #YACC=yacc
+ YACC=bison -y  -v
+ LEX=flex -P$(YYPREFIX) -olex.yy.c
+-SWIG=swig
+-RUBY=ruby
+-#RUBY=ruby19
++SWIG?=swig
++RUBY?=ruby
+ 
+ RM=rm -f
+ INSTALL=install -c
+@@ -77,5 +76,5 @@ test_ruby:
+ 	$(RUBY) ./itextomml.rb
+ 
+ install_ruby:	itex2MML.$(DYLIB_EXT)
+-	$(INSTALL) itex2MML.$(DYLIB_EXT) $(RUBY_SITEARCHDIR)
+-	$(INSTALL) itextomml.rb itex_stringsupport.rb $(RUBY_SITEDIR)
++	$(INSTALL) itex2MML.$(DYLIB_EXT) $(DESTDIR)$(RUBY_SITEARCHDIR)
++	$(BSD_INSTALL_DATA) itextomml.rb itex_stringsupport.rb $(DESTDIR)$(RUBY_SITEDIR)

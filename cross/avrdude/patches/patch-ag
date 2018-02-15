@@ -1,0 +1,24 @@
+$NetBSD: patch-ag,v 1.7 2014/10/07 15:10:29 mef Exp $
+
+Work around AVRISP mkII initial sync stalls on NetBSD.
+
+--- usb_libusb.c.orig	2014-03-13 08:03:19.000000000 +0900
++++ usb_libusb.c	2014-10-08 00:01:40.000000000 +0900
+@@ -324,6 +324,17 @@ static void usbdev_close(union filedescr
+   if (udev == NULL)
+     return;
+ 
++#if defined(__NetBSD__)
++#define USB_FEAT_ENDPOINT_HALT 0
++  /*
++   * Clear Feature Endpoint Halt to reset device's data toggle to DATA0.
++   * This way, when we reopen expecting DATA0, things don't time out.
++   */
++  usb_control_msg(udev, USB_TYPE_STANDARD | USB_RECIP_ENDPOINT,
++		  USB_REQ_CLEAR_FEATURE, USB_FEAT_ENDPOINT_HALT,
++		  fd->usb.rep & 0xf, NULL, 0, 100);
++#endif
++
+   (void)usb_release_interface(udev, usb_interface);
+ 
+ #if defined(__linux__)

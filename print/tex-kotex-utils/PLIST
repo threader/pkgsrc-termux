@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.4 2015/05/28 11:49:45 markd Exp $
+bin/jamo-normalize
+bin/komkindex
+bin/ttf2kotexfont
+share/texmf-dist/makeindex/kotex-utils/kotex.ist
+share/texmf-dist/makeindex/kotex-utils/memucs-manual.ist

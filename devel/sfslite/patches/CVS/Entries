@@ -1,0 +1,19 @@
+/patch-aa/1.2/Sat Sep  9 19:45:46 2017//Tpkgsrc-2017Q4
+/patch-ab/1.1.1.1/Mon May  7 07:25:55 2012//Tpkgsrc-2017Q4
+/patch-ac/1.1.1.1/Mon May  7 07:25:55 2012//Tpkgsrc-2017Q4
+/patch-async_aio.C/1.1/Sat Sep  9 19:45:46 2017//Tpkgsrc-2017Q4
+/patch-async_daemonize.C/1.1/Sat Sep  9 19:45:46 2017//Tpkgsrc-2017Q4
+/patch-async_dns.C/1.1/Sat Sep  9 19:45:46 2017//Tpkgsrc-2017Q4
+/patch-async_dnsparse.C/1.1/Sat Sep  9 19:45:46 2017//Tpkgsrc-2017Q4
+/patch-async_ifchg.C/1.1/Sat Sep  9 19:45:46 2017//Tpkgsrc-2017Q4
+/patch-async_ihash.C/1.1/Sat Sep  9 19:45:46 2017//Tpkgsrc-2017Q4
+/patch-async_ihash.h/1.2/Sat Sep  9 19:45:46 2017//Tpkgsrc-2017Q4
+/patch-async_itree.h/1.1/Thu Mar 28 21:21:18 2013//Tpkgsrc-2017Q4
+/patch-async_myname.C/1.1/Sat Sep  9 19:45:46 2017//Tpkgsrc-2017Q4
+/patch-async_qhash.h/1.1/Thu Mar 28 21:21:18 2013//Tpkgsrc-2017Q4
+/patch-async_rwfd_c/1.1/Mon Jun 18 03:28:55 2012//Tpkgsrc-2017Q4
+/patch-async_vec.h/1.1/Thu Mar 28 21:21:18 2013//Tpkgsrc-2017Q4
+/patch-configure/1.1/Sat Sep  9 19:45:46 2017//Tpkgsrc-2017Q4
+/patch-configure.in/1.1/Sat Sep  9 19:45:46 2017//Tpkgsrc-2017Q4
+/patch-libsafeptr_sp__gc.h/1.1/Sun Oct 20 18:16:34 2013//Tpkgsrc-2017Q4
+D

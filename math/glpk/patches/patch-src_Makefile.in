@@ -1,0 +1,64 @@
+$NetBSD: patch-src_Makefile.in,v 1.6 2017/08/18 21:47:51 adam Exp $
+
+Use external zlib.
+
+--- src/Makefile.in.orig	2017-07-25 07:00:00.000000000 +0000
++++ src/Makefile.in
+@@ -94,7 +94,7 @@ am__uninstall_files_from_dir = { \
+   }
+ am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(includedir)"
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+-libglpk_la_LIBADD =
++libglpk_la_LIBADD = -lz
+ am_libglpk_la_OBJECTS = libglpk_la-bfd.lo libglpk_la-bfx.lo \
+ 	libglpk_la-glpapi06.lo libglpk_la-glpapi07.lo \
+ 	libglpk_la-glpapi08.lo libglpk_la-glpapi09.lo \
+@@ -162,13 +162,7 @@ am_libglpk_la_OBJECTS = libglpk_la-bfd.l
+ 	libglpk_la-spxchuzr.lo libglpk_la-spxlp.lo libglpk_la-spxnt.lo \
+ 	libglpk_la-spxprim.lo libglpk_la-spxprob.lo \
+ 	libglpk_la-spychuzc.lo libglpk_la-spychuzr.lo \
+-	libglpk_la-spydual.lo libglpk_la-adler32.lo \
+-	libglpk_la-compress.lo libglpk_la-crc32.lo \
+-	libglpk_la-deflate.lo libglpk_la-gzclose.lo \
+-	libglpk_la-gzlib.lo libglpk_la-gzread.lo libglpk_la-gzwrite.lo \
+-	libglpk_la-inffast.lo libglpk_la-inflate.lo \
+-	libglpk_la-inftrees.lo libglpk_la-trees.lo \
+-	libglpk_la-uncompr.lo libglpk_la-zio.lo libglpk_la-zutil.lo
++	libglpk_la-spydual.lo
+ libglpk_la_OBJECTS = $(am_libglpk_la_OBJECTS)
+ libglpk_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+@@ -325,8 +319,7 @@ libglpk_la_CPPFLAGS = \
+ -I$(srcdir)/misc \
+ -I$(srcdir)/mpl \
+ -I$(srcdir)/proxy \
+--I$(srcdir)/simplex \
+--I$(srcdir)/zlib
++-I$(srcdir)/simplex
+ 
+ libglpk_la_LDFLAGS = \
+ -version-info 42:2:2 \
+@@ -505,22 +498,7 @@ simplex/spxprim.c \
+ simplex/spxprob.c \
+ simplex/spychuzc.c \
+ simplex/spychuzr.c \
+-simplex/spydual.c \
+-zlib/adler32.c \
+-zlib/compress.c \
+-zlib/crc32.c \
+-zlib/deflate.c \
+-zlib/gzclose.c \
+-zlib/gzlib.c \
+-zlib/gzread.c \
+-zlib/gzwrite.c \
+-zlib/inffast.c \
+-zlib/inflate.c \
+-zlib/inftrees.c \
+-zlib/trees.c \
+-zlib/uncompr.c \
+-zlib/zio.c \
+-zlib/zutil.c
++simplex/spydual.c
+ 
+ all: all-am
+ 

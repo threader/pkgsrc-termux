@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.12 2017/11/28 05:15:27 ryoon Exp $
+
+SHA1 (jdk-8u152-linux-i586.tar.gz) = 9bf12851033f992584f54ebc19b4929bf8e9b345
+RMD160 (jdk-8u152-linux-i586.tar.gz) = 3ffe7c343086616df6ed25e5b51e0e5187e25e67
+SHA512 (jdk-8u152-linux-i586.tar.gz) = 6b7576ec40b0ddd0a54fbcd61c22b95f472192be5855d143387f1b56220dd68e851a8b87894802c181b1039c14f5a278d950f100c4bd10b862fe4049d9294ce2
+Size (jdk-8u152-linux-i586.tar.gz) = 192699649 bytes
+SHA1 (jdk-8u152-linux-x64.tar.gz) = 1a3c0f86fcfdec6156f8256c87fbdcc04caea242
+RMD160 (jdk-8u152-linux-x64.tar.gz) = ea693614b6b341d044ae438cbdeab0e01f5f15b7
+SHA512 (jdk-8u152-linux-x64.tar.gz) = b0851d46bf0385b7595f8d60da0f06ccdcd59aac75efa9b48635ba77a3e4eb557cbda5585fa5886787a0e549d9e5cfa4a992741349cfc224b36f180907838321
+Size (jdk-8u152-linux-x64.tar.gz) = 189784266 bytes
+SHA1 (jdk-8u152-solaris-x64.tar.gz) = 52cfc301262a730fe450361cc00886d5259ece04
+RMD160 (jdk-8u152-solaris-x64.tar.gz) = 6693441959447117f032af842cc08cebb5b26848
+SHA512 (jdk-8u152-solaris-x64.tar.gz) = 4dd9606be347a61a03c0f670915c4e790d4f5eef80a67922342b539dcae7132b3157df04cd33e5f72fdc7e6fcb43e21b3b387e2da159cdfea0feb01183c68aa0
+Size (jdk-8u152-solaris-x64.tar.gz) = 101758540 bytes

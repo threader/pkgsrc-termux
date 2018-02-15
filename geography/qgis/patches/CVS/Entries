@@ -1,0 +1,10 @@
+/patch-CMakeLists.txt/1.3/Tue Feb  2 04:33:57 2016//Tpkgsrc-2017Q4
+/patch-cmake_FindGDAL.cmake/1.1/Tue Feb  2 04:33:58 2016//Tpkgsrc-2017Q4
+/patch-cmake_FindGEOS.cmake/1.2/Tue Feb  2 04:33:58 2016//Tpkgsrc-2017Q4
+/patch-cmake_FindPostgres.cmake/1.1/Tue Feb  2 04:33:58 2016//Tpkgsrc-2017Q4
+/patch-mac_CMakeLists.txt/1.1/Tue Feb  2 04:33:58 2016//Tpkgsrc-2017Q4
+/patch-mac_cmake_1qt.cmake.in/1.1/Tue Feb  2 04:33:58 2016//Tpkgsrc-2017Q4
+/patch-src_core_CMakeLists.txt/1.1/Tue Feb  2 04:33:58 2016//Tpkgsrc-2017Q4
+/patch-src_core_qgsapplication.cpp/1.2/Tue Feb  2 04:33:58 2016//Tpkgsrc-2017Q4
+/patch-src_crssync_CMakeLists.txt/1.2/Fri Jul  1 16:15:18 2016//Tpkgsrc-2017Q4
+D

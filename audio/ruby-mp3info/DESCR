@@ -1,0 +1,8 @@
+ruby-mp3info read low-level informations and manipulate tags on mp3 files.
+
+* Written in pure ruby
+* Read low-level informations like bitrate, length, samplerate, etc...
+* Read, write, remove id3v1 and id3v2 tags
+* Correctly read VBR files (with or without Xing header)
+* Only 2.3 version is supported for writings id3v2 tags
+* id3v2 tags are always written in UTF-16 encoding

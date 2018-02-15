@@ -1,0 +1,11 @@
+# $NetBSD: INSTALL,v 1.2 2016/03/03 12:54:03 wiz Exp $
+
+case ${STAGE} in
+
+POST-INSTALL)
+	${PERL5} -I@PERL5_INSTALLVENDORLIB@ -MXML::SAX -e "XML::SAX->add_parser(q(XML::LibXML::SAX::Parser))->save_parsers()"
+	${PERL5} -I@PERL5_INSTALLVENDORLIB@ -MXML::SAX -e "XML::SAX->add_parser(q(XML::LibXML::SAX))->save_parsers()"
+	${ECHO} "Added parser to XML::SAX registry."
+	;;
+
+esac

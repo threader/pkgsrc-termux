@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.3 2016/05/25 21:39:44 fhajny Exp $
+
+Default dirs.
+
+--- Makefile.orig	2012-02-13 16:54:08.000000000 +0000
++++ Makefile
+@@ -1,10 +1,8 @@
+ INSTALL = install
+-ETCDIR = $(ROOTDIR)/etc
+-CONFDIR = $(ETCDIR)/sqlgrey
+-SBINDIR = $(ROOTDIR)/usr/sbin
+-BINDIR = $(ROOTDIR)/usr/bin
+-INITDIR = $(ETCDIR)/init.d
+-MANDIR = $(ROOTDIR)/usr/share/man/man1
++CONFDIR = ${DESTDIR}$(EGDIR)
++SBINDIR = ${DESTDIR}$(PREFIX)/sbin
++BINDIR = ${DESTDIR}$(PREFIX)/bin
++MANDIR = ${DESTDIR}$(PREFIX)/$(PKGMANDIR)/man1
+ 
+ VERSION := $(shell cat VERSION)
+ 
+@@ -43,9 +41,7 @@ clean:
+ 
+ install: all
+ 	$(INSTALL) -d -m 755 $(SBINDIR)
+-	$(INSTALL) -d -m 755 $(ETCDIR)
+ 	$(INSTALL) -d -m 755 $(CONFDIR)
+-	$(INSTALL) -d -m 755 $(INITDIR)
+ 	$(INSTALL) -d -m 755 $(MANDIR)
+ 	$(INSTALL) -d -m 755 $(BINDIR)
+ 	$(INSTALL) -m 755 sqlgrey $(SBINDIR)

@@ -1,0 +1,26 @@
+# $NetBSD: Makefile.common,v 1.21 2017/08/16 20:21:14 wiz Exp $
+#
+# used by textproc/catdoc-tk/Makefile
+
+DISTNAME=	catdoc_0.94.4.orig
+PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
+CATEGORIES=	textproc
+MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/c/catdoc/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://alioth.debian.org/projects/catdoc/
+COMMENT=	Converts MS Word, Excel and Powerpoint files to plain text
+LICENSE=	gnu-gpl-v2
+
+DISTINFO_FILE=		${.CURDIR}/../../textproc/catdoc/distinfo
+PATCHDIR=		${.CURDIR}/../../textproc/catdoc/patches
+
+WRKSRC=			${WRKDIR}/${DISTNAME:S/_/-/:S/.orig//}
+
+USE_FEATURES=		glob
+
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_LIBDIR=	${PREFIX}/share
+CONFIGURE_ARGS+=	--with-install-root=${DESTDIR}
+
+CPPFLAGS+=		-Dunix -D__unix
