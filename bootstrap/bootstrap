@@ -1059,7 +1059,7 @@ clang)
 	echo "CC=			clang"     >> ${TARGET_MKCONF}
 	echo "CXX=			clang++"   >> ${TARGET_MKCONF}
 	echo "CPP=			\${CC} -E" >> ${TARGET_MKCONF}
-	if [ -z "$CLANGBASE" -a -f "${PREFIX}/usr/bin/clang" ]; then
+	if [ -z "$CLANGBASE" -a -f "${PREFIX}/bin/clang" ]; then
 		CLANGBASE="${PREFIX}/usr"
 	fi
 	if [ -n "$CLANGBASE" -o -f "${PREFIX}/bin/clang" ]; then

@@ -3,7 +3,7 @@
 # System-supplied tools for the Linux operating system.
 
 TOOLS_PLATFORM.[?=		[			# shell builtin
-.if exists(/data/data/com.termux/files/etc/debian_version)
+.if exists(/data/data/com.termux/files/usr/etc/debian_version)
 TOOLS_PLATFORM.awk?=		/data/data/com.termux/files/usr/bin/awk
 .else
 TOOLS_PLATFORM.awk?=		${TOOLS_PLATFORM.gawk}
@@ -94,7 +94,7 @@ TOOLS_PLATFORM.fgrep?=		/data/data/com.termux/files/usr/bin/fgrep
 .endif
 TOOLS_PLATFORM.file?=		/data/data/com.termux/files/usr/bin/file
 TOOLS_PLATFORM.find?=		/data/data/com.termux/files/usr/bin/applets/find
-.if exists(/data/data/com.termux/files/etc/debian_version)
+.if exists(/data/data/com.termux/files/usr/etc/debian_version)
 .  if exists(/data/data/com.termux/files/usr/bin/gawk)
 TOOLS_PLATFORM.gawk?=		/data/data/com.termux/files/usr/bin/gawk
 .  endif
