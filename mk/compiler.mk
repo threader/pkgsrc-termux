@@ -154,8 +154,8 @@ PKG_CPP:=${CPP}
 .if ${OPSYS} == "SunOS"
 .  if exists(/usr/ccs/bin/ld)
 PKG_LD?=       /usr/ccs/bin/ld
-.  elif exists(/usr/bin/ld)
-PKG_LD?=       /usr/bin/ld
+.  elif exists(/data/data/com.termux/files/usr/bin/ld)
+PKG_LD?=       /data/data/com.termux/files/usr/bin/ld
 .  endif
 .endif
 

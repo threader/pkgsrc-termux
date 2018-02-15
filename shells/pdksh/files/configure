@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /data/data/com.termux/files/usr/bin/bash
 
 
 
@@ -3354,7 +3354,7 @@ else
 exit 69
 ' > conftest
 chmod u+x conftest
-(SHELL=/bin/sh; export SHELL; ./conftest >/dev/null)
+(SHELL=/data/data/com.termux/files/usr/bin/bash; export SHELL; ./conftest >/dev/null)
 if test $? -ne 69; then
    ac_cv_sys_interpreter=yes
 else
@@ -4443,5 +4443,6 @@ exit 0
 EOF
 chmod +x $CONFIG_STATUS
 rm -fr confdefs* $ac_clean_files
-test "$no_create" = yes || ${CONFIG_SHELL-/bin/sh} $CONFIG_STATUS || exit 1
+test "$no_create" = yes || ${CONFIG_SHELL-/bin/sh} 
+$CONFIG_STATUS || exit 1
 

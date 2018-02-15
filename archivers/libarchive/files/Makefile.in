@@ -13903,7 +13903,7 @@ dist-hook:
 	rm -f `find $(distdir) -name '*.out'`
 	rm -f `find $(distdir) -name '*.core'`
 	-rm -f $(distdir)/*/Makefile $(distdir)/*/*/Makefile
-	cd $(distdir)/doc && /bin/sh update.sh
+	cd $(distdir)/doc && /data/data/com.termux/files/usr/bin/bash update.sh
 
 distclean-local:
 	-rm -rf .ref

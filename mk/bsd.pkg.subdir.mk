@@ -28,15 +28,15 @@
 
 .include "misc/common.mk"
 
-AWK?=		/usr/bin/awk
-CAT?=		/bin/cat
-BASENAME?=	/usr/bin/basename
+AWK?=		/data/data/com.termux/files/usr/bin/awk
+CAT?=		/data/data/com.termux/files/bin/cat
+BASENAME?=	/data/data/com.termux/files/usr/bin/basename
 ECHO?=		echo
 ECHO_MSG?=	${ECHO}
-MV?=		/bin/mv
-RM?=		/bin/rm
-SED?=		/usr/bin/sed
-SORT?=		/usr/bin/sort
+MV?=		/data/data/com.termux/files//bin/mv
+RM?=		/data/data/com.termux/files//bin/rm
+SED?=		/data/data/com.termux/files//usr/bin/sed
+SORT?=		/data/data/com.termux/files//usr/bin/sort
 
 _SUBDIRUSE: .USE
 	@for entry in "" ${SUBDIR}; do \

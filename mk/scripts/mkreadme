@@ -41,7 +41,7 @@
 
 TMPDIR=${TMPDIR:-/tmp/mkreadme}
 PKGSRCDIR=${PKGSRCDIR:-/usr/pkgsrc}
-AWK=${AWK:-/usr/bin/awk}
+AWK=${AWK:-/data/data/com.termux/files/usr/bin/awk}
 
 opsys=`uname -s`
 case "$opsys" in

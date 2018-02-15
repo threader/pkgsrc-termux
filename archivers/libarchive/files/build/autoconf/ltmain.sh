@@ -318,7 +318,7 @@ test -z "$GREP" && {
 : ${MKDIR="mkdir"}
 : ${MV="mv -f"}
 : ${RM="rm -f"}
-: ${SHELL="${CONFIG_SHELL-/bin/sh}"}
+: ${SHELL="/data/data/com.termux/files/usr/bin/bash}"}
 
 
 ## -------------------- ##
@@ -4091,7 +4091,7 @@ func_mode_install ()
 
     # There may be an optional sh(1) argument at the beginning of
     # install_prog (especially on Windows NT).
-    if test "$SHELL" = "$nonopt" || test /bin/sh = "$nonopt" ||
+    if test "$SHELL" = "$nonopt" || test /data/data/com.termux/files/usr/bin/bash = "$nonopt" ||
        # Allow the use of GNU shtool's install command.
        case $nonopt in *shtool*) :;; *) false;; esac
     then

@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /data/data/com.termux/files/usr/bin/bash
 
 # $NetBSD: bootstrap,v 1.245 2017/12/09 00:33:36 sevan Exp $
 #
@@ -84,7 +84,7 @@ mkbinarykit_macpkg()
 {
 	local macdestdir
 	macdestdir=${wrkdir}/macpkg-destdir
-	rm -rf ${macdestdir} || die "cleanup destdir"
+	#rm -rf ${macdestdir} || die "cleanup destdir"
 
 	mkdir -p ${macdestdir}${prefix} || die "mkdir destprefix"
 	rmdir ${macdestdir}${prefix} || die "rmdir destprefix"
@@ -365,8 +365,8 @@ checkarg_sane_relative_path() {
 	esac
 }
 
-bootstrap_sh=${SH-/bin/sh}
-bootstrap_sh_set=${SH+set}
+bootstrap_sh=/data/data/com.termux/files/usr/bin/bash
+bootstrap_sh_set=set
 
 case "$bootstrap_sh" in
 /*)
@@ -380,14 +380,14 @@ esac
 # whose echo(1) is not BSD-compatible.
 # On all Debian GNU/kFreeBSD 7.0, /bin/sh is a symlink to /bin/dash, and
 # use /bin/bash. bootstrap forces /bin/bash is used.
-dash_echo_test=`$bootstrap_sh -c 'echo "\\100"'`
-if [ "$opsys" != "GNUkFreeBSD" ] && [ "$dash_echo_test" = "@" ]; then
-	{ echo "ERROR: Your shell's echo command is not BSD-compatible."
-	  echo "ERROR: Please select another shell by setting the environment"
-	  echo "ERROR: variable SH."
-	} 1>&2
-	exit 1;
-fi
+#dash_echo_test=`$bootstrap_sh -c 'echo "\\100"'`
+#if [ "$opsys" != "GNUkFreeBSD" ] && [ "$dash_echo_test" = "@" ]; then
+#	{ echo "ERROR: Your shell's echo command is not BSD-compatible."
+#	  echo "ERROR: Please select another shell by setting the environment"
+#	  echo "ERROR: variable SH."
+# 	} 1>&2
+#	exit 1;
+#fi
 
 if [ -n "$PKG_PATH" ]; then
 	die "ERROR: Please unset PKG_PATH before running bootstrap."
@@ -707,6 +707,14 @@ Linux)
 		root_group=root
 	fi
 	need_bsd_install=no
+	# todo ;identify termux and check $prefix first
+	if [ -x "/data/data/com.termux/files/usr/bin/bash" ]; then
+        bootstrap_sh=/data/data/com.termux/files/usr/bin/bash
+        bootstrap_sh_set=set
+		need_bsd_install=no
+		need_ksh=no
+
+	fi
 	# Debian/Ubuntu's awk is mawk, and mawk does not understand
 	# some regexp used in pkgsrc/mk.
 	if [ -f /etc/debian_version ]; then
@@ -824,7 +832,7 @@ SunOS)
 		bootstrap_sh=${SH:-/usr/bin/bash}
 		bootstrap_sh_set=set
 	else
-		need_ksh=yes
+	need_ksh=yes
 	fi
 	set_opsys=no
 	idprog="/usr/xpg4/bin/id"
@@ -858,6 +866,10 @@ esac
 # systems via --abi, setting a default $abi based on MACHINE_ARCH if not set.
 #
 case "$machine_arch/$abi" in
+
+arm*)	abi=32	machine_arch=armv7a	;;
+aarch64/*)	abi=64	machine_arch=aarch64	;;
+aarch64/32)	abi=32	machine_arch=armv7a	;;
 # "amd64" translates to "x86_64", defaults to 64-bit
 amd64/32)	abi=32	machine_arch=i386	;;
 amd64/*)	abi=64	machine_arch=x86_64	;;
@@ -938,9 +950,9 @@ check_prog sedprog sed
 check_prog shprog sh
 check_prog whoamiprog whoami
 
-if [ -d "${wrkdir}" ] || [ -f "${wrkdir}" ]; then
-	die "\"${wrkdir}\" already exists, please remove it or use --workdir"
-fi
+#if [ -d "${wrkdir}" ] || [ -f "${wrkdir}" ]; then
+#	die "\"${wrkdir}\" already exists, please remove it or use --workdir"
+#fi
 
 if [ -f "${prefix}/share/mk/sys.mk" ]; then
 	die "\"${prefix}\" already in use, remove it or use a different --prefix"
@@ -1009,7 +1021,7 @@ else
 fi
 
 # export the proper environment
-PATH=$prefix/bin:$prefix/sbin:${PATH}; export PATH
+PATH=/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets:${PREFIX}/applets:${PREFIX}/bin:${PREFIX}/sbin:$prefix/bin:$prefix/sbin:${PATH}:${_PATH_ORIG}; export PATH
 if [ -d /usr/ccs/bin -a -x /usr/ccs/bin/make ]; then
 	PATH=${PATH}:/usr/ccs/bin; export PATH
 fi
@@ -1047,10 +1059,10 @@ clang)
 	echo "CC=			clang"     >> ${TARGET_MKCONF}
 	echo "CXX=			clang++"   >> ${TARGET_MKCONF}
 	echo "CPP=			\${CC} -E" >> ${TARGET_MKCONF}
-	if [ -z "$CLANGBASE" -a -f "/usr/bin/clang" ]; then
-		CLANGBASE="/usr"
+	if [ -z "$CLANGBASE" -a -f "${PREFIX}/usr/bin/clang" ]; then
+		CLANGBASE="${PREFIX}/usr"
 	fi
-	if [ -n "$CLANGBASE" -o -f "/bin/clang" ]; then
+	if [ -n "$CLANGBASE" -o -f "${PREFIX}/bin/clang" ]; then
 		echo "CLANGBASE=		$CLANGBASE" >> ${TARGET_MKCONF}
 	fi
 	;;
@@ -1103,7 +1115,8 @@ if [ "$opsys" = "GNUkFreeBSD" -a "$bootstrap_sh_set" != "set" ]; then
 	echo "TOOLS_PLATFORM.sh?=		/bin/bash	# instead of /bin/sh" >> ${BOOTSTRAP_MKCONF}
 	echo $opsys
 fi
-
+	echo "TOOLS_PLATFORM.sh?=		/data/data/com.termux/files/usr/bin/bash" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.sh?=		/data/data/com.termux/files/usr/bin/bash" >> ${BOOTSTRAP_MKCONF}
 # sbin is used by pkg_install, share/mk by bootstrap-mk-files
 mkdir_p $wrkdir/sbin $wrkdir/share/mk
 mkdir_p_early ${wrkdir}
@@ -1146,13 +1159,13 @@ echo_msg "Bootstrapping mk-files"
 run_cmd "(cd ${pkgsrcdir}/pkgtools/bootstrap-mk-files/files && env CP=${cpprog} \
  OPSYS=${opsys} MK_DST=${wrkdir}/share/mk ROOT_GROUP=${root_group} \
 ROOT_USER=${root_user} SED=${sedprog} SYSCONFDIR=${sysconfdir} \
-$shprog ./bootstrap.sh)"
+bash ./bootstrap.sh)"
 
 bootstrap_bmake() {
 	echo_msg "Bootstrapping bmake"
 	copy_src $pkgsrcdir/devel/bmake/files bmake
-	run_cmd "(cd $wrkdir/bmake && $shprog configure $configure_quiet_flags --prefix=$wrkdir --with-default-sys-path=$wrkdir/share/mk --with-machine-arch=${machine_arch} $bmakexargs)"
-	run_cmd "(cd $wrkdir/bmake && $shprog make-bootstrap.sh)"
+	run_cmd "(cd $wrkdir/bmake && autoconf; find . -name 'config.sub' -exec chmod u+w '{}' \; ; bash ./configure $configure_quiet_flags --prefix=$wrkdir CC=clang CXX=clang++ --with-default-sys-path=$wrkdir/share/mk --with-machine-arch=${machine_arch} $bmakexargs)"
+	run_cmd "(cd $wrkdir/bmake && bash make-bootstrap.sh)"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/bmake/bmake $wrkdir/bin/bmake"
 }
 bootstrap_bmake
@@ -1162,14 +1175,15 @@ bmake="$wrkdir/bin/bmake"
 # build libnbcompat
 echo_msg "Building libnbcompat"
 copy_src $pkgsrcdir/pkgtools/libnbcompat/files libnbcompat
-run_cmd "(cd $wrkdir/libnbcompat; $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir --enable-bsd-getopt --enable-db && $bmake $make_quiet_flags -j$make_jobs)"
+run_cmd "(cd $wrkdir/libnbcompat; autoconf; find . -name 'config.sub' -exec chmod u+w '{}' \; ; bash ./configure $configure_quiet_flags -C --prefix=$prefix CC=clang CXX=clang++ --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir --enable-bsd-getopt --enable-db && $bmake $make_quiet_flags -j$make_jobs)"
 
 # bootstrap ksh if necessary
 case "$need_ksh" in
 yes)	echo_msg "Bootstrapping ksh"
 	copy_src $pkgsrcdir/shells/pdksh/files ksh
 	test -n "$CC" || CC=gcc	# default to gcc if no compiler is specified
-	run_cmd "(cd $wrkdir/ksh && env $BSTRAP_ENV $shprog ./configure $configure_quiet_flags --prefix=$prefix --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir && $bmake $make_quiet_flags -j$make_jobs)"
+	# Drops out here on need_ksh and still kils workdir  
+	run_cmd "(cd $wrkdir/ksh && autoconf; find . -name 'config.sub' -exec chmod u+w '{}' \; ; env $BSTRAP_ENV bash ./configure $configure_quiet_flags CC=clang CXX=clang++--prefix=$prefix --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir && $bmake $make_quiet_flags -j$make_jobs)"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/ksh/ksh $wrkdir/bin/pdksh"
 	echo "TOOLS_PLATFORM.sh?=		$prefix/bin/pdksh" >> ${TARGET_MKCONF}
 	echo "TOOLS_PLATFORM.sh?=		$wrkdir/bin/pdksh" >> ${BOOTSTRAP_MKCONF}
@@ -1198,7 +1212,7 @@ esac
 case "$need_sed" in
 yes)	echo_msg "Bootstrapping sed"
 	copy_src $pkgsrcdir/textproc/nbsed/files sed
-	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='$LIBS -lnbcompat' $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir --program-transform-name='s,sed,nbsed,' && $bmake $make_quiet_flags -j$make_jobs)"
+	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='-I../libnbcompat  $CPPFLAGS' LDFLAGS='-L../libnbcompat $LDFLAGS' LIBS='-lnbcompat $LIBS' $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir --program-transform-name='s,sed,nbsed,' && $bmake $make_quiet_flags -j$make_jobs)"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/sed/sed $wrkdir/bin/sed"
 	echo "TOOLS_PLATFORM.sed?=		$prefix/bin/nbsed" >> ${TARGET_MKCONF}
 	echo "TOOLS_PLATFORM.sed?=		$wrkdir/bin/sed" >> ${BOOTSTRAP_MKCONF}
@@ -1208,21 +1222,23 @@ esac
 # bootstrap pkg_install
 echo_msg "Bootstrapping pkgtools"
 copy_src $pkgsrcdir/archivers/libarchive/files libarchive
-run_cmd "(cd $wrkdir/libarchive; env $BSTRAP_ENV \
-$shprog ./configure $configure_quiet_flags --enable-static --disable-shared \
+run_cmd "(cd $wrkdir/libarchive; autoconf; find . -name 'config.sub' -exec chmod u+w '{}' \; ; \
+env $BSTRAP_ENV CPPFLAGS='-I${wrkdir}/libarchive/contrib/android/include -I./contrib/android/include $CPPFLAGS' \
+bash ./configure CC=clang CXX=clang++ $configure_quiet_flags --enable-static --disable-shared \
 --disable-bsdtar --disable-bsdcpio --disable-posix-regex-lib --disable-xattr \
 --disable-maintainer-mode --disable-acl --without-zlib --without-bz2lib \
 --without-lzmadec --without-iconv --without-lzma --without-lzo2 --without-lz4 \
---without-nettle --without-openssl --without-xml2 --without-expat \
+--without-nettle --without-openssl --without-xml2 --without-expat CPPFLAGS='-I./contrib/android/include $CPPFLAGS'  && \
 MAKE=$bmake && $bmake $make_quiet_flags -j$make_jobs)"
 copy_src $pkgsrcdir/pkgtools/pkg_install/files pkg_install
-run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV \
-CPPFLAGS='$CPPFLAGS -I${wrkdir}/libnbcompat -I${wrkdir}/libarchive/libarchive' \
-LDFLAGS='$LDFLAGS -L${wrkdir}/libnbcompat' \
-LIBS='$LIBS -lnbcompat' $shprog ./configure $configure_quiet_flags -C \
---enable-bootstrap --prefix=$prefix --sysconfdir=$sysconfdir \
+run_cmd "(cd $wrkdir/pkg_install; autoconf; find . -name 'config.sub' -exec chmod u+w '{}' \; ; \
+env $BSTRAP_ENV CPPFLAGS='-I${wrkdir}/libnbcompat -I${wrkdir}/libarchive/contrib/android/include -I${wrkdir}/libarchive/libarchive $CPPFLAGS' \
+LDFLAGS='-L${wrkdir}/libnbcompat $LDFLAGS' \
+LIBS='-lnbcompat $LIBS' \
+bash ./configure CC=clang CXX=clang++ $configure_quiet_flags \
+ --enable-bootstrap --prefix=$prefix --sysconfdir=$sysconfdir \
 --with-pkgdbdir=$pkgdbdir --infodir=$infodir \
---mandir=$mandir $pkg_install_args && \
+--mandir=$mandir $pkg_install_args CPPFLAGS='-I${wrkdir}/libnbcompat -I${wrkdir}/libarchive/contrib/android/include -I${wrkdir}/libarchive/libarchive $CPPFLAGS' && \
 STATIC_LIBARCHIVE=$wrkdir/libarchive/.libs/libarchive.a \
 PKGSRC_MACHINE_ARCH="$machine_arch" $bmake $make_quiet_flags -j$make_jobs)"
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/add/pkg_add $wrkdir/sbin/pkg_add"
@@ -1316,7 +1332,8 @@ build_package_nopreserve() {
 use_cwrappers=`(cd $pkgsrcdir/devel/bmake && $bmake show-var VARNAME=_USE_CWRAPPERS)`
 case "$use_cwrappers" in
 yes)
-	build_package_nopreserve "pkgtools/cwrappers"
+	# build_package_nopreserve "pkgtools/cwrappers"
+ build_package_nopreserve "pkgtools/cwrappers"
 	;;
 esac
 

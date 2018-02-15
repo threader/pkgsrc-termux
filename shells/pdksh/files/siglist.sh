@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 #	$NetBSD: siglist.sh,v 1.3 2011/01/23 17:29:30 hauke Exp $
 #
 # Script to generate a sorted, complete list of signals, suitable

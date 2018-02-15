@@ -199,15 +199,16 @@ _CONFIGURE_SCRIPT_ENV+=	INSTALL_DATA=${INSTALL_DATA:Q}
 _CONFIGURE_SCRIPT_ENV+=	INSTALL_GAME=${INSTALL_GAME:Q}
 _CONFIGURE_SCRIPT_ENV+=	INSTALL_GAME_DATA=${INSTALL_GAME_DATA:Q}
 _CONFIGURE_SCRIPT_ENV+=	${CONFIGURE_ENV}
-
+_CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash
 .PHONY: do-configure-script
 do-configure-script:
 .for _dir_ in ${CONFIGURE_DIRS}
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
-	${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV}			\
+ 	autoconf > /dev/null && \
+	  ${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV}			\
 		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
-			${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+		${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} CC=clang CXX=clang++
 .endfor
 
 ######################################################################

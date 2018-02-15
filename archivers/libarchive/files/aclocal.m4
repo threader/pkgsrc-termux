@@ -99,7 +99,7 @@ AC_REQUIRE([LTVERSION_VERSION])dnl
 AC_REQUIRE([LTOBSOLETE_VERSION])dnl
 m4_require([_LT_PROG_LTMAIN])dnl
 
-_LT_SHELL_INIT([SHELL=${CONFIG_SHELL-/bin/sh}])
+_LT_SHELL_INIT([SHELL=/data/data/com.termux/files/usr/bin/bash])
 
 dnl Parse OPTIONS
 _LT_SET_OPTIONS([$0], [$1])

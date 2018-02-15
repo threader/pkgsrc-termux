@@ -9,13 +9,13 @@ IMAKE_TOOLS=		gmake	# extra tools required when we use imake
 .endif
 IMAKEOPTS+=	-DBuildHtmlManPages=NO
 PKGLOCALEDIR?=	share
-PS?=		/bin/ps
+PS?=		/data/data/com.termux/files/bin/ps
 # XXX: default from defaults/mk.conf.  Verify/correct for this platform
 # and remove this comment.
-.if exists(/usr/bin/su)
-SU?=		/usr/bin/su
+.if exists(/data/data/com.termux/files/usr/bin/su)
+SU?=		/data/data/com.termux/files/usr/bin/su
 .else
-SU?=		/bin/su
+SU?=		/data/data/com.termux/files/bin/su
 .endif
 TYPE?=		type			# Shell builtin
 
@@ -23,16 +23,16 @@ CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
-GROUPADD?=		/usr/sbin/groupadd
+GROUPADD?=		/data/data/com.termux/files/usr/sbin/groupadd
 MOTIF_TYPE_DEFAULT?=	motif	# default 2.0 compatible libs type
-.if exists(/etc/ssdlinux_version)
-NOLOGIN?=		/sbin/nologin
+.if exists(/data/data/com.termux/files/etc/ssdlinux_version)
+NOLOGIN?=		/data/data/com.termux/files/sbin/nologin
 .else
-NOLOGIN?=		/bin/false
+NOLOGIN?=		/data/data/com.termux/files/usr/bin/false
 .endif
-PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
+PKG_TOOLS_BIN?=		${PREFIX}/${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
-.if exists(/etc/ssdlinux_version)
+.if exists(/data/data/com.termux/files/usr/etc/ssdlinux_version)
 ROOT_GROUP?=		wheel
 .else
 ROOT_GROUP?=		root
@@ -43,13 +43,33 @@ ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 ULIMIT_CMD_cputime?=	ulimit -t `ulimit -H -t`
-USERADD?=		/usr/sbin/useradd
+USERADD?=		/data/data/com.termux/files/usr/sbin/useradd
 
 _OPSYS_EMULDIR.linux=	# empty
 _OPSYS_EMULDIR.linux32=	# empty
+# clang
+BUILDLINK_TRANSFORM+=   rm:-Wl,-O1
+BUILDLINK_TRANSFORM+=   rm:-Wl,-O2
+BUILDLINK_TRANSFORM+=   rm:-Wl,-Bdynamic
+BUILDLINK_TRANSFORM+=   rm:-Wl,-Bsymbolic
+BUILDLINK_TRANSFORM+=   rm:-Wl,-export-dynamic
+BUILDLINK_TRANSFORM+=   rm:-Wl,-warn-common
+BUILDLINK_TRANSFORM+=   rm:-Wl,--as-needed
+BUILDLINK_TRANSFORM+=   rm:-Wl,--no-as-needed
+BUILDLINK_TRANSFORM+=   rm:-Wl,--disable-new-dtags
+BUILDLINK_TRANSFORM+=   rm:-Wl,--enable-new-dtags
+BUILDLINK_TRANSFORM+=   rm:-Wl,--export-dynamic
+BUILDLINK_TRANSFORM+=   rm:-Wl,--gc-sections
+BUILDLINK_TRANSFORM+=   rm:-Wl,--no-undefined
+
+
+# Remove GCC-specific flags if using clang
+.if ${PKGSRC_COMPILER} == "clang"
+BUILDLINK_TRANSFORM+=   rm:-mimpure-text
+.endif
 
 # Support Debian/Ubuntu's multiarch hierarchy.
-.if exists(/etc/debian_version)
+.if exists(/data/data/com.termux/files/usr/etc/tmux.conf)
 .  if !empty(MACHINE_ARCH:Mx86_64)
 _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu
@@ -59,18 +79,18 @@ _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/i386-linux
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/i386-linux-gnu /usr/lib/i386-linux-gnu
 .  endif
 .  if !empty(MACHINE_ARCH:Marm*)
-.    if exists(/etc/ld.so.conf.d/arm-linux-gnueabihf.conf)
-_OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/arm-linux-gnueabihf:/usr/lib/arm-linux-gnueabihf
-_OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/arm-linux-gnueabihf /usr/lib/arm-linux-gnueabihf
+.    if exists(/data/data/com.termux/files/usr/etc/ld.so.conf.d/arm-linux-gnueabihf.conf)
+_OPSYS_SYSTEM_RPATH=	/data/data/com.termux/files/usr/lib:/data/data/com.termux/files/usr/arm-linux-androideabihf:${PREFIX}${LIBABISUFFIX}
+_OPSYS_LIB_DIRS?=	/data/data/com.termux/files/usr${LIBABISUFFIX} /data/data/com.termux/files/usr${LIBABISUFFIX} /data/data/com.termux/files/usr/arm-linux-androideabihf ${PREFIX}${LIBABISUFFIX}
 .    else
-_OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/arm-linux-gnueabi:/usr/lib/arm-linux-gnueabi
-_OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/arm-linux-gnueabi /usr/lib/arm-linux-gnueabi
+_OPSYS_SYSTEM_RPATH=	/data/data/com.termux/files/usr/lib:/data/data/com.termux/files/usr${LIBABISUFFIX}:/data/data/com.termux/files/usr/arm-linux-androideabi:${PREFIX}${LIBABISUFFIX}
+_OPSYS_LIB_DIRS?=	/data/data/com.termux/files/usr${LIBABISUFFIX} /data/data/com.termux/files/usr/arm-linux-androideabi ${PREFIX}${LIBABISUFFIX}
 .    endif
 .  endif
 .  if !empty(MACHINE_ARCH:Maarch64)
-LIBABISUFFIX?=		/aarch64-linux-gnu
-_OPSYS_SYSTEM_RPATH=	/lib:/usr/lib:/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
-_OPSYS_LIB_DIRS?=	/lib /usr/lib /lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
+LIBABISUFFIX?=		/aarch64-linux-android
+_OPSYS_SYSTEM_RPATH=	/data/data/com.termux/files/usr/lib:/data/data/com.termux/files/usr${LIBABISUFFIX}:/data/data/com.termux/files/usr/aarch64-linux-androideabi:${PREFIX}${LIBABISUFFIX}
+_OPSYS_LIB_DIRS?=	/data/data/com.termux/files/usr/lib /data/data/com.termux/files/usr${LIBABISUFFIX} /data/data/com.termux/files/usr/aarch64-linux-androideabi ${PREFIX}${LIBABISUFFIX}
 .  endif
 .  if !empty(MACHINE_ARCH:Mpowerpc64le)
 LIBABISUFFIX?=		/powerpc64le-linux-gnu
@@ -78,10 +98,10 @@ _OPSYS_SYSTEM_RPATH=	/lib:/usr/lib:/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
 _OPSYS_LIB_DIRS?=	/lib /usr/lib /lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
 .  endif
 .else
-_OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
-_OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
+_OPSYS_SYSTEM_RPATH=	/data/data/com.termux/files/usr/lib:/data/data/com.termux/files/usr${LIBABISUFFIX}:${PREFIX}${LIBABISUFFIX}
+_OPSYS_LIB_DIRS?=	/data/data/com.termux/files/usr/lib /data/data/com.termux/files/usr{LIBABISUFFIX} ${PREFIX}${LIBABISUFFIX}
 .endif
-_OPSYS_INCLUDE_DIRS?=	/usr/include
+_OPSYS_INCLUDE_DIRS?=	/data/data/com.termux/files/usr/include ${PREFIX}/include ${prefix}/include ${PREFIX}/include${LIBABISUFFIX} 
 
 .if !empty(OS_VARIANT:Mchromeos)
 _OPSYS_LIB_DIRS+=	/usr/local/lib
@@ -96,7 +116,7 @@ _OPSYS_PREFER.libexecinfo?=	native
 _OPSYS_PREFER.libinotify?=	native
 _OPSYS_PREFER.sysexits?=	native
 
-.if exists(/usr/include/netinet6) || exists(/usr/include/linux/in6.h)
+.if exists(/data/data/com.termux/files/usr/include/netinet6) || exists(/data/data/com.termux/files/usr/include/linux/in6.h)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else
 _OPSYS_HAS_INET6=	no	# IPv6 is not standard
@@ -121,8 +141,8 @@ _OPSYS_CAN_CHECK_SSP=		no  # only supports libssp at this time
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
-.if exists(/usr/bin/getconf)
-_OPSYS_MAX_CMDLEN_CMD?=	/usr/bin/getconf ARG_MAX
+.if exists(/data/data/com.termux/files/usr/bin/getconf)
+_OPSYS_MAX_CMDLEN_CMD?=	/data/data/com.termux/files/usr/bin/getconf ARG_MAX
 .endif
 
 # Register support for FORTIFY (with GCC).  Linux only supports FORTIFY
@@ -162,8 +182,8 @@ CWRAPPERS_APPEND.ld+=	-m elf_i386
 .endif
 
 ## Use _CMD so the command only gets run when needed!
-.if exists(/lib${LIBABISUFFIX}/libc.so.6)
-_GLIBC_VERSION_CMD=	/lib${LIBABISUFFIX}/libc.so.6 --version | \
+.if exists(/data/data/com.termux/files/usr${LIBABISUFFIX}/libc.so.6)
+_GLIBC_VERSION_CMD=	/data/data/com.termux/files/usr${LIBABISUFFIX}/libc.so.6 --version | \
 				sed -ne's/^GNU C.*version \(.*\),.*$$/\1/p'
 GLIBC_VERSION=		${_GLIBC_VERSION_CMD:sh}
 .endif

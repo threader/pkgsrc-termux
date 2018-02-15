@@ -61,8 +61,8 @@ MAKEFLAGS+=	_MAKE=${_MAKE:Q}
 .endif
 MAKE:=	${_MAKE}
 
-.if exists(/usr/bin/uname)
-UNAME=/usr/bin/uname
+.if exists(/data/data/com.termux/files/usr/bin/uname)
+UNAME=/data/data/com.termux/files/usr/bin/uname
 .elif exists(/bin/uname)
 UNAME=/bin/uname
 .else
@@ -257,7 +257,7 @@ OS_VARIANT=		SmartOS
 LOWER_VARIANT_VERSION=	${_UNAME_V:C/joyent_//}
 .  elif !empty(_UNAME_V:Momnios-*)
 OS_VARIANT=		OmniOS
-LOWER_VARIANT_VERSION!=	/usr/bin/awk '{ print $$3; exit 0; }' /etc/release
+LOWER_VARIANT_VERSION!=	/data/data/com.termux/files/usr/bin/awk '{ print $$3; exit 0; }' /etc/release
 .  else
 OS_VARIANT=		Solaris
 LOWER_VARIANT_VERSION=	${_UNAME_V}

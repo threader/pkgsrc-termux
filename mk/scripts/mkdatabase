@@ -45,7 +45,7 @@
 
 TMPDIR=${TMPDIR:-/tmp}
 BMAKE=${BMAKE:-make}
-AWK=${AWK:-/usr/bin/awk}
+AWK=${AWK:-/data/data/com.termux/files//usr/bin/awk}
 DATABASE=${DATABASE:-${TMPDIR}/pkgdb.$$}
 EXPR=${EXPR:-expr}
 # as of 2003-01-04, metapkgs/gnome gets to pass #6 so

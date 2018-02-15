@@ -246,6 +246,7 @@ IFS=$as_save_IFS
 
 
       if test "x$CONFIG_SHELL" != x; then :
+CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash
   export CONFIG_SHELL
              # We cannot yet assume a decent shell, so we have to provide a
 # neutralization value for shells without unset; and this also
@@ -284,7 +285,7 @@ $0: the script under such a shell if you do have one."
 fi
 fi
 fi
-SHELL=${CONFIG_SHELL-/bin/sh}
+SHELL=/data/data/com.termux/files/usr/bin/bash
 export SHELL
 # Unset more variables known to interfere with behavior of common tools.
 CLICOLOR_FORCE= GREP_OPTIONS=
@@ -564,7 +565,7 @@ as_tr_cpp="eval sed 'y%*$as_cr_letters%P$as_cr_LETTERS%;s%[^_$as_cr_alnum]%_%g'"
 # Sed expression to map a string onto a valid variable name.
 as_tr_sh="eval sed 'y%*+%pp%;s%[^_$as_cr_alnum]%_%g'"
 
-SHELL=${CONFIG_SHELL-/bin/sh}
+SHELL=/data/data/com.termux/files/usr/bin/bash
 
 
 test -n "$DJDIR" || exec 7<&0 </dev/null
@@ -3242,7 +3243,7 @@ if eval \${ac_cv_prog_make_${ac_make}_set+:} false; then :
   $as_echo_n "(cached) " >&6
 else
   cat >conftest.make <<\_ACEOF
-SHELL = /bin/sh
+SHELL = /data/data/com.termux/files/usr/bin/bash
 all:
 	@echo '@@@%%%=$(MAKE)=@@@%%%'
 _ACEOF
@@ -6156,7 +6157,7 @@ else
       for i in 1 2 3 4 5 6 7 8; do
         teststring=$teststring$teststring
       done
-      SHELL=${SHELL-${CONFIG_SHELL-/bin/sh}}
+SHELL=${SHELL-/data/data/com.termux/files/usr/bin/bash}
       # If test is not a shell built-in, we'll probably end up computing a
       # maximum length that is only half of the actual maximum length, but
       # we can't tell.
@@ -14159,8 +14160,8 @@ if ${acl_cv_rpath+:} false; then :
   $as_echo_n "(cached) " >&6
 else
 
-    CC="$CC" GCC="$GCC" LDFLAGS="$LDFLAGS" LD="$LD" with_gnu_ld="$with_gnu_ld" \
-    ${CONFIG_SHELL-/bin/sh} "$ac_aux_dir/config.rpath" "$host" > conftest.sh
+    CC="clang" GCC="clang" LDFLAGS="$LDFLAGS" LD="$LD" with_gnu_ld="$with_gnu_ld" \
+    /data/data/com.termux/files/usr/bin/bash"$ac_aux_dir/config.rpath" "$host" > conftest.sh
     . ./conftest.sh
     rm -f ./conftest.sh
     acl_cv_rpath=done

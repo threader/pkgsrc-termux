@@ -147,7 +147,7 @@ if [ -n "$native" ]; then
 # Native bulk build (native make, no bootstrap kit needed):
 cat >> ${PBULKPREFIX}/etc/pbulk.conf.over <<EOF
 # Native bulk build overrides:
-make=/usr/bin/make
+make=/data/data/com.termux/files/usr/bin/make
 bootstrapkit=
 EOF
 fi

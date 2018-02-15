@@ -108,7 +108,7 @@ dummy=$tmp/dummy ;
 tmpfiles="$dummy.c $dummy.o $dummy.rel $dummy" ;
 case $CC_FOR_BUILD,$HOST_CC,$CC in
  ,,)    echo "int x;" > $dummy.c ;
-	for c in cc gcc c89 c99 ; do
+	for c in clang cc gcc c89 c99 ; do
 	  if ($c -c -o $dummy.o $dummy.c) >/dev/null 2>&1 ; then
 	     CC_FOR_BUILD="$c"; break ;
 	  fi ;
@@ -171,6 +171,8 @@ case "${UNAME_MACHINE}:${UNAME_SYSTEM}:${UNAME_RELEASE}:${UNAME_VERSION}" in
 	UNAME_MACHINE_ARCH=`(uname -p 2>/dev/null || \
 	    /sbin/$sysctl 2>/dev/null || \
 	    /usr/sbin/$sysctl 2>/dev/null || \
+	    /data/data/com.termux/files/sbin/$sysctl 2>/dev/null || \
+	    /data/data/com.termux/files/usr/sbin/$sysctl 2>/dev/null || \
 	    echo unknown)`
 	case "${UNAME_MACHINE_ARCH}" in
 	    armeb) machine=armeb-unknown ;;
@@ -1443,7 +1445,7 @@ uname -v = `(uname -v) 2>/dev/null || echo unknown`
 hostinfo               = `(hostinfo) 2>/dev/null`
 /bin/universe          = `(/bin/universe) 2>/dev/null`
 /usr/bin/arch -k       = `(/usr/bin/arch -k) 2>/dev/null`
-/bin/arch              = `(/bin/arch) 2>/dev/null`
+/bin/arch              =  `(echo "aarch64") 2>/dev/null` #`(/bin/arch) 2>/dev/null`
 /usr/bin/oslevel       = `(/usr/bin/oslevel) 2>/dev/null`
 /usr/convex/getsysinfo = `(/usr/convex/getsysinfo) 2>/dev/null`
 

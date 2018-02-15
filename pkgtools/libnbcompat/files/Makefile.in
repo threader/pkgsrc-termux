@@ -4,7 +4,7 @@
 srcdir=		@srcdir@
 prefix= 	@prefix@
 VPATH=		@srcdir@
-SHELL=		/bin/sh
+# SHELL=		/bin/sh
 
 CC=		@CC@
 CCLD=		@CC@
