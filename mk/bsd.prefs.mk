@@ -90,7 +90,7 @@ MAKEFLAGS+=		OS_VERSION=${OS_VERSION:Q}
 
 # Preload these for architectures not in all variations of bsd.own.mk,
 # which do not match their GNU names exactly.
-GNU_ARCH.AARCH64?= aarch64
+GNU_ARCH.aarch64?= aarch64
 GNU_ARCH.aarch64eb?=	aarch64_be
 GNU_ARCH.coldfire?=	m5407
 GNU_ARCH.arm26?=	arm
