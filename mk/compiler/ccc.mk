@@ -18,7 +18,7 @@ _CCC_VARS=		# empty
 .if exists(/data/data/com.termux/files/usr/bin/clang)
 LANGUAGES.ccc+=		c
 _CCC_VARS+=		CC
-_CCC_CC=		${_CCC_DIR}/cc
+_CCC_CC=		${_CCC_DIR}/clang
 _ALIASES.CC=		cc
 CCPATH=			/data/data/com.termux/files/usr/bin/clang
 PKG_CC:=		${_CCC_CC}
@@ -26,7 +26,7 @@ PKG_CC:=		${_CCC_CC}
 .if exists(/data/data/com.termux/files/usr/bin/clang++) 
 LANGUAGES.ccc+=		c++
 _CCC_VARS+=		CXX
-_CCC_CXX=		${_CCC_DIR}/cxx
+_CCC_CXX=		${_CCC_DIR}/clang++
 _ALIASES.CXX=		c++ cxx
 CXXPATH=		/data/data/com.termux/files/usr/bin/clang++
 PKG_CXX:=		${_CCC_CXX}
