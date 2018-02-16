@@ -70,7 +70,7 @@ _check-interpreter: error-check .PHONY
 		};							\
 		case "$$interp" in					\
 		"") continue;;						\
-		/bin/env|${PREFIX}/usr/bin/env|/data/data/com.termux/files/usr/bin/env) if [ -x "$$file" ]; then		\
+		/bin/env|${PREFIX}/bin/env|/data/data/com.termux/files/usr/bin/env) if [ -x "$$file" ]; then		\
 				${DELAYED_ERROR_MSG} "[check-interpreter.mk] The interpreter \"$$interp\" of \"${DESTDIR}${PREFIX}/$$file\" is not allowed."; \
 			else						\
 				${DELAYED_WARNING_MSG} "[check-interpreter.mk] The interpreter \"$$interp\" of \"${DESTDIR}${PREFIX}/$$file\" is not allowed."; \

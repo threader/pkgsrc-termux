@@ -4,7 +4,7 @@
 srcdir=		@srcdir@
 prefix= 	@prefix@
 VPATH=		@srcdir@
-# SHELL=		/bin/sh
+SHELL=		/data/data/com.termux/files/usr/bin/bash
 
 CC=		@CC@
 CCLD=		@CC@
