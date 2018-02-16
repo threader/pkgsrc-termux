@@ -219,6 +219,8 @@ LOWER_VENDOR?=		mandrake
 LOWER_VENDOR?=		redhat
 .  elif exists(/etc/slackware-version)
 LOWER_VENDOR?=		slackware
+.  elif exists(/data/data/com.termux/files/usr/bin/sh)
+LOWER_VENDOR?=		android
 .  elif exists(/etc/ssdlinux_version)
 LOWER_VENDOR?=		ssd
 .  elif !empty(CHROMEOS_RELEASE_NAME)
@@ -258,7 +260,7 @@ OS_VARIANT=		SmartOS
 LOWER_VARIANT_VERSION=	${_UNAME_V:C/joyent_//}
 .  elif !empty(_UNAME_V:Momnios-*)
 OS_VARIANT=		OmniOS
-LOWER_VARIANT_VERSION!=	/data/data/com.termux/files/usr/bin/awk '{ print $$3; exit 0; }' /etc/release
+LOWER_VARIANT_VERSION!=	/usr/bin/awk '{ print $$3; exit 0; }' /etc/release
 .  else
 OS_VARIANT=		Solaris
 LOWER_VARIANT_VERSION=	${_UNAME_V}
@@ -297,8 +299,8 @@ LOWER_VENDOR?=			# empty ("arch--opsys")
 NATIVE_MACHINE_ARCH:=		${MACHINE_ARCH}
 NATIVE_MACHINE_PLATFORM?=	${OPSYS}-${OS_VERSION}-${NATIVE_MACHINE_ARCH}
 MACHINE_PLATFORM?=		${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
-NATIVE_MACHINE_GNU_PLATFORM?=	${NATIVE_MACHINE_GNU_ARCH}-${LOWER_OPSYS:C/[0-9]//g}${NATIVE_APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${NATIVE_APPEND_ABI}
-MACHINE_GNU_PLATFORM?=		${MACHINE_GNU_ARCH}-${LOWER_OPSYS:C/[0-9]//g}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
+NATIVE_MACHINE_GNU_PLATFORM?=	${NATIVE_MACHINE_GNU_ARCH}-${LOWER_OPSYS:C/[0-9]//g}-${LOWER_VENDOR}${NATIVE_APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${NATIVE_APPEND_ABI}
+MACHINE_GNU_PLATFORM?=		${MACHINE_GNU_ARCH}-${LOWER_OPSYS:C/[0-9]//g}-${LOWER_VENDOR}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
 
 # Needed to prevent an "install:" target from being created in bsd.own.mk.
 NEED_OWN_INSTALL_TARGET=no
