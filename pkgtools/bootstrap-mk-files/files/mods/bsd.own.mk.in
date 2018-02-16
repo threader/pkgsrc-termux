@@ -16,8 +16,9 @@ SKEY=		yes
 
 # where the system object and source trees are kept; can be configurable
 # by the user in case they want them in ~/foosrc and ~/fooobj, for example
-BSDSRCDIR?=	/usr/src
-BSDOBJDIR?=	/usr/obj
+# set to prefix
+BSDSRCDIR?=	/data/data/com.termux/files/home/pkg/usr/src
+BSDOBJDIR?=	/data/data/com.termux/files/home/pkg/usr/obj
 
 BINGRP?=	@ROOT_GROUP@
 BINOWN?=	@ROOT_USER@
@@ -27,40 +28,40 @@ NONBINMODE?=	444
 # Define MANZ to have the man pages compressed (gzip)
 #MANZ=		1
 
-MANDIR?=	/usr/share/man
+MANDIR?=	/data/data/com.termux/files/usr/share/man
 MANGRP?=	@ROOT_GROUP@
 MANOWN?=	@ROOT_USER@
 MANMODE?=	${NONBINMODE}
 MANINSTALL?=	${_MANINSTALL}
 
-INFODIR?=	/usr/share/info
+INFODIR?=	/data/data/com.termux/files/usr/share/info
 INFOGRP?=	@ROOT_GROUP@
 INFOOWN?=	@ROOT_USER@
 INFOMODE?=	${NONBINMODE}
 
-LIBDIR?=	/usr/lib
-LINTLIBDIR?=	/usr/libdata/lint
+LIBDIR?=	/data/data/com.termux/files/usr/lib
+LINTLIBDIR?=	/data/data/com.termux/files/usr/libdata/lint
 LIBGRP?=	${BINGRP}
 LIBOWN?=	${BINOWN}
 LIBMODE?=	${NONBINMODE}
 
-DOCDIR?=	/usr/share/doc
-HTMLDOCDIR?=	/usr/share/doc/html
+DOCDIR?=	/data/data/com.termux/files/usr/share/doc
+HTMLDOCDIR?=	/data/data/com.termux/files/usr/share/doc/html
 DOCGRP?=	@ROOT_GROUP@
 DOCOWN?=	@ROOT_USER@
 DOCMODE?=	${NONBINMODE}
 
-NLSDIR?=	/usr/share/nls
+NLSDIR?=	/data/data/com.termux/files/usr/share/nls
 NLSGRP?=	@ROOT_GROUP@
 NLSOWN?=	@ROOT_USER@
 NLSMODE?=	${NONBINMODE}
 
-KMODDIR?=	/usr/lkm
+KMODDIR?=	/data/data/com.termux/files/usr/lkm
 KMODGRP?=	@ROOT_GROUP@
 KMODOWN?=	@ROOT_USER@
 KMODMODE?=	${NONBINMODE}
 
-LOCALEDIR?=	/usr/share/locale
+LOCALEDIR?=	/data/data/com.termux/files/usr/share/locale
 LOCALEGRP?=	@ROOT_GROUP@
 LOCALEOWN?=	@ROOT_USER@
 LOCALEMODE?=	${NONBINMODE}
@@ -118,6 +119,7 @@ NOPIC?=1
     ${MACHINE_ARCH} == "i386" || \
     ${MACHINE_ARCH} == "m68000" || \
     ${MACHINE_ARCH} == "arm" || \
+    ${MACHINE_ARCH} == "aarch64" || \
     !empty(MACHINE_ARCH:Mearm*) || \
     ${MACHINE} == "next68k" || \
     ${MACHINE} == "sun3" || \
@@ -143,6 +145,7 @@ GNU_ARCH.alpha=alpha
 GNU_ARCH.arm26=arm
 GNU_ARCH.arm32=arm
 GNU_ARCH.arm=arm
+GNU_ARCH.aarch64=aarch64
 GNU_ARCH.i386=i386
 GNU_ARCH.m68k=m68k
 GNU_ARCH.mipseb=mipseb
@@ -161,6 +164,7 @@ MACHINE_GNU_ARCH=${GNU_ARCH.${MACHINE_ARCH}}
 # an "elf" tag for historically a.out platforms.
 .if ${OBJECT_FMT} == "ELF" && \
     (${MACHINE_ARCH} == "arm" || \
+	 ${MACHINE_ARCH} == "aarch64" || \
      ${MACHINE_ARCH} == "i386" || \
      ${MACHINE_ARCH} == "m68k" || \
      ${MACHINE_ARCH} == "sparc" || \
