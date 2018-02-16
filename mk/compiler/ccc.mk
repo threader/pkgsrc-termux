@@ -15,20 +15,20 @@ LANGUAGES.ccc=		# empty
 
 _CCC_DIR=		${WRKDIR}/.ccc
 _CCC_VARS=		# empty
-.if exists(/data/data/com.termux/files/usr/bin/cc)
+.if exists(/data/data/com.termux/files/usr/bin/clang)
 LANGUAGES.ccc+=		c
 _CCC_VARS+=		CC
 _CCC_CC=		${_CCC_DIR}/cc
 _ALIASES.CC=		cc
-CCPATH=			/data/data/com.termux/files/usr/bin/cc
+CCPATH=			/data/data/com.termux/files/usr/bin/clang
 PKG_CC:=		${_CCC_CC}
 .endif
-.if exists(/data/data/com.termux/files/usr/bin/cxx) && exists(/data/data/com.termux/files/usr/lib/cmplrs/cxx)
+.if exists(/data/data/com.termux/files/usr/bin/clang++) 
 LANGUAGES.ccc+=		c++
 _CCC_VARS+=		CXX
 _CCC_CXX=		${_CCC_DIR}/cxx
 _ALIASES.CXX=		c++ cxx
-CXXPATH=		/data/data/com.termux/files/usr/bin/cxx
+CXXPATH=		/data/data/com.termux/files/usr/bin/clang++
 PKG_CXX:=		${_CCC_CXX}
 .endif
 _COMPILER_STRIP_VARS+=	${_CCC_VARS}
