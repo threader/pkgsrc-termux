@@ -711,8 +711,10 @@ Linux)
 	if [ -x "/data/data/com.termux/files/usr/bin/bash" ]; then
         bootstrap_sh=/data/data/com.termux/files/usr/bin/bash
         bootstrap_sh_set=set
-PKGSRC_COMPILER=       clang
-HAVE_LLVM=             yes
+	echo "PKGSRC_COMPILER=       clang" >> ${TARGET_MKCONF}
+	echo "PKGSRC_COMPILER=       clang" >> ${BOOTSTRAP_MKCONF}
+	echo "HAVE_LLVM=        yes" >> ${TARGET_MKCONF}
+	echo "HAVE_LLVM=        yes" >> ${BOOTSTRAP_MKCONF}
 	fi
 	# Debian/Ubuntu's awk is mawk, and mawk does not understand
 	# some regexp used in pkgsrc/mk.
