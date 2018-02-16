@@ -26,7 +26,7 @@ SHLIB_TEENY != . ${SHLIB_VERSION_FILE} ; echo $$teeny
 	exists(${BSDSRCDIR}/lib/checkver)
 checkver:
 	@(cd ${.CURDIR} && \
-		sh ${BSDSRCDIR}/lib/checkver -v ${SHLIB_VERSION_FILE} \
+		bash ${BSDSRCDIR}/lib/checkver -v ${SHLIB_VERSION_FILE} \
 		    -d ${DESTDIR}${LIBDIR} ${LIB})
 .endif
 .endif
