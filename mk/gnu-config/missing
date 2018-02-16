@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /data/data/com.termux/files/bin/bash
 # Common stub for a few missing GNU programs while installing.
 
 scriptversion=2012-01-06.18; # UTC
@@ -198,7 +198,7 @@ WARNING: '$1' is needed, but is $msg.
 	touch $file
     else
 	test -z "$file" || exec >$file
-	echo "#! /bin/sh"
+	echo "#! /data/data/com.termux/files/bin/bash"
 	echo "# Created by GNU Automake missing as a replacement of"
 	echo "#  $ $@"
 	echo "exit 0"

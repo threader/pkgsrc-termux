@@ -66,7 +66,7 @@ LN_S="$LN_S" NM="$NM" RANLIB="$RANLIB" STRIP="$STRIP" \
 AS="$AS" DLLTOOL="$DLLTOOL" OBJDUMP="$OBJDUMP" \
 objext="$OBJEXT" exeext="$EXEEXT" reload_flag="$reload_flag" \
 deplibs_check_method="$deplibs_check_method" file_magic_cmd="$file_magic_cmd" \
-${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
+${CONFIG_SHELL-/data/data/com.termux/files/usr/bin/bash} $ac_aux_dir/ltconfig --no-reexec \
 $libtool_flags --no-verify --build="$build" $ac_aux_dir/ltmain.sh $host \
 || AC_MSG_ERROR([libtool configure failed])
 
@@ -389,10 +389,10 @@ fi
 # AC_PATH_MAGIC - find a file program which can recognise a shared library
 AC_DEFUN([AC_PATH_MAGIC],
 [AC_REQUIRE([AC_CHECK_TOOL_PREFIX])dnl
-AC_PATH_TOOL_PREFIX(${ac_tool_prefix}file, /usr/bin:$PATH)
+AC_PATH_TOOL_PREFIX(${ac_tool_prefix}file, /data/data/com.termux/files/usr/bin:$PATH)
 if test -z "$lt_cv_path_MAGIC_CMD"; then
   if test -n "$ac_tool_prefix"; then
-    AC_PATH_TOOL_PREFIX(file, /usr/bin:$PATH)
+    AC_PATH_TOOL_PREFIX(file, /data/data/com.termux/files/usr/bin:$PATH)
   else
     MAGIC_CMD=:
   fi
@@ -667,7 +667,7 @@ AC_CACHE_VAL(lt_cv_path_NM,
   lt_cv_path_NM="$NM"
 else
   IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS="${IFS}${PATH_SEPARATOR-:}"
-  for ac_dir in $PATH /usr/ccs/bin /usr/ucb /bin; do
+  for ac_dir in $PATH /usr/ccs/bin /usr/ucb /data/data/com.termux/files/usr/bin; do
     test -z "$ac_dir" && ac_dir=.
     tmp_nm=$ac_dir/${ac_tool_prefix}nm
     if test -f $tmp_nm || test -f $tmp_nm$ac_exeext ; then
@@ -790,7 +790,7 @@ AS="$AS" DLLTOOL="$DLLTOOL" OBJDUMP="$OBJDUMP" \
 objext="$OBJEXT" exeext="$EXEEXT" reload_flag="$reload_flag" \
 deplibs_check_method="$deplibs_check_method" \
 file_magic_cmd="$file_magic_cmd" \
-${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig -o libtool $libtool_flags \
+${CONFIG_SHELL-/data/data/com.termux/files/usr/bin/bash} $ac_aux_dir/ltconfig -o libtool $libtool_flags \
 --build="$build" --add-tag=CXX $ac_aux_dir/ltcf-cxx.sh $host \
 || AC_MSG_ERROR([libtool tag configuration failed])
 CC="$lt_save_CC"
@@ -824,7 +824,7 @@ AS="$AS" DLLTOOL="$DLLTOOL" OBJDUMP="$OBJDUMP" \
 objext="$OBJEXT" exeext="$EXEEXT" reload_flag="$reload_flag" \
 deplibs_check_method="$deplibs_check_method" \
 file_magic_cmd="$file_magic_cmd" \
-${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig -o libtool $libtool_flags \
+${CONFIG_SHELL-/data/data/com.termux/files/usr/bin/bash} $ac_aux_dir/ltconfig -o libtool $libtool_flags \
 --build="$build" --add-tag=GCJ $ac_aux_dir/ltcf-gcj.sh $host \
 || AC_MSG_ERROR([libtool tag configuration failed])
 CC="$lt_save_CC"

@@ -52,7 +52,7 @@ CONFIGURE_ARGS+=	--build=${NATIVE_MACHINE_GNU_PLATFORM:Q}
 .  else
 CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM:Q}
 .  endif
-CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
+#CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
 .endif
 
 # PKGINFODIR is the subdirectory of ${PREFIX} into which the info
