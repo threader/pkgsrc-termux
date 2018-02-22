@@ -283,7 +283,7 @@ fi
 		if [ x"$chgrpcmd" != x ]; then $doit $chgrpcmd "$dsttmp"; else true;fi &&
 		if [ x"$stripcmd" != x ]; then $doit $stripcmd $stripflags "$dsttmp"; else true;fi &&
 		if [ x"$chmodcmd" != x ]; then $doit $chmodcmd "$dsttmp"; else true;fi &&
-		if [ x"$chmodcmd" != x ]; then $doit termux-elf-cleaner "$dstfinal"; else true;fi &&
+		if [ x"$chmodcmd" != x ]; then $doit termux-elf-cleaner "$dsttmp"; else true;fi &&
 
 # Now rename the file to the real destination.
 
