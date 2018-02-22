@@ -188,7 +188,6 @@ do-configure-post-hook:
 
 ######################################################################
 ### do-configure-script (PRIVATE)
-# 	use bash instead of 	${CONFIG_SHELL} for now 
 ######################################################################
 ### do-configure-script runs the configure script to configure the
 ### software for building.
@@ -199,15 +198,16 @@ _CONFIGURE_SCRIPT_ENV+=	INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 _CONFIGURE_SCRIPT_ENV+=	INSTALL_DATA=${INSTALL_DATA:Q}
 _CONFIGURE_SCRIPT_ENV+=	INSTALL_GAME=${INSTALL_GAME:Q}
 _CONFIGURE_SCRIPT_ENV+=	INSTALL_GAME_DATA=${INSTALL_GAME_DATA:Q}
+_CONFIGURE_SCRIPT_ENV+= CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash
 _CONFIGURE_SCRIPT_ENV+=	${CONFIGURE_ENV}
-_CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash
+
 .PHONY: do-configure-script
 do-configure-script:
 .for _dir_ in ${CONFIGURE_DIRS}
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
 	  ${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV}			\
-		bash & autoconf && ${CONFIG_SHELL_FLAGS}			\
+		${CONFIG_SHELL} & autoconf && ${CONFIG_SHELL_FLAGS}			\
 		${CONFIGURE_SCRIPT} CC=clang CXX=clang++ ${CONFIGURE_ARGS}
 .endfor
 
