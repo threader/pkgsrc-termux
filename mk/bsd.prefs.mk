@@ -38,7 +38,7 @@ __PREFIX_SET__:=${PREFIX}
 
 # Set PATH if not already set
 .if !defined(PATH)
-PATH=/bin:/usr/bin:/sbin:/usr/sbin:${PREFIX}/sbin:${PREFIX}/sbin:${PREFIX}/applets:${PREFIX}/pkg/bin:${PREFIX}/pkg/sbin
+PATH=/bin:/usr/bin:/sbin:/usr/sbin:${PREFIX}/bin:${PREFIX}/sbin:${PREFIX}/applets:${PREFIX}/pkg/bin:${PREFIX}/pkg/sbin
 .endif
 
 # Expand MAKE to a full path.

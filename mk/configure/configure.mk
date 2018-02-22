@@ -188,6 +188,7 @@ do-configure-post-hook:
 
 ######################################################################
 ### do-configure-script (PRIVATE)
+# 	use bash instead of 	${CONFIG_SHELL} for now 
 ######################################################################
 ### do-configure-script runs the configure script to configure the
 ### software for building.
@@ -206,7 +207,7 @@ do-configure-script:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
 	  ${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV}			\
-		${CONFIG_SHELL} & autoconf && ${CONFIG_SHELL_FLAGS}			\
+		bash & autoconf && ${CONFIG_SHELL_FLAGS}			\
 		${CONFIGURE_SCRIPT} CC=clang CXX=clang++ ${CONFIGURE_ARGS}
 .endfor
 
