@@ -206,8 +206,8 @@ do-configure-script:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
 	  ${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV}			\
-		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
-		${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} CC=clang CXX=clang++
+		${CONFIG_SHELL} & autoconf && ${CONFIG_SHELL_FLAGS}			\
+		${CONFIGURE_SCRIPT} CC=clang CXX=clang++ ${CONFIGURE_ARGS}
 .endfor
 
 ######################################################################
