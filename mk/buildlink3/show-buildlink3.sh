@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 #
 # $NetBSD: show-buildlink3.sh,v 1.4 2016/07/10 07:08:21 rillig Exp $
 #

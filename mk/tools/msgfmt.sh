@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 #
 # $NetBSD: msgfmt.sh,v 1.34 2010/04/10 00:46:23 obache Exp $
 #

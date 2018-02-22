@@ -1,4 +1,4 @@
-#!/usr/bin/awk -f
+#!/data/data/com.termux/files/usr/bin/awk -f
 # $NetBSD: binpkg-scan,v 1.4 2007/10/09 14:33:25 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
@@ -55,7 +55,7 @@
 #
 
 BEGIN {
-	printf("#!/bin/sh\n#\n\n");
+	printf("#!/data/data/com.termux/files/usr/bin/bash\n#\n\n");
 	printf("# Starting scan for NO_BIN_ON_FTP packages\n\n");
 	notify = 0;
 }

@@ -48,7 +48,7 @@ EOF
 
 name="daemond"
 rcvar=$name
-command="/usr/pkg/sbin/daemond"
+command="${PREFIX}/pkg/sbin/daemond"
 load_rc_config $name
 run_rc_command "$1"
 EOF
@@ -56,7 +56,7 @@ EOF
 	( ${ECHO} "#!@RCD_SCRIPTS_SHELL@"
 	  ${CAT} work/daemond_body ) > work/daemond.sh
 	# Expected rc.d script.
-	( ${ECHO} "#!/bin/sh"
+	( ${ECHO} "#!/data/data/com.termux/files/usr/bin/bash"
 	  ${CAT} work/daemond_body ) > work/daemond
 }
 

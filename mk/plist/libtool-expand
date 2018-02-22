@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /data/data/com.termux/files/usr/bin/bash
 #
 # $NetBSD: libtool-expand,v 1.6 2013/02/23 09:59:14 obache Exp $
 #

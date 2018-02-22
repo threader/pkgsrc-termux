@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 # $NetBSD: mkdatabase,v 1.10 2015/10/03 13:17:57 bsiegert Exp $
 #
 # Script for generating a database with complete dependency information
@@ -45,7 +45,7 @@
 
 TMPDIR=${TMPDIR:-/tmp}
 BMAKE=${BMAKE:-make}
-AWK=${AWK:-/data/data/com.termux/files//usr/bin/awk}
+AWK=${AWK:-/data/data/com.termux/files/usr/bin/awk}
 DATABASE=${DATABASE:-${TMPDIR}/pkgdb.$$}
 EXPR=${EXPR:-expr}
 # as of 2003-01-04, metapkgs/gnome gets to pass #6 so

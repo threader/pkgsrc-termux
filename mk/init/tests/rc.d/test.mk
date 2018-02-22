@@ -37,12 +37,12 @@ CHMOD?=			chmod
 CP?=			cp
 ECHO?=			echo
 INSTALL_SCRIPT?=	${CP}
-LOCALBASE?=		/usr/pkg
+LOCALBASE?=		${PREFIX}/pkg
 MKDIR?=			mkdir -p
 PREFIX?=		${LOCALBASE}
 RUN?=			# empty; show all commands executed
 SED?=			sed
-SH?=			/bin/sh
+SH?=			/data/data/com.termux/files/usr/bin/bash
 STEP_MSG?=		${ECHO} "!!!"
 
 # Turn ${FILES_SUBST} into a sed(1) script.

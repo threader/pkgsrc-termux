@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.

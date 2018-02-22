@@ -153,7 +153,7 @@ show-subdir-var:
 .PHONY: fetch-list
 
 fetch-list:
-	@${ECHO} '#!/bin/sh'
+	@${ECHO} '#!/data/data/com.termux/files/usr/bin/bash'
 	@${ECHO} '#'
 	@${ECHO} '# This is an auto-generated script, the result of running'
 	@${ECHO} '# `make fetch-list'"'"' in directory "'"`${PWD_CMD}`"'"'

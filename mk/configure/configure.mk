@@ -200,6 +200,7 @@ _CONFIGURE_SCRIPT_ENV+=	INSTALL_GAME=${INSTALL_GAME:Q}
 _CONFIGURE_SCRIPT_ENV+=	INSTALL_GAME_DATA=${INSTALL_GAME_DATA:Q}
 _CONFIGURE_SCRIPT_ENV+= CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash
 _CONFIGURE_SCRIPT_ENV+= SHELL=/data/data/com.termux/files/usr/bin/bash
+_CONFIGURE_SCRIPT_ENV+= PATH=$PATH:/bin:/usr/bin:/sbin:/usr/sbin:${PREFIX}/bin:${PREFIX}/sbin:${PREFIX}/applets:${PREFIX}/pkg/bin:${PREFIX}/pkg/sbin
 _CONFIGURE_SCRIPT_ENV+=	${CONFIGURE_ENV}
 
 .PHONY: do-configure-script

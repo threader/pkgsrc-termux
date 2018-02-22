@@ -20,7 +20,7 @@ fetch-list: fetch-list-header fetch-list-recursive
 ###
 .PHONY: fetch-list-header
 fetch-list-header:
-	@${ECHO} '#!/bin/sh'
+	@${ECHO} '#!/data/data/com.termux/files/usr/bin/bash'
 	@${ECHO} '#'
 	@${ECHO} '# This is an auto-generated script, the result of running'
 	@${ECHO} '# `${MAKE} fetch-list'"'"' in directory "'"`${PWD_CMD}`"'"'

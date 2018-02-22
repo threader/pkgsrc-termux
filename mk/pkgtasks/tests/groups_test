@@ -1,4 +1,4 @@
-#!/usr/bin/env atf-sh
+#!/data/data/com.termux/files/usr/bin/env atf-sh
 #
 # $NetBSD: groups_test,v 1.1 2017/06/01 02:06:05 jlam Exp $
 #
@@ -82,7 +82,7 @@ EOF
 USERGROUP_PHASE=	configure
 PKG_GROUPS=		g1 g2 g3
 
-SH=		/bin/sh
+SH=		/data/data/com.termux/files/usr/bin/bash
 _GETGID_CMD=	${SH} getgid.sh
 EOF
 	# Expected output is each group inserted into the

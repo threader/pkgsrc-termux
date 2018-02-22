@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 #
 # $NetBSD: fetch,v 1.18 2015/09/19 11:45:56 dsainty Exp $
 #

@@ -167,7 +167,7 @@ do-upload-distfiles: checksum
 	distdir='~ftp/pub/pkgsrc/distfiles';				\
 	ssh_cmd="ssh -l ${NETBSD_LOGIN_NAME} $${disthost}";		\
 	${STEP_MSG} "Checking uploaded files";				\
-	uploaded_files=`${ECHO} "(cd $${distdir} && /bin/ls -1d ${_ALLFILES}) 2>/dev/null || ${TRUE}" | $${ssh_cmd} /bin/sh`;	\
+	uploaded_files=`${ECHO} "(cd $${distdir} && /bin/ls -1d ${_ALLFILES}) 2>/dev/null || ${TRUE}" | $${ssh_cmd} /data/data/com.termux/files/usr/bin/bash`;	\
 	pending_files="";						\
 	for file in ${_ALLFILES}; do					\
 		found=0;						\

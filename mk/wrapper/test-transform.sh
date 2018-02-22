@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /data/data/com.termux/files/usr/bin/bash
 # $NetBSD: test-transform.sh,v 1.1 2006/12/09 12:42:43 rillig Exp $
 #
 # NAME

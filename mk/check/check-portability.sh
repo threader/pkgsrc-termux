@@ -50,7 +50,7 @@ find * -type f -print 2>/dev/null \
 		esac
 
 		case "$firstline" in
-		"#!"*"/bin/sh")
+		"#!"*"/data/data/com.termux/files/usr/bin/bash")
 			check_shell "$fname"
 			case "$opsys" in
 			SunOS-5.[0-9]|SunOS-5.10)

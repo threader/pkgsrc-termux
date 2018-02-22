@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 #
 # $NetBSD: extract,v 1.16 2013/11/16 07:45:26 shattered Exp $
 #

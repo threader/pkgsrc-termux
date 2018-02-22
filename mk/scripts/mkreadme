@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 # $NetBSD: mkreadme,v 1.30 2016/08/19 12:17:26 wiz Exp $
 #
 # Script for README.html generation

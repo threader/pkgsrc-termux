@@ -1,4 +1,4 @@
-#!/usr/bin/env atf-sh
+#!/data/data/com.termux/files/usr/bin/env atf-sh
 #
 # $NetBSD: create_usergroup_test,v 1.1 2017/06/01 02:06:05 jlam Exp $
 #
@@ -153,7 +153,7 @@ PKG_USERS=		root:wheel
 PERL5=			perl
 PKGNAME=		test-pkg
 SETENV=			env
-SH=			/bin/sh
+SH=			/data/data/com.termux/files/usr/bin/bash
 PKG_REFCOUNT_DBDIR=	${.CURDIR}/refcount
 EOF
 	${MAKE} PKGSRCDIR="${PKGSRCDIR}" ||

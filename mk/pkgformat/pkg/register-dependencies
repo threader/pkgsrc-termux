@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 #
 # $NetBSD: register-dependencies,v 1.1 2011/10/15 00:23:09 reed Exp $
 #

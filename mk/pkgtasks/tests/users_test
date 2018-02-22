@@ -1,4 +1,4 @@
-#!/usr/bin/env atf-sh
+#/data/data/com.termux/files/usr/bin/env atf-sh
 #
 # $NetBSD: users_test,v 1.1 2017/06/01 02:06:05 jlam Exp $
 #
@@ -82,7 +82,7 @@ USERGROUP_PHASE=	configure
 PKG_USERS=		u1:g1 u2:g2 u3:g3
 PKG_GECOS.u3=		test user u1 description
 
-SH=		/bin/sh
+SH=		/data/data/com.termux/files/usr/bin/bash
 _GETUID_CMD=	${SH} getuid.sh
 EOF
 	# Expected output is each user:group inserted into the

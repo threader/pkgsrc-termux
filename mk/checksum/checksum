@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 #
 # $NetBSD: checksum,v 1.15 2013/06/14 15:09:47 tron Exp $
 #

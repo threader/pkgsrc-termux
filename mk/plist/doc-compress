@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 #
 # $NetBSD: doc-compress,v 1.3 2006/01/19 17:22:26 jlam Exp $
 #
