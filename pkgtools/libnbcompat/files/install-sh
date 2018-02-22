@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 #
 # install - install a program, script, or datafile
 # This comes from X11R5 (mit/util/scripts/install.sh).
@@ -244,7 +244,7 @@ else
 
 	$doit $rmcmd -f $dstdir/$dstfile &&
 	$doit $mvcmd $dsttmp $dstdir/$dstfile 
-
+	$doit termux-elf-cleaner $dstdir/$dstfile 
 fi &&
 
 

@@ -200,7 +200,7 @@ _CONFIGURE_SCRIPT_ENV+=	INSTALL_GAME=${INSTALL_GAME:Q}
 _CONFIGURE_SCRIPT_ENV+=	INSTALL_GAME_DATA=${INSTALL_GAME_DATA:Q}
 _CONFIGURE_SCRIPT_ENV+= CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash
 _CONFIGURE_SCRIPT_ENV+= SHELL=/data/data/com.termux/files/usr/bin/bash
-_CONFIGURE_SCRIPT_ENV+= PATH=$PATH:/bin:/usr/bin:/sbin:/usr/sbin:/data/data/com.termux/files/usr/bin/:/data/data/com.termux/files/usr/sbin/:/data/data/com.termux/files/usr/applets:${PREFIX}/bin:${PREFIX}/sbin:${PREFIX}/applets:${PREFIX}/pkg/bin:${PREFIX}/pkg/sbin
+_CONFIGURE_SCRIPT_ENV+= PATH=/bin:/usr/bin:/sbin:/usr/sbin:/data/data/com.termux/files/usr/bin/:/data/data/com.termux/files/usr/sbin/:/data/data/com.termux/files/usr/applets:${PREFIX}/bin:${PREFIX}/sbin:${PREFIX}/applets:${PREFIX}/pkg/bin:${PREFIX}/pkg/sbin:$PATH:
 _CONFIGURE_SCRIPT_ENV+=	${CONFIGURE_ENV}
 CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash
 
@@ -208,9 +208,9 @@ CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash
 do-configure-script:
 .for _dir_ in ${CONFIGURE_DIRS}
 	${RUN}${_ULIMIT_CMD}						\
-	cd ${WRKSRC} && cd ${_dir_} &&	autoconf &&			\
+	cd ${WRKSRC} && cd ${_dir_}							\
 	  ${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV}			\
-		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
+		 &&	autoconf && ${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
 		${CONFIGURE_SCRIPT} CC=clang CXX=clang++ ${CONFIGURE_ARGS}
 .endfor
 

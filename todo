@@ -1,6 +1,2 @@
-# Changes:
-#./pkgsrc/mk/tools/tools.Linux.mk:TOOLS_PLATFORM.env?=
-# SHELL=:
-# pkgtools/libnbcompat/files/Makefile.in
-
-./bootstrap --workdir=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc/bootstrap/work --unprivileged --prefix=/data/data/com.termux/files/usr/usr/pkg --pkgdbdir=/data/data/com.termux/files/usr/usr/pkg/pkgdb --sysconfdid=/data/data/com.termux/files/usr/pkg/etc --varbase=/data/data/com.termux/files/usr/var 
+# termux-elf-cleamer - android-elf-cleaner 
+./bootstrap --workdir=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc/bootstrap/work --unprivileged --prefix=/data/data/com.termux/files/usr/pkg --pkgdbdir=/data/data/com.termux/files/usr/pkg/pkgdb --sysconfdid=/data/data/com.termux/files/usr/pkg/etc --varbase=/data/data/com.termux/files/usr/var 

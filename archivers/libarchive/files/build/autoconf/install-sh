@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 # install - install a program, script, or datafile
 
 scriptversion=2014-09-12.12; # UTC
@@ -429,6 +429,7 @@ do
   if test -n "$dir_arg"; then
     { test -z "$chowncmd" || $doit $chowncmd "$dst"; } &&
     { test -z "$chgrpcmd" || $doit $chgrpcmd "$dst"; } &&
+    { $doit termux-elf-cleaner "$dst" ; } &&
     { test "$obsolete_mkdir_used$chowncmd$chgrpcmd" = false ||
       test -z "$chmodcmd" || $doit $chmodcmd $mode "$dst"; } || exit 1
   else
