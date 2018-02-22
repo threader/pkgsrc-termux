@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 #
 # $NetBSD: install-sh.in,v 1.6 2012/01/11 13:07:31 hans Exp $
 # This script now also installs multiple files, but might choke on installing
@@ -293,6 +293,7 @@ fi
 			$doit $rmcmd -f "$dstfinal"
 		fi &&
 		$doit $mvcmd "$dsttmp" "$dstfinal"
+		$doit termux-elf-cleaner "$dstfinal"
 	fi
 
 done &&
