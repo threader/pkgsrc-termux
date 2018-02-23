@@ -1,5 +1,5 @@
 ===> bootstrap command: ./bootstrap --prefix=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg --sysconfdir=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/etc --pkgdbdir=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/.db --cwrappers=no --unprivileged --ignore-user-check
-===> bootstrap started: Fri Feb 23 15:23:18 CET 2018
+===> bootstrap started: Fri Feb 23 18:37:15 CET 2018
 Working directory is: /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work
 ===> running: /data/data/com.termux/files/usr/bin/sed -e 's|@DEFAULT_INSTALL_MODE@|'0755'|' /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/sysutils/install-sh/files/install-sh.in > /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/install-sh
 ===> running: /data/data/com.termux/files/usr/bin/chmod +x /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/install-sh
@@ -230,11 +230,11 @@ clang -c -g -O2 -I. -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-ter
 clang -c -g -O2 -I. -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bmake -DHAVE_CONFIG_H -DMAKE_NATIVE -DUSE_META -DBMAKE_PATH_MAX=1024 -o meta.o /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bmake/meta.c
 clang -o bmake main.o meta.o arch.o buf.o compat.o cond.o dir.o for.o getopt hash.o job.o make.o make_malloc.o parse.o sigcompat.o str.o strlist.o suff.o targ.o trace.o var.o util.o lstAppend.o lstDupl.o lstInit.o lstOpen.o lstAtEnd.o lstEnQueue.o lstInsert.o lstAtFront.o lstIsAtEnd.o lstClose.o lstFind.o lstIsEmpty.o lstRemove.o lstConcat.o lstFindFrom.o lstLast.o lstReplace.o lstFirst.o lstDatum.o lstForEach.o lstMember.o lstSucc.o lstDeQueue.o lstForEachFrom.o lstDestroy.o lstNext.o lstPrev.o stresep.o
 ===> running: /data/data/com.termux/files/usr/bin/sh /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/install-sh -c -o u0_a215 -g u0_a215 -m 755 /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bmake/bmake /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/bmake
-termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/#inst.5419#'
-termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/#inst.5419#'
-termux-elf-cleaner: Removing the DT_VERNEEDED dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/#inst.5419#'
-termux-elf-cleaner: Removing the DT_VERNEEDNUM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/#inst.5419#'
-termux-elf-cleaner: Removing the DT_VERSYM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/#inst.5419#'
+termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/#inst.18302#'
+termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/#inst.18302#'
+termux-elf-cleaner: Removing the DT_VERNEEDED dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/#inst.18302#'
+termux-elf-cleaner: Removing the DT_VERNEEDNUM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/#inst.18302#'
+termux-elf-cleaner: Removing the DT_VERSYM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/#inst.18302#'
 ===> Building libnbcompat
 ===> running: /data/data/com.termux/files/usr/bin/sh /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/install-sh -d -o u0_a215 -g u0_a215 /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/libnbcompat
 ===> running: (cd /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/libnbcompat; autoconf; find . -name 'config.sub' -exec chmod u+w '{}' \; ; bash ./configure  -C --prefix=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg CC=clang CXX=clang++ --infodir=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/info --mandir=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/man --sysconfdir=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/etc --enable-bsd-getopt --enable-db && /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/bmake  -j1)
@@ -1490,29 +1490,29 @@ clang -DHAVE_CONFIG_H -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-t
 clang -DHAVE_CONFIG_H -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/libnbcompat -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/libarchive/contrib/android/include -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/libarchive/libarchive  -I. -I. -I../lib -DBOOTSTRAP -g -O2 -c show.c
 clang -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/libnbcompat  -L../lib -o pkg_info main.o perform.o show.o -linstall -lnbcompat
 ===> running: /data/data/com.termux/files/usr/bin/sh /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/install-sh -c -o u0_a215 -g u0_a215 -m 755 /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/pkg_install/add/pkg_add /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/pkg_add
-termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21164#'
-termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21164#'
-termux-elf-cleaner: Removing the DT_VERNEEDED dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21164#'
-termux-elf-cleaner: Removing the DT_VERNEEDNUM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21164#'
-termux-elf-cleaner: Removing the DT_VERSYM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21164#'
+termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.685#'
+termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.685#'
+termux-elf-cleaner: Removing the DT_VERNEEDED dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.685#'
+termux-elf-cleaner: Removing the DT_VERNEEDNUM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.685#'
+termux-elf-cleaner: Removing the DT_VERSYM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.685#'
 ===> running: /data/data/com.termux/files/usr/bin/sh /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/install-sh -c -o u0_a215 -g u0_a215 -m 755 /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/pkg_install/admin/pkg_admin /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/pkg_admin
-termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21177#'
-termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21177#'
-termux-elf-cleaner: Removing the DT_VERNEEDED dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21177#'
-termux-elf-cleaner: Removing the DT_VERNEEDNUM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21177#'
-termux-elf-cleaner: Removing the DT_VERSYM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21177#'
+termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.704#'
+termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.704#'
+termux-elf-cleaner: Removing the DT_VERNEEDED dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.704#'
+termux-elf-cleaner: Removing the DT_VERNEEDNUM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.704#'
+termux-elf-cleaner: Removing the DT_VERSYM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.704#'
 ===> running: /data/data/com.termux/files/usr/bin/sh /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/install-sh -c -o u0_a215 -g u0_a215 -m 755 /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/pkg_install/create/pkg_create /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/pkg_create
-termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21191#'
-termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21191#'
-termux-elf-cleaner: Removing the DT_VERNEEDED dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21191#'
-termux-elf-cleaner: Removing the DT_VERNEEDNUM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21191#'
-termux-elf-cleaner: Removing the DT_VERSYM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21191#'
+termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.727#'
+termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.727#'
+termux-elf-cleaner: Removing the DT_VERNEEDED dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.727#'
+termux-elf-cleaner: Removing the DT_VERNEEDNUM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.727#'
+termux-elf-cleaner: Removing the DT_VERSYM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.727#'
 ===> running: /data/data/com.termux/files/usr/bin/sh /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/install-sh -c -o u0_a215 -g u0_a215 -m 755 /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/pkg_install/info/pkg_info /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/pkg_info
-termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21204#'
-termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21204#'
-termux-elf-cleaner: Removing the DT_VERNEEDED dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21204#'
-termux-elf-cleaner: Removing the DT_VERNEEDNUM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21204#'
-termux-elf-cleaner: Removing the DT_VERSYM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.21204#'
+termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.740#'
+termux-elf-cleaner: Removing version section from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.740#'
+termux-elf-cleaner: Removing the DT_VERNEEDED dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.740#'
+termux-elf-cleaner: Removing the DT_VERNEEDNUM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.740#'
+termux-elf-cleaner: Removing the DT_VERSYM dynamic section entry from '/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/sbin/#inst.740#'
 ===> Installing packages
 ===> running: (cd /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/pkgtools/bootstrap-mk-files && /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/bmake  MAKE_JOBS=1 PKG_COMPRESSION=none -DPKG_PRESERVE MAKECONF=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/mk.conf install)
 ===> Installing dependencies for bootstrap-mk-files-20170802
@@ -2667,7 +2667,7 @@ cc -c -O2 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -o huffman.o
 cc -c -O2 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -o randtable.o randtable.c
 ar cq libbz2.a blocksort.o bzlib.o compress.o crctable.o  decompress.o huffman.o randtable.o
 ranlib libbz2.a
-cd /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libarchive && /data/data/com.termux/files/usr/bin/env INSTALL=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215 INSTALL_PROGRAM=/data/data/com.termux/files/usr/bin/install\ -c\ -s\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 INSTALL_SCRIPT=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 INSTALL_DATA=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 644 INSTALL_GAME=/data/data/com.termux/files/usr/bin/install\ -c\ -s\ -o\ u0_a215\ -g\ u0_a215\ -m\ 0755 INSTALL_GAME_DATA=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 0644 CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash SHELL=/data/data/com.termux/files/usr/bin/bash PATH=/bin:/usr/bin:/sbin:/usr/sbin:/data/data/com.termux/files/usr/bin/:/data/data/com.termux/files/usr/sbin/:/data/data/com.termux/files/usr/applets:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/sbin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/applets:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/pkg/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/pkg/sbin:ATH: LIBS=\ \ -lnbcompat INSTALL_INFO= MAKEINFO=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.tools/bin/makeinfo FLEX= BISON= AWK=/data/data/com.termux/files/usr/bin/awk CAT=/data/data/com.termux/files/usr/bin/cat ac_cv_path_CAT=/data/data/com.termux/files/usr/bin/cat CHMOD=/data/data/com.termux/files/usr/bin/chmod CMP=/data/data/com.termux/files/usr/bin/cmp CP=/data/data/com.termux/files/usr/bin/cp DIFF=/data/data/com.termux/files/usr/bin/diff ECHO=echo ac_cv_path_ECHO=echo EGREP=/data/data/com.termux/files/usr/bin/egrep ac_cv_path_EGREP=/data/data/com.termux/files/usr/bin/egrep SETENV=/data/data/com.termux/files/usr/bin/env ENV_PROG=/data/data/com.termux/files/usr/bin/env ac_cv_path_ENV=/data/data/com.termux/files/usr/bin/env FALSE=false ac_cv_path_FALSE=false FIND=/data/data/com.termux/files/usr/bin/applets/find GREP=/data/data/com.termux/files/usr/bin/grep ac_cv_path_GREP=/data/data/com.termux/files/usr/bin/grep HOSTNAME=/data/data/com.termux/files/usr/bin/hostname LN=/data/data/com.termux/files/usr/bin/ln LS=/data/data/com.termux/files/usr/bin/ls MKDIR=/data/data/com.termux/files/usr/bin/mkdir\ -p MV=/data/data/com.termux/files/usr/bin/mv RM=/data/data/com.termux/files/usr/bin/rm RMDIR=/data/data/com.termux/files/usr/bin/rmdir SED=/data/data/com.termux/files/usr/bin/sed SORT=/data/data/com.termux/files/usr/bin/sort TEST=test ac_cv_path_TEST=test TOUCH=/data/data/com.termux/files/usr/bin/touch TR=/data/data/com.termux/files/usr/bin/tr TRUE=true ac_cv_path_TRUE=true PKG_CONFIG= PKG_CONFIG_LIBDIR=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/lib/aarch64-linux-android/pkgconfig:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/lib/pkgconfig:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/share/pkgconfig PKG_CONFIG_LOG=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.pkg-config.log PKG_CONFIG_PATH= MAKE=make WRAPPER_DEBUG=no WRAPPER_UPDATE_CACHE=yes CXXCPP=cpp CC=cc CFLAGS=-O2 CPPFLAGS=-D_LARGEFILE_SOURCE\ -D_LARGE_FILES\ -D_FILE_OFFSET_BITS=64\ -DDEF_UMASK=022\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/bzip2\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libarchive/libarchive\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libfetch\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work\ -DHAVE_NBCOMPAT_H=1\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libnbcompat CXX=c++ CXXFLAGS=-O2 COMPILER_RPATH_FLAG=-Wl,-R F77=f77 FC=f77 FFLAGS=-O LANG=C LC_ALL=C LC_COLLATE=C LC_CTYPE=C LC_MESSAGES=C LC_MONETARY=C LC_NUMERIC=C LC_TIME=C LDFLAGS=-lssl\ -lcrypto\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/bzip2\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libarchive/.libs\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libfetch\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/netpgp\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libnbcompat\ -Wl,-R/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/lib LINKER_RPATH_FLAG=-R PATH=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.wrapper/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.tools/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets:/data/data/com.termux/files/usr/applets:/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/sbin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/sbin::/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets:/sbin:/usr/sbin::/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin PREFIX=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg MAKELEVEL=0 CONFIG_SITE= PKG_SYSCONFDIR=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/etc HOME=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.home CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash LIBS=-lnbcompat ac_given_INSTALL=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215	 /data/data/com.termux/files/usr/bin/bash  ./configure	 --disable-bsdcpio --disable-bsdtar --disable-shared	 --disable-dependency-tracking --without-expat		 --disable-maintainer-mode				 --without-iconv --without-lzo2 --without-nettle		 --without-xml2 --without-lz4				 --without-lzma CPPFLAGS='-I./contrib/android/include PPFLAGS'
+cd /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libarchive && /data/data/com.termux/files/usr/bin/env INSTALL=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215 INSTALL_PROGRAM=/data/data/com.termux/files/usr/bin/install\ -c\ -s\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 INSTALL_SCRIPT=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 INSTALL_DATA=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 644 INSTALL_GAME=/data/data/com.termux/files/usr/bin/install\ -c\ -s\ -o\ u0_a215\ -g\ u0_a215\ -m\ 0755 INSTALL_GAME_DATA=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 0644 CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash SHELL=/data/data/com.termux/files/usr/bin/bash PATH=/bin:/usr/bin:/sbin:/usr/sbin:/data/data/com.termux/files/usr/bin/:/data/data/com.termux/files/usr/sbin/:/data/data/com.termux/files/usr/applets:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/sbin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/applets:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/pkg/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/pkg/sbin:ATH: LIBS=\ \ -lnbcompat INSTALL_INFO= MAKEINFO=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.tools/bin/makeinfo FLEX= BISON= AWK=/data/data/com.termux/files/usr/bin/awk CAT=/data/data/com.termux/files/usr/bin/cat ac_cv_path_CAT=/data/data/com.termux/files/usr/bin/cat CHMOD=/data/data/com.termux/files/usr/bin/chmod CMP=/data/data/com.termux/files/usr/bin/cmp CP=/data/data/com.termux/files/usr/bin/cp DIFF=/data/data/com.termux/files/usr/bin/diff ECHO=echo ac_cv_path_ECHO=echo EGREP=/data/data/com.termux/files/usr/bin/egrep ac_cv_path_EGREP=/data/data/com.termux/files/usr/bin/egrep SETENV=/data/data/com.termux/files/usr/bin/env ENV_PROG=/data/data/com.termux/files/usr/bin/env ac_cv_path_ENV=/data/data/com.termux/files/usr/bin/env FALSE=false ac_cv_path_FALSE=false FIND=/data/data/com.termux/files/usr/bin/applets/find GREP=/data/data/com.termux/files/usr/bin/grep ac_cv_path_GREP=/data/data/com.termux/files/usr/bin/grep HOSTNAME=/data/data/com.termux/files/usr/bin/hostname LN=/data/data/com.termux/files/usr/bin/ln LS=/data/data/com.termux/files/usr/bin/ls MKDIR=/data/data/com.termux/files/usr/bin/mkdir\ -p MV=/data/data/com.termux/files/usr/bin/mv RM=/data/data/com.termux/files/usr/bin/rm RMDIR=/data/data/com.termux/files/usr/bin/rmdir SED=/data/data/com.termux/files/usr/bin/sed SORT=/data/data/com.termux/files/usr/bin/sort TEST=test ac_cv_path_TEST=test TOUCH=/data/data/com.termux/files/usr/bin/touch TR=/data/data/com.termux/files/usr/bin/tr TRUE=true ac_cv_path_TRUE=true PKG_CONFIG= PKG_CONFIG_LIBDIR=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/lib/aarch64-linux-android/pkgconfig:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/lib/pkgconfig:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/share/pkgconfig PKG_CONFIG_LOG=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.pkg-config.log PKG_CONFIG_PATH= MAKE=make WRAPPER_DEBUG=no WRAPPER_UPDATE_CACHE=yes CXXCPP=cpp CC=cc CFLAGS=-O2 CPPFLAGS=-D_LARGEFILE_SOURCE\ -D_LARGE_FILES\ -D_FILE_OFFSET_BITS=64\ -DDEF_UMASK=022\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/bzip2\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libarchive/libarchive\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libfetch\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work\ -DHAVE_NBCOMPAT_H=1\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libnbcompat CXX=c++ CXXFLAGS=-O2 COMPILER_RPATH_FLAG=-Wl,-R F77=f77 FC=f77 FFLAGS=-O LANG=C LC_ALL=C LC_COLLATE=C LC_CTYPE=C LC_MESSAGES=C LC_MONETARY=C LC_NUMERIC=C LC_TIME=C LDFLAGS=-lssl\ -lcrypto\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/bzip2\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libarchive/.libs\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libfetch\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/netpgp\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libnbcompat\ -Wl,-R/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/lib LINKER_RPATH_FLAG=-R PATH=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.wrapper/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.tools/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets:/data/data/com.termux/files/usr/applets:/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/sbin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/sbin::/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets:/sbin:/usr/sbin::/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin PREFIX=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg MAKELEVEL=0 CONFIG_SITE= PKG_SYSCONFDIR=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/etc HOME=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.home CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash LIBS=-lnbcompat ac_given_INSTALL=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215	 /data/data/com.termux/files/usr/bin/bash  ./configure	 --disable-bsdcpio --disable-bsdtar --disable-shared	 --disable-dependency-tracking --without-expat		 --disable-maintainer-mode				 --without-iconv --without-lzo2 --without-nettle		 --without-xml2 --without-lz4				 --without-lzma CPPFLAGS='-I./contrib/android/include'
 checking for a BSD-compatible install... /data/data/com.termux/files/usr/bin/install -c -o u0_a215 -g u0_a215
 checking whether build environment is sane... yes
 checking for a thread-safe mkdir -p... /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.tools/bin/mkdir -p
@@ -2679,11 +2679,630 @@ checking whether make supports nested variables... (cached) yes
 checking build system type... aarch64-unknown-linux-gnu
 checking host system type... aarch64-unknown-linux-gnu
 checking for gcc... cc
-checking whether the C compiler works... no
-configure: error: in `/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libarchive':
-configure: error: C compiler cannot create executables
-See `config.log' for more details
-*** Error code 77
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking whether cc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of cc... none
+checking how to run the C preprocessor... cc -E
+checking for grep that handles long lines and -e... (cached) /data/data/com.termux/files/usr/bin/grep
+checking for egrep... (cached) /data/data/com.termux/files/usr/bin/egrep
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /data/data/com.termux/files/usr/bin/sed
+checking for fgrep... /data/data/com.termux/files/usr/bin/grep -F
+checking for ld used by cc... /data/data/com.termux/files/usr/bin/ld
+checking if the linker (/data/data/com.termux/files/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /data/data/com.termux/files/usr/bin/nm -B
+checking the name lister (/data/data/com.termux/files/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert aarch64-unknown-linux-gnu file names to aarch64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert aarch64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /data/data/com.termux/files/usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /data/data/com.termux/files/usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /data/data/com.termux/files/usr/bin/dd
+checking how to truncate binary pipes... /data/data/com.termux/files/usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... yes
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... no
+checking if cc supports -c -o file.o... /data/data/com.termux/files/usr/bin/rm: cannot remove 'conftest*': No such file or directory
+yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/data/data/com.termux/files/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking for strip... (cached) strip
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking acl/libacl.h usability... no
+checking acl/libacl.h presence... no
+checking for acl/libacl.h... no
+checking attr/xattr.h usability... no
+checking attr/xattr.h presence... no
+checking for attr/xattr.h... no
+checking copyfile.h usability... no
+checking copyfile.h presence... no
+checking for copyfile.h... no
+checking ctype.h usability... yes
+checking ctype.h presence... yes
+checking for ctype.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking ext2fs/ext2_fs.h usability... no
+checking ext2fs/ext2_fs.h presence... no
+checking for ext2fs/ext2_fs.h... no
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking grp.h usability... yes
+checking grp.h presence... yes
+checking for grp.h... yes
+checking whether EXT2_IOC_GETFLAGS is usable... no
+checking for inttypes.h... (cached) yes
+checking io.h usability... no
+checking io.h presence... no
+checking for io.h... no
+checking langinfo.h usability... no
+checking langinfo.h presence... no
+checking for langinfo.h... no
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking linux/fiemap.h usability... yes
+checking linux/fiemap.h presence... yes
+checking for linux/fiemap.h... yes
+checking linux/fs.h usability... yes
+checking linux/fs.h presence... yes
+checking for linux/fs.h... yes
+checking linux/magic.h usability... yes
+checking linux/magic.h presence... yes
+checking for linux/magic.h... yes
+checking linux/types.h usability... yes
+checking linux/types.h presence... yes
+checking for linux/types.h... yes
+checking whether FS_IOC_GETFLAGS is usable... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking membership.h usability... no
+checking membership.h presence... no
+checking for membership.h... no
+checking paths.h usability... yes
+checking paths.h presence... yes
+checking for paths.h... yes
+checking poll.h usability... yes
+checking poll.h presence... yes
+checking for poll.h... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking readpassphrase.h usability... no
+checking readpassphrase.h presence... no
+checking for readpassphrase.h... no
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking spawn.h usability... no
+checking spawn.h presence... no
+checking for spawn.h... no
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking for stdint.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking sys/acl.h usability... no
+checking sys/acl.h presence... no
+checking for sys/acl.h... no
+checking sys/cdefs.h usability... yes
+checking sys/cdefs.h presence... yes
+checking for sys/cdefs.h... yes
+checking sys/ea.h usability... no
+checking sys/ea.h presence... no
+checking for sys/ea.h... no
+checking sys/extattr.h usability... no
+checking sys/extattr.h presence... no
+checking for sys/extattr.h... no
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/mkdev.h usability... no
+checking sys/mkdev.h presence... no
+checking for sys/mkdev.h... no
+checking sys/mount.h usability... yes
+checking sys/mount.h presence... yes
+checking for sys/mount.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/poll.h usability... yes
+checking sys/poll.h presence... yes
+checking for sys/poll.h... yes
+checking sys/richacl.h usability... no
+checking sys/richacl.h presence... no
+checking for sys/richacl.h... no
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking sys/statfs.h usability... yes
+checking sys/statfs.h presence... yes
+checking for sys/statfs.h... yes
+checking sys/statvfs.h usability... yes
+checking sys/statvfs.h presence... yes
+checking for sys/statvfs.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/utime.h usability... no
+checking sys/utime.h presence... no
+checking for sys/utime.h... no
+checking sys/utsname.h usability... yes
+checking sys/utsname.h presence... yes
+checking for sys/utsname.h... yes
+checking sys/vfs.h usability... yes
+checking sys/vfs.h presence... yes
+checking for sys/vfs.h... yes
+checking sys/xattr.h usability... yes
+checking sys/xattr.h presence... yes
+checking for sys/xattr.h... yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking for unistd.h... (cached) yes
+checking utime.h usability... yes
+checking utime.h presence... yes
+checking for utime.h... yes
+checking wchar.h usability... yes
+checking wchar.h presence... yes
+checking for wchar.h... yes
+checking wctype.h usability... yes
+checking wctype.h presence... yes
+checking for wctype.h... yes
+checking windows.h usability... no
+checking windows.h presence... no
+checking for windows.h... no
+checking for wincrypt.h... no
+checking for winioctl.h... no
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking for inflate in -lz... yes
+checking bzlib.h usability... no
+checking bzlib.h presence... no
+checking for bzlib.h... no
+checking for BZ2_bzDecompressInit in -lbz2... yes
+checking regex.h usability... yes
+checking regex.h presence... yes
+checking for regex.h... yes
+checking for regcomp... yes
+checking whether C compiler accepts -Wall... yes
+checking whether C compiler accepts -Wformat... yes
+checking whether C compiler accepts -Wformat-security... yes
+checking for an ANSI C-conforming const... yes
+checking for uid_t in sys/types.h... yes
+checking for mode_t... yes
+checking for off_t... yes
+checking for size_t... yes
+checking for id_t... yes
+checking for uintptr_t... yes
+checking for struct tm.tm_gmtoff... yes
+checking for struct tm.__tm_gmtoff... no
+checking for struct statfs.f_namemax... no
+checking for struct statvfs.f_iosize... no
+checking for struct stat.st_birthtime... no
+checking for struct stat.st_birthtimespec.tv_nsec... no
+checking for struct stat.st_mtimespec.tv_nsec... no
+checking for struct stat.st_mtim.tv_nsec... yes
+checking for struct stat.st_mtime_n... no
+checking for struct stat.st_umtime... no
+checking for struct stat.st_mtime_usec... no
+checking for struct stat.st_blksize... yes
+checking for struct stat.st_flags... no
+checking for uintmax_t... yes
+checking for unsigned long long... yes
+checking for unsigned long long int... yes
+checking for long long int... yes
+checking for intmax_t... yes
+checking for uintmax_t... (cached) yes
+checking for int64_t... yes
+checking for uint64_t... yes
+checking for int32_t... yes
+checking for uint32_t... yes
+checking for int16_t... yes
+checking for uint16_t... yes
+checking for uint8_t... yes
+checking whether SIZE_MAX is declared... yes
+checking whether INT32_MAX is declared... yes
+checking whether INT32_MIN is declared... yes
+checking whether INT64_MAX is declared... yes
+checking whether INT64_MIN is declared... yes
+checking whether UINT64_MAX is declared... yes
+checking whether UINT32_MAX is declared... yes
+checking whether INTMAX_MAX is declared... yes
+checking whether INTMAX_MIN is declared... yes
+checking whether UINTMAX_MAX is declared... yes
+checking whether SSIZE_MAX is declared... yes
+checking whether EFTYPE is declared... no
+checking whether EILSEQ is declared... yes
+checking for wchar_t... yes
+checking size of wchar_t... 4
+checking whether time.h and sys/time.h may both be included... yes
+checking whether cc needs -traditional... no
+checking whether sys/types.h defines makedev... no
+checking for sys/mkdev.h... (cached) no
+checking sys/sysmacros.h usability... yes
+checking sys/sysmacros.h presence... yes
+checking for sys/sysmacros.h... yes
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for working memcmp... yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether lstat accepts an empty string... no
+checking whether stat accepts an empty string... no
+checking whether strerror_r is declared... yes
+checking for strerror_r... yes
+checking whether strerror_r returns char *... no
+checking for strftime... yes
+checking for vprintf... yes
+checking for _doprnt... no
+checking for CreateHardLinkA... no
+checking for arc4random_buf... yes
+checking for chflags... no
+checking for chown... yes
+checking for chroot... yes
+checking for ctime_r... yes
+checking for fchdir... yes
+checking for fchflags... no
+checking for fchmod... yes
+checking for fchown... yes
+checking for fcntl... yes
+checking for fdopendir... yes
+checking for fork... yes
+checking for fstat... yes
+checking for fstatat... yes
+checking for fstatfs... yes
+checking for fstatvfs... yes
+checking for ftruncate... yes
+checking for futimens... yes
+checking for futimes... no
+checking for futimesat... no
+checking for geteuid... yes
+checking for getpid... yes
+checking for getgrgid_r... yes
+checking for getgrnam_r... yes
+checking for getpwnam_r... yes
+checking for getpwuid_r... yes
+checking for getvfsbyname... no
+checking for gmtime_r... yes
+checking for lchflags... no
+checking for lchmod... yes
+checking for lchown... yes
+checking for link... yes
+checking for localtime_r... yes
+checking for lstat... yes
+checking for lutimes... yes
+checking for mbrtowc... yes
+checking for memmove... yes
+checking for memset... yes
+checking for mkdir... yes
+checking for mkfifo... yes
+checking for mknod... yes
+checking for mkstemp... yes
+checking for nl_langinfo... no
+checking for openat... yes
+checking for pipe... yes
+checking for poll... yes
+checking for posix_spawnp... no
+checking for readlink... yes
+checking for readlinkat... yes
+checking for readpassphrase... no
+checking for select... yes
+checking for setenv... yes
+checking for setlocale... yes
+checking for sigaction... yes
+checking for statfs... yes
+checking for statvfs... yes
+checking for strchr... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strncpy_s... no
+checking for strrchr... yes
+checking for symlink... yes
+checking for timegm... yes
+checking for tzset... yes
+checking for unsetenv... yes
+checking for utime... yes
+checking for utimensat... yes
+checking for utimes... yes
+checking for vfork... yes
+checking for wcrtomb... yes
+checking for wcscmp... yes
+checking for wcscpy... yes
+checking for wcslen... yes
+checking for wctomb... yes
+checking for wmemcmp... yes
+checking for wmemcpy... yes
+checking for wmemmove... yes
+checking for _ctime64_s... no
+checking for _fseeki64... no
+checking for _get_timezone... no
+checking for _localtime64_s... no
+checking for _mkgmtime64... no
+checking for cygwin_conv_path... no
+checking for struct vfsconf... no
+checking for struct xvfsconf... no
+checking whether D_MD_ORDER is declared... no
+checking for struct dirent.d_namlen... no
+checking for library containing setxattr... none required
+checking whether EXTATTR_NAMESPACE_USER is declared... no
+checking whether XATTR_NOFOLLOW is declared... no
+checking for fgetxattr... yes
+checking for flistxattr... yes
+checking for fsetxattr... yes
+checking for getxattr... yes
+checking for lgetxattr... yes
+checking for listxattr... yes
+checking for llistxattr... yes
+checking for lsetxattr... yes
+checking for extended attributes support... Linux
+checking for acl_get_file in -lacl... no
+checking for acl_t... no
+checking for acl_entry_t... no
+checking for acl_permset_t... no
+checking for acl_tag_t... no
+checking for richacl_get_file in -lrichacl... no
+checking for struct richace... no
+checking for struct richacl... no
+checking for acl... no
+checking for facl... no
+checking for ACL support... none
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking support for ARCHIVE_CRYPTO_MD5_LIBC... no
+checking support for ARCHIVE_CRYPTO_MD5_LIBSYSTEM... no
+checking support for ARCHIVE_CRYPTO_RMD160_LIBC... no
+checking support for ARCHIVE_CRYPTO_SHA1_LIBC... no
+checking support for ARCHIVE_CRYPTO_SHA1_LIBSYSTEM... no
+checking support for ARCHIVE_CRYPTO_SHA256_LIBC... no
+checking support for ARCHIVE_CRYPTO_SHA256_LIBC2... no
+checking support for ARCHIVE_CRYPTO_SHA256_LIBC3... no
+checking support for ARCHIVE_CRYPTO_SHA256_LIBSYSTEM... no
+checking support for ARCHIVE_CRYPTO_SHA384_LIBC... no
+checking support for ARCHIVE_CRYPTO_SHA384_LIBC2... no
+checking support for ARCHIVE_CRYPTO_SHA384_LIBC3... no
+checking support for ARCHIVE_CRYPTO_SHA384_LIBSYSTEM... no
+checking support for ARCHIVE_CRYPTO_SHA512_LIBC... no
+checking support for ARCHIVE_CRYPTO_SHA512_LIBC2... no
+checking support for ARCHIVE_CRYPTO_SHA512_LIBC3... no
+checking support for ARCHIVE_CRYPTO_SHA512_LIBSYSTEM... no
+checking for bcrypt.h... no
+checking openssl/evp.h usability... yes
+checking openssl/evp.h presence... yes
+checking for openssl/evp.h... yes
+checking for OPENSSL_config in -lcrypto... yes
+checking support for ARCHIVE_CRYPTO_MD5_OPENSSL... yes
+checking support for ARCHIVE_CRYPTO_RMD160_OPENSSL... yes
+checking support for ARCHIVE_CRYPTO_SHA1_OPENSSL... yes
+checking support for ARCHIVE_CRYPTO_SHA256_OPENSSL... yes
+checking support for ARCHIVE_CRYPTO_SHA384_OPENSSL... yes
+checking support for ARCHIVE_CRYPTO_SHA512_OPENSSL... yes
+checking for PKCS5_PBKDF2_HMAC_SHA1... yes
+checking for EVP_CIPHER_CTX_init in -lcrypto... yes
+checking md5.h usability... no
+checking md5.h presence... no
+checking for md5.h... no
+checking ripemd.h usability... no
+checking ripemd.h presence... no
+checking for ripemd.h... no
+checking sha.h usability... no
+checking sha.h presence... no
+checking for sha.h... no
+checking sha256.h usability... no
+checking sha256.h presence... no
+checking for sha256.h... no
+checking sha512.h usability... no
+checking sha512.h presence... no
+checking for sha512.h... no
+checking for MD5Init in -lmd... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating build/pkgconfig/libarchive.pc
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+/data/data/com.termux/files/usr/bin/rm: cannot remove 'libtoolT': No such file or directory
+config.status: executing mkdirs commands
+cd /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libarchive && /data/data/com.termux/files/usr/bin/env USETOOLS=no PKGSRC_MACHINE_ARCH=aarch64 OPSYS=Linux CATMAN_SECTION_SUFFIX=no MANINSTALL=maninstall FETCH_WITH_INET6=yes FETCH_WITH_OPENSSL=yes CXXCPP=cpp CC=cc CFLAGS=-O2 CPPFLAGS=-D_LARGEFILE_SOURCE\ -D_LARGE_FILES\ -D_FILE_OFFSET_BITS=64\ -DDEF_UMASK=022\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/bzip2\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libarchive/libarchive\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libfetch\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work\ -DHAVE_NBCOMPAT_H=1\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libnbcompat CXX=c++ CXXFLAGS=-O2 COMPILER_RPATH_FLAG=-Wl,-R F77=f77 FC=f77 FFLAGS=-O LANG=C LC_ALL=C LC_COLLATE=C LC_CTYPE=C LC_MESSAGES=C LC_MONETARY=C LC_NUMERIC=C LC_TIME=C LDFLAGS=-lssl\ -lcrypto\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/bzip2\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libarchive/.libs\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libfetch\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/netpgp\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libnbcompat\ -Wl,-R/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/lib LINKER_RPATH_FLAG=-R PATH=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.wrapper/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.tools/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets:/data/data/com.termux/files/usr/applets:/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/sbin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/sbin::/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets:/sbin:/usr/sbin::/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin PREFIX=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg MAKELEVEL=0 CONFIG_SITE= PKG_SYSCONFDIR=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/etc HOME=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.home CPP=cpp LOCALBASE=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg X11BASE=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg PKGMANDIR=man PKGINFODIR=info PKGGNUDIR=gnu/ MAKECONF=/dev/null OBJECT_FMT=ELF USETOOLS=no BSD_INSTALL_PROGRAM=/data/data/com.termux/files/usr/bin/install\ -c\ -s\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_SCRIPT=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_LIB=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_DATA=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 644 BSD_INSTALL_MAN=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 644 BSD_INSTALL=/data/data/com.termux/files/usr/bin/install BSD_INSTALL_PROGRAM_DIR=/data/data/com.termux/files/usr/bin/install\ -d\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_SCRIPT_DIR=/data/data/com.termux/files/usr/bin/install\ -d\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_LIB_DIR=/data/data/com.termux/files/usr/bin/install\ -d\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_DATA_DIR=/data/data/com.termux/files/usr/bin/install\ -d\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_MAN_DIR=/data/data/com.termux/files/usr/bin/install\ -d\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_GAME=/data/data/com.termux/files/usr/bin/install\ -c\ -s\ -o\ u0_a215\ -g\ u0_a215\ -m\ 0755 BSD_INSTALL_GAME_DATA=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 0644 BSD_INSTALL_GAME_DIR=/data/data/com.termux/files/usr/bin/install\ -d\ -o\ u0_a215\ -g\ u0_a215\ -m\ 0755 INSTALL_INFO= MAKEINFO=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.tools/bin/makeinfo FLEX= BISON= PKG_CONFIG= PKG_CONFIG_LIBDIR=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/lib/aarch64-linux-android/pkgconfig:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/lib/pkgconfig:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/share/pkgconfig PKG_CONFIG_LOG=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.pkg-config.log PKG_CONFIG_PATH= WRAPPER_DEBUG=no WRAPPER_UPDATE_CACHE=yes WRAPPER_REORDER=yes					 /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/bmake -j1				 ACTIVE_CC=clang 		 -f Makefile
+/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.tools/bin/mkdir -p libarchive/test
+cat ./libarchive/test/test_*.c | grep '^DEFINE_TEST' > libarchive/test/list.h
+/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.tools/bin/mkdir -p tar/test
+cat ./tar/test/test_*.c | grep '^DEFINE_TEST' > tar/test/list.h
+/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.tools/bin/mkdir -p cpio/test
+cat ./cpio/test/test_*.c | grep '^DEFINE_TEST' > cpio/test/list.h
+cat ./cat/test/test_*.c | grep '^DEFINE_TEST' > cat/test/list.h
+/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/bmake  all-am
+  CC       libarchive/archive_acl.lo
+  CC       libarchive/archive_check_magic.lo
+  CC       libarchive/archive_cmdline.lo
+  CC       libarchive/archive_cryptor.lo
+  CC       libarchive/archive_digest.lo
+  CC       libarchive/archive_entry.lo
+  CC       libarchive/archive_entry_copy_stat.lo
+  CC       libarchive/archive_entry_link_resolver.lo
+  CC       libarchive/archive_entry_sparse.lo
+  CC       libarchive/archive_entry_stat.lo
+  CC       libarchive/archive_entry_strmode.lo
+  CC       libarchive/archive_entry_xattr.lo
+  CC       libarchive/archive_getdate.lo
+  CC       libarchive/archive_hmac.lo
+  CC       libarchive/archive_match.lo
+  CC       libarchive/archive_options.lo
+  CC       libarchive/archive_pack_dev.lo
+  CC       libarchive/archive_pathmatch.lo
+  CC       libarchive/archive_ppmd7.lo
+  CC       libarchive/archive_random.lo
+  CC       libarchive/archive_rb.lo
+  CC       libarchive/archive_read.lo
+  CC       libarchive/archive_read_add_passphrase.lo
+  CC       libarchive/archive_read_append_filter.lo
+  CC       libarchive/archive_read_data_into_fd.lo
+  CC       libarchive/archive_read_disk_entry_from_file.lo
+  CC       libarchive/archive_read_disk_posix.lo
+libarchive/archive_read_disk_posix.c:2004:6: warning: implicit declaration of function 'lutimes' is invalid in C99 [-Wimplicit-function-declaration]
+        if (lutimes(rt->name, times) != 0)
+            ^
+1 warning generated.
+  CC       libarchive/archive_read_disk_set_standard_lookup.lo
+  CC       libarchive/archive_read_extract.lo
+  CC       libarchive/archive_read_extract2.lo
+  CC       libarchive/archive_read_open_fd.lo
+  CC       libarchive/archive_read_open_file.lo
+  CC       libarchive/archive_read_open_filename.lo
+  CC       libarchive/archive_read_open_memory.lo
+  CC       libarchive/archive_read_set_format.lo
+  CC       libarchive/archive_read_set_options.lo
+  CC       libarchive/archive_read_support_filter_all.lo
+  CC       libarchive/archive_read_support_filter_bzip2.lo
+  CC       libarchive/archive_read_support_filter_compress.lo
+  CC       libarchive/archive_read_support_filter_grzip.lo
+  CC       libarchive/archive_read_support_filter_gzip.lo
+  CC       libarchive/archive_read_support_filter_lrzip.lo
+  CC       libarchive/archive_read_support_filter_lz4.lo
+  CC       libarchive/archive_read_support_filter_lzop.lo
+  CC       libarchive/archive_read_support_filter_none.lo
+  CC       libarchive/archive_read_support_filter_program.lo
+  CC       libarchive/archive_read_support_filter_rpm.lo
+  CC       libarchive/archive_read_support_filter_uu.lo
+  CC       libarchive/archive_read_support_filter_xz.lo
+  CC       libarchive/archive_read_support_format_7zip.lo
+  CC       libarchive/archive_read_support_format_all.lo
+  CC       libarchive/archive_read_support_format_ar.lo
+  CC       libarchive/archive_read_support_format_by_code.lo
+  CC       libarchive/archive_read_support_format_cab.lo
+  CC       libarchive/archive_read_support_format_cpio.lo
+  CC       libarchive/archive_read_support_format_empty.lo
+  CC       libarchive/archive_read_support_format_iso9660.lo
+  CC       libarchive/archive_read_support_format_lha.lo
+  CC       libarchive/archive_read_support_format_mtree.lo
+  CC       libarchive/archive_read_support_format_rar.lo
+  CC       libarchive/archive_read_support_format_raw.lo
+  CC       libarchive/archive_read_support_format_tar.lo
+  CC       libarchive/archive_read_support_format_warc.lo
+  CC       libarchive/archive_read_support_format_xar.lo
+  CC       libarchive/archive_read_support_format_zip.lo
+  CC       libarchive/archive_string.lo
+  CC       libarchive/archive_string_sprintf.lo
+  CC       libarchive/archive_util.lo
+  CC       libarchive/archive_version_details.lo
+  CC       libarchive/archive_virtual.lo
+  CC       libarchive/archive_write.lo
+  CC       libarchive/archive_write_disk_posix.lo
+libarchive/archive_write_disk_posix.c:3424:7: warning: implicit declaration of function 'lchmod' is invalid in C99 [-Wimplicit-function-declaration]
+                if (lchmod(a->name, mode) != 0) {
+                    ^
+1 warning generated.
+  CC       libarchive/archive_write_disk_set_standard_lookup.lo
+  CC       libarchive/archive_write_open_fd.lo
+  CC       libarchive/archive_write_open_file.lo
+  CC       libarchive/archive_write_open_filename.lo
+  CC       libarchive/archive_write_open_memory.lo
+  CC       libarchive/archive_write_add_filter.lo
+  CC       libarchive/archive_write_add_filter_b64encode.lo
+  CC       libarchive/archive_write_add_filter_by_name.lo
+  CC       libarchive/archive_write_add_filter_bzip2.lo
+  CC       libarchive/archive_write_add_filter_compress.lo
+  CC       libarchive/archive_write_add_filter_grzip.lo
+  CC       libarchive/archive_write_add_filter_gzip.lo
+  CC       libarchive/archive_write_add_filter_lrzip.lo
+  CC       libarchive/archive_write_add_filter_lz4.lo
+  CC       libarchive/archive_write_add_filter_lzop.lo
+  CC       libarchive/archive_write_add_filter_none.lo
+  CC       libarchive/archive_write_add_filter_program.lo
+  CC       libarchive/archive_write_add_filter_uuencode.lo
+  CC       libarchive/archive_write_add_filter_xz.lo
+  CC       libarchive/archive_write_set_format.lo
+  CC       libarchive/archive_write_set_format_7zip.lo
+  CC       libarchive/archive_write_set_format_ar.lo
+  CC       libarchive/archive_write_set_format_by_name.lo
+  CC       libarchive/archive_write_set_format_cpio.lo
+  CC       libarchive/archive_write_set_format_cpio_newc.lo
+  CC       libarchive/archive_write_set_format_filter_by_ext.lo
+  CC       libarchive/archive_write_set_format_iso9660.lo
+  CC       libarchive/archive_write_set_format_mtree.lo
+  CC       libarchive/archive_write_set_format_pax.lo
+  CC       libarchive/archive_write_set_format_raw.lo
+  CC       libarchive/archive_write_set_format_shar.lo
+  CC       libarchive/archive_write_set_format_ustar.lo
+  CC       libarchive/archive_write_set_format_v7tar.lo
+  CC       libarchive/archive_write_set_format_gnutar.lo
+  CC       libarchive/archive_write_set_format_warc.lo
+  CC       libarchive/archive_write_set_format_xar.lo
+  CC       libarchive/archive_write_set_format_zip.lo
+  CC       libarchive/archive_write_set_options.lo
+  CC       libarchive/archive_write_set_passphrase.lo
+  CC       libarchive/filter_fork_posix.lo
+  CC       libarchive/xxhash.lo
+  CC       libarchive_fe/libarchive_fe_la-err.lo
+  CC       libarchive_fe/libarchive_fe_la-line_reader.lo
+  CC       libarchive_fe/libarchive_fe_la-passphrase.lo
+  CC       cat/bsdcat-bsdcat.o
+  CC       cat/bsdcat-cmdline.o
+  CCLD     libarchive.la
+  CCLD     libarchive_fe.la
+  CCLD     bsdcat
+cd /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libfetch && /data/data/com.termux/files/usr/bin/touch fetch.cat3 &&			 /data/data/com.termux/files/usr/bin/env USETOOLS=no PKGSRC_MACHINE_ARCH=aarch64 OPSYS=Linux CATMAN_SECTION_SUFFIX=no MANINSTALL=maninstall FETCH_WITH_INET6=yes FETCH_WITH_OPENSSL=yes CXXCPP=cpp CC=cc CFLAGS=-O2 CPPFLAGS=-D_LARGEFILE_SOURCE\ -D_LARGE_FILES\ -D_FILE_OFFSET_BITS=64\ -DDEF_UMASK=022\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/bzip2\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libarchive/libarchive\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libfetch\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work\ -DHAVE_NBCOMPAT_H=1\ -I/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libnbcompat CXX=c++ CXXFLAGS=-O2 COMPILER_RPATH_FLAG=-Wl,-R F77=f77 FC=f77 FFLAGS=-O LANG=C LC_ALL=C LC_COLLATE=C LC_CTYPE=C LC_MESSAGES=C LC_MONETARY=C LC_NUMERIC=C LC_TIME=C LDFLAGS=-lssl\ -lcrypto\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/bzip2\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libarchive/.libs\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libfetch\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/netpgp\ -L/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libnbcompat\ -Wl,-R/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/lib LINKER_RPATH_FLAG=-R PATH=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.wrapper/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.tools/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets:/data/data/com.termux/files/usr/applets:/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/sbin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/sbin::/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets:/sbin:/usr/sbin::/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin PREFIX=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg MAKELEVEL=0 CONFIG_SITE= PKG_SYSCONFDIR=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/etc HOME=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.home CPP=cpp LOCALBASE=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg X11BASE=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg PKGMANDIR=man PKGINFODIR=info PKGGNUDIR=gnu/ MAKECONF=/dev/null OBJECT_FMT=ELF USETOOLS=no BSD_INSTALL_PROGRAM=/data/data/com.termux/files/usr/bin/install\ -c\ -s\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_SCRIPT=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_LIB=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_DATA=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 644 BSD_INSTALL_MAN=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 644 BSD_INSTALL=/data/data/com.termux/files/usr/bin/install BSD_INSTALL_PROGRAM_DIR=/data/data/com.termux/files/usr/bin/install\ -d\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_SCRIPT_DIR=/data/data/com.termux/files/usr/bin/install\ -d\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_LIB_DIR=/data/data/com.termux/files/usr/bin/install\ -d\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_DATA_DIR=/data/data/com.termux/files/usr/bin/install\ -d\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_MAN_DIR=/data/data/com.termux/files/usr/bin/install\ -d\ -o\ u0_a215\ -g\ u0_a215\ -m\ 755 BSD_INSTALL_GAME=/data/data/com.termux/files/usr/bin/install\ -c\ -s\ -o\ u0_a215\ -g\ u0_a215\ -m\ 0755 BSD_INSTALL_GAME_DATA=/data/data/com.termux/files/usr/bin/install\ -c\ -o\ u0_a215\ -g\ u0_a215\ -m\ 0644 BSD_INSTALL_GAME_DIR=/data/data/com.termux/files/usr/bin/install\ -d\ -o\ u0_a215\ -g\ u0_a215\ -m\ 0755 INSTALL_INFO= MAKEINFO=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.tools/bin/makeinfo FLEX= BISON= PKG_CONFIG= PKG_CONFIG_LIBDIR=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/lib/aarch64-linux-android/pkgconfig:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/lib/pkgconfig:/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.buildlink/share/pkgconfig PKG_CONFIG_LOG=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/.pkg-config.log PKG_CONFIG_PATH= WRAPPER_DEBUG=no WRAPPER_UPDATE_CACHE=yes WRAPPER_REORDER=yes BINOWN=u0_a215 BINGRP=u0_a215 GAMEOWN=u0_a215 GAMEGRP=u0_a215 MANOWN=u0_a215 MANGRP=u0_a215 SHAREOWN=u0_a215 SHAREGRP=u0_a215 DOCOWN=u0_a215 DOCGRP=u0_a215 BINMODE=755 NONBINMODE=644 BINDIR=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin INCSDIR=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/include LIBDIR=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/lib MANDIR=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/man STRIPFLAG=-s MANINSTALL=maninstall MKCATPAGES=no MKHTML=no			 /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/bin/bmake ACTIVE_CC=clang 	 -f Makefile depend all
+sh /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libfetch/errlist.sh ftp_errlist FTP  /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libfetch/ftp.errors > ftperr.h
+sh /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libfetch/errlist.sh http_errlist HTTP  /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libfetch/http.errors > httperr.h
+/bin/sh: /tmp/_depend27590: No such file or directory
+mv: cannot stat '/tmp/_depend27590': No such file or directory
+*** Error code 1
+
+Stop.
+bmake: stopped in /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/work/wrk/pkgtools/pkg_install/work/libfetch
+*** Error code 1
 
 Stop.
 bmake[1]: stopped in /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/pkgtools/pkg_install
