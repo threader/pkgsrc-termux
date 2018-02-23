@@ -500,7 +500,7 @@ ${_alias_}: ${_WRAP_COOKIE.${_wrappee_}}
 	if [ ! -x ${.TARGET} -a -x $$wrapper ]; then			\
 		${ECHO_BUILDLINK_MSG} "=> Linking ${_wrappee_} wrapper: ${.TARGET}"; \
  if [ ! ${WRAPPER_USE_SYMLINK} == "s" ]; then  \
-cp -r $$wrapper ${.TARGET}; \
+cp -pr $$wrapper ${.TARGET}; \
 else \
               ${LN} -fs $$wrapper ${.TARGET}; \
 fi \
