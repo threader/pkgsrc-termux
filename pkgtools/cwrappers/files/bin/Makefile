@@ -42,11 +42,6 @@ transform-cc.c: transform-gcc.c
 .ifdef MAINTAINER_MODE
 transform-gcc.c: transform-gcc-rules rules2src.awk
 	awk -v output=transform-gcc.c -f rules2src.awk transform-gcc-rules
-termux-elf-cleaner as-wrapper cc-wrapper c++-wrapper cpp-wrapper f77-wrapper \
-	imake-wrapper ld-wrapper libtool-wrapper shlibtool-wrapper
-.else
-termux-elf-cleaner as-wrapper cc-wrapper c++-wrapper cpp-wrapper f77-wrapper \
-	imake-wrapper ld-wrapper libtool-wrapper shlibtool-wrapper
 .endif
 
 .include <bsd.prog.mk>
