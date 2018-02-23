@@ -143,9 +143,9 @@ args="$*"
 # all this just for chown!
 add_path () { [ -d $1 ] && eval ${2:-PATH}="\$${2:-PATH}:$1"; }
 add_path /etc
-add_path /usr/etc
-add_path /sbin
-add_path /usr/sbin
+add_path /data/data/com.termux/files/usr/etc
+add_path /data/data/com.termux/files/usr/bin
+add_path /data/data/com.termux/files/usr/sbin
 
 # restore saved $*
 set -- $args
