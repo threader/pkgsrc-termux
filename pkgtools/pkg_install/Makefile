@@ -142,7 +142,7 @@ LDFLAGS+=	-L${WRKDIR}/libarchive/.libs
 # the system version, so give them some control.
 .  if empty(USE_BUILTIN.xz:M[Yy][Ee][Ss])
 LIBARCHIVE_CONFIGURE_ARGS+=	--without-lzma
-LIBARCHIVE_CONFIGURE_ARGS+=	CPPFLAGS='-I./contrib/android/include $CPPFLAGS'
+LIBARCHIVE_CONFIGURE_ARGS+=	CPPFLAGS='-I./contrib/android/include'
 .  endif
 
 LIBARCHIVE_LIBS=	${SED} -n -e 's/^Libs.private://p' \
