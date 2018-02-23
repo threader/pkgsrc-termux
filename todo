@@ -1,2 +1,9 @@
 # termux-elf-cleamer - android-elf-cleaner 
-./bootstrap --workdir=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc/bootstrap/work --unprivileged --prefix=/data/data/com.termux/files/usr/pkg --pkgdbdir=/data/data/com.termux/files/usr/pkg/pkgdb --sysconfdid=/data/data/com.termux/files/usr/pkg/etc --varbase=/data/data/com.termux/files/usr/var 
+./bootstrap \
+--workdir=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc/bootstrap/work \
+--cwrappers=no \
+--unprivileged \
+--prefix=/data/data/com.termux/files/usr/pkg \
+--pkgdbdir=/data/data/com.termux/files/usr/pkg/pkgdb \ 
+--sysconfdid=/data/data/com.termux/files/usr/pkg/etc \
+--varbase=/data/data/com.termux/files/usr/var 
