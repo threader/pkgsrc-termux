@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /data/data/com.termux/files/usr/bin/bash
 # Attempt to guess a canonical system name.
 #   Copyright 1992-2017 Free Software Foundation, Inc.
 
@@ -1118,8 +1118,8 @@ EOF
 	if test -f /usr/options/cb.name; then
 		UNAME_REL=`sed -n 's/.*Version //p' </usr/options/cb.name`
 		echo ${UNAME_MACHINE}-pc-isc$UNAME_REL
-	elif /bin/uname -X 2>/dev/null >/dev/null ; then
-		UNAME_REL=`(/bin/uname -X|grep Release|sed -e 's/.*= //')`
+	elif /data/data/com.termux/files/usr/bin/uname -X 2>/dev/null >/dev/null ; then
+		UNAME_REL=`(/data/data/com.termux/files/usr/bin/uname -X|grep Release|sed -e 's/.*= //')`
 		(/bin/uname -X|grep i80486 >/dev/null) && UNAME_MACHINE=i486
 		(/bin/uname -X|grep '^Machine.*Pentium' >/dev/null) \
 			&& UNAME_MACHINE=i586
@@ -1447,13 +1447,13 @@ uname -r = `(uname -r) 2>/dev/null || echo unknown`
 uname -s = `(uname -s) 2>/dev/null || echo unknown`
 uname -v = `(uname -v) 2>/dev/null || echo unknown`
 
-/usr/bin/uname -p = `(/usr/bin/uname -p) 2>/dev/null`
-/bin/uname -X     = `(/bin/uname -X) 2>/dev/null`
+/usr/bin/uname -p = `(/data/data/com.termux/files/usr/bin/uname -p) 2>/dev/null`
+/bin/uname -X     = `(/data/data/com.termux/files/usr/bin/uname -X) 2>/dev/null`
 
 hostinfo               = `(hostinfo) 2>/dev/null`
 /bin/universe          = `(/bin/universe) 2>/dev/null`
 /usr/bin/arch -k       = `(/usr/bin/arch -k) 2>/dev/null`
-/bin/arch              = `(/bin/arch) 2>/dev/null`
+/bin/arch              = `(echo "aarch64" ) 2>/dev/null`
 /usr/bin/oslevel       = `(/usr/bin/oslevel) 2>/dev/null`
 /usr/convex/getsysinfo = `(/usr/convex/getsysinfo) 2>/dev/null`
 

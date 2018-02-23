@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /data/data/com.termux/files/usr/bin/bash
 #
 # NOTE: This file was brought from
 #       http://git.savannah.gnu.org/cgit/gnulib.git/plain/build-aux/config.rpath

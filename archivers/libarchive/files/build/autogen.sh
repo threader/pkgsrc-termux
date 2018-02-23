@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 
-PATH=/usr/local/gnu-autotools/bin/:$PATH
+PATH=/data/data/com.termux/files/usr/local/gnu-autotools/bin/:$PATH
 export PATH
 
 # Start from one level above the build directory
