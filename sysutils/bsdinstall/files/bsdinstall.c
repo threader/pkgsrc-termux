@@ -1039,10 +1039,13 @@ strip(char *to_name)
 		/*NOTREACHED*/
 	case 0:
 
-		if (stripArgs)
+		if (stripArgs) {
 			execl(_PATH_BSHELL, "sh", "-c", cmd, NULL);
-		else
+			execl(_PATH_BSHELL, "termux-elf-cleaner","cmd",NULL,NULL); 
+		} else {
 			execlp(stripprog, "strip", to_name, NULL);
+			execlp(termux-elf-cleaner,"to_name",NULL,NULL); 
+			}
 
 		progname = getprogname();
 		write(STDERR_FILENO, progname, strlen(progname));
@@ -1092,6 +1095,7 @@ afterinstall(const char *command, const char *to_name, int errunlink)
 		sprintf(cmd, "%s %s", command, to_name);
 
 		execl(_PATH_BSHELL, "sh", "-c", cmd, NULL);
+		execl(_PATH_BSHELL, "termux-elf-cleaner","cmd",NULL,NULL);
 
 		warn("%s: exec of after install command", command);
 		_exit(1);
