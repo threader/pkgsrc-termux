@@ -105,7 +105,8 @@ $doit $instcmd $src $dsttmp
 
 # and set any options; do chmod last to preserve setuid bits
 
-if [ x"$chowncmd" != x ]; then $doit $chowncmd $dsttmp && $doit termux-elf-cleaner $dsttmp; fi
+if [ x"$chmodcmd" != x ]; then $doit termux-elf-cleaner $dsttmp; fi
+if [ x"$chowncmd" != x ]; then $doit $chowncmd $dsttmp;  fi
 if [ x"$chgrpcmd" != x ]; then $doit $chgrpcmd $dsttmp; fi
 if [ x"$stripcmd" != x ]; then $doit $stripcmd $dsttmp; fi
 if [ x"$chmodcmd" != x ]; then $doit $chmodcmd $dsttmp; fi
