@@ -35,11 +35,11 @@ ftp.o: ftperr.h
 http.o: httperr.h
 
 ftperr.h: ${.CURDIR}/ftp.errors ${.CURDIR}/Makefile ${.CURDIR}/errlist.sh
-	sh ${.CURDIR}/errlist.sh ftp_errlist FTP \
+	bash ${.CURDIR}/errlist.sh ftp_errlist FTP \
 	    ${.CURDIR}/ftp.errors > ${.TARGET}
 
 httperr.h: ${.CURDIR}/http.errors ${.CURDIR}/Makefile ${.CURDIR}/errlist.sh
-	sh ${.CURDIR}/errlist.sh http_errlist HTTP \
+	bash ${.CURDIR}/errlist.sh http_errlist HTTP \
 	    ${.CURDIR}/http.errors > ${.TARGET}
 
 .include <bsd.lib.mk>
