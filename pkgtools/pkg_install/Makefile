@@ -135,7 +135,7 @@ LDFLAGS+=	-L${WRKDIR}/zlib
 .endif
 .if empty(USE_BUILTIN.libarchive:M[yY][eE][sS])
 CPPFLAGS+=	-I${WRKDIR}/libarchive/libarchive
-CPPFLAGS+=	-I${WRKDIR}/libarchive/libarchive/contrib/android/include
+CPPFLAGS+=	-I${WRKDIR}/libarchive/contrib/android/include
 LDFLAGS+=	-L${WRKDIR}/libarchive/.libs
 
 # Only use XZ if we actually have builtin support for it. Some systems
