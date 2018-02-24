@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 # $NetBSD: errlist.sh,v 1.2 2008/10/06 12:58:29 joerg Exp $
 
 printf "static struct fetcherr $1[] = {\n"

@@ -135,6 +135,7 @@ LDFLAGS+=	-L${WRKDIR}/zlib
 .endif
 .if empty(USE_BUILTIN.libarchive:M[yY][eE][sS])
 CPPFLAGS+=	-I${WRKDIR}/libarchive/libarchive
+CPPFLAGS+=	-I${WRKDIR}/libarchive/libarchive/contrib/android/include
 LDFLAGS+=	-L${WRKDIR}/libarchive/.libs
 
 # Only use XZ if we actually have builtin support for it. Some systems
@@ -142,7 +143,6 @@ LDFLAGS+=	-L${WRKDIR}/libarchive/.libs
 # the system version, so give them some control.
 .  if empty(USE_BUILTIN.xz:M[Yy][Ee][Ss])
 LIBARCHIVE_CONFIGURE_ARGS+=	--without-lzma
-LIBARCHIVE_CONFIGURE_ARGS+=	CPPFLAGS='-I./contrib/android/include'
 .  endif
 
 LIBARCHIVE_LIBS=	${SED} -n -e 's/^Libs.private://p' \
