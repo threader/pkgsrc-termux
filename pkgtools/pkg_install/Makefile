@@ -25,10 +25,11 @@ CPPFLAGS+=	-I${WRKDIR}/libnbcompat
 CPPFLAGS+=	-I${WRKDIR}/libfetch
 CPPFLAGS+=	-I${WRKDIR}/.
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR} CPPFLAGS='-I${WRKDIR}/libnbcompat -I${WRKDIR}/libfetch -I${WRKDIR}/.'
+CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
 
 USE_FEATURES=		nbcompat
-NBCOMPAT_CONFIGURE_ARGS+=	--enable-bsd-getopt --enable-db CPPFLAGS='-I${WRKDIR}/libnbcompat -I./libnbcompat -I.'
+
+NBCOMPAT_CONFIGURE_ARGS+=	--enable-bsd-getopt --enable-db
 
 SKIP_AUDIT_PACKAGES=	yes
 NO_PKGTOOLS_REQD_CHECK=	yes
