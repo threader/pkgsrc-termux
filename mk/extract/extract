@@ -122,7 +122,7 @@ set -u		# treat undefined variables as errors
 : ${P7ZA:="7za x"}
 : ${P7ZA_SO:="7za x -so"}
 
-: ${TMPDIR:=/tmp}
+: ${TMPDIR:=/data/data/com.termux/files/usr/tmp}
 
 self="${0##*/}"
 

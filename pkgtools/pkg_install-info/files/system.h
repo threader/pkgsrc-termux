@@ -229,7 +229,7 @@ extern int strcoll ();
 # ifdef VMS
 #  define DEFAULT_TMPDIR "sys$scratch:"
 # else
-#  define DEFAULT_TMPDIR "/tmp/"
+#  define DEFAULT_TMPDIR "/data/data/com.termux/files/usr/tmp/"
 # endif
 # define NULL_DEVICE	"/dev/null"
 # define PIPE_USE_FORK	1

@@ -60,7 +60,7 @@ _PRINT_PLIST_LIBTOOLIZE_FILTER?=					\
 	  if ${TEST} -d ${WRKDIR}; then					\
 	  	tmpdir="${WRKDIR}";					\
 	  else								\
-	  	tmpdir="$${TMPDIR-/tmp}";				\
+	  	tmpdir="$${TMPDIR-/data/data/com.termux/files/usr/tmp}";				\
 	  fi;								\
 	  fileslist="$$tmpdir/print.plist.files.$$$$";			\
 	  libslist="$$tmpdir/print.plist.libs.$$$$";			\

@@ -211,7 +211,7 @@ _task_group_exists_cleanup()
 
 	# Sanity check before blowing away $__group_tmpdir__.
 	case $__group_tmpdir__ in
-	/tmp/*)	${RM} -fr "$__group_tmpdir__" ;;
+	/data/data/com.termux/files/usr/tmp/*)	${RM} -fr "$__group_tmpdir__" ;;
 	"")	: "skip empty tmpdir" ;;
 	*)	task_echo "!!! WARNING: usergroup_exists: Remove directory $__group_tmpdir__" ;;
 	esac
@@ -224,7 +224,7 @@ _task_user_exists_cleanup()
 
 	# Sanity check before blowing away $__user_tmpdir__.
 	case $__user_tmpdir__ in
-	/tmp/*)	${RM} -fr "$__user_tmpdir__" ;;
+	/data/data/com.termux/files/usr/tmp/*)	${RM} -fr "$__user_tmpdir__" ;;
 	"")	: "skip empty tmpdir" ;;
 	*)	task_echo "!!! WARNING: usergroup_exists: Remove directory $__user_tmpdir__" ;;
 	esac

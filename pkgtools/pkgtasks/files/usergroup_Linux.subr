@@ -100,7 +100,7 @@ platform_useradd()
 {
 	: ${USERADD:=useradd}
 
-	: ${LOGIN_DEFS:=/etc/login.defs}
+	: ${LOGIN_DEFS:=/data/data/com.termux/files/usr/etc/login.defs}
 
 	local uid=
 	local useradd_args=

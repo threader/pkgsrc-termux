@@ -114,7 +114,7 @@ CPPFLAGS=	${HOST_CPPFLAGS}
 
 .if defined(SRCS)
 afterdepend: .depend
-	@(TMP=/tmp/_depend$$$$; \
+	@(TMP=/data/data/com.termux/files/usr/tmp/_depend$$$$; \
 	    sed -e 's/^\([^\.]*\).o[ ]*:/\1.lo \1.ln:/' \
 	      < .depend > $$TMP; \
 	    mv $$TMP .depend)

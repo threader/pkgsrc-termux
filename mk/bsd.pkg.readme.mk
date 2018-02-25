@@ -276,7 +276,7 @@ README.html: .PRECIOUS
 		SED=${SED:Q} \
 		SETENV=${SETENV:Q} \
 		SORT=${SORT:Q} \
-		TMPDIR=${TMPDIR:U/tmp:Q} \
+		TMPDIR=${TMPDIR:U/data/data/com.termux/files/usr/tmp:Q} \
 		SINGLEPKG=${PKGPATH:Q} \
 		$@.tmp1
 	@${RM} $@.tmp1

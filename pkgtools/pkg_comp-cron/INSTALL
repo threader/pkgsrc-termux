@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /data/data/com.termux/files/usr/bin/bash
 
 BUILDBASE="@BUILDBASE@"
 EGDIR="@EGDIR@"
@@ -14,11 +14,11 @@ CRONTAB_RE="${PREFIX}/sbin/pkg_comp4cron .*${BUILDBASE}/pkg_comp.conf"
 # the path to the file.  If the crontab does not exist, populates
 # the output with some basic contents.
 get_crontab() {
-    local tempfile="$(mktemp "${TMPDIR:-/tmp}/pkg_comp.XXXXXX")"
+    local tempfile="$(mktemp "${TMPDIR:-/data/data/com.termux/files/usr/tmp}/pkg_comp.XXXXXX")"
     if ! crontab -u "${PKG_COMP_USER}" -l >>"${tempfile}"; then
         cat >>"${tempfile}" <<EOF
-PATH=${PREFIX}/bin:${PREFIX}/sbin:/usr/bin:/usr/sbin:/bin:/sbin
-SHELL=/bin/sh
+PATH=${PREFIX}/bin:${PREFIX}/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/data/data/com.termux/files/usr/bin
+SHELL=/data/data/com.termux/files/usr/bin/bash
 
 # Cheatsheet: minute hour day-of-month month day-of-week(0,7=Sun)
 EOF
@@ -43,7 +43,7 @@ install_crontab() {
 uninstall_crontab() {
     local tempfile; tempfile="$(get_crontab)" || return
     if grep "${CRONTAB_RE}" "${tempfile}" >/dev/null; then
-        local tempfile2="$(mktemp "${TMPDIR:-/tmp}/pkg_comp.XXXXXX")"
+        local tempfile2="$(mktemp "${TMPDIR:-/data/data/com.termux/files/usr/tmp}/pkg_comp.XXXXXX")"
         grep -v "${CRONTAB_RE}" "${tempfile}" >>"${tempfile2}"
         if [ -s "${tempfile2}" ]; then
             crontab -u "${PKG_COMP_USER}" "${tempfile2}"

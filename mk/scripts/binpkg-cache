@@ -41,7 +41,7 @@
 #
 
 
-TMPDIR=${TMPDIR:-/tmp}
+TMPDIR=${TMPDIR:-/data/data/com.termux/files/usr/tmp}
 PACKAGES=${PACKAGES:-/usr/pkgsrc/packages/}
 AWK=${AWK:-awk}
 CMP=${CMP:-cmp}

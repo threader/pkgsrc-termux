@@ -89,7 +89,7 @@ task_maketemp()
 	# Default location in which temporary files and directories are
 	# are created.
 	#
-	local tmpdir="/tmp"
+	local tmpdir="/data/data/com.termux/files/usr/tmp"
 	[ -z "${TMPDIR}" ] || tmpdir=${TMPDIR}
 
 	local output

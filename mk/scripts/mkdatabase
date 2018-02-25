@@ -43,7 +43,7 @@
 # Global variables, based on environment variables
 #
 
-TMPDIR=${TMPDIR:-/tmp}
+TMPDIR=${TMPDIR:-/data/data/com.termux/files/usr/tmp}
 BMAKE=${BMAKE:-make}
 AWK=${AWK:-/data/data/com.termux/files/usr/bin/awk}
 DATABASE=${DATABASE:-${TMPDIR}/pkgdb.$$}

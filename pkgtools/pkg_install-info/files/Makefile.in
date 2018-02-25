@@ -3,7 +3,7 @@
 .if defined(PREFIX)
 BINDIR?=	${PREFIX}/bin
 .else
-BINDIR?=	/usr/bin
+BINDIR?=	/data/data/com.termux/files/usr/bin
 .endif
 
 PROG=	pkg_install-info
