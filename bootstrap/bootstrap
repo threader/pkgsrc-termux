@@ -1116,7 +1116,7 @@ fi
 	echo "TOOLS_PLATFORM.sh?=		/data/data/com.termux/files/usr/bin/bash" >> ${BOOTSTRAP_MKCONF}
 	echo "PKGSRC_COMPILER=       clang" >> ${TARGET_MKCONF}
 	echo "PKGSRC_COMPILER=       clang" >> ${BOOTSTRAP_MKCONF}
-	echo "HAVE_LLVM=        yes" >> ${TARGET_MKCONF}
+	echo "HAVE_LLVM=       	yes" >> ${TARGET_MKCONF}
 	echo "HAVE_LLVM=        yes" >> ${BOOTSTRAP_MKCONF}
 # Hopefully this works and we can use xeffyr's xorg for termux
 	echo "HAVE_X11=        yes" >> ${TARGET_MKCONF}
@@ -1168,7 +1168,7 @@ bash ./bootstrap.sh)"
 bootstrap_bmake() {
 	echo_msg "Bootstrapping bmake"
 	copy_src $pkgsrcdir/devel/bmake/files bmake
-	run_cmd "(cd $wrkdir/bmake && autoconf; find . -name 'config.sub' -exec chmod u+w '{}' \; ; bash ./configure $configure_quiet_flags --prefix=$wrkdir CC=clang CXX=clang++ --with-default-sys-path=$wrkdir/share/mk --with-machine-arch=${machine_arch} $bmakexargs)"
+	run_cmd "(cd $wrkdir/bmake && autoconf; bash ./configure $configure_quiet_flags --prefix=$wrkdir CC=clang CXX=clang++ --with-default-sys-path=$wrkdir/share/mk --with-machine-arch=${machine_arch} $bmakexargs)"
 	run_cmd "(cd $wrkdir/bmake && bash make-bootstrap.sh)"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/bmake/bmake $wrkdir/bin/bmake"
 }
@@ -1179,7 +1179,7 @@ bmake="$wrkdir/bin/bmake"
 # build libnbcompat
 echo_msg "Building libnbcompat"
 copy_src $pkgsrcdir/pkgtools/libnbcompat/files libnbcompat
-run_cmd "(cd $wrkdir/libnbcompat; autoconf; find . -name 'config.sub' -exec chmod u+w '{}' \; ; bash ./configure $configure_quiet_flags -C --prefix=$prefix CC=clang CXX=clang++ --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir --enable-bsd-getopt --enable-db && $bmake $make_quiet_flags -j$make_jobs)"
+run_cmd "(cd $wrkdir/libnbcompat; autoconf; bash ./configure $configure_quiet_flags -C --prefix=$prefix CC=clang CXX=clang++ --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir --enable-bsd-getopt --enable-db && $bmake $make_quiet_flags -j$make_jobs)"
 
 # bootstrap ksh if necessary
 case "$need_ksh" in
@@ -1187,7 +1187,7 @@ yes)	echo_msg "Bootstrapping ksh"
 	copy_src $pkgsrcdir/shells/pdksh/files ksh
 	test -n "$CC" || CC=gcc	# default to gcc if no compiler is specified
 	# Drops out here on need_ksh and still kils workdir  
-	run_cmd "(cd $wrkdir/ksh && autoconf; find . -name 'config.sub' -exec chmod u+w '{}' \; ; env $BSTRAP_ENV bash ./configure $configure_quiet_flags CC=clang CXX=clang++--prefix=$prefix --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir && $bmake $make_quiet_flags -j$make_jobs)"
+	run_cmd "(cd $wrkdir/ksh && autoconf; env $BSTRAP_ENV bash ./configure $configure_quiet_flags CC=clang CXX=clang++--prefix=$prefix --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir && $bmake $make_quiet_flags -j$make_jobs)"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/ksh/ksh $wrkdir/bin/pdksh"
 	echo "TOOLS_PLATFORM.sh?=		$prefix/bin/pdksh" >> ${TARGET_MKCONF}
 	echo "TOOLS_PLATFORM.sh?=		$wrkdir/bin/pdksh" >> ${BOOTSTRAP_MKCONF}
@@ -1226,7 +1226,7 @@ esac
 # bootstrap pkg_install
 echo_msg "Bootstrapping pkgtools"
 copy_src $pkgsrcdir/archivers/libarchive/files libarchive
-run_cmd "(cd $wrkdir/libarchive; autoconf; find . -name 'config.sub' -exec chmod u+w '{}' \; ; \
+run_cmd "(cd $wrkdir/libarchive; autoconf; \
 env $BSTRAP_ENV CPPFLAGS='-I${wrkdir}/libarchive/contrib/android/include -I./contrib/android/include $CPPFLAGS' \
 bash ./configure CC=clang CXX=clang++ $configure_quiet_flags --enable-static --disable-shared \
 --disable-bsdtar --disable-bsdcpio --disable-posix-regex-lib --disable-xattr \
@@ -1235,7 +1235,7 @@ bash ./configure CC=clang CXX=clang++ $configure_quiet_flags --enable-static --d
 --without-nettle --without-openssl --without-xml2 --without-expat CPPFLAGS='-I./contrib/android/include $CPPFLAGS'  && \
 MAKE=$bmake && $bmake $make_quiet_flags -j$make_jobs)"
 copy_src $pkgsrcdir/pkgtools/pkg_install/files pkg_install
-run_cmd "(cd $wrkdir/pkg_install; autoconf; find . -name 'config.sub' -exec chmod u+w '{}' \; ; \
+run_cmd "(cd $wrkdir/pkg_install; autoconf; \
 env $BSTRAP_ENV CPPFLAGS='-I${wrkdir}/libnbcompat -I${wrkdir}/libarchive/contrib/android/include -I${wrkdir}/libarchive/libarchive $CPPFLAGS' \
 LDFLAGS='-L${wrkdir}/libnbcompat $LDFLAGS' \
 LIBS='-lnbcompat $LIBS' \
