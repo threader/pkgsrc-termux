@@ -84,13 +84,13 @@ OS_VARIANT?=		# empty
 # invocations will skip these blocks entirely thanks to MAKEFLAGS.
 .if !defined(OS_VERSION)
 _OS_VERSION_CMD=	${UNAME} -r
-OS_VERSION=		${_OS_VERSION_CMD:bash}
+OS_VERSION=		${_OS_VERSION_CMD:sh}
 MAKEFLAGS+=		OS_VERSION=${OS_VERSION:Q}
 .endif
 
 # Preload these for architectures not in all variations of bsd.own.mk,
 # which do not match their GNU names exactly.
-GNU_ARCH.aarch64?= aarch64
+GNU_ARCH.aarch64?=		aarch64
 GNU_ARCH.aarch64eb?=	aarch64_be
 GNU_ARCH.coldfire?=	m5407
 GNU_ARCH.arm26?=	arm
