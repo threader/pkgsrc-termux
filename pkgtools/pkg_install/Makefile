@@ -21,7 +21,7 @@ CONFLICTS+=		audit-packages-[0-9]*
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
+CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR} CPPFLAGS='-I${WRKDIR}/libnbcompat'
 
 USE_FEATURES=		nbcompat
 CPPFLAGS+=	-I${WRKDIR}/libnbcompat
