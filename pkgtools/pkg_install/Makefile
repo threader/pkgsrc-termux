@@ -20,12 +20,13 @@ SKIP_LICENSE_CHECK=	yes
 CONFLICTS+=		audit-packages-[0-9]*
 
 GNU_CONFIGURE=		yes
+CPPFLAGS+=	-I.
+CPPFLAGS+=	-I${WRKDIR}/libnbcompat 
+CPPFLAGS+=	-I${WRKDIR}/libfetch
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR} CPPFLAGS='-I${WRKDIR}/libnbcompat'
+CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR} CPPFLAGS='-I${WRKDIR}/libnbcompat -I${WRKDIR}/libfetch'
 
 USE_FEATURES=		nbcompat
-CPPFLAGS+=	-I${WRKDIR}/libnbcompat
-CPPFLAGS+=	-I.
 NBCOMPAT_CONFIGURE_ARGS+=	--enable-bsd-getopt --enable-db CPPFLAGS='-I${WRKDIR}/libnbcompat -I./libnbcompat -I.'
 
 SKIP_AUDIT_PACKAGES=	yes
