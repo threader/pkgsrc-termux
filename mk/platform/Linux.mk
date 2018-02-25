@@ -185,7 +185,7 @@ CWRAPPERS_APPEND.ld+=	-m elf_i386
 .if exists(/data/data/com.termux/files/usr${LIBABISUFFIX}/libc.so.6)
 _GLIBC_VERSION_CMD=	/data/data/com.termux/files/usr${LIBABISUFFIX}/libc.so.6 --version | \
 				sed -ne's/^GNU C.*version \(.*\),.*$$/\1/p'
-GLIBC_VERSION=		${_GLIBC_VERSION_CMD:sh}
+GLIBC_VERSION=		${_GLIBC_VERSION_CMD:bash}
 .endif
 
 # If this is defined pass it to the make process. 

@@ -694,7 +694,7 @@ _UNWRAP_PATTERNS_FIND_cmd=	\
 	| ${SORT} -u
 UNWRAP_FILES?=		# empty
 _UNWRAP_FILES=		${UNWRAP_FILES}					\
-			${_UNWRAP_PATTERNS_FIND_cmd:sh:N__dummy-entry__}
+			${_UNWRAP_PATTERNS_FIND_cmd:bash:N__dummy-entry__}
 _UNWRAP_SED?=		# empty
 
 SUBST_CLASSES+=		unwrap

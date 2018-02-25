@@ -31,7 +31,7 @@ _REPLACE_LOCALEDIR_PATTERNS_FIND_cmd=					\
 REPLACE_LOCALEDIR?=	# empty
 _REPLACE_LOCALEDIR=	\
 	${REPLACE_LOCALEDIR}						\
-	${_REPLACE_LOCALEDIR_PATTERNS_FIND_cmd:sh:N__dummy-entry__:N*.orig}
+	${_REPLACE_LOCALEDIR_PATTERNS_FIND_cmd:bash:N__dummy-entry__:N*.orig}
 
 .if empty(USE_PKGLOCALEDIR:M[nN][oO])
 SUBST_CLASSES+=			pkglocaledir

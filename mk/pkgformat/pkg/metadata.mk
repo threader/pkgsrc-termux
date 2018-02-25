@@ -53,8 +53,8 @@ ${_BUILD_INFO_FILE}: ${_PLIST_NOKEYWORDS}
 .if defined(SUPERSEDES)
 	${RUN}${ECHO} "SUPERSEDES=${SUPERSEDES}" >> ${.TARGET}.tmp
 .endif
-	${RUN}${ECHO} "BUILD_DATE=${_BUILD_DATE_cmd:sh}" >> ${.TARGET}.tmp
-	${RUN}${ECHO} "BUILD_HOST=${_BUILD_HOST_cmd:sh}" >> ${.TARGET}.tmp
+	${RUN}${ECHO} "BUILD_DATE=${_BUILD_DATE_cmd:bash}" >> ${.TARGET}.tmp
+	${RUN}${ECHO} "BUILD_HOST=${_BUILD_HOST_cmd:bash}" >> ${.TARGET}.tmp
 .if !empty(CHECK_SHLIBS_SUPPORTED:M[yY][eE][sS])
 	${RUN}								\
 	case ${LDD:Q}"" in						\
@@ -362,8 +362,8 @@ _PKG_CREATE_ARGS+=	${"${CONFLICTS:M*}" != "":?-C ${CONFLICTS:Q}:}
 _PKG_CREATE_ARGS+=	${_INSTALL_FILE:D	-i ${_INSTALL_FILE:Q}}
 _PKG_CREATE_ARGS+=	${_DEINSTALL_FILE:D	-k ${_DEINSTALL_FILE:Q}}
 .else
-_PKG_CREATE_ARGS+=	${INSTALL_FILE:D	${_INSTALL_ARG_cmd:sh}}
-_PKG_CREATE_ARGS+=	${DEINSTALL_FILE:D	${_DEINSTALL_ARG_cmd:sh}}
+_PKG_CREATE_ARGS+=	${INSTALL_FILE:D	${_INSTALL_ARG_cmd:bash}}
+_PKG_CREATE_ARGS+=	${DEINSTALL_FILE:D	${_DEINSTALL_ARG_cmd:bash}}
 .endif
 
 _PKG_ARGS_INSTALL+=	${_PKG_CREATE_ARGS}

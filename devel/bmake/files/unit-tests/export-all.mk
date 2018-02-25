@@ -4,7 +4,7 @@ UT_OK=good
 UT_F=fine
 
 # the old way to do :tA
-M_tAbad = C,.*,cd & \&\& 'pwd',:sh
+M_tAbad = C,.*,cd & \&\& 'pwd',:bash
 # the new
 M_tA = tA
 

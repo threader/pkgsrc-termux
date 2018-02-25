@@ -62,10 +62,10 @@
 #
 
 CTYPE?=			Updated
-NETBSD_LOGIN_NAME?=	${_NETBSD_LOGIN_NAME_cmd:sh}
+NETBSD_LOGIN_NAME?=	${_NETBSD_LOGIN_NAME_cmd:bash}
 
 PKGSRC_CHANGES_DIR=	${PKGSRCDIR}/doc/
-PKGSRC_CHANGES_BASE=	CHANGES-${_CYEAR_cmd:sh}
+PKGSRC_CHANGES_BASE=	CHANGES-${_CYEAR_cmd:bash}
 PKGSRC_CHANGES?=	${PKGSRC_CHANGES_DIR}/${PKGSRC_CHANGES_BASE}
 PKGSRC_TODO?=		${PKGSRC_CHANGES_DIR}/TODO
 
@@ -100,7 +100,7 @@ _CE_MSG1=	Renamed ${PKGPATH} to ${TO}
 .else
 _CE_ERRORS+=	"[developer.mk] Invalid value "${CTYPE:Q}" for CTYPE."
 .endif
-_CE_MSG2=	[${NETBSD_LOGIN_NAME} ${_CDATE_cmd:sh}]
+_CE_MSG2=	[${NETBSD_LOGIN_NAME} ${_CDATE_cmd:bash}]
 _CE_MSG=	${_CE_MSG1} ${_CE_MSG2}
 
 # XXX Accumulate commit message during each operation, so that a final
@@ -167,7 +167,7 @@ do-upload-distfiles: checksum
 	distdir='~ftp/pub/pkgsrc/distfiles';				\
 	ssh_cmd="ssh -l ${NETBSD_LOGIN_NAME} $${disthost}";		\
 	${STEP_MSG} "Checking uploaded files";				\
-	uploaded_files=`${ECHO} "(cd $${distdir} && /bin/ls -1d ${_ALLFILES}) 2>/dev/null || ${TRUE}" | $${ssh_cmd} /data/data/com.termux/files/usr/bin/bash`;	\
+	uploaded_files=`${ECHO} "(cd $${distdir} && /data/data/com.termux/files/usr/bin/ls -1d ${_ALLFILES}) 2>/dev/null || ${TRUE}" | $${ssh_cmd} /data/data/com.termux/files/usr/bin/bash`;	\
 	pending_files="";						\
 	for file in ${_ALLFILES}; do					\
 		found=0;						\
@@ -184,7 +184,7 @@ do-upload-distfiles: checksum
 	if ${TEST} -n "$${pending_files}"; then				\
 		${STEP_MSG} "Uploading distfiles";			\
 		cd ${DISTDIR} && ${TAR:U${TOOLS_PLATFORM.tar:Utar}} cf - $${pending_files} | 	\
-			$${ssh_cmd} /bin/tar xpf - -C "$${distdir}";	\
+			$${ssh_cmd} /data/data/com.termux/files/usr/bin/tar xpf - -C "$${distdir}";	\
 	fi
 .endif
 

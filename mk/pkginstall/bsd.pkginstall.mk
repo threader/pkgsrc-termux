@@ -252,7 +252,7 @@ USE_TOOLS+=	perl
 PKG_GID.${_group_}_cmd=							\
 	if ${TEST} ! -x ${PERL5}; then ${ECHO} ""; exit 0; fi;		\
 	${PERL5} -le 'print scalar getgrnam shift' ${_group_}
-PKG_GID.${_group_}?=	${PKG_GID.${_group_}_cmd:sh:M*}
+PKG_GID.${_group_}?=	${PKG_GID.${_group_}_cmd:bash:M*}
 .  endif
 _PKG_GROUPS+=	${_group_}:${PKG_GID.${_group_}}
 .endfor
@@ -265,7 +265,7 @@ USE_TOOLS+=	perl
 PKG_UID.${e}_cmd=							\
 	if ${TEST} ! -x ${PERL5}; then ${ECHO} ""; exit 0; fi;		\
 	${PERL5} -le 'print scalar getpwnam shift' ${e}
-PKG_UID.${e}?=	${PKG_UID.${e}_cmd:sh:M*}
+PKG_UID.${e}?=	${PKG_UID.${e}_cmd:bash:M*}
 .    endif
 _PKG_USERS+=	${_entry_}:${PKG_UID.${e}}:${PKG_GECOS.${e}:Q}:${PKG_HOME.${e}:Q}:${PKG_SHELL.${e}:Q}
 .  endfor
