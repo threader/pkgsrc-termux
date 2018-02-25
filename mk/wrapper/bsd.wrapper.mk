@@ -167,8 +167,8 @@ WRAPPER_${_wrappee_}=	${WRAPPER_BINDIR}/${${_wrappee_}}
 .endfor	# _WRAPPEES
 
 _WRAP_ALIASES.AS=	as
-_WRAP_ALIASES.CC=	clang cc gcc ada
-_WRAP_ALIASES.CXX=	clang++ c++ g++ CC cxx
+_WRAP_ALIASES.CC=	cc clang gcc ada
+_WRAP_ALIASES.CXX=	c++ clang++ g++ CC cxx
 _WRAP_ALIASES.CPP=	cpp
 _WRAP_ALIASES.FC=	f77 g77 gfortran
 _WRAP_ALIASES.IMAKE=	imake
@@ -499,12 +499,12 @@ ${_alias_}: ${_WRAP_COOKIE.${_wrappee_}}
 	wrapper="${WRAPPER_${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"; \
 	if [ ! -x ${.TARGET} -a -x $$wrapper ]; then			\
 		${ECHO_BUILDLINK_MSG} "=> Linking ${_wrappee_} wrapper: ${.TARGET}"; \
- if [ ! ${WRAPPER_USE_SYMLINK} == "s" ]; then  \
-cp -pr $$wrapper ${.TARGET}; \
-else \
-              ${LN} -fs $$wrapper ${.TARGET}; \
-fi \
-fi
+			if [ ! ${WRAPPER_USE_SYMLINK} == "s" ]; then  \
+				cp -pr $$wrapper ${.TARGET}; \
+			else \
+				${LN} -fs $$wrapper ${.TARGET}; \
+			fi \
+		fi
 .    endif
 .  endfor
 .endfor	# _WRAPPEES_UNIQUE
@@ -694,7 +694,7 @@ _UNWRAP_PATTERNS_FIND_cmd=	\
 	| ${SORT} -u
 UNWRAP_FILES?=		# empty
 _UNWRAP_FILES=		${UNWRAP_FILES}					\
-			${_UNWRAP_PATTERNS_FIND_cmd:bash:N__dummy-entry__}
+			${_UNWRAP_PATTERNS_FIND_cmd:sh:N__dummy-entry__}
 _UNWRAP_SED?=		# empty
 
 SUBST_CLASSES+=		unwrap

@@ -182,10 +182,10 @@ CWRAPPERS_APPEND.ld+=	-m elf_i386
 .endif
 
 ## Use _CMD so the command only gets run when needed!
-.if exists(/data/data/com.termux/files/usr${LIBABISUFFIX}/libc.so.6)
-_GLIBC_VERSION_CMD=	/data/data/com.termux/files/usr${LIBABISUFFIX}/libc.so.6 --version | \
+.if exists(/data/data/com.termux/files/usr/lib${LIBABISUFFIX}/libc.so.6)
+_GLIBC_VERSION_CMD=	/data/data/com.termux/files/usr/lib${LIBABISUFFIX}/libc.so.6 --version | \
 				sed -ne's/^GNU C.*version \(.*\),.*$$/\1/p'
-GLIBC_VERSION=		${_GLIBC_VERSION_CMD:bash}
+GLIBC_VERSION=		${_GLIBC_VERSION_CMD:sh}
 .endif
 
 # If this is defined pass it to the make process. 
