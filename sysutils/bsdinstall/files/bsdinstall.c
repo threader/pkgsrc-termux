@@ -1039,13 +1039,10 @@ strip(char *to_name)
 		/*NOTREACHED*/
 	case 0:
 
-		if (stripArgs) {
+		if (stripArgs)
 			execl(_PATH_BSHELL, "sh", "-c", cmd, NULL);
-			execl(_PATH_BSHELL, "termux-elf-cleaner","cmd",NULL,NULL); 
-		} else {
+		else
 			execlp(stripprog, "strip", to_name, NULL);
-			execlp(termux-elf-cleaner,"to_name",NULL,NULL); 
-			}
 
 		progname = getprogname();
 		write(STDERR_FILENO, progname, strlen(progname));

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 #
 # Install mk-files for bootstrap.
 #
@@ -17,8 +17,8 @@
 : ${OPSYS:=`uname`}
 : ${ROOT_USER:=`id -un 0`}
 : ${ROOT_GROUP:=`id -gn "${ROOT_USER}"`}
-: ${MK_DST:=/usr/local/share/mk}
-: ${SYSCONFDIR:=/usr/local/etc}
+: ${MK_DST:=/data/data/com.termux/files/usr/local/share/mk}
+: ${SYSCONFDIR:=/data/data/com.termux/files/usr/local/etc}
 
 for file in bsd.README bsd.dep.mk bsd.depall.mk bsd.doc.mk bsd.files.mk \
 	bsd.hostprog.mk bsd.inc.mk bsd.info.mk bsd.kernobj.mk bsd.kinc.mk \
