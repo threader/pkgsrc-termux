@@ -25,7 +25,8 @@ CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
 
 USE_FEATURES=		nbcompat
 CPPFLAGS+=	-I${WRKDIR}/libnbcompat
-NBCOMPAT_CONFIGURE_ARGS+=	--enable-bsd-getopt --enable-db CPPFLAGS="-I${WRKDIR}/libnbcompat"
+CPPFLAGS+=	-I.
+NBCOMPAT_CONFIGURE_ARGS+=	--enable-bsd-getopt --enable-db CPPFLAGS='-I${WRKDIR}/libnbcompat -I./libnbcompat -I. "$CPPFLAGS"'
 
 SKIP_AUDIT_PACKAGES=	yes
 NO_PKGTOOLS_REQD_CHECK=	yes
