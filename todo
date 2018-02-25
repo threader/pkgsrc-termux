@@ -1,5 +1,8 @@
 # termux-elf-cleaner - android-elf-cleaner
 # Beware of the TMPDIR=/tmp and :sh 
+
+CCACHE_DIR=/data/data/com.termux/files/home/.ccache; export CCHACHE_DIR; ./testbootstrap
+
 ./bootstrap \
 --workdir=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc/bootstrap/work \
 --cwrappers=no \
