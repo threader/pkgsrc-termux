@@ -84,7 +84,7 @@ OS_VARIANT?=		# empty
 # invocations will skip these blocks entirely thanks to MAKEFLAGS.
 .if !defined(OS_VERSION)
 _OS_VERSION_CMD=	${UNAME} -r
-OS_VERSION=		${_OS_VERSION_CMD:sh}
+OS_VERSION=		${_OS_VERSION_CMD:bash}
 MAKEFLAGS+=		OS_VERSION=${OS_VERSION:Q}
 .endif
 

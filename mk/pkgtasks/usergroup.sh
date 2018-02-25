@@ -44,7 +44,7 @@
 #	Exits 0 if the groups and users all exist, and >0 otherwise.
 #
 
-: ${LOCALBASE:=/usr/pkg}
+: ${LOCALBASE:=/data/data/com.termux/files/usr/pkg}
 : ${TASK_MODULE_DIR:=${LOCALBASE}/share/pkgtasks-1}
 . "${TASK_MODULE_DIR}/load.subr"
 

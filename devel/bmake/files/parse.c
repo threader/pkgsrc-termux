@@ -1905,7 +1905,7 @@ Parse_DoVar(char *line, GNode *ctxt)
 	    while (opc > line && *opc != ':')
 		opc--;
 
-	    if (strncmp(opc, ":bash", 3) == 0) {
+	    if (strncmp(opc, ":sh", 3) == 0) {
 		type = VAR_SHELL;
 		*opc = '\0';
 		break;

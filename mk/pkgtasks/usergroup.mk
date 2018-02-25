@@ -183,14 +183,14 @@ _PKG_GROUP.${_user_}=	${_entry_:C/^.*://g}
 .  for _group_ in ${PKG_GROUPS}
 _USERGROUP_TOOLS=	perl
 PKG_GID.${_group_}?=	${_PKG_GID.${_group_}}
-_PKG_GID.${_group_}=	${_PKG_GID.${_group_}_cmd:sh:M*}
+_PKG_GID.${_group_}=	${_PKG_GID.${_group_}_cmd:bash:M*}
 _PKG_GID.${_group_}_cmd=	\
 	( ${_GETGID_CMD} ${_group_:Q} ) 2>/dev/null || ${ECHO} ""
 .  endfor
 .  for _user_ in ${_PKG_USERS}
 _USERGROUP_TOOLS=	perl
 PKG_UID.${_user_}?=	${_PKG_UID.${_user_}}
-_PKG_UID.${_user_}=	${_PKG_UID.${_user_}_cmd:sh:M*}
+_PKG_UID.${_user_}=	${_PKG_UID.${_user_}_cmd:bash:M*}
 _PKG_UID.${_user_}_cmd=	\
 	( ${_GETUID_CMD} ${_user_:Q} ) 2>/dev/null || ${ECHO} ""
 .  endfor
