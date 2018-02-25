@@ -1092,7 +1092,6 @@ afterinstall(const char *command, const char *to_name, int errunlink)
 		sprintf(cmd, "%s %s", command, to_name);
 
 		execl(_PATH_BSHELL, "sh", "-c", cmd, NULL);
-		execl(_PATH_BSHELL, "termux-elf-cleaner","cmd",NULL,NULL);
 
 		warn("%s: exec of after install command", command);
 		_exit(1);
