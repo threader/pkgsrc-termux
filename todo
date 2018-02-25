@@ -1,4 +1,5 @@
-# termux-elf-cleamer - android-elf-cleaner 
+# termux-elf-cleaner - android-elf-cleaner
+# Beware of the TMPDIR=/tmp and :sh 
 ./bootstrap \
 --workdir=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc/bootstrap/work \
 --cwrappers=no \

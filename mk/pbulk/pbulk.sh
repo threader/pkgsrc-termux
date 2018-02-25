@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 # $NetBSD: pbulk.sh,v 1.6 2017/08/27 18:18:57 sevan Exp $
 set -e
 
@@ -17,7 +17,7 @@ done
 shift $(expr $OPTIND - 1)
 if [ $# != 0 ]; then echo "$usage" 1>&2; exit 1; fi
 
-: ${TMPDIR:=/tmp}
+: ${TMPDIR:=/data/data/com.termux/files/usr/tmp}
 
 ## settings for unprivileged build:
 if [ -n "$unprivileged" ]; then
@@ -29,14 +29,14 @@ if [ -n "$unprivileged" ]; then
 fi
 
 ##
-: ${PBULKPREFIX:=/usr/pbulk}
+: ${PBULKPREFIX:=/data/data/com.termux/files/usr/pbulk}
 : ${PBULKWORK:=${TMPDIR}/work-pbulk}
 
 : ${PACKAGES:=/mnt/packages}
 : ${BULKLOG:=/mnt/bulklog}
 
 # almost constant:
-: ${PKGSRCDIR:=/usr/pkgsrc}
+: ${PKGSRCDIR:=/data/data/com.termux/files/usr/pkgsrc}
 
 # Do it early since adding it after it fails is problematic:
 if [ ! -n "$unprivileged" ]; then
