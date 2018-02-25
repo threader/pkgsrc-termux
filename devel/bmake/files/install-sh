@@ -108,7 +108,7 @@ do
 done
 
 Newer() {
-	n=`/bin/ls -t$LS1 $* 2>/dev/null | head -1`
+	n=`/data/data/com.termux/files/usr/bin/ls -t$LS1 $* 2>/dev/null | head -1`
 	[ $1 = $n ]
 }
 
