@@ -1121,6 +1121,9 @@ fi
 # Hopefully this works and we can use xeffyr's xorg for termux
 	echo "HAVE_X11=        yes" >> ${TARGET_MKCONF}
 	echo "HAVE_X11=        yes" >> ${BOOTSTRAP_MKCONF}
+	echo "PKGSRC_COMPILER=        cchache clang" >> ${TARGET_MKCONF}
+	echo "PKGSRC_COMPILER=        cchache clang" >> ${BOOTSTRAP_MKCONF}
+
 # sbin is used by pkg_install, share/mk by bootstrap-mk-files
 mkdir_p $wrkdir/sbin $wrkdir/share/mk
 mkdir_p_early ${wrkdir}

@@ -21,7 +21,7 @@ CONFLICTS+=		audit-packages-[0-9]*
 
 GNU_CONFIGURE=		yes
 CPPFLAGS+=	-I.
-CPPFLAGS+=	-I${WRKDIR}/libnbcompat 
+CPPFLAGS+=	-I${WRKDIR}/libnbcompat
 CPPFLAGS+=	-I${WRKDIR}/libfetch
 CPPFLAGS+=	-I${WRKDIR}/.
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
