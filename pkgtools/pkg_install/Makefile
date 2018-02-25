@@ -147,7 +147,7 @@ LIBARCHIVE_CONFIGURE_ARGS+=	--without-lzma
 
 LIBARCHIVE_LIBS=	${SED} -n -e 's/^Libs.private://p' \
     ${WRKDIR}/libarchive/build/pkgconfig/libarchive.pc 2>/dev/null || echo
-LIBS+=		${LIBARCHIVE_LIBS:sh}
+LIBS+=		${LIBARCHIVE_LIBS:bash}
 
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.guess \
 			${WRKSRC}/config.guess
