@@ -14,9 +14,12 @@ COMMENT=		Portable NetBSD compatibility library
 
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		LIBMODE=${LIBMODE}
-
+CPPFLAGS+=	-I.
+CPPFLAGS+=	-I${WRKDIR}/libnbcompat
+CPPFLAGS+=	-I${WRKDIR}/libfetch
+CPPFLAGS+=	-I${WRKDIR}/.
 # Enable by default for standalone builds
-CONFIGURE_ARGS+=	--enable-db CPPFLAGS='-I${WRKDIR}/libnbcompat -I./libnbcompat -I.'
+CONFIGURE_ARGS+=	--enable-db
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
