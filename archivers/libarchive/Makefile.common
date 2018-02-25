@@ -18,3 +18,4 @@ CONFIGURE_ARGS+=	--without-lzo2
 CONFIGURE_ARGS+=	--without-nettle
 CONFIGURE_ARGS+=	--without-xml2
 CONFIGURE_ARGS+=	--disable-maintainer-mode
+CONFIGURE_ARGS+= 	CPPFLAGS='-I./contrib/android/include "$CPPFLAGS"'

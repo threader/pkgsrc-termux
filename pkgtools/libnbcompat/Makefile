@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 MAKE_ENV+=		LIBMODE=${LIBMODE}
 
 # Enable by default for standalone builds
-CONFIGURE_ARGS+=	--enable-db CPPFLAGS="-I${WRKDIR}/libnbcompat"
+CONFIGURE_ARGS+=	--enable-db CPPFLAGS='-I${WRKDIR}/libnbcompat -I./libnbcompat "$CPPFLAGS"'
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}

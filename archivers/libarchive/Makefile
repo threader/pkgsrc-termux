@@ -8,7 +8,6 @@ USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--disable-bsdcat
 CONFIGURE_ARGS+=	--disable-bsdcpio
 CONFIGURE_ARGS+=	--disable-bsdtar
-CONFIGURE_ARGS+= 	CPPFLAGS='-I./contrib/android/include "$CPPFLAGS"'
 
 do-extract:
 	${CP} -r ${FILESDIR} ${WRKSRC}
