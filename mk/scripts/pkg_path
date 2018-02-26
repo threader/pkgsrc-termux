@@ -67,7 +67,7 @@
 ######################################################################
 
 : ${ECHO=echo}
-: ${PKGSRCDIR="/usr/pkgsrc"}
+: ${PKGSRCDIR="/data/data/com.termux/files/usr/pkgsrc"}
 : ${PWD_CMD="pwd -P"}
 
 self="${0##*/}"
