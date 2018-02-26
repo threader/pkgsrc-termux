@@ -1190,7 +1190,7 @@ yes)	echo_msg "Bootstrapping ksh"
 	copy_src $pkgsrcdir/shells/pdksh/files ksh
 	test -n "$CC" || CC=gcc	# default to gcc if no compiler is specified
 	# Drops out here on need_ksh and still kils workdir  
-	run_cmd "(cd $wrkdir/ksh && autoconf; env $BSTRAP_ENV bash ./configure $configure_quiet_flags CC=clang CXX=clang++--prefix=$prefix --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir && $bmake $make_quiet_flags -j$make_jobs)"
+	run_cmd "(cd $wrkdir/ksh && autoconf; env $BSTRAP_ENV bash ./configure $configure_quiet_flags CC=clang CXX=clang++ --prefix=$prefix --infodir=$infodir --mandir=$mandir --sysconfdir=$sysconfdir && $bmake $make_quiet_flags -j$make_jobs)"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/ksh/ksh $wrkdir/bin/pdksh"
 	echo "TOOLS_PLATFORM.sh?=		$prefix/bin/pdksh" >> ${TARGET_MKCONF}
 	echo "TOOLS_PLATFORM.sh?=		$wrkdir/bin/pdksh" >> ${BOOTSTRAP_MKCONF}
