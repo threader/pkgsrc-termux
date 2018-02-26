@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 #
 # $NetBSD: bmake2pkgsrc,v 1.2 2015/05/19 21:49:23 joerg Exp $
 #

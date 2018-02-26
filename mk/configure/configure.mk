@@ -212,7 +212,7 @@ do-configure-script:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} && cd ${_dir_} &&	env &				\
 	${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV}			\
-		  autoconf & bash ${CONFIG_SHELL_FLAGS}			\
+		  autoconf && bash ${CONFIG_SHELL_FLAGS}			\
 		${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 .endfor
 
