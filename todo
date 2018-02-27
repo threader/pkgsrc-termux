@@ -12,7 +12,8 @@
 SHELL=/data/data/com.termux/files/usr/bin/bash; export SHELL;
 CCACHE_DIR=/data/data/com.termux/files/home/.ccache; export CCHACHE_DIR;
 export CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash
-#PATH=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:$PATH; export $PATH
+# Add PATH to bashrc . see etc/bash.bashrc 
+# wiki.termux.com/wiki/Shells  
 export DISPLAY=localhost:0
 export PULSE_SERVER=localhost:4712
 $SHELL -c "openbox-session &"
