@@ -1,3 +1,4 @@
+# termux deps off the top of my head: coreutils, clang, xargs, optionally xeffyr's x11, and every other standard console tool imaginable.
 # https://wiki.termux.com/wiki/Package_Management - read the section on xeffyr's xorg , currently: 
 # Xeffyr's Termux repository hosts X/GUI packages like openbox, dosbox, qemu-system or tigervnc.
 #
