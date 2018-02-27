@@ -209,10 +209,9 @@ CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash
 .PHONY: do-configure-script
 do-configure-script:
 .for _dir_ in ${CONFIGURE_DIRS}
-	${RUN}${_ULIMIT_CMD}						\
-	cd ${WRKSRC} && cd ${_dir_} &&	env &&				\
-	${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV}			\
-		  autoconf && bash ${CONFIG_SHELL_FLAGS}			\
+	${RUN}${_ULIMIT_CMD} \
+	cd ${WRKSRC} && cd ${_dir_}  && env && autoconf && \
+	${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV} bash ${CONFIG_SHELL_FLAGS} \
 		${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 .endfor
 
