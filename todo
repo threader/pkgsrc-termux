@@ -29,5 +29,5 @@ cd bootstrap &&  CCACHE_DIR=/data/data/com.termux/files/home/.ccache; export CCH
 --unprivileged \
 --prefix=/data/data/com.termux/files/usr/pkg \
 --pkgdbdir=/data/data/com.termux/files/usr/pkg/pkgdb \ 
---sysconfdid=/data/data/com.termux/files/usr/pkg/etc \
+--sysconfdir=/data/data/com.termux/files/usr/pkg/etc \
 --varbase=/data/data/com.termux/files/usr/var 
