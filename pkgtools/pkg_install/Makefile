@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
 
 USE_FEATURES=		nbcompat
 
-NBCOMPAT_CONFIGURE_ARGS+=	--enable-bsd-getopt --enable-db CPPFLAGS=${CPPFLAGS}
+NBCOMPAT_CONFIGURE_ARGS+=	--enable-bsd-getopt --enable-db CPPFLAGS='${CPPFLAGS}'
 
 SKIP_AUDIT_PACKAGES=	yes
 NO_PKGTOOLS_REQD_CHECK=	yes
