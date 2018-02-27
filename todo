@@ -8,13 +8,20 @@
 #
 # Issues related to this repository/packages could be posted here: https://github.com/xeffyr/termux-x-repository/issues 
 #--
+# i use a startx.sh along with XServer XSDL, example:  
+SHELL=/data/data/com.termux/files/usr/bin/bash; export SHELL;
+CCACHE_DIR=/data/data/com.termux/files/home/.ccache; export CCHACHE_DIR;
+export CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash
+#PATH=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/bootstrap/pkg/bin:$PATH; export $PATH
+export DISPLAY=localhost:0
+export PULSE_SERVER=localhost:4712
+$SHELL -c "openbox-session &"
 #
 #
 #
 # termux-elf-cleaner - android-elf-cleaner
 # Beware of the TMPDIR=/tmp and :sh 
-
-CCACHE_DIR=/data/data/com.termux/files/home/.ccache; export CCHACHE_DIR; ./testbootstrap
+cd bootstrap &&  CCACHE_DIR=/data/data/com.termux/files/home/.ccache; export CCHACHE_DIR; ./testbootstrap &&
 
 ./bootstrap \
 --workdir=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc/bootstrap/work \
