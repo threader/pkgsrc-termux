@@ -1,3 +1,16 @@
+# https://wiki.termux.com/wiki/Package_Management - read the section on xeffyr's xorg , currently: 
+# Xeffyr's Termux repository hosts X/GUI packages like openbox, dosbox, qemu-system or tigervnc.
+#
+# Use the following instructions to enable repository in sources.list file:
+
+# wget https://raw.githubusercontent.com/xeffyr/termux-x-repository/master/enablerepo.sh
+# bash enablerepo.sh
+#
+# Issues related to this repository/packages could be posted here: https://github.com/xeffyr/termux-x-repository/issues 
+#--
+#
+#
+#
 # termux-elf-cleaner - android-elf-cleaner
 # Beware of the TMPDIR=/tmp and :sh 
 
@@ -9,5 +22,5 @@ CCACHE_DIR=/data/data/com.termux/files/home/.ccache; export CCHACHE_DIR; ./testb
 --unprivileged \
 --prefix=/data/data/com.termux/files/usr/pkg \
 --pkgdbdir=/data/data/com.termux/files/usr/pkg/pkgdb \ 
---sysconfdid=/data/data/com.termux/files/usr/pkg/etc \
+--sysconfdid=/data/data/com.termux/files/usr/etc \
 --varbase=/data/data/com.termux/files/usr/var 
