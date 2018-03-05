@@ -2,6 +2,12 @@
 # https://wiki.termux.com/wiki/Package_Management - read the section on xeffyr's xorg , currently: 
 # Xeffyr's Termux repository hosts X/GUI packages like openbox, dosbox, qemu-system or tigervnc.
 #
+# lang/Perl5:
+# Will ask where you have you'r C Library. Giving it /data/data/com.termux/files/usr/lib works, it checks the path so adding usr/pkg/lib might be needed 
+# libm:
+# system/lib64/libm.so
+# system/lib/libm.so
+# 
 # Use the following instructions to enable repository in sources.list file:
 
 # wget https://raw.githubusercontent.com/xeffyr/termux-x-repository/master/enablerepo.sh

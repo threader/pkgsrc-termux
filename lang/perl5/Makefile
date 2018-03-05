@@ -5,7 +5,7 @@
 
 PKGREVISION=	1
 COMMENT=	Practical Extraction and Report Language
-
+LDFLAGS+='${LDFLAGS} -l/system/lib64/libm.so'
 CONFLICTS+=	perl-base-[0-9]* perl-thread-[0-9]*
 
 # CONFLICTS packages older than CORE modules version.
