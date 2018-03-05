@@ -104,8 +104,8 @@ if $test -n "@SYSLIBPATH@"; then
 fi
 
 # Strip /usr/local/lib... from ldflags
-case "\$ldflags" in */usr/local/lib*)
-	set \`echo "X \$ldflags " | sed 's, [^ ]*/usr/local/lib[^ ]* , ,g'\`
+case "\$ldflags" in */data/data/com.termux/files/usr/local/lib*)
+	set \`echo "X \$ldflags " | sed 's, [^ ]*/data/data/com.termux/files/usr/local/lib[^ ]* , ,g'\`
 	shift
 	ldflags="\$*"
 	;;
