@@ -119,7 +119,7 @@ PERL5_API_VERS_cmd=	\
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
-CONFIGURE_ARGS+=	-Dldflags=${LDFLAGS:Q}
+CONFIGURE_ARGS+=	-Dldflags=${LDFLAGS:Q} LDFLAGS='${LDFLAGS} -L/data/data/com.termux/files/usr/lib -L/data/data/com.termux/files/usr/pkg/lib'
 MAKE_ENV+=		LC_ALL="C"
 
 .if ${OPSYS} == "SunOS"
@@ -213,8 +213,7 @@ LIBSWANTED.OpenBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
 LIBSWANTED.AIX=		m crypt dl socket nsl bind c
 LIBSWANTED.SCO_SV=	m crypt socket
-LIBSWANTED=		m crypt dl nsl
-# ${LIBSWANTED.${OPSYS}}
+LIBSWANTED=		${LIBSWANTED.${OPSYS}}
 SUBST_VARS.policysh+=	LIBSWANTED
 
 # Nail down the directories in which the system libraries may be found.
