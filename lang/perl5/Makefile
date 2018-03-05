@@ -213,8 +213,8 @@ LIBSWANTED.OpenBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
 LIBSWANTED.AIX=		m crypt dl socket nsl bind c
 LIBSWANTED.SCO_SV=	m crypt socket
-LIBSWANTED.Android=	m crypt dl nsl
-LIBSWANTED=		${LIBSWANTED.${OPSYS}}
+LIBSWANTED=		m crypt dl nsl
+# ${LIBSWANTED.${OPSYS}}
 SUBST_VARS.policysh+=	LIBSWANTED
 
 # Nail down the directories in which the system libraries may be found.
