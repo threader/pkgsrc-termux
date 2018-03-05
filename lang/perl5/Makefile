@@ -177,7 +177,7 @@ MAKE_FILE=	GNUmakefile
 # Darwin < 9.0.
 #
 .if empty(MACHINE_PLATFORM:MDarwin-9.*-*)
-CONFIGURE_ARGS+=	-Duseshrplib
+#CONFIGURE_ARGS+=	-Duseshrplib
 .endif
 
 # Perl embeds the full paths to the following tools in several installed
@@ -232,6 +232,7 @@ SYSLIBPATH.OpenBSD=	/usr/lib
 SYSLIBPATH.SunOS=	/usr/lib
 SYSLIBPATH.AIX=		/usr/lib
 SYSLIBPATH.SCO_SV=	/usr/lib
+SYSLIBPATH.Linux=	/data/data/com.termux/files/usr/lib
 SYSLIBPATH=		${SYSLIBPATH.${OPSYS}:U${COMPILER_LIB_DIRS}}
 SUBST_VARS.policysh+=	SYSLIBPATH
 
