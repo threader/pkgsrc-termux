@@ -1440,12 +1440,13 @@ uname -r = `(uname -r) 2>/dev/null || echo unknown`
 uname -s = `(uname -s) 2>/dev/null || echo unknown`
 uname -v = `(uname -v) 2>/dev/null || echo unknown`
 
-/data/data/com.termux/files/usr/bin/uname -p = `(/data/data/com.termux/files/bin/bash/usr/bin/uname -p) 2>/dev/null`/bin/uname -X     = `(/bin/uname -X) 2>/dev/null`
+/usr/bin/uname -p = `(/usr/bin/uname -p) 2>/dev/null`
+/bin/uname -X     = `(/bin/uname -X) 2>/dev/null`
 
 hostinfo               = `(hostinfo) 2>/dev/null`
 /bin/universe          = `(/bin/universe) 2>/dev/null`
 /usr/bin/arch -k       = `(/usr/bin/arch -k) 2>/dev/null`
-/bin/arch              =  `(echo "aarch64") 2>/dev/null` #`(/bin/arch) 2>/dev/null`
+/bin/arch              = `(/bin/arch) 2>/dev/null`
 /usr/bin/oslevel       = `(/usr/bin/oslevel) 2>/dev/null`
 /usr/convex/getsysinfo = `(/usr/convex/getsysinfo) 2>/dev/null`
 
