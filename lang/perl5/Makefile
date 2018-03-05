@@ -213,6 +213,7 @@ LIBSWANTED.OpenBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
 LIBSWANTED.AIX=		m crypt dl socket nsl bind c
 LIBSWANTED.SCO_SV=	m crypt socket
+LIBSWANTED.Android=	m crypt dl nsl
 LIBSWANTED=		${LIBSWANTED.${OPSYS}}
 SUBST_VARS.policysh+=	LIBSWANTED
 
