@@ -4,6 +4,8 @@
 #
 # lang/Perl5:
 # Will ask where you have you'r C Library. Giving it /data/data/com.termux/files/usr/lib works, it checks the path so adding usr/pkg/lib might be needed 
+# chnod 755 usr/pkg/bin/perl 
+
 # libm:
 # system/lib64/libm.so
 # system/lib/libm.so
