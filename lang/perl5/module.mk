@@ -148,7 +148,7 @@ do-modinst-configure:
 		if ${TEST} -f "$$dir"/Makefile.PL; then			\
 			cd "$$dir";					\
 			${SETENV} ${MAKE_ENV}				\
-				${BUILDLINK_PREFIX.perl}/bin/perl Makefile.PL --skipdeps ${MAKE_PARAMS};	\
+				LC_ALL="" LC_COLLATE="" LC_MONETARY="" LC_NUMERIC="" ${BUILDLINK_PREFIX.perl}/bin/perl Makefile.PL --skipdeps ${MAKE_PARAMS};	\
 		fi;							\
 	done
 .else
@@ -158,7 +158,7 @@ do-modinst-configure:
 		if ${TEST} -f "$$dir"/Makefile.PL; then			\
 			cd "$$dir";					\
 			${SETENV} ${MAKE_ENV}				\
-				${BUILDLINK_PREFIX.perl}/bin/perl Makefile.PL --skipdeps ${MAKE_PARAMS};	\
+				LC_ALL="" LC_COLLATE="" LC_MONETARY="" LC_NUMERIC="" ${BUILDLINK_PREFIX.perl}/bin/perl Makefile.PL --skipdeps ${MAKE_PARAMS};	\
 		fi;							\
 	done
 .endif
