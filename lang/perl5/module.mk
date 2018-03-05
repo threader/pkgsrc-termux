@@ -120,7 +120,7 @@ do-makemaker-configure:
 		if ${TEST} -f "$$dir"/Makefile.PL; then			\
 			cd "$$dir";					\
 			${SETENV} ${MAKE_ENV}				\
-				${BUILDLINK_PREFIX.perl}/bin/perl Makefile.PL ${MAKE_PARAMS};	\
+				LC_ALL="" LC_COLLATE="" LC_MONETARY="" LC_NUMERIC="" ${BUILDLINK_PREFIX.perl}/bin/perl Makefile.PL ${MAKE_PARAMS};	\
 		fi;							\
 	done
 
