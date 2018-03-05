@@ -16,7 +16,7 @@ USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Locale/gettext/.packlist
 
 SUBST_CLASSES+=		intlpath
-SUBST_FILES.intlpath=	Makefile.PL
+SUBST_FILES.intlpath='LC_ALL="" LC_COLLATE="" LC_MONETARY="" LC_NUMERIC="" Makefile.PL'
 SUBST_SED.intlpath+=	-e 's,-lintl,-L${BUILDLINK_PREFIX.gettext}/lib -lintl,g'
 SUBST_STAGE.intlpath=	pre-configure
 
