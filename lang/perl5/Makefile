@@ -5,6 +5,7 @@
 
 PKGREVISION=	1
 COMMENT=	Practical Extraction and Report Language
+LDFLAGS+=-L/system/lib/
 LDFLAGS+=-L/system/lib64/
 LDFLAGS+=-L/data/data/com.termux/files/usr/lib
 LDFLAGS+=-lm
