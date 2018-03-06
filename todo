@@ -5,11 +5,15 @@
 # lang/Perl5:
 # Will ask where you have you'r C Library. Giving it /data/data/com.termux/files/usr/lib works, it checks the path so adding usr/pkg/lib might be needed 
 # chnod 755 usr/pkg/bin/perl 
-
+#
 # libm:
 # system/lib64/libm.so
 # system/lib/libm.so
+#
+# devel/p5-gettext: 
+# missing include <locale.h> in gettext.xs
 # 
+#  LC_ALL="" LC_COLLATE="" LC_MONETARY="" LC_NUMERIC="" LC_MESSAGES="" 
 # Use the following instructions to enable repository in sources.list file:
 
 # wget https://raw.githubusercontent.com/xeffyr/termux-x-repository/master/enablerepo.sh

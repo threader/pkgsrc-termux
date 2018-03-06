@@ -13,7 +13,9 @@ LICENSE=		2-clause-bsd AND modified-bsd AND public-domain
 
 BOOTSTRAP_PKG=	yes
 CHECK_PERMS=		no
-
+LDFLAGS+=-L/system/lib/
+LDFLAGS+=-L/system/lib64/
+LDFLAGS+=-L/data/data/com.termux/files/usr/lib
 MAKE_ENV+=		CATMAN_SECTION_SUFFIX=${CATMAN_SECTION_SUFFIX:Q}
 MAKE_ENV+=		MANINSTALL=${MANINSTALL:Q}
 
