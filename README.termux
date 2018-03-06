@@ -1,0 +1,47 @@
+# termux deps off the top of my head: coreutils, clang, xargs, optionally xeffyr's x11, and every other standard console tool imaginable.
+# https://wiki.termux.com/wiki/Package_Management - read the section on xeffyr's xorg , currently: 
+# Xeffyr's Termux repository hosts X/GUI packages like openbox, dosbox, qemu-system or tigervnc.
+#
+# lang/Perl5:
+# Will ask where you have you'r C Library. Giving it /data/data/com.termux/files/usr/lib works, it checks the path so adding usr/pkg/lib might be needed 
+# chnod 755 usr/pkg/bin/perl 
+#
+# libm:
+# system/lib64/libm.so
+# system/lib/libm.so
+#
+# devel/p5-gettext: 
+# missing include <locale.h> in gettext.xs
+# 
+#  LC_ALL="" LC_COLLATE="" LC_MONETARY="" LC_NUMERIC="" LC_MESSAGES="" 
+# Use the following instructions to enable repository in sources.list file:
+
+# wget https://raw.githubusercontent.com/xeffyr/termux-x-repository/master/enablerepo.sh
+# bash enablerepo.sh
+#
+# Issues related to this repository/packages could be posted here: https://github.com/xeffyr/termux-x-repository/issues 
+#--
+# i use a startx.sh along with XServer XSDL, example:  
+SHELL=/data/data/com.termux/files/usr/bin/bash; export SHELL;
+CCACHE_DIR=/data/data/com.termux/files/home/.ccache; export CCHACHE_DIR;
+export CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash
+# Add PATH to bashrc . see etc/bash.bashrc 
+# wiki.termux.com/wiki/Shells  
+export DISPLAY=localhost:0
+export PULSE_SERVER=localhost:4712
+$SHELL -c "openbox-session &"
+#
+#
+#
+# termux-elf-cleaner - android-elf-cleaner
+# Beware of the TMPDIR=/tmp and :sh 
+cd bootstrap &&  CCACHE_DIR=/data/data/com.termux/files/home/.ccache; export CCHACHE_DIR; ./testbootstrap &&
+
+./bootstrap \
+--workdir=/data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc/bootstrap/work \
+--cwrappers=no \
+--unprivileged \
+--prefix=/data/data/com.termux/files/usr/pkg \
+--pkgdbdir=/data/data/com.termux/files/usr/pkg/pkgdb \ 
+--sysconfdir=/data/data/com.termux/files/usr/pkg/etc \
+--varbase=/data/data/com.termux/files/usr/var 

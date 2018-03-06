@@ -16,6 +16,7 @@ CHECK_PERMS=		no
 LDFLAGS+=-L/system/lib/
 LDFLAGS+=-L/system/lib64/
 LDFLAGS+=-L/data/data/com.termux/files/usr/lib
+CPPFLAGS+=	-I/data/data/com.termux/files/usr/include
 MAKE_ENV+=		CATMAN_SECTION_SUFFIX=${CATMAN_SECTION_SUFFIX:Q}
 MAKE_ENV+=		MANINSTALL=${MANINSTALL:Q}
 
