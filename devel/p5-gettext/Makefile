@@ -11,12 +11,12 @@ HOMEPAGE=	http://search.cpan.org/dist/gettext/
 COMMENT=	Perl5 module interface to C I18N functions
 LICENSE=	${PERL5_LICENSE}
 WRKSRC=		${WRKDIR}/Locale-${DISTNAME}
-
+CPPFLAGS+=	-I/data/data/com.termux/files/usr/include
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Locale/gettext/.packlist
 
 SUBST_CLASSES+=		intlpath
-SUBST_FILES.intlpath='LC_ALL="" LC_COLLATE="" LC_MONETARY="" LC_NUMERIC="" Makefile.PL'
+SUBST_FILES.intlpath=	Makefile.PL
 SUBST_SED.intlpath+=	-e 's,-lintl,-L${BUILDLINK_PREFIX.gettext}/lib -lintl,g'
 SUBST_STAGE.intlpath=	pre-configure
 
