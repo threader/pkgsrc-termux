@@ -32,7 +32,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-
+#include <sys/sysmacros.h>
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif

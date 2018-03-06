@@ -34,7 +34,7 @@
  *
  *	@(#)pax.h	8.2 (Berkeley) 4/18/94
  */
-
+#include <sys/sysmacros.h>
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
