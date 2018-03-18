@@ -4,11 +4,15 @@
 #
 # lang/Perl5:
 # Will ask where you have you'r C Library. Giving it /data/data/com.termux/files/usr/lib works, it checks the path so adding usr/pkg/lib might be needed 
-# chnod 755 usr/pkg/bin/perl 
+# chmod 755 usr/pkg/bin/perl 
 #
 # libm:
 # system/lib64/libm.so
 # system/lib/libm.so
+#
+# pthread and bionic c library:
+# devel/gettext-lib/work/gettext-0.19.8.1/gettext-runtime/intl/lock.h
+# simply replacing pthread_cancel with pthread_kill should work.
 #
 # devel/p5-gettext: 
 # missing include <locale.h> in gettext.xs
@@ -25,6 +29,8 @@
 SHELL=/data/data/com.termux/files/usr/bin/bash; export SHELL;
 CCACHE_DIR=/data/data/com.termux/files/home/.ccache; export CCHACHE_DIR;
 export CONFIG_SHELL=/data/data/com.termux/files/usr/bin/bash
+export X_CFLAGS="-I/data/data/com.termux/files/usr/include -D_REENTRANT"
+export X_LIBS="-Wl,-R/data/data/com.termux/files/usr/lib -lX11"
 # Add PATH to bashrc . see etc/bash.bashrc 
 # wiki.termux.com/wiki/Shells  
 export DISPLAY=localhost:0
