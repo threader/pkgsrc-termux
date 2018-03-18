@@ -215,7 +215,7 @@ SSLDIR=	/boot/system/data/ssl
 SSLDIR=	/boot/common/data/ssl
 .      endif
 .    else
-SSLDIR=	/etc/ssl 		# most likely place
+SSLDIR=	/data/data/com.termux/files/usr/etc/ssl 		# most likely place
 .    endif
 .  else
 SSLDIR=	${PKG_SYSCONFBASEDIR}/openssl
