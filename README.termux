@@ -1,16 +1,26 @@
-# termux deps off the top of my head: coreutils, clang, xargs, optionally xeffyr's x11, and every other standard console tool imaginable.
+# A few of the problems identified with this approach include a rather serious non working hardlinks.
+# Working around that leads to increased size requirements and possibly other side effects 
+# I doubt PROOT will works around this, though moving pkgrc-termux to an ext4 sdcard and chroot 
+# stand a better chance. 
+
+# pkgsrc can vary in configuration and dependencies. 
+# So, coreutils, clang, xargs and optionally xeffyr's x11, and every other standard console tool imaginable.
+##
 # https://wiki.termux.com/wiki/Package_Management - read the section on xeffyr's xorg , currently: 
 # Xeffyr's Termux repository hosts X/GUI packages like openbox, dosbox, qemu-system or tigervnc.
 #
+# wget https://raw.githubusercontent.com/xeffyr/termux-x-repository/master/enablerepo.sh
+# bash enablerepo.sh
+##
 # lang/Perl5:
-# Will ask where you have you'r C Library. Giving it /data/data/com.termux/files/usr/lib works, it checks the path so adding usr/pkg/lib might be needed 
+# Asks where the C Library is: /data/data/com.termux/files/usr/lib
 # chmod 755 usr/pkg/bin/perl 
 #
 # libm:
 # system/lib64/libm.so
 # system/lib/libm.so
 #
-# pthread and bionic c library:
+# pthread and the bionic c library:
 # devel/gettext-lib/work/gettext-0.19.8.1/gettext-runtime/intl/lock.h
 # simply replacing pthread_cancel with pthread_kill should work.
 #
@@ -19,9 +29,6 @@
 # 
 #  LC_ALL="" LC_COLLATE="" LC_MONETARY="" LC_NUMERIC="" LC_MESSAGES="" 
 # Use the following instructions to enable repository in sources.list file:
-
-# wget https://raw.githubusercontent.com/xeffyr/termux-x-repository/master/enablerepo.sh
-# bash enablerepo.sh
 #
 # Issues related to this repository/packages could be posted here: https://github.com/xeffyr/termux-x-repository/issues 
 #--
