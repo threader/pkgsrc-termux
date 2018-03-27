@@ -1,3 +1,7 @@
 # lang/perl, shell malforms installdirprefiexes and other prefexes 
+# perl -V:PREFIX 
 #
-#
+# help2man has issues, removed locales, libandroid provides the bindtextdomain function
+# work around
+# ln -s /data/data/com.termux/files/usr/lib/libandroid-support.so /data/data/com.termux/files/home/dev/gnu/pkgsrc/pkgsrc-termux/converters/help2man/work/.destdir/data/data/com.termux/files/usr/pkg/lib/bindtextdomain.so
+# bmake reinstall

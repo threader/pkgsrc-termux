@@ -15,7 +15,7 @@ DEPENDS+=		p5-gettext>=1.01:../../devel/p5-gettext
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		perl:run msgfmt gmake
-
+CONFIGURE_ARGS+=	LIBS=-landroid-support
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing install lib paths.
 SUBST_STAGE.paths=	pre-configure
