@@ -20,6 +20,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-external-libintl-perl
 CONFIGURE_ARGS+=	--with-external-Text-Unidecode
 CONFIGURE_ARGS+=	--with-external-Unicode-EastAsianWidth
+CONFIGURE_ARGS+=	CPPFLAGS=-I/data/data/com.termux/files/usr/include/libandroid-support/
 USE_LIBTOOL=		yes
 
 INFO_FILES=		yes
