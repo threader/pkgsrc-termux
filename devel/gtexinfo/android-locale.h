@@ -46,9 +46,27 @@ enum {
 
     LC_TELEPHONE      = 10,
     LC_MEASUREMENT    = 11,
-    LC_IDENTIFICATION = 12
+    LC_IDENTIFICATION = 12,
+  __THOUSANDS_SEP,
+# define THOUSANDS_SEP          __THOUSANDS_SEP
+  THOUSEP = __THOUSANDS_SEP,
+#define THOUSEP                 (.)
+  __GROUPING,
+# define GROUPING               ("")
+  __MON_THOUSANDS_SEP,
+# define MON_THOUSANDS_SEP      __MON_THOUSANDS_SEP
+      __MON_GROUPING,
+# define MON_GROUPING           __MON_GROUPING
+  __POSITIVE_SIGN,
+# define POSITIVE_SIGN          __POSITIVE_SIGN
+  __NEGATIVE_SIGN,
+# define NEGATIVE_SIGN          __NEGATIVE_SIGN
+  __INT_FRAC_DIGITS,
+# define INT_FRAC_DIGITS        __INT_FRAC_DIGITS
+  __FRAC_DIGITS,
+# define FRAC_DIGITS            __FRAC_DIGITS
 };
-
+# define INT_CURR_SYMBOL  (LC_MONETARY, 0)
 extern char *setlocale(int category, const char *locale);
 
 #if 1 /* MISSING FROM BIONIC - DEFINED TO MAKE libstdc++-v3 happy */
